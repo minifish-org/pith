@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "kind": "judge-preparation-audit",
+  "goImplementationVerified": false,
+  "compiledAllJudges": true,
+  "negativeSamples": [
+    {
+      "unit": "P01-eventstream",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP01_01"
+    },
+    {
+      "unit": "P02-contracts",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP02_01"
+    },
+    {
+      "unit": "P03-transcript",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP03_01"
+    },
+    {
+      "unit": "P04-tool-arguments",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP04_01"
+    },
+    {
+      "unit": "P05-agent-loop",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP05_01"
+    },
+    {
+      "unit": "P06-agent-state",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP06_01"
+    },
+    {
+      "unit": "P07-deepseek",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP07_01"
+    },
+    {
+      "unit": "P08-read-text",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP08_01"
+    },
+    {
+      "unit": "P09-cli-smoke",
+      "nonfunctionalRejected": true,
+      "test": "TestPortsmithJudgeP09_01"
+    }
+  ],
+  "eventStream": {
+    "preservedCasesPassed": true,
+    "preservedCasesRacePassed": true,
+    "fifoMutationRejected": true,
+    "reentrancyCaseNotPartOfLegacyBaseline": true
+  },
+  "inputs": [
+    {
+      "name": "go.mod",
+      "sha256": "04f31224d086935982eacf090edbcd920290405ed45021c399ec99b80431776a"
+    },
+    {
+      "name": "go.sum",
+      "sha256": "85ddc09d964ee3c8a0744e56baccf9f5b6cd2839cc1bb6b3693491eb08cba8a9"
+    },
+    {
+      "name": "internal/eventstream/stub.go",
+      "sha256": "c010116ad0215e27346e0360d19cace55d87325a2bc0ed852b56ccaf8e621c55"
+    },
+    {
+      "name": "ai/stub.go",
+      "sha256": "5ac312af7a69967a8bfc93d623385d671d5edd3caf40405ee82867789f48d481"
+    },
+    {
+      "name": "agent/stub.go",
+      "sha256": "901c824a34e46a59943914470a5c2de678de852b1dee72e1d9ed03468ee4bb6d"
+    },
+    {
+      "name": "providers/deepseek/stub.go",
+      "sha256": "87bdfb8278f66977e495dee8abfa5ca4c7664211c63c8b39cc6b927a92a6d87f"
+    },
+    {
+      "name": "tools/readfile/stub.go",
+      "sha256": "2e4d7baa56310af3a3ba030d4e95c345f350f996900032860da3a2d5eaf8406b"
+    },
+    {
+      "name": "cmd/pith/stub.go",
+      "sha256": "ca52e6c2e2ff883d489cee61ef26587beca6f594ab09160b5bf25f64d33c823f"
+    },
+    {
+      "name": "internal/eventstream/portsmith_judge_p01_test.go",
+      "sha256": "cede207bb5ceac01e9dc0057097add7d31a5c7b429edfc796b359b66b0859b03"
+    },
+    {
+      "name": "internal/eventstream/testdata/p01-ts.json",
+      "sha256": "89453b879b48f692a22d7c93267a4d606d42507bb2a9e54936152c9ff1122dfd"
+    },
+    {
+      "name": "ai/portsmith_judge_p02_test.go",
+      "sha256": "c464f9d4c3b5d396feb65b653f46e1b2062ac39698f51ae398cca57c6401cae2"
+    },
+    {
+      "name": "ai/portsmith_judge_p03_test.go",
+      "sha256": "5e5888b14d20e52133314834ce787f657ed544e48d5385a2c56b04c3ae6295e6"
+    },
+    {
+      "name": "ai/testdata/p03-ts.json",
+      "sha256": "36043c9ec826af153ab63073610ec54f389bf33625b58ff972fdb04bdc71eace"
+    },
+    {
+      "name": "ai/portsmith_judge_p04_test.go",
+      "sha256": "9aad2d86712d145097a2b14ab2159cb190cb1ca2372b05fc2c94cc823c6e9ac2"
+    },
+    {
+      "name": "ai/testdata/p04-ts.json",
+      "sha256": "4fc7657c4bcf6874922ae5e0577b65e77251a5fe4aefceacc7defbbaaacac323"
+    },
+    {
+      "name": "agent/portsmith_judge_p05_test.go",
+      "sha256": "244634101c7390208ba456912ff091580ef0d4dd44047d7718257e6669863e5a"
+    },
+    {
+      "name": "agent/testdata/p05-ts.json",
+      "sha256": "b4b4d443f309fff69dcf8b79fb14c565ac37c7cbb084aa631b4b0fea2b676fd8"
+    },
+    {
+      "name": "agent/portsmith_judge_p06_test.go",
+      "sha256": "145e324626f4794bd13657edbcb8da09107b009464476e5d7ed97aadc7ae7a75"
+    },
+    {
+      "name": "providers/deepseek/portsmith_judge_p07_test.go",
+      "sha256": "884f638492e4480ba5b218dd3f54804bfa8e6baef01bde21930f87bc7a670dae"
+    },
+    {
+      "name": "tools/readfile/portsmith_judge_p08_test.go",
+      "sha256": "f6c6faf3a175d0619f310331d8e34dba3f714c3d9fc34d055ce35b4a2e26014b"
+    },
+    {
+      "name": "tools/readfile/testdata/p08-ts.json",
+      "sha256": "f4860ad4fddd543835a53d2df0a898ed331c3b27d70a206c6662a6a361fb59cd"
+    },
+    {
+      "name": "cmd/pith/portsmith_judge_p09_test.go",
+      "sha256": "5e38fb4ebc76caabf727ee4c4eacba74573817e0fa9fed5199ed23c768100e2f"
+    }
+  ],
+  "limitations": "Compilation and negative tests do not prove test completeness or an implementation's correctness. Actual candidates must pass all required cases and cumulative integration checks."
+}

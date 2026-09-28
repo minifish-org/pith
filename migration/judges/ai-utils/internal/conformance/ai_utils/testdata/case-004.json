@@ -1,0 +1,19 @@
+{
+  "batch": "ai-utils",
+  "id": "parseStreamingJson-4",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/json-parse.ts",
+    "fn": "parseStreamingJson",
+    "args": [
+      "{\"n\":false,\"v\":null}"
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "n": false,
+      "v": null
+    }
+  }
+}

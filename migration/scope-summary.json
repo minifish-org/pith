@@ -1,0 +1,24 @@
+{
+  "revision": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "modules": {
+    "ai": {
+      "files": 189,
+      "lines": 26076,
+      "batches": 11
+    },
+    "core": {
+      "files": 75,
+      "lines": 22744,
+      "batches": 7
+    },
+    "tools": {
+      "files": 16,
+      "lines": 2724,
+      "batches": 6
+    }
+  },
+  "totalInventory": 308,
+  "classifiedWithoutPort": 28,
+  "referenceInputs": 249,
+  "explanation": "物理行数为来源规模，不是预计 Go 行数/成本；module 是提交边界，batch 是内部调度边界"
+}

@@ -1,0 +1,26 @@
+{
+  "batch": "tools-bash",
+  "id": "shell-95",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/bash.ts",
+    "fn": "createBashTool",
+    "text": "",
+    "args": {
+      "command": "printf 'hello\\n'"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "hello\n"
+          }
+        ]
+      }
+    }
+  }
+}

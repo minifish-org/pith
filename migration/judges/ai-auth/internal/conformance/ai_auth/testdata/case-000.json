@@ -1,0 +1,31 @@
+{
+  "batch": "ai-auth",
+  "id": "credentials-false",
+  "input": {
+    "op": "credentials",
+    "file": "packages/ai/src/auth/credential-store.ts",
+    "aborted": false
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "read": {
+        "type": "api_key",
+        "key": "first-second-third"
+      },
+      "list": [
+        {
+          "providerId": "p",
+          "type": "api_key"
+        }
+      ],
+      "retained": {
+        "type": "api_key",
+        "key": "first-second-third"
+      },
+      "deleted": {
+        "$undefined": true
+      }
+    }
+  }
+}

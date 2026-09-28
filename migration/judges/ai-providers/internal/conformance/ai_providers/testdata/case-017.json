@@ -1,0 +1,110 @@
+{
+  "batch": "ai-providers",
+  "id": "metaProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/meta.ts",
+    "fn": "metaProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "meta",
+      "name": "Meta",
+      "models": [
+        {
+          "id": "muse-spark-1.1",
+          "api": "openai-responses",
+          "provider": "meta",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.25,
+            "output": 4.25,
+            "cacheRead": 0.15,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "muse-spark-1.2",
+          "api": "openai-responses",
+          "provider": "meta",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.25,
+            "output": 4.25,
+            "cacheRead": 0.15,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "muse-spark-1.2-contributor",
+          "api": "openai-responses",
+          "provider": "meta",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.1,
+            "output": 0.2,
+            "cacheRead": 0.002,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "muse-spark-1.3",
+          "api": "openai-responses",
+          "provider": "meta",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.25,
+            "output": 4.25,
+            "cacheRead": 0.15,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "muse-spark-1.3-contributor",
+          "api": "openai-responses",
+          "provider": "meta",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.1,
+            "output": 0.2,
+            "cacheRead": 0.002,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

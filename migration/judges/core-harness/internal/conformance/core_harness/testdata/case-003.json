@@ -1,0 +1,31 @@
+{
+  "batch": "core-harness",
+  "id": "OperationMismatch",
+  "input": {
+    "op": "tagged-error",
+    "file": "packages/agent/src/harness/result.ts",
+    "tag": "OperationMismatch",
+    "props": {
+      "message": "fixture error",
+      "lane": "main",
+      "operationId": "r1"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "tag": "OperationMismatch",
+      "name": "OperationMismatch",
+      "message": "fixture error",
+      "json": {
+        "_tag": "OperationMismatch",
+        "message": "fixture error",
+        "name": "OperationMismatch",
+        "lane": "main",
+        "operationId": "r1"
+      },
+      "matches": true,
+      "rejectPlain": false
+    }
+  }
+}

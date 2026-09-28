@@ -1,0 +1,38 @@
+{
+  "batch": "ai-utils",
+  "id": "validateToolArguments-0-3",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/validation.ts",
+    "fn": "validateToolArguments",
+    "args": [
+      {
+        "name": "echo",
+        "description": "",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "n": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "n"
+          ]
+        }
+      },
+      {
+        "type": "toolCall",
+        "id": "c",
+        "name": "echo",
+        "arguments": {
+          "n": "nope"
+        }
+      }
+    ]
+  },
+  "expected": {
+    "ok": false,
+    "error": "Validation failed for tool \"echo\":\n  - n: must be integer\n\nReceived arguments:\n{\n  \"n\": \"nope\"\n}"
+  }
+}

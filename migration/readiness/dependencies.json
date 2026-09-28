@@ -1,0 +1,446 @@
+{
+  "status": "dependencies-probed",
+  "platform": "darwin",
+  "arch": "arm64",
+  "go": "go version go1.24.2 darwin/arm64",
+  "goModSha256": "6e51ed9e18008a0e76f2a6cbf4499aa45aca19b0aee0845c5b5dcead2bc3299e",
+  "goSumSha256": "f37c00d0655b6a9ebd458a091408be9e3ed16fec543bad044f673cb7c86c3e46",
+  "probeSha256": "acd5e9553fd3517e6d2b502fa5c7aeb70c127bc0156dff70eace7bf32f118d53",
+  "checks": [
+    "AWS client construction/credential injection/SigV4",
+    "binary eventstream roundtrip and corrupt CRC rejection",
+    "local WebSocket roundtrip",
+    "OAuth PKCE parameter",
+    "YAML false/unicode",
+    "gitignore negation",
+    "diff patch roundtrip",
+    "JSON Schema valid/invalid"
+  ],
+  "race": true,
+  "dependencies": [
+    {
+      "path": "cloud.google.com/go/compute/metadata",
+      "version": "v0.3.0",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2",
+      "version": "v1.47.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream",
+      "version": "v1.7.20",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/config",
+      "version": "v1.33.6",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/credentials",
+      "version": "v1.20.6",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/feature/ec2/imds",
+      "version": "v1.20.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/internal/configsources",
+      "version": "v1.5.4",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/internal/endpoints/v2",
+      "version": "v2.8.4",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/internal/v4a",
+      "version": "v1.5.4",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/service/bedrockruntime",
+      "version": "v1.63.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding",
+      "version": "v1.13.19",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/service/internal/presigned-url",
+      "version": "v1.14.4",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/service/signin",
+      "version": "v1.10.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/service/sso",
+      "version": "v1.38.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/service/ssooidc",
+      "version": "v1.43.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/aws-sdk-go-v2/service/sts",
+      "version": "v1.51.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "path": "github.com/aws/smithy-go",
+      "version": "v1.28.1",
+      "goVersion": "1.24",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        }
+      ]
+    },
+    {
+      "path": "github.com/coder/websocket",
+      "version": "v1.8.15",
+      "goVersion": "1.23",
+      "licenses": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "cc0975a5f6305145bdd7b41ce9479632fdac3870e6ac4281f28017f18c767c4e"
+        }
+      ]
+    },
+    {
+      "path": "github.com/davecgh/go-spew",
+      "version": "v1.1.1",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "1b93a317849ee09d3d7e4f1d20c2b78ddb230b4becb12d7c224c927b9d470251"
+        }
+      ]
+    },
+    {
+      "path": "github.com/dlclark/regexp2",
+      "version": "v1.11.0",
+      "goVersion": "1.13",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "9be5d04bb4d706914d5bf943710da4afeb42048f7c529902fb57c82762a991a9"
+        }
+      ]
+    },
+    {
+      "path": "github.com/goccy/go-yaml",
+      "version": "v1.19.2",
+      "goVersion": "1.21.0",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "43fe703ea9ebe27f0a6e5d2a1f6dd094fbe324251c743498f3ec19986d7349cd"
+        }
+      ]
+    },
+    {
+      "path": "github.com/google/go-cmp",
+      "version": "v0.5.9",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "17b5d209ba8f9684257ecfcff87df6ceda6194143a8fbd074f29727cff6f0c40"
+        }
+      ]
+    },
+    {
+      "path": "github.com/kr/pretty",
+      "version": "v0.1.0",
+      "licenses": [
+        {
+          "file": "License",
+          "sha256": "4e26b8fcc034e2221b016f5a33e6eb741912577c5d0d406e924df1f27d05de79"
+        }
+      ]
+    },
+    {
+      "path": "github.com/kr/pty",
+      "version": "v1.1.1",
+      "licenses": [
+        {
+          "file": "License",
+          "sha256": "a2a1cea59d9c2d71908082f516f86bb560abf857646ecf69d70c121ead14aef4"
+        }
+      ]
+    },
+    {
+      "path": "github.com/kr/text",
+      "version": "v0.1.0",
+      "licenses": [
+        {
+          "file": "License",
+          "sha256": "283c28b781bc7487bd7bcaf453cbd811f5ee8d7ce625cfcf8dcacae6ba1f4bb5"
+        }
+      ]
+    },
+    {
+      "path": "github.com/pmezard/go-difflib",
+      "version": "v1.0.0",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "2eb550be6801c1ea434feba53bf6d12e7c71c90253e0a9de4a4f46cf88b56477"
+        }
+      ]
+    },
+    {
+      "path": "github.com/sabhiram/go-gitignore",
+      "version": "v0.0.0-20210923224102-525f6e181f06",
+      "goVersion": "1.13",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "55bff76239ca79b99d2e6b986d67c17e125cf7afa2d4d22eda54c02b791460a1"
+        }
+      ]
+    },
+    {
+      "path": "github.com/santhosh-tekuri/jsonschema/v6",
+      "version": "v6.0.2",
+      "goVersion": "1.21",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "c8858a5a76440bbca484e134cf7df46385d090dd18b2c58e650f939258802e5b"
+        }
+      ]
+    },
+    {
+      "path": "github.com/sergi/go-diff",
+      "version": "v1.4.0",
+      "goVersion": "1.13",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "27d7f7a027a2ba48083cc7912e5146629de65718ddac8ce006c08eb411508b52"
+        }
+      ]
+    },
+    {
+      "path": "github.com/stretchr/objx",
+      "version": "v0.1.0",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "b2663894033a05fd80261176cd8da1d72546e25842d5c1abcc852ca23b6b61b0"
+        }
+      ]
+    },
+    {
+      "path": "github.com/stretchr/testify",
+      "version": "v1.6.1",
+      "goVersion": "1.13",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "f8e536c1c7b695810427095dc85f5f80d44ff7c10535e8a9486cf393e2599189"
+        }
+      ]
+    },
+    {
+      "path": "golang.org/x/mod",
+      "version": "v0.8.0",
+      "goVersion": "1.17",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+        }
+      ]
+    },
+    {
+      "path": "golang.org/x/oauth2",
+      "version": "v0.28.0",
+      "goVersion": "1.23.0",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        }
+      ]
+    },
+    {
+      "path": "golang.org/x/sys",
+      "version": "v0.5.0",
+      "goVersion": "1.17",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+        }
+      ]
+    },
+    {
+      "path": "golang.org/x/text",
+      "version": "v0.14.0",
+      "goVersion": "1.18",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+        }
+      ]
+    },
+    {
+      "path": "golang.org/x/tools",
+      "version": "v0.6.0",
+      "goVersion": "1.18",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+        }
+      ]
+    },
+    {
+      "path": "gopkg.in/check.v1",
+      "version": "v1.0.0-20190902080502-41f04d3bba15",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "69ce77f2b1c9c608d27f2d749b0e7d0c13960ed3b0dc07b973ac940e362e5d9c"
+        }
+      ]
+    },
+    {
+      "path": "gopkg.in/yaml.v2",
+      "version": "v2.4.0",
+      "goVersion": "1.15",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        },
+        {
+          "file": "LICENSE.libyaml",
+          "sha256": "a94710b55e03b5285f77d048c5ba61bb9d6ee04a06c0eb90e68821e11b0c707a"
+        }
+      ]
+    },
+    {
+      "path": "gopkg.in/yaml.v3",
+      "version": "v3.0.0-20200313102051-9f266ea9e77c",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "d18f6323b71b0b768bb5e9616e36da390fbd39369a81807cca352de4e4e6aa0b"
+        }
+      ]
+    }
+  ],
+  "note": "Compatibility probes only; they do not prove Pi protocol parity. oauth2 v0.28.0 retains Go 1.24 support; latest required Go 1.26. No live provider credentials used."
+}

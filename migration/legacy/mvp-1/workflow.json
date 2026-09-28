@@ -1,0 +1,162 @@
+{
+  "version": 0,
+  "project": "..",
+  "runs": ".portsmith/tasks",
+  "bootstrap": [
+    "migration",
+    "README.md",
+    ".gitignore",
+    "go.mod",
+    "go.sum"
+  ],
+  "units": {
+    "P01-eventstream": {
+      "contract": "API.md",
+      "judge": "judges/P01-eventstream",
+      "outputs": [
+        "internal/eventstream/event_stream.go",
+        "internal/eventstream/event_stream_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP01_01",
+        "TestPortsmithJudgeP01_02",
+        "TestPortsmithJudgeP01_03",
+        "TestPortsmithJudgeP01_04",
+        "TestPortsmithJudgeP01_05"
+      ],
+      "race": true
+    },
+    "P02-contracts": {
+      "contract": "API.md",
+      "judge": "judges/P02-contracts",
+      "outputs": [
+        "ai/types.go",
+        "ai/types_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP02_01",
+        "TestPortsmithJudgeP02_02",
+        "TestPortsmithJudgeP02_03",
+        "TestPortsmithJudgeP02_04",
+        "TestPortsmithJudgeP02_05"
+      ],
+      "race": false
+    },
+    "P03-transcript": {
+      "contract": "API.md",
+      "judge": "judges/P03-transcript",
+      "outputs": [
+        "ai/transcript.go",
+        "ai/transcript_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP03_01",
+        "TestPortsmithJudgeP03_02",
+        "TestPortsmithJudgeP03_03",
+        "TestPortsmithJudgeP03_04",
+        "TestPortsmithJudgeP03_05"
+      ],
+      "race": false
+    },
+    "P04-tool-arguments": {
+      "contract": "API.md",
+      "judge": "judges/P04-tool-arguments",
+      "outputs": [
+        "ai/validation.go",
+        "ai/validation_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP04_01",
+        "TestPortsmithJudgeP04_02",
+        "TestPortsmithJudgeP04_03",
+        "TestPortsmithJudgeP04_04",
+        "TestPortsmithJudgeP04_05"
+      ],
+      "race": false
+    },
+    "P05-agent-loop": {
+      "contract": "API.md",
+      "judge": "judges/P05-agent-loop",
+      "outputs": [
+        "agent/loop.go",
+        "agent/loop_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP05_01",
+        "TestPortsmithJudgeP05_02",
+        "TestPortsmithJudgeP05_03",
+        "TestPortsmithJudgeP05_04",
+        "TestPortsmithJudgeP05_05",
+        "TestPortsmithJudgeP05_06",
+        "TestPortsmithJudgeP05_07"
+      ],
+      "race": true
+    },
+    "P06-agent-state": {
+      "contract": "API.md",
+      "judge": "judges/P06-agent-state",
+      "outputs": [
+        "agent/agent.go",
+        "agent/agent_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP06_01",
+        "TestPortsmithJudgeP06_02",
+        "TestPortsmithJudgeP06_03",
+        "TestPortsmithJudgeP06_04",
+        "TestPortsmithJudgeP06_05"
+      ],
+      "race": true
+    },
+    "P07-deepseek": {
+      "contract": "API.md",
+      "judge": "judges/P07-deepseek",
+      "outputs": [
+        "providers/deepseek/deepseek.go",
+        "providers/deepseek/deepseek_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP07_01",
+        "TestPortsmithJudgeP07_02",
+        "TestPortsmithJudgeP07_03",
+        "TestPortsmithJudgeP07_04",
+        "TestPortsmithJudgeP07_05",
+        "TestPortsmithJudgeP07_06"
+      ],
+      "race": false
+    },
+    "P08-read-text": {
+      "contract": "API.md",
+      "judge": "judges/P08-read-text",
+      "outputs": [
+        "tools/readfile/read.go",
+        "tools/readfile/read_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP08_01",
+        "TestPortsmithJudgeP08_02",
+        "TestPortsmithJudgeP08_03",
+        "TestPortsmithJudgeP08_04",
+        "TestPortsmithJudgeP08_05"
+      ],
+      "race": false
+    },
+    "P09-cli-smoke": {
+      "contract": "API.md",
+      "judge": "judges/P09-cli-smoke",
+      "outputs": [
+        "cmd/pith/main.go",
+        "cmd/pith/main_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeP09_01",
+        "TestPortsmithJudgeP09_02",
+        "TestPortsmithJudgeP09_03",
+        "TestPortsmithJudgeP09_04",
+        "TestPortsmithJudgeP09_05"
+      ],
+      "race": false
+    }
+  },
+  "status": "archived-not-executable"
+}

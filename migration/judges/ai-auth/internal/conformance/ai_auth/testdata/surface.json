@@ -1,0 +1,358 @@
+{
+  "outputs": [
+    "packages/ai/utils/eventstream/event_stream.go",
+    "packages/ai/utils/eventstream/event_stream_test.go",
+    "packages/ai/types/types.go",
+    "packages/ai/utils/assistant_event_stream.go",
+    "packages/telemetry/index.go",
+    "packages/telemetry/memory.go",
+    "packages/telemetry/noop.go",
+    "packages/telemetry/testing/conformance.go",
+    "packages/telemetry/testing/index.go",
+    "packages/telemetry/testing/types.go",
+    "internal/conformance/ai_foundation_types/source_map.json",
+    "internal/conformance/ai_foundation_types/adapter_test.go",
+    "packages/ai/types/ai_foundation_types_test.go",
+    "packages/ai/utils/ai_foundation_types_test.go",
+    "packages/telemetry/ai_foundation_types_test.go",
+    "packages/telemetry/testing/ai_foundation_types_test.go",
+    "packages/ai/catalog/image_models_generated.go",
+    "packages/ai/catalog/model_catalog.go",
+    "packages/ai/catalog/models_generated.go",
+    "packages/ai/catalog/amazon_bedrock_models.go",
+    "packages/ai/catalog/ant_ling_models.go",
+    "packages/ai/catalog/anthropic_models.go",
+    "packages/ai/catalog/azure_openai_responses_models.go",
+    "packages/ai/catalog/baseten_models.go",
+    "packages/ai/catalog/cerebras_models.go",
+    "packages/ai/catalog/cloudflare_ai_gateway_models.go",
+    "packages/ai/catalog/cloudflare_workers_ai_models.go",
+    "packages/ai/catalog/data_json_d.go",
+    "packages/ai/catalog/deepseek_models.go",
+    "packages/ai/catalog/fireworks_models.go",
+    "packages/ai/catalog/github_copilot_models.go",
+    "packages/ai/catalog/google_vertex_models.go",
+    "packages/ai/catalog/google_models.go",
+    "packages/ai/catalog/groq_models.go",
+    "packages/ai/catalog/huggingface_models.go",
+    "packages/ai/catalog/kimi_coding_models.go",
+    "packages/ai/catalog/meta_models.go",
+    "packages/ai/catalog/minimax_cn_models.go",
+    "packages/ai/catalog/minimax_models.go",
+    "packages/ai/catalog/mistral_models.go",
+    "packages/ai/catalog/moonshotai_cn_models.go",
+    "packages/ai/catalog/moonshotai_models.go",
+    "packages/ai/catalog/nvidia_models.go",
+    "packages/ai/catalog/openai_codex_models.go",
+    "packages/ai/catalog/openai_models.go",
+    "packages/ai/catalog/opencode_go_models.go",
+    "packages/ai/catalog/opencode_models.go",
+    "packages/ai/catalog/openrouter_models.go",
+    "packages/ai/catalog/qwen_token_plan_cn_models.go",
+    "packages/ai/catalog/qwen_token_plan_individual_models.go",
+    "packages/ai/catalog/qwen_token_plan_models.go",
+    "packages/ai/catalog/radius_config.go",
+    "packages/ai/catalog/radius_models.go",
+    "packages/ai/catalog/together_models.go",
+    "packages/ai/catalog/vercel_ai_gateway_models.go",
+    "packages/ai/catalog/xai_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_ams_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_cn_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_sgp_models.go",
+    "packages/ai/catalog/xiaomi_models.go",
+    "packages/ai/catalog/zai_coding_cn_models.go",
+    "packages/ai/catalog/zai_models.go",
+    "internal/conformance/ai_foundation_catalog/source_map.json",
+    "internal/conformance/ai_foundation_catalog/adapter_test.go",
+    "packages/ai/catalog/ai_foundation_catalog_test.go",
+    "packages/ai/api/constrained_sampling.go",
+    "packages/ai/api/lazy.go",
+    "packages/ai/api/simple_options.go",
+    "packages/ai/api/transform_messages.go",
+    "packages/ai/utils/abort_signals.go",
+    "packages/ai/utils/abort.go",
+    "packages/ai/utils/assistant_message_frame.go",
+    "packages/ai/utils/diagnostics.go",
+    "packages/ai/utils/error_body.go",
+    "packages/ai/utils/estimate.go",
+    "packages/ai/utils/hash.go",
+    "packages/ai/utils/headers.go",
+    "packages/ai/utils/json_parse.go",
+    "packages/ai/utils/node_http_proxy.go",
+    "packages/ai/utils/overflow.go",
+    "packages/ai/utils/pi_user_agent.go",
+    "packages/ai/utils/provider_env.go",
+    "packages/ai/utils/provider_retry.go",
+    "packages/ai/utils/retry.go",
+    "packages/ai/utils/sanitize_unicode.go",
+    "packages/ai/utils/sleep.go",
+    "packages/ai/utils/text.go",
+    "packages/ai/utils/transcript.go",
+    "packages/ai/utils/typebox_helpers.go",
+    "packages/ai/utils/uuid.go",
+    "packages/ai/utils/validation.go",
+    "internal/conformance/ai_utils/source_map.json",
+    "internal/conformance/ai_utils/adapter_test.go",
+    "packages/ai/api/ai_utils_test.go",
+    "packages/ai/utils/ai_utils_test.go",
+    "packages/ai/auth/context.go",
+    "packages/ai/auth/credential_store.go",
+    "packages/ai/auth/helpers.go",
+    "packages/ai/auth/oauth/anthropic.go",
+    "packages/ai/auth/oauth/device_code.go",
+    "packages/ai/auth/oauth/github_copilot.go",
+    "packages/ai/auth/oauth/kimi_coding.go",
+    "packages/ai/auth/oauth/load.go",
+    "packages/ai/auth/oauth/meta.go",
+    "packages/ai/auth/oauth/oauth_page.go",
+    "packages/ai/auth/oauth/openai_codex.go",
+    "packages/ai/auth/oauth/openrouter.go",
+    "packages/ai/auth/oauth/pkce.go",
+    "packages/ai/auth/oauth/radius.go",
+    "packages/ai/auth/oauth/xai.go",
+    "packages/ai/auth/resolve.go",
+    "packages/ai/auth/types/types.go",
+    "packages/ai/env_api_keys.go",
+    "internal/conformance/ai_auth/source_map.json",
+    "internal/conformance/ai_auth/adapter_test.go",
+    "packages/ai/auth/ai_auth_test.go",
+    "packages/ai/auth/oauth/ai_auth_test.go",
+    "packages/ai/auth/types/ai_auth_test.go",
+    "packages/ai/ai_auth_test.go"
+  ],
+  "symbols": [
+    {
+      "source": "packages/ai/src/auth/context.ts",
+      "upstream": "defaultProviderAuthContext"
+    },
+    {
+      "source": "packages/ai/src/auth/credential-store.ts",
+      "upstream": "InMemoryCredentialStore"
+    },
+    {
+      "source": "packages/ai/src/auth/helpers.ts",
+      "upstream": "envApiKeyAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/helpers.ts",
+      "upstream": "lazyOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/anthropic.ts",
+      "upstream": "anthropicOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/device-code.ts",
+      "upstream": "OAuthDeviceCodePollResult"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/device-code.ts",
+      "upstream": "OAuthDeviceCodePollOptions"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/device-code.ts",
+      "upstream": "abortableSleep"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/device-code.ts",
+      "upstream": "pollOAuthDeviceCodeFlow"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/github-copilot.ts",
+      "upstream": "githubCopilotOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/kimi-coding.ts",
+      "upstream": "kimiCodingOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "registerBundledOAuthFlowLoaders"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadAnthropicOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadOpenAICodexOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadGitHubCopilotOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadOpenRouterOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadKimiCodingOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadMetaOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadXaiOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/load.ts",
+      "upstream": "loadRadiusOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/meta.ts",
+      "upstream": "metaOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/oauth-page.ts",
+      "upstream": "oauthSuccessHtml"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/oauth-page.ts",
+      "upstream": "oauthErrorHtml"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/openai-codex.ts",
+      "upstream": "openaiCodexOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/openrouter.ts",
+      "upstream": "openRouterOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/pkce.ts",
+      "upstream": "generatePKCE"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/radius.ts",
+      "upstream": "RadiusOAuthOptions"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/radius.ts",
+      "upstream": "createRadiusOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/oauth/xai.ts",
+      "upstream": "xaiOAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/resolve.ts",
+      "upstream": "ModelsErrorCode"
+    },
+    {
+      "source": "packages/ai/src/auth/resolve.ts",
+      "upstream": "AuthResolutionOverrides"
+    },
+    {
+      "source": "packages/ai/src/auth/resolve.ts",
+      "upstream": "ModelsError"
+    },
+    {
+      "source": "packages/ai/src/auth/resolve.ts",
+      "upstream": "resolveProviderAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "ModelAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "ApiKeyCredential"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "OAuthCredentials"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "OAuthCredential"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "Credential"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "CredentialInfo"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthOperationOptions"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "CredentialStore"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthContext"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthResult"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthCheck"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthType"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthPrompt"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthInfoLink"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthEvent"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "AuthInteraction"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "ProviderAuthInteraction"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "ApiKeyAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "OAuthAuth"
+    },
+    {
+      "source": "packages/ai/src/auth/types.ts",
+      "upstream": "ProviderAuth"
+    },
+    {
+      "source": "packages/ai/src/env-api-keys.ts",
+      "upstream": "ANTHROPIC_AUTH_TOKEN_ENV"
+    },
+    {
+      "source": "packages/ai/src/env-api-keys.ts",
+      "upstream": "ANTHROPIC_OAUTH_TOKEN_ENV"
+    },
+    {
+      "source": "packages/ai/src/env-api-keys.ts",
+      "upstream": "ANTHROPIC_API_KEY_ENV"
+    },
+    {
+      "source": "packages/ai/src/env-api-keys.ts",
+      "upstream": "findEnvKeys"
+    },
+    {
+      "source": "packages/ai/src/env-api-keys.ts",
+      "upstream": "getEnvApiKey"
+    }
+  ],
+  "map": "internal/conformance/ai_auth/source_map.json"
+}

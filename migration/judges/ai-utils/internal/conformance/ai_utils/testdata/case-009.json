@@ -1,0 +1,29 @@
+{
+  "batch": "ai-utils",
+  "id": "contentText-1",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/text.ts",
+    "fn": "contentText",
+    "args": [
+      [
+        {
+          "type": "text",
+          "text": "a"
+        },
+        {
+          "type": "thinking",
+          "thinking": "secret"
+        },
+        {
+          "type": "text",
+          "text": "b"
+        }
+      ]
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": "a\nb"
+  }
+}

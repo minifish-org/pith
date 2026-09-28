@@ -1,0 +1,22 @@
+{
+  "batch": "core-compaction",
+  "id": "shouldCompact-2",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/compaction/compaction.ts",
+    "fn": "shouldCompact",
+    "args": [
+      900,
+      1000,
+      {
+        "enabled": false,
+        "reserveTokens": 200,
+        "keepRecentTokens": 300
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": false
+  }
+}

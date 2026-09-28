@@ -1,0 +1,41 @@
+package dependencies
+import (
+ "bytes"
+ "context"
+ "crypto/sha256"
+ "encoding/hex"
+ "net/http"
+ "net/http/httptest"
+ "strings"
+ "testing"
+ "time"
+ "github.com/aws/aws-sdk-go-v2/aws"
+ "github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream"
+ "github.com/aws/aws-sdk-go-v2/aws/signer/v4"
+ "github.com/aws/aws-sdk-go-v2/config"
+ "github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
+ "github.com/coder/websocket"
+ "github.com/goccy/go-yaml"
+ ignore "github.com/sabhiram/go-gitignore"
+ "github.com/sergi/go-diff/diffmatchpatch"
+ "github.com/santhosh-tekuri/jsonschema/v6"
+ "golang.org/x/oauth2"
+)
+func TestDependencies(t *testing.T){
+ ctx,cancel:=context.WithTimeout(context.Background(),5*time.Second);defer cancel()
+ cfg,err:=config.LoadDefaultConfig(ctx,config.WithRegion("us-east-1"),config.WithCredentialsProvider(aws.CredentialsProviderFunc(func(context.Context)(aws.Credentials,error){return aws.Credentials{AccessKeyID:"fixture",SecretAccessKey:"fixture-secret"},nil})));if err!=nil{t.Fatal(err)}
+ if bedrockruntime.NewFromConfig(cfg)==nil{t.Fatal("bedrock client")}
+ req,_:=http.NewRequestWithContext(ctx,"POST","https://bedrock-runtime.us-east-1.amazonaws.com/model/fixture/converse-stream",strings.NewReader("{}"));sum:=sha256.Sum256([]byte("{}"));creds,_:=cfg.Credentials.Retrieve(ctx)
+ if err=v4.NewSigner().SignHTTP(ctx,creds,req,hex.EncodeToString(sum[:]),"bedrock","us-east-1",time.Unix(1,0));err!=nil||!strings.Contains(req.Header.Get("Authorization"),"AWS4-HMAC-SHA256"){t.Fatal("signing",err)}
+ var b bytes.Buffer;if err=eventstream.NewEncoder().Encode(&b,eventstream.Message{Payload:[]byte(`{"text":"中文"}`)});err!=nil{t.Fatal(err)}
+ encoded:=append([]byte(nil),b.Bytes()...);msg,err:=eventstream.NewDecoder().Decode(&b,nil);if err!=nil||string(msg.Payload)!=`{"text":"中文"}`{t.Fatal("eventstream",err)}
+ encoded[len(encoded)-1]^=1;if _,err=eventstream.NewDecoder().Decode(bytes.NewReader(encoded),nil);err==nil{t.Fatal("CRC corruption accepted")}
+ server:=httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter,r *http.Request){c,err:=websocket.Accept(w,r,nil);if err!=nil{return};defer c.CloseNow();typ,data,err:=c.Read(ctx);if err==nil{_ = c.Write(ctx,typ,data)}}));defer server.Close()
+ c,_,err:=websocket.Dial(ctx,"ws"+strings.TrimPrefix(server.URL,"http"),nil);if err!=nil{t.Fatal(err)};defer c.CloseNow();if err=c.Write(ctx,websocket.MessageText,[]byte("中文"));err!=nil{t.Fatal(err)};_,data,err:=c.Read(ctx);if err!=nil||string(data)!="中文"{t.Fatal("websocket",err)}
+ oauth:=oauth2.Config{ClientID:"fixture",Endpoint:oauth2.Endpoint{AuthURL:"https://example.invalid/auth"}};if !strings.Contains(oauth.AuthCodeURL("state",oauth2.S256ChallengeOption("verifier")),"code_challenge_method=S256"){t.Fatal("PKCE")}
+ var v map[string]any;if err=yaml.Unmarshal([]byte("name: 中文\nflag: false\n"),&v);err!=nil||v["name"]!="中文"||v["flag"]!=false{t.Fatal("yaml",err)}
+ gi:=ignore.CompileIgnoreLines("*.log","!keep.log");if !gi.MatchesPath("x.log")||gi.MatchesPath("keep.log"){t.Fatal("gitignore")}
+ d:=diffmatchpatch.New();patch:=d.PatchMake("one\ntwo\n","one\n中文\n");got,flags:=d.PatchApply(patch,"one\ntwo\n");if got!="one\n中文\n"||len(flags)==0||!flags[0]{t.Fatal("diff")}
+ compiler:=jsonschema.NewCompiler();if err=compiler.AddResource("urn:fixture",map[string]any{"type":"object","properties":map[string]any{"n":map[string]any{"type":"integer"}},"required":[]any{"n"}});err!=nil{t.Fatal(err)}
+ schema,err:=compiler.Compile("urn:fixture");if err!=nil{t.Fatal(err)};if err=schema.Validate(map[string]any{"n":1});err!=nil{t.Fatal(err)};if err=schema.Validate(map[string]any{"n":"bad"});err==nil{t.Fatal("schema invalid accepted")}
+}

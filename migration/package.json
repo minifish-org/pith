@@ -1,0 +1,11 @@
+{
+  "name": "pith-migration-reference-tools",
+  "private": true,
+  "type": "module",
+  "description": "Pinned dependencies for executing upstream TS conformance probes; not shipped with Go binaries",
+  "dependencies": {
+    "diff": "8.0.4",
+    "ignore": "7.0.8",
+    "yaml": "2.9.0"
+  }
+}

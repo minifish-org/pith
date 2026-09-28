@@ -1,0 +1,64 @@
+{
+  "batch": "ai-other-protocols",
+  "id": "pi-messages-http-error",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/pi-messages.ts",
+    "api": "pi-messages",
+    "mode": "http-error",
+    "body": "{\"error\":{\"message\":\"fixture denied\",\"type\":\"invalid_request_error\",\"code\":\"bad_request\"}}",
+    "status": 400
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/messages",
+          "body": {
+            "model": "fixture",
+            "context": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "system",
+                  "timestamp": 1
+                },
+                {
+                  "role": "user",
+                  "content": "hello",
+                  "timestamp": 2
+                }
+              ]
+            },
+            "options": {
+              "temperature": 0,
+              "maxTokens": 16
+            }
+          }
+        }
+      ],
+      "events": [
+        "error"
+      ],
+      "content": [],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "error",
+      "responseId": null
+    }
+  }
+}

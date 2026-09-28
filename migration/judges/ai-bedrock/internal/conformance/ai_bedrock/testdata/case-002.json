@@ -1,0 +1,107 @@
+{
+  "batch": "ai-bedrock",
+  "id": "bedrock-http-error",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "api": "bedrock-converse-stream",
+    "mode": "http-error",
+    "status": 400,
+    "body": "{\"message\":\"fixture denied\"}",
+    "bedrock": [
+      {
+        "messageStart": {
+          "role": "assistant"
+        }
+      },
+      {
+        "contentBlockStart": {
+          "contentBlockIndex": 0,
+          "start": {}
+        }
+      },
+      {
+        "contentBlockDelta": {
+          "contentBlockIndex": 0,
+          "delta": {
+            "text": "你好"
+          }
+        }
+      },
+      {
+        "contentBlockStop": {
+          "contentBlockIndex": 0
+        }
+      },
+      {
+        "messageStop": {
+          "stopReason": "end_turn"
+        }
+      },
+      {
+        "metadata": {
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 1,
+            "totalTokens": 3
+          },
+          "metrics": {
+            "latencyMs": 1
+          }
+        }
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/model/fixture/converse-stream",
+          "body": {
+            "messages": [
+              {
+                "role": "user",
+                "content": [
+                  {
+                    "text": "hello"
+                  }
+                ]
+              }
+            ],
+            "system": [
+              {
+                "text": "system"
+              }
+            ],
+            "inferenceConfig": {
+              "maxTokens": 16,
+              "temperature": 0
+            }
+          }
+        }
+      ],
+      "events": [
+        "error"
+      ],
+      "content": [],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "error",
+      "responseId": null
+    }
+  }
+}

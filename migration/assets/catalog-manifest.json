@@ -1,0 +1,306 @@
+{
+  "package": "@earendil-works/pi-ai",
+  "version": "0.87.1",
+  "url": "https://registry.npmjs.org/@earendil-works/pi-ai/-/pi-ai-0.87.1.tgz",
+  "integrity": "sha512-X/3PfQBnnoeVdO9Cv8zHghUMglzlgNZYGNzoPnbRoGnHl3Rw3TlA2UKSUB7BRHUOxMryHXYa8dnjWZlbRheDZA==",
+  "archiveSha256": "35b4432f27cc2665f86beebb9af6a39b1251970883c3044bd8be4f4e8c731ca0",
+  "license": "MIT",
+  "gitRevision": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "provenance": "Published package version matches pinned source package version; archive integrity verified against existing package-lock. Generated catalogs belong to this published release; not regenerated from live APIs.",
+  "files": [
+    {
+      "file": ".manifest.json",
+      "sha256": "bc6d998b30c71798e9be22f7098406ed380a146b17d0aa78b9ad8203d47f6250",
+      "bytes": 3696,
+      "publishedPath": "package/dist/providers/data/.manifest.json",
+      "target": "packages/ai/catalog/data/.manifest.json"
+    },
+    {
+      "file": "amazon-bedrock.json",
+      "sha256": "348babe9936d0d8efa54e3afa60aecacdc7ad39a9ca11687eeff92121367980d",
+      "bytes": 81727,
+      "publishedPath": "package/dist/providers/data/amazon-bedrock.json",
+      "target": "packages/ai/catalog/data/amazon-bedrock.json"
+    },
+    {
+      "file": "ant-ling.json",
+      "sha256": "335137fb6dc428544ca56ab8fd52b300e7d0dcf97869fa10c1022669da8bfdeb",
+      "bytes": 1635,
+      "publishedPath": "package/dist/providers/data/ant-ling.json",
+      "target": "packages/ai/catalog/data/ant-ling.json"
+    },
+    {
+      "file": "anthropic.json",
+      "sha256": "474a010cd96c759d60419a6ba745747d9a87f172276dc85b7568da9d072b4e75",
+      "bytes": 9775,
+      "publishedPath": "package/dist/providers/data/anthropic.json",
+      "target": "packages/ai/catalog/data/anthropic.json"
+    },
+    {
+      "file": "azure-openai-responses.json",
+      "sha256": "c351c6af1882660ffa8a8598594b86671b45817106e45ac920535aaeac59fc96",
+      "bytes": 18224,
+      "publishedPath": "package/dist/providers/data/azure-openai-responses.json",
+      "target": "packages/ai/catalog/data/azure-openai-responses.json"
+    },
+    {
+      "file": "baseten.json",
+      "sha256": "60001c0aa6c7c9112b00c2ed6f646b58baed196782fe4db6028074e9ccedc5e5",
+      "bytes": 16699,
+      "publishedPath": "package/dist/providers/data/baseten.json",
+      "target": "packages/ai/catalog/data/baseten.json"
+    },
+    {
+      "file": "cerebras.json",
+      "sha256": "f180b9ca76bc103dede2c10827e859895742bcfda67f6205758c0bec6be391b4",
+      "bytes": 1070,
+      "publishedPath": "package/dist/providers/data/cerebras.json",
+      "target": "packages/ai/catalog/data/cerebras.json"
+    },
+    {
+      "file": "cloudflare-ai-gateway.json",
+      "sha256": "21ca8d9b740a752d6e70a8ca9f3cb75417ba3ff69ffc5b84440b2c1ff40d88cb",
+      "bytes": 32869,
+      "publishedPath": "package/dist/providers/data/cloudflare-ai-gateway.json",
+      "target": "packages/ai/catalog/data/cloudflare-ai-gateway.json"
+    },
+    {
+      "file": "cloudflare-workers-ai.json",
+      "sha256": "7b07349dedfc2f47fda77d3d525b0c0e5d236f8d5cd97a17399275091721afa3",
+      "bytes": 11825,
+      "publishedPath": "package/dist/providers/data/cloudflare-workers-ai.json",
+      "target": "packages/ai/catalog/data/cloudflare-workers-ai.json"
+    },
+    {
+      "file": "deepseek.json",
+      "sha256": "549a7ddbdcfd4c59272f1ea9c7d6d9a70bbbfccad3df3a75fb16d6918ac54d0d",
+      "bytes": 1349,
+      "publishedPath": "package/dist/providers/data/deepseek.json",
+      "target": "packages/ai/catalog/data/deepseek.json"
+    },
+    {
+      "file": "fireworks.json",
+      "sha256": "b6a6490129c66a845bcc76957138db9b25b0b2afa3e12c5d2c502ba2026c7509",
+      "bytes": 23485,
+      "publishedPath": "package/dist/providers/data/fireworks.json",
+      "target": "packages/ai/catalog/data/fireworks.json"
+    },
+    {
+      "file": "github-copilot.json",
+      "sha256": "bb59f8e4ffca00a8e6031baee78f4bc39d0e95b7647452a3605decb7c4cff30a",
+      "bytes": 25130,
+      "publishedPath": "package/dist/providers/data/github-copilot.json",
+      "target": "packages/ai/catalog/data/github-copilot.json"
+    },
+    {
+      "file": "google-vertex.json",
+      "sha256": "51867a5cdb223c5b9d21f8b54c17790aff024d9a4855edf4a9856d6e1a39d7c1",
+      "bytes": 7559,
+      "publishedPath": "package/dist/providers/data/google-vertex.json",
+      "target": "packages/ai/catalog/data/google-vertex.json"
+    },
+    {
+      "file": "google.json",
+      "sha256": "328822707e554d5977974d4b24695c2878aad48e5ca527c1efb0284141ff708c",
+      "bytes": 12956,
+      "publishedPath": "package/dist/providers/data/google.json",
+      "target": "packages/ai/catalog/data/google.json"
+    },
+    {
+      "file": "groq.json",
+      "sha256": "f1d03e0d6cdaef643f8d3a854d7caba784b2a820619a928c4711d08b6688de41",
+      "bytes": 3221,
+      "publishedPath": "package/dist/providers/data/groq.json",
+      "target": "packages/ai/catalog/data/groq.json"
+    },
+    {
+      "file": "huggingface.json",
+      "sha256": "2afa4769c606655cf6c36df332ad41a41ec43a19cf9bae4e337243b54f5c9349",
+      "bytes": 34989,
+      "publishedPath": "package/dist/providers/data/huggingface.json",
+      "target": "packages/ai/catalog/data/huggingface.json"
+    },
+    {
+      "file": "kimi-coding.json",
+      "sha256": "9884f065fe5a0e68e3538590c28019476077712f0542198eef6fdb53b8edd2ee",
+      "bytes": 2206,
+      "publishedPath": "package/dist/providers/data/kimi-coding.json",
+      "target": "packages/ai/catalog/data/kimi-coding.json"
+    },
+    {
+      "file": "meta.json",
+      "sha256": "1b650998c0f9b404246cde1d353105e6d825d8a7292d8f8c43e85dd3402dc130",
+      "bytes": 2724,
+      "publishedPath": "package/dist/providers/data/meta.json",
+      "target": "packages/ai/catalog/data/meta.json"
+    },
+    {
+      "file": "minimax-cn.json",
+      "sha256": "17c6d6a27514af90d6c519b7971d8c7e7624ceb12bc94a1384ceb3393c297e97",
+      "bytes": 1070,
+      "publishedPath": "package/dist/providers/data/minimax-cn.json",
+      "target": "packages/ai/catalog/data/minimax-cn.json"
+    },
+    {
+      "file": "minimax.json",
+      "sha256": "29c0078460251b3e0224b4c5c994c108a83c028a7ffcb1ff85bdc0cdb3bad988",
+      "bytes": 1055,
+      "publishedPath": "package/dist/providers/data/minimax.json",
+      "target": "packages/ai/catalog/data/minimax.json"
+    },
+    {
+      "file": "mistral.json",
+      "sha256": "df70e9066f39ffd93734895530653d642e9491bf66dd4b6ab1138f0cb400ae65",
+      "bytes": 11499,
+      "publishedPath": "package/dist/providers/data/mistral.json",
+      "target": "packages/ai/catalog/data/mistral.json"
+    },
+    {
+      "file": "moonshotai-cn.json",
+      "sha256": "6397ff35e9c3fc0928cbc3a4877c12a3bff615c7fa917a0fba4359c2767557e5",
+      "bytes": 2805,
+      "publishedPath": "package/dist/providers/data/moonshotai-cn.json",
+      "target": "packages/ai/catalog/data/moonshotai-cn.json"
+    },
+    {
+      "file": "moonshotai.json",
+      "sha256": "7259c6884e0f858de650ee39974a670d0381cf9f6f9f6d2e46b921413fcf1544",
+      "bytes": 2793,
+      "publishedPath": "package/dist/providers/data/moonshotai.json",
+      "target": "packages/ai/catalog/data/moonshotai.json"
+    },
+    {
+      "file": "nvidia.json",
+      "sha256": "79452d78d25b41c9b1f16d645c9a6839c4721c4a29dd287513db796ad9763c84",
+      "bytes": 11677,
+      "publishedPath": "package/dist/providers/data/nvidia.json",
+      "target": "packages/ai/catalog/data/nvidia.json"
+    },
+    {
+      "file": "openai-codex.json",
+      "sha256": "4bb30a26d1b40e1f67c9f24891fca0ce25b030bc4cbbb529be78608cd4466fdf",
+      "bytes": 5542,
+      "publishedPath": "package/dist/providers/data/openai-codex.json",
+      "target": "packages/ai/catalog/data/openai-codex.json"
+    },
+    {
+      "file": "openai.json",
+      "sha256": "3c52c8587e7e4a1829ed98ec6e0e3d7bbb2baf47e8618556ed1e95a9c0362835",
+      "bytes": 25783,
+      "publishedPath": "package/dist/providers/data/openai.json",
+      "target": "packages/ai/catalog/data/openai.json"
+    },
+    {
+      "file": "opencode-go.json",
+      "sha256": "d471bdb6a9f940fc732687d6749f92d2f3c7c9302ff39d2ce0af062f2472a4ad",
+      "bytes": 16620,
+      "publishedPath": "package/dist/providers/data/opencode-go.json",
+      "target": "packages/ai/catalog/data/opencode-go.json"
+    },
+    {
+      "file": "opencode.json",
+      "sha256": "7dff0aba3c0cde09af480fb2e64a01360723b10b3dd1a4b14727435565251a8a",
+      "bytes": 40674,
+      "publishedPath": "package/dist/providers/data/opencode.json",
+      "target": "packages/ai/catalog/data/opencode.json"
+    },
+    {
+      "file": "openrouter.json",
+      "sha256": "b591a790d1c1664c92e3eb80c8d174098ea6fff9dd6d88fcf4ee1b55dd53270d",
+      "bytes": 225960,
+      "publishedPath": "package/dist/providers/data/openrouter.json",
+      "target": "packages/ai/catalog/data/openrouter.json"
+    },
+    {
+      "file": "qwen-token-plan-cn.json",
+      "sha256": "1bb24ea68feaec83612940e7413bf953d1664a86a521c90750f4c93dd572d8ae",
+      "bytes": 11830,
+      "publishedPath": "package/dist/providers/data/qwen-token-plan-cn.json",
+      "target": "packages/ai/catalog/data/qwen-token-plan-cn.json"
+    },
+    {
+      "file": "qwen-token-plan-individual.json",
+      "sha256": "895804dbf586401e61c372e3edef8ee2530878e36a942e12fccf2469167921de",
+      "bytes": 5611,
+      "publishedPath": "package/dist/providers/data/qwen-token-plan-individual.json",
+      "target": "packages/ai/catalog/data/qwen-token-plan-individual.json"
+    },
+    {
+      "file": "qwen-token-plan.json",
+      "sha256": "b626dba49c60a28ac9e6a128fa3e5bde97b43c865c4314e64b9b2191eb8afefa",
+      "bytes": 11850,
+      "publishedPath": "package/dist/providers/data/qwen-token-plan.json",
+      "target": "packages/ai/catalog/data/qwen-token-plan.json"
+    },
+    {
+      "file": "radius.json",
+      "sha256": "016d54b9b6f2f839c700fe5b05523712d6cde7699c65bf9a3f29517f505dc6ee",
+      "bytes": 19725,
+      "publishedPath": "package/dist/providers/data/radius.json",
+      "target": "packages/ai/catalog/data/radius.json"
+    },
+    {
+      "file": "together.json",
+      "sha256": "f7871c75e427b196abf3a1b5d839d50903a0532ebe2b04903eb26b41c93305fb",
+      "bytes": 13833,
+      "publishedPath": "package/dist/providers/data/together.json",
+      "target": "packages/ai/catalog/data/together.json"
+    },
+    {
+      "file": "vercel-ai-gateway.json",
+      "sha256": "ca6038aabe7311632ac26e113cf4faede7e847db1163fd3aec534a91589fc926",
+      "bytes": 110171,
+      "publishedPath": "package/dist/providers/data/vercel-ai-gateway.json",
+      "target": "packages/ai/catalog/data/vercel-ai-gateway.json"
+    },
+    {
+      "file": "xai.json",
+      "sha256": "4798b621df20e84db3a48a629ef8054723ebcc8b24314064f6437eb05036405f",
+      "bytes": 2533,
+      "publishedPath": "package/dist/providers/data/xai.json",
+      "target": "packages/ai/catalog/data/xai.json"
+    },
+    {
+      "file": "xiaomi-token-plan-ams.json",
+      "sha256": "754a2b6fb127091f569eabbbc84c50862b319bf4ffad434fd0b2f86fd36007f5",
+      "bytes": 2080,
+      "publishedPath": "package/dist/providers/data/xiaomi-token-plan-ams.json",
+      "target": "packages/ai/catalog/data/xiaomi-token-plan-ams.json"
+    },
+    {
+      "file": "xiaomi-token-plan-cn.json",
+      "sha256": "bebafd818b8cc9452405b16599bb3b4e74dc7bd629ad5847ea5c6ce7000706f3",
+      "bytes": 2072,
+      "publishedPath": "package/dist/providers/data/xiaomi-token-plan-cn.json",
+      "target": "packages/ai/catalog/data/xiaomi-token-plan-cn.json"
+    },
+    {
+      "file": "xiaomi-token-plan-sgp.json",
+      "sha256": "edec21ee8d3d8839c96013b94bfa6a55616fb7fd62290fa99db2f3eec61713af",
+      "bytes": 2080,
+      "publishedPath": "package/dist/providers/data/xiaomi-token-plan-sgp.json",
+      "target": "packages/ai/catalog/data/xiaomi-token-plan-sgp.json"
+    },
+    {
+      "file": "xiaomi.json",
+      "sha256": "640f758f527639c6233d89e548797ffe8d97acc85d5d7dfd647dbb0d42efe146",
+      "bytes": 3030,
+      "publishedPath": "package/dist/providers/data/xiaomi.json",
+      "target": "packages/ai/catalog/data/xiaomi.json"
+    },
+    {
+      "file": "zai-coding-cn.json",
+      "sha256": "761cd1c3480519c3be2eaed82cff821993f652620d0787d0e38d7bf18ce2ba41",
+      "bytes": 2596,
+      "publishedPath": "package/dist/providers/data/zai-coding-cn.json",
+      "target": "packages/ai/catalog/data/zai-coding-cn.json"
+    },
+    {
+      "file": "zai.json",
+      "sha256": "8f5776b5eaba607d898fb26015d46d040a68217e85860173af3bfbab5f8a9eb1",
+      "bytes": 4088,
+      "publishedPath": "package/dist/providers/data/zai.json",
+      "target": "packages/ai/catalog/data/zai.json"
+    }
+  ]
+}

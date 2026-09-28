@@ -1,0 +1,31 @@
+{
+  "status": "judge-ready",
+  "scope": "ai-foundation/eventstream only; no complete ai or Go candidate claim",
+  "upstream": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "source": {
+    "name": "packages/ai/src/utils/event-stream.ts",
+    "sha256": "147084657f76665ff7d6c8dcd6eb0745149e3aaee3e7b9c272b315a1b5679386"
+  },
+  "contractSha256": "eaa797782dd709b1d8ec7655a938ed58166ee63d89ca87062912feee5ee74cc8",
+  "judges": [
+    {
+      "name": "packages/ai/utils/eventstream/portsmith_judge_eventstream_test.go",
+      "sha256": "46a16b4ac6ec010c16068f220a4ee4669004814da4c776100e638963779d6c58"
+    },
+    {
+      "name": "packages/ai/utils/eventstream/testdata/eventstream-ts.json",
+      "sha256": "89453b879b48f692a22d7c93267a4d606d42507bb2a9e54936152c9ff1122dfd"
+    }
+  ],
+  "tsCases": 7,
+  "allJudgesCompile": true,
+  "knownWrongRejected": true,
+  "fifoMutationRejected": true,
+  "preservedPositiveControlWithRace": true,
+  "positiveControlExcludedTests": [
+    "TestPortsmithJudgeAIEventStreamConcurrency"
+  ],
+  "note": "Concurrency/reentrant callbacks are Go contract extensions; positive control is not accepted Pith code. It is never copied into product directories.",
+  "modelCalls": 0,
+  "goImplementationVerified": false
+}

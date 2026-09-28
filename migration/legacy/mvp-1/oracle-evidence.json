@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "commit": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "sourceFiles": [
+    {
+      "name": "packages/ai/src/utils/event-stream.ts",
+      "sha256": "147084657f76665ff7d6c8dcd6eb0745149e3aaee3e7b9c272b315a1b5679386"
+    },
+    {
+      "name": "packages/ai/src/utils/text.ts",
+      "sha256": "d37c1825855c7fc71669a545b5b266810242c1c7e58d57228c0c143f29c1c544"
+    },
+    {
+      "name": "packages/ai/src/utils/transcript.ts",
+      "sha256": "cad0c126cdfadc1b4f430cc5a95b1c9285ecd1ee9957642d7773b1357bbc9ac5"
+    },
+    {
+      "name": "packages/ai/src/utils/validation.ts",
+      "sha256": "460786b57dead200e411b9afec916a5049c96ebcff4da082096456ac06d44fb7"
+    },
+    {
+      "name": "packages/agent/src/agent-loop.ts",
+      "sha256": "c3d99a5b0f24d1e7fde41cbeb2cd7a2f3559aa3e9c1df975abef21d7e0ecd189"
+    },
+    {
+      "name": "packages/agent/src/stream-fn.ts",
+      "sha256": "1f9dee101a5ce1052558458d9ce47e53e05187224e879217899059a80d90bc45"
+    },
+    {
+      "name": "packages/agent/src/harness/utils/truncate.ts",
+      "sha256": "0b1d69f589ebced5ed7b3527c515e6fe7a0aca08660c6f8e84310fe040d73e34"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "judges/P01-eventstream/internal/eventstream/testdata/p01-ts.json",
+      "sha256": "89453b879b48f692a22d7c93267a4d606d42507bb2a9e54936152c9ff1122dfd"
+    },
+    {
+      "name": "judges/P03-transcript/ai/testdata/p03-ts.json",
+      "sha256": "36043c9ec826af153ab63073610ec54f389bf33625b58ff972fdb04bdc71eace"
+    },
+    {
+      "name": "judges/P04-tool-arguments/ai/testdata/p04-ts.json",
+      "sha256": "4fc7657c4bcf6874922ae5e0577b65e77251a5fe4aefceacc7defbbaaacac323"
+    },
+    {
+      "name": "judges/P05-agent-loop/agent/testdata/p05-ts.json",
+      "sha256": "b4b4d443f309fff69dcf8b79fb14c565ac37c7cbb084aa631b4b0fea2b676fd8"
+    },
+    {
+      "name": "judges/P08-read-text/tools/readfile/testdata/p08-ts.json",
+      "sha256": "f4860ad4fddd543835a53d2df0a898ed331c3b27d70a206c6662a6a361fb59cd"
+    }
+  ],
+  "modelCalls": 0,
+  "scope": "Selected deterministic TS cases; not full Pi parity"
+}

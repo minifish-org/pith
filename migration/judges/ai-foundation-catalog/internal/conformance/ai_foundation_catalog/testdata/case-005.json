@@ -1,0 +1,89 @@
+{
+  "batch": "ai-foundation",
+  "id": "catalog-CEREBRAS_MODELS",
+  "input": {
+    "op": "catalog",
+    "file": "packages/ai/src/providers/cerebras.models.ts",
+    "symbol": "CEREBRAS_MODELS"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "gpt-oss-120b": {
+        "id": "gpt-oss-120b",
+        "name": "GPT OSS 120B",
+        "api": "openai-completions",
+        "provider": "cerebras",
+        "baseUrl": "https://api.cerebras.ai/v1",
+        "reasoning": true,
+        "input": [
+          "text"
+        ],
+        "cost": {
+          "input": 0.35,
+          "output": 0.75,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "contextWindow": 131072,
+        "maxTokens": 40960,
+        "compat": {
+          "supportsStore": false,
+          "supportsDeveloperRole": false
+        },
+        "thinkingLevelMap": {
+          "off": null,
+          "minimal": null,
+          "low": "low",
+          "medium": "medium",
+          "high": "high",
+          "xhigh": null,
+          "max": null
+        }
+      },
+      "qwen-3.8-27b": {
+        "id": "qwen-3.8-27b",
+        "name": "Qwen3.8 27B",
+        "api": "openai-completions",
+        "provider": "cerebras",
+        "baseUrl": "https://api.cerebras.ai/v1",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "cost": {
+          "input": 0.99,
+          "output": 1.49,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "contextWindow": 65536,
+        "maxTokens": 32768,
+        "compat": {
+          "supportsStore": false,
+          "supportsDeveloperRole": false
+        },
+        "thinkingLevelMap": {
+          "off": "none",
+          "minimal": null,
+          "low": "low",
+          "medium": "medium",
+          "high": "high",
+          "xhigh": null,
+          "max": null
+        },
+        "inputLimits": {
+          "images": {
+            "resize": {
+              "maxWidth": 2000,
+              "maxHeight": 2000,
+              "maxBytes": 4718592,
+              "jpegQuality": 80
+            }
+          }
+        }
+      }
+    }
+  }
+}

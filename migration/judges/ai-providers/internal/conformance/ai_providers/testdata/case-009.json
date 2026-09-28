@@ -1,0 +1,38 @@
+{
+  "batch": "ai-providers",
+  "id": "fauxProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/faux.ts",
+    "fn": "fauxProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "faux",
+      "name": "faux",
+      "models": [
+        {
+          "id": "faux-1",
+          "api": "faux:1790606749828:kijm22ry1xp",
+          "provider": "faux",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 16384
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

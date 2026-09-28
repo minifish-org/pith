@@ -1,0 +1,32 @@
+{
+  "batch": "ai-utils",
+  "id": "getCurrentSystemPrompt-0",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/transcript.ts",
+    "fn": "getCurrentSystemPrompt",
+    "args": [
+      [
+        {
+          "role": "system",
+          "content": "first",
+          "timestamp": 1
+        },
+        {
+          "role": "user",
+          "content": "hi",
+          "timestamp": 2
+        },
+        {
+          "role": "system",
+          "content": "second",
+          "timestamp": 3
+        }
+      ]
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": "first\n\nsecond"
+  }
+}

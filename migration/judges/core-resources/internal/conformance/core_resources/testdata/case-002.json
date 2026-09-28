@@ -1,0 +1,18 @@
+{
+  "batch": "core-resources",
+  "id": "parseCommandArgs-2",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/prompt-templates.ts",
+    "fn": "parseCommandArgs",
+    "args": [
+      "中文 \"\""
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": [
+      "中文"
+    ]
+  }
+}

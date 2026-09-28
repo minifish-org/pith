@@ -1,0 +1,292 @@
+{
+  "outputs": [
+    "packages/ai/utils/eventstream/event_stream.go",
+    "packages/ai/utils/eventstream/event_stream_test.go",
+    "packages/ai/types/types.go",
+    "packages/ai/utils/assistant_event_stream.go",
+    "packages/telemetry/index.go",
+    "packages/telemetry/memory.go",
+    "packages/telemetry/noop.go",
+    "packages/telemetry/testing/conformance.go",
+    "packages/telemetry/testing/index.go",
+    "packages/telemetry/testing/types.go",
+    "internal/conformance/ai_foundation_types/source_map.json",
+    "internal/conformance/ai_foundation_types/adapter_test.go",
+    "packages/ai/types/ai_foundation_types_test.go",
+    "packages/ai/utils/ai_foundation_types_test.go",
+    "packages/telemetry/ai_foundation_types_test.go",
+    "packages/telemetry/testing/ai_foundation_types_test.go",
+    "packages/ai/catalog/image_models_generated.go",
+    "packages/ai/catalog/model_catalog.go",
+    "packages/ai/catalog/models_generated.go",
+    "packages/ai/catalog/amazon_bedrock_models.go",
+    "packages/ai/catalog/ant_ling_models.go",
+    "packages/ai/catalog/anthropic_models.go",
+    "packages/ai/catalog/azure_openai_responses_models.go",
+    "packages/ai/catalog/baseten_models.go",
+    "packages/ai/catalog/cerebras_models.go",
+    "packages/ai/catalog/cloudflare_ai_gateway_models.go",
+    "packages/ai/catalog/cloudflare_workers_ai_models.go",
+    "packages/ai/catalog/data_json_d.go",
+    "packages/ai/catalog/deepseek_models.go",
+    "packages/ai/catalog/fireworks_models.go",
+    "packages/ai/catalog/github_copilot_models.go",
+    "packages/ai/catalog/google_vertex_models.go",
+    "packages/ai/catalog/google_models.go",
+    "packages/ai/catalog/groq_models.go",
+    "packages/ai/catalog/huggingface_models.go",
+    "packages/ai/catalog/kimi_coding_models.go",
+    "packages/ai/catalog/meta_models.go",
+    "packages/ai/catalog/minimax_cn_models.go",
+    "packages/ai/catalog/minimax_models.go",
+    "packages/ai/catalog/mistral_models.go",
+    "packages/ai/catalog/moonshotai_cn_models.go",
+    "packages/ai/catalog/moonshotai_models.go",
+    "packages/ai/catalog/nvidia_models.go",
+    "packages/ai/catalog/openai_codex_models.go",
+    "packages/ai/catalog/openai_models.go",
+    "packages/ai/catalog/opencode_go_models.go",
+    "packages/ai/catalog/opencode_models.go",
+    "packages/ai/catalog/openrouter_models.go",
+    "packages/ai/catalog/qwen_token_plan_cn_models.go",
+    "packages/ai/catalog/qwen_token_plan_individual_models.go",
+    "packages/ai/catalog/qwen_token_plan_models.go",
+    "packages/ai/catalog/radius_config.go",
+    "packages/ai/catalog/radius_models.go",
+    "packages/ai/catalog/together_models.go",
+    "packages/ai/catalog/vercel_ai_gateway_models.go",
+    "packages/ai/catalog/xai_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_ams_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_cn_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_sgp_models.go",
+    "packages/ai/catalog/xiaomi_models.go",
+    "packages/ai/catalog/zai_coding_cn_models.go",
+    "packages/ai/catalog/zai_models.go",
+    "internal/conformance/ai_foundation_catalog/source_map.json",
+    "internal/conformance/ai_foundation_catalog/adapter_test.go",
+    "packages/ai/catalog/ai_foundation_catalog_test.go"
+  ],
+  "symbols": [
+    {
+      "source": "packages/ai/src/image-models.generated.ts",
+      "upstream": "IMAGE_MODELS"
+    },
+    {
+      "source": "packages/ai/src/model-catalog.ts",
+      "upstream": "ModelGroups"
+    },
+    {
+      "source": "packages/ai/src/model-catalog.ts",
+      "upstream": "ModelCatalog"
+    },
+    {
+      "source": "packages/ai/src/model-catalog.ts",
+      "upstream": "flattenModelCatalog"
+    },
+    {
+      "source": "packages/ai/src/models.generated.ts",
+      "upstream": "MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/amazon-bedrock.models.ts",
+      "upstream": "AMAZON_BEDROCK_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/ant-ling.models.ts",
+      "upstream": "ANT_LING_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/anthropic.models.ts",
+      "upstream": "ANTHROPIC_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/azure-openai-responses.models.ts",
+      "upstream": "AZURE_OPENAI_RESPONSES_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/baseten.models.ts",
+      "upstream": "BASETEN_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/cerebras.models.ts",
+      "upstream": "CEREBRAS_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/cloudflare-ai-gateway.models.ts",
+      "upstream": "CLOUDFLARE_AI_GATEWAY_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/cloudflare-workers-ai.models.ts",
+      "upstream": "CLOUDFLARE_WORKERS_AI_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/deepseek.models.ts",
+      "upstream": "DEEPSEEK_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/fireworks.models.ts",
+      "upstream": "FIREWORKS_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/github-copilot.models.ts",
+      "upstream": "GITHUB_COPILOT_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/google-vertex.models.ts",
+      "upstream": "GOOGLE_VERTEX_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/google.models.ts",
+      "upstream": "GOOGLE_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/groq.models.ts",
+      "upstream": "GROQ_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/huggingface.models.ts",
+      "upstream": "HUGGINGFACE_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/kimi-coding.models.ts",
+      "upstream": "KIMI_CODING_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/meta.models.ts",
+      "upstream": "META_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/minimax-cn.models.ts",
+      "upstream": "MINIMAX_CN_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/minimax.models.ts",
+      "upstream": "MINIMAX_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/mistral.models.ts",
+      "upstream": "MISTRAL_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/moonshotai-cn.models.ts",
+      "upstream": "MOONSHOTAI_CN_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/moonshotai.models.ts",
+      "upstream": "MOONSHOTAI_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/nvidia.models.ts",
+      "upstream": "NVIDIA_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/openai-codex.models.ts",
+      "upstream": "OPENAI_CODEX_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/openai.models.ts",
+      "upstream": "OPENAI_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/opencode-go.models.ts",
+      "upstream": "OPENCODE_GO_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/opencode.models.ts",
+      "upstream": "OPENCODE_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/openrouter.models.ts",
+      "upstream": "OPENROUTER_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/qwen-token-plan-cn.models.ts",
+      "upstream": "QWEN_TOKEN_PLAN_CN_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/qwen-token-plan-individual.models.ts",
+      "upstream": "QWEN_TOKEN_PLAN_INDIVIDUAL_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/qwen-token-plan.models.ts",
+      "upstream": "QWEN_TOKEN_PLAN_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "DEFAULT_RADIUS_GATEWAY"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "RadiusGatewayModel"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "RadiusGatewayConfig"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "RadiusOAuthCredential"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "normalizeRadiusGatewayUrl"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "getRadiusCredentialConfig"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "getRadiusModelsFromConfig"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "getRadiusModels"
+    },
+    {
+      "source": "packages/ai/src/providers/radius-config.ts",
+      "upstream": "loadRadiusGatewayConfig"
+    },
+    {
+      "source": "packages/ai/src/providers/radius.models.ts",
+      "upstream": "RADIUS_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/together.models.ts",
+      "upstream": "TOGETHER_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/vercel-ai-gateway.models.ts",
+      "upstream": "VERCEL_AI_GATEWAY_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/xai.models.ts",
+      "upstream": "XAI_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/xiaomi-token-plan-ams.models.ts",
+      "upstream": "XIAOMI_TOKEN_PLAN_AMS_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/xiaomi-token-plan-cn.models.ts",
+      "upstream": "XIAOMI_TOKEN_PLAN_CN_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/xiaomi-token-plan-sgp.models.ts",
+      "upstream": "XIAOMI_TOKEN_PLAN_SGP_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/xiaomi.models.ts",
+      "upstream": "XIAOMI_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/zai-coding-cn.models.ts",
+      "upstream": "ZAI_CODING_CN_MODELS"
+    },
+    {
+      "source": "packages/ai/src/providers/zai.models.ts",
+      "upstream": "ZAI_MODELS"
+    }
+  ],
+  "map": "internal/conformance/ai_foundation_catalog/source_map.json"
+}

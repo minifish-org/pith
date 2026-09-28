@@ -1,0 +1,212 @@
+[
+  {
+    "source": "packages/ai/test/anthropic-oauth.test.ts",
+    "sha256": "8671f7f284a6927770dc5bc71f4783b8e753102932c8d91b8747b633ff6aaad5",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/baseten-models.test.ts",
+    "sha256": "dc84a41dc48124b273295df5ee08cabd39827ad111ea67129f91b5b7b3cf83aa",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/env-api-keys.test.ts",
+    "sha256": "2c45db2fa2cc09996f22ae8d0e576d04f4b542ce353f87bb9b29f73238e3ff44",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/github-copilot-oauth.test.ts",
+    "sha256": "b71fbfb21a4b382c058865cf86598a28b11fd30d1a95b0b6c8ff11c0ccd60046",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/kimi-coding-oauth.test.ts",
+    "sha256": "a0cce566b219ce880c0559f1cede8aec295c694166d595595d2075c4300872f0",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/meta-oauth.test.ts",
+    "sha256": "d78eea9109de93748c6bede3c4a9fec1f0e494013328ee7d54244f5269ea520e",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/oauth-auth.test.ts",
+    "sha256": "8e9cc6baa15e44dcebca1318ad0cec161364a3e04ad3e10bc3c96cd8c8504e84",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/oauth-device-code.test.ts",
+    "sha256": "0402a6238bf9ab3be4ce8879f9068e2383475cb2a6a9fad9da33f3acbd8e0f1e",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/oauth.ts",
+    "sha256": "82bba20982b0f35e890652b1c19384cc0ae6240885b9d1e607a4209eb2ab12b7",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/openai-codex-oauth.test.ts",
+    "sha256": "82d9746892b5e8a8b8bef1037dd6cca40f37427a3a317a43d8028f5cb7031f8e",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/openrouter-oauth.test.ts",
+    "sha256": "b68283ffe9b5f5bd2b328145b58ca0c02b89e1c8c6beb1b5e66465a2657724ee",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/qwen-token-plan-models.test.ts",
+    "sha256": "4289b2f4c3f6c0705fbf650dd0c0687ae157c85e56c05749029ee1574c9b83c0",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/radius-oauth.test.ts",
+    "sha256": "7e744c72d5b94e6a7d270665401824dd6f30cd871dc9a2e8df34895d9727c286",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/together-models.test.ts",
+    "sha256": "49a7b4bdce46b0d0a6c338900cae2ba5cd41c92d7c02971a9086d71460291190",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/xai-oauth.test.ts",
+    "sha256": "a586d75d51ed09c41bdf0f84a91147c0adcd13f922bb603f49d042995cc310d7",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-auth",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

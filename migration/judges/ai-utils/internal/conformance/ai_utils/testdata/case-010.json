@@ -1,0 +1,26 @@
+{
+  "batch": "ai-utils",
+  "id": "contentText-2",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/text.ts",
+    "fn": "contentText",
+    "args": [
+      [
+        {
+          "type": "text",
+          "text": "中"
+        },
+        {
+          "type": "text",
+          "text": "文"
+        }
+      ],
+      "|"
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": "中|文"
+  }
+}

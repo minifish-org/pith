@@ -1,0 +1,140 @@
+{
+  "batch": "ai-providers",
+  "id": "zaiProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/zai.ts",
+    "fn": "zaiProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "zai",
+      "name": "Z.AI",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "api": "openai-completions",
+          "provider": "zai",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.6,
+            "output": 2.2,
+            "cacheRead": 0.11,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 131072
+        },
+        {
+          "id": "glm-5-turbo",
+          "api": "openai-completions",
+          "provider": "zai",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 1.2,
+            "output": 4,
+            "cacheRead": 0.24,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 131072
+        },
+        {
+          "id": "glm-5.2",
+          "api": "openai-completions",
+          "provider": "zai",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cacheRead": 0.26,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 131072
+        },
+        {
+          "id": "glm-5.2-highspeed",
+          "api": "openai-completions",
+          "provider": "zai",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 131072
+        },
+        {
+          "id": "glm-5.3",
+          "api": "openai-completions",
+          "provider": "zai",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cacheRead": 0.26,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 131072
+        },
+        {
+          "id": "glm-5.3-flash",
+          "api": "openai-completions",
+          "provider": "zai",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.15,
+            "output": 0.5,
+            "cacheRead": 0.03,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 131072
+        },
+        {
+          "id": "glm-5.3-highspeed",
+          "api": "openai-completions",
+          "provider": "zai",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 131072
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

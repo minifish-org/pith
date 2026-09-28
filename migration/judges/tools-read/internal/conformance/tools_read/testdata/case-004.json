@@ -1,0 +1,26 @@
+{
+  "batch": "tools-read",
+  "id": "crlf",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/read.ts",
+    "fn": "createReadTool",
+    "text": "中\r\n文",
+    "args": {
+      "path": "file.txt"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "中\r\n文"
+          }
+        ]
+      }
+    }
+  }
+}

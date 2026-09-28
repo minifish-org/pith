@@ -1,0 +1,38 @@
+{
+  "batch": "tools-read",
+  "id": "gif",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/read.ts",
+    "fn": "createReadTool",
+    "bytes": [
+      71,
+      73,
+      70,
+      56,
+      57,
+      97
+    ],
+    "args": {
+      "path": "file.txt"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Read image file [image/gif]"
+          },
+          {
+            "type": "image",
+            "data": "R0lGODlh",
+            "mimeType": "image/gif"
+          }
+        ]
+      }
+    }
+  }
+}

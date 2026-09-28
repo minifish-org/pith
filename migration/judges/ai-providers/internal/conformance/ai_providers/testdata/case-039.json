@@ -1,0 +1,91 @@
+{
+  "batch": "ai-providers",
+  "id": "xiaomiTokenPlanSgpProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/xiaomi-token-plan-sgp.ts",
+    "fn": "xiaomiTokenPlanSgpProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "xiaomi-token-plan-sgp",
+      "name": "Xiaomi Token Plan SGP",
+      "models": [
+        {
+          "id": "mimo-v2.5",
+          "api": "openai-completions",
+          "provider": "xiaomi-token-plan-sgp",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.5-pro",
+          "api": "openai-completions",
+          "provider": "xiaomi-token-plan-sgp",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.6-flash",
+          "api": "openai-completions",
+          "provider": "xiaomi-token-plan-sgp",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.6-pro",
+          "api": "openai-completions",
+          "provider": "xiaomi-token-plan-sgp",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "batch": "tools-read",
+  "id": "empty",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/read.ts",
+    "fn": "createReadTool",
+    "text": "",
+    "args": {
+      "path": "file.txt"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      }
+    }
+  }
+}

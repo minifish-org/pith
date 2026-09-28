@@ -1,0 +1,32 @@
+{
+  "batch": "core-contracts",
+  "id": "truncateHead-1",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/utils/truncate.ts",
+    "fn": "truncateHead",
+    "args": [
+      "你好\n世界",
+      {
+        "maxLines": 5,
+        "maxBytes": 7
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "content": "你好",
+      "truncated": true,
+      "truncatedBy": "bytes",
+      "totalLines": 2,
+      "totalBytes": 13,
+      "outputLines": 1,
+      "outputBytes": 6,
+      "lastLinePartial": false,
+      "firstLineExceedsLimit": false,
+      "maxLines": 5,
+      "maxBytes": 7
+    }
+  }
+}

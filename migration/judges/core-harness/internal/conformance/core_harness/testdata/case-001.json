@@ -1,0 +1,31 @@
+{
+  "batch": "core-harness",
+  "id": "InvalidLane",
+  "input": {
+    "op": "tagged-error",
+    "file": "packages/agent/src/harness/result.ts",
+    "tag": "InvalidLane",
+    "props": {
+      "message": "fixture error",
+      "lane": "main",
+      "operationId": "r1"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "tag": "InvalidLane",
+      "name": "InvalidLane",
+      "message": "fixture error",
+      "json": {
+        "_tag": "InvalidLane",
+        "message": "fixture error",
+        "name": "InvalidLane",
+        "lane": "main",
+        "operationId": "r1"
+      },
+      "matches": true,
+      "rejectPlain": false
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "batch": "core-harness",
+  "id": "Closed",
+  "input": {
+    "op": "tagged-error",
+    "file": "packages/agent/src/harness/result.ts",
+    "tag": "Closed",
+    "props": {
+      "message": "fixture error",
+      "lane": "main",
+      "operationId": "r1"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "tag": "Closed",
+      "name": "Closed",
+      "message": "fixture error",
+      "json": {
+        "_tag": "Closed",
+        "message": "fixture error",
+        "name": "Closed",
+        "lane": "main",
+        "operationId": "r1"
+      },
+      "matches": true,
+      "rejectPlain": false
+    }
+  }
+}

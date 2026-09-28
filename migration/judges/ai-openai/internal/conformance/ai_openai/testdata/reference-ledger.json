@@ -1,0 +1,58 @@
+[
+  {
+    "source": "packages/ai/test/fetch-option.test.ts",
+    "sha256": "45baf2e0c0f26d5d961b7af69d91f838243ab8579a1505410ec07da2434f20d0",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-openai",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/pre-generation-error.test.ts",
+    "sha256": "420756429c251d015dfe445bf90f5d0ba7065f26c87e2fa0b6777db861cf9b20",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-openai",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/provider-error-body-regression.test.ts",
+    "sha256": "3630f6093ae3bc6033d0ca4d879c7439540530823f578ce56c08754137bbd69a",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-openai",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/xai-responses.test.ts",
+    "sha256": "72532da3c743d81dd1d8b1aaaa37a794f599a4ecd30e2c1eb1e5e3885c942851",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-openai",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "batch": "core-runtime",
+  "id": "retry",
+  "input": {
+    "op": "reducer",
+    "file": "packages/agent/src/harness/runtime/reducer.ts",
+    "snapshot": {
+      "lane": "main",
+      "tipId": null,
+      "operation": null,
+      "transcript": [],
+      "configuration": {
+        "model": {
+          "provider": "fixture",
+          "modelId": "fixture"
+        },
+        "thinkingLevel": "off",
+        "activeToolNames": []
+      },
+      "queues": {},
+      "stats": {
+        "messageCount": 0,
+        "usage": {}
+      }
+    },
+    "events": [
+      {
+        "type": "run_start",
+        "lane": "main",
+        "runId": "r1",
+        "startedAt": 1
+      },
+      {
+        "type": "retry_scheduled",
+        "runId": "r1",
+        "attempt": 2,
+        "maxAttempts": 3,
+        "notBefore": 10
+      },
+      {
+        "type": "retry_start",
+        "runId": "r1"
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "snapshot": {
+        "lane": "main",
+        "tipId": null,
+        "operation": {
+          "id": "r1",
+          "kind": "run",
+          "startedAt": 1,
+          "fromTipId": null,
+          "status": "open",
+          "runningTools": []
+        },
+        "transcript": [],
+        "configuration": {
+          "model": {
+            "provider": "fixture",
+            "modelId": "fixture"
+          },
+          "thinkingLevel": "off",
+          "activeToolNames": []
+        },
+        "queues": {},
+        "stats": {
+          "messageCount": 0,
+          "usage": {}
+        }
+      },
+      "reductions": [
+        {
+          "$undefined": true
+        },
+        {
+          "$undefined": true
+        },
+        {
+          "$undefined": true
+        }
+      ]
+    }
+  }
+}

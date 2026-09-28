@@ -1,0 +1,72 @@
+{
+  "batch": "ai-providers",
+  "id": "minimaxProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/minimax.ts",
+    "fn": "minimaxProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "minimax",
+      "name": "MiniMax",
+      "models": [
+        {
+          "id": "MiniMax-M2.7",
+          "api": "anthropic-messages",
+          "provider": "minimax",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cacheRead": 0.06,
+            "cacheWrite": 0.375
+          },
+          "contextWindow": 204800,
+          "maxTokens": 131072
+        },
+        {
+          "id": "MiniMax-M2.7-highspeed",
+          "api": "anthropic-messages",
+          "provider": "minimax",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cacheRead": 0.06,
+            "cacheWrite": 0.375
+          },
+          "contextWindow": 204800,
+          "maxTokens": 131072
+        },
+        {
+          "id": "MiniMax-M3",
+          "api": "anthropic-messages",
+          "provider": "minimax",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cacheRead": 0.06,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 512000
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

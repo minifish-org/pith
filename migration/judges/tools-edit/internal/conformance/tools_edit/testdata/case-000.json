@@ -1,0 +1,35 @@
+{
+  "batch": "tools-edit",
+  "id": "exact",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/edit.ts",
+    "fn": "createEditTool",
+    "text": "one\ntwo\n",
+    "args": {
+      "path": "file.txt",
+      "oldText": "two",
+      "newText": "TWO"
+    },
+    "inspect": "file.txt"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Successfully replaced 1 block(s) in file.txt."
+          }
+        ],
+        "details": {
+          "diff": " 1 one\n-2 two\n+2 TWO",
+          "patch": "--- file.txt\n+++ file.txt\n@@ -1,2 +1,2 @@\n one\n-two\n+TWO\n",
+          "firstChangedLine": 2
+        }
+      },
+      "after": "one\nTWO\n"
+    }
+  }
+}

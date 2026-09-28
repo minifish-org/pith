@@ -1,0 +1,18 @@
+{
+  "batch": "tools-read",
+  "id": "past",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/read.ts",
+    "fn": "createReadTool",
+    "text": "a",
+    "args": {
+      "path": "file.txt",
+      "offset": 3
+    }
+  },
+  "expected": {
+    "ok": false,
+    "error": "Offset 3 is beyond end of file (1 lines total)"
+  }
+}

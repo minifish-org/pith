@@ -1,0 +1,20 @@
+{
+  "batch": "ai-utils",
+  "id": "retryDelayMs-0",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/retry.ts",
+    "fn": "retryDelayMs",
+    "args": [
+      {
+        "baseDelayMs": 100,
+        "maxAgentDelayMs": 350
+      },
+      1
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": 100
+  }
+}

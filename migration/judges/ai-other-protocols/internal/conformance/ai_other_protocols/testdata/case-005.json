@@ -1,0 +1,74 @@
+{
+  "batch": "ai-other-protocols",
+  "id": "pi-messages-fragmented",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/pi-messages.ts",
+    "api": "pi-messages",
+    "mode": "fragmented",
+    "body": "event: start\ndata: {\"type\":\"start\"}\n\nevent: text_start\ndata: {\"type\":\"text_start\",\"contentIndex\":0}\n\nevent: text_delta\ndata: {\"type\":\"text_delta\",\"contentIndex\":0,\"delta\":\"你好\"}\n\nevent: text_end\ndata: {\"type\":\"text_end\",\"contentIndex\":0,\"content\":\"你好\",\"contentSignature\":\"sig\"}\n\nevent: done\ndata: {\"type\":\"done\",\"reason\":\"stop\",\"responseId\":\"r1\",\"usage\":{\"input\":2,\"output\":1,\"cacheRead\":0,\"cacheWrite\":0,\"totalTokens\":3,\"cost\":{\"input\":0,\"output\":0,\"cacheRead\":0,\"cacheWrite\":0,\"total\":0}}}\n\n",
+    "status": 200
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/messages",
+          "body": {
+            "model": "fixture",
+            "context": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "system",
+                  "timestamp": 1
+                },
+                {
+                  "role": "user",
+                  "content": "hello",
+                  "timestamp": 2
+                }
+              ]
+            },
+            "options": {
+              "temperature": 0,
+              "maxTokens": 16
+            }
+          }
+        }
+      ],
+      "events": [
+        "start",
+        "text_start",
+        "text_delta",
+        "text_end",
+        "done"
+      ],
+      "content": [
+        {
+          "type": "text",
+          "text": "你好",
+          "textSignature": "sig"
+        }
+      ],
+      "usage": {
+        "input": 2,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 3,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "responseId": "r1"
+    }
+  }
+}

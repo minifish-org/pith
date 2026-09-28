@@ -1,0 +1,22 @@
+{
+  "batch": "core-compaction",
+  "id": "formatFileOperations-0",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/compaction/utils.ts",
+    "fn": "formatFileOperations",
+    "args": [
+      [
+        "a.txt",
+        "中.txt"
+      ],
+      [
+        "b.txt"
+      ]
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": "\n\n<read-files>\na.txt\n中.txt\n</read-files>\n\n<modified-files>\nb.txt\n</modified-files>"
+  }
+}

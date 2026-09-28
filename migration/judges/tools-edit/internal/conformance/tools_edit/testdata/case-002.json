@@ -1,0 +1,20 @@
+{
+  "batch": "tools-edit",
+  "id": "missing",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/edit.ts",
+    "fn": "createEditTool",
+    "text": "a",
+    "args": {
+      "path": "file.txt",
+      "oldText": "b",
+      "newText": "c"
+    },
+    "inspect": "file.txt"
+  },
+  "expected": {
+    "ok": false,
+    "error": "Could not find the exact text in file.txt. The old text must match exactly including all whitespace and newlines."
+  }
+}

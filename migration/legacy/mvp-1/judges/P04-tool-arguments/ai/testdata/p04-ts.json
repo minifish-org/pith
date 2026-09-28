@@ -1,0 +1,99 @@
+[
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "type": "integer"
+        }
+      }
+    },
+    "input": {
+      "n": "12"
+    },
+    "ok": true,
+    "output": {
+      "n": 12
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "b": {
+          "type": "boolean"
+        }
+      }
+    },
+    "input": {
+      "b": "false"
+    },
+    "ok": true,
+    "output": {
+      "b": false
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "type": "number"
+        }
+      }
+    },
+    "input": {
+      "n": "bad"
+    },
+    "ok": false
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "type": "integer"
+        }
+      }
+    },
+    "input": {
+      "n": "1.5"
+    },
+    "ok": false
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string"
+        }
+      }
+    },
+    "input": {
+      "s": null
+    },
+    "ok": true,
+    "output": {}
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "input": {
+      "s": null
+    },
+    "ok": true,
+    "output": {
+      "s": null
+    }
+  }
+]

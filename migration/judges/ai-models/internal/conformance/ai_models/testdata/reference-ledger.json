@@ -1,0 +1,30 @@
+[
+  {
+    "source": "packages/ai/test/github-copilot-anthropic.test.ts",
+    "sha256": "8ce02dfd3b28205d4d25cb614f042cdd19e84ea9109c0af6108869ae1d5ef73b",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-models",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/radius-provider.test.ts",
+    "sha256": "4b2d6baef41c603d1f750017bfbc6cf73488675b478e62d8d7c00597bfce8fed",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-models",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "batch": "tools-read",
+  "id": "slice",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/read.ts",
+    "fn": "createReadTool",
+    "text": "a\nb\nc\n",
+    "args": {
+      "path": "file.txt",
+      "offset": 2,
+      "limit": 1
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "b\n\n[2 more lines in file. Use offset=3 to continue.]"
+          }
+        ]
+      }
+    }
+  }
+}

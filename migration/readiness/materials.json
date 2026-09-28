@@ -1,0 +1,384 @@
+{
+  "revision": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "modules": 3,
+  "batches": 24,
+  "steps": [
+    {
+      "batch": "ai-foundation",
+      "step": "types",
+      "contract": "contracts/ai-foundation-types.md",
+      "judge": "judges/ai-foundation-types",
+      "sources": 8,
+      "sourceReadFiles": 79,
+      "cases": 4,
+      "tests": [
+        "TestPortsmithJudgeAiFoundationTypesSurface",
+        "TestPortsmithJudgeAiFoundationTypesCases",
+        "TestPortsmithJudgeAiFoundationTypesAdapter"
+      ],
+      "outputs": 14
+    },
+    {
+      "batch": "ai-foundation",
+      "step": "catalog",
+      "contract": "contracts/ai-foundation-catalog.md",
+      "judge": "judges/ai-foundation-catalog",
+      "sources": 46,
+      "sourceReadFiles": 79,
+      "cases": 41,
+      "tests": [
+        "TestPortsmithJudgeAiFoundationCatalogSurface",
+        "TestPortsmithJudgeAiFoundationCatalogCases",
+        "TestPortsmithJudgeAiFoundationCatalogAdapter"
+      ],
+      "outputs": 49
+    },
+    {
+      "batch": "ai-utils",
+      "step": "port",
+      "contract": "contracts/ai-utils.md",
+      "judge": "judges/ai-utils",
+      "sources": 26,
+      "sourceReadFiles": 35,
+      "cases": 26,
+      "tests": [
+        "TestPortsmithJudgeAiUtilsSurface",
+        "TestPortsmithJudgeAiUtilsCases",
+        "TestPortsmithJudgeAiUtilsAdapter"
+      ],
+      "outputs": 30
+    },
+    {
+      "batch": "ai-auth",
+      "step": "port",
+      "contract": "contracts/ai-auth.md",
+      "judge": "judges/ai-auth",
+      "sources": 18,
+      "sourceReadFiles": 40,
+      "cases": 3,
+      "tests": [
+        "TestPortsmithJudgeAiAuthSurface",
+        "TestPortsmithJudgeAiAuthCases",
+        "TestPortsmithJudgeAiAuthAdapter"
+      ],
+      "outputs": 24
+    },
+    {
+      "batch": "ai-models",
+      "step": "port",
+      "contract": "contracts/ai-models.md",
+      "judge": "judges/ai-models",
+      "sources": 4,
+      "sourceReadFiles": 14,
+      "cases": 2,
+      "tests": [
+        "TestPortsmithJudgeAiModelsSurface",
+        "TestPortsmithJudgeAiModelsCases",
+        "TestPortsmithJudgeAiModelsAdapter"
+      ],
+      "outputs": 7
+    },
+    {
+      "batch": "ai-openai",
+      "step": "port",
+      "contract": "contracts/ai-openai.md",
+      "judge": "judges/ai-openai",
+      "sources": 11,
+      "sourceReadFiles": 37,
+      "cases": 17,
+      "tests": [
+        "TestPortsmithJudgeAiOpenaiSurface",
+        "TestPortsmithJudgeAiOpenaiCases",
+        "TestPortsmithJudgeAiOpenaiAdapter"
+      ],
+      "outputs": 14
+    },
+    {
+      "batch": "ai-anthropic",
+      "step": "port",
+      "contract": "contracts/ai-anthropic.md",
+      "judge": "judges/ai-anthropic",
+      "sources": 2,
+      "sourceReadFiles": 20,
+      "cases": 4,
+      "tests": [
+        "TestPortsmithJudgeAiAnthropicSurface",
+        "TestPortsmithJudgeAiAnthropicCases",
+        "TestPortsmithJudgeAiAnthropicAdapter"
+      ],
+      "outputs": 5
+    },
+    {
+      "batch": "ai-google",
+      "step": "port",
+      "contract": "contracts/ai-google.md",
+      "judge": "judges/ai-google",
+      "sources": 5,
+      "sourceReadFiles": 24,
+      "cases": 8,
+      "tests": [
+        "TestPortsmithJudgeAiGoogleSurface",
+        "TestPortsmithJudgeAiGoogleCases",
+        "TestPortsmithJudgeAiGoogleAdapter"
+      ],
+      "outputs": 8
+    },
+    {
+      "batch": "ai-bedrock",
+      "step": "port",
+      "contract": "contracts/ai-bedrock.md",
+      "judge": "judges/ai-bedrock",
+      "sources": 2,
+      "sourceReadFiles": 21,
+      "cases": 4,
+      "tests": [
+        "TestPortsmithJudgeAiBedrockSurface",
+        "TestPortsmithJudgeAiBedrockCases",
+        "TestPortsmithJudgeAiBedrockAdapter"
+      ],
+      "outputs": 5
+    },
+    {
+      "batch": "ai-other-protocols",
+      "step": "port",
+      "contract": "contracts/ai-other-protocols.md",
+      "judge": "judges/ai-other-protocols",
+      "sources": 11,
+      "sourceReadFiles": 32,
+      "cases": 9,
+      "tests": [
+        "TestPortsmithJudgeAiOtherProtocolsSurface",
+        "TestPortsmithJudgeAiOtherProtocolsCases",
+        "TestPortsmithJudgeAiOtherProtocolsAdapter"
+      ],
+      "outputs": 15
+    },
+    {
+      "batch": "ai-providers",
+      "step": "port",
+      "contract": "contracts/ai-providers.md",
+      "judge": "judges/ai-providers",
+      "sources": 48,
+      "sourceReadFiles": 79,
+      "cases": 43,
+      "tests": [
+        "TestPortsmithJudgeAiProvidersSurface",
+        "TestPortsmithJudgeAiProvidersCases",
+        "TestPortsmithJudgeAiProvidersAdapter"
+      ],
+      "outputs": 52
+    },
+    {
+      "batch": "ai-surface",
+      "step": "port",
+      "contract": "contracts/ai-surface.md",
+      "judge": "judges/ai-surface",
+      "sources": 8,
+      "sourceReadFiles": 79,
+      "cases": 1,
+      "tests": [
+        "TestPortsmithJudgeAiSurfaceSurface",
+        "TestPortsmithJudgeAiSurfaceCases",
+        "TestPortsmithJudgeAiSurfaceAdapter"
+      ],
+      "outputs": 15
+    },
+    {
+      "batch": "core-contracts",
+      "step": "port",
+      "contract": "contracts/core-contracts.md",
+      "judge": "judges/core-contracts",
+      "sources": 10,
+      "sourceReadFiles": 47,
+      "cases": 7,
+      "tests": [
+        "TestPortsmithJudgeCoreContractsSurface",
+        "TestPortsmithJudgeCoreContractsCases",
+        "TestPortsmithJudgeCoreContractsAdapter"
+      ],
+      "outputs": 19
+    },
+    {
+      "batch": "core-loop",
+      "step": "port",
+      "contract": "contracts/core-loop.md",
+      "judge": "judges/core-loop",
+      "sources": 4,
+      "sourceReadFiles": 6,
+      "cases": 3,
+      "tests": [
+        "TestPortsmithJudgeCoreLoopSurface",
+        "TestPortsmithJudgeCoreLoopCases",
+        "TestPortsmithJudgeCoreLoopAdapter"
+      ],
+      "outputs": 7
+    },
+    {
+      "batch": "core-resources",
+      "step": "port",
+      "contract": "contracts/core-resources.md",
+      "judge": "judges/core-resources",
+      "sources": 10,
+      "sourceReadFiles": 21,
+      "cases": 8,
+      "tests": [
+        "TestPortsmithJudgeCoreResourcesSurface",
+        "TestPortsmithJudgeCoreResourcesCases",
+        "TestPortsmithJudgeCoreResourcesAdapter"
+      ],
+      "outputs": 20
+    },
+    {
+      "batch": "core-session",
+      "step": "port",
+      "contract": "contracts/core-session.md",
+      "judge": "judges/core-session",
+      "sources": 25,
+      "sourceReadFiles": 55,
+      "cases": 1,
+      "tests": [
+        "TestPortsmithJudgeCoreSessionSurface",
+        "TestPortsmithJudgeCoreSessionCases",
+        "TestPortsmithJudgeCoreSessionAdapter"
+      ],
+      "outputs": 31
+    },
+    {
+      "batch": "core-compaction",
+      "step": "port",
+      "contract": "contracts/core-compaction.md",
+      "judge": "judges/core-compaction",
+      "sources": 3,
+      "sourceReadFiles": 12,
+      "cases": 7,
+      "tests": [
+        "TestPortsmithJudgeCoreCompactionSurface",
+        "TestPortsmithJudgeCoreCompactionCases",
+        "TestPortsmithJudgeCoreCompactionAdapter"
+      ],
+      "outputs": 6
+    },
+    {
+      "batch": "core-runtime",
+      "step": "port",
+      "contract": "contracts/core-runtime.md",
+      "judge": "judges/core-runtime",
+      "sources": 22,
+      "sourceReadFiles": 45,
+      "cases": 8,
+      "tests": [
+        "TestPortsmithJudgeCoreRuntimeSurface",
+        "TestPortsmithJudgeCoreRuntimeCases",
+        "TestPortsmithJudgeCoreRuntimeAdapter"
+      ],
+      "outputs": 26
+    },
+    {
+      "batch": "core-harness",
+      "step": "port",
+      "contract": "contracts/core-harness.md",
+      "judge": "judges/core-harness",
+      "sources": 1,
+      "sourceReadFiles": 30,
+      "cases": 5,
+      "tests": [
+        "TestPortsmithJudgeCoreHarnessSurface",
+        "TestPortsmithJudgeCoreHarnessCases",
+        "TestPortsmithJudgeCoreHarnessAdapter"
+      ],
+      "outputs": 4
+    },
+    {
+      "batch": "tools-env",
+      "step": "port",
+      "contract": "contracts/tools-env.md",
+      "judge": "judges/tools-env",
+      "sources": 8,
+      "sourceReadFiles": 13,
+      "cases": 6,
+      "tests": [
+        "TestPortsmithJudgeToolsEnvSurface",
+        "TestPortsmithJudgeToolsEnvCases",
+        "TestPortsmithJudgeToolsEnvAdapter"
+      ],
+      "outputs": 17
+    },
+    {
+      "batch": "tools-read",
+      "step": "port",
+      "contract": "contracts/tools-read.md",
+      "judge": "judges/tools-read",
+      "sources": 1,
+      "sourceReadFiles": 8,
+      "cases": 7,
+      "tests": [
+        "TestPortsmithJudgeToolsReadSurface",
+        "TestPortsmithJudgeToolsReadCases",
+        "TestPortsmithJudgeToolsReadAdapter"
+      ],
+      "outputs": 4
+    },
+    {
+      "batch": "tools-write",
+      "step": "port",
+      "contract": "contracts/tools-write.md",
+      "judge": "judges/tools-write",
+      "sources": 1,
+      "sourceReadFiles": 5,
+      "cases": 2,
+      "tests": [
+        "TestPortsmithJudgeToolsWriteSurface",
+        "TestPortsmithJudgeToolsWriteCases",
+        "TestPortsmithJudgeToolsWriteAdapter"
+      ],
+      "outputs": 4
+    },
+    {
+      "batch": "tools-edit",
+      "step": "port",
+      "contract": "contracts/tools-edit.md",
+      "judge": "judges/tools-edit",
+      "sources": 2,
+      "sourceReadFiles": 6,
+      "cases": 6,
+      "tests": [
+        "TestPortsmithJudgeToolsEditSurface",
+        "TestPortsmithJudgeToolsEditCases",
+        "TestPortsmithJudgeToolsEditAdapter"
+      ],
+      "outputs": 5
+    },
+    {
+      "batch": "tools-bash",
+      "step": "port",
+      "contract": "contracts/tools-bash.md",
+      "judge": "judges/tools-bash",
+      "sources": 1,
+      "sourceReadFiles": 6,
+      "cases": 4,
+      "tests": [
+        "TestPortsmithJudgeToolsBashSurface",
+        "TestPortsmithJudgeToolsBashCases",
+        "TestPortsmithJudgeToolsBashAdapter"
+      ],
+      "outputs": 4
+    },
+    {
+      "batch": "tools-delivery",
+      "step": "port",
+      "contract": "contracts/tools-delivery.md",
+      "judge": "judges/tools-delivery",
+      "sources": 3,
+      "sourceReadFiles": 34,
+      "cases": 0,
+      "tests": [
+        "TestPortsmithJudgeToolsDeliverySurface",
+        "TestPortsmithJudgeToolsDeliveryCLI"
+      ],
+      "outputs": 9
+    }
+  ],
+  "tsCases": 226,
+  "productGoGenerated": false,
+  "fullParityProven": false
+}

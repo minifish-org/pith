@@ -1,0 +1,511 @@
+{
+  "version": 1,
+  "commit": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "gitFiles": 1863,
+  "fullScan": {
+    "files": 1560,
+    "physicalLines": 370926,
+    "fileCycles": 10,
+    "configWarnings": []
+  },
+  "remainingReferences": {
+    "count": 60,
+    "categories": {
+      "documentation_sample": 8,
+      "distribution_entry": 2,
+      "dynamic_import": 8,
+      "generated_provider_catalog": 42
+    },
+    "selectedFileCount": 0,
+    "items": [
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/bash.after.ts",
+        "line": 2,
+        "specifier": "../context.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/bash.after.ts",
+        "line": 3,
+        "specifier": "../types.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/bash.after.ts",
+        "line": 4,
+        "specifier": "../types.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/bash.after.ts",
+        "line": 5,
+        "specifier": "../utils/truncate.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/bash.after.ts",
+        "line": 6,
+        "specifier": "./tool-context.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/output-capture.ts",
+        "line": 1,
+        "specifier": "../context.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/output-capture.ts",
+        "line": 2,
+        "specifier": "../types.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/agent/docs/mobile-handoff/01-harness/03-execenv/output-capture.ts",
+        "line": 10,
+        "specifier": "./truncate.ts",
+        "kind": "unresolved",
+        "category": "documentation_sample",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/bedrock-provider.d.ts",
+        "line": 1,
+        "specifier": "./dist/bedrock-provider.js",
+        "kind": "unresolved",
+        "category": "distribution_entry",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/bedrock-provider.js",
+        "line": 1,
+        "specifier": "./dist/bedrock-provider.js",
+        "kind": "unresolved",
+        "category": "distribution_entry",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/api/bedrock-converse-stream.lazy.ts",
+        "line": 12,
+        "specifier": "runtimeSpecifier",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/auth/context.ts",
+        "line": 12,
+        "specifier": "specifier",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/auth/oauth/load.ts",
+        "line": 11,
+        "specifier": "runtimeSpecifier",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/env-api-keys.ts",
+        "line": 8,
+        "specifier": "specifier",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/all.ts",
+        "line": 13,
+        "specifier": "./data/.manifest.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/amazon-bedrock.models.ts",
+        "line": 4,
+        "specifier": "./data/amazon-bedrock.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/ant-ling.models.ts",
+        "line": 4,
+        "specifier": "./data/ant-ling.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/anthropic.models.ts",
+        "line": 4,
+        "specifier": "./data/anthropic.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/azure-openai-responses.models.ts",
+        "line": 4,
+        "specifier": "./data/azure-openai-responses.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/baseten.models.ts",
+        "line": 4,
+        "specifier": "./data/baseten.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/cerebras.models.ts",
+        "line": 4,
+        "specifier": "./data/cerebras.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/cloudflare-ai-gateway.models.ts",
+        "line": 4,
+        "specifier": "./data/cloudflare-ai-gateway.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/cloudflare-workers-ai.models.ts",
+        "line": 4,
+        "specifier": "./data/cloudflare-workers-ai.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/deepseek.models.ts",
+        "line": 4,
+        "specifier": "./data/deepseek.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/fireworks.models.ts",
+        "line": 4,
+        "specifier": "./data/fireworks.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/github-copilot.models.ts",
+        "line": 4,
+        "specifier": "./data/github-copilot.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/google-vertex.models.ts",
+        "line": 4,
+        "specifier": "./data/google-vertex.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/google.models.ts",
+        "line": 4,
+        "specifier": "./data/google.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/groq.models.ts",
+        "line": 4,
+        "specifier": "./data/groq.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/huggingface.models.ts",
+        "line": 4,
+        "specifier": "./data/huggingface.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/kimi-coding.models.ts",
+        "line": 4,
+        "specifier": "./data/kimi-coding.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/meta.models.ts",
+        "line": 4,
+        "specifier": "./data/meta.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/minimax-cn.models.ts",
+        "line": 4,
+        "specifier": "./data/minimax-cn.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/minimax.models.ts",
+        "line": 4,
+        "specifier": "./data/minimax.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/mistral.models.ts",
+        "line": 4,
+        "specifier": "./data/mistral.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/moonshotai-cn.models.ts",
+        "line": 4,
+        "specifier": "./data/moonshotai-cn.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/moonshotai.models.ts",
+        "line": 4,
+        "specifier": "./data/moonshotai.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/nvidia.models.ts",
+        "line": 4,
+        "specifier": "./data/nvidia.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/openai-codex.models.ts",
+        "line": 4,
+        "specifier": "./data/openai-codex.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/openai.models.ts",
+        "line": 4,
+        "specifier": "./data/openai.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/opencode-go.models.ts",
+        "line": 4,
+        "specifier": "./data/opencode-go.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/opencode.models.ts",
+        "line": 4,
+        "specifier": "./data/opencode.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/openrouter.models.ts",
+        "line": 4,
+        "specifier": "./data/openrouter.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/qwen-token-plan-cn.models.ts",
+        "line": 4,
+        "specifier": "./data/qwen-token-plan-cn.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/qwen-token-plan-individual.models.ts",
+        "line": 4,
+        "specifier": "./data/qwen-token-plan-individual.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/qwen-token-plan.models.ts",
+        "line": 4,
+        "specifier": "./data/qwen-token-plan.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/radius.models.ts",
+        "line": 4,
+        "specifier": "./data/radius.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/together.models.ts",
+        "line": 4,
+        "specifier": "./data/together.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/vercel-ai-gateway.models.ts",
+        "line": 4,
+        "specifier": "./data/vercel-ai-gateway.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/xai.models.ts",
+        "line": 4,
+        "specifier": "./data/xai.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/xiaomi-token-plan-ams.models.ts",
+        "line": 4,
+        "specifier": "./data/xiaomi-token-plan-ams.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/xiaomi-token-plan-cn.models.ts",
+        "line": 4,
+        "specifier": "./data/xiaomi-token-plan-cn.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/xiaomi-token-plan-sgp.models.ts",
+        "line": 4,
+        "specifier": "./data/xiaomi-token-plan-sgp.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/xiaomi.models.ts",
+        "line": 4,
+        "specifier": "./data/xiaomi.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/zai-coding-cn.models.ts",
+        "line": 4,
+        "specifier": "./data/zai-coding-cn.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/ai/src/providers/zai.models.ts",
+        "line": 4,
+        "specifier": "./data/zai.json",
+        "kind": "unresolved",
+        "category": "generated_provider_catalog",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/tui/test/fixtures/clipboard-reader.cjs",
+        "line": 10,
+        "specifier": "process.argv[2]",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/tui/test/fixtures/clipboard-worker-test.cjs",
+        "line": 17,
+        "specifier": "workerData",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/tui/test/fixtures/clipboard-worker-test.cjs",
+        "line": 29,
+        "specifier": "addon",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      },
+      {
+        "file": "packages/tui/test/fixtures/clipboard-worker-test.cjs",
+        "line": 37,
+        "specifier": "addon",
+        "kind": "computed",
+        "category": "dynamic_import",
+        "inSelectedFiles": false
+      }
+    ]
+  },
+  "selected": {
+    "files": 35,
+    "implementationFiles": 14,
+    "unresolvedOrComputed": 0
+  },
+  "analyzerFix": "portsmith: ignore catch-all paths and node_modules aliases when classifying unresolved bare specifiers",
+  "dependenciesInstalled": false,
+  "upstreamSuiteExecuted": false
+}

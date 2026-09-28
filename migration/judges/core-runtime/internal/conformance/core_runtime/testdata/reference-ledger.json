@@ -1,0 +1,30 @@
+[
+  {
+    "source": "packages/agent/test/harness/runtime/drive-generation.test.ts",
+    "sha256": "8488a23fb967e7d6ac071aba47f43895b7811c2139d4870a993c4342f384c160",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-runtime",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/drive-retry.test.ts",
+    "sha256": "c8668ca1c8407e476903e7f5018860393d360584c80e8083fe0857ffd95f0008",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-runtime",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

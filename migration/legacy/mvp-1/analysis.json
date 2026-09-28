@@ -1,0 +1,1615 @@
+{
+  "version": 1,
+  "source": ".cache/pi/f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "scope": "Manually selected migration source and references, not the full transitive dependency closure. See dependency-map.md.",
+  "files": [
+    {
+      "path": "packages/agent/src/agent-loop.ts",
+      "sha256": "c3d99a5b0f24d1e7fde41cbeb2cd7a2f3559aa3e9c1df975abef21d7e0ecd189",
+      "lines": 898,
+      "test": false,
+      "exports": [
+        "AgentEventSink",
+        "agentLoop",
+        "agentLoopContinue",
+        "runAgentLoop",
+        "runAgentLoopContinue"
+      ],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai",
+          "kind": "internal",
+          "target": "packages/ai/src/index.ts",
+          "typeOnly": false,
+          "line": 17
+        },
+        {
+          "specifier": "./stream-fn.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/stream-fn.ts",
+          "typeOnly": false,
+          "line": 18
+        },
+        {
+          "specifier": "./types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/types.ts",
+          "typeOnly": true,
+          "line": 29
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/src/agent.ts",
+      "sha256": "fad42fdcea126f8b47f01876431def6f866ad72260b1e95d1a10e3acb0b6ddeb",
+      "lines": 609,
+      "test": false,
+      "exports": ["QueueMode", "AgentInitialState", "AgentOptions", "Agent"],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai",
+          "kind": "internal",
+          "target": "packages/ai/src/index.ts",
+          "typeOnly": false,
+          "line": 13
+        },
+        {
+          "specifier": "./agent-loop.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/agent-loop.ts",
+          "typeOnly": false,
+          "line": 14
+        },
+        {
+          "specifier": "./stream-fn.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/stream-fn.ts",
+          "typeOnly": false,
+          "line": 15
+        },
+        {
+          "specifier": "./types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/types.ts",
+          "typeOnly": true,
+          "line": 34
+        },
+        {
+          "specifier": "./types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/types.ts",
+          "typeOnly": true,
+          "line": 36
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/src/harness/tools/path-utils.ts",
+      "sha256": "61fee524375d679759305569fdebc2ed41a3ba06e8cc9ac8bab268c3f99116f5",
+      "lines": 31,
+      "test": false,
+      "exports": ["resolveToolPath", "resolveReadToolPath"],
+      "imports": [
+        {
+          "specifier": "../context.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/context.ts",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/types.ts",
+          "typeOnly": true,
+          "line": 2
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/types.ts",
+          "typeOnly": false,
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/src/harness/tools/read.ts",
+      "sha256": "55dc4a19734dd94c2abf4603d5a41ba385e5a48e22d33bc09de4b1a079c99de1",
+      "lines": 149,
+      "test": false,
+      "exports": [
+        "ReadToolInput",
+        "ReadToolDetails",
+        "ReadImageProcessorResult",
+        "ReadImageProcessor",
+        "ReadToolOptions",
+        "createReadTool"
+      ],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai",
+          "kind": "internal",
+          "target": "packages/ai/src/index.ts",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../context.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/context.ts",
+          "typeOnly": true,
+          "line": 3
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/types.ts",
+          "typeOnly": true,
+          "line": 4
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/types.ts",
+          "typeOnly": false,
+          "line": 5
+        },
+        {
+          "specifier": "../utils/truncate.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/utils/truncate.ts",
+          "typeOnly": false,
+          "line": 12
+        },
+        {
+          "specifier": "./image.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/image.ts",
+          "typeOnly": false,
+          "line": 13
+        },
+        {
+          "specifier": "./path-utils.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/path-utils.ts",
+          "typeOnly": false,
+          "line": 14
+        },
+        {
+          "specifier": "./tool-context.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/tool-context.ts",
+          "typeOnly": true,
+          "line": 15
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/src/harness/tools/tool-context.ts",
+      "sha256": "6c224cc5c58e2b9bb8ed177eddca2a26870a3604995181198163a19aea2440d9",
+      "lines": 6,
+      "test": false,
+      "exports": ["ExecutionToolContext"],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/types.ts",
+          "typeOnly": true,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/src/harness/utils/truncate.ts",
+      "sha256": "0b1d69f589ebced5ed7b3527c515e6fe7a0aca08660c6f8e84310fe040d73e34",
+      "lines": 350,
+      "test": false,
+      "exports": [
+        "DEFAULT_MAX_LINES",
+        "DEFAULT_MAX_BYTES",
+        "GREP_MAX_LINE_LENGTH",
+        "TruncationResult",
+        "TruncationOptions",
+        "utf8ByteLength",
+        "formatSize",
+        "truncateHead",
+        "truncateTail",
+        "truncateLine"
+      ],
+      "imports": []
+    },
+    {
+      "path": "packages/agent/src/stream-fn.ts",
+      "sha256": "1f9dee101a5ce1052558458d9ce47e53e05187224e879217899059a80d90bc45",
+      "lines": 20,
+      "test": false,
+      "exports": ["setDefaultStreamFn", "getDefaultStreamFn"],
+      "imports": [
+        {
+          "specifier": "./types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/types.ts",
+          "typeOnly": true,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/src/types.ts",
+      "sha256": "bc8db50886cdf164c55d636f2755da22b2bf12d9172b1fb7383f37c2fe439fe7",
+      "lines": 500,
+      "test": false,
+      "exports": [
+        "StreamFn",
+        "ToolExecutionMode",
+        "QueueMode",
+        "AgentToolCall",
+        "BeforeToolCallResult",
+        "AfterToolCallResult",
+        "BeforeToolCallContext",
+        "AfterToolCallContext",
+        "AgentTurnContext",
+        "AgentTurnDecision",
+        "FinishTurn",
+        "AgentLoopTurnUpdate",
+        "PrepareRequestContext",
+        "AgentRequestUpdate",
+        "PrepareRequest",
+        "PrepareNextTurnContext",
+        "AgentLoopConfig",
+        "ThinkingLevel",
+        "CustomAgentMessages",
+        "AgentMessage",
+        "AgentState",
+        "AgentToolResult",
+        "AgentToolUpdateCallback",
+        "AgentTool",
+        "AgentContext",
+        "AgentEvent"
+      ],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai",
+          "kind": "internal",
+          "target": "packages/ai/src/index.ts",
+          "typeOnly": true,
+          "line": 16
+        },
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": true,
+          "line": 17
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/test/agent-loop.test.ts",
+      "sha256": "7701c3f05ebd19421b72da3257464745a84607ec03ae505ae6d7d8759506401e",
+      "lines": 2083,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai",
+          "kind": "internal",
+          "target": "packages/ai/src/index.ts",
+          "typeOnly": false,
+          "line": 8
+        },
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 9
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 10
+        },
+        {
+          "specifier": "../src/agent-loop.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/agent-loop.ts",
+          "typeOnly": false,
+          "line": 11
+        },
+        {
+          "specifier": "../src/index.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/index.ts",
+          "typeOnly": false,
+          "line": 12
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/types.ts",
+          "typeOnly": true,
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/test/agent.test.ts",
+      "sha256": "2f49e60cd4dcd3f3518b4e92b13c39f8127bd06d9b812d97653fac71fc83964c",
+      "lines": 1194,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai/compat",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 9
+        },
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 10
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 11
+        },
+        {
+          "specifier": "../src/index.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/index.ts",
+          "typeOnly": false,
+          "line": 19
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/test/e2e.test.ts",
+      "sha256": "186286d01bd377797e15452da264cb55902462199ee0d10bfa5ff191292810a9",
+      "lines": 416,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai/compat",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 13
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 14
+        },
+        {
+          "specifier": "../src/index.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/index.ts",
+          "typeOnly": false,
+          "line": 15
+        },
+        {
+          "specifier": "./utils/calculate.ts",
+          "kind": "internal",
+          "target": "packages/agent/test/utils/calculate.ts",
+          "typeOnly": false,
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/test/harness/tools.test.ts",
+      "sha256": "46bb70115b774389979fbc1cd2811a509da2734082536f0386ffb103cac98003",
+      "lines": 787,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "node:fs/promises",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "diff",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "../../src/harness/context.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/context.ts",
+          "typeOnly": false,
+          "line": 4
+        },
+        {
+          "specifier": "../../src/harness/env/nodejs.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/env/nodejs.ts",
+          "typeOnly": false,
+          "line": 5
+        },
+        {
+          "specifier": "../../src/harness/tools/bash.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/bash.ts",
+          "typeOnly": false,
+          "line": 6
+        },
+        {
+          "specifier": "../../src/harness/tools/edit.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/edit.ts",
+          "typeOnly": false,
+          "line": 7
+        },
+        {
+          "specifier": "../../src/harness/tools/image.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/image.ts",
+          "typeOnly": false,
+          "line": 8
+        },
+        {
+          "specifier": "../../src/harness/tools/read.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/read.ts",
+          "typeOnly": false,
+          "line": 9
+        },
+        {
+          "specifier": "../../src/harness/tools/write.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/tools/write.ts",
+          "typeOnly": false,
+          "line": 10
+        },
+        {
+          "specifier": "../../src/harness/types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/types.ts",
+          "typeOnly": false,
+          "line": 20
+        },
+        {
+          "specifier": "../../src/harness/utils/truncate.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/utils/truncate.ts",
+          "typeOnly": false,
+          "line": 21
+        },
+        {
+          "specifier": "./session-test-utils.ts",
+          "kind": "internal",
+          "target": "packages/agent/test/harness/session-test-utils.ts",
+          "typeOnly": false,
+          "line": 22
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/test/harness/truncate.test.ts",
+      "sha256": "4fe8d6155d468a7843c6831a83af1b79a50edd54f69160b14e893b2bb49f8aaa",
+      "lines": 178,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../../src/harness/utils/truncate.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/harness/utils/truncate.ts",
+          "typeOnly": false,
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/test/utils/calculate.ts",
+      "sha256": "93e332014f57e14d1131b66791bcd865a2db9647aa87ad2e0e86a79414591a8f",
+      "lines": 40,
+      "test": true,
+      "exports": [
+        "CalculateResult",
+        "calculate",
+        "calculateTool",
+        "createCalculateToolWithUsage"
+      ],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-ai",
+          "kind": "internal",
+          "target": "packages/ai/src/index.ts",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../../src/types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/types.ts",
+          "typeOnly": true,
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "packages/agent/test/utils/get-current-time.ts",
+      "sha256": "0192fa9720f3713c7ca6be54968c49f681eef6d01ea944cf418863b9c56d027b",
+      "lines": 46,
+      "test": true,
+      "exports": [
+        "GetCurrentTimeResult",
+        "getCurrentTime",
+        "getCurrentTimeTool"
+      ],
+      "imports": [
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../../src/types.ts",
+          "kind": "internal",
+          "target": "packages/agent/src/types.ts",
+          "typeOnly": true,
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/api/openai-completions.ts",
+      "sha256": "a682245959c697d4f7a5ac54152f2db189099561b304725c651d6dbee22fd752",
+      "lines": 1726,
+      "test": false,
+      "exports": [
+        "OpenAICompletionsOptions",
+        "ConvertCompletionsMessagesOptions",
+        "stream",
+        "streamSimple",
+        "convertMessages"
+      ],
+      "imports": [
+        {
+          "specifier": "openai",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "openai/resources/chat/completions.js",
+          "kind": "external",
+          "typeOnly": true,
+          "line": 13
+        },
+        {
+          "specifier": "../models.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/models.ts",
+          "typeOnly": false,
+          "line": 14
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 37
+        },
+        {
+          "specifier": "../utils/error-body.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/error-body.ts",
+          "typeOnly": false,
+          "line": 38
+        },
+        {
+          "specifier": "../utils/event-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/event-stream.ts",
+          "typeOnly": false,
+          "line": 39
+        },
+        {
+          "specifier": "../utils/hash.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/hash.ts",
+          "typeOnly": false,
+          "line": 40
+        },
+        {
+          "specifier": "../utils/headers.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/headers.ts",
+          "typeOnly": false,
+          "line": 41
+        },
+        {
+          "specifier": "../utils/json-parse.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/json-parse.ts",
+          "typeOnly": false,
+          "line": 42
+        },
+        {
+          "specifier": "../utils/pi-user-agent.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/pi-user-agent.ts",
+          "typeOnly": false,
+          "line": 43
+        },
+        {
+          "specifier": "../utils/provider-env.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/provider-env.ts",
+          "typeOnly": false,
+          "line": 44
+        },
+        {
+          "specifier": "../utils/provider-retry.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/provider-retry.ts",
+          "typeOnly": false,
+          "line": 45
+        },
+        {
+          "specifier": "../utils/sanitize-unicode.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/sanitize-unicode.ts",
+          "typeOnly": false,
+          "line": 46
+        },
+        {
+          "specifier": "../utils/text.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/text.ts",
+          "typeOnly": false,
+          "line": 47
+        },
+        {
+          "specifier": "../utils/transcript.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/transcript.ts",
+          "typeOnly": false,
+          "line": 53
+        },
+        {
+          "specifier": "./constrained-sampling.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/constrained-sampling.ts",
+          "typeOnly": false,
+          "line": 62
+        },
+        {
+          "specifier": "./github-copilot-headers.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/github-copilot-headers.ts",
+          "typeOnly": false,
+          "line": 63
+        },
+        {
+          "specifier": "./openai-prompt-cache.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/openai-prompt-cache.ts",
+          "typeOnly": false,
+          "line": 64
+        },
+        {
+          "specifier": "./simple-options.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/simple-options.ts",
+          "typeOnly": false,
+          "line": 65
+        },
+        {
+          "specifier": "./transform-messages.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/transform-messages.ts",
+          "typeOnly": false,
+          "line": 66
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/api/simple-options.ts",
+      "sha256": "7fdc74ee2cdf3d82213cdecfb0883174cd470c22d9a9346bbef1428f4294cc94",
+      "lines": 95,
+      "test": false,
+      "exports": [
+        "clampMaxTokensToContext",
+        "buildBaseOptions",
+        "MIN_ANSWER_TOKENS",
+        "DEFAULT_THINKING_BUDGETS",
+        "clampReasoning",
+        "thinkingBudgetForLevel",
+        "clampThinkingBudgetToAnswerRoom",
+        "adjustMaxTokensForThinking"
+      ],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 9
+        },
+        {
+          "specifier": "../utils/estimate.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/estimate.ts",
+          "typeOnly": false,
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/api/transform-messages.ts",
+      "sha256": "6d82d11a49213a4193e0d074f36d7af76e8a911b003104c0aa2c22569b2fe669",
+      "lines": 235,
+      "test": false,
+      "exports": ["transformMessages"],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/providers/deepseek.ts",
+      "sha256": "4d4ac9870d3dcdb13a90627a95598314459f5cc2f8a122f802fab3b0d2840fee",
+      "lines": 15,
+      "test": false,
+      "exports": ["deepseekProvider"],
+      "imports": [
+        {
+          "specifier": "../api/openai-completions.lazy.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/openai-completions.lazy.ts",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../auth/helpers.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/auth/helpers.ts",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../models.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/models.ts",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "./deepseek.models.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/providers/deepseek.models.ts",
+          "typeOnly": false,
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/types.ts",
+      "sha256": "547080208799ae828adc64b1935138f04c0f5431638932ee282fd867f196e39b",
+      "lines": 1024,
+      "test": false,
+      "exports": [
+        "AssistantMessageEventStream",
+        "KnownApi",
+        "Api",
+        "KnownImagesApi",
+        "ImagesApi",
+        "KnownProvider",
+        "ProviderId",
+        "KnownImagesProvider",
+        "ImagesProviderId",
+        "ToolChoice",
+        "ThinkingLevel",
+        "ModelThinkingLevel",
+        "ThinkingLevelMap",
+        "ChatTemplateKwargValue",
+        "ThinkingTokenBudgetField",
+        "ThinkingBudgets",
+        "CacheRetention",
+        "ModelPromptCache",
+        "Transport",
+        "ProviderEnv",
+        "ProviderHeaders",
+        "FetchFunction",
+        "SessionAffinityFormat",
+        "ProviderResponse",
+        "ProviderRequestOptions",
+        "StreamOptions",
+        "ProviderStreamOptions",
+        "DeferredFetchOptions",
+        "DeferredCancelOptions",
+        "ApiOptionsMap",
+        "ApiStreamOptions",
+        "ProviderStreams",
+        "ProviderImages",
+        "ImagesOptions",
+        "ProviderImagesOptions",
+        "AnthropicAllowedFallbackModel",
+        "SimpleStreamOptions",
+        "StreamFunction",
+        "ImagesFunction",
+        "TextSignatureV1",
+        "TextContent",
+        "ThinkingContent",
+        "ImageContent",
+        "ToolCall",
+        "Usage",
+        "StopReason",
+        "JsonValue",
+        "JsonObject",
+        "JsonRepresentation",
+        "DeferredHandle",
+        "SystemMessage",
+        "UserMessage",
+        "AssistantMessage",
+        "ToolResultMessage",
+        "Message",
+        "ImagesInputContent",
+        "ImagesOutputContent",
+        "ImagesContext",
+        "ImagesStopReason",
+        "AssistantImages",
+        "GrammarFormat",
+        "GrammarVariants",
+        "ConstrainedSamplingConfig",
+        "Tool",
+        "ToolReference",
+        "Context",
+        "TranscriptContext",
+        "AssistantMessageEvent",
+        "OpenAICompletionsCompat",
+        "OpenAIResponsesCompat",
+        "AnthropicMessagesCompat",
+        "BedrockCompat",
+        "MistralConversationsCompat",
+        "OpenRouterRouting",
+        "VercelGatewayRouting",
+        "ModelCostRates",
+        "ModelCostTier",
+        "ModelCost",
+        "ModelImageResizeOptions",
+        "ModelImageInputLimits",
+        "ModelInputLimits",
+        "Model",
+        "ImagesModel"
+      ],
+      "imports": [
+        {
+          "specifier": "@earendil-works/pi-telemetry",
+          "kind": "internal",
+          "target": "packages/telemetry/src/index.ts",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "./api/anthropic-messages.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/anthropic-messages.ts",
+          "typeOnly": true,
+          "line": 2
+        },
+        {
+          "specifier": "./api/azure-openai-responses.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/azure-openai-responses.ts",
+          "typeOnly": true,
+          "line": 3
+        },
+        {
+          "specifier": "./api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": true,
+          "line": 4
+        },
+        {
+          "specifier": "./api/google-generative-ai.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/google-generative-ai.ts",
+          "typeOnly": true,
+          "line": 5
+        },
+        {
+          "specifier": "./api/google-vertex.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/google-vertex.ts",
+          "typeOnly": true,
+          "line": 6
+        },
+        {
+          "specifier": "./api/mistral-conversations.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/mistral-conversations.ts",
+          "typeOnly": true,
+          "line": 7
+        },
+        {
+          "specifier": "./api/openai-codex-responses.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/openai-codex-responses.ts",
+          "typeOnly": true,
+          "line": 8
+        },
+        {
+          "specifier": "./api/openai-completions.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/openai-completions.ts",
+          "typeOnly": true,
+          "line": 9
+        },
+        {
+          "specifier": "./api/openai-responses.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/openai-responses.ts",
+          "typeOnly": true,
+          "line": 10
+        },
+        {
+          "specifier": "./api/pi-messages.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/pi-messages.ts",
+          "typeOnly": true,
+          "line": 11
+        },
+        {
+          "specifier": "./utils/diagnostics.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/diagnostics.ts",
+          "typeOnly": true,
+          "line": 12
+        },
+        {
+          "specifier": "./utils/event-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/event-stream.ts",
+          "typeOnly": true,
+          "line": 13
+        },
+        {
+          "specifier": "./utils/event-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/event-stream.ts",
+          "typeOnly": true,
+          "line": 15
+        },
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": true,
+          "line": 576
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/utils/error-body.ts",
+      "sha256": "7170181ae6926709fe4ab7ac6b5b51c46ffe906868a7aac3c7627cb28ad77c09",
+      "lines": 149,
+      "test": false,
+      "exports": [
+        "MAX_PROVIDER_ERROR_BODY_CHARS",
+        "NormalizedProviderError",
+        "normalizeProviderError",
+        "formatProviderError",
+        "truncateErrorText",
+        "safeJsonStringify"
+      ],
+      "imports": []
+    },
+    {
+      "path": "packages/ai/src/utils/event-stream.ts",
+      "sha256": "147084657f76665ff7d6c8dcd6eb0745149e3aaee3e7b9c272b315a1b5679386",
+      "lines": 110,
+      "test": false,
+      "exports": [
+        "EventStream",
+        "AssistantMessageEventStream",
+        "createAssistantMessageEventStream"
+      ],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/utils/json-parse.ts",
+      "sha256": "828440b19a64773f696ced9461166913ddaddd8479697fbde32d3f298872b153",
+      "lines": 124,
+      "test": false,
+      "exports": ["repairJson", "parseJsonWithRepair", "parseStreamingJson"],
+      "imports": [
+        {
+          "specifier": "partial-json",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/utils/provider-retry.ts",
+      "sha256": "d0f68cfe9fe6a5d4be778eaefedc0b453021f89026810691dcd1479371dca699",
+      "lines": 125,
+      "test": false,
+      "exports": ["retryProviderRequest"],
+      "imports": []
+    },
+    {
+      "path": "packages/ai/src/utils/text.ts",
+      "sha256": "d37c1825855c7fc71669a545b5b266810242c1c7e58d57228c0c143f29c1c544",
+      "lines": 40,
+      "test": false,
+      "exports": [
+        "contentText",
+        "getSystemMessageText",
+        "renderSystemMessageUpdate"
+      ],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/utils/transcript.ts",
+      "sha256": "cad0c126cdfadc1b4f430cc5a95b1c9285ecd1ee9957642d7773b1357bbc9ac5",
+      "lines": 234,
+      "test": false,
+      "exports": [
+        "TranscriptContext",
+        "createInitialSystemMessage",
+        "normalizeContext",
+        "TranscriptMessages",
+        "getInitialSystemMessage",
+        "withoutInitialSystemMessage",
+        "getCurrentTools",
+        "getCurrentSystemMessage",
+        "getCurrentSystemPrompt",
+        "collapseSystemMessages",
+        "resolveTranscript",
+        "toToolDeclaration",
+        "declarationsEqual",
+        "ToolStateChanges",
+        "getToolStateChanges",
+        "getDeclaredTools",
+        "hasToolRedefinitions",
+        "hasNonAdditiveToolChanges",
+        "TranscriptTools",
+        "resolveTranscriptTools"
+      ],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "./text.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/text.ts",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/utils/validation.ts",
+      "sha256": "460786b57dead200e411b9afec916a5049c96ebcff4da082096456ac06d44fb7",
+      "lines": 350,
+      "test": false,
+      "exports": ["validateToolCall", "validateToolArguments"],
+      "imports": [
+        {
+          "specifier": "typebox/compile",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "typebox/error",
+          "kind": "external",
+          "typeOnly": true,
+          "line": 2
+        },
+        {
+          "specifier": "typebox/value",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/event-stream.test.ts",
+      "sha256": "4bd0da838196e7030b3df87160e6a09faf07b157de3571c308cd94bdde153b5c",
+      "lines": 94,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/utils/event-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/event-stream.ts",
+          "typeOnly": false,
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/message-types.test.ts",
+      "sha256": "b288469cca9b6a4b975aaf3c68dd71334d913f8d935222d4727df056b534652c",
+      "lines": 57,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/openai-completions-empty-tools.test.ts",
+      "sha256": "9782d5ea322751d01ba52296681a7bac5580d9d337a06921179789ea300176c0",
+      "lines": 304,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/openai-completions-raw-stop-reason.test.ts",
+      "sha256": "0d004f282f6f9f1ca261fba9a866de6ac2ed65da136c4b40abf4de919f3fa751",
+      "lines": 80,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/api/openai-completions.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/openai-completions.ts",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 3
+        },
+        {
+          "specifier": "../src/utils/transcript.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/transcript.ts",
+          "typeOnly": false,
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/openai-completions-response-model.test.ts",
+      "sha256": "9657044e00ef3a46bf1c60b69afc876ad6b88827c3d1cb278cd3db2fc5ae214b",
+      "lines": 140,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/openai-completions-tool-choice.test.ts",
+      "sha256": "0eabc918c66894434e9d48f60bc77a57317e213132dd7c50120e9a3dc4289b64",
+      "lines": 1956,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../src/api/openai-completions.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/openai-completions.ts",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 4
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/transcript-tool-changes.test.ts",
+      "sha256": "f80c1d7d9dab6c49f556ddec54afb00053c2b4703e563f9ce67e5d7254b7a2c4",
+      "lines": 343,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/validation.test.ts",
+      "sha256": "26b5fee2cb64eb5df1e9accdbc478d4bc055c7110c1a66d0f01327a067e953d5",
+      "lines": 210,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "typebox",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "typebox/compile",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 4
+        },
+        {
+          "specifier": "../src/utils/validation.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/validation.ts",
+          "typeOnly": false,
+          "line": 5
+        }
+      ]
+    }
+  ],
+  "cycles": [
+    [
+      "packages/ai/src/api/openai-completions.ts",
+      "packages/ai/src/api/simple-options.ts",
+      "packages/ai/src/api/transform-messages.ts",
+      "packages/ai/src/types.ts",
+      "packages/ai/src/utils/event-stream.ts",
+      "packages/ai/src/utils/text.ts",
+      "packages/ai/src/utils/transcript.ts"
+    ]
+  ],
+  "warnings": [],
+  "configs": [
+    {
+      "path": "package.json",
+      "sha256": "c33b8c67a66ac49606cf90cc2389d3d83478d7e4c80ebb14475fb2c63560d17e"
+    },
+    {
+      "path": "packages/agent/benchmark/tsconfig.json",
+      "sha256": "de7f2233f731d3e242a27ff905e107429bdb46bfa4df526d899eddc6232cb7a6"
+    },
+    {
+      "path": "packages/agent/docs/mobile-handoff/02-plugins/02-sandbox/package.json",
+      "sha256": "ec6f2bbed1a312f7bb84cbec52d630190f3678af1f317e3d944d5963d70942c5"
+    },
+    {
+      "path": "packages/agent/package.json",
+      "sha256": "26f991ea26187d52978c303811f32032c9fcdaec197d4dcf08d793bedffdb87c"
+    },
+    {
+      "path": "packages/agent/tsconfig.build.json",
+      "sha256": "ccdc6c20a858b66ddf2eb4971790d44a4c830f8017d670b8450af9a5d32dff77"
+    },
+    {
+      "path": "packages/ai/package.json",
+      "sha256": "0422fc7227a158c3c843c1540edfff017d2103be33ee48b882e2ff9032a5f7d2"
+    },
+    {
+      "path": "packages/ai/tsconfig.build.json",
+      "sha256": "7443d96e2396eba743a7de9136485a31865d9362699627b450d61037c6dea23b"
+    },
+    {
+      "path": "packages/chord/package.json",
+      "sha256": "d0d7fdfbbdc99dcae01311b589bd1b8b0861892d7a2bb09e666a134bf870e692"
+    },
+    {
+      "path": "packages/chord/tsconfig.build.json",
+      "sha256": "5d1d8e87055b879ea8525af3d2061952705dac28f2a79450cc86b138828eff3f"
+    },
+    {
+      "path": "packages/client/package.json",
+      "sha256": "ca2c8246f1969a9311b9bbc9765c9a857f7a9b3ee3abfd6bf3a911be14a64c5f"
+    },
+    {
+      "path": "packages/client/tsconfig.build.json",
+      "sha256": "f7455e8f1154cf140c15d6f658fac8f26a9f26ef97de8dc95ed5814244bbdb94"
+    },
+    {
+      "path": "packages/client/tsconfig.test.json",
+      "sha256": "6a3d381f293fe7a484faeb40a52186623f061cca6d561c0dc80f7e5253669a47"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/custom-provider-anthropic/package.json",
+      "sha256": "c6ee1f0de9a055a0286752e98fea32837d06c0bd373d7a99f87e1a02cf2ac9a4"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/custom-provider-gitlab-duo/package.json",
+      "sha256": "6f3d8ab649bcc0794e160c570ef06446836c0cec7889d7dbff92ae317cc27699"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/gondolin/package.json",
+      "sha256": "b9c229b30d4ed9ef53fc9acef137c9225f575f8d1739ececb243b6681c7b1069"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/sandbox/package.json",
+      "sha256": "6d27d552003583073113dda5758917db5c66f20ed3b82e0a047f72cd4a860fb2"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/with-deps/package.json",
+      "sha256": "57e444872d3cff542e62e6df3c88fb7d97a0ee6804597a37c84de9aae7a0a238"
+    },
+    {
+      "path": "packages/coding-agent/examples/plugins/pi-example-plugin/package.json",
+      "sha256": "f608b21d7170664772ac572638ec1fb7043eb35bc1aab7fc78973dba95d6cee2"
+    },
+    {
+      "path": "packages/coding-agent/install-lock/package.json",
+      "sha256": "03fa52df3885382c2fe5d318d61ca5029322a4eb6fd0c09fbb84e5a86126e9c9"
+    },
+    {
+      "path": "packages/coding-agent/package.json",
+      "sha256": "627631b613ba4ca29eba8df793f5280fd20b19f01d73826e9ffda14c15def5dc"
+    },
+    {
+      "path": "packages/coding-agent/tsconfig.build.json",
+      "sha256": "7ad2da3a5117aadbbb19a272f233d298041efda3c5f97ad1e094be24102d49da"
+    },
+    {
+      "path": "packages/coding-agent/tsconfig.examples.json",
+      "sha256": "ac72980ecaa181923376d18299ead81f315de05752c932a4a05d428dd6c6ee80"
+    },
+    {
+      "path": "packages/durable/package.json",
+      "sha256": "c3c644f280432e586c0981b80051ac573b0b7db0fd0640b825f6320f3c80b246"
+    },
+    {
+      "path": "packages/durable/tsconfig.build.json",
+      "sha256": "97b8f62c2c6d3da13f00762851747205e266d77c4e88ec73590cd029896f2900"
+    },
+    {
+      "path": "packages/evals/package.json",
+      "sha256": "168f6dfcf750993f121e3a58731a7965c84d1cbdb1fa64bdc76526841b3fd7ac"
+    },
+    {
+      "path": "packages/evals/tsconfig.json",
+      "sha256": "0f9db3347bb327c496b6dfc8f9bd970b46bcbc2e04d1e157186fbb5e38c6c3a1"
+    },
+    {
+      "path": "packages/protocol/package.json",
+      "sha256": "84f78eece08dd4b2329e508c4658289e67b9b90700dc3dce9226548d54219b8d"
+    },
+    {
+      "path": "packages/protocol/tsconfig.build.json",
+      "sha256": "5d1d8e87055b879ea8525af3d2061952705dac28f2a79450cc86b138828eff3f"
+    },
+    {
+      "path": "packages/protocol/tsconfig.test.json",
+      "sha256": "6b556c407ba9a93babd6aa5600451a941e51cb72b2f9b906cf143914fea15874"
+    },
+    {
+      "path": "packages/server/package.json",
+      "sha256": "b39ca8d32c6bfd07bdccf088e65ee6ab17565189808b2dc58428bc3d43ab6983"
+    },
+    {
+      "path": "packages/server/tsconfig.build.json",
+      "sha256": "5d1d8e87055b879ea8525af3d2061952705dac28f2a79450cc86b138828eff3f"
+    },
+    {
+      "path": "packages/server/tsconfig.test.json",
+      "sha256": "6a3d381f293fe7a484faeb40a52186623f061cca6d561c0dc80f7e5253669a47"
+    },
+    {
+      "path": "packages/session-backends/sqlite-node/package.json",
+      "sha256": "8aa95b84bb5110c22fb06a56255d7e93cec139ef08d8d210569d2c0520d561d4"
+    },
+    {
+      "path": "packages/session-backends/sqlite-node/tsconfig.build.json",
+      "sha256": "cb79361b9a66b258caa74e2bd3b3cc4184fbd1892f9e409a0bcd973d260a55aa"
+    },
+    {
+      "path": "packages/telemetry/package.json",
+      "sha256": "779ed2fb46846eb4826e82722af9817493c055a86d3c59061e3ed40ce46e14f5"
+    },
+    {
+      "path": "packages/telemetry/tsconfig.build.json",
+      "sha256": "5d1d8e87055b879ea8525af3d2061952705dac28f2a79450cc86b138828eff3f"
+    },
+    {
+      "path": "packages/tui/package.json",
+      "sha256": "61170acddb2e567c790f2dac67ab5622ac167faffdc1066331f37de47d1e72c2"
+    },
+    {
+      "path": "packages/tui/tsconfig.build.json",
+      "sha256": "d666ba0c2a900cf47541404ace5c4977f13c6d9fc82ed91588f74aa6b2b9099c"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "sha256": "2db314b2e40a37a94e7b1da0af3883b7dd0ef2a8abc4b22138ae1ceb7cc2375f"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "da5dd36d49c4cb6ab41466e8e75e5b9048e46ee769b4a8daa896caa3019e6a56"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "batch": "ai-auth",
+  "id": "pkce",
+  "input": {
+    "op": "pkce",
+    "file": "packages/ai/src/auth/oauth/pkce.ts"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "length": 43,
+      "urlSafe": true,
+      "challengeMatches": true,
+      "distinct": true
+    }
+  }
+}

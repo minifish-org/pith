@@ -1,0 +1,9 @@
+.cache/
+node_modules/
+.portsmith/
+.env
+.env.*
+!.env.example
+bin/
+dist/
+.DS_Store

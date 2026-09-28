@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "source": ".cache/pi/f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "revision": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "analysisSha256": "3e009413dcb3531804bab35283555b396e4e72e1d94725483048185fa830b52b",
+  "status": "planned",
+  "milestone": "MVP-1: text-only Go agent with explicit DeepSeek configuration and bounded read tool",
+  "units": [
+    {
+      "id": "P01-eventstream",
+      "title": "通用事件流",
+      "kind": "port",
+      "goal": "通用事件流。移植EventStream和FIFO队列，不含AssistantMessageEventStream。目标package eventstream；Next同步注册单次消费者，Result接受context，保留FIFO、终结和首次结果语义。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "internal/eventstream",
+      "files": ["packages/ai/src/utils/event-stream.ts"],
+      "references": ["packages/ai/test/event-stream.test.ts"],
+      "dependsOn": [],
+      "acceptance": [
+        "FIFO缓冲和等待者次序一致；完成事件可读，完成后忽略Push。",
+        "End后排空缓冲；End(nil)唤醒等待者但不确定Result；之后End(0)仍能确定结果。",
+        "第一次结果获胜；Go新增取消不会吞掉已经确定的结果。",
+        "多次Result读取一致；不持锁调用可重入的外部回调，回调失败和并发行为先刻画并记录。",
+        "验证原TS场景基线、已知错误实现会失败，再运行Go同场景与race检查。"
+      ],
+      "notes": [
+        "Portsmith已有演示是候选证据，不能直接视为Pith正式实现。",
+        "正式eventstream包的独立judge已建立，要求重新验证；内置package port示例的旧收据不能沿用。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P01-01", "P01-02", "P01-03", "P01-04", "P01-05"]
+      }
+    },
+    {
+      "id": "P02-contracts",
+      "title": "消息、事件与模型边界",
+      "kind": "port",
+      "goal": "消息、事件与模型边界。只实现文本办公闭环用到的System/User/Assistant/ToolResult、Text/ToolCall、Usage、StopReason、Tool声明、规范化Context及流接口。Assistant事件包含start/text/toolcall/done/error；不照搬所有厂商选项。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "ai",
+      "files": ["packages/ai/src/types.ts"],
+      "references": [
+        "packages/ai/src/utils/event-stream.ts",
+        "packages/ai/test/message-types.test.ts"
+      ],
+      "dependsOn": ["P01-eventstream"],
+      "acceptance": [
+        "JSON往返保留role、toolCallId、toolName、参数、错误状态和毫秒时间戳。",
+        "缺失、null、零值和空数组可区分；不把false或0当作未提供。",
+        "参数数字不经float64静默丢精度，边界与JS数值差异显式记录。",
+        "流开始、增量、唯一终结事件语义明确；失败可发生在start之前。",
+        "Go公开流事件是消费时快照，不暴露会被后续修改的共享partial对象。"
+      ],
+      "notes": [
+        "ai不导入agent或providers，避免Go包循环。",
+        "TypeBox编译期泛型映射为JSON Schema数据；全厂商ApiOptionsMap、图像、deferred不在第一期。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P02-01", "P02-02", "P02-03", "P02-04", "P02-05"]
+      }
+    },
+    {
+      "id": "P03-transcript",
+      "title": "会话整理与工具声明",
+      "kind": "port",
+      "goal": "会话整理与工具声明。实现normalizeContext、createInitialSystemMessage、getCurrentSystemMessage/Prompt/Tools、toToolDeclaration和getToolStateChanges；仅普通工具声明与system消息折叠路径。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "ai",
+      "files": [
+        "packages/ai/src/utils/transcript.ts",
+        "packages/ai/src/utils/text.ts"
+      ],
+      "references": [
+        "packages/ai/src/types.ts",
+        "packages/agent/test/agent.test.ts",
+        "packages/ai/test/transcript-tool-changes.test.ts"
+      ],
+      "dependsOn": ["P02-contracts"],
+      "acceptance": [
+        "空prompt加空tools不制造system消息；有工具时创建正确的初始system声明。",
+        "system文本按上游分隔方式累积，命名sections新增、替换、删除保持顺序。",
+        "工具先移除后新增，同名重定义产生正确增量；声明中不包含执行函数。",
+        "传给模型的工具来自规范化会话，且与本轮可执行集合一致。",
+        "Go map不能随机改变提示词、工具数组或sections顺序。"
+      ],
+      "notes": [
+        "跳过Claude原生工具增量、tool search和其他厂商专有锚点。",
+        "通用消息折叠与顺序必须建立自己的原TS对照，不能直接运行所有provider集成测试。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P03-01", "P03-02", "P03-03", "P03-04", "P03-05"]
+      }
+    },
+    {
+      "id": "P04-tool-arguments",
+      "title": "工具参数校验与转换",
+      "kind": "port",
+      "goal": "工具参数校验与转换。以可序列化JSON Schema为输入，采用成熟Go校验库并补齐Pi已选的参数转换。库固定为github.com/santhosh-tekuri/jsonschema/v6 v6.0.2，依赖清单已经冻结，不逐行翻译TypeBox内部实现。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "ai",
+      "files": ["packages/ai/src/utils/validation.ts"],
+      "references": [
+        "packages/ai/src/types.ts",
+        "packages/ai/test/validation.test.ts"
+      ],
+      "dependsOn": ["P02-contracts"],
+      "acceptance": [
+        "参数先深拷贝；校验和转换不改变模型原始toolCall.arguments。",
+        "验证必填、类型、枚举及额外字段；失败不得调用工具。",
+        "覆盖原测试中的普通JSON schema原始值转换，非法字符串不能被误接受为数字。",
+        "可选非nullable属性null按缺失处理；nullable与引用schema允许的null保留。",
+        "联合schema已有匹配分支不额外转换；错误有稳定路径和原因。"
+      ],
+      "notes": [
+        "Go校验库不能自动替代Pi的coercion；错误措辞可以不同，路径/类型/失败语义必须有对照。",
+        "Go依赖已固定；未支持schema必须报错，不能悄悄当作任意对象。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P04-01", "P04-02", "P04-03", "P04-04", "P04-05"]
+      }
+    },
+    {
+      "id": "P05-agent-loop",
+      "title": "顺序工具调用循环",
+      "kind": "port",
+      "goal": "顺序工具调用循环。移植新请求与继续请求的低层循环，显式注入StreamFn；第一期仅顺序执行工具和普通消息，不支持parallel/steering/follow-up/运行中替换配置。含convertToLlm、transformContext和finishTurn结束控制。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "agent",
+      "files": [
+        "packages/agent/src/agent-loop.ts",
+        "packages/agent/src/types.ts",
+        "packages/agent/src/stream-fn.ts"
+      ],
+      "references": [
+        "packages/ai/src/types.ts",
+        "packages/ai/src/utils/transcript.ts",
+        "packages/ai/src/utils/validation.ts",
+        "packages/agent/test/agent-loop.test.ts"
+      ],
+      "dependsOn": ["P01-eventstream", "P03-transcript", "P04-tool-arguments"],
+      "acceptance": [
+        "固定模型响应下，完整比较agent/turn/message/tool事件和最终会话。",
+        "工具调用参数经P04处理；未知工具、校验失败或工具抛错都形成isError结果并按约定继续。",
+        "多个工具按助手源顺序执行、持久化和回传；结果与toolCallId一一对应。",
+        "length截断的助手工具调用全部失败，绝不能执行不完整参数。",
+        "模型error/aborted后不执行工具；只发一个agent_end。",
+        "continue拒绝空会话和assistant结尾；transformContext先于convertToLlm。",
+        "finishTurn结束时不再发请求；轮次上限和取消不会留下悬挂的消费者。"
+      ],
+      "notes": [
+        "Pi默认parallel；本期显式sequential是登记差异，不声称全agent-loop兼容。",
+        "所有接口仅暴露已支持选项；parallel、队列与before/after/prepare钩子的完整移植另排阶段。",
+        "stream-fn.ts只作为注入边界参考，Pith不引入进程级默认模型全局变量。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": [
+          "P05-01",
+          "P05-02",
+          "P05-03",
+          "P05-04",
+          "P05-05",
+          "P05-06",
+          "P05-07"
+        ]
+      }
+    },
+    {
+      "id": "P06-agent-state",
+      "title": "Agent状态与生命周期",
+      "kind": "port",
+      "goal": "Agent状态与生命周期。在低层循环上增加New/Prompt/Continue/Abort/WaitForIdle/Subscribe/Reset，维护会话、流式状态和待处理工具。通过注入模型与工具复用，不增加会话数据库。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "agent",
+      "files": ["packages/agent/src/agent.ts"],
+      "references": [
+        "packages/agent/src/types.ts",
+        "packages/agent/test/agent.test.ts"
+      ],
+      "dependsOn": ["P05-agent-loop"],
+      "acceptance": [
+        "初始prompt、tools和messages一致；Reset恢复基线。",
+        "Prompt/Continue正在运行时再次调用必须拒绝；运行中Reset拒绝且不能损坏会话。",
+        "正常结束、工具错误、provider抛错、取消均清理isStreaming和pending工具。",
+        "异步订阅的完成计入Prompt/WaitForIdle；工具结束后的迟到更新被忽略。",
+        "同一Agent串行运行；共享配置/消息的Go所有权和回调重入边界有race测试。"
+      ],
+      "notes": [
+        "steering/follow-up队列、动态模型切换、sessionId affinity和全部harness会话能力延期。",
+        "这层只是状态封装，禁止复制一份新的循环。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P06-01", "P06-02", "P06-03", "P06-04", "P06-05"]
+      }
+    },
+    {
+      "id": "P07-deepseek",
+      "title": "DeepSeek Chat Completions流适配",
+      "kind": "port",
+      "goal": "DeepSeek Chat Completions流适配。只实现DeepSeek/OpenAI兼容Chat Completions的文本和function tools路径。显式配置base URL、model ID、key；第一期thinking off，无模型目录抓取/OAuth。采用Go标准库net/http与encoding/json实现所选协议路径。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "providers/deepseek",
+      "files": [
+        "packages/ai/src/api/openai-completions.ts",
+        "packages/ai/src/utils/json-parse.ts",
+        "packages/ai/src/providers/deepseek.ts"
+      ],
+      "references": [
+        "packages/ai/src/types.ts",
+        "packages/ai/src/api/transform-messages.ts",
+        "packages/ai/src/api/simple-options.ts",
+        "packages/ai/src/utils/error-body.ts",
+        "packages/ai/src/utils/provider-retry.ts",
+        "packages/ai/test/openai-completions-empty-tools.test.ts",
+        "packages/ai/test/openai-completions-tool-choice.test.ts",
+        "packages/ai/test/openai-completions-raw-stop-reason.test.ts",
+        "packages/ai/test/openai-completions-response-model.test.ts"
+      ],
+      "dependsOn": ["P02-contracts", "P03-transcript"],
+      "acceptance": [
+        "假HTTP服务捕获实际请求：system/user/assistant/tool次序正确；空工具省略，DeepSeek使用max_tokens。",
+        "SSE在任意字节边界拆分仍可解析，多tool index的ID、name和JSON参数独立累计。",
+        "只有完整最终参数进入工具执行；增量raw JSON可以显示，残缺JSON不能伪装成功。",
+        "保留response model、usage与原始finish_reason，未知终止或无终止断流作为错误。",
+        "畸形SSE、未知终止或无终止断流均报错；部分输出后不自动重放整次请求。",
+        "覆盖HTTP401/429/5xx和ctx取消；固定响应测试不访问真实服务。"
+      ],
+      "notes": [
+        "provider factory和models.ts仅作参考，不加载deepseek.models.ts及动态JSON模型目录。",
+        "partial-json的宽松修复不直接照搬；只在toolcall_end解析完整JSON，记录与Pi增量参数对象的差异。",
+        "错误处理、有限重试和SSE分包用模拟服务验证；不调用真实服务反复猜测兼容性。",
+        "真实DeepSeek工具往返是迁移后单独执行的集成冒烟；不以随机回答作为自动验收oracle。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P07-01", "P07-02", "P07-03", "P07-04", "P07-05", "P07-06"]
+      }
+    },
+    {
+      "id": "P08-read-text",
+      "title": "受限目录文本读取工具",
+      "kind": "port",
+      "goal": "受限目录文本读取工具。移植read工具的文本、offset/limit、truncateHead与提示部分。使用Go文件系统和注入root，保留工具名read；图片、ExecutionEnv和bash建议不纳入。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "tools/readfile",
+      "files": [
+        "packages/agent/src/harness/tools/read.ts",
+        "packages/agent/src/harness/utils/truncate.ts"
+      ],
+      "references": [
+        "packages/agent/src/harness/tools/path-utils.ts",
+        "packages/agent/src/harness/tools/tool-context.ts",
+        "packages/agent/test/harness/tools.test.ts",
+        "packages/agent/test/harness/truncate.test.ts"
+      ],
+      "dependsOn": ["P04-tool-arguments", "P05-agent-loop"],
+      "acceptance": [
+        "固定文本文件、空文件、offset/limit、越界和不存在文件产生可解释结果。",
+        "按上游默认2000行/50KiB限制输出；UTF-8、CRLF、末尾换行和超长首行有独立场景。",
+        "只访问指定root内普通文件，拒绝目录、越界路径和链接逃逸；取消和资源关闭可验证。",
+        "受支持的文本场景与Pi对照；权限边界、图片拒绝与输入限制按Pith新增行为测试。",
+        "工具执行不依赖Node、Pi harness或可执行shell。"
+      ],
+      "notes": [
+        "采用os.OpenRoot等Go受限文件访问能力，最低Go1.24；这与Pi允许任意路径的默认行为不同。",
+        "图片/BMP处理、~和@路径便利转换、写入和编辑延期；不得称为完整read工具移植。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P08-01", "P08-02", "P08-03", "P08-04", "P08-05"]
+      }
+    },
+    {
+      "id": "P09-cli-smoke",
+      "title": "命令行闭环与独立构建",
+      "kind": "integration",
+      "goal": "命令行闭环与独立构建。新增Go演示入口，不把上游e2e测试翻译成产品实现。组装DeepSeek、Agent和read；程序从环境变量读取密钥，命令行选择root与prompt，输出文本和可选事件记录。 保留上游MIT归属；采用migration/RULEBOOK.md的接口和差异约定。先建立独立judge，再生成候选。",
+      "targetPackage": "cmd/pith",
+      "files": ["packages/agent/test/e2e.test.ts"],
+      "references": [
+        "packages/agent/src/agent.ts",
+        "packages/agent/test/utils/calculate.ts",
+        "packages/agent/test/utils/get-current-time.ts"
+      ],
+      "dependsOn": ["P06-agent-state", "P07-deepseek", "P08-read-text"],
+      "acceptance": [
+        "离线假模型完成用户消息→read调用→Go结果→最终回答，工具只执行一次。",
+        "受限root中的唯一标记能经工具结果进入下一次请求，证明真的完成工具往返。",
+        "本地假服务验收凭据不出现在stdout/stderr；真实DeepSeek冒烟另行显式执行。",
+        "go test ./...与Go独立构建通过；运行binary时不需要Node、Portsmith或源码缓存。",
+        "缺少provider配置时非零退出；文档记录单用户内存会话、限制和最小配置。"
+      ],
+      "notes": [
+        "本任务为新增集成代码，files中的e2e.test.ts只是验收参考。",
+        "服务器Web UI、桌面App、Computer Use、安装包签名和MCP均不在此里程碑。"
+      ],
+      "judge": {
+        "status": "authored",
+        "caseIds": ["P09-01", "P09-02", "P09-03", "P09-04", "P09-05"]
+      }
+    }
+  ],
+  "packageCycles": []
+}

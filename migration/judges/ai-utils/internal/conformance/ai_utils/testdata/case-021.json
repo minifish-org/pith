@@ -1,0 +1,63 @@
+{
+  "batch": "ai-utils",
+  "id": "getCurrentTools-0",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/transcript.ts",
+    "fn": "getCurrentTools",
+    "args": [
+      [
+        {
+          "role": "system",
+          "content": "",
+          "timestamp": 1,
+          "toolsAdded": [
+            {
+              "name": "a",
+              "description": "A",
+              "parameters": {
+                "type": "object"
+              }
+            }
+          ]
+        },
+        {
+          "role": "system",
+          "content": "",
+          "timestamp": 2,
+          "toolsRemoved": [
+            "a"
+          ],
+          "toolsAdded": [
+            {
+              "name": "b",
+              "description": "B",
+              "parameters": {
+                "type": "object"
+              }
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": [
+      {
+        "name": "a",
+        "description": "A",
+        "parameters": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "b",
+        "description": "B",
+        "parameters": {
+          "type": "object"
+        }
+      }
+    ]
+  }
+}

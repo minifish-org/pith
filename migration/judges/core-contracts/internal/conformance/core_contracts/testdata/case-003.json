@@ -1,0 +1,32 @@
+{
+  "batch": "core-contracts",
+  "id": "truncateHead-3",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/utils/truncate.ts",
+    "fn": "truncateHead",
+    "args": [
+      "",
+      {
+        "maxLines": 2,
+        "maxBytes": 10
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "content": "",
+      "truncated": false,
+      "truncatedBy": null,
+      "totalLines": 0,
+      "totalBytes": 0,
+      "outputLines": 0,
+      "outputBytes": 0,
+      "lastLinePartial": false,
+      "firstLineExceedsLimit": false,
+      "maxLines": 2,
+      "maxBytes": 10
+    }
+  }
+}

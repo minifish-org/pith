@@ -1,0 +1,47 @@
+{
+  "batch": "core-compaction",
+  "id": "estimateTokens-1",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/compaction/compaction.ts",
+    "fn": "estimateTokens",
+    "args": [
+      {
+        "role": "assistant",
+        "api": "openai-completions",
+        "provider": "fixture",
+        "model": "fixture",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "中文"
+          },
+          {
+            "type": "text",
+            "text": "answer"
+          }
+        ],
+        "usage": {
+          "input": 10,
+          "output": 3,
+          "cacheRead": 2,
+          "cacheWrite": 1,
+          "totalTokens": 16,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "timestamp": 1
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": 2
+  }
+}

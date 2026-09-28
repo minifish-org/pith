@@ -1,0 +1,74 @@
+package conformance
+
+import (
+ "bytes"
+ "context"
+ "encoding/json"
+ "go/ast"
+ "go/parser"
+ "go/token"
+ "os"
+ "path/filepath"
+ "reflect"
+ "strconv"
+ "strings"
+ "testing"
+ "time"
+)
+
+// RunCase lives in the generated adapter_test.go and calls the real Go SDK.
+// This frozen test owns expected outputs; the adapter receives inputs only.
+func TestPortsmithJudgeToolsEnvCases(t *testing.T) {
+ files,err:=filepath.Glob("testdata/case-*.json");if err!=nil||len(files)==0 {t.Fatal("missing conformance fixtures",err)}
+ for _,file:=range files {t.Run(filepath.Base(file),func(t *testing.T){
+  data,err:=os.ReadFile(file);if err!=nil{t.Fatal(err)}
+  var c struct { ID string `json:"id"`; Input json.RawMessage `json:"input"`; Expected struct{ OK bool `json:"ok"`; Value json.RawMessage `json:"value"` } `json:"expected"` }
+  if err=json.Unmarshal(data,&c);err!=nil{t.Fatal(err)}
+  ctx,cancel:=context.WithTimeout(context.Background(),5*time.Second);defer cancel()
+  actual,callErr:=RunCase(ctx,append(json.RawMessage(nil),c.Input...))
+  if !c.Expected.OK {if callErr==nil{t.Fatalf("%s: expected operation to fail",c.ID)};return}
+  if callErr!=nil{t.Fatalf("%s: %v",c.ID,callErr)}
+  var got,want any
+  g:=json.NewDecoder(bytes.NewReader(actual));g.UseNumber();w:=json.NewDecoder(bytes.NewReader(c.Expected.Value));w.UseNumber()
+  if err=g.Decode(&got);err!=nil{t.Fatalf("%s invalid result: %v",c.ID,err)};if err=w.Decode(&want);err!=nil{t.Fatal(err)}
+  if !reflect.DeepEqual(got,want){t.Fatalf("%s behavior mismatch\nwant %s\ngot  %s",c.ID,preview(c.Expected.Value),preview(actual))}
+ })}
+}
+
+func preview(raw []byte)string{if len(raw)>256{return string(raw[:256])+"... (read the frozen case for the full value)"};return string(raw)}
+
+type mapping struct { Source string `json:"source"`; Upstream string `json:"upstream"`; GoPackage string `json:"goPackage"`; GoSymbol string `json:"goSymbol"`; Reason string `json:"reason"` }
+func projectRoot(t *testing.T)string {t.Helper();p,err:=os.Getwd();if err!=nil{t.Fatal(err)};for {if _,err=os.Stat(filepath.Join(p,"go.mod"));err==nil{return p};next:=filepath.Dir(p);if next==p{t.Fatal("go.mod not found")};p=next}}
+func TestPortsmithJudgeToolsEnvSurface(t *testing.T) {
+ root:=projectRoot(t)
+ frozen,err:=os.ReadFile("testdata/surface.json");if err!=nil{t.Fatal(err)}
+ var spec struct{Outputs []string `json:"outputs"`; Symbols []mapping `json:"symbols"`; Map string `json:"map"`};if err=json.Unmarshal(frozen,&spec);err!=nil{t.Fatal(err)}
+ symbols:=map[string]bool{}
+ for _,out:=range spec.Outputs {
+  raw,err:=os.ReadFile(filepath.Join(root,out));if err!=nil{t.Fatal(err)}
+  if !strings.HasSuffix(out,".go")||strings.HasSuffix(out,"_test.go"){continue}
+  if bytes.Contains(raw,[]byte("TODO(port)"))||bytes.Contains(raw,[]byte("panic(\"not implemented\"")){t.Fatalf("unimplemented output: %s",out)}
+  f,err:=parser.ParseFile(token.NewFileSet(),out,raw,0);if err!=nil{t.Fatal(err)}
+  for _,d:=range f.Decls {switch n:=d.(type){case *ast.FuncDecl:if n.Recv==nil&&ast.IsExported(n.Name.Name){symbols[filepath.ToSlash(filepath.Dir(out))+"."+n.Name.Name]=true};case *ast.GenDecl:for _,s:=range n.Specs{switch v:=s.(type){case *ast.TypeSpec:symbols[filepath.ToSlash(filepath.Dir(out))+"."+v.Name.Name]=true;case *ast.ValueSpec:for _,name:=range v.Names{symbols[filepath.ToSlash(filepath.Dir(out))+"."+name.Name]=true}}}}}
+ }
+ data,err:=os.ReadFile(filepath.Join(root,spec.Map));if err!=nil{t.Fatal(err)};var actual []mapping;if err=json.Unmarshal(data,&actual);err!=nil{t.Fatal(err)}
+ if len(actual)!=len(spec.Symbols){t.Fatalf("source export mapping count: want %d, got %d",len(spec.Symbols),len(actual))}
+ seen:=map[string]bool{}
+ for _,want:=range spec.Symbols {
+  found:=false
+  for _,row:=range actual {if row.Source==want.Source&&row.Upstream==want.Upstream {
+   key:=row.Source+"#"+row.Upstream;if seen[key]{t.Fatalf("duplicate symbol %s",key)};seen[key]=true
+   if !ast.IsExported(row.GoSymbol)||!symbols[row.GoPackage+"."+row.GoSymbol] {t.Fatalf("missing exported Go declaration for %s -> %s.%s",key,row.GoPackage,row.GoSymbol)}
+   if row.Reason=="" {t.Fatalf("missing mapping rationale for %s",key)};found=true
+  }}
+  if !found{t.Fatalf("unmapped source symbol %s#%s",want.Source,want.Upstream)}
+ }
+}
+func TestPortsmithJudgeToolsEnvAdapter(t *testing.T) {
+ raw,err:=os.ReadFile("adapter_test.go");if err!=nil{t.Fatal(err)}
+ for _,word:=range []string{"testdata/","golden.json","case-000","os/exec",".cache/pi","node_modules"} {if bytes.Contains(raw,[]byte(word)){t.Fatalf("adapter must call Go SDK, not fixtures or TS: %s",word)}}
+ f,err:=parser.ParseFile(token.NewFileSet(),"adapter_test.go",raw,0);if err!=nil{t.Fatal(err)}
+ imported:=false
+ for _,p:=range f.Imports {name,_:=strconv.Unquote(p.Path.Value);if strings.HasPrefix(name,"github.com/minifish-org/pith/packages/") && (p.Name==nil||p.Name.Name!="_"){imported=true}}
+ if !imported {t.Fatal("adapter must import production Go SDK")}
+}

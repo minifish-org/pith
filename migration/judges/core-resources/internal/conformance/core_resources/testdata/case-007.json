@@ -1,0 +1,23 @@
+{
+  "batch": "core-resources",
+  "id": "formatSkillInvocation-0",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/skills.ts",
+    "fn": "formatSkillInvocation",
+    "args": [
+      {
+        "name": "demo",
+        "description": "",
+        "filePath": "/skills/demo/SKILL.md",
+        "baseDir": "/skills/demo",
+        "content": "Hello"
+      },
+      "more"
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": "<skill name=\"demo\" location=\"/skills/demo/SKILL.md\">\nReferences are relative to /skills/demo.\n\nHello\n</skill>\n\nmore"
+  }
+}

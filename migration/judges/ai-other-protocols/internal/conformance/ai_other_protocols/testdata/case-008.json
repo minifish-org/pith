@@ -1,0 +1,72 @@
+{
+  "batch": "ai-other-protocols",
+  "id": "mistral-conversations-tool",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/mistral-conversations.ts",
+    "api": "mistral-conversations",
+    "mode": "text",
+    "body": "event: message\ndata: {\"id\":\"r1\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call12345\",\"type\":\"function\",\"function\":{\"name\":\"echo\",\"arguments\":\"{\\\"text\\\":\\\"你好\\\"}\"}}]},\"finish_reason\":null}]}\n\nevent: message\ndata: {\"id\":\"r1\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":2,\"completion_tokens\":1,\"total_tokens\":3}}\n\ndata: [DONE]\n\n",
+    "status": 200
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "body": {
+            "model": "fixture",
+            "stream": true,
+            "messages": [
+              {
+                "role": "system",
+                "content": "system"
+              },
+              {
+                "role": "user",
+                "content": "hello"
+              }
+            ],
+            "temperature": 0,
+            "max_tokens": 16
+          }
+        }
+      ],
+      "events": [
+        "start",
+        "toolcall_start",
+        "toolcall_delta",
+        "toolcall_end",
+        "done"
+      ],
+      "content": [
+        {
+          "type": "toolCall",
+          "id": "call12345",
+          "name": "echo",
+          "arguments": {
+            "text": "你好"
+          }
+        }
+      ],
+      "usage": {
+        "input": 2,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 3,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "toolUse",
+      "responseId": "r1"
+    }
+  }
+}

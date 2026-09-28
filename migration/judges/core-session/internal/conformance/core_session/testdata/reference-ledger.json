@@ -1,0 +1,268 @@
+[
+  {
+    "source": "packages/agent/test/harness/branch.test.ts",
+    "sha256": "41e9115025b7ed5ae5d981dcfaf11cd08814c71c568cf29bd7858c38f817cef9",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/gating-storage.test.ts",
+    "sha256": "bee5e99bc2dd4d61735925253678e78b36bf930cc938f0dc63fe418da6574efe",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/instrumented-storage.test.ts",
+    "sha256": "78e20ff7eee3b659f1a4b5a6f288eed7a63df2910019c8b031e624bd002494e5",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/jsonl-io.test.ts",
+    "sha256": "ac3b91882c523af0b75351919478945ab05a44f9367007285685a1c5ef40c307",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/jsonl-storage-conformance.test.ts",
+    "sha256": "dfe326d2602e98b82c581a07fed26e1be0ce1f8a09cc70055973e7c840562e50",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/jsonl-storage.test.ts",
+    "sha256": "9973756a587ae5041351a4694cb03ceb638694c3feae1308684b4990f4738911",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/jsonl-v3-stream.test.ts",
+    "sha256": "8e1cd7a00197f18e0f8ec334bc073f25ee9e0305ed1a89f7c22d8ca2c2498587",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/memory-conformance.test.ts",
+    "sha256": "97d3e1025b9a2b0cb69df5d5046c6a41018301a1235962709ad45bf4b8aeb101",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/memory-storage.test.ts",
+    "sha256": "714971ecb1e3c4e5f39bbbbf6b0d0a477f79e459ad69a11ad4005e3c59dcb708",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/mutation-line.test.ts",
+    "sha256": "977bdd68684c8ffc81866c279b1fcaea4c0dc53aa81c841ac2ac9c5ff94b9a25",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/accept.test.ts",
+    "sha256": "b8c048d94d2a14ec571d1541ceba09f75f52e776cb9fd537a9a46d1558bdf5e0",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/drive-reconcile.test.ts",
+    "sha256": "934db9b6b1aaac0df2b179ad8dd93a668fc3eacf9002b24be38b7d7043a05fdf",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/drive-retry-deferred.test.ts",
+    "sha256": "338623fe07d76cbfcbee4b8b456cdb07d58e7c90c12931e7e859116aadca6df7",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/drive-structural.test.ts",
+    "sha256": "3e96860d693c851237127542ce01ce45fe9738475753706e6893d5c98f5a6483",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/drive-terminal.test.ts",
+    "sha256": "c17232d631fa0dd3c7d33c90f12b64dbd16e88568d1a7899d0d0143e65a8eef7",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/harness.test.ts",
+    "sha256": "8263c060f9a7abe9f4268845dd0e70e40d19b694424419311e9c5f6979eb8859",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/watch.test.ts",
+    "sha256": "2d03c4e3d1727b16df2ac2e9be9c0fdd9058da01915d1da5ad990cdd0cc92cd7",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/session-create-branch.test.ts",
+    "sha256": "d83f0b2bd962a3a76f07f635b16d53cd143a78c050233ce090f3ee04eacdcca8",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/storage-backed-session.test.ts",
+    "sha256": "291bc67769ceb6f5f9ade4db59053243db68d5a5e35b8a007b091a9530519c53",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-session",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

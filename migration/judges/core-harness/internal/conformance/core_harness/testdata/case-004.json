@@ -1,0 +1,24 @@
+{
+  "batch": "core-harness",
+  "id": "lifecycle",
+  "input": {
+    "op": "harness-lifecycle",
+    "file": "packages/agent/src/harness/agent-harness.ts"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "before": [],
+      "same": true,
+      "tip": null,
+      "thinking": "low",
+      "tools": [],
+      "lanes": [
+        {
+          "name": "main",
+          "tipId": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "repository": "https://github.com/earendil-works/pi",
+  "ref": "v0.87.1",
+  "commit": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "archiveUrl": "https://codeload.github.com/earendil-works/pi/tar.gz/f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "archiveSha256": "f6ba24ed7e1e6dbda1844ca55c61e20e3ef21e5cc66f9eb2e0611318f6c46c15",
+  "archiveBytes": 8063852,
+  "gitTreeSha": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "gitBlobManifestSha256": "bbaa4f0a7071dcf06658ba7f1c49213e6ea5fee13ef8e621f8f4138a13cca831",
+  "gitBlobCount": 1863,
+  "sourceDir": ".cache/pi/f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "archiveFile": ".cache/pi/f07218c4d4bbc12bef056a7058c3dd49dfe41abe.tar.gz",
+  "treeFile": ".cache/pi/git-tree.json",
+  "verifiedAt": "2026-09-28T10:35:00.923Z",
+  "normalization": {
+    "files": ["pi-test.bat", "pi-test.ps1"],
+    "rule": "Git blob comparison normalizes CRLF to LF for these Windows scripts, as required by upstream .gitattributes; extracted files remain unchanged."
+  },
+  "generatedArtifacts": "Provider model catalog JSON is required by the full AI migration but absent from Git. Its pinned offline provenance/checksums remain execution blocker E04; source archive verification does not prove generated artifacts are present."
+}

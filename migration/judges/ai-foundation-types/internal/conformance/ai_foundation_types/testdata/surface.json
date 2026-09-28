@@ -1,0 +1,551 @@
+{
+  "outputs": [
+    "packages/ai/utils/eventstream/event_stream.go",
+    "packages/ai/utils/eventstream/event_stream_test.go",
+    "packages/ai/types/types.go",
+    "packages/ai/utils/assistant_event_stream.go",
+    "packages/telemetry/index.go",
+    "packages/telemetry/memory.go",
+    "packages/telemetry/noop.go",
+    "packages/telemetry/testing/conformance.go",
+    "packages/telemetry/testing/index.go",
+    "packages/telemetry/testing/types.go",
+    "internal/conformance/ai_foundation_types/source_map.json",
+    "internal/conformance/ai_foundation_types/adapter_test.go",
+    "packages/ai/types/ai_foundation_types_test.go",
+    "packages/ai/utils/ai_foundation_types_test.go",
+    "packages/telemetry/ai_foundation_types_test.go",
+    "packages/telemetry/testing/ai_foundation_types_test.go"
+  ],
+  "symbols": [
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "AssistantMessageEventStream"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "KnownApi"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "Api"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "KnownImagesApi"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesApi"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "KnownProvider"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderId"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "KnownImagesProvider"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesProviderId"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ToolChoice"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ThinkingLevel"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelThinkingLevel"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ThinkingLevelMap"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ChatTemplateKwargValue"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ThinkingTokenBudgetField"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ThinkingBudgets"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "CacheRetention"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelPromptCache"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "Transport"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderEnv"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderHeaders"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "FetchFunction"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "SessionAffinityFormat"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderResponse"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderRequestOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "StreamOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderStreamOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "DeferredFetchOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "DeferredCancelOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ApiOptionsMap"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ApiStreamOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderStreams"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderImages"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ProviderImagesOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "AnthropicAllowedFallbackModel"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "SimpleStreamOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "StreamFunction"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesFunction"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "TextSignatureV1"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "TextContent"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ThinkingContent"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImageContent"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ToolCall"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "Usage"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "StopReason"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "JsonValue"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "JsonObject"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "JsonRepresentation"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "DeferredHandle"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "SystemMessage"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "UserMessage"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "AssistantMessage"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ToolResultMessage"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "Message"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesInputContent"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesOutputContent"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesContext"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesStopReason"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "AssistantImages"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "GrammarFormat"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "GrammarVariants"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ConstrainedSamplingConfig"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "Tool"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ToolReference"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "Context"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "TranscriptContext"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "AssistantMessageEvent"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "OpenAICompletionsCompat"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "OpenAIResponsesCompat"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "AnthropicMessagesCompat"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "BedrockCompat"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "MistralConversationsCompat"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "OpenRouterRouting"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "VercelGatewayRouting"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelCostRates"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelCostTier"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelCost"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelImageResizeOptions"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelImageInputLimits"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ModelInputLimits"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "Model"
+    },
+    {
+      "source": "packages/ai/src/types.ts",
+      "upstream": "ImagesModel"
+    },
+    {
+      "source": "packages/ai/src/utils/event-stream.ts",
+      "upstream": "EventStream"
+    },
+    {
+      "source": "packages/ai/src/utils/event-stream.ts",
+      "upstream": "AssistantMessageEventStream"
+    },
+    {
+      "source": "packages/ai/src/utils/event-stream.ts",
+      "upstream": "createAssistantMessageEventStream"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "AttributeValue"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "SpanAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "SpanOptions"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "SpanStatus"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryContext"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySpan"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "NOOP_TELEMETRY_CONTEXT"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryAttributeType"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryAttributeMetadata"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryAttributeDefinition"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryStartAttributeDefinition"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryEventAttributeDefinition"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryEventDefinition"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetryParentDefinition"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySpanDefinition"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySchemaDefinition"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "defineTelemetrySchema"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "InferRequiredAndOptionalAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "InferStartAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "InferOptionalAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "ExactTelemetryAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "InferEventAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySchemaSpanName"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySchemaSpanStartAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySchemaSpanEndAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySchemaSpanEventName"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySchemaSpanEventAttributes"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "SchemaTelemetrySpan"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TelemetrySchemaSpanUnion"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "TypedSpanStarter"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "createTypedSpanStarter"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "RecordedTelemetryEvent"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "RecordedTelemetrySpan"
+    },
+    {
+      "source": "packages/telemetry/src/index.ts",
+      "upstream": "InMemoryTelemetryContext"
+    },
+    {
+      "source": "packages/telemetry/src/memory.ts",
+      "upstream": "RecordedTelemetryEvent"
+    },
+    {
+      "source": "packages/telemetry/src/memory.ts",
+      "upstream": "RecordedTelemetrySpan"
+    },
+    {
+      "source": "packages/telemetry/src/memory.ts",
+      "upstream": "InMemoryTelemetryContext"
+    },
+    {
+      "source": "packages/telemetry/src/noop.ts",
+      "upstream": "NOOP_TELEMETRY_CONTEXT"
+    },
+    {
+      "source": "packages/telemetry/src/testing/conformance.ts",
+      "upstream": "createTelemetryAdapterConformance"
+    },
+    {
+      "source": "packages/telemetry/src/testing/index.ts",
+      "upstream": "createTelemetryAdapterConformance"
+    },
+    {
+      "source": "packages/telemetry/src/testing/index.ts",
+      "upstream": "TelemetryAdapterConformanceCase"
+    },
+    {
+      "source": "packages/telemetry/src/testing/index.ts",
+      "upstream": "TelemetryAdapterFixture"
+    },
+    {
+      "source": "packages/telemetry/src/testing/index.ts",
+      "upstream": "TelemetryAdapterFixtureFactory"
+    },
+    {
+      "source": "packages/telemetry/src/testing/types.ts",
+      "upstream": "TelemetryAdapterFixture"
+    },
+    {
+      "source": "packages/telemetry/src/testing/types.ts",
+      "upstream": "TelemetryAdapterFixtureFactory"
+    },
+    {
+      "source": "packages/telemetry/src/testing/types.ts",
+      "upstream": "TelemetryAdapterConformanceCase"
+    }
+  ],
+  "map": "internal/conformance/ai_foundation_types/source_map.json"
+}
