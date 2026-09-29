@@ -1,0 +1,62 @@
+{
+  "batch": "core-runtime",
+  "id": "fault",
+  "input": {
+    "op": "reducer",
+    "file": "packages/agent/src/harness/runtime/reducer.ts",
+    "snapshot": {
+      "lane": "main",
+      "tipId": null,
+      "operation": null,
+      "transcript": [],
+      "configuration": {
+        "model": {
+          "provider": "fixture",
+          "modelId": "fixture"
+        },
+        "thinkingLevel": "off",
+        "activeToolNames": []
+      },
+      "queues": {},
+      "stats": {
+        "messageCount": 0,
+        "usage": {}
+      }
+    },
+    "events": [
+      {
+        "type": "fault"
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "snapshot": {
+        "lane": "main",
+        "tipId": null,
+        "operation": null,
+        "transcript": [],
+        "configuration": {
+          "model": {
+            "provider": "fixture",
+            "modelId": "fixture"
+          },
+          "thinkingLevel": "off",
+          "activeToolNames": []
+        },
+        "queues": {},
+        "stats": {
+          "messageCount": 0,
+          "usage": {}
+        },
+        "faulted": true
+      },
+      "reductions": [
+        {
+          "$undefined": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "batch": "core-runtime",
+  "id": "tool",
+  "input": {
+    "op": "reducer",
+    "file": "packages/agent/src/harness/runtime/reducer.ts",
+    "snapshot": {
+      "lane": "main",
+      "tipId": null,
+      "operation": null,
+      "transcript": [],
+      "configuration": {
+        "model": {
+          "provider": "fixture",
+          "modelId": "fixture"
+        },
+        "thinkingLevel": "off",
+        "activeToolNames": []
+      },
+      "queues": {},
+      "stats": {
+        "messageCount": 0,
+        "usage": {}
+      }
+    },
+    "events": [
+      {
+        "type": "run_start",
+        "lane": "main",
+        "runId": "r1",
+        "startedAt": 1
+      },
+      {
+        "type": "tool_start",
+        "lane": "main",
+        "runId": "r1",
+        "toolCallId": "c1",
+        "toolName": "echo",
+        "args": {
+          "x": 1
+        }
+      },
+      {
+        "type": "tool_start",
+        "lane": "main",
+        "runId": "r1",
+        "toolCallId": "c1",
+        "toolName": "echo",
+        "args": {
+          "x": 2
+        }
+      },
+      {
+        "type": "tool_end",
+        "runId": "r1",
+        "toolCallId": "c1",
+        "toolName": "echo",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "2"
+            }
+          ]
+        },
+        "isError": false
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "snapshot": {
+        "lane": "main",
+        "tipId": null,
+        "operation": {
+          "id": "r1",
+          "kind": "run",
+          "startedAt": 1,
+          "fromTipId": null,
+          "status": "open",
+          "runningTools": [
+            {
+              "status": "settled",
+              "toolCallId": "c1",
+              "toolName": "echo",
+              "args": {
+                "x": 2
+              },
+              "result": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2"
+                  }
+                ]
+              },
+              "isError": false
+            }
+          ]
+        },
+        "transcript": [],
+        "configuration": {
+          "model": {
+            "provider": "fixture",
+            "modelId": "fixture"
+          },
+          "thinkingLevel": "off",
+          "activeToolNames": []
+        },
+        "queues": {},
+        "stats": {
+          "messageCount": 0,
+          "usage": {}
+        }
+      },
+      "reductions": [
+        {
+          "$undefined": true
+        },
+        {
+          "$undefined": true
+        },
+        {
+          "$undefined": true
+        },
+        {
+          "$undefined": true
+        }
+      ]
+    }
+  }
+}

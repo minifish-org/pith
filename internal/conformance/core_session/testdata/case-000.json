@@ -1,0 +1,20 @@
+{
+  "batch": "core-session",
+  "id": "session-lifecycle",
+  "input": {
+    "op": "session",
+    "file": "packages/agent/src/harness/session/memory.ts"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "name": "demo",
+      "branch": {
+        "name": "main"
+      },
+      "label": "label",
+      "again": "demo",
+      "remaining": []
+    }
+  }
+}

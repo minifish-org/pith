@@ -1,0 +1,590 @@
+[
+  {
+    "source": "packages/agent/src/harness/config.ts",
+    "upstream": "DEFAULT_RETRY_POLICY",
+    "goPackage": "packages/agent/harness/config",
+    "goSymbol": "DefaultRetryPolicy",
+    "reason": "Go port of DEFAULT_RETRY_POLICY from packages/agent/src/harness/config.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/config.ts",
+    "upstream": "validateToolNames",
+    "goPackage": "packages/agent/harness/config",
+    "goSymbol": "ValidateToolNames",
+    "reason": "Go port of validateToolNames from packages/agent/src/harness/config.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/config.ts",
+    "upstream": "validateRetryPolicy",
+    "goPackage": "packages/agent/harness/config",
+    "goSymbol": "ValidateRetryPolicy",
+    "reason": "Go port of validateRetryPolicy from packages/agent/src/harness/config.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/config.ts",
+    "upstream": "validateCompactionSettings",
+    "goPackage": "packages/agent/harness/config",
+    "goSymbol": "ValidateCompactionSettings",
+    "reason": "Go port of validateCompactionSettings from packages/agent/src/harness/config.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/events.ts",
+    "upstream": "HarnessEventBus",
+    "goPackage": "packages/agent/harness/events",
+    "goSymbol": "HarnessEventBus",
+    "reason": "Go port of HarnessEventBus from packages/agent/src/harness/events.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/hooks.ts",
+    "upstream": "HookRegistry",
+    "goPackage": "packages/agent/harness/hooks",
+    "goSymbol": "HookRegistry",
+    "reason": "Go port of HookRegistry from packages/agent/src/harness/hooks.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/hooks.ts",
+    "upstream": "applyStreamOptionsPatch",
+    "goPackage": "packages/agent/harness/hooks",
+    "goSymbol": "ApplyStreamOptionsPatch",
+    "reason": "Go port of applyStreamOptionsPatch from packages/agent/src/harness/hooks.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_PREFIX",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "CompactionSummaryPrefix",
+    "reason": "Go port of COMPACTION_SUMMARY_PREFIX from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_SUFFIX",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "CompactionSummarySuffix",
+    "reason": "Go port of COMPACTION_SUMMARY_SUFFIX from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "BRANCH_SUMMARY_PREFIX",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "BranchSummaryPrefix",
+    "reason": "Go port of BRANCH_SUMMARY_PREFIX from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "BRANCH_SUMMARY_SUFFIX",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "BranchSummarySuffix",
+    "reason": "Go port of BRANCH_SUMMARY_SUFFIX from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "BashExecutionMessage",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "BashExecutionMessage",
+    "reason": "Go port of BashExecutionMessage from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "CustomMessage",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "CustomMessage",
+    "reason": "Go port of CustomMessage from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "BranchSummaryMessage",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "BranchSummaryMessage",
+    "reason": "Go port of BranchSummaryMessage from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "CompactionSummaryMessage",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "CompactionSummaryMessage",
+    "reason": "Go port of CompactionSummaryMessage from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "bashExecutionToText",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "BashExecutionToText",
+    "reason": "Go port of bashExecutionToText from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "createBranchSummaryMessage",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "CreateBranchSummaryMessage",
+    "reason": "Go port of createBranchSummaryMessage from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "createCompactionSummaryMessage",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "CreateCompactionSummaryMessage",
+    "reason": "Go port of createCompactionSummaryMessage from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "createCustomMessage",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "CreateCustomMessage",
+    "reason": "Go port of createCustomMessage from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/messages.ts",
+    "upstream": "convertToLlm",
+    "goPackage": "packages/agent/harness/messages",
+    "goSymbol": "ConvertToLlm",
+    "reason": "Go port of convertToLlm from packages/agent/src/harness/messages.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/prompt-templates.ts",
+    "upstream": "PromptTemplateDiagnosticCode",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "PromptTemplateDiagnosticCode",
+    "reason": "Go port of PromptTemplateDiagnosticCode from packages/agent/src/harness/prompt-templates.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/prompt-templates.ts",
+    "upstream": "PromptTemplateDiagnostic",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "PromptTemplateDiagnostic",
+    "reason": "Go port of PromptTemplateDiagnostic from packages/agent/src/harness/prompt-templates.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/prompt-templates.ts",
+    "upstream": "loadPromptTemplates",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "LoadPromptTemplates",
+    "reason": "Go port of loadPromptTemplates from packages/agent/src/harness/prompt-templates.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/prompt-templates.ts",
+    "upstream": "loadSourcedPromptTemplates",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "LoadSourcedPromptTemplates",
+    "reason": "Go port of loadSourcedPromptTemplates from packages/agent/src/harness/prompt-templates.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/prompt-templates.ts",
+    "upstream": "parseCommandArgs",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "ParseCommandArgs",
+    "reason": "Go port of parseCommandArgs from packages/agent/src/harness/prompt-templates.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/prompt-templates.ts",
+    "upstream": "substituteArgs",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "SubstituteArgs",
+    "reason": "Go port of substituteArgs from packages/agent/src/harness/prompt-templates.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/prompt-templates.ts",
+    "upstream": "formatPromptTemplateInvocation",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "FormatPromptTemplateInvocation",
+    "reason": "Go port of formatPromptTemplateInvocation from packages/agent/src/harness/prompt-templates.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/skills.ts",
+    "upstream": "SkillDiagnosticCode",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "SkillDiagnosticCode",
+    "reason": "Go port of SkillDiagnosticCode from packages/agent/src/harness/skills.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/skills.ts",
+    "upstream": "SkillDiagnostic",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "SkillDiagnostic",
+    "reason": "Go port of SkillDiagnostic from packages/agent/src/harness/skills.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/skills.ts",
+    "upstream": "formatSkillInvocation",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "FormatSkillInvocation",
+    "reason": "Go port of formatSkillInvocation from packages/agent/src/harness/skills.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/skills.ts",
+    "upstream": "loadSkills",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "LoadSkills",
+    "reason": "Go port of loadSkills from packages/agent/src/harness/skills.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/skills.ts",
+    "upstream": "loadSourcedSkills",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "LoadSourcedSkills",
+    "reason": "Go port of loadSourcedSkills from packages/agent/src/harness/skills.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/system-prompt.ts",
+    "upstream": "formatSkillsForSystemPrompt",
+    "goPackage": "packages/agent/harness/resources",
+    "goSymbol": "FormatSkillsForSystemPrompt",
+    "reason": "Go port of formatSkillsForSystemPrompt from packages/agent/src/harness/system-prompt.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AttributeValue",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AttributeValue",
+    "reason": "Go port of AttributeValue from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "ExactTelemetryAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "ExactTelemetryAttributes",
+    "reason": "Go port of ExactTelemetryAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "SchemaTelemetrySpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "SchemaTelemetrySpan",
+    "reason": "Go port of SchemaTelemetrySpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "SpanAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "SpanAttributes",
+    "reason": "Go port of SpanAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "SpanOptions",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "SpanOptions",
+    "reason": "Go port of SpanOptions from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "SpanStatus",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "SpanStatus",
+    "reason": "Go port of SpanStatus from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryAttributeDefinition",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryAttributeDefinition",
+    "reason": "Go port of TelemetryAttributeDefinition from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryAttributeMetadata",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryAttributeMetadata",
+    "reason": "Go port of TelemetryAttributeMetadata from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryAttributeType",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryAttributeType",
+    "reason": "Go port of TelemetryAttributeType from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryContext",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryContext",
+    "reason": "Go port of TelemetryContext from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryEventAttributeDefinition",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryEventAttributeDefinition",
+    "reason": "Go port of TelemetryEventAttributeDefinition from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryEventDefinition",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryEventDefinition",
+    "reason": "Go port of TelemetryEventDefinition from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryParentDefinition",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryParentDefinition",
+    "reason": "Go port of TelemetryParentDefinition from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySchemaDefinition",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySchemaDefinition",
+    "reason": "Go port of TelemetrySchemaDefinition from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySchemaSpanEndAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySchemaSpanEndAttributes",
+    "reason": "Go port of TelemetrySchemaSpanEndAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySchemaSpanEventAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySchemaSpanEventAttributes",
+    "reason": "Go port of TelemetrySchemaSpanEventAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySchemaSpanEventName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySchemaSpanEventName",
+    "reason": "Go port of TelemetrySchemaSpanEventName from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySchemaSpanName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySchemaSpanName",
+    "reason": "Go port of TelemetrySchemaSpanName from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySchemaSpanStartAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySchemaSpanStartAttributes",
+    "reason": "Go port of TelemetrySchemaSpanStartAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySchemaSpanUnion",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySchemaSpanUnion",
+    "reason": "Go port of TelemetrySchemaSpanUnion from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySpan",
+    "reason": "Go port of TelemetrySpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetrySpanDefinition",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetrySpanDefinition",
+    "reason": "Go port of TelemetrySpanDefinition from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TelemetryStartAttributeDefinition",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryStartAttributeDefinition",
+    "reason": "Go port of TelemetryStartAttributeDefinition from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "TypedSpanStarter",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TypedSpanStarter",
+    "reason": "Go port of TypedSpanStarter from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AI_TELEMETRY_SCHEMA",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AITelemetrySchema",
+    "reason": "Go port of AI_TELEMETRY_SCHEMA from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiSpanName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanName",
+    "reason": "Go port of AiSpanName from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiSpanStartAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanStartAttributes",
+    "reason": "Go port of AiSpanStartAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiSpanEndAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanEndAttributes",
+    "reason": "Go port of AiSpanEndAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiSpanAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanAttributes",
+    "reason": "Go port of AiSpanAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiSpanEventName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanEventName",
+    "reason": "Go port of AiSpanEventName from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiSpanEventAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanEventAttributes",
+    "reason": "Go port of AiSpanEventAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiTelemetrySpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiTelemetrySpan",
+    "reason": "Go port of AiTelemetrySpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AiSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpan",
+    "reason": "Go port of AiSpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "startAiSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "StartAiSpan",
+    "reason": "Go port of startAiSpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HARNESS_TELEMETRY_SCHEMA",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessTelemetrySchema",
+    "reason": "Go port of HARNESS_TELEMETRY_SCHEMA from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "AGENT_TELEMETRY_SCHEMAS",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AgentTelemetrySchemas",
+    "reason": "Go port of AGENT_TELEMETRY_SCHEMAS from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessSpanName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanName",
+    "reason": "Go port of HarnessSpanName from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessSpanStartAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanStartAttributes",
+    "reason": "Go port of HarnessSpanStartAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessSpanEndAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanEndAttributes",
+    "reason": "Go port of HarnessSpanEndAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessSpanAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanAttributes",
+    "reason": "Go port of HarnessSpanAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessSpanEventName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanEventName",
+    "reason": "Go port of HarnessSpanEventName from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessSpanEventAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanEventAttributes",
+    "reason": "Go port of HarnessSpanEventAttributes from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessTelemetrySpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessTelemetrySpan",
+    "reason": "Go port of HarnessTelemetrySpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "HarnessSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpan",
+    "reason": "Go port of HarnessSpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/telemetry.ts",
+    "upstream": "startHarnessSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "StartHarnessSpan",
+    "reason": "Go port of startHarnessSpan from packages/agent/src/harness/telemetry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/usage.ts",
+    "upstream": "emptyUsage",
+    "goPackage": "packages/agent/harness/utils/usage",
+    "goSymbol": "EmptyUsage",
+    "reason": "Go port of emptyUsage from packages/agent/src/harness/utils/usage.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/usage.ts",
+    "upstream": "addUsage",
+    "goPackage": "packages/agent/harness/utils/usage",
+    "goSymbol": "AddUsage",
+    "reason": "Go port of addUsage from packages/agent/src/harness/utils/usage.ts"
+  },
+  {
+    "source": "packages/agent/src/search/index.ts",
+    "upstream": "SearchQuery",
+    "goPackage": "packages/agent/search",
+    "goSymbol": "SearchQuery",
+    "reason": "Go port of SearchQuery from packages/agent/src/search/index.ts"
+  },
+  {
+    "source": "packages/agent/src/search/index.ts",
+    "upstream": "SessionSearchHit",
+    "goPackage": "packages/agent/search",
+    "goSymbol": "SessionSearchHit",
+    "reason": "Go port of SessionSearchHit from packages/agent/src/search/index.ts"
+  },
+  {
+    "source": "packages/agent/src/search/index.ts",
+    "upstream": "EntrySearchHit",
+    "goPackage": "packages/agent/search",
+    "goSymbol": "EntrySearchHit",
+    "reason": "Go port of EntrySearchHit from packages/agent/src/search/index.ts"
+  },
+  {
+    "source": "packages/agent/src/search/index.ts",
+    "upstream": "SessionSearchService",
+    "goPackage": "packages/agent/search",
+    "goSymbol": "SessionSearchService",
+    "reason": "Go port of SessionSearchService from packages/agent/src/search/index.ts"
+  }
+]

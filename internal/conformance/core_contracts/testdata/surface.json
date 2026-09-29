@@ -1,0 +1,1134 @@
+{
+  "outputs": [
+    "packages/ai/utils/eventstream/event_stream.go",
+    "packages/ai/utils/eventstream/event_stream_test.go",
+    "packages/ai/types/types.go",
+    "packages/ai/utils/assistant_event_stream.go",
+    "packages/telemetry/index.go",
+    "packages/telemetry/memory.go",
+    "packages/telemetry/noop.go",
+    "packages/telemetry/testing/conformance.go",
+    "packages/telemetry/testing/index.go",
+    "packages/telemetry/testing/types.go",
+    "internal/conformance/ai_foundation_types/source_map.json",
+    "internal/conformance/ai_foundation_types/adapter_test.go",
+    "packages/ai/types/ai_foundation_types_test.go",
+    "packages/ai/utils/ai_foundation_types_test.go",
+    "packages/telemetry/ai_foundation_types_test.go",
+    "packages/telemetry/testing/ai_foundation_types_test.go",
+    "packages/ai/catalog/image_models_generated.go",
+    "packages/ai/catalog/model_catalog.go",
+    "packages/ai/catalog/models_generated.go",
+    "packages/ai/catalog/amazon_bedrock_models.go",
+    "packages/ai/catalog/ant_ling_models.go",
+    "packages/ai/catalog/anthropic_models.go",
+    "packages/ai/catalog/azure_openai_responses_models.go",
+    "packages/ai/catalog/baseten_models.go",
+    "packages/ai/catalog/cerebras_models.go",
+    "packages/ai/catalog/cloudflare_ai_gateway_models.go",
+    "packages/ai/catalog/cloudflare_workers_ai_models.go",
+    "packages/ai/catalog/data_json_d.go",
+    "packages/ai/catalog/deepseek_models.go",
+    "packages/ai/catalog/fireworks_models.go",
+    "packages/ai/catalog/github_copilot_models.go",
+    "packages/ai/catalog/google_vertex_models.go",
+    "packages/ai/catalog/google_models.go",
+    "packages/ai/catalog/groq_models.go",
+    "packages/ai/catalog/huggingface_models.go",
+    "packages/ai/catalog/kimi_coding_models.go",
+    "packages/ai/catalog/meta_models.go",
+    "packages/ai/catalog/minimax_cn_models.go",
+    "packages/ai/catalog/minimax_models.go",
+    "packages/ai/catalog/mistral_models.go",
+    "packages/ai/catalog/moonshotai_cn_models.go",
+    "packages/ai/catalog/moonshotai_models.go",
+    "packages/ai/catalog/nvidia_models.go",
+    "packages/ai/catalog/openai_codex_models.go",
+    "packages/ai/catalog/openai_models.go",
+    "packages/ai/catalog/opencode_go_models.go",
+    "packages/ai/catalog/opencode_models.go",
+    "packages/ai/catalog/openrouter_models.go",
+    "packages/ai/catalog/qwen_token_plan_cn_models.go",
+    "packages/ai/catalog/qwen_token_plan_individual_models.go",
+    "packages/ai/catalog/qwen_token_plan_models.go",
+    "packages/ai/catalog/radius_config.go",
+    "packages/ai/catalog/radius_models.go",
+    "packages/ai/catalog/together_models.go",
+    "packages/ai/catalog/vercel_ai_gateway_models.go",
+    "packages/ai/catalog/xai_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_ams_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_cn_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_sgp_models.go",
+    "packages/ai/catalog/xiaomi_models.go",
+    "packages/ai/catalog/zai_coding_cn_models.go",
+    "packages/ai/catalog/zai_models.go",
+    "internal/conformance/ai_foundation_catalog/source_map.json",
+    "internal/conformance/ai_foundation_catalog/adapter_test.go",
+    "packages/ai/catalog/ai_foundation_catalog_test.go",
+    "packages/ai/api/constrained_sampling.go",
+    "packages/ai/api/lazy.go",
+    "packages/ai/api/simple_options.go",
+    "packages/ai/api/transform_messages.go",
+    "packages/ai/utils/abort_signals.go",
+    "packages/ai/utils/abort.go",
+    "packages/ai/utils/assistant_message_frame.go",
+    "packages/ai/utils/diagnostics.go",
+    "packages/ai/utils/error_body.go",
+    "packages/ai/utils/estimate.go",
+    "packages/ai/utils/hash.go",
+    "packages/ai/utils/headers.go",
+    "packages/ai/utils/json_parse.go",
+    "packages/ai/utils/node_http_proxy.go",
+    "packages/ai/utils/overflow.go",
+    "packages/ai/utils/pi_user_agent.go",
+    "packages/ai/utils/provider_env.go",
+    "packages/ai/utils/provider_retry.go",
+    "packages/ai/utils/retry.go",
+    "packages/ai/utils/sanitize_unicode.go",
+    "packages/ai/utils/sleep.go",
+    "packages/ai/utils/text.go",
+    "packages/ai/utils/transcript.go",
+    "packages/ai/utils/typebox_helpers.go",
+    "packages/ai/utils/uuid.go",
+    "packages/ai/utils/validation.go",
+    "internal/conformance/ai_utils/source_map.json",
+    "internal/conformance/ai_utils/adapter_test.go",
+    "packages/ai/api/ai_utils_test.go",
+    "packages/ai/utils/ai_utils_test.go",
+    "packages/ai/auth/context.go",
+    "packages/ai/auth/credential_store.go",
+    "packages/ai/auth/helpers.go",
+    "packages/ai/auth/oauth/anthropic.go",
+    "packages/ai/auth/oauth/device_code.go",
+    "packages/ai/auth/oauth/github_copilot.go",
+    "packages/ai/auth/oauth/kimi_coding.go",
+    "packages/ai/auth/oauth/load.go",
+    "packages/ai/auth/oauth/meta.go",
+    "packages/ai/auth/oauth/oauth_page.go",
+    "packages/ai/auth/oauth/openai_codex.go",
+    "packages/ai/auth/oauth/openrouter.go",
+    "packages/ai/auth/oauth/pkce.go",
+    "packages/ai/auth/oauth/radius.go",
+    "packages/ai/auth/oauth/xai.go",
+    "packages/ai/auth/resolve.go",
+    "packages/ai/auth/types/types.go",
+    "packages/ai/env_api_keys.go",
+    "internal/conformance/ai_auth/source_map.json",
+    "internal/conformance/ai_auth/adapter_test.go",
+    "packages/ai/auth/ai_auth_test.go",
+    "packages/ai/auth/oauth/ai_auth_test.go",
+    "packages/ai/auth/types/ai_auth_test.go",
+    "packages/ai/ai_auth_test.go",
+    "packages/ai/images_models.go",
+    "packages/ai/models_store.go",
+    "packages/ai/models.go",
+    "packages/ai/session_resources.go",
+    "internal/conformance/ai_models/source_map.json",
+    "internal/conformance/ai_models/adapter_test.go",
+    "packages/ai/ai_models_test.go",
+    "packages/ai/api/azure_openai_responses_lazy.go",
+    "packages/ai/api/azure_openai_responses.go",
+    "packages/ai/api/github_copilot_headers.go",
+    "packages/ai/api/openai_codex_responses_lazy.go",
+    "packages/ai/api/openai_codex_responses.go",
+    "packages/ai/api/openai_completions_lazy.go",
+    "packages/ai/api/openai_completions.go",
+    "packages/ai/api/openai_prompt_cache.go",
+    "packages/ai/api/openai_responses_shared.go",
+    "packages/ai/api/openai_responses_lazy.go",
+    "packages/ai/api/openai_responses.go",
+    "internal/conformance/ai_openai/source_map.json",
+    "internal/conformance/ai_openai/adapter_test.go",
+    "packages/ai/api/ai_openai_test.go",
+    "packages/ai/api/anthropic_messages_lazy.go",
+    "packages/ai/api/anthropic_messages.go",
+    "internal/conformance/ai_anthropic/source_map.json",
+    "internal/conformance/ai_anthropic/adapter_test.go",
+    "packages/ai/api/ai_anthropic_test.go",
+    "packages/ai/api/google_generative_ai_lazy.go",
+    "packages/ai/api/google_generative_ai.go",
+    "packages/ai/api/google_shared.go",
+    "packages/ai/api/google_vertex_lazy.go",
+    "packages/ai/api/google_vertex.go",
+    "internal/conformance/ai_google/source_map.json",
+    "internal/conformance/ai_google/adapter_test.go",
+    "packages/ai/api/ai_google_test.go",
+    "packages/ai/api/bedrock_converse_stream_lazy.go",
+    "packages/ai/api/bedrock_converse_stream.go",
+    "internal/conformance/ai_bedrock/source_map.json",
+    "internal/conformance/ai_bedrock/adapter_test.go",
+    "packages/ai/api/ai_bedrock_test.go",
+    "packages/ai/api/cloudflare_ai_binding.go",
+    "packages/ai/api/cloudflare.go",
+    "packages/ai/api/mistral_conversations_lazy.go",
+    "packages/ai/api/mistral_conversations.go",
+    "packages/ai/api/openrouter_images_lazy.go",
+    "packages/ai/api/openrouter_images.go",
+    "packages/ai/api/pi_messages_lazy.go",
+    "packages/ai/api/pi_messages.go",
+    "packages/ai/images/models.go",
+    "packages/ai/images/api_registry.go",
+    "packages/ai/images/compat.go",
+    "internal/conformance/ai_other_protocols/source_map.json",
+    "internal/conformance/ai_other_protocols/adapter_test.go",
+    "packages/ai/api/ai_other_protocols_test.go",
+    "packages/ai/images/ai_other_protocols_test.go",
+    "packages/ai/providers/all.go",
+    "packages/ai/providers/amazon_bedrock.go",
+    "packages/ai/providers/ant_ling.go",
+    "packages/ai/providers/anthropic.go",
+    "packages/ai/providers/azure_openai_responses.go",
+    "packages/ai/providers/baseten.go",
+    "packages/ai/providers/cerebras.go",
+    "packages/ai/providers/cloudflare_ai_gateway.go",
+    "packages/ai/providers/cloudflare_auth.go",
+    "packages/ai/providers/cloudflare_stream.go",
+    "packages/ai/providers/cloudflare_workers_ai.go",
+    "packages/ai/providers/deepseek.go",
+    "packages/ai/providers/faux.go",
+    "packages/ai/providers/fireworks.go",
+    "packages/ai/providers/github_copilot.go",
+    "packages/ai/providers/google_vertex.go",
+    "packages/ai/providers/google.go",
+    "packages/ai/providers/groq.go",
+    "packages/ai/providers/huggingface.go",
+    "packages/ai/images/builtin/register.go",
+    "packages/ai/providers/kimi_coding.go",
+    "packages/ai/providers/meta.go",
+    "packages/ai/providers/minimax_cn.go",
+    "packages/ai/providers/minimax.go",
+    "packages/ai/providers/mistral.go",
+    "packages/ai/providers/moonshotai_cn.go",
+    "packages/ai/providers/moonshotai.go",
+    "packages/ai/providers/nvidia.go",
+    "packages/ai/providers/openai_codex.go",
+    "packages/ai/providers/openai.go",
+    "packages/ai/providers/opencode_go.go",
+    "packages/ai/providers/opencode_headers.go",
+    "packages/ai/providers/opencode.go",
+    "packages/ai/providers/openrouter_images.go",
+    "packages/ai/providers/openrouter.go",
+    "packages/ai/providers/qwen_token_plan_cn.go",
+    "packages/ai/providers/qwen_token_plan_individual.go",
+    "packages/ai/providers/qwen_token_plan.go",
+    "packages/ai/providers/radius.go",
+    "packages/ai/providers/together.go",
+    "packages/ai/providers/vercel_ai_gateway.go",
+    "packages/ai/providers/xai.go",
+    "packages/ai/providers/xiaomi_token_plan_ams.go",
+    "packages/ai/providers/xiaomi_token_plan_cn.go",
+    "packages/ai/providers/xiaomi_token_plan_sgp.go",
+    "packages/ai/providers/xiaomi.go",
+    "packages/ai/providers/zai_coding_cn.go",
+    "packages/ai/providers/zai.go",
+    "internal/conformance/ai_providers/source_map.json",
+    "internal/conformance/ai_providers/adapter_test.go",
+    "packages/ai/providers/ai_providers_test.go",
+    "packages/ai/images/builtin/ai_providers_test.go",
+    "packages/ai/sdk/bedrock_provider.go",
+    "packages/ai/sdk/bun_oauth_adapter.go",
+    "cmd/pith-ai/main.go",
+    "packages/ai/compat/legacy.go",
+    "packages/ai/auth/types/extension_oauth.go",
+    "packages/ai/sdk/exports.go",
+    "packages/ai/legacy_api_aliases.go",
+    "packages/ai/sdk/oauth.go",
+    "internal/conformance/ai_surface/source_map.json",
+    "internal/conformance/ai_surface/adapter_test.go",
+    "packages/ai/sdk/ai_surface_test.go",
+    "cmd/pith-ai/ai_surface_test.go",
+    "packages/ai/compat/ai_surface_test.go",
+    "packages/ai/auth/types/ai_surface_test.go",
+    "packages/ai/ai_surface_test.go",
+    "packages/agent/harness/context/context.go",
+    "packages/agent/harness/execution/effect_gate.go",
+    "packages/agent/harness/result/result.go",
+    "packages/agent/harness/types/runtime.go",
+    "packages/agent/harness/types/session.go",
+    "packages/agent/harness/types/types.go",
+    "packages/agent/harness/utils/truncate/truncate.go",
+    "packages/agent/types/types.go",
+    "packages/chord/context/context.go",
+    "packages/chord/context/value.go",
+    "internal/conformance/core_contracts/source_map.json",
+    "internal/conformance/core_contracts/adapter_test.go",
+    "packages/agent/harness/context/core_contracts_test.go",
+    "packages/agent/harness/execution/core_contracts_test.go",
+    "packages/agent/harness/result/core_contracts_test.go",
+    "packages/agent/harness/types/core_contracts_test.go",
+    "packages/agent/harness/utils/truncate/core_contracts_test.go",
+    "packages/agent/types/core_contracts_test.go",
+    "packages/chord/context/core_contracts_test.go"
+  ],
+  "symbols": [
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "awaitWithContext"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "BACKGROUND_CONTEXT"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "Context"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "ContextKey"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "createContextKey"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "TODO_CONTEXT"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "withAbortSignal"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "withCancel"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "withContextValue"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "withoutAbortSignal"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "getTelemetryContext"
+    },
+    {
+      "source": "packages/agent/src/harness/context.ts",
+      "upstream": "withTelemetryContext"
+    },
+    {
+      "source": "packages/agent/src/harness/execution/effect-gate.ts",
+      "upstream": "AbortRequested"
+    },
+    {
+      "source": "packages/agent/src/harness/execution/effect-gate.ts",
+      "upstream": "Gate"
+    },
+    {
+      "source": "packages/agent/src/harness/execution/effect-gate.ts",
+      "upstream": "GateControl"
+    },
+    {
+      "source": "packages/agent/src/harness/execution/effect-gate.ts",
+      "upstream": "createGate"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "Result"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "TaggedErrorValue"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "TaggedErrorFactory"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "TaggedError"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "LaneBusy"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "OperationMismatch"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "NoActiveRun"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "NoActiveOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "NothingToResume"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "NothingToCompact"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "InvalidMessage"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "InvalidNavigation"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "UnknownSkill"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "UnknownTemplate"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "UnknownTarget"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "InvalidLane"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "Closed"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "HarnessFault"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "HarnessClosed"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "ErrorMatchers"
+    },
+    {
+      "source": "packages/agent/src/harness/result.ts",
+      "upstream": "matchError"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "SliceNotImplemented"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "Config"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "LaneState"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "LaneCommand"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "ContinueOperationResult"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "OperationCommand"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "Drive"
+    },
+    {
+      "source": "packages/agent/src/harness/runtime/types.ts",
+      "upstream": "ProcedureResult"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "JsonValue"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SettledAssistantMessage"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryType"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryBase"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "MessageEntry"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "CompactionEntry"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "BranchSummaryEntry"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "CustomEntry"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryProjector"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Entry"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "NewEntry"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "LaneConfiguration"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "OperationMeta"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Control"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "OperationError"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "TerminalStatus"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "OperationResultRecord"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Continuation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "CheckpointData"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "InboxItemKind"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "InboxItem"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "NormalizedRetryPolicy"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "GenerationContext"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "ToolCall"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "ToolBatch"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryContext"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Cancellable"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "RunSettings"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "OperationScope"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "RetryWait"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "AssistantGenerationScope"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "ResultBoundary"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryTask"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryGenerationScope"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryGenerationReady"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryGenerationEffectPending"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryGenerationRetryWait"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "DeferredScope"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "StartingOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "CheckpointOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "AssistantReadyOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "AssistantEffectPendingOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "AssistantRetryWaitOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "ToolsOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "DeferredSuspendedOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "DeferredEffectPendingOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryDecidingOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryReadyOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryEffectPendingOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SummaryRetryWaitOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "NavigationReadyToCommitOperation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "OperationState"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "OperationAt"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "operationScopeOf"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Operation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "LaneState"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "PendingEntry"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "DurableFileOperations"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "DurableStructuralPreparation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "UsageRow"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryWrite"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "UsageWrite"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Write"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "CommitResult"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryStructure"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryCursor"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "BranchScan"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "StorageBranchScan"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryScan"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "UsageScan"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionStats"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Storage"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionMetadata"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "IdGenerator"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "EntryQuery"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionReader"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionMutation"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionMutator"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionMutationCallback"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Branch"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "Session"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionCreateOptions"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "ForkOptions"
+    },
+    {
+      "source": "packages/agent/src/harness/session/types.ts",
+      "upstream": "SessionRepo"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "Result"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ok"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "err"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "getOrThrow"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "getOrUndefined"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "toError"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "Skill"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "PromptTemplate"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessResources"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessToolUpdateOptions"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessToolUpdateCallback"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessToolInvocation"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessTool"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessToolContextSource"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessStreamOptions"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "AgentHarnessStreamOptionsPatch"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "FileKind"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "FileErrorCode"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "FileError"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ExecutionErrorCode"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ExecutionError"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "CompactionErrorCode"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "CompactionError"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "BranchSummaryErrorCode"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "BranchSummaryError"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "FileInfo"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "TextLine"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "TextLineReader"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "FileSystem"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellOutputRetention"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellOutputLimits"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellOutputCaptureOptions"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellOutputTruncation"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellOutputMetadata"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellOutputView"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellOutputUpdate"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellExecResult"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ShellExecOptions"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "Shell"
+    },
+    {
+      "source": "packages/agent/src/harness/types.ts",
+      "upstream": "ExecutionEnv"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "DEFAULT_MAX_LINES"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "DEFAULT_MAX_BYTES"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "GREP_MAX_LINE_LENGTH"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "TruncationResult"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "TruncationOptions"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "utf8ByteLength"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "formatSize"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "truncateHead"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "truncateTail"
+    },
+    {
+      "source": "packages/agent/src/harness/utils/truncate.ts",
+      "upstream": "truncateLine"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "StreamFn"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "ToolExecutionMode"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "QueueMode"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentToolCall"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "BeforeToolCallResult"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AfterToolCallResult"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "BeforeToolCallContext"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AfterToolCallContext"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentTurnContext"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentTurnDecision"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "FinishTurn"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentLoopTurnUpdate"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "PrepareRequestContext"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentRequestUpdate"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "PrepareRequest"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "PrepareNextTurnContext"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentLoopConfig"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "ThinkingLevel"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "CustomAgentMessages"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentMessage"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentState"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentToolResult"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentToolUpdateCallback"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentTool"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentContext"
+    },
+    {
+      "source": "packages/agent/src/types.ts",
+      "upstream": "AgentEvent"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "BACKGROUND_CONTEXT"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "TODO_CONTEXT"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "createContextKey"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "withContextValue"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "withAbortSignal"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "withoutAbortSignal"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "withCancel"
+    },
+    {
+      "source": "packages/chord/src/context/index.ts",
+      "upstream": "awaitWithContext"
+    },
+    {
+      "source": "packages/chord/src/types.ts",
+      "upstream": "Context"
+    },
+    {
+      "source": "packages/chord/src/types.ts",
+      "upstream": "ContextKey"
+    },
+    {
+      "source": "packages/chord/src/types.ts",
+      "upstream": "JsonValue"
+    },
+    {
+      "source": "packages/chord/src/types.ts",
+      "upstream": "JsonRepresentation"
+    }
+  ],
+  "map": "internal/conformance/core_contracts/source_map.json"
+}

@@ -1,0 +1,1255 @@
+[
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommittedEntryWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedEntryWrite",
+    "reason": "Go port of CommittedEntryWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommittedUsageWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedUsageWrite",
+    "reason": "Go port of CommittedUsageWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommittedValueSetWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedValueSetWrite",
+    "reason": "Go port of CommittedValueSetWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommittedValueDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedValueDeleteWrite",
+    "reason": "Go port of CommittedValueDeleteWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommittedListAppendWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedListAppendWrite",
+    "reason": "Go port of CommittedListAppendWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommittedListDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedListDeleteWrite",
+    "reason": "Go port of CommittedListDeleteWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommittedWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedWrite",
+    "reason": "Go port of CommittedWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "PreparedCommit",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PreparedCommit",
+    "reason": "Go port of PreparedCommit from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "CommitValidationState",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommitValidationState",
+    "reason": "Go port of CommitValidationState from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "insertEntry",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "InsertEntry",
+    "reason": "Go port of insertEntry from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "insertUsage",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "InsertUsage",
+    "reason": "Go port of insertUsage from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "commitWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommitWrite",
+    "reason": "Go port of commitWrite from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "materializeCommittedEntry",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MaterializeCommittedEntry",
+    "reason": "Go port of materializeCommittedEntry from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "prepareStorageCommit",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PrepareStorageCommit",
+    "reason": "Go port of prepareStorageCommit from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/commit.ts",
+    "upstream": "validateCommittedWrites",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ValidateCommittedWrites",
+    "reason": "Go port of validateCommittedWrites from packages/agent/src/harness/session/commit.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/context.ts",
+    "upstream": "SessionContextBuildOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionContextBuildOptions",
+    "reason": "Go port of SessionContextBuildOptions from packages/agent/src/harness/session/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/context.ts",
+    "upstream": "buildContextEntries",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "BuildContextEntries",
+    "reason": "Go port of buildContextEntries from packages/agent/src/harness/session/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/context.ts",
+    "upstream": "sessionEntryToContextMessages",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionEntryToContextMessages",
+    "reason": "Go port of sessionEntryToContextMessages from packages/agent/src/harness/session/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/context.ts",
+    "upstream": "buildSessionContext",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "BuildSessionContext",
+    "reason": "Go port of buildSessionContext from packages/agent/src/harness/session/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/fork-policy.ts",
+    "upstream": "ForkCurrentStatePlan",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ForkCurrentStatePlan",
+    "reason": "Go port of ForkCurrentStatePlan from packages/agent/src/harness/session/fork-policy.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/fork-policy.ts",
+    "upstream": "selectBranchFork",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SelectBranchFork",
+    "reason": "Go port of selectBranchFork from packages/agent/src/harness/session/fork-policy.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/fork-policy.ts",
+    "upstream": "projectForkCurrentStateWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ProjectForkCurrentStateWrite",
+    "reason": "Go port of projectForkCurrentStateWrite from packages/agent/src/harness/session/fork-policy.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/fork.ts",
+    "upstream": "ForkSourceSnapshot",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ForkSourceSnapshot",
+    "reason": "Go port of ForkSourceSnapshot from packages/agent/src/harness/session/fork.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/fork.ts",
+    "upstream": "ForkDestinationSnapshot",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ForkDestinationSnapshot",
+    "reason": "Go port of ForkDestinationSnapshot from packages/agent/src/harness/session/fork.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/fork.ts",
+    "upstream": "createForkSnapshot",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CreateForkSnapshot",
+    "reason": "Go port of createForkSnapshot from packages/agent/src/harness/session/fork.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "CommittedEntryWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedEntryWrite",
+    "reason": "Go port of CommittedEntryWrite from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "CommittedListAppendWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedListAppendWrite",
+    "reason": "Go port of CommittedListAppendWrite from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "CommittedListDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedListDeleteWrite",
+    "reason": "Go port of CommittedListDeleteWrite from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "CommittedUsageWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedUsageWrite",
+    "reason": "Go port of CommittedUsageWrite from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "CommittedValueDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedValueDeleteWrite",
+    "reason": "Go port of CommittedValueDeleteWrite from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "CommittedValueSetWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedValueSetWrite",
+    "reason": "Go port of CommittedValueSetWrite from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "CommittedWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedWrite",
+    "reason": "Go port of CommittedWrite from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "PreparedCommit",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PreparedCommit",
+    "reason": "Go port of PreparedCommit from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/in-memory-storage-state.ts",
+    "upstream": "InMemoryStorageState",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "InMemoryStorageState",
+    "reason": "Go port of InMemoryStorageState from packages/agent/src/harness/session/in-memory-storage-state.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommittedEntryWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedEntryWrite",
+    "reason": "Go port of CommittedEntryWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommittedListAppendWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedListAppendWrite",
+    "reason": "Go port of CommittedListAppendWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommittedListDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedListDeleteWrite",
+    "reason": "Go port of CommittedListDeleteWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommittedUsageWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedUsageWrite",
+    "reason": "Go port of CommittedUsageWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommittedValueDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedValueDeleteWrite",
+    "reason": "Go port of CommittedValueDeleteWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommittedValueSetWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedValueSetWrite",
+    "reason": "Go port of CommittedValueSetWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommittedWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommittedWrite",
+    "reason": "Go port of CommittedWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "CommitValidationState",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommitValidationState",
+    "reason": "Go port of CommitValidationState from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "PreparedCommit",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PreparedCommit",
+    "reason": "Go port of PreparedCommit from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "commitWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CommitWrite",
+    "reason": "Go port of commitWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "insertEntry",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "InsertEntry",
+    "reason": "Go port of insertEntry from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "insertUsage",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "InsertUsage",
+    "reason": "Go port of insertUsage from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "prepareStorageCommit",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PrepareStorageCommit",
+    "reason": "Go port of prepareStorageCommit from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "validateCommittedWrites",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ValidateCommittedWrites",
+    "reason": "Go port of validateCommittedWrites from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "createForkSnapshot",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "CreateForkSnapshot",
+    "reason": "Go port of createForkSnapshot from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "ForkSourceSnapshot",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ForkSourceSnapshot",
+    "reason": "Go port of ForkSourceSnapshot from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "ForkCurrentStatePlan",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ForkCurrentStatePlan",
+    "reason": "Go port of ForkCurrentStatePlan from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "projectForkCurrentStateWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ProjectForkCurrentStateWrite",
+    "reason": "Go port of projectForkCurrentStateWrite from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "JSONL_STORAGE_VERSION",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JSONL_STORAGE_VERSION",
+    "reason": "Go port of JSONL_STORAGE_VERSION from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "JsonlSessionCreateOptions",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionCreateOptions",
+    "reason": "Go port of JsonlSessionCreateOptions from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "JsonlSessionListOptions",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionListOptions",
+    "reason": "Go port of JsonlSessionListOptions from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "JsonlSessionMetadata",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionMetadata",
+    "reason": "Go port of JsonlSessionMetadata from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "JsonlSessionRepo",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionRepo",
+    "reason": "Go port of JsonlSessionRepo from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "JsonlSessionRepoOptions",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionRepoOptions",
+    "reason": "Go port of JsonlSessionRepoOptions from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "MemorySessionRepoOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MemorySessionRepoOptions",
+    "reason": "Go port of MemorySessionRepoOptions from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "MemorySessionRepo",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MemorySessionRepo",
+    "reason": "Go port of MemorySessionRepo from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "SessionBranchExistsError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionBranchExistsError",
+    "reason": "Go port of SessionBranchExistsError from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "SessionInvalidBranchError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionInvalidBranchError",
+    "reason": "Go port of SessionInvalidBranchError from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "SessionInvariantError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionInvariantError",
+    "reason": "Go port of SessionInvariantError from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "SessionPendingAssistantMessageError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionPendingAssistantMessageError",
+    "reason": "Go port of SessionPendingAssistantMessageError from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "SessionUnknownTargetError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionUnknownTargetError",
+    "reason": "Go port of SessionUnknownTargetError from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "StorageBackedSession",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "StorageBackedSession",
+    "reason": "Go port of StorageBackedSession from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/index.ts",
+    "upstream": "StorageBackedSessionOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "StorageBackedSessionOptions",
+    "reason": "Go port of StorageBackedSessionOptions from packages/agent/src/harness/session/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/codec.ts",
+    "upstream": "LegacyV3SessionHeader",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "LegacyV3SessionHeader",
+    "reason": "Go port of LegacyV3SessionHeader from packages/agent/src/harness/session/jsonl/codec.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/codec.ts",
+    "upstream": "isLegacyV3SessionHeader",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "IsLegacyV3SessionHeader",
+    "reason": "Go port of isLegacyV3SessionHeader from packages/agent/src/harness/session/jsonl/codec.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/codec.ts",
+    "upstream": "isJsonlStorageHeader",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "IsJsonlStorageHeader",
+    "reason": "Go port of isJsonlStorageHeader from packages/agent/src/harness/session/jsonl/codec.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/codec.ts",
+    "upstream": "JsonlParsedSessionHeader",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlParsedSessionHeader",
+    "reason": "Go port of JsonlParsedSessionHeader from packages/agent/src/harness/session/jsonl/codec.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/codec.ts",
+    "upstream": "parseJsonlSessionHeader",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "ParseJsonlSessionHeader",
+    "reason": "Go port of parseJsonlSessionHeader from packages/agent/src/harness/session/jsonl/codec.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/fork.ts",
+    "upstream": "JsonlForkInput",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlForkInput",
+    "reason": "Go port of JsonlForkInput from packages/agent/src/harness/session/jsonl/fork.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/fork.ts",
+    "upstream": "runJsonlFork",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "RunJsonlFork",
+    "reason": "Go port of runJsonlFork from packages/agent/src/harness/session/jsonl/fork.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/io.ts",
+    "upstream": "fileValue",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "FileValue",
+    "reason": "Go port of fileValue from packages/agent/src/harness/session/jsonl/io.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/io.ts",
+    "upstream": "readJsonlHeader",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "ReadJsonlHeader",
+    "reason": "Go port of readJsonlHeader from packages/agent/src/harness/session/jsonl/io.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/io.ts",
+    "upstream": "parseJsonlTransaction",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "ParseJsonlTransaction",
+    "reason": "Go port of parseJsonlTransaction from packages/agent/src/harness/session/jsonl/io.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/io.ts",
+    "upstream": "serializeJsonlTransaction",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "SerializeJsonlTransaction",
+    "reason": "Go port of serializeJsonlTransaction from packages/agent/src/harness/session/jsonl/io.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/io.ts",
+    "upstream": "publishFileAtomically",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "PublishFileAtomically",
+    "reason": "Go port of publishFileAtomically from packages/agent/src/harness/session/jsonl/io.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/io.ts",
+    "upstream": "publishJsonl",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "PublishJsonl",
+    "reason": "Go port of publishJsonl from packages/agent/src/harness/session/jsonl/io.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/legacy-v3.ts",
+    "upstream": "metadataFromLegacyV3Header",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "MetadataFromLegacyV3Header",
+    "reason": "Go port of metadataFromLegacyV3Header from packages/agent/src/harness/session/jsonl/legacy-v3.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/legacy-v3.ts",
+    "upstream": "normalizeLegacyV3Header",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "NormalizeLegacyV3Header",
+    "reason": "Go port of normalizeLegacyV3Header from packages/agent/src/harness/session/jsonl/legacy-v3.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/legacy-v3.ts",
+    "upstream": "LegacyV3Source",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "LegacyV3Source",
+    "reason": "Go port of LegacyV3Source from packages/agent/src/harness/session/jsonl/legacy-v3.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/repo.ts",
+    "upstream": "JsonlSessionRepo",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionRepo",
+    "reason": "Go port of JsonlSessionRepo from packages/agent/src/harness/session/jsonl/repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/storage.ts",
+    "upstream": "JsonlStorage",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlStorage",
+    "reason": "Go port of JsonlStorage from packages/agent/src/harness/session/jsonl/storage.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JSONL_FORMAT_VERSION",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JSONL_FORMAT_VERSION",
+    "reason": "Go port of JSONL_FORMAT_VERSION from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JSONL_STORAGE_VERSION",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JSONL_STORAGE_VERSION",
+    "reason": "Go port of JSONL_STORAGE_VERSION from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JsonlStorageHeader",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlStorageHeader",
+    "reason": "Go port of JsonlStorageHeader from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JsonlStorageOptions",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlStorageOptions",
+    "reason": "Go port of JsonlStorageOptions from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JsonlSessionMetadata",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionMetadata",
+    "reason": "Go port of JsonlSessionMetadata from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JsonlSessionCreateOptions",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionCreateOptions",
+    "reason": "Go port of JsonlSessionCreateOptions from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JsonlSessionListOptions",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionListOptions",
+    "reason": "Go port of JsonlSessionListOptions from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/jsonl/types.ts",
+    "upstream": "JsonlSessionRepoOptions",
+    "goPackage": "packages/agent/harness/session/jsonl",
+    "goSymbol": "JsonlSessionRepoOptions",
+    "reason": "Go port of JsonlSessionRepoOptions from packages/agent/src/harness/session/jsonl/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/memory.ts",
+    "upstream": "MemoryStorageOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MemoryStorageOptions",
+    "reason": "Go port of MemoryStorageOptions from packages/agent/src/harness/session/memory.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/memory.ts",
+    "upstream": "MemorySessionRepoOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MemorySessionRepoOptions",
+    "reason": "Go port of MemorySessionRepoOptions from packages/agent/src/harness/session/memory.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/memory.ts",
+    "upstream": "MemoryStorage",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MemoryStorage",
+    "reason": "Go port of MemoryStorage from packages/agent/src/harness/session/memory.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/memory.ts",
+    "upstream": "MemorySessionRepo",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MemorySessionRepo",
+    "reason": "Go port of MemorySessionRepo from packages/agent/src/harness/session/memory.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/mutation-line.ts",
+    "upstream": "MutationLine",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "MutationLine",
+    "reason": "Go port of MutationLine from packages/agent/src/harness/session/mutation-line.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/session.ts",
+    "upstream": "StorageBackedSessionOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "StorageBackedSessionOptions",
+    "reason": "Go port of StorageBackedSessionOptions from packages/agent/src/harness/session/session.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/session.ts",
+    "upstream": "SessionInvariantError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionInvariantError",
+    "reason": "Go port of SessionInvariantError from packages/agent/src/harness/session/session.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/session.ts",
+    "upstream": "SessionInvalidBranchError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionInvalidBranchError",
+    "reason": "Go port of SessionInvalidBranchError from packages/agent/src/harness/session/session.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/session.ts",
+    "upstream": "SessionBranchExistsError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionBranchExistsError",
+    "reason": "Go port of SessionBranchExistsError from packages/agent/src/harness/session/session.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/session.ts",
+    "upstream": "SessionPendingAssistantMessageError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionPendingAssistantMessageError",
+    "reason": "Go port of SessionPendingAssistantMessageError from packages/agent/src/harness/session/session.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/session.ts",
+    "upstream": "SessionUnknownTargetError",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionUnknownTargetError",
+    "reason": "Go port of SessionUnknownTargetError from packages/agent/src/harness/session/session.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/session.ts",
+    "upstream": "StorageBackedSession",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "StorageBackedSession",
+    "reason": "Go port of StorageBackedSession from packages/agent/src/harness/session/session.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoLifecycleConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoLifecycleConformance",
+    "reason": "Go port of createSessionRepoLifecycleConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoOwnershipConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoOwnershipConformance",
+    "reason": "Go port of createSessionRepoOwnershipConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoMessageConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoMessageConformance",
+    "reason": "Go port of createSessionRepoMessageConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoForkBehaviorConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkBehaviorConformance",
+    "reason": "Go port of createSessionRepoForkBehaviorConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoStreamingForkConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoStreamingForkConformance",
+    "reason": "Go port of createSessionRepoStreamingForkConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoForkDestinationReservationConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkDestinationReservationConformance",
+    "reason": "Go port of createSessionRepoForkDestinationReservationConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoForkSourceSnapshotConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkSourceSnapshotConformance",
+    "reason": "Go port of createSessionRepoForkSourceSnapshotConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoForkCoordinationConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkCoordinationConformance",
+    "reason": "Go port of createSessionRepoForkCoordinationConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoForkConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkConformance",
+    "reason": "Go port of createSessionRepoForkConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/session-repo.ts",
+    "upstream": "createSessionRepoConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoConformance",
+    "reason": "Go port of createSessionRepoConformance from packages/agent/src/harness/session/testing/conformance/session-repo.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/conformance/storage.ts",
+    "upstream": "createStorageConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateStorageConformance",
+    "reason": "Go port of createStorageConformance from packages/agent/src/harness/session/testing/conformance/storage.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/gating-storage.ts",
+    "upstream": "CommitDiscarded",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "CommitDiscarded",
+    "reason": "Go port of CommitDiscarded from packages/agent/src/harness/session/testing/gating-storage.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/gating-storage.ts",
+    "upstream": "GatingStorage",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "GatingStorage",
+    "reason": "Go port of GatingStorage from packages/agent/src/harness/session/testing/gating-storage.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoConformance",
+    "reason": "Go port of createSessionRepoConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoForkBehaviorConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkBehaviorConformance",
+    "reason": "Go port of createSessionRepoForkBehaviorConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoForkConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkConformance",
+    "reason": "Go port of createSessionRepoForkConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoForkCoordinationConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkCoordinationConformance",
+    "reason": "Go port of createSessionRepoForkCoordinationConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoForkDestinationReservationConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkDestinationReservationConformance",
+    "reason": "Go port of createSessionRepoForkDestinationReservationConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoForkSourceSnapshotConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoForkSourceSnapshotConformance",
+    "reason": "Go port of createSessionRepoForkSourceSnapshotConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoLifecycleConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoLifecycleConformance",
+    "reason": "Go port of createSessionRepoLifecycleConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoMessageConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoMessageConformance",
+    "reason": "Go port of createSessionRepoMessageConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoOwnershipConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoOwnershipConformance",
+    "reason": "Go port of createSessionRepoOwnershipConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createSessionRepoStreamingForkConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateSessionRepoStreamingForkConformance",
+    "reason": "Go port of createSessionRepoStreamingForkConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "createStorageConformance",
+    "goPackage": "packages/agent/harness/session/testing/conformance",
+    "goSymbol": "CreateStorageConformance",
+    "reason": "Go port of createStorageConformance from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "CommitDiscarded",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "CommitDiscarded",
+    "reason": "Go port of CommitDiscarded from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "GatingStorage",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "GatingStorage",
+    "reason": "Go port of GatingStorage from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "InstrumentedStorage",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "InstrumentedStorage",
+    "reason": "Go port of InstrumentedStorage from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "StorageDecorator",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "StorageDecorator",
+    "reason": "Go port of StorageDecorator from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "ConformanceCase",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "ConformanceCase",
+    "reason": "Go port of ConformanceCase from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/index.ts",
+    "upstream": "StorageFixture",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "StorageFixture",
+    "reason": "Go port of StorageFixture from packages/agent/src/harness/session/testing/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/instrumented-storage.ts",
+    "upstream": "InstrumentedStorage",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "InstrumentedStorage",
+    "reason": "Go port of InstrumentedStorage from packages/agent/src/harness/session/testing/instrumented-storage.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/storage-decorator.ts",
+    "upstream": "StorageDecorator",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "StorageDecorator",
+    "reason": "Go port of StorageDecorator from packages/agent/src/harness/session/testing/storage-decorator.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/types.ts",
+    "upstream": "StorageFixture",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "StorageFixture",
+    "reason": "Go port of StorageFixture from packages/agent/src/harness/session/testing/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/testing/types.ts",
+    "upstream": "ConformanceCase",
+    "goPackage": "packages/agent/harness/session/testing",
+    "goSymbol": "ConformanceCase",
+    "reason": "Go port of ConformanceCase from packages/agent/src/harness/session/testing/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "StoredAddressBase",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "StoredAddressBase",
+    "reason": "Go port of StoredAddressBase from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "Value",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "Value",
+    "reason": "Go port of Value from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ValueList",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ValueList",
+    "reason": "Go port of ValueList from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "StoredValue",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "StoredValue",
+    "reason": "Go port of StoredValue from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ListElement",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ListElement",
+    "reason": "Go port of ListElement from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ListCursor",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ListCursor",
+    "reason": "Go port of ListCursor from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ListReadOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ListReadOptions",
+    "reason": "Go port of ListReadOptions from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ResolvedListReadOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ResolvedListReadOptions",
+    "reason": "Go port of ResolvedListReadOptions from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ValueSetWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ValueSetWrite",
+    "reason": "Go port of ValueSetWrite from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ValueDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ValueDeleteWrite",
+    "reason": "Go port of ValueDeleteWrite from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ListAppendWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ListAppendWrite",
+    "reason": "Go port of ListAppendWrite from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ListDeleteWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ListDeleteWrite",
+    "reason": "Go port of ListDeleteWrite from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ValueWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ValueWrite",
+    "reason": "Go port of ValueWrite from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "ListWrite",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ListWrite",
+    "reason": "Go port of ListWrite from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "value",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "NewValue",
+    "reason": "Go port of value from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "list",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "NewList",
+    "reason": "Go port of list from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "setValue",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SetValue",
+    "reason": "Go port of setValue from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "deleteValue",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "DeleteValue",
+    "reason": "Go port of deleteValue from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "appendList",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "AppendList",
+    "reason": "Go port of appendList from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "deleteList",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "DeleteList",
+    "reason": "Go port of deleteList from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "resolveListReadOptions",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "ResolveListReadOptions",
+    "reason": "Go port of resolveListReadOptions from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "branchTip",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "BranchTip",
+    "reason": "Go port of branchTip from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "branchTipInventoryPrefix",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "BranchTipInventoryPrefix",
+    "reason": "Go port of branchTipInventoryPrefix from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "laneConfig",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "LaneConfig",
+    "reason": "Go port of laneConfig from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "laneState",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "LaneState",
+    "reason": "Go port of laneState from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationResult",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationResult",
+    "reason": "Go port of operationResult from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationMeta",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationMeta",
+    "reason": "Go port of operationMeta from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationState",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationState",
+    "reason": "Go port of operationState from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationToolArgs",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationToolArgs",
+    "reason": "Go port of operationToolArgs from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationToolMemo",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationToolMemo",
+    "reason": "Go port of operationToolMemo from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationPreparation",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationPreparation",
+    "reason": "Go port of operationPreparation from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationToolArgsPrefix",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationToolArgsPrefix",
+    "reason": "Go port of operationToolArgsPrefix from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationToolMemoPrefix",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationToolMemoPrefix",
+    "reason": "Go port of operationToolMemoPrefix from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "operationPreparationPrefix",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "OperationPreparationPrefix",
+    "reason": "Go port of operationPreparationPrefix from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "pendingEntry",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PendingEntry",
+    "reason": "Go port of pendingEntry from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "pendingToolOutput",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PendingToolOutput",
+    "reason": "Go port of pendingToolOutput from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "pendingAssistantFrames",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PendingAssistantFrames",
+    "reason": "Go port of pendingAssistantFrames from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "pendingToolOutputPrefix",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "PendingToolOutputPrefix",
+    "reason": "Go port of pendingToolOutputPrefix from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "sessionName",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "SessionName",
+    "reason": "Go port of sessionName from packages/agent/src/harness/session/values.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/values.ts",
+    "upstream": "entryLabel",
+    "goPackage": "packages/agent/harness/session",
+    "goSymbol": "EntryLabel",
+    "reason": "Go port of entryLabel from packages/agent/src/harness/session/values.ts"
+  }
+]

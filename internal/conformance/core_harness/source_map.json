@@ -1,0 +1,492 @@
+[
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "Closed",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "Closed",
+    "reason": "Go port of Closed from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HarnessClosed",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HarnessClosed",
+    "reason": "Go port of HarnessClosed from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HarnessFault",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HarnessFault",
+    "reason": "Go port of HarnessFault from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "InvalidLane",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "InvalidLane",
+    "reason": "Go port of InvalidLane from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "InvalidMessage",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "InvalidMessage",
+    "reason": "Go port of InvalidMessage from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "InvalidNavigation",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "InvalidNavigation",
+    "reason": "Go port of InvalidNavigation from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneBusy",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneBusy",
+    "reason": "Go port of LaneBusy from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "NoActiveOperation",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "NoActiveOperation",
+    "reason": "Go port of NoActiveOperation from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "NoActiveRun",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "NoActiveRun",
+    "reason": "Go port of NoActiveRun from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "NothingToCompact",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "NothingToCompact",
+    "reason": "Go port of NothingToCompact from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "NothingToResume",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "NothingToResume",
+    "reason": "Go port of NothingToResume from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "OperationMismatch",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "OperationMismatch",
+    "reason": "Go port of OperationMismatch from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "UnknownSkill",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "UnknownSkill",
+    "reason": "Go port of UnknownSkill from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "UnknownTarget",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "UnknownTarget",
+    "reason": "Go port of UnknownTarget from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "UnknownTemplate",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "UnknownTemplate",
+    "reason": "Go port of UnknownTemplate from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "SliceNotImplemented",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "SliceNotImplemented",
+    "reason": "Go port of SliceNotImplemented from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "SuspendedRun",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "SuspendedRun",
+    "reason": "Go port of SuspendedRun from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "RunResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "RunResult",
+    "reason": "Go port of RunResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "CompactionResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "CompactionResult",
+    "reason": "Go port of CompactionResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "NavigationResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "NavigationResult",
+    "reason": "Go port of NavigationResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "ResumeResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "ResumeResult",
+    "reason": "Go port of ResumeResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "QueueResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "QueueResult",
+    "reason": "Go port of QueueResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "CancelQueuedResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "CancelQueuedResult",
+    "reason": "Go port of CancelQueuedResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "AbortResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "AbortResult",
+    "reason": "Go port of AbortResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "RecordUsageResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "RecordUsageResult",
+    "reason": "Go port of RecordUsageResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "NavigateOptions",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "NavigateOptions",
+    "reason": "Go port of NavigateOptions from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "OperationRequest",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "OperationRequest",
+    "reason": "Go port of OperationRequest from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "OperationAdmission",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "OperationAdmission",
+    "reason": "Go port of OperationAdmission from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "OperationAdmissionError",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "OperationAdmissionError",
+    "reason": "Go port of OperationAdmissionError from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "OperationAdmissionResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "OperationAdmissionResult",
+    "reason": "Go port of OperationAdmissionResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "DriveOptions",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "DriveOptions",
+    "reason": "Go port of DriveOptions from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "ModelIdentity",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "ModelIdentity",
+    "reason": "Go port of ModelIdentity from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "OperationStatus",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "OperationStatus",
+    "reason": "Go port of OperationStatus from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "CurrentOperationInfo",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "CurrentOperationInfo",
+    "reason": "Go port of CurrentOperationInfo from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneExecutionInfo",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneExecutionInfo",
+    "reason": "Go port of LaneExecutionInfo from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "DriveOutcome",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "DriveOutcome",
+    "reason": "Go port of DriveOutcome from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "DriveResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "DriveResult",
+    "reason": "Go port of DriveResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "AbortRequestResult",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "AbortRequestResult",
+    "reason": "Go port of AbortRequestResult from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "WatchHandle",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "WatchHandle",
+    "reason": "Go port of WatchHandle from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneInfo",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneInfo",
+    "reason": "Go port of LaneInfo from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneSnapshotTool",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneSnapshotTool",
+    "reason": "Go port of LaneSnapshotTool from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "OpenOperation",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "OpenOperation",
+    "reason": "Go port of OpenOperation from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneQueuedItem",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneQueuedItem",
+    "reason": "Go port of LaneQueuedItem from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneSnapshot",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneSnapshot",
+    "reason": "Go port of LaneSnapshot from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "SessionSnapshot",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "SessionSnapshot",
+    "reason": "Go port of SessionSnapshot from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HarnessEventPayload",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HarnessEventPayload",
+    "reason": "Go port of HarnessEventPayload from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "SpecialEventPayload",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "SpecialEventPayload",
+    "reason": "Go port of SpecialEventPayload from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneEventPayload",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneEventPayload",
+    "reason": "Go port of LaneEventPayload from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "ConfigEventPayload",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "ConfigEventPayload",
+    "reason": "Go port of ConfigEventPayload from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneConfigEventPayload",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneConfigEventPayload",
+    "reason": "Go port of LaneConfigEventPayload from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "GlobalConfigEventPayload",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "GlobalConfigEventPayload",
+    "reason": "Go port of GlobalConfigEventPayload from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HandlerErrorPayload",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HandlerErrorPayload",
+    "reason": "Go port of HandlerErrorPayload from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HarnessEvent",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HarnessEvent",
+    "reason": "Go port of HarnessEvent from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneTranscriptSnapshot",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneTranscriptSnapshot",
+    "reason": "Go port of LaneTranscriptSnapshot from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "LaneWatchEvent",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "LaneWatchEvent",
+    "reason": "Go port of LaneWatchEvent from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HarnessEventType",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HarnessEventType",
+    "reason": "Go port of HarnessEventType from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "EventListener",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "EventListener",
+    "reason": "Go port of EventListener from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "Events",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "Events",
+    "reason": "Go port of Events from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "Resources",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "Resources",
+    "reason": "Go port of Resources from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HookMap",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HookMap",
+    "reason": "Go port of HookMap from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HookName",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HookName",
+    "reason": "Go port of HookName from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HookInvocation",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HookInvocation",
+    "reason": "Go port of HookInvocation from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "HookHandler",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "HookHandler",
+    "reason": "Go port of HookHandler from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "Hooks",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "Hooks",
+    "reason": "Go port of Hooks from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "EntryProjector",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "EntryProjector",
+    "reason": "Go port of EntryProjector from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "AgentHarnessOptions",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "AgentHarnessOptions",
+    "reason": "Go port of AgentHarnessOptions from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "AgentLane",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "AgentLane",
+    "reason": "Go port of AgentLane from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "AcquireLaneOptions",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "AcquireLaneOptions",
+    "reason": "Go port of AcquireLaneOptions from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "AgentHarness",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "AgentHarness",
+    "reason": "Go port of AgentHarness from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  },
+  {
+    "source": "packages/agent/src/harness/agent-harness.ts",
+    "upstream": "AgentHarnessConstructor",
+    "goPackage": "packages/agent/harness",
+    "goSymbol": "AgentHarnessConstructor",
+    "reason": "Go port of AgentHarnessConstructor from packages/agent/src/harness/agent-harness.ts; exported by the harness assembly facade."
+  }
+]

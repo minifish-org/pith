@@ -1,0 +1,51 @@
+{
+  "batch": "core-loop",
+  "id": "loop-false",
+  "input": {
+    "op": "agent-loop",
+    "file": "packages/agent/src/agent.ts",
+    "parallel": false
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": 2,
+      "toolCalls": [
+        "1",
+        "2"
+      ],
+      "roles": [
+        "system",
+        "user",
+        "assistant",
+        "toolResult",
+        "toolResult",
+        "assistant"
+      ],
+      "results": [
+        {
+          "toolCallId": "c1",
+          "content": [
+            {
+              "type": "text",
+              "text": "1"
+            }
+          ],
+          "isError": false
+        },
+        {
+          "toolCallId": "c2",
+          "content": [
+            {
+              "type": "text",
+              "text": "2"
+            }
+          ],
+          "isError": false
+        }
+      ],
+      "ended": "agent_end",
+      "streaming": false
+    }
+  }
+}

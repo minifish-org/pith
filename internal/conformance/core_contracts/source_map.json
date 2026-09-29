@@ -1,0 +1,1521 @@
+[
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "awaitWithContext",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "AwaitWithContext",
+    "reason": "Go port of awaitWithContext from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "BACKGROUND_CONTEXT",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "BackgroundContext",
+    "reason": "Go port of BACKGROUND_CONTEXT from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "Context",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "Context",
+    "reason": "Go port of Context from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "ContextKey",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "ContextKey",
+    "reason": "Go port of ContextKey from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "createContextKey",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "CreateContextKey",
+    "reason": "Go port of createContextKey from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "TODO_CONTEXT",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "TodoContext",
+    "reason": "Go port of TODO_CONTEXT from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "withAbortSignal",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "WithAbortSignal",
+    "reason": "Go port of withAbortSignal from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "withCancel",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "WithCancel",
+    "reason": "Go port of withCancel from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "withContextValue",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "WithContextValue",
+    "reason": "Go port of withContextValue from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "withoutAbortSignal",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "WithoutAbortSignal",
+    "reason": "Go port of withoutAbortSignal from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "getTelemetryContext",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "GetTelemetryContext",
+    "reason": "Go port of getTelemetryContext from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/context.ts",
+    "upstream": "withTelemetryContext",
+    "goPackage": "packages/agent/harness/context",
+    "goSymbol": "WithTelemetryContext",
+    "reason": "Go port of withTelemetryContext from packages/agent/src/harness/context.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/effect-gate.ts",
+    "upstream": "AbortRequested",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "AbortRequested",
+    "reason": "Go port of AbortRequested from packages/agent/src/harness/execution/effect-gate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/effect-gate.ts",
+    "upstream": "Gate",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "Gate",
+    "reason": "Go port of Gate from packages/agent/src/harness/execution/effect-gate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/effect-gate.ts",
+    "upstream": "GateControl",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "GateControl",
+    "reason": "Go port of GateControl from packages/agent/src/harness/execution/effect-gate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/effect-gate.ts",
+    "upstream": "createGate",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "CreateGate",
+    "reason": "Go port of createGate from packages/agent/src/harness/execution/effect-gate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "Result",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "Result",
+    "reason": "Go port of Result from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "TaggedErrorValue",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "TaggedErrorValue",
+    "reason": "Go port of TaggedErrorValue from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "TaggedErrorFactory",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "TaggedErrorFactory",
+    "reason": "Go port of TaggedErrorFactory from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "TaggedError",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "TaggedError",
+    "reason": "Go port of TaggedError from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "LaneBusy",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "LaneBusy",
+    "reason": "Go port of LaneBusy from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "OperationMismatch",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "OperationMismatch",
+    "reason": "Go port of OperationMismatch from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "NoActiveRun",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "NoActiveRun",
+    "reason": "Go port of NoActiveRun from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "NoActiveOperation",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "NoActiveOperation",
+    "reason": "Go port of NoActiveOperation from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "NothingToResume",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "NothingToResume",
+    "reason": "Go port of NothingToResume from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "NothingToCompact",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "NothingToCompact",
+    "reason": "Go port of NothingToCompact from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "InvalidMessage",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "InvalidMessage",
+    "reason": "Go port of InvalidMessage from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "InvalidNavigation",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "InvalidNavigation",
+    "reason": "Go port of InvalidNavigation from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "UnknownSkill",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "UnknownSkill",
+    "reason": "Go port of UnknownSkill from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "UnknownTemplate",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "UnknownTemplate",
+    "reason": "Go port of UnknownTemplate from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "UnknownTarget",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "UnknownTarget",
+    "reason": "Go port of UnknownTarget from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "InvalidLane",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "InvalidLane",
+    "reason": "Go port of InvalidLane from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "Closed",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "Closed",
+    "reason": "Go port of Closed from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "HarnessFault",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "HarnessFault",
+    "reason": "Go port of HarnessFault from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "HarnessClosed",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "HarnessClosed",
+    "reason": "Go port of HarnessClosed from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "ErrorMatchers",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "ErrorMatchers",
+    "reason": "Go port of ErrorMatchers from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/result.ts",
+    "upstream": "matchError",
+    "goPackage": "packages/agent/harness/result",
+    "goSymbol": "MatchError",
+    "reason": "Go port of matchError from packages/agent/src/harness/result.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "SliceNotImplemented",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SliceNotImplemented",
+    "reason": "Go port of SliceNotImplemented from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "Config",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Config",
+    "reason": "Go port of Config from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "LaneState",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "RuntimeLaneState",
+    "reason": "Go port of LaneState from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "LaneCommand",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "LaneCommand",
+    "reason": "Go port of LaneCommand from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "ContinueOperationResult",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ContinueOperationResult",
+    "reason": "Go port of ContinueOperationResult from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "OperationCommand",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationCommand",
+    "reason": "Go port of OperationCommand from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "Drive",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Drive",
+    "reason": "Go port of Drive from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/types.ts",
+    "upstream": "ProcedureResult",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ProcedureResult",
+    "reason": "Go port of ProcedureResult from packages/agent/src/harness/runtime/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "JsonValue",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "JsonValue",
+    "reason": "Go port of JsonValue from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SettledAssistantMessage",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SettledAssistantMessage",
+    "reason": "Go port of SettledAssistantMessage from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryType",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryType",
+    "reason": "Go port of EntryType from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryBase",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryBase",
+    "reason": "Go port of EntryBase from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "MessageEntry",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "MessageEntry",
+    "reason": "Go port of MessageEntry from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "CompactionEntry",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CompactionEntry",
+    "reason": "Go port of CompactionEntry from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "BranchSummaryEntry",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "BranchSummaryEntry",
+    "reason": "Go port of BranchSummaryEntry from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "CustomEntry",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CustomEntry",
+    "reason": "Go port of CustomEntry from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryProjector",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryProjector",
+    "reason": "Go port of EntryProjector from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Entry",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Entry",
+    "reason": "Go port of Entry from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "NewEntry",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "NewEntry",
+    "reason": "Go port of NewEntry from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "LaneConfiguration",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "LaneConfiguration",
+    "reason": "Go port of LaneConfiguration from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "OperationMeta",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationMeta",
+    "reason": "Go port of OperationMeta from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Control",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Control",
+    "reason": "Go port of Control from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "OperationError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationError",
+    "reason": "Go port of OperationError from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "TerminalStatus",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "TerminalStatus",
+    "reason": "Go port of TerminalStatus from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "OperationResultRecord",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationResultRecord",
+    "reason": "Go port of OperationResultRecord from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Continuation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Continuation",
+    "reason": "Go port of Continuation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "CheckpointData",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CheckpointData",
+    "reason": "Go port of CheckpointData from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "InboxItemKind",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "InboxItemKind",
+    "reason": "Go port of InboxItemKind from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "InboxItem",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "InboxItem",
+    "reason": "Go port of InboxItem from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "NormalizedRetryPolicy",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "NormalizedRetryPolicy",
+    "reason": "Go port of NormalizedRetryPolicy from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "GenerationContext",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "GenerationContext",
+    "reason": "Go port of GenerationContext from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "ToolCall",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ToolCall",
+    "reason": "Go port of ToolCall from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "ToolBatch",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ToolBatch",
+    "reason": "Go port of ToolBatch from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryContext",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryContext",
+    "reason": "Go port of SummaryContext from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Cancellable",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Cancellable",
+    "reason": "Go port of Cancellable from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "RunSettings",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "RunSettings",
+    "reason": "Go port of RunSettings from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "OperationScope",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationScope",
+    "reason": "Go port of OperationScope from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "RetryWait",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "RetryWait",
+    "reason": "Go port of RetryWait from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "AssistantGenerationScope",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AssistantGenerationScope",
+    "reason": "Go port of AssistantGenerationScope from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "ResultBoundary",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ResultBoundary",
+    "reason": "Go port of ResultBoundary from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryTask",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryTask",
+    "reason": "Go port of SummaryTask from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryGenerationScope",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryGenerationScope",
+    "reason": "Go port of SummaryGenerationScope from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryGenerationReady",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryGenerationReady",
+    "reason": "Go port of SummaryGenerationReady from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryGenerationEffectPending",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryGenerationEffectPending",
+    "reason": "Go port of SummaryGenerationEffectPending from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryGenerationRetryWait",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryGenerationRetryWait",
+    "reason": "Go port of SummaryGenerationRetryWait from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "DeferredScope",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "DeferredScope",
+    "reason": "Go port of DeferredScope from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "StartingOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "StartingOperation",
+    "reason": "Go port of StartingOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "CheckpointOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CheckpointOperation",
+    "reason": "Go port of CheckpointOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "AssistantReadyOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AssistantReadyOperation",
+    "reason": "Go port of AssistantReadyOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "AssistantEffectPendingOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AssistantEffectPendingOperation",
+    "reason": "Go port of AssistantEffectPendingOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "AssistantRetryWaitOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AssistantRetryWaitOperation",
+    "reason": "Go port of AssistantRetryWaitOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "ToolsOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ToolsOperation",
+    "reason": "Go port of ToolsOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "DeferredSuspendedOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "DeferredSuspendedOperation",
+    "reason": "Go port of DeferredSuspendedOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "DeferredEffectPendingOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "DeferredEffectPendingOperation",
+    "reason": "Go port of DeferredEffectPendingOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryDecidingOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryDecidingOperation",
+    "reason": "Go port of SummaryDecidingOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryReadyOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryReadyOperation",
+    "reason": "Go port of SummaryReadyOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryEffectPendingOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryEffectPendingOperation",
+    "reason": "Go port of SummaryEffectPendingOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SummaryRetryWaitOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SummaryRetryWaitOperation",
+    "reason": "Go port of SummaryRetryWaitOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "NavigationReadyToCommitOperation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "NavigationReadyToCommitOperation",
+    "reason": "Go port of NavigationReadyToCommitOperation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "OperationState",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationState",
+    "reason": "Go port of OperationState from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "OperationAt",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationAt",
+    "reason": "Go port of OperationAt from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "operationScopeOf",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "OperationScopeOf",
+    "reason": "Go port of operationScopeOf from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Operation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Operation",
+    "reason": "Go port of Operation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "LaneState",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "LaneState",
+    "reason": "Go port of LaneState from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "PendingEntry",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "PendingEntry",
+    "reason": "Go port of PendingEntry from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "DurableFileOperations",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "DurableFileOperations",
+    "reason": "Go port of DurableFileOperations from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "DurableStructuralPreparation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "DurableStructuralPreparation",
+    "reason": "Go port of DurableStructuralPreparation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "UsageRow",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "UsageRow",
+    "reason": "Go port of UsageRow from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryWrite",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryWrite",
+    "reason": "Go port of EntryWrite from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "UsageWrite",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "UsageWrite",
+    "reason": "Go port of UsageWrite from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Write",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Write",
+    "reason": "Go port of Write from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "CommitResult",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CommitResult",
+    "reason": "Go port of CommitResult from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryStructure",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryStructure",
+    "reason": "Go port of EntryStructure from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryCursor",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryCursor",
+    "reason": "Go port of EntryCursor from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "BranchScan",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "BranchScan",
+    "reason": "Go port of BranchScan from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "StorageBranchScan",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "StorageBranchScan",
+    "reason": "Go port of StorageBranchScan from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryScan",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryScan",
+    "reason": "Go port of EntryScan from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "UsageScan",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "UsageScan",
+    "reason": "Go port of UsageScan from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionStats",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionStats",
+    "reason": "Go port of SessionStats from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Storage",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Storage",
+    "reason": "Go port of Storage from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionMetadata",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionMetadata",
+    "reason": "Go port of SessionMetadata from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "IdGenerator",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "IdGenerator",
+    "reason": "Go port of IdGenerator from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "EntryQuery",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "EntryQuery",
+    "reason": "Go port of EntryQuery from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionReader",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionReader",
+    "reason": "Go port of SessionReader from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionMutation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionMutation",
+    "reason": "Go port of SessionMutation from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionMutator",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionMutator",
+    "reason": "Go port of SessionMutator from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionMutationCallback",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionMutationCallback",
+    "reason": "Go port of SessionMutationCallback from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Branch",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Branch",
+    "reason": "Go port of Branch from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "Session",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Session",
+    "reason": "Go port of Session from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionCreateOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionCreateOptions",
+    "reason": "Go port of SessionCreateOptions from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "ForkOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ForkOptions",
+    "reason": "Go port of ForkOptions from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/session/types.ts",
+    "upstream": "SessionRepo",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "SessionRepo",
+    "reason": "Go port of SessionRepo from packages/agent/src/harness/session/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "Result",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Result",
+    "reason": "Go port of Result from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ok",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Ok",
+    "reason": "Go port of ok from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "err",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Err",
+    "reason": "Go port of err from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "getOrThrow",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "GetOrThrow",
+    "reason": "Go port of getOrThrow from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "getOrUndefined",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "GetOrUndefined",
+    "reason": "Go port of getOrUndefined from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "toError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ToError",
+    "reason": "Go port of toError from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "Skill",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Skill",
+    "reason": "Go port of Skill from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "PromptTemplate",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "PromptTemplate",
+    "reason": "Go port of PromptTemplate from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessResources",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessResources",
+    "reason": "Go port of AgentHarnessResources from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessToolUpdateOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolUpdateOptions",
+    "reason": "Go port of AgentHarnessToolUpdateOptions from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessToolUpdateCallback",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolUpdateCallback",
+    "reason": "Go port of AgentHarnessToolUpdateCallback from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessToolInvocation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolInvocation",
+    "reason": "Go port of AgentHarnessToolInvocation from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessTool",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessTool",
+    "reason": "Go port of AgentHarnessTool from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessToolContextSource",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolContextSource",
+    "reason": "Go port of AgentHarnessToolContextSource from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessStreamOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessStreamOptions",
+    "reason": "Go port of AgentHarnessStreamOptions from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "AgentHarnessStreamOptionsPatch",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessStreamOptionsPatch",
+    "reason": "Go port of AgentHarnessStreamOptionsPatch from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "FileKind",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileKind",
+    "reason": "Go port of FileKind from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "FileErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileErrorCode",
+    "reason": "Go port of FileErrorCode from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "FileError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileError",
+    "reason": "Go port of FileError from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ExecutionErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ExecutionErrorCode",
+    "reason": "Go port of ExecutionErrorCode from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ExecutionError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ExecutionError",
+    "reason": "Go port of ExecutionError from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "CompactionErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CompactionErrorCode",
+    "reason": "Go port of CompactionErrorCode from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "CompactionError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CompactionError",
+    "reason": "Go port of CompactionError from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "BranchSummaryErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "BranchSummaryErrorCode",
+    "reason": "Go port of BranchSummaryErrorCode from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "BranchSummaryError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "BranchSummaryError",
+    "reason": "Go port of BranchSummaryError from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "FileInfo",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileInfo",
+    "reason": "Go port of FileInfo from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "TextLine",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "TextLine",
+    "reason": "Go port of TextLine from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "TextLineReader",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "TextLineReader",
+    "reason": "Go port of TextLineReader from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "FileSystem",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileSystem",
+    "reason": "Go port of FileSystem from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellOutputRetention",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputRetention",
+    "reason": "Go port of ShellOutputRetention from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellOutputLimits",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputLimits",
+    "reason": "Go port of ShellOutputLimits from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellOutputCaptureOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputCaptureOptions",
+    "reason": "Go port of ShellOutputCaptureOptions from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellOutputTruncation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputTruncation",
+    "reason": "Go port of ShellOutputTruncation from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellOutputMetadata",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputMetadata",
+    "reason": "Go port of ShellOutputMetadata from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellOutputView",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputView",
+    "reason": "Go port of ShellOutputView from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellOutputUpdate",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputUpdate",
+    "reason": "Go port of ShellOutputUpdate from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellExecResult",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellExecResult",
+    "reason": "Go port of ShellExecResult from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ShellExecOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellExecOptions",
+    "reason": "Go port of ShellExecOptions from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "Shell",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Shell",
+    "reason": "Go port of Shell from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/types.ts",
+    "upstream": "ExecutionEnv",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ExecutionEnv",
+    "reason": "Go port of ExecutionEnv from packages/agent/src/harness/types.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "DEFAULT_MAX_LINES",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "DefaultMaxLines",
+    "reason": "Go port of DEFAULT_MAX_LINES from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "DEFAULT_MAX_BYTES",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "DefaultMaxBytes",
+    "reason": "Go port of DEFAULT_MAX_BYTES from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "GREP_MAX_LINE_LENGTH",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "GrepMaxLineLength",
+    "reason": "Go port of GREP_MAX_LINE_LENGTH from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "TruncationResult",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "TruncationResult",
+    "reason": "Go port of TruncationResult from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "TruncationOptions",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "TruncationOptions",
+    "reason": "Go port of TruncationOptions from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "utf8ByteLength",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "Utf8ByteLength",
+    "reason": "Go port of utf8ByteLength from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "formatSize",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "FormatSize",
+    "reason": "Go port of formatSize from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "truncateHead",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "TruncateHead",
+    "reason": "Go port of truncateHead from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "truncateTail",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "TruncateTail",
+    "reason": "Go port of truncateTail from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/utils/truncate.ts",
+    "upstream": "truncateLine",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "TruncateLine",
+    "reason": "Go port of truncateLine from packages/agent/src/harness/utils/truncate.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "StreamFn",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "StreamFn",
+    "reason": "Go port of StreamFn from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "ToolExecutionMode",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "ToolExecutionMode",
+    "reason": "Go port of ToolExecutionMode from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "QueueMode",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "QueueMode",
+    "reason": "Go port of QueueMode from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentToolCall",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentToolCall",
+    "reason": "Go port of AgentToolCall from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "BeforeToolCallResult",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "BeforeToolCallResult",
+    "reason": "Go port of BeforeToolCallResult from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AfterToolCallResult",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AfterToolCallResult",
+    "reason": "Go port of AfterToolCallResult from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "BeforeToolCallContext",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "BeforeToolCallContext",
+    "reason": "Go port of BeforeToolCallContext from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AfterToolCallContext",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AfterToolCallContext",
+    "reason": "Go port of AfterToolCallContext from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentTurnContext",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentTurnContext",
+    "reason": "Go port of AgentTurnContext from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentTurnDecision",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentTurnDecision",
+    "reason": "Go port of AgentTurnDecision from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "FinishTurn",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "FinishTurn",
+    "reason": "Go port of FinishTurn from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentLoopTurnUpdate",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentLoopTurnUpdate",
+    "reason": "Go port of AgentLoopTurnUpdate from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "PrepareRequestContext",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "PrepareRequestContext",
+    "reason": "Go port of PrepareRequestContext from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentRequestUpdate",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentRequestUpdate",
+    "reason": "Go port of AgentRequestUpdate from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "PrepareRequest",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "PrepareRequest",
+    "reason": "Go port of PrepareRequest from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "PrepareNextTurnContext",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "PrepareNextTurnContext",
+    "reason": "Go port of PrepareNextTurnContext from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentLoopConfig",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentLoopConfig",
+    "reason": "Go port of AgentLoopConfig from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "ThinkingLevel",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "ThinkingLevel",
+    "reason": "Go port of ThinkingLevel from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "CustomAgentMessages",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "CustomAgentMessages",
+    "reason": "Go port of CustomAgentMessages from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentMessage",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentMessage",
+    "reason": "Go port of AgentMessage from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentState",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentState",
+    "reason": "Go port of AgentState from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentToolResult",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentToolResult",
+    "reason": "Go port of AgentToolResult from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentToolUpdateCallback",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentToolUpdateCallback",
+    "reason": "Go port of AgentToolUpdateCallback from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentTool",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentTool",
+    "reason": "Go port of AgentTool from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentContext",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentContext",
+    "reason": "Go port of AgentContext from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "upstream": "AgentEvent",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentEvent",
+    "reason": "Go port of AgentEvent from packages/agent/src/types.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "BACKGROUND_CONTEXT",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "BackgroundContext",
+    "reason": "Go port of BACKGROUND_CONTEXT from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "TODO_CONTEXT",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "TodoContext",
+    "reason": "Go port of TODO_CONTEXT from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "createContextKey",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "CreateContextKey",
+    "reason": "Go port of createContextKey from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "withContextValue",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "WithContextValue",
+    "reason": "Go port of withContextValue from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "withAbortSignal",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "WithAbortSignal",
+    "reason": "Go port of withAbortSignal from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "withoutAbortSignal",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "WithoutAbortSignal",
+    "reason": "Go port of withoutAbortSignal from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "withCancel",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "WithCancel",
+    "reason": "Go port of withCancel from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/context/index.ts",
+    "upstream": "awaitWithContext",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "AwaitWithContext",
+    "reason": "Go port of awaitWithContext from packages/chord/src/context/index.ts"
+  },
+  {
+    "source": "packages/chord/src/types.ts",
+    "upstream": "Context",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "Context",
+    "reason": "Go port of Context from packages/chord/src/types.ts"
+  },
+  {
+    "source": "packages/chord/src/types.ts",
+    "upstream": "ContextKey",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "ContextKey",
+    "reason": "Go port of ContextKey from packages/chord/src/types.ts"
+  },
+  {
+    "source": "packages/chord/src/types.ts",
+    "upstream": "JsonValue",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "JsonValue",
+    "reason": "Go port of JsonValue from packages/chord/src/types.ts"
+  },
+  {
+    "source": "packages/chord/src/types.ts",
+    "upstream": "JsonRepresentation",
+    "goPackage": "packages/chord/context",
+    "goSymbol": "JsonRepresentation",
+    "reason": "Go port of JsonRepresentation from packages/chord/src/types.ts"
+  }
+]

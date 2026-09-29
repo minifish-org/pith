@@ -1,0 +1,310 @@
+[
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryResult",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "BranchSummaryResult",
+    "reason": "Go port of BranchSummaryResult from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryDetails",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "BranchSummaryDetails",
+    "reason": "Go port of BranchSummaryDetails from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "FileOperations",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FileOperations",
+    "reason": "Go port of FileOperations from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "BranchPreparation",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "BranchPreparation",
+    "reason": "Go port of BranchPreparation from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "CollectEntriesResult",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CollectEntriesResult",
+    "reason": "Go port of CollectEntriesResult from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "GenerateBranchSummaryOptions",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateBranchSummaryOptions",
+    "reason": "Go port of GenerateBranchSummaryOptions from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "collectEntriesForBranchSummary",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CollectEntriesForBranchSummary",
+    "reason": "Go port of collectEntriesForBranchSummary from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "prepareBranchEntries",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "PrepareBranchEntries",
+    "reason": "Go port of prepareBranchEntries from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "generateBranchSummary",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateBranchSummary",
+    "reason": "Go port of generateBranchSummary from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "PreparedBranchSummaryOptions",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "PreparedBranchSummaryOptions",
+    "reason": "Go port of PreparedBranchSummaryOptions from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/branch-summarization.ts",
+    "upstream": "generateBranchSummaryWithRequest",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateBranchSummaryWithRequest",
+    "reason": "Go port of generateBranchSummaryWithRequest from packages/agent/src/harness/compaction/branch-summarization.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "CompactionDetails",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactionDetails",
+    "reason": "Go port of CompactionDetails from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "CompactResult",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactResult",
+    "reason": "Go port of CompactResult from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "SummaryRequest",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "SummaryRequest",
+    "reason": "Go port of SummaryRequest from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "createSummaryRequestOptions",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CreateSummaryRequestOptions",
+    "reason": "Go port of createSummaryRequestOptions from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "completeSimpleWithRetries",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompleteSimpleWithRetries",
+    "reason": "Go port of completeSimpleWithRetries from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "CompactionSettings",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactionSettings",
+    "reason": "Go port of CompactionSettings from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "DEFAULT_COMPACTION_SETTINGS",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "DefaultCompactionSettings",
+    "reason": "Go port of DEFAULT_COMPACTION_SETTINGS from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "calculateContextTokens",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CalculateContextTokens",
+    "reason": "Go port of calculateContextTokens from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "getLastAssistantUsage",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GetLastAssistantUsage",
+    "reason": "Go port of getLastAssistantUsage from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "ContextUsageEstimate",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "ContextUsageEstimate",
+    "reason": "Go port of ContextUsageEstimate from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "estimateContextTokens",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "EstimateContextTokens",
+    "reason": "Go port of estimateContextTokens from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "shouldCompact",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "ShouldCompact",
+    "reason": "Go port of shouldCompact from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "estimateTokens",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "EstimateTokens",
+    "reason": "Go port of estimateTokens from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "findTurnStartIndex",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FindTurnStartIndex",
+    "reason": "Go port of findTurnStartIndex from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "CutPointResult",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CutPointResult",
+    "reason": "Go port of CutPointResult from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "findCutPoint",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FindCutPoint",
+    "reason": "Go port of findCutPoint from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "SUMMARIZATION_SYSTEM_PROMPT",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "SummarizationSystemPrompt",
+    "reason": "Go port of SUMMARIZATION_SYSTEM_PROMPT from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "generateSummary",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateSummary",
+    "reason": "Go port of generateSummary from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "generateSummaryWithUsage",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateSummaryWithUsage",
+    "reason": "Go port of generateSummaryWithUsage from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "SummaryGenerationOptions",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "SummaryGenerationOptions",
+    "reason": "Go port of SummaryGenerationOptions from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "generateSummaryWithRequest",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateSummaryWithRequest",
+    "reason": "Go port of generateSummaryWithRequest from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "CompactionPreparation",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactionPreparation",
+    "reason": "Go port of CompactionPreparation from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "prepareCompaction",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "PrepareCompaction",
+    "reason": "Go port of prepareCompaction from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "serializeConversation",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "SerializeConversation",
+    "reason": "Go port of serializeConversation from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "compact",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "Compact",
+    "reason": "Go port of compact from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "CompactGenerationOptions",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactGenerationOptions",
+    "reason": "Go port of CompactGenerationOptions from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/compaction.ts",
+    "upstream": "compactWithRequest",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactWithRequest",
+    "reason": "Go port of compactWithRequest from packages/agent/src/harness/compaction/compaction.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/utils.ts",
+    "upstream": "FileOperations",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FileOperations",
+    "reason": "Go port of FileOperations from packages/agent/src/harness/compaction/utils.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/utils.ts",
+    "upstream": "createFileOps",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CreateFileOps",
+    "reason": "Go port of createFileOps from packages/agent/src/harness/compaction/utils.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/utils.ts",
+    "upstream": "extractFileOpsFromMessage",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "ExtractFileOpsFromMessage",
+    "reason": "Go port of extractFileOpsFromMessage from packages/agent/src/harness/compaction/utils.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/utils.ts",
+    "upstream": "computeFileLists",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "ComputeFileLists",
+    "reason": "Go port of computeFileLists from packages/agent/src/harness/compaction/utils.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/utils.ts",
+    "upstream": "formatFileOperations",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FormatFileOperations",
+    "reason": "Go port of formatFileOperations from packages/agent/src/harness/compaction/utils.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/compaction/utils.ts",
+    "upstream": "serializeConversation",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "SerializeConversation",
+    "reason": "Go port of serializeConversation from packages/agent/src/harness/compaction/utils.ts"
+  }
+]

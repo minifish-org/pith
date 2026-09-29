@@ -1,0 +1,31 @@
+{
+  "batch": "core-harness",
+  "id": "LaneBusy",
+  "input": {
+    "op": "tagged-error",
+    "file": "packages/agent/src/harness/result.ts",
+    "tag": "LaneBusy",
+    "props": {
+      "message": "fixture error",
+      "lane": "main",
+      "operationId": "r1"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "tag": "LaneBusy",
+      "name": "LaneBusy",
+      "message": "fixture error",
+      "json": {
+        "_tag": "LaneBusy",
+        "message": "fixture error",
+        "name": "LaneBusy",
+        "lane": "main",
+        "operationId": "r1"
+      },
+      "matches": true,
+      "rejectPlain": false
+    }
+  }
+}

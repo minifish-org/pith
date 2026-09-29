@@ -1,0 +1,41 @@
+{
+  "batch": "core-loop",
+  "id": "state-reset",
+  "input": {
+    "op": "agent-state",
+    "file": "packages/agent/src/agent.ts"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "before": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "system",
+            "timestamp": 0
+          },
+          {
+            "role": "user",
+            "content": "hi",
+            "timestamp": 1
+          }
+        ],
+        "thinkingLevel": "low"
+      },
+      "queued": true,
+      "after": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "system",
+            "timestamp": 0
+          }
+        ],
+        "isStreaming": false,
+        "pendingToolCalls": [],
+        "queued": false
+      }
+    }
+  }
+}

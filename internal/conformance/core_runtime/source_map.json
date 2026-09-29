@@ -1,0 +1,576 @@
+[
+  {
+    "source": "packages/agent/src/harness/execution/assistant.ts",
+    "upstream": "AssistantResponseMetadata",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "AssistantResponseMetadata",
+    "reason": "Go port of AssistantResponseMetadata from packages/agent/src/harness/execution/assistant.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/assistant.ts",
+    "upstream": "AssistantStreamObserver",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "AssistantStreamObserver",
+    "reason": "Go port of AssistantStreamObserver from packages/agent/src/harness/execution/assistant.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/assistant.ts",
+    "upstream": "HarnessAssistantStreamConfig",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "HarnessAssistantStreamConfig",
+    "reason": "Go port of HarnessAssistantStreamConfig from packages/agent/src/harness/execution/assistant.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/assistant.ts",
+    "upstream": "consumeAssistantStream",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "ConsumeAssistantStream",
+    "reason": "Go port of consumeAssistantStream from packages/agent/src/harness/execution/assistant.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/assistant.ts",
+    "upstream": "streamHarnessAssistant",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "StreamHarnessAssistant",
+    "reason": "Go port of streamHarnessAssistant from packages/agent/src/harness/execution/assistant.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "PreparedToolCall",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "PreparedToolCall",
+    "reason": "Go port of PreparedToolCall from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "ImmediateToolOutcome",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "ImmediateToolOutcome",
+    "reason": "Go port of ImmediateToolOutcome from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "BeforeToolDecision",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "BeforeToolDecision",
+    "reason": "Go port of BeforeToolDecision from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "ClearedToolCall",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "ClearedToolCall",
+    "reason": "Go port of ClearedToolCall from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "ExecutedToolCall",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "ExecutedToolCall",
+    "reason": "Go port of ExecutedToolCall from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "AfterToolPatch",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "AfterToolPatch",
+    "reason": "Go port of AfterToolPatch from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "FinalizedToolCall",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "FinalizedToolCall",
+    "reason": "Go port of FinalizedToolCall from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "prepareToolCall",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "PrepareToolCall",
+    "reason": "Go port of prepareToolCall from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "applyBeforeToolDecision",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "ApplyBeforeToolDecision",
+    "reason": "Go port of applyBeforeToolDecision from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "executeToolCall",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "ExecuteToolCall",
+    "reason": "Go port of executeToolCall from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "finalizeToolCall",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "FinalizeToolCall",
+    "reason": "Go port of finalizeToolCall from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "toolResultFromMessage",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "ToolResultFromMessage",
+    "reason": "Go port of toolResultFromMessage from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/execution/tools.ts",
+    "upstream": "createToolResultMessage",
+    "goPackage": "packages/agent/harness/execution",
+    "goSymbol": "CreateToolResultMessage",
+    "reason": "Go port of createToolResultMessage from packages/agent/src/harness/execution/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive.ts",
+    "upstream": "driveOperation",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "DriveOperation",
+    "reason": "Go port of driveOperation from packages/agent/src/harness/runtime/drive.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/boundary.ts",
+    "upstream": "BoundaryFinishPending",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "BoundaryFinishPending",
+    "reason": "Go port of BoundaryFinishPending from packages/agent/src/harness/runtime/drive/boundary.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/boundary.ts",
+    "upstream": "BoundaryPlacement",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "BoundaryPlacement",
+    "reason": "Go port of BoundaryPlacement from packages/agent/src/harness/runtime/drive/boundary.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/boundary.ts",
+    "upstream": "normalizedRetryPolicy",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "NormalizedRetryPolicy",
+    "reason": "Go port of normalizedRetryPolicy from packages/agent/src/harness/runtime/drive/boundary.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/boundary.ts",
+    "upstream": "assistantReadyAtBoundary",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "AssistantReadyAtBoundary",
+    "reason": "Go port of assistantReadyAtBoundary from packages/agent/src/harness/runtime/drive/boundary.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/boundary.ts",
+    "upstream": "planBoundaryInbox",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "PlanBoundaryInbox",
+    "reason": "Go port of planBoundaryInbox from packages/agent/src/harness/runtime/drive/boundary.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/boundary.ts",
+    "upstream": "boundaryPlacementEvents",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "BoundaryPlacementEvents",
+    "reason": "Go port of boundaryPlacementEvents from packages/agent/src/harness/runtime/drive/boundary.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/boundary.ts",
+    "upstream": "finishRunBoundary",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "FinishRunBoundary",
+    "reason": "Go port of finishRunBoundary from packages/agent/src/harness/runtime/drive/boundary.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/checkpoint.ts",
+    "upstream": "startRun",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "StartRun",
+    "reason": "Go port of startRun from packages/agent/src/harness/runtime/drive/checkpoint.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/checkpoint.ts",
+    "upstream": "runCheckpoint",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunCheckpoint",
+    "reason": "Go port of runCheckpoint from packages/agent/src/harness/runtime/drive/checkpoint.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/deferred.ts",
+    "upstream": "readDeferredSourceHandle",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadDeferredSourceHandle",
+    "reason": "Go port of readDeferredSourceHandle from packages/agent/src/harness/runtime/drive/deferred.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/deferred.ts",
+    "upstream": "runDeferredSuspended",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunDeferredSuspended",
+    "reason": "Go port of runDeferredSuspended from packages/agent/src/harness/runtime/drive/deferred.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/deferred.ts",
+    "upstream": "recoverDeferredPoll",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RecoverDeferredPoll",
+    "reason": "Go port of recoverDeferredPoll from packages/agent/src/harness/runtime/drive/deferred.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/deferred.ts",
+    "upstream": "runDeferred",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunDeferred",
+    "reason": "Go port of runDeferred from packages/agent/src/harness/runtime/drive/deferred.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/generation.ts",
+    "upstream": "runRetryWait",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunRetryWait",
+    "reason": "Go port of runRetryWait from packages/agent/src/harness/runtime/drive/generation.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/generation.ts",
+    "upstream": "runGeneration",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunGeneration",
+    "reason": "Go port of runGeneration from packages/agent/src/harness/runtime/drive/generation.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/reconcile.ts",
+    "upstream": "reconcileOperation",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReconcileOperation",
+    "reason": "Go port of reconcileOperation from packages/agent/src/harness/runtime/drive/reconcile.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/recovery.ts",
+    "upstream": "recoverAssistantGeneration",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RecoverAssistantGeneration",
+    "reason": "Go port of recoverAssistantGeneration from packages/agent/src/harness/runtime/drive/recovery.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/recovery.ts",
+    "upstream": "recoverCancelledAssistantEffect",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RecoverCancelledAssistantEffect",
+    "reason": "Go port of recoverCancelledAssistantEffect from packages/agent/src/harness/runtime/drive/recovery.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/response.ts",
+    "upstream": "AssistantResponseLifecycle",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "AssistantResponseLifecycle",
+    "reason": "Go port of AssistantResponseLifecycle from packages/agent/src/harness/runtime/drive/response.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/response.ts",
+    "upstream": "openAssistantResponse",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "OpenAssistantResponse",
+    "reason": "Go port of openAssistantResponse from packages/agent/src/harness/runtime/drive/response.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/response.ts",
+    "upstream": "publishConfigurationFailure",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "PublishConfigurationFailure",
+    "reason": "Go port of publishConfigurationFailure from packages/agent/src/harness/runtime/drive/response.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/response.ts",
+    "upstream": "publishResponse",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "PublishResponse",
+    "reason": "Go port of publishResponse from packages/agent/src/harness/runtime/drive/response.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/retry.ts",
+    "upstream": "retryNotBefore",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RetryNotBefore",
+    "reason": "Go port of retryNotBefore from packages/agent/src/harness/runtime/drive/retry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/retry.ts",
+    "upstream": "waitUntil",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "WaitUntil",
+    "reason": "Go port of waitUntil from packages/agent/src/harness/runtime/drive/retry.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "durableCompactionPreparation",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "DurableCompactionPreparation",
+    "reason": "Go port of durableCompactionPreparation from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "durableBranchPreparation",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "DurableBranchPreparation",
+    "reason": "Go port of durableBranchPreparation from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "runStructuralDecision",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunStructuralDecision",
+    "reason": "Go port of runStructuralDecision from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "runStructuralGeneration",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunStructuralGeneration",
+    "reason": "Go port of runStructuralGeneration from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "runStructuralRetryWait",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunStructuralRetryWait",
+    "reason": "Go port of runStructuralRetryWait from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "recoverStructuralGeneration",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RecoverStructuralGeneration",
+    "reason": "Go port of recoverStructuralGeneration from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "prepareCompactionThreshold",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "PrepareCompactionThreshold",
+    "reason": "Go port of prepareCompactionThreshold from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "prepareOverflowCompaction",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "PrepareOverflowCompaction",
+    "reason": "Go port of prepareOverflowCompaction from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/structural.ts",
+    "upstream": "commitNavigation",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "CommitNavigation",
+    "reason": "Go port of commitNavigation from packages/agent/src/harness/runtime/drive/structural.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/terminal.ts",
+    "upstream": "operationCleanupWrites",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "OperationCleanupWrites",
+    "reason": "Go port of operationCleanupWrites from packages/agent/src/harness/runtime/drive/terminal.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/terminal.ts",
+    "upstream": "operationResultRecord",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "OperationResultRecord",
+    "reason": "Go port of operationResultRecord from packages/agent/src/harness/runtime/drive/terminal.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/tool-placement.ts",
+    "upstream": "ToolBatchSource",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ToolBatchSource",
+    "reason": "Go port of ToolBatchSource from packages/agent/src/harness/runtime/drive/tool-placement.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/tool-placement.ts",
+    "upstream": "readToolBatchSource",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadToolBatchSource",
+    "reason": "Go port of readToolBatchSource from packages/agent/src/harness/runtime/drive/tool-placement.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/tool-placement.ts",
+    "upstream": "toolCallFor",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ToolCallFor",
+    "reason": "Go port of toolCallFor from packages/agent/src/harness/runtime/drive/tool-placement.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/tool-placement.ts",
+    "upstream": "withToolBatch",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "WithToolBatch",
+    "reason": "Go port of withToolBatch from packages/agent/src/harness/runtime/drive/tool-placement.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/tool-placement.ts",
+    "upstream": "materializeReady",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "MaterializeReady",
+    "reason": "Go port of materializeReady from packages/agent/src/harness/runtime/drive/tool-placement.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/drive/tools.ts",
+    "upstream": "runTools",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RunTools",
+    "reason": "Go port of runTools from packages/agent/src/harness/runtime/drive/tools.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/harness.ts",
+    "upstream": "Harness",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "Harness",
+    "reason": "Go port of Harness from packages/agent/src/harness/runtime/harness.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/harness.ts",
+    "upstream": "createAgentHarness",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "CreateAgentHarness",
+    "reason": "Go port of createAgentHarness from packages/agent/src/harness/runtime/harness.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/index.ts",
+    "upstream": "createAgentHarness",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "CreateAgentHarness",
+    "reason": "Go port of createAgentHarness from packages/agent/src/harness/runtime/index.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/lane.ts",
+    "upstream": "Lane",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "Lane",
+    "reason": "Go port of Lane from packages/agent/src/harness/runtime/lane.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/progress.ts",
+    "upstream": "ProgressChannel",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ProgressChannel",
+    "reason": "Go port of ProgressChannel from packages/agent/src/harness/runtime/progress.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/progress.ts",
+    "upstream": "readAssistantFrames",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadAssistantFrames",
+    "reason": "Go port of readAssistantFrames from packages/agent/src/harness/runtime/progress.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/progress.ts",
+    "upstream": "openFrameProgress",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "OpenFrameProgress",
+    "reason": "Go port of openFrameProgress from packages/agent/src/harness/runtime/progress.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/progress.ts",
+    "upstream": "openToolProgress",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "OpenToolProgress",
+    "reason": "Go port of openToolProgress from packages/agent/src/harness/runtime/progress.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/reducer.ts",
+    "upstream": "LaneSnapshotReduction",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "LaneSnapshotReduction",
+    "reason": "Go port of LaneSnapshotReduction from packages/agent/src/harness/runtime/reducer.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/reducer.ts",
+    "upstream": "reduceLaneSnapshot",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReduceLaneSnapshot",
+    "reason": "Go port of reduceLaneSnapshot from packages/agent/src/harness/runtime/reducer.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/restore.ts",
+    "upstream": "ClassifiedLaneStorage",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ClassifiedLaneStorage",
+    "reason": "Go port of ClassifiedLaneStorage from packages/agent/src/harness/runtime/restore.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/restore.ts",
+    "upstream": "readLaneStorage",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadLaneStorage",
+    "reason": "Go port of readLaneStorage from packages/agent/src/harness/runtime/restore.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/restore.ts",
+    "upstream": "restoreSession",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RestoreSession",
+    "reason": "Go port of restoreSession from packages/agent/src/harness/runtime/restore.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/restore.ts",
+    "upstream": "restoreLane",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RestoreLane",
+    "reason": "Go port of restoreLane from packages/agent/src/harness/runtime/restore.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/restore.ts",
+    "upstream": "restoreLaneState",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "RestoreLaneState",
+    "reason": "Go port of restoreLaneState from packages/agent/src/harness/runtime/restore.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/transcript.ts",
+    "upstream": "chainEntries",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ChainEntries",
+    "reason": "Go port of chainEntries from packages/agent/src/harness/runtime/transcript.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/transcript.ts",
+    "upstream": "entryLifecycleEvents",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "EntryLifecycleEvents",
+    "reason": "Go port of entryLifecycleEvents from packages/agent/src/harness/runtime/transcript.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/transcript.ts",
+    "upstream": "committedEntryEvents",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "CommittedEntryEvents",
+    "reason": "Go port of committedEntryEvents from packages/agent/src/harness/runtime/transcript.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/transcript.ts",
+    "upstream": "readBoundedEntries",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadBoundedEntries",
+    "reason": "Go port of readBoundedEntries from packages/agent/src/harness/runtime/transcript.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/transcript.ts",
+    "upstream": "readBoundedContext",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadBoundedContext",
+    "reason": "Go port of readBoundedContext from packages/agent/src/harness/runtime/transcript.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/transcript.ts",
+    "upstream": "readLaneQueues",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadLaneQueues",
+    "reason": "Go port of readLaneQueues from packages/agent/src/harness/runtime/transcript.ts"
+  },
+  {
+    "source": "packages/agent/src/harness/runtime/transcript.ts",
+    "upstream": "readPendingMessages",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReadPendingMessages",
+    "reason": "Go port of readPendingMessages from packages/agent/src/harness/runtime/transcript.ts"
+  }
+]

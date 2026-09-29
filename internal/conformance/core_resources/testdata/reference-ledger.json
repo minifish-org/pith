@@ -1,0 +1,44 @@
+[
+  {
+    "source": "packages/agent/test/harness/resource-formatting.test.ts",
+    "sha256": "7bc3d164339f2642327a576a905389e12b7081bec77e4315712c9f7576115a15",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-resources",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/runtime/lane.test.ts",
+    "sha256": "0e7917e702fda10c0db4828d210afbfd889bebc546af8969da94b37f464b82e7",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-resources",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/system-prompt.test.ts",
+    "sha256": "40dafee3aedf176cd02c19c932fbc16442e016a5b29b254d7c76bd0197db3c5f",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-resources",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

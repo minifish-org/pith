@@ -1,0 +1,16 @@
+{
+  "batch": "core-resources",
+  "id": "parseCommandArgs-3",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/prompt-templates.ts",
+    "fn": "parseCommandArgs",
+    "args": [
+      ""
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": []
+  }
+}

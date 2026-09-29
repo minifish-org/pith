@@ -1,0 +1,19 @@
+{
+  "batch": "core-resources",
+  "id": "substituteArgs-1",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/prompt-templates.ts",
+    "fn": "substituteArgs",
+    "args": [
+      "$3/$1",
+      [
+        "a"
+      ]
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": "/a"
+  }
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "source": "packages/agent/src/agent-loop.ts",
+    "upstream": "AgentEventSink",
+    "goPackage": "packages/agent",
+    "goSymbol": "AgentEventSink",
+    "reason": "Go port of the AgentEventSink callback type; errors replace the JS promise rejection channel."
+  },
+  {
+    "source": "packages/agent/src/agent-loop.ts",
+    "upstream": "agentLoop",
+    "goPackage": "packages/agent",
+    "goSymbol": "AgentLoop",
+    "reason": "Go port of agentLoop; returns the ordered AgentStream completing on agent_end."
+  },
+  {
+    "source": "packages/agent/src/agent-loop.ts",
+    "upstream": "agentLoopContinue",
+    "goPackage": "packages/agent",
+    "goSymbol": "AgentLoopContinue",
+    "reason": "Go port of agentLoopContinue; validation error replaces the synchronous upstream throw."
+  },
+  {
+    "source": "packages/agent/src/agent-loop.ts",
+    "upstream": "runAgentLoop",
+    "goPackage": "packages/agent",
+    "goSymbol": "RunAgentLoop",
+    "reason": "Go port of runAgentLoop with a caller-owned event sink and returned message list."
+  },
+  {
+    "source": "packages/agent/src/agent-loop.ts",
+    "upstream": "runAgentLoopContinue",
+    "goPackage": "packages/agent",
+    "goSymbol": "RunAgentLoopContinue",
+    "reason": "Go port of runAgentLoopContinue with a caller-owned event sink and returned message list."
+  },
+  {
+    "source": "packages/agent/src/agent.ts",
+    "upstream": "QueueMode",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "QueueMode",
+    "reason": "agent.ts re-exports QueueMode from types.ts; the real Go public equivalent is the agent types QueueMode."
+  },
+  {
+    "source": "packages/agent/src/agent.ts",
+    "upstream": "AgentInitialState",
+    "goPackage": "packages/agent",
+    "goSymbol": "AgentInitialState",
+    "reason": "Go port of the AgentInitialState seed type; SystemPrompt stays a pointer to keep absent distinct from empty."
+  },
+  {
+    "source": "packages/agent/src/agent.ts",
+    "upstream": "AgentOptions",
+    "goPackage": "packages/agent",
+    "goSymbol": "AgentOptions",
+    "reason": "Go port of the AgentOptions construction type with typed hook fields."
+  },
+  {
+    "source": "packages/agent/src/agent.ts",
+    "upstream": "Agent",
+    "goPackage": "packages/agent",
+    "goSymbol": "Agent",
+    "reason": "Go port of the Agent lifecycle type; state mutation is mutex guarded and listeners are never called under a lock."
+  },
+  {
+    "source": "packages/agent/src/proxy.ts",
+    "upstream": "ProxyAssistantMessageEvent",
+    "goPackage": "packages/agent",
+    "goSymbol": "ProxyAssistantMessageEvent",
+    "reason": "Go port of the partial-stripped proxy event union as an optional-field record."
+  },
+  {
+    "source": "packages/agent/src/proxy.ts",
+    "upstream": "ProxyStreamOptions",
+    "goPackage": "packages/agent",
+    "goSymbol": "ProxyStreamOptions",
+    "reason": "Go port of the proxy stream options including auth token, proxy URL and local abort signal."
+  },
+  {
+    "source": "packages/agent/src/proxy.ts",
+    "upstream": "streamProxy",
+    "goPackage": "packages/agent",
+    "goSymbol": "StreamProxy",
+    "reason": "Go port of streamProxy using net/http and the assistant message event stream protocol."
+  },
+  {
+    "source": "packages/agent/src/stream-fn.ts",
+    "upstream": "setDefaultStreamFn",
+    "goPackage": "packages/agent",
+    "goSymbol": "SetDefaultStreamFn",
+    "reason": "Go port of setDefaultStreamFn; nil clears the process-wide fallback."
+  },
+  {
+    "source": "packages/agent/src/stream-fn.ts",
+    "upstream": "getDefaultStreamFn",
+    "goPackage": "packages/agent",
+    "goSymbol": "GetDefaultStreamFn",
+    "reason": "Go port of getDefaultStreamFn; an error replaces the upstream synchronous throw when unset."
+  }
+]

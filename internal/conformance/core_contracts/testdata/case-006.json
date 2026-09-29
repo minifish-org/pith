@@ -1,0 +1,32 @@
+{
+  "batch": "core-contracts",
+  "id": "truncateTail-2",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/utils/truncate.ts",
+    "fn": "truncateTail",
+    "args": [
+      "a\r\nb\r\n",
+      {
+        "maxLines": 2,
+        "maxBytes": 100
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "content": "a\r\nb\r\n",
+      "truncated": false,
+      "truncatedBy": null,
+      "totalLines": 2,
+      "totalBytes": 6,
+      "outputLines": 2,
+      "outputBytes": 6,
+      "lastLinePartial": false,
+      "firstLineExceedsLimit": false,
+      "maxLines": 2,
+      "maxBytes": 100
+    }
+  }
+}

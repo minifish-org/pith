@@ -1,0 +1,20 @@
+{
+  "batch": "core-compaction",
+  "id": "estimateTokens-0",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/compaction/compaction.ts",
+    "fn": "estimateTokens",
+    "args": [
+      {
+        "role": "user",
+        "content": "hello",
+        "timestamp": 1
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": 2
+  }
+}

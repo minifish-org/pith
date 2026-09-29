@@ -1,0 +1,222 @@
+[
+  {
+    "source": "packages/agent/test/harness/pico3/atomicity.test.ts",
+    "sha256": "f767bd807bfbb81781b1fea01efc5f60e826436344f52ba258464e7c3c6595fe",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/authority.test.ts",
+    "sha256": "e60bd4630302baa0bbed343e59f0a9a2f3bec5d2dbb7a878a27026baf118d69a",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/busy.test.ts",
+    "sha256": "371e4dbb449fa6c17039e8ea1a80af4ff8253555964c68b6536deb22cdfa3bab",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/chord.test.ts",
+    "sha256": "991c65a39563368c80ee1b85fad427cb5871fd2615d288ad727431099f43ae01",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/hardening.test.ts",
+    "sha256": "8007a8a6a911b617818439768ac7a021f0d626830e8363ccca8fc05158dccdf5",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/membrane.test.ts",
+    "sha256": "8cd3dafe9b4daf88abcc389fce9e24e22e12132405e7c614f487b75574ffc81e",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/recovery.test.ts",
+    "sha256": "1c6de9ada1e6674612b5ecbca8c56154cc625bc348393914e255df4ee7c06647",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/retention.test.ts",
+    "sha256": "dc19ffe7ffeb9dcc01387826f444619a6ac7e5ff64c1182d2c959d09974c3dd4",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/spec-plugins-lifecycle.test.ts",
+    "sha256": "89e0b2b786c6ca88055b3eac1a7b15deb285f81c628b6826036c30e5ed54db5b",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/spec-scheduler-process.test.ts",
+    "sha256": "62747e35cdf0a7cb17bab7ba96b4a4d91c6f3ccbdac549a107b09c490ab6ed7d",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/spec-storage-history.test.ts",
+    "sha256": "5e92fdfd13d1a1ecf906fc07435d2cf80d5243860e4bad8923085423dd8f505a",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/subagent.test.ts",
+    "sha256": "2b4b5513abe8d1a3f9849f6ec4864722a5532225d8633492b31361ef1ccde7ca",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/tool-bounds.test.ts",
+    "sha256": "383d9d9c536691929f1e85696ab64b1cf4ff5c36683894e71247654bf96c9cc3",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/turn.test.ts",
+    "sha256": "dedc1ae7ea45f68422794e8cd2483ca4fd8c5e13dfff43dc4d086b0b2b3bf485",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/types.compile.ts",
+    "sha256": "7b37057a746c6e70fbf64219fc83f7876f48b85bcf023279155af1088f7fa520",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/pico3/watch.test.ts",
+    "sha256": "8ba160c792ab80afd336e24eb111717368ee3e5bad4671ce9f9571d2133ddb7b",
+    "modules": [],
+    "disposition": "excluded",
+    "reason": "experimental/pico3 excluded",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/session-test-utils.ts",
+    "sha256": "e8cbb584e75d49f658e620b15cf80ae90823820b90f02d0f94e1236dcf725292",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/utils/wait-for-tick.ts",
+    "sha256": "d4f3cda1a6449f918d8ee569d310eb9d07af3c4a5931ce60b5b4111e2e689bb6",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "core-harness",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]
