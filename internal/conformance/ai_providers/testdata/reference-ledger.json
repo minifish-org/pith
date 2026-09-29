@@ -1,0 +1,30 @@
+[
+  {
+    "source": "packages/ai/test/providers.test.ts",
+    "sha256": "05398664e04241071153801789cc3017bad1b820c1926a91ac04dc9cdff785a6",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-providers",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/ai/test/zai-coding-plan-models.test.ts",
+    "sha256": "d4020126a964b8a67d3a13fe7694b6cec2ab26eeed1a05285ccebef239a69bb9",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-providers",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

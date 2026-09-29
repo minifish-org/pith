@@ -1,0 +1,44 @@
+[
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.lazy.ts",
+    "upstream": "setBedrockProviderModule",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "SetBedrockProviderModule",
+    "reason": "Upstream build hook that replaces the dynamically imported Bedrock module; the Go port keeps the same override seam for statically linked implementations."
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.lazy.ts",
+    "upstream": "bedrockConverseStreamApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "BedrockConverseStreamApi",
+    "reason": "Lazy module factory returning the real Bedrock ConverseStream ProviderStreams; the Go lazy loader is LazyApi, so the exported factory keeps the upstream lazy entry point name."
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "upstream": "BedrockThinkingDisplay",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "BedrockThinkingDisplay",
+    "reason": "String union of Bedrock thinking display modes, translated to a named string type with the same wire values."
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "upstream": "BedrockOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "BedrockOptions",
+    "reason": "Bedrock-specific stream options; the Go struct embeds types.StreamOptions and adds region/profile/tool-choice/reasoning/thinking-display/request-metadata/bearer-token/client fields."
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "BedrockConverseStream",
+    "reason": "Typed streaming entry point; prefixed by provider to avoid colliding with the other protocol stream functions in package api."
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "BedrockConverseStreamSimple",
+    "reason": "Unified-reasoning entry point mapping SimpleStreamOptions to BedrockOptions; prefixed by provider to avoid package-level collisions."
+  }
+]

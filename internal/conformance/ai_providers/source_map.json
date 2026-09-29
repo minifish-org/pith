@@ -1,0 +1,520 @@
+[
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "radiusProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "RadiusProvider",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "BuiltinProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "BuiltinProvider",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "getBuiltinModel",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GetBuiltinModel",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "getBuiltinProviders",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GetBuiltinProviders",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "getBuiltinModelDataGeneratedAt",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GetBuiltinModelDataGeneratedAt",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "getBuiltinModels",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GetBuiltinModels",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "builtinProviders",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "BuiltinProviders",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "builtinModels",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "BuiltinModels",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "builtinImagesProviders",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "BuiltinImagesProviders",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "upstream": "builtinImagesModels",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "BuiltinImagesModels",
+    "reason": "Built-in barrel export at its real declaration."
+  },
+  {
+    "source": "packages/ai/src/providers/amazon-bedrock.ts",
+    "upstream": "amazonBedrockProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "AmazonBedrockProvider",
+    "reason": "Direct port of the provider export amazonBedrockProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/ant-ling.ts",
+    "upstream": "antLingProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "AntLingProvider",
+    "reason": "Direct port of the provider export antLingProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/anthropic.ts",
+    "upstream": "anthropicProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "AnthropicProvider",
+    "reason": "Direct port of the provider export anthropicProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/azure-openai-responses.ts",
+    "upstream": "azureOpenAIResponsesProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "AzureOpenAIResponsesProvider",
+    "reason": "Direct port of the provider export azureOpenAIResponsesProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/baseten.ts",
+    "upstream": "basetenProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "BasetenProvider",
+    "reason": "Direct port of the provider export basetenProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/cerebras.ts",
+    "upstream": "cerebrasProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "CerebrasProvider",
+    "reason": "Direct port of the provider export cerebrasProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-ai-gateway.ts",
+    "upstream": "cloudflareAIGatewayProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "CloudflareAIGatewayProvider",
+    "reason": "Direct port of the provider export cloudflareAIGatewayProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-auth.ts",
+    "upstream": "cloudflareWorkersAIAuth",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "CloudflareWorkersAIAuth",
+    "reason": "Direct port of the provider export cloudflareWorkersAIAuth."
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-auth.ts",
+    "upstream": "cloudflareAIGatewayAuth",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "CloudflareAIGatewayAuth",
+    "reason": "Direct port of the provider export cloudflareAIGatewayAuth."
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-stream.ts",
+    "upstream": "resolveCloudflareModel",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "ResolveCloudflareModel",
+    "reason": "Direct port of the provider export resolveCloudflareModel."
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-stream.ts",
+    "upstream": "cloudflareStreams",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "CloudflareStreams",
+    "reason": "Direct port of the provider export cloudflareStreams."
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-workers-ai.ts",
+    "upstream": "cloudflareWorkersAIProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "CloudflareWorkersAIProvider",
+    "reason": "Direct port of the provider export cloudflareWorkersAIProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/deepseek.ts",
+    "upstream": "deepseekProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "DeepseekProvider",
+    "reason": "Direct port of the provider export deepseekProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "FauxModelDefinition",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxModelDefinition",
+    "reason": "Direct port of the provider export FauxModelDefinition."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "FauxContentBlock",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxContentBlock",
+    "reason": "Direct port of the provider export FauxContentBlock."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "fauxText",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxText",
+    "reason": "Direct port of the provider export fauxText."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "fauxThinking",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxThinking",
+    "reason": "Direct port of the provider export fauxThinking."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "fauxToolCall",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxToolCall",
+    "reason": "Direct port of the provider export fauxToolCall."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "fauxAssistantMessage",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxAssistantMessage",
+    "reason": "Direct port of the provider export fauxAssistantMessage."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "FauxProviderState",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxProviderState",
+    "reason": "Direct port of the provider export FauxProviderState."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "FauxResponseFactory",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxResponseFactory",
+    "reason": "Direct port of the provider export FauxResponseFactory."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "FauxResponseStep",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxResponseStep",
+    "reason": "Direct port of the provider export FauxResponseStep."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "RegisterFauxProviderOptions",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "RegisterFauxProviderOptions",
+    "reason": "Direct port of the provider export RegisterFauxProviderOptions."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "FauxProviderRegistration",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxProviderRegistration",
+    "reason": "Direct port of the provider export FauxProviderRegistration."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "FauxProviderHandle",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxProviderHandle",
+    "reason": "Direct port of the provider export FauxProviderHandle."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "createFauxCore",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "CreateFauxCore",
+    "reason": "Direct port of the provider export createFauxCore."
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "upstream": "fauxProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FauxProvider",
+    "reason": "Direct port of the provider export fauxProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/fireworks.ts",
+    "upstream": "fireworksProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "FireworksProvider",
+    "reason": "Direct port of the provider export fireworksProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/github-copilot.ts",
+    "upstream": "githubCopilotProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GitHubCopilotProvider",
+    "reason": "Direct port of the provider export githubCopilotProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/google-vertex.ts",
+    "upstream": "googleVertexProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GoogleVertexProvider",
+    "reason": "Direct port of the provider export googleVertexProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/google.ts",
+    "upstream": "googleProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GoogleProvider",
+    "reason": "Direct port of the provider export googleProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/groq.ts",
+    "upstream": "groqProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "GroqProvider",
+    "reason": "Direct port of the provider export groqProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/huggingface.ts",
+    "upstream": "huggingfaceProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "HuggingfaceProvider",
+    "reason": "Direct port of the provider export huggingfaceProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/images/register-builtins.ts",
+    "upstream": "generateImagesOpenRouter",
+    "goPackage": "packages/ai/images/builtin",
+    "goSymbol": "GenerateImagesOpenRouter",
+    "reason": "Built-in image provider installer; side effect replaced by an explicit installation entry point."
+  },
+  {
+    "source": "packages/ai/src/providers/images/register-builtins.ts",
+    "upstream": "registerBuiltInImagesApiProviders",
+    "goPackage": "packages/ai/images/builtin",
+    "goSymbol": "RegisterBuiltInImagesAPIProviders",
+    "reason": "Built-in image provider installer; side effect replaced by an explicit installation entry point."
+  },
+  {
+    "source": "packages/ai/src/providers/kimi-coding.ts",
+    "upstream": "kimiCodingProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "KimiCodingProvider",
+    "reason": "Direct port of the provider export kimiCodingProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/meta.ts",
+    "upstream": "metaProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "MetaProvider",
+    "reason": "Direct port of the provider export metaProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/minimax-cn.ts",
+    "upstream": "minimaxCnProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "MinimaxCnProvider",
+    "reason": "Direct port of the provider export minimaxCnProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/minimax.ts",
+    "upstream": "minimaxProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "MinimaxProvider",
+    "reason": "Direct port of the provider export minimaxProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/mistral.ts",
+    "upstream": "mistralProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "MistralProvider",
+    "reason": "Direct port of the provider export mistralProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/moonshotai-cn.ts",
+    "upstream": "moonshotaiCnProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "MoonshotaiCnProvider",
+    "reason": "Direct port of the provider export moonshotaiCnProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/moonshotai.ts",
+    "upstream": "moonshotaiProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "MoonshotaiProvider",
+    "reason": "Direct port of the provider export moonshotaiProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/nvidia.ts",
+    "upstream": "nvidiaProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "NvidiaProvider",
+    "reason": "Direct port of the provider export nvidiaProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/openai-codex.ts",
+    "upstream": "openaiCodexProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "OpenAICodexProvider",
+    "reason": "Direct port of the provider export openaiCodexProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/openai.ts",
+    "upstream": "openaiProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "OpenAIProvider",
+    "reason": "Direct port of the provider export openaiProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/opencode-go.ts",
+    "upstream": "opencodeGoProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "OpencodeGoProvider",
+    "reason": "Direct port of the provider export opencodeGoProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/opencode-headers.ts",
+    "upstream": "withOpenCodeSessionHeader",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "WithOpenCodeSessionHeader",
+    "reason": "Direct port of the provider export withOpenCodeSessionHeader."
+  },
+  {
+    "source": "packages/ai/src/providers/opencode.ts",
+    "upstream": "opencodeProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "OpencodeProvider",
+    "reason": "Direct port of the provider export opencodeProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/openrouter-images.ts",
+    "upstream": "openrouterImagesProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "OpenrouterImagesProvider",
+    "reason": "Direct port of the provider export openrouterImagesProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/openrouter.ts",
+    "upstream": "openrouterProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "OpenrouterProvider",
+    "reason": "Direct port of the provider export openrouterProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan-cn.ts",
+    "upstream": "qwenTokenPlanCnProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "QwenTokenPlanCnProvider",
+    "reason": "Direct port of the provider export qwenTokenPlanCnProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan-individual.ts",
+    "upstream": "qwenTokenPlanIndividualProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "QwenTokenPlanIndividualProvider",
+    "reason": "Direct port of the provider export qwenTokenPlanIndividualProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan.ts",
+    "upstream": "qwenTokenPlanProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "QwenTokenPlanProvider",
+    "reason": "Direct port of the provider export qwenTokenPlanProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/radius.ts",
+    "upstream": "RadiusProviderOptions",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "RadiusProviderOptions",
+    "reason": "Direct port of the provider export RadiusProviderOptions."
+  },
+  {
+    "source": "packages/ai/src/providers/radius.ts",
+    "upstream": "radiusProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "RadiusProvider",
+    "reason": "Direct port of the provider export radiusProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/together.ts",
+    "upstream": "togetherProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "TogetherProvider",
+    "reason": "Direct port of the provider export togetherProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/vercel-ai-gateway.ts",
+    "upstream": "vercelAIGatewayProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "VercelAIGatewayProvider",
+    "reason": "Direct port of the provider export vercelAIGatewayProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/xai.ts",
+    "upstream": "xaiProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "XaiProvider",
+    "reason": "Direct port of the provider export xaiProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-ams.ts",
+    "upstream": "xiaomiTokenPlanAmsProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "XiaomiTokenPlanAmsProvider",
+    "reason": "Direct port of the provider export xiaomiTokenPlanAmsProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-cn.ts",
+    "upstream": "xiaomiTokenPlanCnProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "XiaomiTokenPlanCnProvider",
+    "reason": "Direct port of the provider export xiaomiTokenPlanCnProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-sgp.ts",
+    "upstream": "xiaomiTokenPlanSgpProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "XiaomiTokenPlanSgpProvider",
+    "reason": "Direct port of the provider export xiaomiTokenPlanSgpProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi.ts",
+    "upstream": "xiaomiProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "XiaomiProvider",
+    "reason": "Direct port of the provider export xiaomiProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/zai-coding-cn.ts",
+    "upstream": "zaiCodingCnProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "ZaiCodingCnProvider",
+    "reason": "Direct port of the provider export zaiCodingCnProvider."
+  },
+  {
+    "source": "packages/ai/src/providers/zai.ts",
+    "upstream": "zaiProvider",
+    "goPackage": "packages/ai/providers",
+    "goSymbol": "ZaiProvider",
+    "reason": "Direct port of the provider export zaiProvider."
+  }
+]

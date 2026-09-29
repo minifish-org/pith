@@ -1,0 +1,28 @@
+// This file is a Go port of packages/ai/src/providers/opencode-go.ts from Pi at
+// revision f07218c4d4bbc12bef056a7058c3dd49dfe41abe.
+//
+// Upstream: Copyright (c) 2025 Mario Zechner, MIT License.
+// See the repository LICENSE for the full text.
+package providers
+
+import (
+	"github.com/minifish-org/pith/packages/ai"
+	"github.com/minifish-org/pith/packages/ai/api"
+	"github.com/minifish-org/pith/packages/ai/catalog"
+	"github.com/minifish-org/pith/packages/ai/types"
+)
+
+// OpencodeGoProvider builds the OpenCode Go provider.
+func OpencodeGoProvider() ai.Provider {
+	return ai.CreateProvider(ai.CreateProviderOptions{
+		ID:     types.ProviderOpencodeGo,
+		Name:   "OpenCode Go",
+		Auth:   envAuth("OpenCode API key", "OPENCODE_API_KEY"),
+		Models: catalogModelList(catalog.OPENCODE_GO_MODELS),
+		APIs: map[types.Api]types.ProviderStreams{
+			types.ApiAnthropicMessages: WithOpenCodeSessionHeader(api.AnthropicMessagesApi()),
+			types.ApiOpenAICompletions: WithOpenCodeSessionHeader(api.OpenAICompletionsApi()),
+			types.ApiOpenAIResponses:   WithOpenCodeSessionHeader(api.OpenAIResponsesApi()),
+		},
+	})
+}

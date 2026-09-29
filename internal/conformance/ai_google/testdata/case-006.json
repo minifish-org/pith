@@ -1,0 +1,67 @@
+{
+  "batch": "ai-google",
+  "id": "google-vertex-http-error",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/google-vertex.ts",
+    "api": "google-vertex",
+    "mode": "http-error",
+    "body": "{\"error\":{\"message\":\"fixture denied\",\"type\":\"invalid_request_error\",\"code\":\"bad_request\"}}",
+    "status": 400
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/publishers/google/models/fixture:streamGenerateContent?alt=sse",
+          "body": {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "hello"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "systemInstruction": {
+              "parts": [
+                {
+                  "text": "system"
+                }
+              ],
+              "role": "user"
+            },
+            "generationConfig": {
+              "temperature": 0,
+              "maxOutputTokens": 16
+            }
+          }
+        }
+      ],
+      "events": [
+        "error"
+      ],
+      "content": [],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "error",
+      "responseId": null
+    }
+  }
+}

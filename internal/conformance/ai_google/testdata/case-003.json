@@ -1,0 +1,38 @@
+{
+  "batch": "ai-google",
+  "id": "google-generative-ai-cancelled",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/google-generative-ai.ts",
+    "api": "google-generative-ai",
+    "mode": "cancelled",
+    "body": "data: {\"candidates\":[{\"index\":0,\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"你好\"}]},\"finishReason\":\"STOP\"}],\"usageMetadata\":{\"promptTokenCount\":2,\"candidatesTokenCount\":1,\"totalTokenCount\":3}}\n\n",
+    "status": 200
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [],
+      "events": [
+        "error"
+      ],
+      "content": [],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "aborted",
+      "responseId": null
+    }
+  }
+}

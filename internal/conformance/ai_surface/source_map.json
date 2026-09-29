@@ -1,0 +1,569 @@
+[
+  {
+    "source": "packages/ai/src/bedrock-provider.ts",
+    "upstream": "bedrockProviderModule",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "BedrockProviderModule",
+    "reason": "Static Bedrock ConverseStream API module exposed by the SDK entry point for standalone linking."
+  },
+  {
+    "source": "packages/ai/src/bun-oauth.ts",
+    "upstream": "registerBunOAuthFlows",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "RegisterBunOAuthFlows",
+    "reason": "Registers the statically embedded OAuth flows through the bundled-loader seam."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "BuiltinProvider",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "BuiltinProvider",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "getModel",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "GetModel",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "getModels",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "GetModels",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "getProviders",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "GetProviders",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "ApiStreamFunction",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "ApiStreamFunction",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "ApiStreamSimpleFunction",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "ApiStreamSimpleFunction",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "ApiProvider",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "ApiProvider",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "registerApiProvider",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "RegisterApiProvider",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "getApiProvider",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "GetApiProvider",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "getApiProviders",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "GetApiProviders",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "unregisterApiProviders",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "UnregisterApiProviders",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "registerFauxProvider",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "RegisterFauxProvider",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "registerBuiltInApiProviders",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "RegisterBuiltInApiProviders",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "resetApiProviders",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "ResetApiProviders",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "Stream",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "complete",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "Complete",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "StreamSimple",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "upstream": "completeSimple",
+    "goPackage": "packages/ai/compat",
+    "goSymbol": "CompleteSimple",
+    "reason": "Compat entry point: real Go declaration of the deprecated global API surface."
+  },
+  {
+    "source": "packages/ai/src/compat/extension-oauth-types.ts",
+    "upstream": "OAuthPrompt",
+    "goPackage": "packages/ai/auth/types",
+    "goSymbol": "OAuthPrompt",
+    "reason": "Legacy extension OAuth DTOs at their canonical auth types declaration."
+  },
+  {
+    "source": "packages/ai/src/compat/extension-oauth-types.ts",
+    "upstream": "OAuthAuthInfo",
+    "goPackage": "packages/ai/auth/types",
+    "goSymbol": "OAuthAuthInfo",
+    "reason": "Legacy extension OAuth DTOs at their canonical auth types declaration."
+  },
+  {
+    "source": "packages/ai/src/compat/extension-oauth-types.ts",
+    "upstream": "OAuthDeviceCodeInfo",
+    "goPackage": "packages/ai/auth/types",
+    "goSymbol": "OAuthDeviceCodeInfo",
+    "reason": "Legacy extension OAuth DTOs at their canonical auth types declaration."
+  },
+  {
+    "source": "packages/ai/src/compat/extension-oauth-types.ts",
+    "upstream": "OAuthSelectOption",
+    "goPackage": "packages/ai/auth/types",
+    "goSymbol": "OAuthSelectOption",
+    "reason": "Legacy extension OAuth DTOs at their canonical auth types declaration."
+  },
+  {
+    "source": "packages/ai/src/compat/extension-oauth-types.ts",
+    "upstream": "OAuthSelectPrompt",
+    "goPackage": "packages/ai/auth/types",
+    "goSymbol": "OAuthSelectPrompt",
+    "reason": "Legacy extension OAuth DTOs at their canonical auth types declaration."
+  },
+  {
+    "source": "packages/ai/src/compat/extension-oauth-types.ts",
+    "upstream": "OAuthLoginCallbacks",
+    "goPackage": "packages/ai/auth/types",
+    "goSymbol": "OAuthLoginCallbacks",
+    "reason": "Legacy extension OAuth DTOs at their canonical auth types declaration."
+  },
+  {
+    "source": "packages/ai/src/compat/extension-oauth-types.ts",
+    "upstream": "OAuthCredentials",
+    "goPackage": "packages/ai/auth/types",
+    "goSymbol": "OAuthCredentials",
+    "reason": "Legacy extension OAuth DTOs at their canonical auth types declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "Static",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "Static",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "TSchema",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "TSchema",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "Type",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "Type",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "AnthropicEffort",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "AnthropicEffort",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "AnthropicOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "AnthropicOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "AnthropicThinkingDisplay",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "AnthropicThinkingDisplay",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "AzureOpenAIResponsesOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "AzureOpenAIResponsesOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "BedrockOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "BedrockOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "BedrockThinkingDisplay",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "BedrockThinkingDisplay",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "GoogleOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "GoogleOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "GoogleApiThinkingLevel",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "GoogleApiThinkingLevel",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "ResolvedGoogleThinkingLevel",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "ResolvedGoogleThinkingLevel",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "GoogleVertexOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "GoogleVertexOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "MistralOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "MistralOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OpenAICodexResponsesOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OpenAICodexResponsesOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OpenAICodexWebSocketDebugStats",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OpenAICodexWebSocketDebugStats",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OpenAICompletionsOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OpenAICompletionsOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OpenAIResponsesOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OpenAIResponsesOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "PiMessagesEvent",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "PiMessagesEvent",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "PiMessagesOptions",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "PiMessagesOptions",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "PiMessagesRewriteImpact",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "PiMessagesRewriteImpact",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OAuthAuthInfo",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthAuthInfo",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OAuthDeviceCodeInfo",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthDeviceCodeInfo",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OAuthLoginCallbacks",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthLoginCallbacks",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OAuthPrompt",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthPrompt",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OAuthSelectOption",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthSelectOption",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "OAuthSelectPrompt",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthSelectPrompt",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "contentText",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "ContentText",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "getSystemMessageText",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "GetSystemMessageText",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "renderSystemMessageUpdate",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "RenderSystemMessageUpdate",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/index.ts",
+    "upstream": "uuidv7",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "UUIDv7",
+    "reason": "Root entry point re-export resolved to its typed Go declaration."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamAnthropic",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamAnthropic",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleAnthropic",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleAnthropic",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamAzureOpenAIResponses",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamAzureOpenAIResponses",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleAzureOpenAIResponses",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleAzureOpenAIResponses",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamGoogle",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamGoogle",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleGoogle",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleGoogle",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamGoogleVertex",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamGoogleVertex",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleGoogleVertex",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleGoogleVertex",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamMistral",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamMistral",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleMistral",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleMistral",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamOpenAICodexResponses",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamOpenAICodexResponses",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleOpenAICodexResponses",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleOpenAICodexResponses",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamOpenAICompletions",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamOpenAICompletions",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleOpenAICompletions",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleOpenAICompletions",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamOpenAIResponses",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamOpenAIResponses",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/legacy-api-aliases.ts",
+    "upstream": "streamSimpleOpenAIResponses",
+    "goPackage": "packages/ai",
+    "goSymbol": "StreamSimpleOpenAIResponses",
+    "reason": "Deprecated global stream alias bound to the same lazy API module."
+  },
+  {
+    "source": "packages/ai/src/oauth.ts",
+    "upstream": "OAuthAuthInfo",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthAuthInfo",
+    "reason": "Type-only OAuth compat entry point alias to the auth types declarations."
+  },
+  {
+    "source": "packages/ai/src/oauth.ts",
+    "upstream": "OAuthCredentials",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthCredentials",
+    "reason": "Type-only OAuth compat entry point alias to the auth types declarations."
+  },
+  {
+    "source": "packages/ai/src/oauth.ts",
+    "upstream": "OAuthDeviceCodeInfo",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthDeviceCodeInfo",
+    "reason": "Type-only OAuth compat entry point alias to the auth types declarations."
+  },
+  {
+    "source": "packages/ai/src/oauth.ts",
+    "upstream": "OAuthLoginCallbacks",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthLoginCallbacks",
+    "reason": "Type-only OAuth compat entry point alias to the auth types declarations."
+  },
+  {
+    "source": "packages/ai/src/oauth.ts",
+    "upstream": "OAuthPrompt",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthPrompt",
+    "reason": "Type-only OAuth compat entry point alias to the auth types declarations."
+  },
+  {
+    "source": "packages/ai/src/oauth.ts",
+    "upstream": "OAuthSelectOption",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthSelectOption",
+    "reason": "Type-only OAuth compat entry point alias to the auth types declarations."
+  },
+  {
+    "source": "packages/ai/src/oauth.ts",
+    "upstream": "OAuthSelectPrompt",
+    "goPackage": "packages/ai/sdk",
+    "goSymbol": "OAuthSelectPrompt",
+    "reason": "Type-only OAuth compat entry point alias to the auth types declarations."
+  }
+]

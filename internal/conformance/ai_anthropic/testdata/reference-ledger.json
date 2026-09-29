@@ -1,0 +1,16 @@
+[
+  {
+    "source": "packages/ai/test/anthropic-cache-write-1h-cost.test.ts",
+    "sha256": "6fa0d93f2c475786aaf4c891dbdefd176cada6658b1fbb8ad71d3e221fa1f2fa",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-anthropic",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

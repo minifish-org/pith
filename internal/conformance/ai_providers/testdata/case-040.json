@@ -1,0 +1,126 @@
+{
+  "batch": "ai-providers",
+  "id": "xiaomiProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/xiaomi.ts",
+    "fn": "xiaomiProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "xiaomi",
+      "name": "Xiaomi",
+      "models": [
+        {
+          "id": "mimo-v2.5",
+          "api": "openai-completions",
+          "provider": "xiaomi",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cacheRead": 0.0028,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.5-pro",
+          "api": "openai-completions",
+          "provider": "xiaomi",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.435,
+            "output": 0.87,
+            "cacheRead": 0.0036,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.5-pro-ultraspeed",
+          "api": "openai-completions",
+          "provider": "xiaomi",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 1.305,
+            "output": 2.61,
+            "cacheRead": 0.0108,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.6-flash",
+          "api": "openai-completions",
+          "provider": "xiaomi",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cacheRead": 0.0028,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.6-pro",
+          "api": "openai-completions",
+          "provider": "xiaomi",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.435,
+            "output": 0.87,
+            "cacheRead": 0.0036,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mimo-v2.6-pro-ultraspeed",
+          "api": "openai-completions",
+          "provider": "xiaomi",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 4.35,
+            "output": 8.7,
+            "cacheRead": 0.036,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

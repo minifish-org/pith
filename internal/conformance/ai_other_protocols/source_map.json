@@ -1,0 +1,198 @@
+[
+  {
+    "source": "packages/ai/src/api/cloudflare-ai-binding.ts",
+    "upstream": "AiBinding",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AiBinding",
+    "reason": "Structural Go form of the Workers AI binding (optional fetch passthrough plus the Ai-unique log id)."
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare-ai-binding.ts",
+    "upstream": "CLOUDFLARE_GATEWAY_BINDING_AUTH_SENTINEL",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "CloudflareGatewayBindingAuthSentinel",
+    "reason": "Exported constant for the pre-authenticated binding sentinel value."
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare-ai-binding.ts",
+    "upstream": "createAiBindingFetch",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "CreateAiBindingFetch",
+    "reason": "Builds a types.FetchFunction over the binding fetch; missing fetch is an explicit error."
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare.ts",
+    "upstream": "CLOUDFLARE_WORKERS_AI_BASE_URL",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "CloudflareWorkersAIBaseURL",
+    "reason": "Workers AI direct endpoint constant."
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare.ts",
+    "upstream": "CLOUDFLARE_AI_GATEWAY_COMPAT_BASE_URL",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "CloudflareAIGatewayCompatBaseURL",
+    "reason": "AI Gateway unified API endpoint constant."
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare.ts",
+    "upstream": "CLOUDFLARE_AI_GATEWAY_OPENAI_BASE_URL",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "CloudflareAIGatewayOpenAIBaseURL",
+    "reason": "AI Gateway OpenAI passthrough constant."
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare.ts",
+    "upstream": "CLOUDFLARE_AI_GATEWAY_ANTHROPIC_BASE_URL",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "CloudflareAIGatewayAnthropicBaseURL",
+    "reason": "AI Gateway Anthropic passthrough constant."
+  },
+  {
+    "source": "packages/ai/src/api/mistral-conversations.lazy.ts",
+    "upstream": "mistralConversationsApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "MistralConversationsApi",
+    "reason": "Lazy provider-stream factory; load failure terminates the returned stream."
+  },
+  {
+    "source": "packages/ai/src/api/mistral-conversations.ts",
+    "upstream": "MistralOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "MistralOptions",
+    "reason": "Provider-specific options DTO extending the shared stream options."
+  },
+  {
+    "source": "packages/ai/src/api/mistral-conversations.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "MistralConversationsStream",
+    "reason": "Colliding protocol stream name prefixed by provider as required; full SSE implementation."
+  },
+  {
+    "source": "packages/ai/src/api/mistral-conversations.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "MistralConversationsStreamSimple",
+    "reason": "Colliding simple-stream name prefixed by provider; maps SimpleStreamOptions to Mistral options."
+  },
+  {
+    "source": "packages/ai/src/api/openrouter-images.lazy.ts",
+    "upstream": "openrouterImagesApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenRouterImagesApi",
+    "reason": "Lazy image-provider factory returning the types.ProviderImages contract."
+  },
+  {
+    "source": "packages/ai/src/api/openrouter-images.ts",
+    "upstream": "generateImages",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GenerateOpenRouterImages",
+    "reason": "Image generation function; prefixed to keep the api-package symbol distinct from the images entry point."
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.lazy.ts",
+    "upstream": "piMessagesApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "PiMessagesApi",
+    "reason": "Lazy provider-stream factory; load failure terminates the returned stream."
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "upstream": "PiMessagesOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "PiMessagesOptions",
+    "reason": "Provider-specific pi-messages options extending the shared stream options."
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "upstream": "PiMessagesRewriteImpact",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "PiMessagesRewriteImpact",
+    "reason": "Server-side rewrite impact summary DTO."
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "upstream": "PiMessagesEvent",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "PiMessagesEvent",
+    "reason": "Typed wire representation of the serialized assistant-message SSE events."
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "upstream": "PiMessagesResponseError",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "PiMessagesResponseError",
+    "reason": "Response error carrying the HTTP code and diagnostic details."
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "PiMessagesStream",
+    "reason": "Colliding protocol stream name prefixed by provider as required; full SSE implementation."
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "PiMessagesStreamSimple",
+    "reason": "Colliding simple-stream name prefixed by provider; forwards reasoning/toolChoice."
+  },
+  {
+    "source": "packages/ai/src/image-models.ts",
+    "upstream": "getImageModel",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "GetImageModel",
+    "reason": "Static catalog lookup by provider and model id."
+  },
+  {
+    "source": "packages/ai/src/image-models.ts",
+    "upstream": "getImageProviders",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "GetImageProviders",
+    "reason": "Lists known image provider ids from the generated catalog."
+  },
+  {
+    "source": "packages/ai/src/image-models.ts",
+    "upstream": "getImageModels",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "GetImageModels",
+    "reason": "Lists known models for a provider from the generated catalog."
+  },
+  {
+    "source": "packages/ai/src/images-api-registry.ts",
+    "upstream": "ImagesApiFunction",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "ImagesAPIFunction",
+    "reason": "Typed image-generation function alias used by the registry."
+  },
+  {
+    "source": "packages/ai/src/images-api-registry.ts",
+    "upstream": "ImagesApiProvider",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "ImagesAPIProvider",
+    "reason": "API id plus generation implementation registered for image APIs."
+  },
+  {
+    "source": "packages/ai/src/images-api-registry.ts",
+    "upstream": "registerImagesApiProvider",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "RegisterImagesAPIProvider",
+    "reason": "Registers a provider, wrapping generation with the api-mismatch check."
+  },
+  {
+    "source": "packages/ai/src/images-api-registry.ts",
+    "upstream": "getImagesApiProvider",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "GetImagesAPIProvider",
+    "reason": "Looks up the registered provider for an API."
+  },
+  {
+    "source": "packages/ai/src/images.ts",
+    "upstream": "generateImages",
+    "goPackage": "packages/ai/images",
+    "goSymbol": "GenerateImages",
+    "reason": "Public image-generation entry resolving the registered API provider."
+  }
+]

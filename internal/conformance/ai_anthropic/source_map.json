@@ -1,0 +1,44 @@
+[
+  {
+    "source": "packages/ai/src/api/anthropic-messages.lazy.ts",
+    "upstream": "anthropicMessagesApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AnthropicMessagesApi",
+    "reason": "Lazy module factory returning the real Anthropic Messages ProviderStreams; the Go lazy loader is LazyApi, so the exported factory keeps the upstream lazy entry point name."
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.ts",
+    "upstream": "AnthropicEffort",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AnthropicEffort",
+    "reason": "String union of adaptive-thinking effort levels, translated to a named string type with the same wire values."
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.ts",
+    "upstream": "AnthropicThinkingDisplay",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AnthropicThinkingDisplay",
+    "reason": "String union of thinking display modes, translated to a named string type with the same wire values."
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.ts",
+    "upstream": "AnthropicOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AnthropicOptions",
+    "reason": "Anthropic-specific stream options; the Go struct embeds types.StreamOptions and adds thinking/effort/display/tool-choice/client fields."
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AnthropicMessagesStream",
+    "reason": "Typed streaming entry point; prefixed by provider to avoid colliding with the other protocol stream functions in package api."
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AnthropicMessagesStreamSimple",
+    "reason": "Unified-reasoning entry point mapping SimpleStreamOptions to AnthropicOptions; prefixed by provider to avoid package-level collisions."
+  }
+]

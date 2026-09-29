@@ -1,0 +1,81 @@
+{
+  "batch": "ai-bedrock",
+  "id": "bedrock-cancelled",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "api": "bedrock-converse-stream",
+    "mode": "cancelled",
+    "status": 200,
+    "body": "{\"message\":\"fixture denied\"}",
+    "bedrock": [
+      {
+        "messageStart": {
+          "role": "assistant"
+        }
+      },
+      {
+        "contentBlockStart": {
+          "contentBlockIndex": 0,
+          "start": {}
+        }
+      },
+      {
+        "contentBlockDelta": {
+          "contentBlockIndex": 0,
+          "delta": {
+            "text": "你好"
+          }
+        }
+      },
+      {
+        "contentBlockStop": {
+          "contentBlockIndex": 0
+        }
+      },
+      {
+        "messageStop": {
+          "stopReason": "end_turn"
+        }
+      },
+      {
+        "metadata": {
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 1,
+            "totalTokens": 3
+          },
+          "metrics": {
+            "latencyMs": 1
+          }
+        }
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [],
+      "events": [
+        "error"
+      ],
+      "content": [],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "aborted",
+      "responseId": null
+    }
+  }
+}

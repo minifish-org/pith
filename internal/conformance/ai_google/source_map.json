@@ -1,0 +1,184 @@
+[
+  {
+    "source": "packages/ai/src/api/google-generative-ai.lazy.ts",
+    "upstream": "googleGenerativeAIApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleGenerativeAIApi",
+    "reason": "Lazy provider factory: the Go port uses the shared LazyApi loader and returns the real Google Generative AI ProviderStreams."
+  },
+  {
+    "source": "packages/ai/src/api/google-generative-ai.ts",
+    "upstream": "GoogleOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleOptions",
+    "reason": "Provider-specific stream options; the Go struct embeds types.StreamOptions and adds toolChoice/thinking."
+  },
+  {
+    "source": "packages/ai/src/api/google-generative-ai.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleGenerativeAIStream",
+    "reason": "Typed streaming entry point, prefixed by provider to avoid colliding with the other protocol stream functions in package api."
+  },
+  {
+    "source": "packages/ai/src/api/google-generative-ai.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleGenerativeAIStreamSimple",
+    "reason": "Unified-reasoning entry point, prefixed by provider to avoid package-level collisions."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "GoogleApiThinkingLevel",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleApiThinkingLevel",
+    "reason": "Discrete Google thinking-level string union, translated to a named string type with identical wire values."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "ResolvedGoogleThinkingLevel",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ResolvedGoogleThinkingLevel",
+    "reason": "Pi thinking level restricted to the levels Google supports, represented as a named string type."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "resolveGoogleThinkingLevel",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ResolveGoogleThinkingLevel",
+    "reason": "Resolves a Pi level or model thinkingLevelMap value to a standard Google level; returns the upstream error text for unsupported mappings."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "usesGoogleThinkingLevel",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "UsesGoogleThinkingLevel",
+    "reason": "Selects the discrete thinkingLevel control for Gemini 3, Gemini flash-latest and Gemma 4 model ids."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "toGoogleThinkingLevel",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ToGoogleThinkingLevel",
+    "reason": "Maps a resolved Pi level to the Google wire enum."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "toGoogleSdkThinkingLevel",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ToGoogleSdkThinkingLevel",
+    "reason": "Maps a Google wire enum value to the SDK ThinkingLevel enum value."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "getDisabledGoogleThinkingConfig",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GetDisabledGoogleThinkingConfig",
+    "reason": "Builds the thinkingBudget=0 or discrete disabled thinking config for a model."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "isThinkingPart",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "IsThinkingPart",
+    "reason": "Definitive thought===true check; a thoughtSignature alone is not thinking content."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "retainThoughtSignature",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "RetainThoughtSignature",
+    "reason": "Keeps the last non-empty signature within a streamed block when later deltas omit it."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "requiresToolCallId",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "RequiresToolCallID",
+    "reason": "Reports whether a model needs explicit function call/response ids (Claude, gpt-oss, Gemini 3+)."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "convertMessages",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleConvertMessages",
+    "reason": "Converts internal messages to Gemini Content[], including thinking signatures, tool ids and image tool-result routing."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "convertTools",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleConvertTools",
+    "reason": "Converts tools to Gemini function declarations, with the legacy OpenAPI parameters sanitizer."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "supportsGoogleStrictToolSampling",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "SupportsGoogleStrictToolSampling",
+    "reason": "Gemini 3+ strict/validated tool sampling support."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "mapToolChoice",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "MapGoogleToolChoice",
+    "reason": "Maps the tool choice string to the Gemini function-calling mode."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "resolveGoogleFunctionCallingMode",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ResolveGoogleFunctionCallingMode",
+    "reason": "Resolves AUTO/NONE/ANY/VALIDATED from the tool set and tool choice."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "mapStopReason",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "MapGoogleStopReason",
+    "reason": "Maps a Gemini finish reason to a Pi stop reason, returning the unhandled-reason error."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "mapStopReasonString",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "MapGoogleStopReasonString",
+    "reason": "Maps a raw finish-reason string for raw API responses."
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "upstream": "retryGoogleRequest",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "RetryGoogleRequest",
+    "reason": "Wraps the shared provider retry policy for headers-less Google SDK errors."
+  },
+  {
+    "source": "packages/ai/src/api/google-vertex.lazy.ts",
+    "upstream": "googleVertexApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleVertexApi",
+    "reason": "Lazy provider factory: the Go port uses the shared LazyApi loader and returns the real Google Vertex ProviderStreams."
+  },
+  {
+    "source": "packages/ai/src/api/google-vertex.ts",
+    "upstream": "GoogleVertexOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleVertexOptions",
+    "reason": "Provider-specific Vertex options; the Go struct adds project/location to StreamOptions."
+  },
+  {
+    "source": "packages/ai/src/api/google-vertex.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleVertexStream",
+    "reason": "Typed Vertex streaming entry point, prefixed by provider to avoid package-level collisions."
+  },
+  {
+    "source": "packages/ai/src/api/google-vertex.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GoogleVertexStreamSimple",
+    "reason": "Unified-reasoning Vertex entry point, prefixed by provider to avoid package-level collisions."
+  }
+]

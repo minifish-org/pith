@@ -1,0 +1,29 @@
+{
+  "batch": "ai-utils",
+  "id": "calculateContextTokens-0",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/estimate.ts",
+    "fn": "calculateContextTokens",
+    "args": [
+      {
+        "input": 10,
+        "output": 3,
+        "cacheRead": 2,
+        "cacheWrite": 1,
+        "totalTokens": 16,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      }
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": 16
+  }
+}

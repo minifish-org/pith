@@ -1,0 +1,38 @@
+{
+  "batch": "ai-openai",
+  "id": "openai-completions-cancelled",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/openai-completions.ts",
+    "api": "openai-completions",
+    "mode": "cancelled",
+    "body": "event: message\ndata: {\"id\":\"r1\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"你好\"},\"finish_reason\":null}]}\n\nevent: message\ndata: {\"id\":\"r1\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"completion_tokens\":1,\"total_tokens\":3}}\n\ndata: [DONE]\n\n",
+    "status": 200
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [],
+      "events": [
+        "error"
+      ],
+      "content": [],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "aborted",
+      "responseId": null
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "batch": "ai-models",
+  "id": "model-store-false",
+  "input": {
+    "op": "model-store",
+    "file": "packages/ai/src/models-store.ts",
+    "aborted": false
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "original": {
+        "models": [
+          {
+            "id": "one"
+          }
+        ],
+        "etag": "\"v1\"",
+        "checkedAt": 0
+      },
+      "reread": {
+        "models": [
+          {
+            "id": "one"
+          }
+        ],
+        "etag": "\"v1\"",
+        "checkedAt": 0
+      },
+      "deleted": {
+        "$undefined": true
+      }
+    }
+  }
+}

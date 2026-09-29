@@ -1,0 +1,71 @@
+{
+  "batch": "ai-providers",
+  "id": "antLingProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/ant-ling.ts",
+    "fn": "antLingProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "ant-ling",
+      "name": "Ant Ling",
+      "models": [
+        {
+          "id": "Ling-2.6-1T",
+          "api": "openai-completions",
+          "provider": "ant-ling",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.06,
+            "output": 0.25,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 65536
+        },
+        {
+          "id": "Ling-2.6-flash",
+          "api": "openai-completions",
+          "provider": "ant-ling",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.01,
+            "output": 0.02,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 65536
+        },
+        {
+          "id": "Ring-2.6-1T",
+          "api": "openai-completions",
+          "provider": "ant-ling",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.06,
+            "output": 0.25,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 65536
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

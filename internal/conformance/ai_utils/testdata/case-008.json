@@ -1,0 +1,16 @@
+{
+  "batch": "ai-utils",
+  "id": "contentText-0",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/text.ts",
+    "fn": "contentText",
+    "args": [
+      ""
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": ""
+  }
+}

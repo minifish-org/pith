@@ -1,0 +1,13 @@
+{
+  "batch": "ai-auth",
+  "id": "credentials-true",
+  "input": {
+    "op": "credentials",
+    "file": "packages/ai/src/auth/credential-store.ts",
+    "aborted": true
+  },
+  "expected": {
+    "ok": false,
+    "error": "This operation was aborted"
+  }
+}

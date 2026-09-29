@@ -1,0 +1,60 @@
+{
+  "batch": "ai-foundation",
+  "id": "telemetry-true",
+  "input": {
+    "op": "telemetry",
+    "file": "packages/telemetry/src/memory.ts",
+    "fail": true
+  },
+  "expected": {
+    "ok": true,
+    "value": [
+      {
+        "id": 1,
+        "parentId": null,
+        "name": "parent",
+        "attributes": {
+          "empty": "",
+          "zero": 0,
+          "flag": false
+        },
+        "events": [
+          {
+            "name": "begin",
+            "attributes": {
+              "values": [
+                1,
+                2
+              ]
+            }
+          }
+        ],
+        "status": {
+          "status": "error",
+          "error": {
+            "name": "Error",
+            "message": "fixture error"
+          }
+        },
+        "settled": true,
+        "endSequence": 2
+      },
+      {
+        "id": 2,
+        "parentId": 1,
+        "name": "child",
+        "attributes": {},
+        "events": [],
+        "status": {
+          "status": "error",
+          "error": {
+            "name": "Error",
+            "message": "fixture error"
+          }
+        },
+        "settled": true,
+        "endSequence": 1
+      }
+    ]
+  }
+}

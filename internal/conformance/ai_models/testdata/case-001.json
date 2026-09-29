@@ -1,0 +1,13 @@
+{
+  "batch": "ai-models",
+  "id": "model-store-true",
+  "input": {
+    "op": "model-store",
+    "file": "packages/ai/src/models-store.ts",
+    "aborted": true
+  },
+  "expected": {
+    "ok": false,
+    "error": "This operation was aborted"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "batch": "ai-providers",
+  "id": "kimiCodingProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/kimi-coding.ts",
+    "fn": "kimiCodingProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "kimi-coding",
+      "name": "Kimi For Coding",
+      "models": [
+        {
+          "id": "k3",
+          "api": "anthropic-messages",
+          "provider": "kimi-coding",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cacheRead": 0.3,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        },
+        {
+          "id": "k3-256k",
+          "api": "anthropic-messages",
+          "provider": "kimi-coding",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 131072
+        },
+        {
+          "id": "kimi-for-coding",
+          "api": "anthropic-messages",
+          "provider": "kimi-coding",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.95,
+            "output": 4,
+            "cacheRead": 0.19,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 32768
+        },
+        {
+          "id": "kimi-for-coding-highspeed",
+          "api": "anthropic-messages",
+          "provider": "kimi-coding",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.9,
+            "output": 8,
+            "cacheRead": 0.38,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 32768
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

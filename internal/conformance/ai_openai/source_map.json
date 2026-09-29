@@ -1,0 +1,233 @@
+[
+  {
+    "source": "packages/ai/src/api/azure-openai-responses.lazy.ts",
+    "upstream": "azureOpenAIResponsesApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AzureOpenAIResponsesApi",
+    "reason": "Lazy loader for the Azure Responses module; returns the statically linked implementation under the shared ProviderStreams contract."
+  },
+  {
+    "source": "packages/ai/src/api/azure-openai-responses.ts",
+    "upstream": "AzureOpenAIResponsesOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AzureOpenAIResponsesOptions",
+    "reason": "Azure Responses stream option DTO, including the Azure endpoint overrides."
+  },
+  {
+    "source": "packages/ai/src/api/azure-openai-responses.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AzureOpenAIResponsesStream",
+    "reason": "Provider-prefixed streaming entry point for the Azure OpenAI Responses protocol."
+  },
+  {
+    "source": "packages/ai/src/api/azure-openai-responses.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "AzureOpenAIResponsesStreamSimple",
+    "reason": "Provider-prefixed unified-reasoning entry point for Azure OpenAI Responses."
+  },
+  {
+    "source": "packages/ai/src/api/github-copilot-headers.ts",
+    "upstream": "inferCopilotInitiator",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "InferCopilotInitiator",
+    "reason": "Derives the Copilot X-Initiator value from the last transcript message."
+  },
+  {
+    "source": "packages/ai/src/api/github-copilot-headers.ts",
+    "upstream": "hasCopilotVisionInput",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "HasCopilotVisionInput",
+    "reason": "Detects image input so the Copilot vision request header is emitted."
+  },
+  {
+    "source": "packages/ai/src/api/github-copilot-headers.ts",
+    "upstream": "buildCopilotDynamicHeaders",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "BuildCopilotDynamicHeaders",
+    "reason": "Builds the dynamic Copilot headers merged into provider requests."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.lazy.ts",
+    "upstream": "openAICodexResponsesApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICodexResponsesApi",
+    "reason": "Lazy loader for the Codex Responses module under the shared ProviderStreams contract."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "upstream": "OpenAICodexResponsesOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICodexResponsesOptions",
+    "reason": "Codex Responses stream option DTO, including verbosity and WebSocket controls."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICodexResponsesStream",
+    "reason": "Provider-prefixed streaming entry point for the Codex Responses protocol."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICodexResponsesStreamSimple",
+    "reason": "Provider-prefixed unified-reasoning entry point for Codex Responses."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "upstream": "OpenAICodexWebSocketDebugStats",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICodexWebSocketDebugStats",
+    "reason": "Per-session WebSocket connection and reuse counters."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "upstream": "getOpenAICodexWebSocketDebugStats",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "GetOpenAICodexWebSocketDebugStats",
+    "reason": "Reads a snapshot of the Codex WebSocket debug counters."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "upstream": "resetOpenAICodexWebSocketDebugStats",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ResetOpenAICodexWebSocketDebugStats",
+    "reason": "Clears Codex WebSocket debug counters for a session or all sessions."
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "upstream": "closeOpenAICodexWebSocketSessions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "CloseOpenAICodexWebSocketSessions",
+    "reason": "Closes cached Codex WebSocket sessions on explicit cleanup."
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.lazy.ts",
+    "upstream": "openAICompletionsApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICompletionsApi",
+    "reason": "Lazy loader for the completions module under the shared ProviderStreams contract."
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.ts",
+    "upstream": "OpenAICompletionsOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICompletionsOptions",
+    "reason": "Chat completions stream option DTO, including tool choice and thinking budgets."
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.ts",
+    "upstream": "ConvertCompletionsMessagesOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ConvertCompletionsMessagesOptions",
+    "reason": "Options for completions message conversion (grammar tool input properties)."
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICompletionsStream",
+    "reason": "Provider-prefixed streaming entry point for chat completions."
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAICompletionsStreamSimple",
+    "reason": "Provider-prefixed unified-reasoning entry point for chat completions."
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.ts",
+    "upstream": "convertMessages",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ConvertMessages",
+    "reason": "Converts a transcript into Chat Completions message params, including compat repairs."
+  },
+  {
+    "source": "packages/ai/src/api/openai-prompt-cache.ts",
+    "upstream": "OPENAI_PROMPT_CACHE_KEY_MAX_LENGTH",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAIPromptCacheKeyMaxLength",
+    "reason": "Provider prompt-cache key length limit."
+  },
+  {
+    "source": "packages/ai/src/api/openai-prompt-cache.ts",
+    "upstream": "clampOpenAIPromptCacheKey",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ClampOpenAIPromptCacheKey",
+    "reason": "Truncates a prompt-cache key to the provider limit by Unicode code points."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "upstream": "OpenAIResponsesStreamOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAIResponsesStreamOptions",
+    "reason": "Shared Responses stream processing options (service tier, grammar tool inputs)."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "upstream": "ConvertResponsesMessagesOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ConvertResponsesMessagesOptions",
+    "reason": "Options for Responses input conversion (system prompt, tool additions, grammar tools)."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "upstream": "ConvertResponsesToolsOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ConvertResponsesToolsOptions",
+    "reason": "Options for Responses tool conversion (strict mode, grammar tools, tool-search results)."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "upstream": "convertResponsesMessages",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ConvertResponsesMessages",
+    "reason": "Converts a transcript into Responses input items with provider-aware tool-call ids."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "upstream": "convertResponsesTools",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ConvertResponsesTools",
+    "reason": "Converts tools into function/custom Responses tool declarations."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "upstream": "processResponsesStream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "ProcessResponsesStream",
+    "reason": "Ordered Responses SSE processor covering text, reasoning, tool calls, usage and stop reasons."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses.lazy.ts",
+    "upstream": "openAIResponsesApi",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAIResponsesApi",
+    "reason": "Lazy loader for the OpenAI Responses module under the shared ProviderStreams contract."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses.ts",
+    "upstream": "OpenAIResponsesOptions",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAIResponsesOptions",
+    "reason": "OpenAI Responses stream option DTO, including reasoning and service tier."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses.ts",
+    "upstream": "stream",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAIResponsesStream",
+    "reason": "Provider-prefixed streaming entry point for the OpenAI Responses protocol."
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses.ts",
+    "upstream": "streamSimple",
+    "goPackage": "packages/ai/api",
+    "goSymbol": "OpenAIResponsesStreamSimple",
+    "reason": "Provider-prefixed unified-reasoning entry point for OpenAI Responses."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "batch": "ai-utils",
+  "id": "parseJsonWithRepair-0",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/json-parse.ts",
+    "fn": "parseJsonWithRepair",
+    "args": [
+      "{\"x\":1}"
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "x": 1
+    }
+  }
+}

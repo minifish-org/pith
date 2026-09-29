@@ -1,0 +1,80 @@
+{
+  "batch": "ai-google",
+  "id": "google-generative-ai-text",
+  "input": {
+    "op": "protocol",
+    "file": "packages/ai/src/api/google-generative-ai.ts",
+    "api": "google-generative-ai",
+    "mode": "text",
+    "body": "data: {\"candidates\":[{\"index\":0,\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"你好\"}]},\"finishReason\":\"STOP\"}],\"usageMetadata\":{\"promptTokenCount\":2,\"candidatesTokenCount\":1,\"totalTokenCount\":3}}\n\n",
+    "status": 200
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/models/fixture:streamGenerateContent?alt=sse",
+          "body": {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "hello"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "systemInstruction": {
+              "parts": [
+                {
+                  "text": "system"
+                }
+              ],
+              "role": "user"
+            },
+            "generationConfig": {
+              "temperature": 0,
+              "maxOutputTokens": 16
+            }
+          }
+        }
+      ],
+      "events": [
+        "start",
+        "text_start",
+        "text_delta",
+        "text_end",
+        "done"
+      ],
+      "content": [
+        {
+          "type": "text",
+          "text": "你好",
+          "textSignature": {
+            "$undefined": true
+          }
+        }
+      ],
+      "usage": {
+        "input": 2,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 3,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "responseId": null
+    }
+  }
+}

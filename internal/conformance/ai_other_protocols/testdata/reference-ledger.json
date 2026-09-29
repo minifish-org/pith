@@ -1,0 +1,16 @@
+[
+  {
+    "source": "packages/ai/test/images.test.ts",
+    "sha256": "d44702aa4d1b5186a833e7f4c844ee996c08d303a8d8dc79ed0d513960f27ff8",
+    "modules": [
+      "ai"
+    ],
+    "disposition": "reference",
+    "reason": "AI/telemetry 行为与生成数据规则",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "ai-other-protocols",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

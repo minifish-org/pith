@@ -1,0 +1,482 @@
+{
+  "outputs": [
+    "packages/ai/utils/eventstream/event_stream.go",
+    "packages/ai/utils/eventstream/event_stream_test.go",
+    "packages/ai/types/types.go",
+    "packages/ai/utils/assistant_event_stream.go",
+    "packages/telemetry/index.go",
+    "packages/telemetry/memory.go",
+    "packages/telemetry/noop.go",
+    "packages/telemetry/testing/conformance.go",
+    "packages/telemetry/testing/index.go",
+    "packages/telemetry/testing/types.go",
+    "internal/conformance/ai_foundation_types/source_map.json",
+    "internal/conformance/ai_foundation_types/adapter_test.go",
+    "packages/ai/types/ai_foundation_types_test.go",
+    "packages/ai/utils/ai_foundation_types_test.go",
+    "packages/telemetry/ai_foundation_types_test.go",
+    "packages/telemetry/testing/ai_foundation_types_test.go",
+    "packages/ai/catalog/image_models_generated.go",
+    "packages/ai/catalog/model_catalog.go",
+    "packages/ai/catalog/models_generated.go",
+    "packages/ai/catalog/amazon_bedrock_models.go",
+    "packages/ai/catalog/ant_ling_models.go",
+    "packages/ai/catalog/anthropic_models.go",
+    "packages/ai/catalog/azure_openai_responses_models.go",
+    "packages/ai/catalog/baseten_models.go",
+    "packages/ai/catalog/cerebras_models.go",
+    "packages/ai/catalog/cloudflare_ai_gateway_models.go",
+    "packages/ai/catalog/cloudflare_workers_ai_models.go",
+    "packages/ai/catalog/data_json_d.go",
+    "packages/ai/catalog/deepseek_models.go",
+    "packages/ai/catalog/fireworks_models.go",
+    "packages/ai/catalog/github_copilot_models.go",
+    "packages/ai/catalog/google_vertex_models.go",
+    "packages/ai/catalog/google_models.go",
+    "packages/ai/catalog/groq_models.go",
+    "packages/ai/catalog/huggingface_models.go",
+    "packages/ai/catalog/kimi_coding_models.go",
+    "packages/ai/catalog/meta_models.go",
+    "packages/ai/catalog/minimax_cn_models.go",
+    "packages/ai/catalog/minimax_models.go",
+    "packages/ai/catalog/mistral_models.go",
+    "packages/ai/catalog/moonshotai_cn_models.go",
+    "packages/ai/catalog/moonshotai_models.go",
+    "packages/ai/catalog/nvidia_models.go",
+    "packages/ai/catalog/openai_codex_models.go",
+    "packages/ai/catalog/openai_models.go",
+    "packages/ai/catalog/opencode_go_models.go",
+    "packages/ai/catalog/opencode_models.go",
+    "packages/ai/catalog/openrouter_models.go",
+    "packages/ai/catalog/qwen_token_plan_cn_models.go",
+    "packages/ai/catalog/qwen_token_plan_individual_models.go",
+    "packages/ai/catalog/qwen_token_plan_models.go",
+    "packages/ai/catalog/radius_config.go",
+    "packages/ai/catalog/radius_models.go",
+    "packages/ai/catalog/together_models.go",
+    "packages/ai/catalog/vercel_ai_gateway_models.go",
+    "packages/ai/catalog/xai_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_ams_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_cn_models.go",
+    "packages/ai/catalog/xiaomi_token_plan_sgp_models.go",
+    "packages/ai/catalog/xiaomi_models.go",
+    "packages/ai/catalog/zai_coding_cn_models.go",
+    "packages/ai/catalog/zai_models.go",
+    "internal/conformance/ai_foundation_catalog/source_map.json",
+    "internal/conformance/ai_foundation_catalog/adapter_test.go",
+    "packages/ai/catalog/ai_foundation_catalog_test.go",
+    "packages/ai/api/constrained_sampling.go",
+    "packages/ai/api/lazy.go",
+    "packages/ai/api/simple_options.go",
+    "packages/ai/api/transform_messages.go",
+    "packages/ai/utils/abort_signals.go",
+    "packages/ai/utils/abort.go",
+    "packages/ai/utils/assistant_message_frame.go",
+    "packages/ai/utils/diagnostics.go",
+    "packages/ai/utils/error_body.go",
+    "packages/ai/utils/estimate.go",
+    "packages/ai/utils/hash.go",
+    "packages/ai/utils/headers.go",
+    "packages/ai/utils/json_parse.go",
+    "packages/ai/utils/node_http_proxy.go",
+    "packages/ai/utils/overflow.go",
+    "packages/ai/utils/pi_user_agent.go",
+    "packages/ai/utils/provider_env.go",
+    "packages/ai/utils/provider_retry.go",
+    "packages/ai/utils/retry.go",
+    "packages/ai/utils/sanitize_unicode.go",
+    "packages/ai/utils/sleep.go",
+    "packages/ai/utils/text.go",
+    "packages/ai/utils/transcript.go",
+    "packages/ai/utils/typebox_helpers.go",
+    "packages/ai/utils/uuid.go",
+    "packages/ai/utils/validation.go",
+    "internal/conformance/ai_utils/source_map.json",
+    "internal/conformance/ai_utils/adapter_test.go",
+    "packages/ai/api/ai_utils_test.go",
+    "packages/ai/utils/ai_utils_test.go"
+  ],
+  "symbols": [
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "makeStrictJsonSchema"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "getJsonSchemaToolParameters"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "GrammarConstrainedSampling"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "GrammarToolInputJsonBuffer"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "getGrammarToolInput"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "appendGrammarToolInputJsonDelta"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "resolveJsonSchemaStrictSampling"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "resolveGrammarConstrainedSampling"
+    },
+    {
+      "source": "packages/ai/src/api/constrained-sampling.ts",
+      "upstream": "createGrammarToolInputProperties"
+    },
+    {
+      "source": "packages/ai/src/api/lazy.ts",
+      "upstream": "lazyStream"
+    },
+    {
+      "source": "packages/ai/src/api/lazy.ts",
+      "upstream": "LazyApiCapabilities"
+    },
+    {
+      "source": "packages/ai/src/api/lazy.ts",
+      "upstream": "lazyApi"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "clampMaxTokensToContext"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "buildBaseOptions"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "MIN_ANSWER_TOKENS"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "DEFAULT_THINKING_BUDGETS"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "clampReasoning"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "thinkingBudgetForLevel"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "clampThinkingBudgetToAnswerRoom"
+    },
+    {
+      "source": "packages/ai/src/api/simple-options.ts",
+      "upstream": "adjustMaxTokensForThinking"
+    },
+    {
+      "source": "packages/ai/src/api/transform-messages.ts",
+      "upstream": "transformMessages"
+    },
+    {
+      "source": "packages/ai/src/utils/abort-signals.ts",
+      "upstream": "CombinedAbortSignal"
+    },
+    {
+      "source": "packages/ai/src/utils/abort-signals.ts",
+      "upstream": "combineAbortSignals"
+    },
+    {
+      "source": "packages/ai/src/utils/abort.ts",
+      "upstream": "operationSignal"
+    },
+    {
+      "source": "packages/ai/src/utils/abort.ts",
+      "upstream": "raceWithAbortSignal"
+    },
+    {
+      "source": "packages/ai/src/utils/assistant-message-frame.ts",
+      "upstream": "AssistantMessageFrame"
+    },
+    {
+      "source": "packages/ai/src/utils/assistant-message-frame.ts",
+      "upstream": "AssistantMessageFrameEncoder"
+    },
+    {
+      "source": "packages/ai/src/utils/assistant-message-frame.ts",
+      "upstream": "reduceAssistantMessageFrames"
+    },
+    {
+      "source": "packages/ai/src/utils/diagnostics.ts",
+      "upstream": "DiagnosticErrorInfo"
+    },
+    {
+      "source": "packages/ai/src/utils/diagnostics.ts",
+      "upstream": "AssistantMessageDiagnostic"
+    },
+    {
+      "source": "packages/ai/src/utils/diagnostics.ts",
+      "upstream": "formatThrownValue"
+    },
+    {
+      "source": "packages/ai/src/utils/diagnostics.ts",
+      "upstream": "extractDiagnosticError"
+    },
+    {
+      "source": "packages/ai/src/utils/diagnostics.ts",
+      "upstream": "createAssistantMessageDiagnostic"
+    },
+    {
+      "source": "packages/ai/src/utils/diagnostics.ts",
+      "upstream": "appendAssistantMessageDiagnostic"
+    },
+    {
+      "source": "packages/ai/src/utils/error-body.ts",
+      "upstream": "MAX_PROVIDER_ERROR_BODY_CHARS"
+    },
+    {
+      "source": "packages/ai/src/utils/error-body.ts",
+      "upstream": "NormalizedProviderError"
+    },
+    {
+      "source": "packages/ai/src/utils/error-body.ts",
+      "upstream": "normalizeProviderError"
+    },
+    {
+      "source": "packages/ai/src/utils/error-body.ts",
+      "upstream": "formatProviderError"
+    },
+    {
+      "source": "packages/ai/src/utils/error-body.ts",
+      "upstream": "truncateErrorText"
+    },
+    {
+      "source": "packages/ai/src/utils/error-body.ts",
+      "upstream": "safeJsonStringify"
+    },
+    {
+      "source": "packages/ai/src/utils/estimate.ts",
+      "upstream": "ContextUsageEstimate"
+    },
+    {
+      "source": "packages/ai/src/utils/estimate.ts",
+      "upstream": "calculateContextTokens"
+    },
+    {
+      "source": "packages/ai/src/utils/estimate.ts",
+      "upstream": "estimateTextTokens"
+    },
+    {
+      "source": "packages/ai/src/utils/estimate.ts",
+      "upstream": "estimateTextAndImageContentTokens"
+    },
+    {
+      "source": "packages/ai/src/utils/estimate.ts",
+      "upstream": "estimateMessageTokens"
+    },
+    {
+      "source": "packages/ai/src/utils/estimate.ts",
+      "upstream": "estimateContextTokens"
+    },
+    {
+      "source": "packages/ai/src/utils/hash.ts",
+      "upstream": "shortHash"
+    },
+    {
+      "source": "packages/ai/src/utils/headers.ts",
+      "upstream": "headersToRecord"
+    },
+    {
+      "source": "packages/ai/src/utils/headers.ts",
+      "upstream": "providerHeadersToRecord"
+    },
+    {
+      "source": "packages/ai/src/utils/json-parse.ts",
+      "upstream": "repairJson"
+    },
+    {
+      "source": "packages/ai/src/utils/json-parse.ts",
+      "upstream": "parseJsonWithRepair"
+    },
+    {
+      "source": "packages/ai/src/utils/json-parse.ts",
+      "upstream": "parseStreamingJson"
+    },
+    {
+      "source": "packages/ai/src/utils/node-http-proxy.ts",
+      "upstream": "UNSUPPORTED_PROXY_PROTOCOL_MESSAGE"
+    },
+    {
+      "source": "packages/ai/src/utils/node-http-proxy.ts",
+      "upstream": "resolveHttpProxyUrlForTarget"
+    },
+    {
+      "source": "packages/ai/src/utils/overflow.ts",
+      "upstream": "isContextOverflow"
+    },
+    {
+      "source": "packages/ai/src/utils/overflow.ts",
+      "upstream": "isRecoverableLength"
+    },
+    {
+      "source": "packages/ai/src/utils/overflow.ts",
+      "upstream": "getOverflowPatterns"
+    },
+    {
+      "source": "packages/ai/src/utils/pi-user-agent.ts",
+      "upstream": "getPiUserAgent"
+    },
+    {
+      "source": "packages/ai/src/utils/provider-env.ts",
+      "upstream": "getProviderEnvValue"
+    },
+    {
+      "source": "packages/ai/src/utils/provider-retry.ts",
+      "upstream": "retryProviderRequest"
+    },
+    {
+      "source": "packages/ai/src/utils/retry.ts",
+      "upstream": "RetryPolicy"
+    },
+    {
+      "source": "packages/ai/src/utils/retry.ts",
+      "upstream": "DEFAULT_MAX_AGENT_RETRY_DELAY_MS"
+    },
+    {
+      "source": "packages/ai/src/utils/retry.ts",
+      "upstream": "retryDelayMs"
+    },
+    {
+      "source": "packages/ai/src/utils/retry.ts",
+      "upstream": "RetryCallbacks"
+    },
+    {
+      "source": "packages/ai/src/utils/retry.ts",
+      "upstream": "retryAssistantCall"
+    },
+    {
+      "source": "packages/ai/src/utils/retry.ts",
+      "upstream": "isRetryableAssistantError"
+    },
+    {
+      "source": "packages/ai/src/utils/sanitize-unicode.ts",
+      "upstream": "sanitizeSurrogates"
+    },
+    {
+      "source": "packages/ai/src/utils/sleep.ts",
+      "upstream": "sleep"
+    },
+    {
+      "source": "packages/ai/src/utils/text.ts",
+      "upstream": "contentText"
+    },
+    {
+      "source": "packages/ai/src/utils/text.ts",
+      "upstream": "getSystemMessageText"
+    },
+    {
+      "source": "packages/ai/src/utils/text.ts",
+      "upstream": "renderSystemMessageUpdate"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "TranscriptContext"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "createInitialSystemMessage"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "normalizeContext"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "TranscriptMessages"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "getInitialSystemMessage"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "withoutInitialSystemMessage"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "getCurrentTools"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "getCurrentSystemMessage"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "getCurrentSystemPrompt"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "collapseSystemMessages"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "resolveTranscript"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "toToolDeclaration"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "declarationsEqual"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "ToolStateChanges"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "getToolStateChanges"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "getDeclaredTools"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "hasToolRedefinitions"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "hasNonAdditiveToolChanges"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "TranscriptTools"
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "upstream": "resolveTranscriptTools"
+    },
+    {
+      "source": "packages/ai/src/utils/typebox-helpers.ts",
+      "upstream": "StringEnum"
+    },
+    {
+      "source": "packages/ai/src/utils/uuid.ts",
+      "upstream": "uuidv7"
+    },
+    {
+      "source": "packages/ai/src/utils/validation.ts",
+      "upstream": "validateToolCall"
+    },
+    {
+      "source": "packages/ai/src/utils/validation.ts",
+      "upstream": "validateToolArguments"
+    }
+  ],
+  "map": "internal/conformance/ai_utils/source_map.json"
+}

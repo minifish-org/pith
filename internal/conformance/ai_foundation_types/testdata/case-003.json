@@ -1,0 +1,137 @@
+{
+  "batch": "ai-foundation",
+  "id": "assistant-stream-error",
+  "input": {
+    "op": "assistant-stream",
+    "file": "packages/ai/src/utils/event-stream.ts",
+    "message": {
+      "role": "assistant",
+      "api": "openai-completions",
+      "provider": "fixture",
+      "model": "fixture",
+      "content": [
+        {
+          "type": "text",
+          "text": "你好"
+        }
+      ],
+      "usage": {
+        "input": 10,
+        "output": 3,
+        "cacheRead": 2,
+        "cacheWrite": 1,
+        "totalTokens": 16,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1
+    },
+    "terminal": "error"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "events": [
+        {
+          "type": "start",
+          "partial": {
+            "role": "assistant",
+            "api": "openai-completions",
+            "provider": "fixture",
+            "model": "fixture",
+            "content": [
+              {
+                "type": "text",
+                "text": "你好"
+              }
+            ],
+            "usage": {
+              "input": 10,
+              "output": 3,
+              "cacheRead": 2,
+              "cacheWrite": 1,
+              "totalTokens": 16,
+              "cost": {
+                "input": 0,
+                "output": 0,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0
+              }
+            },
+            "stopReason": "stop",
+            "timestamp": 1
+          }
+        },
+        {
+          "type": "error",
+          "reason": "error",
+          "error": {
+            "role": "assistant",
+            "api": "openai-completions",
+            "provider": "fixture",
+            "model": "fixture",
+            "content": [
+              {
+                "type": "text",
+                "text": "你好"
+              }
+            ],
+            "usage": {
+              "input": 10,
+              "output": 3,
+              "cacheRead": 2,
+              "cacheWrite": 1,
+              "totalTokens": 16,
+              "cost": {
+                "input": 0,
+                "output": 0,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0
+              }
+            },
+            "stopReason": "error",
+            "timestamp": 1,
+            "errorMessage": "fixture"
+          }
+        }
+      ],
+      "result": {
+        "role": "assistant",
+        "api": "openai-completions",
+        "provider": "fixture",
+        "model": "fixture",
+        "content": [
+          {
+            "type": "text",
+            "text": "你好"
+          }
+        ],
+        "usage": {
+          "input": 10,
+          "output": 3,
+          "cacheRead": 2,
+          "cacheWrite": 1,
+          "totalTokens": 16,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "error",
+        "timestamp": 1,
+        "errorMessage": "fixture"
+      }
+    }
+  }
+}

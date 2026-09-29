@@ -1,0 +1,92 @@
+{
+  "batch": "ai-providers",
+  "id": "moonshotaiCnProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/moonshotai-cn.ts",
+    "fn": "moonshotaiCnProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "moonshotai-cn",
+      "name": "Moonshot AI CN",
+      "models": [
+        {
+          "id": "kimi-k2.6",
+          "api": "openai-completions",
+          "provider": "moonshotai-cn",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.95,
+            "output": 4,
+            "cacheRead": 0.16,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "kimi-k2.7-code",
+          "api": "openai-completions",
+          "provider": "moonshotai-cn",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.95,
+            "output": 4,
+            "cacheRead": 0.19,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "kimi-k2.7-code-highspeed",
+          "api": "openai-completions",
+          "provider": "moonshotai-cn",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.9,
+            "output": 8,
+            "cacheRead": 0.38,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "kimi-k3",
+          "api": "openai-completions",
+          "provider": "moonshotai-cn",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cacheRead": 0.3,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 131072
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

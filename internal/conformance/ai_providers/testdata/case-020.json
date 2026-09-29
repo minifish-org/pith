@@ -1,0 +1,594 @@
+{
+  "batch": "ai-providers",
+  "id": "mistralProvider",
+  "input": {
+    "op": "provider",
+    "file": "packages/ai/src/providers/mistral.ts",
+    "fn": "mistralProvider"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "id": "mistral",
+      "name": "Mistral",
+      "models": [
+        {
+          "id": "codestral-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.3,
+            "output": 0.9,
+            "cacheRead": 0.03,
+            "cacheWrite": 0
+          },
+          "contextWindow": 256000,
+          "maxTokens": 4096
+        },
+        {
+          "id": "devstral-2512",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cacheRead": 0.04,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "devstral-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cacheRead": 0.04,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "devstral-medium-2507",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cacheRead": 0.04,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "devstral-medium-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cacheRead": 0.04,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "devstral-small-2505",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.1,
+            "output": 0.3,
+            "cacheRead": 0.01,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "devstral-small-2507",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.1,
+            "output": 0.3,
+            "cacheRead": 0.01,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "labs-devstral-small-2512",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 256000,
+          "maxTokens": 256000
+        },
+        {
+          "id": "magistral-medium-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 2,
+            "output": 5,
+            "cacheRead": 0.2,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 16384
+        },
+        {
+          "id": "magistral-small",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.5,
+            "output": 1.5,
+            "cacheRead": 0.05,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "ministral-3b-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.04,
+            "output": 0.04,
+            "cacheRead": 0.004,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "ministral-8b-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.1,
+            "output": 0.1,
+            "cacheRead": 0.01,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "mistral-large-2411",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cacheRead": 0.2,
+            "cacheWrite": 0
+          },
+          "contextWindow": 131072,
+          "maxTokens": 16384
+        },
+        {
+          "id": "mistral-large-2512",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.5,
+            "output": 1.5,
+            "cacheRead": 0.05,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "mistral-large-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.5,
+            "output": 1.5,
+            "cacheRead": 0.05,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "mistral-medium-2505",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cacheRead": 0.04,
+            "cacheWrite": 0
+          },
+          "contextWindow": 131072,
+          "maxTokens": 131072
+        },
+        {
+          "id": "mistral-medium-2508",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cacheRead": 0.04,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "mistral-medium-2604",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.5,
+            "output": 7.5,
+            "cacheRead": 0.15,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "mistral-medium-3.5",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.5,
+            "output": 7.5,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "mistral-medium-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 1.5,
+            "output": 7.5,
+            "cacheRead": 0.15,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 262144
+        },
+        {
+          "id": "mistral-nemo",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.15,
+            "output": 0.15,
+            "cacheRead": 0.015,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "mistral-small-2506",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.1,
+            "output": 0.3,
+            "cacheRead": 0.01,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 16384
+        },
+        {
+          "id": "mistral-small-2603",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cacheRead": 0.015,
+            "cacheWrite": 0
+          },
+          "contextWindow": 256000,
+          "maxTokens": 256000
+        },
+        {
+          "id": "mistral-small-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cacheRead": 0.015,
+            "cacheWrite": 0
+          },
+          "contextWindow": 256000,
+          "maxTokens": 256000
+        },
+        {
+          "id": "open-mistral-7b",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.25,
+            "output": 0.25,
+            "cacheRead": 0.025,
+            "cacheWrite": 0
+          },
+          "contextWindow": 8000,
+          "maxTokens": 8000
+        },
+        {
+          "id": "open-mistral-nemo",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.15,
+            "output": 0.15,
+            "cacheRead": 0.015,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "open-mixtral-8x22b",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cacheRead": 0.2,
+            "cacheWrite": 0
+          },
+          "contextWindow": 64000,
+          "maxTokens": 64000
+        },
+        {
+          "id": "open-mixtral-8x7b",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.7,
+            "output": 0.7,
+            "cacheRead": 0.07,
+            "cacheWrite": 0
+          },
+          "contextWindow": 32000,
+          "maxTokens": 32000
+        },
+        {
+          "id": "pixtral-12b",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.15,
+            "output": 0.15,
+            "cacheRead": 0.015,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "pixtral-large-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cacheRead": 0.2,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 128000
+        },
+        {
+          "id": "voxtral-small-latest",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.1,
+            "output": 0.3,
+            "cacheRead": 0.01,
+            "cacheWrite": 0
+          },
+          "contextWindow": 32000,
+          "maxTokens": 32000
+        },
+        {
+          "id": "zai-glm-5-2",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cacheRead": 0.14,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 131072
+        },
+        {
+          "id": "zai-glm-5-3",
+          "api": "mistral-conversations",
+          "provider": "mistral",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cacheRead": 0.14,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 131072
+        }
+      ],
+      "stream": true,
+      "streamSimple": true
+    }
+  }
+}

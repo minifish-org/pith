@@ -1,0 +1,16 @@
+{
+  "batch": "ai-utils",
+  "id": "estimateTextTokens-3",
+  "input": {
+    "op": "call",
+    "file": "packages/ai/src/utils/estimate.ts",
+    "fn": "estimateTextTokens",
+    "args": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": 11
+  }
+}
