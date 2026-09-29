@@ -1,0 +1,29 @@
+name: Check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: go test -mod=readonly ./...
+        env:
+          CGO_ENABLED: '0'
+      - run: go vet -mod=readonly ./...
+        env:
+          CGO_ENABLED: '0'
+      - run: go build -mod=readonly -trimpath -o ./bin/ ./cmd/...
+        env:
+          CGO_ENABLED: '0'
+      - run: ./bin/pith --help
+      - run: go test -mod=readonly -race ./...
+        env:
+          CGO_ENABLED: '1'

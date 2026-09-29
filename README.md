@@ -1,28 +1,80 @@
 # Pith
 
-将固定版本 Pi 的 **AI 层、稳定 Agent 内核与内置工具**迁移为可嵌入、可独立交付的 Go SDK 和 CLI。迁移工具是独立的 [Portsmith](https://github.com/minifish-org/portsmith)，规划由 Codex 等外部 AI 或人工完成。
+A Go port of selected Pi AI, agent-core, and built-in tool capabilities, with an embeddable SDK and native command-line programs.
 
-**当前状态：完整执行材料已准备，可以启动 `ai → core → tools` 全流程。** 3 个模块、24 个批次、26 个自动步骤。正式 Go 代码由你运行后生成。直接看 [启动命令和使用说明](migration/start.md)。
+**Status: experimental; first planned migration completed.** [Portsmith](https://github.com/minifish-org/portsmith), using Pi Coding Agent and DeepSeek, completed 26 accepted steps in three modules. All three module receipts report passing recorded verification. This is not a claim of complete Pi parity, production readiness, or live validation of every provider.
 
-先看 [迁移计划](migration/README.md)：只面对 `ai → core → tools` 三个模块；模块内分批，完成模块后提交。保持上游目录职责，逐文件/符号记录来源，便于持续移植。
+## Build without CGO
 
-- [目录与文件对应](migration/inventory.json)：来源版本/hash、目标路径、所属模块和批次。
-- [完整验收](migration/validation.md)：所有 provider、认证、稳定 harness、read/write/edit/bash。
-- [执行准备](migration/execution.md)：执行材料与自检证据。
-- [持续更新](migration/continuous-port.md)：新上游版本的差异、增量计划与验证。
-
-旧 9 项最小计划和 48 项测试已归档在 [legacy/mvp-1](migration/legacy/mvp-1/ARCHIVED.md)，不代表完整迁移已准备可执行。
-
-## 现在检查计划
+Requirements for building: Go >=1.24 and Git. Users of the resulting binary do not need Go, Node.js, or npm. The shell tool still needs an operating-system shell.
 
 ```sh
-node ../portsmith/node_modules/tsx/dist/cli.mjs migration/check-plan.mts
+git clone https://github.com/minifish-org/pith.git
+cd pith
+CGO_ENABLED=0 go build -mod=readonly -trimpath -o ./bin/ ./cmd/...
+./bin/pith --help
 ```
 
-以上仅检查计划，不调用模型。正式启动见启动说明；正式命令才会使用真实模型生成候选，完整模块通过后提交。
+`pith` runs a non-interactive agent loop with read/write/edit/bash tools. `pith-ai` provides lower-level AI commands; inspect its command help for its supported interface. The default SDK/CLI path currently uses an OpenAI-compatible Chat Completions endpoint; the existence of other provider packages does not make every provider available through this CLI.
 
-## 迁移完成后的交付
+## Try an agent turn
 
-Go 应用可导入 SDK；个人用户可直接运行编译好的 pith，配置 provider/model/凭据，完成读取、写入、编辑文件和执行命令。程序不需要 Node/npm 或 Go 工具链；bash 工具需要系统 shell。CLI 参数已在 tools-delivery 契约固定。
+Set `PITH_API_KEY` in your environment without putting the value in shell history. Then use a disposable working directory:
 
-本次不包括 TUI/Web/桌面 App、Computer Use、MCP 或 experimental/pico3。保持原有 [AGPL 许可证](LICENSE)；来自 Pi 的 MIT 归属见 [UPSTREAM-LICENSE](migration/UPSTREAM-LICENSE)。
+```sh
+mkdir -p /tmp/pith-demo
+./bin/pith \
+  --base-url https://api.deepseek.com/v1 \
+  --model deepseek-flash \
+  --cwd /tmp/pith-demo \
+  --session /tmp/pith-demo/session.jsonl \
+  --prompt 'Create hello.txt containing Hello from Pith, then read it back.'
+```
+
+This makes a paid model call and authorizes local file and shell operations. `--cwd` is not an OS sandbox. Review [SECURITY.md](SECURITY.md) before connecting an agent to sensitive directories. No live provider smoke test is claimed by the migration receipts.
+
+## Packages
+
+| Area | Purpose |
+| --- | --- |
+| `packages/ai/` | Models, provider adapters, streaming, authentication, and utilities |
+| `packages/agent/` | Agent execution, harness/session/resource support, SDK, and tools |
+| `packages/chord/`, `packages/telemetry/` | Supporting contracts and instrumentation |
+| `cmd/pith/`, `cmd/pith-ai/` | Native command-line entry points |
+| `internal/conformance/` | Independent migration acceptance tests |
+| `migration/` | Pinned inputs, contracts, judges, source maps, and original receipts |
+
+Start embedding at `packages/agent/sdk`. Interfaces and behavior may change before a stable release. Review the implementation and tests for the exact supported surface.
+
+## Verification and evidence
+
+```sh
+CGO_ENABLED=0 go test -mod=readonly ./...
+CGO_ENABLED=0 go vet -mod=readonly ./...
+# Optional race instrumentation requires CGO and a C compiler:
+CGO_ENABLED=1 go test -mod=readonly -race ./...
+```
+
+The original modules were committed as:
+
+| Module | Accepted steps | Commit |
+| --- | ---: | --- |
+| AI | 13 | `a5aeab8214f672d5d83e35fec78bf4d0daf67473` |
+| Core | 7 | `adbc36268f0c0cad3f5aad7c591b5f0a18f79ac0` |
+| Tools | 6 | `0d4d1479739fcbe849fec21fc02cf8ac31aee237` |
+
+See [the evidence summary](docs/evidence/2026-09-29.md) and the original `migration/results/*.json` receipts. Passing a fixed judge suite does not prove behavior outside its contracts. `fullParityProven` is explicitly false in those receipts.
+
+The migration directory is retained as historical evidence, including Chinese planning documents. Preparation-time status labels describe the original inputs; final receipts and commits describe the completed run. Do not rerun the original plan in this populated checkout expecting it to overwrite accepted code.
+
+## Direction
+
+The next experiment is to use **Pith itself as Portsmith's execution backend** to carry reviewed Pi changes into Pith on a regular schedule. That backend and scheduled update loop are planned, not implemented. Upstream diffs, contract changes, dependencies, licenses, tests, and final acceptance still need review.
+
+Not included in this migration: a TUI, Web UI, desktop application, Computer Use, MCP integration, or experimental/pico3.
+
+## License
+
+The repository retains its existing [AGPL-3.0 license](LICENSE). Pi-derived code retains upstream MIT attribution; the full upstream notice is in [migration/UPSTREAM-LICENSE](migration/UPSTREAM-LICENSE). See [NOTICE](NOTICE). This is an independent project, not an official Pi distribution.
+
+[Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
