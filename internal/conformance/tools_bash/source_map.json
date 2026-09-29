@@ -1,0 +1,44 @@
+[
+  {
+    "source": "packages/agent/src/harness/tools/bash.ts",
+    "upstream": "BashToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashToolInput",
+    "reason": "Go port of the TypeBox BashToolInput object; the required command is a string and the optional timeout is a float64 seconds value that can represent every JS number."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/bash.ts",
+    "upstream": "BashToolDetails",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashToolDetails",
+    "reason": "Go port of the BashToolDetails result payload carrying the optional truncation metadata and full-output spill path."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/bash.ts",
+    "upstream": "BashExecution",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashExecution",
+    "reason": "Go port of the mutable BashExecution plan (command, cwd, env, inheritEnv) passed to a BashPrepare callback."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/bash.ts",
+    "upstream": "BashPrepare",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashPrepare",
+    "reason": "Go port of the BashPrepare callback; returns an error instead of throwing so a failed preparation aborts before spawning a process. The Go adaptation binds TContext to ExecutionToolContext because Go has no default type parameters."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/bash.ts",
+    "upstream": "BashToolOptions",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashToolOptions",
+    "reason": "Go port of BashToolOptions with the optional command prefix and prepare callback."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/bash.ts",
+    "upstream": "createBashTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateBashTool",
+    "reason": "Go factory for the bash tool; preserves timeout validation, prepare ordering, bounded tail capture with spill, checkpointed progress updates and the exact exit/timeout/abort error text."
+  }
+]

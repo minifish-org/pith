@@ -1,0 +1,30 @@
+[
+  {
+    "source": "packages/agent/test/harness/adaptive-publisher.test.ts",
+    "sha256": "3f3445db166ad1aecaeda921edc4bb80f59723277cb9c98565d7f9dc926300f2",
+    "modules": [
+      "tools"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "tools-env",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  },
+  {
+    "source": "packages/agent/test/harness/nodejs-env.test.ts",
+    "sha256": "867e9d41715773e99d9e06d2fbbbd2b2fc924469f02de1b944f099a3a02e6d36",
+    "modules": [
+      "tools"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "tools-env",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

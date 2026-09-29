@@ -1,0 +1,16 @@
+[
+  {
+    "source": "packages/agent/test/harness/types.test.ts",
+    "sha256": "4b75559c18a77f15bfea9e78f355a7591c62c791b68325a086f86b14b0b5ef84",
+    "modules": [
+      "core"
+    ],
+    "disposition": "reference",
+    "reason": "稳定模块验收参考",
+    "caseReviewStatus": "planned",
+    "goJudgeStatus": "planned",
+    "batch": "tools-delivery",
+    "classification": "port-test-scenarios",
+    "status": "not-yet-run-against-go"
+  }
+]

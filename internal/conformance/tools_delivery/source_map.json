@@ -1,0 +1,996 @@
+[
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "BashExecution",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashExecution",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "BashPrepare",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashPrepare",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "BashToolDetails",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashToolDetails",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "BashToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashToolInput",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "BashToolOptions",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "BashToolOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "createBashTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateBashTool",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "createEditTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateEditTool",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "EditToolDetails",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "EditToolDetails",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "EditToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "EditToolInput",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "createReadTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateReadTool",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "ReadImageProcessor",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadImageProcessor",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "ReadImageProcessorResult",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadImageProcessorResult",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "ReadToolDetails",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadToolDetails",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "ReadToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadToolInput",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "ReadToolOptions",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadToolOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "ExecutionToolContext",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ExecutionToolContext",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "createWriteTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateWriteTool",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/index.ts",
+    "upstream": "WriteToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "WriteToolInput",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "uuidv7",
+    "goPackage": "packages/ai/utils",
+    "goSymbol": "UUIDv7",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AttributeValue",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "AttributeValue",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ExactTelemetryAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "ExactTelemetryAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "InferEventAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "InferEventAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "InferOptionalAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "InferOptionalAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "InferRequiredAndOptionalAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "InferRequiredAndOptionalAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "InferStartAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "InferStartAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "RecordedTelemetryEvent",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "RecordedTelemetryEvent",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "RecordedTelemetrySpan",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "RecordedTelemetrySpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "SchemaTelemetrySpan",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "SchemaTelemetrySpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "SpanAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "SpanAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySpanAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "SpanAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "SpanOptions",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "SpanOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "SpanStatus",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "SpanStatus",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryAttributeDefinition",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetryAttributeDefinition",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryAttributeMetadata",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetryAttributeMetadata",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryAttributeType",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "TelemetryAttributeType",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryContext",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetryContext",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryEventAttributeDefinition",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetryEventAttributeDefinition",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryEventDefinition",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetryEventDefinition",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryParentDefinition",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetryParentDefinition",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySchemaDefinition",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySchemaDefinition",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySchemaSpanEndAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySchemaSpanEndAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySchemaSpanEventAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySchemaSpanEventAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySchemaSpanEventName",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySchemaSpanEventName",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySchemaSpanName",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySchemaSpanName",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySchemaSpanStartAttributes",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySchemaSpanStartAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySchemaSpanUnion",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySchemaSpanUnion",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySpan",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetrySpanDefinition",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetrySpanDefinition",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TelemetryStartAttributeDefinition",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TelemetryStartAttributeDefinition",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "TypedSpanStarter",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "TypedSpanStarter",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "createTypedSpanStarter",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "CreateTypedSpanStarter",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "defineTelemetrySchema",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "DefineTelemetrySchema",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "InMemoryTelemetryContext",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "InMemoryTelemetryContext",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "NOOP_TELEMETRY_CONTEXT",
+    "goPackage": "packages/telemetry",
+    "goSymbol": "NOOP_TELEMETRY_CONTEXT",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "BranchPreparation",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "BranchPreparation",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "BranchSummaryDetails",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "BranchSummaryDetails",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "BranchSummaryResult",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "BranchSummaryResult",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "CollectEntriesResult",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CollectEntriesResult",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "collectEntriesForBranchSummary",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CollectEntriesForBranchSummary",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "FileOperations",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FileOperations",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "GenerateBranchSummaryOptions",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateBranchSummaryOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "generateBranchSummary",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateBranchSummary",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "prepareBranchEntries",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "PrepareBranchEntries",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "CompactionPreparation",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactionPreparation",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "CompactionSettings",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactionSettings",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "CompactResult",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CompactResult",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "calculateContextTokens",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "CalculateContextTokens",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "compact",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "Compact",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "DEFAULT_COMPACTION_SETTINGS",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "DefaultCompactionSettings",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "estimateContextTokens",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "EstimateContextTokens",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "estimateTokens",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "EstimateTokens",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "findCutPoint",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FindCutPoint",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "findTurnStartIndex",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "FindTurnStartIndex",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "generateSummary",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateSummary",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "generateSummaryWithUsage",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GenerateSummaryWithUsage",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "getLastAssistantUsage",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "GetLastAssistantUsage",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "prepareCompaction",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "PrepareCompaction",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "serializeConversation",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "SerializeConversation",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "shouldCompact",
+    "goPackage": "packages/agent/harness/compaction",
+    "goSymbol": "ShouldCompact",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "LaneSnapshotReduction",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "LaneSnapshotReduction",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "reduceLaneSnapshot",
+    "goPackage": "packages/agent/harness/runtime",
+    "goSymbol": "ReduceLaneSnapshot",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiSpanAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiSpanEndAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanEndAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiSpanEventAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanEventAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiSpanEventName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanEventName",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiSpanName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanName",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiSpanStartAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiSpanStartAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AiTelemetrySpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AiTelemetrySpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessSpanAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessSpanEndAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanEndAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessSpanEventAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanEventAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessSpanEventName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanEventName",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessSpanName",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanName",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessSpanStartAttributes",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessSpanStartAttributes",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HarnessTelemetrySpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessTelemetrySpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AGENT_TELEMETRY_SCHEMAS",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AgentTelemetrySchemas",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AI_TELEMETRY_SCHEMA",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "AITelemetrySchema",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "HARNESS_TELEMETRY_SCHEMA",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "HarnessTelemetrySchema",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "startAiSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "StartAiSpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "startHarnessSpan",
+    "goPackage": "packages/agent/harness/telemetry",
+    "goSymbol": "StartHarnessSpan",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessResources",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessResources",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessStreamOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessStreamOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessStreamOptionsPatch",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessStreamOptionsPatch",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessTool",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessTool",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessToolContextSource",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolContextSource",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessToolInvocation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolInvocation",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessToolUpdateCallback",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolUpdateCallback",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "AgentHarnessToolUpdateOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "AgentHarnessToolUpdateOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "BranchSummaryError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "BranchSummaryError",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "BranchSummaryErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "BranchSummaryErrorCode",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "CompactionError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CompactionError",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "CompactionErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "CompactionErrorCode",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ExecutionEnv",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ExecutionEnv",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ExecutionError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ExecutionError",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ExecutionErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ExecutionErrorCode",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "err",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Err",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "FileError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileError",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "FileErrorCode",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileErrorCode",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "FileInfo",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileInfo",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "FileKind",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileKind",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "FileSystem",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "FileSystem",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "getOrThrow",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "GetOrThrow",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "getOrUndefined",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "GetOrUndefined",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ok",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Ok",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "PromptTemplate",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "PromptTemplate",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "Shell",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Shell",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellExecOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellExecOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellExecResult",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellExecResult",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellOutputCaptureOptions",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputCaptureOptions",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellOutputLimits",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputLimits",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellOutputMetadata",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputMetadata",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellOutputRetention",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputRetention",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellOutputTruncation",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputTruncation",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellOutputUpdate",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputUpdate",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "ShellOutputView",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ShellOutputView",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "Skill",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "Skill",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "toError",
+    "goPackage": "packages/agent/harness/types",
+    "goSymbol": "ToError",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "applyShellOutputUpdate",
+    "goPackage": "packages/agent/harness/utils/output_capture",
+    "goSymbol": "ApplyShellOutputUpdate",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "upstream": "setDefaultStreamFn",
+    "goPackage": "packages/agent",
+    "goSymbol": "SetDefaultStreamFn",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  },
+  {
+    "source": "packages/agent/src/node.ts",
+    "upstream": "NodeExecutionEnv",
+    "goPackage": "packages/agent/sdk",
+    "goSymbol": "LocalExecutionEnv",
+    "reason": "Go port of the upstream symbol; the barrel re-export resolves to this concrete declaration."
+  }
+]

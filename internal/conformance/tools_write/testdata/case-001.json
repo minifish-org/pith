@@ -1,0 +1,29 @@
+{
+  "batch": "tools-write",
+  "id": "write-4",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/write.ts",
+    "fn": "createWriteTool",
+    "text": "old",
+    "args": {
+      "path": "nested/file.txt",
+      "content": "a\n中\n"
+    },
+    "inspect": "nested/file.txt"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Successfully wrote to nested/file.txt"
+          }
+        ]
+      },
+      "after": "a\n中\n"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "source": "packages/agent/src/harness/tools/read.ts",
+    "upstream": "ReadToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadToolInput",
+    "reason": "Parsed read-tool parameter object (required path plus optional offset/limit)."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/read.ts",
+    "upstream": "ReadToolDetails",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadToolDetails",
+    "reason": "Result details carrying the optional truncation metadata of a text read."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/read.ts",
+    "upstream": "ReadImageProcessorResult",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadImageProcessorResult",
+    "reason": "Discriminated success/failure payload returned by an injected image processor."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/read.ts",
+    "upstream": "ReadImageProcessor",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadImageProcessor",
+    "reason": "Function type for the injectable image conversion/resizing implementation."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/read.ts",
+    "upstream": "ReadToolOptions",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ReadToolOptions",
+    "reason": "Construction options for the read tool: autoResizeImages and imageProcessor."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/read.ts",
+    "upstream": "createReadTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateReadTool",
+    "reason": "Factory that builds the real read tool bound to an ExecutionToolContext."
+  }
+]

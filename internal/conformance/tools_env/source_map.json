@@ -1,0 +1,135 @@
+[
+  {
+    "source": "packages/agent/src/harness/env/nodejs.ts",
+    "upstream": "NodeExecutionEnv",
+    "goPackage": "packages/agent/harness/env",
+    "goSymbol": "LocalExecutionEnv",
+    "reason": "Go port of NodeExecutionEnv using os/exec and the standard filesystem; process control is split into platform build-tagged helpers."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/file-mutation-queue.ts",
+    "upstream": "withFileMutationQueue",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "WithFileMutationQueue",
+    "reason": "Go port of withFileMutationQueue; serializes mutations for the same environment and canonical path."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/image.ts",
+    "upstream": "detectSupportedImageMimeType",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "DetectSupportedImageMimeType",
+    "reason": "Go port of detectSupportedImageMimeType with the same JPEG/PNG/GIF/WEBP/BMP sniffing and animated-PNG rejection."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/image.ts",
+    "upstream": "encodeBase64",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "EncodeBase64",
+    "reason": "Go port of encodeBase64 using the standard base64 alphabet with identical output."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/path-utils.ts",
+    "upstream": "resolveToolPath",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ResolveToolPath",
+    "reason": "Go port of resolveToolPath; normalizes unicode spaces and a leading @ before resolving through the environment."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/path-utils.ts",
+    "upstream": "resolveReadToolPath",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ResolveReadToolPath",
+    "reason": "Go port of resolveReadToolPath probing the same narrow-space, NFD and apostrophe variants in order."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/tool-context.ts",
+    "upstream": "ExecutionToolContext",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ExecutionToolContext",
+    "reason": "Go port of the ExecutionToolContext interface as a struct carrying the ExecutionEnv."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/adaptive-publisher.ts",
+    "upstream": "AdaptivePublisherOptions",
+    "goPackage": "packages/agent/harness/utils/adaptive_publisher",
+    "goSymbol": "AdaptivePublisherOptions",
+    "reason": "Go port of AdaptivePublisherOptions including the injected Clock used for deterministic scheduling."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/adaptive-publisher.ts",
+    "upstream": "AdaptivePublisher",
+    "goPackage": "packages/agent/harness/utils/adaptive_publisher",
+    "goSymbol": "AdaptivePublisher",
+    "reason": "Go port of AdaptivePublisher with the same immediate-first, size-proportional, trailing-timer semantics."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/output-capture.ts",
+    "upstream": "OUTPUT_MIN_EMIT_INTERVAL_MS",
+    "goPackage": "packages/agent/harness/utils/output_capture",
+    "goSymbol": "OutputMinEmitIntervalMs",
+    "reason": "Go port of the OUTPUT_MIN_EMIT_INTERVAL_MS constant."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/output-capture.ts",
+    "upstream": "OUTPUT_TARGET_BYTES_PER_SECOND",
+    "goPackage": "packages/agent/harness/utils/output_capture",
+    "goSymbol": "OutputTargetBytesPerSecond",
+    "reason": "Go port of the OUTPUT_TARGET_BYTES_PER_SECOND constant."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/output-capture.ts",
+    "upstream": "OutputCapture",
+    "goPackage": "packages/agent/harness/utils/output_capture",
+    "goSymbol": "OutputCapture",
+    "reason": "Go port of OutputCapture maintaining and adaptively publishing one bounded, sanitized view."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/output-capture.ts",
+    "upstream": "applyShellOutputUpdate",
+    "goPackage": "packages/agent/harness/utils/output_capture",
+    "goSymbol": "ApplyShellOutputUpdate",
+    "reason": "Go port of applyShellOutputUpdate folding replace/append/slide/metadata updates into a view."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/output-capture.ts",
+    "upstream": "sanitizeShellOutput",
+    "goPackage": "packages/agent/harness/utils/output_capture",
+    "goSymbol": "SanitizeShellOutput",
+    "reason": "Go port of sanitizeShellOutput stripping invalid control characters while preserving tab and newline."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/shell-output.ts",
+    "upstream": "ShellCaptureProgress",
+    "goPackage": "packages/agent/harness/utils/shell_output",
+    "goSymbol": "ShellCaptureProgress",
+    "reason": "Go port of the ShellCaptureProgress interface."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/shell-output.ts",
+    "upstream": "ShellCaptureOptions",
+    "goPackage": "packages/agent/harness/utils/shell_output",
+    "goSymbol": "ShellCaptureOptions",
+    "reason": "Go port of ShellCaptureOptions excluding capture/onUpdate and adding OnChunk and ReturnExecutionErrors."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/shell-output.ts",
+    "upstream": "ShellCaptureResult",
+    "goPackage": "packages/agent/harness/utils/shell_output",
+    "goSymbol": "ShellCaptureResult",
+    "reason": "Go port of the ShellCaptureResult interface."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/shell-output.ts",
+    "upstream": "executeShellWithCapture",
+    "goPackage": "packages/agent/harness/utils/shell_output",
+    "goSymbol": "ExecuteShellWithCapture",
+    "reason": "Go port of executeShellWithCapture collecting one bounded final view and spilling complete output."
+  },
+  {
+    "source": "packages/agent/src/harness/utils/shell-output.ts",
+    "upstream": "sanitizeBinaryOutput",
+    "goPackage": "packages/agent/harness/utils/shell_output",
+    "goSymbol": "SanitizeBinaryOutput",
+    "reason": "Go port of the sanitizeBinaryOutput re-export of sanitizeShellOutput."
+  }
+]

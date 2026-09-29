@@ -1,0 +1,16 @@
+[
+  {
+    "source": "packages/agent/src/harness/tools/write.ts",
+    "upstream": "WriteToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "WriteToolInput",
+    "reason": "Parsed write-tool parameter object with the required path and content fields."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/write.ts",
+    "upstream": "createWriteTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateWriteTool",
+    "reason": "Factory that builds the real write tool bound to an ExecutionToolContext."
+  }
+]

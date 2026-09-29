@@ -1,0 +1,114 @@
+[
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "detectLineEnding",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "DetectLineEnding",
+    "reason": "Reports whether the first line ending is CRLF so the edit tool can restore the file's original spelling."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "normalizeToLF",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "NormalizeToLF",
+    "reason": "Collapses CRLF and lone CR to LF before matching edits."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "restoreLineEndings",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "RestoreLineEndings",
+    "reason": "Re-applies CRLF line endings after edits are computed in LF space."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "normalizeForFuzzyMatch",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "NormalizeForFuzzyMatch",
+    "reason": "NFKC, trailing-whitespace, smart-quote/dash and special-space normalization used by fuzzy matching."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "applyReplacementsPreservingUnchangedLines",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ApplyReplacementsPreservingUnchangedLines",
+    "reason": "Overlays fuzzy-matched line changes onto the original content so unchanged lines keep their exact bytes."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "FuzzyMatchResult",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "FuzzyMatchResult",
+    "reason": "Discriminated result of an exact-then-fuzzy text search with the replacement-space content."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "Edit",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "Edit",
+    "reason": "One oldText/newText replacement pair shared by the matching and edit-tool layers."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "AppliedEditsResult",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "AppliedEditsResult",
+    "reason": "Base and rewritten content returned by applyEditsToNormalizedContent."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "fuzzyFindText",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "FuzzyFindText",
+    "reason": "Exact-first then fuzzy content search that returns the match offsets and replacement content."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "stripBom",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "StripBom",
+    "reason": "Splits a leading UTF-8 BOM from the text so edits run on BOM-free content and the BOM is restored on write."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "applyEditsToNormalizedContent",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "ApplyEditsToNormalizedContent",
+    "reason": "Matches every edit against the same content, enforces uniqueness/overlap rules and applies all replacements."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "generateUnifiedPatch",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "GenerateUnifiedPatch",
+    "reason": "Produces the standard unified patch returned in edit details."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit-diff.ts",
+    "upstream": "generateDiffString",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "GenerateDiffString",
+    "reason": "Produces the numbered display diff and the first changed line returned in edit details."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit.ts",
+    "upstream": "EditToolInput",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "EditToolInput",
+    "reason": "Parsed edit-tool parameter object with the required path and edits array."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit.ts",
+    "upstream": "EditToolDetails",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "EditToolDetails",
+    "reason": "Result details carrying the display diff, unified patch and first changed line."
+  },
+  {
+    "source": "packages/agent/src/harness/tools/edit.ts",
+    "upstream": "createEditTool",
+    "goPackage": "packages/agent/harness/tools",
+    "goSymbol": "CreateEditTool",
+    "reason": "Factory that builds the real edit tool bound to an ExecutionToolContext."
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "batch": "tools-edit",
+  "id": "bom",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/edit.ts",
+    "fn": "createEditTool",
+    "text": "﻿a\nb\n",
+    "args": {
+      "path": "file.txt",
+      "oldText": "a",
+      "newText": "A"
+    },
+    "inspect": "file.txt"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Successfully replaced 1 block(s) in file.txt."
+          }
+        ],
+        "details": {
+          "diff": "-1 a\n+1 A\n 2 b",
+          "patch": "--- file.txt\n+++ file.txt\n@@ -1,2 +1,2 @@\n-a\n+A\n b\n",
+          "firstChangedLine": 1
+        }
+      },
+      "after": "﻿A\nb\n"
+    }
+  }
+}

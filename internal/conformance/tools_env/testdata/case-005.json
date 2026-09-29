@@ -1,0 +1,19 @@
+{
+  "batch": "tools-env",
+  "id": "filesystem-9",
+  "input": {
+    "op": "env",
+    "file": "packages/agent/src/harness/env/nodejs.ts",
+    "content": "hello\n世界\n"
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "writeOK": true,
+      "read": {
+        "ok": true,
+        "value": "hello\n世界\n"
+      }
+    }
+  }
+}

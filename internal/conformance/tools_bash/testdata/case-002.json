@@ -1,0 +1,26 @@
+{
+  "batch": "tools-bash",
+  "id": "shell-97",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/bash.ts",
+    "fn": "createBashTool",
+    "text": "",
+    "args": {
+      "command": "printf '中文'"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "中文"
+          }
+        ]
+      }
+    }
+  }
+}

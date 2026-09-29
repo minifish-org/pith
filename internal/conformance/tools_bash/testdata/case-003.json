@@ -1,0 +1,26 @@
+{
+  "batch": "tools-bash",
+  "id": "shell-98",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/bash.ts",
+    "fn": "createBashTool",
+    "text": "",
+    "args": {
+      "command": ":"
+    }
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "(no output)"
+          }
+        ]
+      }
+    }
+  }
+}

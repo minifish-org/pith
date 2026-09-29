@@ -1,0 +1,17 @@
+{
+  "batch": "tools-bash",
+  "id": "shell-96",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/bash.ts",
+    "fn": "createBashTool",
+    "text": "",
+    "args": {
+      "command": "printf 'err\\n' >&2; exit 3"
+    }
+  },
+  "expected": {
+    "ok": false,
+    "error": "err\n\n\nCommand exited with code 3"
+  }
+}

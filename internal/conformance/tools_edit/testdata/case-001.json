@@ -1,0 +1,20 @@
+{
+  "batch": "tools-edit",
+  "id": "duplicate",
+  "input": {
+    "op": "tool",
+    "file": "packages/agent/src/harness/tools/edit.ts",
+    "fn": "createEditTool",
+    "text": "x x",
+    "args": {
+      "path": "file.txt",
+      "oldText": "x",
+      "newText": "z"
+    },
+    "inspect": "file.txt"
+  },
+  "expected": {
+    "ok": false,
+    "error": "Found 2 occurrences of the text in file.txt. The text must be unique. Please provide more context to make it unique."
+  }
+}

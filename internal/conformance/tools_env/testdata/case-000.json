@@ -1,0 +1,18 @@
+{
+  "batch": "tools-env",
+  "id": "detectSupportedImageMimeType-0",
+  "input": {
+    "op": "call",
+    "file": "packages/agent/src/harness/tools/image.ts",
+    "fn": "detectSupportedImageMimeType",
+    "args": [
+      []
+    ]
+  },
+  "expected": {
+    "ok": true,
+    "value": {
+      "$undefined": true
+    }
+  }
+}
