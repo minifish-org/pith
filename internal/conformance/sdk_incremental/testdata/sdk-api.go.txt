@@ -1,0 +1,102 @@
+// Compile-only contract for the additive SDK. NOT an implementation or a seed.
+// Bodies intentionally fail behavior checks. Public signatures are normative.
+package codingagent
+
+import (
+ "context"
+ "encoding/json"
+ "time"
+ agenttypes "github.com/minifish-org/pith/packages/agent/types"
+ aitypes "github.com/minifish-org/pith/packages/ai/types"
+)
+
+// Batch configuration. Unknown JSON settings must survive load/save.
+type Settings map[string]json.RawMessage
+func LoadSettings(globalFile, projectFile string, overrides Settings) (Settings, error) { return nil,nil }
+func SaveSettings(file string, settings Settings) error { return nil }
+type ModelOptions struct {
+ Model *aitypes.Model
+ MaxTokens *int
+ ContextWindow *int
+ ThinkingLevel agenttypes.ThinkingLevel
+ APIKey func(context.Context, string) (string,error)
+ StreamFn agenttypes.StreamFn
+}
+func ResolveModel(options ModelOptions) (*aitypes.Model,error) { return nil,nil }
+
+// Batch storage. Entries are an append-only tree; Branch changes the leaf.
+// Payload can contain a message, compaction, model change or custom event.
+type SessionEntry struct {
+ ID string `json:"id"`
+ ParentID string `json:"parentId,omitempty"`
+ Type string `json:"type"`
+ Payload json.RawMessage `json:"payload"`
+}
+type SessionManager struct{}
+func OpenSession(file string) (*SessionManager,error) { return &SessionManager{},nil }
+func (s *SessionManager) Append(kind string, payload json.RawMessage) (SessionEntry,error) { return SessionEntry{},nil }
+func (s *SessionManager) Entries() []SessionEntry { return nil }
+func (s *SessionManager) Context() []SessionEntry { return nil }
+func (s *SessionManager) Branch(id string) error { return nil }
+func (s *SessionManager) LeafID() string { return "" }
+func (s *SessionManager) Close() error { return nil }
+
+// Batch resources. Paths are explicit; never read the user's home implicitly.
+type ResourceOptions struct { Cwd string; AgentDir string; SkillPaths []string; TemplatePaths []string; ContextFiles []string; SystemPrompt string; AppendSystemPrompt []string }
+type Skill struct { Name, Description, File, Body string }
+type PromptTemplate struct { Name, Description, File, Body string }
+type ResourceSet struct { SystemPrompt string; Skills []Skill; Templates []PromptTemplate; ContextFiles []string; Diagnostics []string }
+func LoadResources(options ResourceOptions) (ResourceSet,error) { return ResourceSet{},nil }
+func ExpandTemplate(template PromptTemplate, args []string) (string,error) { return "",nil }
+
+// Batch tools. Tools use existing Pi/Pith message types, not another protocol.
+type ToolDefinition struct {
+ Name, Description string
+ Parameters json.RawMessage
+ Execute func(context.Context, json.RawMessage) (ToolResult,error)
+}
+type ToolResult struct { Content []aitypes.ContentBlock; Details json.RawMessage; IsError bool }
+type ToolCall struct { ID, Name string; Arguments json.RawMessage }
+type ToolHooks struct {
+ Before func(context.Context, ToolCall) error
+ After func(context.Context, ToolCall, ToolResult) (ToolResult,error)
+}
+type ToolRegistry struct{}
+func NewToolRegistry(cwd string, custom []ToolDefinition, allow, deny []string, hooks ToolHooks) (*ToolRegistry,error) { return &ToolRegistry{},nil }
+func (r *ToolRegistry) Names() []string { return nil }
+func (r *ToolRegistry) Execute(ctx context.Context, call ToolCall) (ToolResult,error) { return ToolResult{},nil }
+func (r *ToolRegistry) SetActive(names []string) error { return nil }
+func (r *ToolRegistry) Register(tool ToolDefinition) error { return nil }
+
+// Batch session. No implicit per-run turn/time cap; callers own context budgets.
+type SessionOptions struct {
+ Cwd string
+ Model ModelOptions
+ Manager *SessionManager
+ Resources ResourceOptions
+ Tools *ToolRegistry
+ Settings Settings
+ Policy RunPolicy
+}
+type RunPolicy struct {
+ MaxTurns int
+ RetryAttempts int
+ RetryDelay time.Duration
+ CompactReserveTokens int
+ KeepRecentMessages int
+ Summarize func(context.Context, []agenttypes.AgentMessage) (string,error)
+}
+type SessionEvent struct { Type, ToolName, ToolCallID, Text string; IsError bool; Message *agenttypes.AgentMessage }
+type RunResult struct { StopReason aitypes.StopReason; Turns int; Messages []agenttypes.AgentMessage; Usage aitypes.Usage }
+type AgentSession struct{}
+func CreateAgentSession(options SessionOptions) (*AgentSession,error) { return &AgentSession{},nil }
+func (s *AgentSession) Prompt(ctx context.Context, text string) (RunResult,error) { return RunResult{},nil }
+func (s *AgentSession) Subscribe(listener func(SessionEvent)) func() { return func(){} }
+func (s *AgentSession) Messages() []agenttypes.AgentMessage { return nil }
+func (s *AgentSession) SetModel(model ModelOptions) error { return nil }
+func (s *AgentSession) SetActiveTools(names []string) error { return nil }
+func (s *AgentSession) Steer(text string) error { return nil }
+func (s *AgentSession) FollowUp(text string) error { return nil }
+func (s *AgentSession) Abort() {}
+func (s *AgentSession) Close() error { return nil }
+func (s *AgentSession) Compact(ctx context.Context) error { return nil }

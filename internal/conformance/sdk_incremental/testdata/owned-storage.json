@@ -1,0 +1,226 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CURRENT_SESSION_VERSION"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionHeader"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "NewSessionOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionEntryBase"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionMessageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ThinkingLevelChangeEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ModelChangeEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "UsageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CompactionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "BranchSummaryEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CustomEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "LabelEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionInfoEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CustomMessageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ContextEditableContent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ContextEditEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "FileEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionTreeNode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ProjectedSessionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionProjection"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ReadonlySessionManager"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "assertValidSessionId"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "migrateSessionEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "parseSessionEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "getLatestCompactionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "sessionEntryToContextMessages"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildContextEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildSessionProjection"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildSessionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "getDefaultSessionDir"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "loadEntriesFromFile"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "findMostRecentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionListProgress"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionManager"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "SessionCwdIssue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "getMissingSessionCwdIssue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "formatMissingSessionCwdError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "formatMissingSessionCwdPrompt"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "MissingSessionCwdError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "assertSessionCwdExists"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_PREFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_SUFFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BRANCH_SUMMARY_PREFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BRANCH_SUMMARY_SUFFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BashExecutionMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "CustomMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BranchSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "CompactionSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "bashExecutionToText"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createBranchSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createCompactionSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createCustomMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "convertToLlm"
+  }
+]

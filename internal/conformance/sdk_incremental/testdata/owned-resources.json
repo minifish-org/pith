@@ -1,0 +1,190 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceCollision"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceExtensionPaths"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceLoaderReloadOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceLoader"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "loadProjectContextFiles"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "DefaultResourceLoaderOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "DefaultResourceLoader"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "SkillFrontmatter"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "Skill"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsFromDirOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "loadSkillsFromDir"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "formatSkillsForPrompt"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "loadSkills"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "PromptTemplate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "parseCommandArgs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "substituteArgs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "LoadPromptTemplatesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "LoadPromptTemplatesResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "loadPromptTemplates"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "expandPromptTemplate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "BuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "NormalizedBuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "SystemPromptSections"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "normalizeBuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPromptSections"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPromptState"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPrompt"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "diffSystemPromptSections"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceScope"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceOrigin"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "createSourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "createSyntheticSourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "AppMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "ResolveProjectTrustedOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "resolveProjectTrusted"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustDecision"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustStoreEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustUpdate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustOption"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "getProjectTrustParentPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "getProjectTrustOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "hasTrustRequiringProjectResources"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustStore"
+  }
+]

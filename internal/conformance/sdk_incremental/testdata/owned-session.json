@@ -1,0 +1,150 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ParsedSkillBlock"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "parseSkillBlock"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionEventListener"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ExtensionBindings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "PromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ModelMutationOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ModelCycleResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "SessionStats"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionRuntimeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionRuntimeFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "SessionImportFileNotFoundError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionFromServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "CreateAgentSessionServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "AgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "createAgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "createAgentSessionFromServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "EventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "EventBusController"
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "createEventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/telemetry.ts",
+    "upstream": "isInstallTelemetryEnabled"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "UsageTotals"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "createUsageTotals"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "addUsageToTotals"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "UsageCostBreakdownEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "getUsageCostBreakdown"
+  }
+]

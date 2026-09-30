@@ -1,0 +1,4539 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "CreateAgentSessionOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go adaptation: the upstream options bag is SessionOptions; it carries cwd, model, manager, resources, tools, settings and policy explicitly."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "CreateAgentSessionResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSession",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Go adaptation: CreateAgentSession returns the *AgentSession plus an error instead of a result wrapper with services/runtime diagnostics."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionAPI",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension API: extension execution is out of scope in this increment; custom Go tools and hooks replace it.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionCommandContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension command context: extension commands are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension context: extension execution is out of scope; the headless SDK has no extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionFactory",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension factory: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "InlineExtension",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Inline TS/JS extension: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "SlashCommandInfo",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Slash command registry: TS/JS extension commands are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "SlashCommandSource",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Slash command source: TS/JS extension commands are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of ToolDefinition from packages/coding-agent/src/core/sdk.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "PromptTemplate",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PromptTemplate",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Direct Go port of PromptTemplate from packages/coding-agent/src/core/sdk.ts; real declaration lives in packages/coding-agent/prompt_templates.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "Skill",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Skill",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Direct Go port of Skill from packages/coding-agent/src/core/sdk.ts; real declaration lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "Tool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Tool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of Tool from packages/coding-agent/src/core/sdk.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "withFileMutationQueue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WithFileMutationQueue",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go generic helper WithFileMutationQueue ports the upstream file mutation queue."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createCodingTools",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateCodingTools",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Go export CreateCodingTools ports the upstream createCodingTools (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/tool_registry.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createReadOnlyTools",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadOnlyTools",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Go export CreateReadOnlyTools ports the upstream createReadOnlyTools (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/tool_registry.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createReadTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateReadTool ports the upstream createReadTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createBashTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBashTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateBashTool ports the upstream createBashTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createEditTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEditTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateEditTool ports the upstream createEditTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createWriteTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateWriteTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateWriteTool ports the upstream createWriteTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createGrepTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateGrepTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateGrepTool ports the upstream createGrepTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createFindTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFindTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateFindTool ports the upstream createFindTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createLsTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLsTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateLsTool ports the upstream createLsTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createPowerShellTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreatePowerShellTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreatePowerShellTool ports the upstream createPowerShellTool (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createAgentSession",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSession",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Go export CreateAgentSession ports the upstream createAgentSession (packages/coding-agent/src/core/sdk.ts); behavior lives in packages/coding-agent/agent_session.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSession",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSession",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Direct Go port of AgentSession from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/agent_session.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionConfig",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Direct Go port of AgentSessionConfig from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/agent_session.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of AgentSessionEvent from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionEventListener",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionEventListener",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of AgentSessionEventListener from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ModelCycleResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelCycleResult",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of ModelCycleResult from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "PromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PromptOptions",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of PromptOptions from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionStats",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionStats",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of SessionStats from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionRuntime",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of AgentSessionRuntime from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionRuntimeFactory",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntimeFactory",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionRuntimeFactory from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionRuntimeResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntimeResult",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionRuntimeResult from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createAgentSessionRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntime",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go export CreateAgentSessionRuntime ports the upstream createAgentSessionRuntime (packages/coding-agent/src/core/index.ts); behavior lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionRuntimeDiagnostic",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of AgentSessionRuntimeDiagnostic from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of AgentSessionServices from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionFromServicesOptions from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionServicesOptions from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createAgentSessionFromServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go export CreateAgentSessionFromServices ports the upstream createAgentSessionFromServices (packages/coding-agent/src/core/index.ts); behavior lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createAgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go export CreateAgentSessionServices ports the upstream createAgentSessionServices (packages/coding-agent/src/core/index.ts); behavior lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BashExecutorOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go adaptation of the bash executor options; the local shell operations consume BashExecOptions."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BashResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go adaptation of the bash execution result; the local shell operations return BashExecResult."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "executeBashWithOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Adapted to the BashOperations.Exec interface; callers inject a shell implementation instead of a free function."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingDecision",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CacheWarmingMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Adapted: headless SDK configures cache warming with CacheWarmingMode; the per-request decision object is not exposed."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingStatus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CacheWarmingMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Adapted: cache-warming state is represented by the CacheWarmingMode setting rather than a runtime status union."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CompactionResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of CompactionResult from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createEventBus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEventBus",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go export CreateEventBus ports the upstream createEventBus (packages/coding-agent/src/core/index.ts); behavior lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "EventBus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EventBus",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of EventBus from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "EventBusController",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EventBusController",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of EventBusController from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "areExperimentalFeaturesEnabled",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Settings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Adapted: experimental gates are ordinary settings; Settings is the batch type that carries them."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentActivityOutcome",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentBeforeSettleEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentBeforeSettleEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentEndEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSettledEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentStartEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentToolResult",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentToolResult",
+    "goFile": "packages/agent/types/types.go",
+    "reason": "Shared declaration AgentToolResult owned by the accepted dependency package; the SDK consumes it from packages/agent/types/types.go instead of copying the type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentToolUpdateCallback",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentToolUpdateCallback",
+    "goFile": "packages/agent/types/types.go",
+    "reason": "Shared declaration AgentToolUpdateCallback owned by the accepted dependency package; the SDK consumes it from packages/agent/types/types.go instead of copying the type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BeforeAgentStartEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BeforeAgentStartEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook result: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BoundaryContextPreview",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary preview used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BoundaryResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary preview result used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BoundaryState",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary preview state used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BuildSystemPromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSystemPromptOptions",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Direct Go port of BuildSystemPromptOptions from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/system_prompt.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingDecisionEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension cache-warming decision event: custom Go hooks replace JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingDecisionEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension cache-warming decision event result: custom Go hooks replace JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CompactionEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context-edit draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ContextEditEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context-edit draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ContextEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context pipeline event used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ContextWithSystemEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context-with-system event used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CustomEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Custom-entry draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CustomMessageEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Custom-message draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "defineTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Adapted to ToolDefinition: custom Go tools are constructed directly rather than through a JS helper."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "discoverAndLoadExtensions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension discovery: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExecOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go adaptation of the shell exec options; BashExecOptions is consumed by the local shell operations."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExecResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go adaptation of the shell exec result; the local shell operations return BashExecResult."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "Extension",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension descriptor: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionAPI",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension API: extension execution is out of scope in this increment; custom Go tools and hooks replace it.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionCommandContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension command context: extension commands are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension context: extension execution is out of scope; the headless SDK has no extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionError",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension error channel: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension event union: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionFactory",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension factory: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionFlag",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension CLI flags: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionHandler",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension handler: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionRunner",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension runner: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionShortcut",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension shortcut: TUI/extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionUIContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension UI context: TUI widgets are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "InlineExtension",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Inline TS/JS extension: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "LoadExtensionsResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension discovery result: TS/JS extension loading is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "MessageRenderer",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "NormalizedBuildSystemPromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NormalizedBuildSystemPromptOptions",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Direct Go port of NormalizedBuildSystemPromptOptions from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/system_prompt.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "RegisteredCommand",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension slash command registry: the extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeCompactEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeForkEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeSwitchEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeTreeEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBoundaryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionCompactEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; compaction is observed through AgentSession.Compact.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionShutdownEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; events.go publishes only the kinds documented there.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionStartEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; events.go publishes only the kinds documented there.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionTreeEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; tree navigation is exposed as SessionManager methods.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolCallEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of ToolDefinition from packages/coding-agent/src/core/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolRenderResultOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolResultEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "TurnEndEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "TurnEndEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "TurnStartEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "WorkingIndicatorOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI working-indicator options: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createSyntheticSourceInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateSyntheticSourceInfo",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Go export CreateSyntheticSourceInfo ports the upstream createSyntheticSourceInfo (packages/coding-agent/src/core/index.ts); behavior lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Args",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI argument model for cmd/pith: interactive and print CLI orchestration stays in the binary.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseArgs",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI argument parsing for cmd/pith: interactive and print CLI orchestration stays in the binary.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CONFIG_DIR_NAME",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ConfigDirName",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Go constant ConfigDirName ports the project-local config directory name."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getAgentDir",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetAgentDir",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Go export GetAgentDir ports the upstream getAgentDir (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getDocsPath",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI package path helper: CLI/package layout is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getExamplesPath",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI package path helper: CLI/package layout is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getPackageDir",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI package path helper: CLI/package layout is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getReadmePath",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI package path helper: CLI/package layout is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "VERSION",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI version banner: version reporting stays in cmd/pith.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSession",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSession",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Direct Go port of AgentSession from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/agent_session.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionConfig",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Direct Go port of AgentSessionConfig from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/agent_session.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of AgentSessionEvent from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionEventListener",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionEventListener",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of AgentSessionEventListener from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelCycleResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelCycleResult",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of ModelCycleResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ParsedSkillBlock",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParsedSkillBlock",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of ParsedSkillBlock from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PromptOptions",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of PromptOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseSkillBlock",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParseSkillBlock",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go export ParseSkillBlock ports the upstream parseSkillBlock (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionStats",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionStats",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of SessionStats from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "readStoredCredential",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadStoredCredential",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Go export ReadStoredCredential ports the upstream readStoredCredential (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingDecision",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CacheWarmingMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Adapted: headless SDK configures cache warming with CacheWarmingMode; the per-request decision object is not exposed."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingStatus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CacheWarmingMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Adapted: cache-warming state is represented by the CacheWarmingMode setting rather than a runtime status union."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchPreparation",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchPreparation",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of BranchPreparation from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchSummaryResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummaryResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of BranchSummaryResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CollectEntriesResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CollectEntriesResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of CollectEntriesResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of CompactionResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CutPointResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CutPointResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of CutPointResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "calculateContextTokens",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CalculateContextTokens",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export CalculateContextTokens ports the upstream calculateContextTokens (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "collectEntriesForBranchSummary",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CollectEntriesForBranchSummary",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export CollectEntriesForBranchSummary ports the upstream collectEntriesForBranchSummary (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "compact",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Compact",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export Compact ports the upstream compact (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DEFAULT_COMPACTION_SETTINGS",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultCompactionPolicy",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go var DefaultCompactionPolicy holds the upstream default compaction settings."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "estimateTokens",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EstimateTokens",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export EstimateTokens ports the upstream estimateTokens (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FileOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileOperations",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of FileOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "findCutPoint",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindCutPoint",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export FindCutPoint ports the upstream findCutPoint (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "findTurnStartIndex",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindTurnStartIndex",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export FindTurnStartIndex ports the upstream findTurnStartIndex (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GenerateBranchSummaryOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateBranchSummaryOptions",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Direct Go port of GenerateBranchSummaryOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateBranchSummary",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateBranchSummary",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export GenerateBranchSummary ports the upstream generateBranchSummary (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateSummary",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateSummary",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export GenerateSummary ports the upstream generateSummary (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateSummaryWithUsage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateSummaryWithUsage",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export GenerateSummaryWithUsage ports the upstream generateSummaryWithUsage (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getLastAssistantUsage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetLastAssistantUsage",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export GetLastAssistantUsage ports the upstream getLastAssistantUsage (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "prepareBranchEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PrepareBranchEntries",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export PrepareBranchEntries ports the upstream prepareBranchEntries (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "serializeConversation",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SerializeConversation",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export SerializeConversation ports the upstream serializeConversation (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "shouldCompact",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ShouldCompact",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go export ShouldCompact ports the upstream shouldCompact (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/compaction.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createEventBus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEventBus",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go export CreateEventBus ports the upstream createEventBus (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EventBus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EventBus",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of EventBus from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EventBusController",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EventBusController",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Direct Go port of EventBusController from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/events.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AfterProviderResponseEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension provider hook: custom Go provider composition replaces JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentActivityOutcome",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentBeforeSettleEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentBeforeSettleEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentEndEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSettledEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentStartEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentToolResult",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentToolResult",
+    "goFile": "packages/agent/types/types.go",
+    "reason": "Shared declaration AgentToolResult owned by the accepted dependency package; the SDK consumes it from packages/agent/types/types.go instead of copying the type."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentToolUpdateCallback",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "AgentToolUpdateCallback",
+    "goFile": "packages/agent/types/types.go",
+    "reason": "Shared declaration AgentToolUpdateCallback owned by the accepted dependency package; the SDK consumes it from packages/agent/types/types.go instead of copying the type."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AppKeybinding",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AutocompleteProviderFactory",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeAgentStartEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeAgentStartEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook result: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeProviderHeadersEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension provider hook: custom Go provider composition replaces JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeProviderRequestEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension provider hook: custom Go provider composition replaces JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeProviderRequestEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension provider hook result: custom Go provider composition replaces JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BoundaryContextPreview",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary preview used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BoundaryResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary preview result used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BoundaryState",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary preview state used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BuildSystemPromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSystemPromptOptions",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Direct Go port of BuildSystemPromptOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/system_prompt.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingDecisionEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension cache-warming decision event: custom Go hooks replace JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingDecisionEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension cache-warming decision event result: custom Go hooks replace JS hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context-edit draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionPolicy",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go adaptation: compaction knobs are grouped in CompactionPolicy and applied by Compact."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEditEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context-edit draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context pipeline event used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context pipeline event result used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextUsage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ContextUsageEstimate",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go adaptation of the context usage projection; EstimateContextTokens returns ContextUsageEstimate."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextWithSystemEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Context-with-system event used by the extension context transformer; not exposed headless.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Custom-entry draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomMessageEntryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Custom-message draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EntryRenderer",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EntryRenderOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExecOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go adaptation of the shell exec options; BashExecOptions is consumed by the local shell operations."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExecResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go adaptation of the shell exec result; the local shell operations return BashExecResult."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Extension",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension descriptor: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionActions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension actions: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionAPI",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension API: extension execution is out of scope in this increment; custom Go tools and hooks replace it.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionCommandContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension command context: extension commands are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionCommandContextActions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension command actions: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension context: extension execution is out of scope; the headless SDK has no extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionContextActions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension context actions: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionError",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension error channel: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension event union: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionFactory",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension factory: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionFlag",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension CLI flags: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionHandler",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension handler: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionRuntime",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension runtime: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionShortcut",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension shortcut: TUI/extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionUIContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension UI context: TUI widgets are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionUIDialogOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension UI dialog: TUI widgets are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionWidgetOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension UI widget: TUI widgets are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InlineExtension",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Inline TS/JS extension: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InputEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InputEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InputSource",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "KeybindingsManager",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoadExtensionsResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension discovery result: TS/JS extension loading is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MarkdownTransformContext",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MarkdownTransformer",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageEndEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageEndEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageRenderer",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageRenderOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageStartEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageUpdateEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelSelectEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI model-selection event: terminal interaction is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelSelectSource",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI model-selection source: terminal interaction is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "NormalizedBuildSystemPromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NormalizedBuildSystemPromptOptions",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Direct Go port of NormalizedBuildSystemPromptOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/system_prompt.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustContext",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ProjectTrustContext from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Interactive project-trust prompt: browser/TUI trust UI is out of scope; ResolveProjectTrusted is the headless path.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustEventDecision",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Interactive project-trust decision: browser/TUI trust UI is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustEventResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Interactive project-trust result: browser/TUI trust UI is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustHandler",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Interactive project-trust handler: browser/TUI trust UI is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProviderConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProviderConfigInput",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Go adaptation of the extension provider configuration; ProviderConfigInput is validated by ValidateExtensionProvider."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProviderModelConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelsJsonModel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Go adaptation of the models.json model entry; ModelsJsonModel carries api/baseUrl/capabilities."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RegisteredCommand",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension slash command registry: the extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RegisteredTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Adapted to ToolDefinition; the headless SDK registers Go tools instead of wrapping extension tools."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolvedCommand",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Resolved extension command: TS/JS command execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourcesDiscoverEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension resource hook: explicit ResourceOptions replace JS resource discovery.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourcesDiscoverResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension resource hook result: explicit ResourceOptions replace JS resource discovery.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeCompactEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeCompactResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook result: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeForkEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeForkResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook result: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeSwitchEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeSwitchResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook result: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeTreeEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeTreeResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Extension lifecycle hook result: custom Go hooks replace JS extension hooks.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBoundaryDraft",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Session boundary draft used by JS extension context transforms; excluded with the extension host.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionCompactEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; compaction is observed through AgentSession.Compact.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionCompactFailedEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; a failed Compact returns a Go error.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionInfoChangedEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; session metadata is read from SessionManager.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionShutdownEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; events.go publishes only the kinds documented there.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionStartEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; events.go publishes only the kinds documented there.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionTreeEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Not in the headless SessionEvent subset; tree navigation is exposed as SessionManager methods.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SlashCommandInfo",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Slash command registry: TS/JS extension commands are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SlashCommandSource",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Slash command source: TS/JS extension commands are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SourceInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SourceInfo",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of SourceInfo from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TerminalInputHandler",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThinkingLevelSelectEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI thinking-level selection event: terminal interaction is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolCallEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of ToolDefinition from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionEndEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionMode",
+    "goPackage": "packages/agent/types",
+    "goSymbol": "ToolExecutionMode",
+    "goFile": "packages/agent/types/types.go",
+    "reason": "Shared declaration ToolExecutionMode owned by the accepted dependency package; the SDK consumes it from packages/agent/types/types.go instead of copying the type."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionStartEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionUpdateEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Adapted to ToolDefinition; tool metadata and execution live on the exported ToolDefinition."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolRenderResultOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolResultEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolResultEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TurnEndEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TurnEndEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TurnStartEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UIPromptEndEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UIPromptKind",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UIPromptStartEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserBashEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserBashEventResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WidgetPlacement",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WorkingIndicatorOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI working-indicator options: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteToolCallEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Adapted to the single SessionEvent discriminated union: the headless SDK publishes this lifecycle kind via SessionEvent.Type (see events.go) instead of a separate event struct."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createExtensionRuntime",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension runtime construction: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "defineTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Adapted to ToolDefinition: custom Go tools are constructed directly rather than through a JS helper."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "discoverAndLoadExtensions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension discovery: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionRunner",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS/JS extension runner: extension execution is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isBashToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isEditToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isFindToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isGrepToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isLsToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isPowerShellToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isReadToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isToolCallEventType",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS extension event type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isWriteToolResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS tool-result type guard: extension host is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "wrapRegisteredTool",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS extension tool wrapper: custom Go tools replace extension tools.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "wrapRegisteredTools",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TS extension tool wrappers: custom Go tools replace extension tools.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadonlyFooterDataProvider",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "convertToLlm",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ConvertToLlm",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Go export ConvertToLlm ports the upstream convertToLlm (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/messages.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelRegistry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelRegistry",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of ModelRegistry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelScopeDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelScopeDiagnostic",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of ModelScopeDiagnostic from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolveCliModelResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveCliModelResult",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of ResolveCliModelResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolveModelScopeResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveModelScopeResult",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of ResolveModelScopeResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "resolveCliModel",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveCliModel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Go export ResolveCliModel ports the upstream resolveCliModel (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "resolveModelScopeWithDiagnostics",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveModelScopeWithDiagnostics",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Go export ResolveModelScopeWithDiagnostics ports the upstream resolveModelScopeWithDiagnostics (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ScopedModel",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ScopedModel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of ScopedModel from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateModelRuntimeOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateModelRuntimeOptions",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of CreateModelRuntimeOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CredentialSynchronizationError",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CredentialSynchronizationError",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of CredentialSynchronizationError from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CredentialSynchronizationOperation",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CredentialSynchronizationOperation",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of CredentialSynchronizationOperation from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelRuntime",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of ModelRuntime from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelRuntimeAuthOverrides",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelRuntimeAuthOverrides",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Direct Go port of ModelRuntimeAuthOverrides from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/model_runtime.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PackageManager",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "npm/Git extension package management is explicitly out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PathMetadata",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PathMetadata",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of PathMetadata from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProgressCallback",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Package-manager progress callback: npm/Git package management is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProgressEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Package-manager progress event: npm/Git package management is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolvedPaths",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Package-manager resolved paths: npm/Git package management is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolvedResource",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Package-manager resolved resource: npm/Git package management is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DefaultPackageManager",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "npm/Git extension package management is explicitly out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourceCollision",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceCollision",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ResourceCollision from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourceDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceDiagnostic",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ResourceDiagnostic from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourceLoader",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceLoader",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ResourceLoader from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DefaultResourceLoader",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultResourceLoader",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of DefaultResourceLoader from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "loadProjectContextFiles",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadProjectContextFiles",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Go export LoadProjectContextFiles ports the upstream loadProjectContextFiles (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionRuntime",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of AgentSessionRuntime from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionRuntimeDiagnostic",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of AgentSessionRuntimeDiagnostic from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of AgentSessionServices from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionFromServicesOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go adaptation: the upstream options bag is SessionOptions; it carries cwd, model, manager, resources, tools, settings and policy explicitly."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSession",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Go adaptation: CreateAgentSession returns the *AgentSession plus an error instead of a result wrapper with services/runtime diagnostics."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionRuntimeFactory",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntimeFactory",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionRuntimeFactory from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionRuntimeResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntimeResult",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionRuntimeResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Direct Go port of CreateAgentSessionServicesOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSession",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSession",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Go export CreateAgentSession ports the upstream createAgentSession (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/agent_session.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSessionFromServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go export CreateAgentSessionFromServices ports the upstream createAgentSessionFromServices (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSessionRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntime",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go export CreateAgentSessionRuntime ports the upstream createAgentSessionRuntime (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go export CreateAgentSessionServices ports the upstream createAgentSessionServices (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/sdk.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createBashTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBashTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateBashTool ports the upstream createBashTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createCodingTools",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateCodingTools",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Go export CreateCodingTools ports the upstream createCodingTools (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tool_registry.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createEditTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEditTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateEditTool ports the upstream createEditTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createFindTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFindTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateFindTool ports the upstream createFindTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createGrepTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateGrepTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateGrepTool ports the upstream createGrepTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLsTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLsTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateLsTool ports the upstream createLsTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createPowerShellTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreatePowerShellTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreatePowerShellTool ports the upstream createPowerShellTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createReadOnlyTools",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadOnlyTools",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Go export CreateReadOnlyTools ports the upstream createReadOnlyTools (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tool_registry.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createReadTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateReadTool ports the upstream createReadTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createWriteTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateWriteTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateWriteTool ports the upstream createWriteTool (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PromptTemplate",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PromptTemplate",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Direct Go port of PromptTemplate from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/prompt_templates.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchSummaryEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummaryEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of BranchSummaryEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "buildContextEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildContextEntries",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go export BuildContextEntries ports the upstream buildContextEntries (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "buildSessionContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSessionContext",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go export BuildSessionContext ports the upstream buildSessionContext (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "buildSessionProjection",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSessionProjection",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go export BuildSessionProjection ports the upstream buildSessionProjection (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of CompactionEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEditableContent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ContextEditableContent",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of ContextEditableContent from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEditEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ContextEditEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of ContextEditEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CURRENT_SESSION_VERSION",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CurrentSessionVersion",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go constant CurrentSessionVersion ports the session file version."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CustomEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of CustomEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomMessageEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CustomMessageEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of CustomMessageEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FileEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of FileEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getLatestCompactionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetLatestCompactionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go export GetLatestCompactionEntry ports the upstream getLatestCompactionEntry (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelChangeEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelChangeEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of ModelChangeEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "migrateSessionEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "MigrateSessionEntries",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go export MigrateSessionEntries ports the upstream migrateSessionEntries (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "NewSessionOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NewSessionOptions",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of NewSessionOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectedSessionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectedSessionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of ProjectedSessionEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseSessionEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParseSessionEntries",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go export ParseSessionEntries ports the upstream parseSessionEntries (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionContext",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionContext from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionEntryBase",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEntryBase",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionEntryBase from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionHeader",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionHeader",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionHeader from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionInfo",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionInfo from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionInfoEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionInfoEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionInfoEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionManager",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionManager",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionManager from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionMessageEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionMessageEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionMessageEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionProjection",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionProjection",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionProjection from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionTreeNode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionTreeNode",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of SessionTreeNode from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "sessionEntryToContextMessages",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEntryToContextMessages",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go export SessionEntryToContextMessages ports the upstream sessionEntryToContextMessages (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThinkingLevelChangeEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ThinkingLevelChangeEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Direct Go port of ThinkingLevelChangeEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/session_manager.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingMode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CacheWarmingMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of CacheWarmingMode from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionModelOverride",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionModelOverride",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of CompactionModelOverride from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of CompactionSettings from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DefaultProjectTrust",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultProjectTrust",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of DefaultProjectTrust from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FullscreenExitOutput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FullscreenExitOutput",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of FullscreenExitOutput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ImageSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ImageSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of ImageSettings from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PackageSource",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PackageSource",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of PackageSource from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RetrySettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "RetrySettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of RetrySettings from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsManager",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SettingsManager",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of SettingsManager from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsManagerCreateOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SettingsManagerCreateOptions",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of SettingsManagerCreateOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TuiMode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TuiMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Direct Go port of TuiMode from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/settings.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "formatSkillsForPrompt",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatSkillsForPrompt",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Go export FormatSkillsForPrompt ports the upstream formatSkillsForPrompt (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoadSkillsFromDirOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkillsFromDirOptions",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Direct Go port of LoadSkillsFromDirOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoadSkillsResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkillsResult",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Direct Go port of LoadSkillsResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "loadSkills",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkills",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Go export LoadSkills ports the upstream loadSkills (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "loadSkillsFromDir",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkillsFromDir",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Go export LoadSkillsFromDir ports the upstream loadSkillsFromDir (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Skill",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Skill",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Direct Go port of Skill from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SkillFrontmatter",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SkillFrontmatter",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Direct Go port of SkillFrontmatter from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/skills.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createSyntheticSourceInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateSyntheticSourceInfo",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Go export CreateSyntheticSourceInfo ports the upstream createSyntheticSourceInfo (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditDiffResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditDiffResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of EditDiffResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateDiffString",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateDiffString",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export GenerateDiffString ports the upstream generateDiffString (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateUnifiedPatch",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateUnifiedPatch",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export GenerateUnifiedPatch ports the upstream generateUnifiedPatch (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of BashOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashSpawnContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashSpawnContext",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of BashSpawnContext from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashSpawnHook",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashSpawnHook",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of BashSpawnHook from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of BashToolDetails from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of BashToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of BashToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createBashToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBashToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateBashToolDefinition ports the upstream createBashToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createEditToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEditToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateEditToolDefinition ports the upstream createEditToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createFindToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFindToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateFindToolDefinition ports the upstream createFindToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createGrepToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateGrepToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateGrepToolDefinition ports the upstream createGrepToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLocalBashOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLocalBashOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateLocalBashOperations ports the upstream createLocalBashOperations (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLocalPowerShellOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLocalPowerShellOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateLocalPowerShellOperations ports the upstream createLocalPowerShellOperations (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLsToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLsToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go export CreateLsToolDefinition ports the upstream createLsToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createPowerShellToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreatePowerShellToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreatePowerShellToolDefinition ports the upstream createPowerShellToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createReadToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateReadToolDefinition ports the upstream createReadToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createWriteToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateWriteToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export CreateWriteToolDefinition ports the upstream createWriteToolDefinition (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DEFAULT_MAX_BYTES",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "DefaultMaxBytes",
+    "goFile": "packages/agent/harness/utils/truncate/truncate.go",
+    "reason": "Shared truncation default owned by the accepted harness truncate package."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DEFAULT_MAX_LINES",
+    "goPackage": "packages/agent/harness/utils/truncate",
+    "goSymbol": "DefaultMaxLines",
+    "goFile": "packages/agent/harness/utils/truncate/truncate.go",
+    "reason": "Shared truncation default owned by the accepted harness truncate package."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of EditOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of EditToolDetails from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of EditToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of EditToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of FindOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of FindToolDetails from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of FindToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of FindToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "formatSize",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatSize",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export FormatSize ports the upstream formatSize (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of GrepOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of GrepToolDetails from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of GrepToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of GrepToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of LsOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of LsToolDetails from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of LsToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Direct Go port of LsToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/search_tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of PowerShellOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellSpawnContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellSpawnContext",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of PowerShellSpawnContext from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellSpawnHook",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellSpawnHook",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of PowerShellSpawnHook from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of PowerShellToolDetails from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of PowerShellToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of PowerShellToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of ReadOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of ReadToolDetails from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of ReadToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of ReadToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolsOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolsOptions",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Direct Go port of ToolsOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tool_registry.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TruncationOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncationOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of TruncationOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TruncationResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncationResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of TruncationResult from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateHead",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateHead",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export TruncateHead ports the upstream truncateHead (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateLine",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateLine",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export TruncateLine ports the upstream truncateLine (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateTail",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateTail",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go export TruncateTail ports the upstream truncateTail (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of WriteOperations from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of WriteToolInput from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Direct Go port of WriteToolOptions from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/tools.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "withFileMutationQueue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WithFileMutationQueue",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go generic helper WithFileMutationQueue ports the upstream file mutation queue."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "hasTrustRequiringProjectResources",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "HasTrustRequiringProjectResources",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Go export HasTrustRequiringProjectResources ports the upstream hasTrustRequiringProjectResources (packages/coding-agent/src/index.ts); behavior lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustDecision",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustDecision",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ProjectTrustDecision from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustStore",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustStore",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ProjectTrustStore from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustStoreEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustStoreEntry",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ProjectTrustStoreEntry from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustUpdate",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustUpdate",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Direct Go port of ProjectTrustUpdate from packages/coding-agent/src/index.ts; real declaration lives in packages/coding-agent/resource_loader.go."
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MainOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI main options: interactive orchestration stays in cmd/pith.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "main",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI entry point: interactive orchestration stays in cmd/pith.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InteractiveMode",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Interactive TUI mode: excluded from the headless SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InteractiveModeOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Interactive TUI options: excluded from the headless SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "JsonAgentSessionEvent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI JSON event envelope: CLI orchestration stays in cmd/pith.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelInfo",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI human-readable model info: CLI orchestration stays in cmd/pith.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PrintModeOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI print-mode options: CLI orchestration stays in cmd/pith.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcClient",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC client transport: the RPC host is out of scope for the embedded SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcClientOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC client options: the RPC host is out of scope for the embedded SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcCommand",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC command envelope: the RPC host is out of scope for the embedded SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcEventListener",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC event listener: the RPC host is out of scope for the embedded SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcExtensionUIRequest",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC extension UI request: RPC and TUI hosts are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcExtensionUIResponse",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC extension UI response: RPC and TUI hosts are out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcResponse",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC response envelope: the RPC host is out of scope for the embedded SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcSessionState",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "RPC session state: the RPC host is out of scope for the embedded SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "runPrintMode",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI print mode: CLI orchestration stays in cmd/pith.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "runRpcMode",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "CLI RPC mode: the RPC host is out of scope for the embedded SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ArminComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AssistantMessageComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashExecutionComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BorderedLoader",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchSummaryMessageComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionSummaryMessageComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEditor",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI custom editor widget: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEditorOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI custom editor options: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomMessageComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DynamicBorder",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionEditorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionInputComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FooterComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "keyHint",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "keyText",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoginDialogComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "OAuthSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RenderDiffOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "rawKeyHint",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "renderDiff",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsCallbacks",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsConfig",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ShowImagesSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SkillInvocationMessageComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThemeSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThinkingSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionOptions",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TreeSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateToVisualLines",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserMessageComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserMessageSelectorComponent",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "VisualTruncateResult",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getLanguageFromPath",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Syntax-highlighting helper for the TUI renderer; TUI is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getMarkdownTheme",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI markdown theme: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getSelectListTheme",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI select-list theme: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getSettingsListTheme",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI settings-list theme: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "highlightCode",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI widget/renderer: terminal rendering, widgets and dialogs are excluded from this headless SDK increment (see docs/sdk/compatibility.md).",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "initTheme",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI theme initialization: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Theme",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI theme type: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThemeColor",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI theme color: terminal rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "copyToClipboard",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Clipboard integration is a TUI concern; not part of the headless SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseFrontmatter",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Internal frontmatter helper folded into prompt/skill loaders; no separate exported Go symbol.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "stripFrontmatter",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Internal frontmatter helper folded into prompt/skill loaders; no separate exported Go symbol.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "convertToPng",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Image conversion helper used only by the TUI image pipeline; not part of the headless SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "formatDimensionNote",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI image dimension note: TUI rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResizedImage",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "TUI resized-image placeholder: terminal image rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "resizeImage",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Terminal image resize helper: TUI image rendering is out of scope.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "detectSupportedImageMimeTypeFromFile",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Image MIME sniffing for the TUI image pipeline: not part of the headless SDK.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getPowerShellConfig",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Internal shell configuration helper owned by the harness execution environment.",
+    "disposition": "excluded"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getShellConfig",
+    "goPackage": "",
+    "goSymbol": "",
+    "goFile": "",
+    "reason": "Internal shell configuration helper owned by the harness execution environment.",
+    "disposition": "excluded"
+  }
+]

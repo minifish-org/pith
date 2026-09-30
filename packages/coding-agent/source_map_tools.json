@@ -1,0 +1,1426 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "bashToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createLocalShellOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLocalShellOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createLocalBashOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLocalBashOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashSpawnContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashSpawnContext",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashSpawnHook",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashSpawnHook",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashRenderState",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashRenderState",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Headless output/render state adapted to a Go value; TUI timer/renderer integration is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "ShellToolConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ShellToolConfig",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createShellToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateShellToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createBashToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBashToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createBashTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBashTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "detectLineEnding",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DetectLineEnding",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "normalizeToLF",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NormalizeToLF",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "restoreLineEndings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "RestoreLineEndings",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "normalizeForFuzzyMatch",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NormalizeForFuzzyMatch",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "applyReplacementsPreservingUnchangedLines",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ApplyReplacementsPreservingUnchangedLines",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "FuzzyMatchResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FuzzyMatchResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "Edit",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Edit",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "AppliedEditsResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AppliedEditsResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "fuzzyFindText",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FuzzyFindText",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "applyEditsToNormalizedContent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ApplyEditsToNormalizedContent",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "generateUnifiedPatch",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateUnifiedPatch",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "generateDiffString",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateDiffString",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "EditDiffResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditDiffResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "EditDiffError",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditDiffError",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "computeEditsDiff",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ComputeEditsDiff",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "computeEditDiff",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ComputeEditDiff",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "editToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "createEditToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEditToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "createEditTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEditTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+    "upstream": "withFileMutationQueue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WithFileMutationQueue",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "relativizeFindResultPath",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "RelativizeFindResultPath",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "findToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "createFindToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFindToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "createFindTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFindTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "grepToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "createGrepToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateGrepToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "createGrepTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateGrepTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashSpawnContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashSpawnContext",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashSpawnHook",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashSpawnHook",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createBashTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBashTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createBashToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBashToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLocalBashOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLocalBashOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createEditTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEditTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createEditToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEditToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EditToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "withFileMutationQueue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WithFileMutationQueue",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createFindTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFindTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createFindToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFindToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createGrepTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateGrepTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createGrepToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateGrepToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLsTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLsTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLsToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLsToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLocalPowerShellOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLocalPowerShellOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createPowerShellTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreatePowerShellTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createPowerShellToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreatePowerShellToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellSpawnContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellSpawnContext",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellSpawnHook",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellSpawnHook",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "DEFAULT_MAX_BYTES",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultMaxBytes",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "DEFAULT_MAX_LINES",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultMaxLines",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "formatSize",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatSize",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "TruncationOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncationOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "TruncationResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncationResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateHead",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateHead",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateLine",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateLine",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateTail",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateTail",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createWriteTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateWriteTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createWriteToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateWriteToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "Tool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Tool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolDef",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolDef",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolName",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolName",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "allToolNames",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AllToolNames",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolsOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ToolsOptions",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateToolDefinition",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateTool",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createCodingToolDefinitions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateCodingToolDefinitions",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadOnlyToolDefinitions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadOnlyToolDefinitions",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createAllToolDefinitions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAllToolDefinitions",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createCodingTools",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateCodingTools",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadOnlyTools",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadOnlyTools",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createAllTools",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAllTools",
+    "goFile": "packages/coding-agent/tool_registry.go",
+    "reason": "Barrel export forwarded to the single Go owner of the declaration; no duplicate implementation is created."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "lsToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolInput",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolDetails",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsOperations",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LsToolOptions",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "createLsToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLsToolDefinition",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "createLsTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLsTool",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputAccumulatorOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "OutputAccumulatorOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Headless output/render state adapted to a Go value; TUI timer/renderer integration is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputSnapshot",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "OutputSnapshot",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Headless output/render state adapted to a Go value; TUI timer/renderer integration is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputAccumulator",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "OutputAccumulator",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Headless output/render state adapted to a Go value; TUI timer/renderer integration is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "pathExists",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PathExists",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "expandPath",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ExpandPath",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveToCwd",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveToCwd",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveReadPath",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveReadPath",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveReadPathAsync",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveReadPathAsync",
+    "goFile": "packages/coding-agent/search_tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "powershellToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "PowerShell shell configuration adapted to the shared Go shell adapter; the headless registry does not activate it by default."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellSpawnContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellSpawnContext",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "PowerShell shell configuration adapted to the shared Go shell adapter; the headless registry does not activate it by default."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellSpawnHook",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellSpawnHook",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "PowerShell shell configuration adapted to the shared Go shell adapter; the headless registry does not activate it by default."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "PowerShell shell configuration adapted to the shared Go shell adapter; the headless registry does not activate it by default."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "PowerShell shell configuration adapted to the shared Go shell adapter; the headless registry does not activate it by default."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PowerShellToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "PowerShell shell configuration adapted to the shared Go shell adapter; the headless registry does not activate it by default."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createLocalPowerShellOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateLocalPowerShellOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createPowerShellToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreatePowerShellToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createPowerShellTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreatePowerShellTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "readToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolDetails",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "createReadToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "createReadTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateReadTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "wrapToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WrapToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "wrapToolDefinitions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WrapToolDefinitions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "createToolDefinitionFromAgentTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateToolDefinitionFromAgentTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "DEFAULT_MAX_LINES",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultMaxLines",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Limit re-exported from the accepted harness truncation package (single owner)."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "DEFAULT_MAX_BYTES",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultMaxBytes",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Limit re-exported from the accepted harness truncation package (single owner)."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "GREP_MAX_LINE_LENGTH",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GrepMaxLineLength",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Limit re-exported from the accepted harness truncation package (single owner)."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "TruncationResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncationResult",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "TruncationOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncationOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "formatSize",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatSize",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateHead",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateHead",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateTail",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateTail",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateLine",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TruncateLine",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "writeToolSystemPromptContribution",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteToolSystemPromptContribution",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Prompt metadata retained as data; TUI rendering and slash-command widgets are excluded from the SDK increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteToolInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteToolInput",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteOperations",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteToolOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteToolOptions",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go type port of the upstream declaration; behavior matches the headless embedded SDK contract."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "createWriteToolDefinition",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateWriteToolDefinition",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "createWriteTool",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateWriteTool",
+    "goFile": "packages/coding-agent/tools.go",
+    "reason": "Go implementation adapted onto the accepted harness/Go backend; renderer and JS-host hooks are excluded."
+  }
+]

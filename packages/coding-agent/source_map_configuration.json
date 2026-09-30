@@ -1,0 +1,794 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/defaults.ts",
+    "upstream": "DEFAULT_THINKING_LEVEL",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultThinkingLevel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Default reasoning level (medium) shared by model resolution."
+  },
+  {
+    "source": "packages/coding-agent/src/core/defaults.ts",
+    "upstream": "THINKING_LEVEL_OPTIONS",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ThinkingLevelOptions",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Ordered list of supported thinking levels."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CompactionModelOverride",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionModelOverride",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Per-model compaction token override."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CompactionSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Compaction settings section; optional fields are pointers."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "BranchSummarySettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummarySettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Branch summarization settings section."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ProviderRetrySettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProviderRetrySettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Provider retry settings section."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "RetrySettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "RetrySettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Agent retry settings section."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TuiMode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TuiMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Data-only TUI mode value; the SDK ships no TUI widgets."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "FullscreenExitOutput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FullscreenExitOutput",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Data-only fullscreen exit output value."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TerminalSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TerminalSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Data-only terminal settings; rendering is out of scope."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ImageSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ImageSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Image handling settings section."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ThinkingBudgetsSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ThinkingBudgetsSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Per-level thinking token budgets."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "MermaidRenderingMode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "MermaidRenderingMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Data-only Mermaid rendering mode."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CACHE_WARMING_MODES",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CacheWarmingModes",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Ordered cache-warming modes."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CacheWarmingMode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CacheWarmingMode",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Cache-warming mode value."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "MarkdownSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "MarkdownSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Data-only Markdown settings."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "WarningSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WarningSettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Non-fatal warning settings."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "DefaultProjectTrust",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultProjectTrust",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Global project-trust policy value."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TransportSetting",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TransportSetting",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Alias of the accepted AI transport enum so one owner is retained."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "PackageSource",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PackageSource",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Package source supporting the string shorthand and object filter form; npm/git installation itself is out of scope."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "Settings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Settings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Raw JSON settings map so unknown keys, false, zero and null survive load/save; the upstream typed interface is represented by the exported section structs."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsScope",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SettingsScope",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Settings layer discriminator (global/project)."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsManagerCreateOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SettingsManagerCreateOptions",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Manager construction options."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsStorage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SettingsStorage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Synchronous lock-scoped settings storage interface."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsError",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SettingsError",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Non-fatal settings load/persistence error for one scope."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "FileSettingsStorage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileSettingsStorage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "File-backed global/project settings storage with atomic private writes."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "InMemorySettingsStorage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "InMemorySettingsStorage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "In-memory settings storage for tests and embedded hosts."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsManager",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SettingsManager",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Loads, merges and persists layered settings; per-instance state with no process-wide mutation."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
+    "upstream": "collectSettingsDiagnostics",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CollectSettingsDiagnostics",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Converts manager load/persistence errors into runtime diagnostics; uses the SDK-local SettingsDiagnostic type because the session diagnostic owner does not exist in this layer."
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
+    "upstream": "deduplicateDiagnostics",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DeduplicateDiagnostics",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Removes duplicate type/message diagnostics preserving first occurrence."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "AuthStorageBackend",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AuthStorageBackend",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Lock-scoped raw auth document interface; the callback returns the next bytes or nil to leave the file unchanged."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "FileAuthStorageBackend",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileAuthStorageBackend",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "File-backed auth document with atomic 0600 writes."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "ReadOnlyAuthStorage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadOnlyAuthStorage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Read-only CredentialStore view over an auth backend."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "InMemoryAuthStorageBackend",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "InMemoryAuthStorageBackend",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "In-memory auth document for tests and embedded hosts."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "AuthStorage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AuthStorage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "CredentialStore over a JSON auth document; resolves env indirection but never executes shell snippets."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "readStoredCredential",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadStoredCredential",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "One-off synchronous credential read without resolving configured key values."
+  },
+  {
+    "source": "packages/coding-agent/src/core/runtime-credentials.ts",
+    "upstream": "RuntimeCredentials",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "RuntimeCredentials",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Credential store overlay for non-persistent runtime API keys."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CreateModelRuntimeOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateModelRuntimeOptions",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Options for constructing a ModelRuntime; an injected APIKey callback is optional."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "ModelRuntimeAuthOverrides",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelRuntimeAuthOverrides",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Per-call auth overrides."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CredentialSynchronizationOperation",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CredentialSynchronizationOperation",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Identifies a committed credential change."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CredentialSynchronizationError",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CredentialSynchronizationError",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Reports a committed credential change whose local snapshot could not be synchronized."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "ModelRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelRuntime",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Per-instance model/auth runtime over the Pith AI provider collection; avoids process-wide registration."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ProviderConfigInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProviderConfigInput",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Shared extension provider config; single owner for the type re-exported by model-registry and provider-composer."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ResolvedRequestAuth",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolvedRequestAuth",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Request-time auth resolution result for one model."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "clearApiKeyCache",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ClearAPIKeyCache",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Clears cached configured API-key command results."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ModelRegistry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelRegistry",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Synchronous extension facade over ModelRuntime; no process-wide registration."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonModel",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelsJsonModel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "One custom model definition from models.json; optional fields are pointers so absent and present-zero stay distinct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonModelOverride",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelsJsonModelOverride",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "One model override from models.json."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonProvider",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelsJsonProvider",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "One provider entry from models.json."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelConfig",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Immutable credential-blind models.json snapshot; parse failures are recorded, missing files are empty."
+  },
+  {
+    "source": "packages/coding-agent/src/core/models-store.ts",
+    "upstream": "InMemoryCodingAgentModelsStore",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "InMemoryCodingAgentModelsStore",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "In-memory provider-catalog store built on the accepted AI ModelsStore."
+  },
+  {
+    "source": "packages/coding-agent/src/core/models-store.ts",
+    "upstream": "FileModelsStore",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileModelsStore",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "JSON-file-backed provider-catalog store with atomic private writes."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "defaultModelPerProvider",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultModelPerProvider",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Preferred default model id per provider."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ScopedModel",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ScopedModel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolved model plus optional explicit thinking level."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "findExactModelReferenceMatch",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindExactModelReferenceMatch",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Exact bare-id or provider/modelId match; ambiguous bare ids are rejected."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ParsedModelResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParsedModelResult",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Result of parsing one model pattern including an optional thinking level."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "parseModelPattern",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParseModelPattern",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Parses pattern:level while tolerating colons inside model ids."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ModelScopeDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelScopeDiagnostic",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Non-fatal model-scope warning."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ResolveModelScopeResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveModelScopeResult",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolved scope plus diagnostics."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScopeFromModels",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveModelScopeFromModels",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolves scope patterns against a supplied model list."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScopeWithDiagnostics",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveModelScopeWithDiagnostics",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolves scope patterns against the runtime's available models."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScope",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveModelScope",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolves scope patterns and returns only the models."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ResolveCliModelResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveCliModelResult",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolved CLI model plus diagnostics; async TS signature made synchronous in Go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveCliModel",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveCliModel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolves one model from CLI-style inputs; async TS signature made synchronous in Go."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "InitialModelResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "InitialModelResult",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Model chosen for a new session plus fallback message."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "findInitialModel",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindInitialModel",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Selects the initial model following the documented priority order."
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "restoreModelFromSession",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "RestoreModelFromSession",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Restores a saved model or falls back to an available one."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getConfigValueEnvVarName",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetConfigValueEnvVarName",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Returns the env var name for a bare $NAME reference."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getConfigValueEnvVarNames",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetConfigValueEnvVarNames",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Returns every env var referenced by a template."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getMissingConfigValueEnvVarNames",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetMissingConfigValueEnvVarNames",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Returns referenced env vars that are unset."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "isCommandConfigValue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "IsCommandConfigValue",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Reports whether a value is a !command reference."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "isConfigValueConfigured",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "IsConfigValueConfigured",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Reports whether every referenced env var is set."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveConfigValue",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Go adaptation: resolves templates and literals; command values are only executed when ConfigValueCommandExecutor is explicitly installed, so credentials/config never run shell snippets by default."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValueUncached",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveConfigValueUncached",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Uncached variant; still refuses to run shell snippets without an explicit executor."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValueOrThrow",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveConfigValueOrThrow",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Resolves or returns a descriptive error; command values fail unless an executor is installed."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveHeaders",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveHeaders",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Resolves header values, dropping unresolved entries."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveHeadersOrThrow",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveHeadersOrThrow",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Resolves header values or fails."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "clearConfigValueCache",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ClearConfigValueCache",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Clears cached command results."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "ExtensionOAuthConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ExtensionOAuthConfig",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Extension OAuth config using the caller interaction callback; no browser is opened by the SDK."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "ProviderConfigInput",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProviderConfigInput",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Shared extension provider config; single owner for the type re-exported by model-registry and provider-composer."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "AuthStatus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AuthStatus",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Human-readable provider auth status."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "clearApiKeyCache",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ClearAPIKeyCache",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Clears cached configured API-key command results."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "validateExtensionProvider",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ValidateExtensionProvider",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Go adaptation: validates an extension provider config using an explicit provider id instead of the TS argument shape."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "composeModelProvider",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ComposeModelProvider",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Go adaptation: composes built-in, models.json and extension layers and returns an error instead of throwing; reuses ai.CreateProvider."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "resolveConfiguredModelHeaders",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveConfiguredModelHeaders",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Resolves configured model headers through env templates; shell snippets are not executed."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "CompatibilityRequestConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompatibilityRequestConfig",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Plugin-compatibility request surface."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "resolveCompatibilityRequestConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveCompatibilityRequestConfig",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Builds the compatibility request config for one model."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "configuredRequestAuthStatus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ConfiguredRequestAuthStatus",
+    "goFile": "packages/coding-agent/model_runtime.go",
+    "reason": "Reports whether a configured API key is usable."
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-attribution.ts",
+    "upstream": "mergeProviderAttributionHeaders",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "MergeProviderAttributionHeaders",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Merges provider attribution and session headers with caller header sources."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "getProviderLoginHelp",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetProviderLoginHelp",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Returns the headless login guidance text; no interactive browser flow is provided."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoModelsAvailableMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatNoModelsAvailableMessage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Formats the no-models diagnostic using the SDK help text."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoModelSelectedMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatNoModelSelectedMessage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Formats the no-model-selected diagnostic using the SDK help text."
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoApiKeyFoundMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatNoAPIKeyFoundMessage",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Formats the missing-key diagnostic; the provider is never interpolated into a secret."
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "DEFAULT_HTTP_IDLE_TIMEOUT_MS",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultHTTPIdleTimeoutMs",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Default 5 minute HTTP idle timeout."
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "HTTP_IDLE_TIMEOUT_CHOICES",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "HTTPIdleTimeoutChoices",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Labeled HTTP idle-timeout options exposed by the settings UI."
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "parseHttpIdleTimeoutMs",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParseHTTPIdleTimeoutMs",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Parses a settings timeout value; disabled maps to 0 and invalid input to nil."
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "formatHttpIdleTimeoutMs",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatHTTPIdleTimeoutMs",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Renders a timeout using its labeled choice."
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "applyHttpProxySettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ApplyHTTPProxySettings",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Applies a proxy URL to the process proxy variables when unset."
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "configureHttpDispatcher",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ConfigureHTTPDispatcher",
+    "goFile": "packages/coding-agent/settings.go",
+    "reason": "Go adaptation: validates and returns the normalized timeout for the caller's net/http transport instead of installing an undici global dispatcher."
+  }
+]

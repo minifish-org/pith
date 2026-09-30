@@ -1,0 +1,298 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ParsedSkillBlock",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParsedSkillBlock",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go struct port of the upstream parsed skill block; fields are data only."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "parseSkillBlock",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParseSkillBlock",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go port of the upstream parser; returns nil when no skill block is present."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionEvent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionEvent",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go alias of SessionEvent; the upstream discriminated union is collapsed to the stable headless event fields."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionEventListener",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionEventListener",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go alias of the subscriber callback type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionConfig",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionConfig",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Go adaptation mapping the upstream config onto SessionOptions; agent/model runtime/extension runner are derived internally."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ExtensionBindings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ExtensionBindings",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Headless subset only: UI context, command context, shutdown and error-listener bindings belong to the excluded TS/JS host."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "PromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PromptOptions",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Images and streaming behavior retained; extension-command dispatch and interactive source are out of scope."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ModelMutationOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelMutationOptions",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go struct port of the persist flag."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ModelCycleResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelCycleResult",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go struct port of the cycle result; single-model sessions cycle to themselves."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "SessionStats",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionStats",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go struct port of the session statistics summary."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSession",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSession",
+    "goFile": "packages/coding-agent/agent_session.go",
+    "reason": "Go implementation over the accepted Pith Agent and agent loop; TUI, JS extensions, cache warmer and slash commands are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionRuntimeResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntimeResult",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go struct port; extension results are replaced by services and diagnostics."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionRuntimeFactory",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntimeFactory",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go function type port over explicit runtime options."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "SessionImportFileNotFoundError",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionImportFileNotFoundError",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go error type port with the upstream message."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionRuntime",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go runtime owner for a session plus cwd-bound services; session replacement/rebind UI is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionRuntime",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionRuntime",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go port invoking the runtime factory after the cwd check; extension shutdown events are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionRuntimeDiagnostic",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go struct port of a setup diagnostic."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go struct port of the cwd-bound services; the model runtime is caller-owned."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go options port for building a session from services."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go options port for building cwd-bound services."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionFromServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go port that forwards services into CreateAgentSession."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go port that loads resources and opens the session manager; extension provider registration is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionRuntimeDiagnostic",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go struct port of a setup diagnostic."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "CreateAgentSessionServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go options port for building cwd-bound services."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServicesOptions",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go options port for building a session from services."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "AgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go struct port of the cwd-bound services; the model runtime is caller-owned."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "createAgentSessionServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go port that loads resources and opens the session manager; extension provider registration is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "createAgentSessionFromServices",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateAgentSessionFromServices",
+    "goFile": "packages/coding-agent/sdk.go",
+    "reason": "Go port that forwards services into CreateAgentSession."
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "EventBus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EventBus",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go interface port of the publish/subscribe bus."
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "EventBusController",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EventBusController",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go interface port adding Clear."
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "createEventBus",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateEventBus",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go in-process implementation with isolated, idempotent subscriptions."
+  },
+  {
+    "source": "packages/coding-agent/src/core/telemetry.ts",
+    "upstream": "isInstallTelemetryEnabled",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "IsInstallTelemetryEnabled",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go port taking the env value and settings explicitly instead of reading process.env."
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "UsageTotals",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "UsageTotals",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go struct port of the usage accumulator."
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "createUsageTotals",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateUsageTotals",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go constructor for an empty accumulator."
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "addUsageToTotals",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AddUsageToTotals",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go port folding one usage record into the accumulator."
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "UsageCostBreakdownEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "UsageCostBreakdownEntry",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go struct port of one grouped cost row."
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "getUsageCostBreakdown",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetUsageCostBreakdown",
+    "goFile": "packages/coding-agent/events.go",
+    "reason": "Go port reading raw session payloads since SessionEntry owns a JSON payload."
+  }
+]

@@ -1,0 +1,450 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CURRENT_SESSION_VERSION",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CurrentSessionVersion",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Session file version written and accepted by the SDK (3)."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionHeader",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionHeader",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "First JSONL record with id/timestamp/cwd/parentSession."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "NewSessionOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NewSessionOptions",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go equivalent of the explicit id/parentSession construction options."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionEntryBase",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEntryBase",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Shared id/parentId/timestamp identity of a typed entry."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionMessageEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionMessageEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for a message entry; the SDK stores the message in SessionEntry.Payload."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ThinkingLevelChangeEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ThinkingLevelChangeEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for a thinking-level change record."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ModelChangeEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ModelChangeEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for a provider/model change record."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "UsageEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "UsageEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for model-attributed usage that stays out of LLM context."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CompactionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for a compaction checkpoint including kept-entry id and details."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "BranchSummaryEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummaryEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for a branch summary entry."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CustomEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CustomEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for extension state that never enters LLM context."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "LabelEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LabelEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for a bookmark label on another entry."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionInfoEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionInfoEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for session metadata such as a display name."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CustomMessageEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CustomMessageEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for a custom message that does enter LLM context."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ContextEditableContent",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ContextEditableContent",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go adaptation: the JSON content union (string or content blocks) as json.RawMessage."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ContextEditEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ContextEditEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Typed schema for an append-only context edit targeting an earlier entry."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Canonical frozen public entry: unique id, parent, type and verbatim payload."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "FileEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go union of one parsed JSONL record: header or session entry."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionTreeNode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionTreeNode",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Defensive tree node with resolved label and children."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ProjectedSessionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectedSessionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "One selected entry paired with its contribution to model context."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionProjection",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionProjection",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Provenance-preserving, compaction-aware projection of a session."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionContext",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Finalized model context: messages, thinking level and model."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionInfo",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Discovery metadata for one session file."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ReadonlySessionManager",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ReadonlySessionManager",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Read-only session interface covering the source Pick<> surface."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "assertValidSessionId",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AssertValidSessionID",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Validates an explicit session id with the upstream character rules."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "migrateSessionEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "MigrateSessionEntries",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go adaptation: migrates already-parsed FileEntry values to version 3; the durable loader rejects older on-disk formats explicitly."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "parseSessionEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParseSessionEntries",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Go adaptation: parses JSONL strictly and reports malformed complete records instead of silently dropping them."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "getLatestCompactionEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetLatestCompactionEntry",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Returns the last compaction entry on a list."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "sessionEntryToContextMessages",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionEntryToContextMessages",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Projects one SessionEntry onto model messages."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildContextEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildContextEntries",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Compaction-aware active entry list from a leaf path."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildSessionProjection",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSessionProjection",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Builds the provenance-preserving SessionProjection."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildSessionContext",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSessionContext",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Builds the finalized SessionContext."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "getDefaultSessionDir",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetDefaultSessionDir",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Encodes a cwd into the default sessions directory name."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "loadEntriesFromFile",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadEntriesFromFile",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Reads and parses a session file, skipping only an incomplete crash tail."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "findMostRecentSession",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindMostRecentSession",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Best-effort discovery of the most recently modified matching session file."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionListProgress",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionListProgress",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Progress callback type for session discovery."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionManager",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionManager",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Thread-safe append-only session tree with memory and durable JSONL modes."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "SessionCwdIssue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SessionCwdIssue",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Describes a stored session cwd that no longer exists."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "getMissingSessionCwdIssue",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetMissingSessionCwdIssue",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Reports a missing stored session cwd for a persisted session."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "formatMissingSessionCwdError",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatMissingSessionCwdError",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Renders the missing-cwd error text."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "formatMissingSessionCwdPrompt",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatMissingSessionCwdPrompt",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Renders the missing-cwd prompt text."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "MissingSessionCwdError",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "MissingSessionCwdError",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Error type wrapping SessionCwdIssue."
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "assertSessionCwdExists",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AssertSessionCwdExists",
+    "goFile": "packages/coding-agent/session_manager.go",
+    "reason": "Returns a MissingSessionCwdError when the stored cwd is gone."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_PREFIX",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionSummaryPrefix",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Literal opening wrapper for a rendered compaction summary; re-exported from the accepted harness messages port."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_SUFFIX",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionSummarySuffix",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Literal closing wrapper for a rendered compaction summary; re-exported from the harness messages port."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BRANCH_SUMMARY_PREFIX",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummaryPrefix",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Literal opening wrapper for a branch summary; re-exported from the harness messages port."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BRANCH_SUMMARY_SUFFIX",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummarySuffix",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Literal closing wrapper for a branch summary; re-exported from the harness messages port."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BashExecutionMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecutionMessage",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Alias of the accepted harness BashExecutionMessage type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "CustomMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CustomMessage",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Alias of the accepted harness CustomMessage type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BranchSummaryMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummaryMessage",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Alias of the accepted harness BranchSummaryMessage type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "CompactionSummaryMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionSummaryMessage",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Alias of the accepted harness CompactionSummaryMessage type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "bashExecutionToText",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BashExecutionToText",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Forwards to the accepted harness rendering of bash output."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createBranchSummaryMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateBranchSummaryMessage",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Go adaptation: forwards to the harness constructor with an explicit MessageTimestamp."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createCompactionSummaryMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateCompactionSummaryMessage",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Go adaptation: forwards to the harness constructor with an explicit MessageTimestamp."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createCustomMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateCustomMessage",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Go adaptation: forwards to the harness constructor using aitypes.UserContent and json.RawMessage details."
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "convertToLlm",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ConvertToLlm",
+    "goFile": "packages/coding-agent/messages.go",
+    "reason": "Forwards to the accepted harness transcript-to-provider conversion."
+  }
+]

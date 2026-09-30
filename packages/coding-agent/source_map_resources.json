@@ -1,0 +1,378 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceCollision",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceCollision",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Collision metadata for duplicate resource names; resourceType is a string so skills and prompts share one owner."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceDiagnostic",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceDiagnostic",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Warning/collision diagnostic carrying optional path, code and collision details; source diagnostics.ts re-export collapsed into one type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceExtensionPaths",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceExtensionPaths",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Additional skill/template paths with provenance; theme paths are excluded with the TUI increment."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceLoaderReloadOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceLoaderReloadOptions",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Reload hook for host-resolved project trust; the extension-bootstrap callback is replaced by a headless trust context."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceLoader",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResourceLoader",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Headless loader interface: skills, prompts, agents files, system prompt and reload. JS-host extension/theme methods are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "loadProjectContextFiles",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadProjectContextFiles",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "AGENTS.md/CLAUDE.md ancestor discovery with same-directory override precedence; git-worktree shadow dedup omitted and documented."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "DefaultResourceLoaderOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultResourceLoaderOptions",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Explicit Cwd/AgentDir plus injectable skill/prompt/agents overrides; npm/Git extension and theme inputs are out of scope."
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "DefaultResourceLoader",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultResourceLoader",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Stateless-per-reload loader over explicit paths; package manager, extensions, themes and remote services are excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "SkillFrontmatter",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SkillFrontmatter",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Parsed skill frontmatter with a catch-all Extra map so unknown YAML keys survive."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "Skill",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Skill",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Discovered skill (frozen Name/Description/File/Body) plus BaseDir, DisableModelInvocation and SourceInfo; body is data, never executed."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkillsResult",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Skills plus diagnostics, matching the source loader return value."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsFromDirOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkillsFromDirOptions",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Directory plus source identifier for single-root discovery."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "loadSkillsFromDir",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkillsFromDir",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Recursive SKILL.md/root-markdown discovery with ignore files and symlink-loop protection."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "formatSkillsForPrompt",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatSkillsForPrompt",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Agent Skills XML block; disable-model-invocation skills are excluded and all fields XML-escaped."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkillsOptions",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Cwd/AgentDir/default toggles plus explicit skill paths."
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "loadSkills",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadSkills",
+    "goFile": "packages/coding-agent/skills.go",
+    "reason": "Aggregates defaults and explicit paths; real-path dedup plus first-wins collision diagnostics. Project paths are ordered before user so project wins."
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "PromptTemplate",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PromptTemplate",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Loaded template (frozen Name/Description/File/Body) plus ArgumentHint and SourceInfo."
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "parseCommandArgs",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ParseCommandArgs",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Shell-style quoted argument parsing; uses unicode whitespace to match the source regex."
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "substituteArgs",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SubstituteArgs",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Single non-recursive pass over $N, $@, $ARGUMENTS, ${N:-default}, ${@:N} and ${@:N:L}; the harness SubstituteArgs lacks defaults so the source regex is ported directly."
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "LoadPromptTemplatesOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadPromptTemplatesOptions",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Cwd/AgentDir/default toggles plus explicit prompt paths."
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "LoadPromptTemplatesResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadPromptTemplatesResult",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Templates plus diagnostics."
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "loadPromptTemplates",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "LoadPromptTemplates",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Directory/file discovery with project-before-user defaults, missing-path diagnostics and first-wins duplicate-name collisions (source only reported them in DefaultResourceLoader)."
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "expandPromptTemplate",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ExpandPromptTemplate",
+    "goFile": "packages/coding-agent/prompt_templates.go",
+    "reason": "Expands a /name command against loaded templates, passing the text through unchanged otherwise."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "BuildSystemPromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSystemPromptOptions",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Section-builder options; ContextFile/Skill use the SDK owners. Host docs-section inputs are omitted as TUI-only."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "NormalizedBuildSystemPromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NormalizedBuildSystemPromptOptions",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Collection-complete copy of the options with non-nil slices and maps."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "SystemPromptSections",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SystemPromptSections",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Ordered prompt section map; untagged preamble plus tagged sections."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "normalizeBuildSystemPromptOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "NormalizeBuildSystemPromptOptions",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Normalizes option collections without mutating the caller."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPromptSections",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSystemPromptSections",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Builds preamble/addendum/project_context/skills/cwd sections; the Pi docs pointer and interactive default prompt are replaced by a short SDK preamble."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPromptState",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSystemPromptState",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Forced prompts are opaque content with no sections; otherwise sections carry the prompt."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPrompt",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BuildSystemPrompt",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Renders the transcript-visible prompt from ordered sections."
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "diffSystemPromptSections",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DiffSystemPromptSections",
+    "goFile": "packages/coding-agent/system_prompt.go",
+    "reason": "Section patch for transcript updates; nil entries remove a section."
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceScope",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SourceScope",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "user/project/temporary provenance scope."
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceOrigin",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SourceOrigin",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "package/top-level provenance origin."
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SourceInfo",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Origin metadata attached to discovered skills and templates."
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "createSourceInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateSourceInfo",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Builds SourceInfo from caller path metadata; package-manager metadata is replaced by the SDK PathMetadata type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "createSyntheticSourceInfo",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateSyntheticSourceInfo",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Builds SourceInfo for discovered resources with temporary/top-level defaults."
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "AppMode",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "AppMode",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Host application mode enumeration retained for parity; interactive selection is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "ResolveProjectTrustedOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveProjectTrustedOptions",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Headless trust resolution inputs: store, override, default policy and HasUI. Extension project_trust events are out of scope."
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "resolveProjectTrusted",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ResolveProjectTrusted",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Override, store, then default policy; with no UI the ask policy denies. The interactive select prompt is excluded."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustDecision",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustDecision",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Stored boolean/null trust decision as a nil-able *bool."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustStoreEntry",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustStoreEntry",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "A stored decision plus the normalized directory it applies to."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustUpdate",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustUpdate",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Pending trust store mutation; a nil decision deletes the entry."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustOption",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustOption",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Selectable trust option with its updates and saved path."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "getProjectTrustParentPath",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetProjectTrustParentPath",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Parent directory for the trust-parent option; returns false at the filesystem root."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "getProjectTrustOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetProjectTrustOptions",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Trust/trust-parent/session-only/deny choices for a directory."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "hasTrustRequiringProjectResources",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "HasTrustRequiringProjectResources",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "Detects trust-requiring project config and .agents/skills, excluding the user-global directory."
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustStore",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ProjectTrustStore",
+    "goFile": "packages/coding-agent/resource_loader.go",
+    "reason": "JSON-backed trust store keyed by normalized path with in-process locking; proper-lockfile cross-process locking is documented as omitted."
+  }
+]

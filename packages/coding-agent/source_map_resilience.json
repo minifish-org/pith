@@ -1,0 +1,346 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "takeOverStdout",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "TakeOverStdout",
+    "goFile": "packages/coding-agent/continuation.go",
+    "reason": "Headless adaptation: redirects os.Stdout to os.Stderr and remembers the raw descriptor. The TUI takeover target is replaced by the plain Go os.Stdout variable."
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "restoreStdout",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "RestoreStdout",
+    "goFile": "packages/coding-agent/continuation.go",
+    "reason": "Headless adaptation of the stdout restore; idempotent and safe when no takeover happened."
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "isStdoutTakenOver",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "IsStdoutTakenOver",
+    "goFile": "packages/coding-agent/continuation.go",
+    "reason": "Reports whether TakeOverStdout redirected stdout."
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "writeRawStdout",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WriteRawStdout",
+    "goFile": "packages/coding-agent/continuation.go",
+    "reason": "Serializes ordered raw writes to the saved stdout descriptor. The upstream promise tail is a Go channel chain."
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "waitForRawStdoutBackpressure",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "WaitForRawStdoutBackpressure",
+    "goFile": "packages/coding-agent/continuation.go",
+    "reason": "Waits until all enqueued raw writes complete; the Node promise-tail loop becomes a mutex-guarded channel chain."
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "flushRawStdout",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FlushRawStdout",
+    "goFile": "packages/coding-agent/continuation.go",
+    "reason": "Waits for backpressure then syncs the raw descriptor; no Node process exit is performed."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummaryResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go struct port of the branch summary result, including the aborted/error fields."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchSummaryDetails",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go struct port of the file-operation details stored on branch summary entries."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "FileOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileOperations",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Alias of the accepted harness file-operation accumulator; one owner for the shared type."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchPreparation",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "BranchPreparation",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go struct port of the prepared branch content used for summarization."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "CollectEntriesResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CollectEntriesResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go struct port carrying the collected SessionEntry list and common ancestor id."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "GenerateBranchSummaryOptions",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateBranchSummaryOptions",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go adaptation of the branch summary options; TUI retry callbacks are dropped and the context.Context carries cancellation."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "collectEntriesForBranchSummary",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CollectEntriesForBranchSummary",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Walks the SessionManager branch paths and returns the abandoned entries in chronological order."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "prepareBranchEntries",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PrepareBranchEntries",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Selects branch messages up to the token budget and extracts their file operations."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "generateBranchSummary",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateBranchSummary",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Builds the branch summary prompt and reuses the shared summarization request boundary."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionDetails",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionDetails",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Alias of the accepted harness compaction details, which carry the read/modified file lists."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go struct port of the compaction result; FirstKeptEntryID is a Go string and Usage is a pointer."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionSettings",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionPolicy",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Adaptation: the settings-manager CompactionSettings already owns the JSON shape with per-model overrides, so the compactor thresholds are exposed as CompactionPolicy with the same enabled/reserve/keep fields."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "DEFAULT_COMPACTION_SETTINGS",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "DefaultCompactionPolicy",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go default values reusing the accepted harness defaults."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "calculateContextTokens",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CalculateContextTokens",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness token calculator."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "getLastAssistantUsage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetLastAssistantUsage",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port that scans coding-agent SessionEntry context messages for the last valid assistant usage."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "ContextUsageEstimate",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ContextUsageEstimate",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Alias of the accepted harness estimate struct."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateContextTokens",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EstimateContextTokens",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness context estimate."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateProjectedContextTokens",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EstimateProjectedContextTokens",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port that falls back to a pure message estimate when a context edit or compaction invalidated prior usage."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "shouldCompact",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ShouldCompact",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port using the CompactionPolicy thresholds."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateTokens",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "EstimateTokens",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness message token estimator."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "findTurnStartIndex",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindTurnStartIndex",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port over coding-agent SessionEntry values."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CutPointResult",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CutPointResult",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Alias of the accepted harness cut-point result."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "findCutPoint",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FindCutPoint",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port over coding-agent SessionEntry values; never cuts at a tool result."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "getSummarizationFailure",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GetSummarizationFailure",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port that rejects error and length stops so a partial summary is never persisted."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "completeSummarization",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompleteSummarization",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port of the shared summarization choke point using a caller StreamFn and context cancellation."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "generateSummary",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateSummary",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port that builds the summarization prompt and returns only the summary text."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "generateSummaryWithUsage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "GenerateSummaryWithUsage",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port that also returns the provider usage from the summary request."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionPreparation",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CompactionPreparation",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go struct port over coding-agent SessionEntry messages rather than provider projections."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "prepareCompaction",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "PrepareCompaction",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port that selects the cut point and extracts file operations from the SessionEntry context."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "compact",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "Compact",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Go port that summarizes prepared messages and returns a checkpoint result; persistence stays with the caller."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "FileOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FileOperations",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Alias of the accepted harness file-operation accumulator shared with branch summarization."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "createFileOps",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "CreateFileOps",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness file-operation constructor."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "extractFileOpsFromMessage",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ExtractFileOpsFromMessage",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness tool-call file-operation extractor."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "computeFileLists",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "ComputeFileLists",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness read/modified file list computation."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "formatFileOperations",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "FormatFileOperations",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness file-operation formatter."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "serializeConversation",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SerializeConversation",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Forwards to the accepted harness transcript serializer."
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "SUMMARIZATION_SYSTEM_PROMPT",
+    "goPackage": "packages/coding-agent",
+    "goSymbol": "SummarizationSystemPrompt",
+    "goFile": "packages/coding-agent/compaction.go",
+    "reason": "Const alias of the accepted harness system prompt."
+  }
+]
