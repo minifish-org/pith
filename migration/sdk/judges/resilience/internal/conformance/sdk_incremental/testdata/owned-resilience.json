@@ -1,0 +1,174 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "takeOverStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "restoreStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "isStdoutTakenOver"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "writeRawStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "waitForRawStdoutBackpressure"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "flushRawStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "FileOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchPreparation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "CollectEntriesResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "GenerateBranchSummaryOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "collectEntriesForBranchSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "prepareBranchEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "generateBranchSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "DEFAULT_COMPACTION_SETTINGS"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "calculateContextTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "getLastAssistantUsage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "ContextUsageEstimate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateContextTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateProjectedContextTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "shouldCompact"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "findTurnStartIndex"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CutPointResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "findCutPoint"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "getSummarizationFailure"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "completeSummarization"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "generateSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "generateSummaryWithUsage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionPreparation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "prepareCompaction"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "compact"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "FileOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "createFileOps"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "extractFileOpsFromMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "computeFileLists"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "formatFileOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "serializeConversation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "SUMMARIZATION_SYSTEM_PROMPT"
+  }
+]

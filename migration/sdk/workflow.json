@@ -1,0 +1,2889 @@
+{
+  "version": 2,
+  "project": "../..",
+  "runs": ".portsmith/sdk/runs",
+  "journal": ".portsmith/sdk/modules.json",
+  "baseline": {
+    "commit": "f11b605c89ce3b9eefcd347786cd1a4e0abbb3dd",
+    "files": [
+      {
+        "name": "cmd/pith-ai/ai_surface_test.go",
+        "sha256": "761e96d509078a7a4350e6a4b0d48cd01d60c56b53a475fff93af871b20a5c61"
+      },
+      {
+        "name": "cmd/pith-ai/main.go",
+        "sha256": "d10dd1a958a2ed6b183e56f264efaf748271f751a96b378a931f7895890ef04a"
+      },
+      {
+        "name": "cmd/pith/main.go",
+        "sha256": "d0ec2cbbbf9056958580808e81e620525f06ab8ab4495bb8f0d57487a381bbae"
+      },
+      {
+        "name": "cmd/pith/main_test.go",
+        "sha256": "5e8104e3c9891a85395509137d4a6143d633fc62624ba12c4a7d1199376cfbcb"
+      },
+      {
+        "name": "cmd/pith/tools_delivery_test.go",
+        "sha256": "55549ebc1bc978af0abeda916c4f9bfa12dd62dd9eac619a4e7f9d08dc6e0613"
+      },
+      {
+        "name": "packages/agent/agent.go",
+        "sha256": "8f0902db23eca51c9c0e09aba04df02d15fa1c1f97452f3a990c8c31015351a2"
+      },
+      {
+        "name": "packages/agent/agent_loop.go",
+        "sha256": "89b341a704761dbf83348d37e276e18295efc4b003c51683d81aac94181aefe9"
+      },
+      {
+        "name": "packages/agent/core_loop_test.go",
+        "sha256": "01e2453e1eb396fc9115dd58f94d2c4ec4ef31945238e9ca6f9d31441fc47eaa"
+      },
+      {
+        "name": "packages/agent/harness/agent_harness.go",
+        "sha256": "8892fdf9289b1e6ebe06c4fe01e1863f6e764cb7661055a72972a07f720a3857"
+      },
+      {
+        "name": "packages/agent/harness/compaction/branch_summarization.go",
+        "sha256": "c4ca74a3e082e7199bee8c44244c7bc683b3043ef87378315d7ab02422cdda91"
+      },
+      {
+        "name": "packages/agent/harness/compaction/compaction.go",
+        "sha256": "9e04142b0d911eefb721ffce94d1113a834447ed9292e57b0751312d78b527b5"
+      },
+      {
+        "name": "packages/agent/harness/compaction/core_compaction_test.go",
+        "sha256": "6f5e022c3e7abfac69359877b8bc40799d4561ff3d2098594345bd3b80727a17"
+      },
+      {
+        "name": "packages/agent/harness/compaction/utils.go",
+        "sha256": "73029f6d69e6e4d2a6e2d102c20b2bd95e798085c93f160e2f55c32d4be11429"
+      },
+      {
+        "name": "packages/agent/harness/config/config.go",
+        "sha256": "2bea152b06b09daf658eb55cba47665088158300f710ae6516840b9b2ee5c1e6"
+      },
+      {
+        "name": "packages/agent/harness/config/core_resources_test.go",
+        "sha256": "35b68979b261e8d8d8946aea926e462c3e1190cad15357cd83339c9094b874fd"
+      },
+      {
+        "name": "packages/agent/harness/context/context.go",
+        "sha256": "80d1e1027fde02a5122dbc23aa4b5fda35289dc2d160bebf3cce8bfec73585a9"
+      },
+      {
+        "name": "packages/agent/harness/context/core_contracts_test.go",
+        "sha256": "2f2a7863cf134a9bab847b6d5db3787bb7c4b539d83c649925cf39cf88550d9b"
+      },
+      {
+        "name": "packages/agent/harness/core_harness_test.go",
+        "sha256": "0127618ec79e918041c9e0d24e7e1ea1c87dc7d5afbabe6bfaeefdc0d2dfe1b6"
+      },
+      {
+        "name": "packages/agent/harness/env/local.go",
+        "sha256": "b2a6965c8330413491dfe978ae06eeb1387e3aec141211743d6f4251c55826f7"
+      },
+      {
+        "name": "packages/agent/harness/env/process_unix.go",
+        "sha256": "9325a37c3074fab7940159ae79a0dc461e3e1551642579982394fbc7fc5c711c"
+      },
+      {
+        "name": "packages/agent/harness/env/process_windows.go",
+        "sha256": "40ddc64aa986c0e56865b1c1d9a606f01bc573b5192f6d8774591a7b9b6f905c"
+      },
+      {
+        "name": "packages/agent/harness/env/tools_env_test.go",
+        "sha256": "cd9a7934aca403525910ef246e611221e3ad8c75b9fa6012cc82d4a9990f5050"
+      },
+      {
+        "name": "packages/agent/harness/events/core_resources_test.go",
+        "sha256": "07ab09359436f7c4a97d8992bfc7e33901f479d5b1c002875a71fe25fe7fda47"
+      },
+      {
+        "name": "packages/agent/harness/events/events.go",
+        "sha256": "5ef5ac38ff84e2337440dae209360c88c57b58c5fd4f547cd5850031f7806c59"
+      },
+      {
+        "name": "packages/agent/harness/execution/assistant.go",
+        "sha256": "a0861e6c48fe1c16f09333a11a350b50fdeac4eb2f0398b21cf85faab9d9b605"
+      },
+      {
+        "name": "packages/agent/harness/execution/core_contracts_test.go",
+        "sha256": "df418d6e74296616df4251dd0c6d6fd9a4cfd301e458a47e0a99b78a0ae50fd4"
+      },
+      {
+        "name": "packages/agent/harness/execution/core_runtime_test.go",
+        "sha256": "15893eeed8f90a2f0e5e84cb280d5e25431644a0b7ecf4eb806ba5c13da78122"
+      },
+      {
+        "name": "packages/agent/harness/execution/effect_gate.go",
+        "sha256": "cac034f73cef1fcb9397856cc1642429ee76af8a584fdd6b3fda15e6a9df7cc1"
+      },
+      {
+        "name": "packages/agent/harness/execution/tools.go",
+        "sha256": "9dea5f32dcd4bef133db81e268445bd2424b34c80b88b70e65a2669f34d386fc"
+      },
+      {
+        "name": "packages/agent/harness/hooks/core_resources_test.go",
+        "sha256": "87e75a7b12d11f144a1d7ed0f317d94a528ca84a1f7dc5eadcc67ea3dfb32425"
+      },
+      {
+        "name": "packages/agent/harness/hooks/hooks.go",
+        "sha256": "98be09a545c2b191739a7b52cada32b473753edba2c13170b8618b805b9d43c0"
+      },
+      {
+        "name": "packages/agent/harness/messages/core_resources_test.go",
+        "sha256": "2ea56e7c46c4a371e281aa1f8cad5fcac0724600161d39237476575f9691ae68"
+      },
+      {
+        "name": "packages/agent/harness/messages/messages.go",
+        "sha256": "bcf759aecd159726c258f503bae799c6b1db901af9e28cd307848718bd2cd085"
+      },
+      {
+        "name": "packages/agent/harness/resources/core_resources_test.go",
+        "sha256": "f1b49b8d69f00471d8717ddca77d961a0d81feb4f20864394a5f2feb2256c26e"
+      },
+      {
+        "name": "packages/agent/harness/resources/prompt_templates.go",
+        "sha256": "f5caddd5aa5c00d37773865a5b7cd3e9cdb4a71a90f1accc0c78b1ffa61a134b"
+      },
+      {
+        "name": "packages/agent/harness/resources/skills.go",
+        "sha256": "8556d2d3e18680448108e2133292e2167eb1e5ad411d85ae7c0dc25b9d611f17"
+      },
+      {
+        "name": "packages/agent/harness/resources/system_prompt.go",
+        "sha256": "2576df8de9ee80e2cd86d241d0239f33257ab4aea47c3d6b8c30485b3cd4483d"
+      },
+      {
+        "name": "packages/agent/harness/result/core_contracts_test.go",
+        "sha256": "60d830ad338b32e950b6ace18adc2a4ba66cd78153c29548b12a63548ff104f2"
+      },
+      {
+        "name": "packages/agent/harness/result/result.go",
+        "sha256": "99a0c672e03e5c470d1d6176f6d5926d72b68e7b0a9b7344aad0a01c3bcb8672"
+      },
+      {
+        "name": "packages/agent/harness/runtime/core_runtime_test.go",
+        "sha256": "a0c3b4e13e5beaa604f5167aefed26061cbdd0d57e8b265be1bcd983460e13fe"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive.go",
+        "sha256": "eed1800f10952eb7cfbdd82f2645eef21ce0e79d2244cc09a76fa4ac617d6177"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_boundary.go",
+        "sha256": "ee23bba19a3ee17c17b54f7f851113a8306bbd82c0c59b129b3fec414283828a"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_checkpoint.go",
+        "sha256": "3e805326fcff7cca026c244abfeb1b54ec9aaf83dc152075aa02da702ee5a7e0"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_deferred.go",
+        "sha256": "9769c6214d9e9ea9ab824e780dfc0e7954ca1ffb1636d807b2d6fe5074d0f6ce"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_generation.go",
+        "sha256": "7d2c50e08882cf49a97788f71875241f65b3516cb7933a9cd249589077d70ab7"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_reconcile.go",
+        "sha256": "5fc08075609c87c2f724a9f545faad303ef30ead12c88b642d924e38e7665eac"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_recovery.go",
+        "sha256": "945f2ae941f31e856409710fe551a00a808568d7df11df05b422c3703c06f405"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_response.go",
+        "sha256": "6d56bc3e652ab6ed4536f9fdb903a3c0a61d7139cd2e9fe40dee9bc38b285b4f"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_retry.go",
+        "sha256": "4e0c1d0883611a1e8178e11ad4864976a3eaba52f9def7b6c53bf08f4dfc43f0"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_structural.go",
+        "sha256": "65c31f369afbe89eb0dd4018dd8147b679e899f6813c7bb168c14fc11d773eef"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_terminal.go",
+        "sha256": "618e30141794a48e819ad218330931a2527d49df875d536e2c70d1f7c7333679"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_tool_placement.go",
+        "sha256": "3fa7d08b600016508c71a5090641d79423e8a2aed8a5bd1125510c65f80d8c3f"
+      },
+      {
+        "name": "packages/agent/harness/runtime/drive_tools.go",
+        "sha256": "06131356f2459536342b66e671afffa8ae899b87a638291204ea4fd0d6a37d1f"
+      },
+      {
+        "name": "packages/agent/harness/runtime/harness.go",
+        "sha256": "a4c95d63e55899072ca73967c7ff02ee87301adac50cef7edbc27259d2671141"
+      },
+      {
+        "name": "packages/agent/harness/runtime/index.go",
+        "sha256": "2fe067812a27b26b52269acb7e79606ff288b1fd2e90b1f4752d73d478a399ab"
+      },
+      {
+        "name": "packages/agent/harness/runtime/lane.go",
+        "sha256": "58bc9aa945822b68d7fa4134d0fb38c9ee358e0a5c19149c039ded978c87f4f6"
+      },
+      {
+        "name": "packages/agent/harness/runtime/progress.go",
+        "sha256": "88fca4fa813dd0538741ea535fb7f1cce683803a517291cedb44538efbe7f698"
+      },
+      {
+        "name": "packages/agent/harness/runtime/reducer.go",
+        "sha256": "63be44fd97a23ec3119f345293076ef2403df75ebb0da225d004f78ce5804ccd"
+      },
+      {
+        "name": "packages/agent/harness/runtime/restore.go",
+        "sha256": "6bfc47a7b9942ab8db4a35a1b433c69f8bd318d38192b095dd8bbca30d124e67"
+      },
+      {
+        "name": "packages/agent/harness/runtime/transcript.go",
+        "sha256": "416ab83d2d1ee5ea918d0feb317ce7ccb79d2dd0923fd6e943fdc0fcb38a2913"
+      },
+      {
+        "name": "packages/agent/harness/session/commit.go",
+        "sha256": "a787f2ad5c8025f3b5103449f1c1d8615aa0578bf7c67fa300ffd1261a43ed67"
+      },
+      {
+        "name": "packages/agent/harness/session/context.go",
+        "sha256": "c7aed67b90a2698ac983d2329df8a24af9e78a3c50b75de4476823c2ac04b8e4"
+      },
+      {
+        "name": "packages/agent/harness/session/core_session_test.go",
+        "sha256": "cf7c9ae9657cb55f0e2f3bbc44314b33d8322c2002a6d3285378ecbdaeaafd0f"
+      },
+      {
+        "name": "packages/agent/harness/session/fork.go",
+        "sha256": "430702118decb64b0bb3d1824063352811d4a6d9ef2ab7bb2bfd0d6b2844568d"
+      },
+      {
+        "name": "packages/agent/harness/session/fork_policy.go",
+        "sha256": "572d0e6b90aa344001bcde0670dcf29542dde25d1a27badef102c3addd41add9"
+      },
+      {
+        "name": "packages/agent/harness/session/in_memory_storage_state.go",
+        "sha256": "16269f2b33de15f7a5178f4e9d70a62a85c5592c59e988f0660f3d67c3632e32"
+      },
+      {
+        "name": "packages/agent/harness/session/index.go",
+        "sha256": "40af0c550c934dbfc980374cf3a132b9a717f5f416dd53cff4ed5f289553ec25"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/codec.go",
+        "sha256": "60118e8272e2b25b1d49fa0d134ea6b520c17b5d4a763fb5dcc1a61304c5e70a"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/core_session_test.go",
+        "sha256": "a40b53208e9d3c6ee80dee3ed9999059e6a4327bb88f3f8f0941677e9274897a"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/fork.go",
+        "sha256": "2bf5fb7f4e23a2638973b2dd4444cef071a4d4bd985d07e58e02c146baf089fc"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/index.go",
+        "sha256": "1962b0d259cb17bdb013809bfb86b13f84a7d7a7b656a23b42c69272e91d599e"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/io.go",
+        "sha256": "1dd774db6637c1d0213a17135666239c880c78aadc2a1fb9b6c4ba30794523c6"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/legacy_v3.go",
+        "sha256": "415d430098c347ccabe12b6bd4d7996b053a45e43d60ad225752cbb1d985135d"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/repo.go",
+        "sha256": "6786842d906cfe0b2f23283e25f166b52dafc854557742367e27ac662cb318a9"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/storage.go",
+        "sha256": "0603aa708217e8bff09d3b5a22be17435f1b4b7109b23396f9d9625b2b3d9eef"
+      },
+      {
+        "name": "packages/agent/harness/session/jsonl/types.go",
+        "sha256": "25140cd6351af7ca89d06bc00e3d217652e12de0c0b29aafd2f39e5cae5f2fd3"
+      },
+      {
+        "name": "packages/agent/harness/session/memory.go",
+        "sha256": "2684a54d9aa2b70387033db476478113f4feb8f7a06af80d162f3d4594e3a8f7"
+      },
+      {
+        "name": "packages/agent/harness/session/mutation_line.go",
+        "sha256": "fff777378359c17961ad572b3eeaa946ac08957b16b2a2835c3bb3b236bf961e"
+      },
+      {
+        "name": "packages/agent/harness/session/session.go",
+        "sha256": "70729f73aee470e86c5dc4bb6986d10f9b3ee8c377541c998772973df1a0a680"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/conformance/core_session_test.go",
+        "sha256": "881bd82e8ac2e996357e4cbfedcf9a43e5a8eabc928288b80c5be698368e4cfd"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/conformance/session_repo.go",
+        "sha256": "04436956519354db7053df5355861a25acbf62b683966d14087d761c8b09e1f2"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/conformance/storage.go",
+        "sha256": "6e03941c5fb1415e4788ac374f59aa5783ce67a90c8cb6dbc431f9219f22208b"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/core_session_test.go",
+        "sha256": "6946aa86eba2ab902c08498f201af7959ed2da1997a323887c2fd51d106031e2"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/gating_storage.go",
+        "sha256": "58df6b1a5dc854a4b2e6f03cc4b2039fa3c473a8b0b890ac28681561ae472ab3"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/index.go",
+        "sha256": "d2658f1e83873a0cc4de5c3d535f15ba16a8bf3b9bc0fa091c64cb741711b7fd"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/instrumented_storage.go",
+        "sha256": "7985d17b6871773c8d50fbef7ba7b0bb387a1497e411d485ddf8cb0b7bf67b0b"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/storage_decorator.go",
+        "sha256": "ee1892c0125ef1a81b42736b00311368fbfe9d2b0d18213fb8997be64cad55ae"
+      },
+      {
+        "name": "packages/agent/harness/session/testing/types.go",
+        "sha256": "cd4df8bd380e8cba3a1c65180223355678548a12677a849498d7db13799e3631"
+      },
+      {
+        "name": "packages/agent/harness/session/values.go",
+        "sha256": "fc739305d8dfe038536d90b8e0f7c65d7cc92ab64704f4be2eb7eae7b2bf39b8"
+      },
+      {
+        "name": "packages/agent/harness/telemetry/core_resources_test.go",
+        "sha256": "e1b479a85c0d1c00eaf8144984652fd75d1ba973c86dcdd36f6880116ef50361"
+      },
+      {
+        "name": "packages/agent/harness/telemetry/telemetry.go",
+        "sha256": "981b3fdf45a0f66ee5cc2161050048a6746a7cc5d2af26fa7fe6c34dff1b71b0"
+      },
+      {
+        "name": "packages/agent/harness/tools/bash.go",
+        "sha256": "8e0033d58d67cb42cf6ec6f68f4cbb21d43076f46dcfad9dc0c92e4cce12ffe0"
+      },
+      {
+        "name": "packages/agent/harness/tools/edit.go",
+        "sha256": "74ab74f5ead04802945c438eeefb63626656e481911bf6521b1fb5e3a98c38d9"
+      },
+      {
+        "name": "packages/agent/harness/tools/edit_diff.go",
+        "sha256": "06e14c67363adde3c46ae5417550eacf0b870ab3b1d7893ab9f44b1c65c70213"
+      },
+      {
+        "name": "packages/agent/harness/tools/file_mutation_queue.go",
+        "sha256": "1a6667d33266489cc8875239452f30fd1c611ad76558438794666c753d12ac86"
+      },
+      {
+        "name": "packages/agent/harness/tools/image.go",
+        "sha256": "c9513cf8debe6c3a37222752f72c871899a876a26608b7673c4747cd78177577"
+      },
+      {
+        "name": "packages/agent/harness/tools/index.go",
+        "sha256": "c87ae4d6740c0d50c3b0d739b7ff487aa7cb43d8009a8f7d55169cd397c79312"
+      },
+      {
+        "name": "packages/agent/harness/tools/path_utils.go",
+        "sha256": "f8a1c1f6463c3affdb38eee5d9b334c0cee9ad6c8050f20f8aca70f8cc09dcc5"
+      },
+      {
+        "name": "packages/agent/harness/tools/read.go",
+        "sha256": "1590907d74256af3191a7875e5ee224eb7ee5445b39156d221c24a35f458e3ed"
+      },
+      {
+        "name": "packages/agent/harness/tools/tool_context.go",
+        "sha256": "a3f14028cf904d8101bf5cb07fb66d572d64ccf6e4077ffc19043259de65559d"
+      },
+      {
+        "name": "packages/agent/harness/tools/tools_bash_test.go",
+        "sha256": "44eeadd92d516a9d0044fda79e6acfa6dbc2168dfd68ddce9ff450b25f6f2f02"
+      },
+      {
+        "name": "packages/agent/harness/tools/tools_delivery_test.go",
+        "sha256": "a7dcfd05a7da89e80454f3f4bae13729325af9d17a44ad21160ae7e70875d5ad"
+      },
+      {
+        "name": "packages/agent/harness/tools/tools_edit_test.go",
+        "sha256": "071db5a0b9038772822b780eda35e81690408edd26c54089a1c5beefb77900cd"
+      },
+      {
+        "name": "packages/agent/harness/tools/tools_env_test.go",
+        "sha256": "a4087e3618e4ab86450f15c4d7208853201818eb9a4a4a2ac47388a03a50d59c"
+      },
+      {
+        "name": "packages/agent/harness/tools/tools_read_test.go",
+        "sha256": "a8ea91526e3906c71024c3377b06cbf7a4f77dadc7b70468837477089f9070e2"
+      },
+      {
+        "name": "packages/agent/harness/tools/tools_write_test.go",
+        "sha256": "9347dbeaee817fa959ecf023efe8f5d0316ace30f6f84b0abe61936b437483da"
+      },
+      {
+        "name": "packages/agent/harness/tools/write.go",
+        "sha256": "16ae1af9d8f90084afb27ce082bd5c97b573debc2ac4f3545766d428496e2b96"
+      },
+      {
+        "name": "packages/agent/harness/types/core_contracts_test.go",
+        "sha256": "9b1bfaff2376e05843dd9160a4aeef4abc39d3bf8257d0e322d885415a80367b"
+      },
+      {
+        "name": "packages/agent/harness/types/runtime.go",
+        "sha256": "a1e2ac190e8f6dc5e1dc68b3176755289ce7d8b8e1ecd7b0f86f9e2b5ba55d10"
+      },
+      {
+        "name": "packages/agent/harness/types/session.go",
+        "sha256": "80f5e7dd06b349865ed14fe3f015e5d260d623227953824ecff60daa90823c9a"
+      },
+      {
+        "name": "packages/agent/harness/types/types.go",
+        "sha256": "c7f9356e131d374fddccbd31704b58360a2bf87a70b304ddb9ba6c40224bd87e"
+      },
+      {
+        "name": "packages/agent/harness/utils/adaptive_publisher/adaptive_publisher.go",
+        "sha256": "bda08a808f8e0c48dd3becc65aedf1b4c276e11fbb7ed9365de0540ffdd77dd5"
+      },
+      {
+        "name": "packages/agent/harness/utils/adaptive_publisher/tools_env_test.go",
+        "sha256": "a8f04551c1c04ca5218ed982d8d3296d957f12855d09c1377b39b1c175d718e7"
+      },
+      {
+        "name": "packages/agent/harness/utils/output_capture/output_capture.go",
+        "sha256": "441085135eb1dde17a2bd73bd256188aa96e287af4920c1d1713ad9e6ed6e4e0"
+      },
+      {
+        "name": "packages/agent/harness/utils/output_capture/tools_env_test.go",
+        "sha256": "6f20cfb236be9ea21054678e0d5c6f403683cfbec796299c85ee0a61524555fa"
+      },
+      {
+        "name": "packages/agent/harness/utils/shell_output/shell_output.go",
+        "sha256": "1ab5e654d0dba52d91fa4a00e9f0dd75d04ae19bd2e833042dcaba9c946dd8d9"
+      },
+      {
+        "name": "packages/agent/harness/utils/shell_output/tools_env_test.go",
+        "sha256": "e6a9db51f4b091b02636dfb5d0f88696933a5b699629486337b02948fb61b64b"
+      },
+      {
+        "name": "packages/agent/harness/utils/truncate/core_contracts_test.go",
+        "sha256": "e9b891f9d389531370d342699d3a1e904be0676674078bb7498fffb31cc5aabf"
+      },
+      {
+        "name": "packages/agent/harness/utils/truncate/truncate.go",
+        "sha256": "2e7c0d5bcadce0d3ad6e4579c359ee90273f0aeec1b4a0144bc3b0f028805df7"
+      },
+      {
+        "name": "packages/agent/harness/utils/usage/core_resources_test.go",
+        "sha256": "cf87a70978e25c8f8140c7364d4b561704854bd396c76a26629fc7c3d35afdcb"
+      },
+      {
+        "name": "packages/agent/harness/utils/usage/usage.go",
+        "sha256": "95ad625d24d5984103f1ac1da4f1a0d25221c34b0283cace179b957241d12a1b"
+      },
+      {
+        "name": "packages/agent/proxy.go",
+        "sha256": "6248b420d60b3ecbd758ddbbcd10dd3d9f0a5953ba152acb1bb98fe112f64f32"
+      },
+      {
+        "name": "packages/agent/sdk/exports.go",
+        "sha256": "d8399922a682b8de70678bfd99b03cadacab5515eef6fa7b81456ff055862835"
+      },
+      {
+        "name": "packages/agent/sdk/local.go",
+        "sha256": "78a3929f7960fd7c26220e76258a71cc0e20c7c99d36e2ad16a373cd28c8e03f"
+      },
+      {
+        "name": "packages/agent/sdk/tools_delivery_test.go",
+        "sha256": "69085e2ad51c14f2cf820fb060b5d5ef1fd62b5be13a70abb9dc86b544d138c7"
+      },
+      {
+        "name": "packages/agent/search/core_resources_test.go",
+        "sha256": "11435d97381c91ce4383f836102056f664f80b1a5df8eab9dbdc99ec6642edd8"
+      },
+      {
+        "name": "packages/agent/search/index.go",
+        "sha256": "ec1340add2bdf52ba07e6e98023404c778076128b38c45d0e228e4997bf29bf2"
+      },
+      {
+        "name": "packages/agent/stream_fn.go",
+        "sha256": "6344675817b0967bcd945e5eceecd830f582299dfc82c5b22755aaf95be9debf"
+      },
+      {
+        "name": "packages/agent/types/core_contracts_test.go",
+        "sha256": "4f11b531c4ba204dd34c7951427ffaf7a867cc7fdc045bbca52d9d4162e1f41b"
+      },
+      {
+        "name": "packages/agent/types/types.go",
+        "sha256": "cddc540265cfcb3c3c35f1efa0142b4fa88bc63f2d498e4f31406a677b6860d7"
+      },
+      {
+        "name": "packages/ai/ai_auth_test.go",
+        "sha256": "de49d57d103048d83c5d1996e0f9b003402a78a8b1c9bd9fcacc0055b11dbec1"
+      },
+      {
+        "name": "packages/ai/ai_models_test.go",
+        "sha256": "7f7656be914034d818834909b68f2f631ab6940b84e15b7b3382ce29d8916626"
+      },
+      {
+        "name": "packages/ai/ai_surface_test.go",
+        "sha256": "90c0ef760d03dd8327e0d7a04a2080114f37a22fe65f5670228bcedb5152455f"
+      },
+      {
+        "name": "packages/ai/api/ai_anthropic_test.go",
+        "sha256": "462206166d2fdcddeb399f1e478f3d484d5f8e9ae5bb17d9744dc173119af94f"
+      },
+      {
+        "name": "packages/ai/api/ai_bedrock_test.go",
+        "sha256": "03661299bcf2c78ae4831a1d8a566cedee01927a9793140790ae5c2299a3e12a"
+      },
+      {
+        "name": "packages/ai/api/ai_google_test.go",
+        "sha256": "1e6bcb5d1c127f6743f69eb9fd64cc3b370bc6174b31fd58d826713393199eb5"
+      },
+      {
+        "name": "packages/ai/api/ai_openai_test.go",
+        "sha256": "5f2fbf443fcb5c55d4b61d0010212067e63e00b299744bce397e6e29560e1e02"
+      },
+      {
+        "name": "packages/ai/api/ai_other_protocols_test.go",
+        "sha256": "1cbe78cbbe8d042356c5ace5ba77dd69f1b86b0cf6401032d1e574f6b248deec"
+      },
+      {
+        "name": "packages/ai/api/ai_utils_test.go",
+        "sha256": "6a11fef5e41c885e8cd5a8b1cf90d8928bdacb48a9249e9fa5ad6ab98259be56"
+      },
+      {
+        "name": "packages/ai/api/anthropic_messages.go",
+        "sha256": "af5740eaa41aa4ea3fe9380d5e3d8268866446e2f17dfcd7ff1d6643e66c3c3a"
+      },
+      {
+        "name": "packages/ai/api/anthropic_messages_lazy.go",
+        "sha256": "9be2afc5c1b44606bb7808d9300b93a9de7cf8308a65f7d9b723c23f42b8ca76"
+      },
+      {
+        "name": "packages/ai/api/azure_openai_responses.go",
+        "sha256": "840b005364666d7d0983e4871f458eac71cfdf2a74d3fe78d7fe6b9271509392"
+      },
+      {
+        "name": "packages/ai/api/azure_openai_responses_lazy.go",
+        "sha256": "04d7f7713a4fe7249190806bf7e7df5b3bcd4edd0b91b8512915baf04c8c3fef"
+      },
+      {
+        "name": "packages/ai/api/bedrock_converse_stream.go",
+        "sha256": "6fc82dacfe4650b653330ed053f14d48106dce2069205ab56b6cb85c905bcd14"
+      },
+      {
+        "name": "packages/ai/api/bedrock_converse_stream_lazy.go",
+        "sha256": "10d3e853266c9b3edf8aa56503895662c36b4c4ebc46ec836f0e300bd8c85622"
+      },
+      {
+        "name": "packages/ai/api/cloudflare.go",
+        "sha256": "bd085b522215b83635f9cc96a023dda2f5c0b91efdf793450fe3dee525b6201d"
+      },
+      {
+        "name": "packages/ai/api/cloudflare_ai_binding.go",
+        "sha256": "13c798e690d46e604ba9d4081fbdad617cd92ba5c759c702ef285dddd6fc3146"
+      },
+      {
+        "name": "packages/ai/api/constrained_sampling.go",
+        "sha256": "6816e2fbdeea4c2caa5cfea594bf95f965adfbb976767979436f0c98de5ccccf"
+      },
+      {
+        "name": "packages/ai/api/github_copilot_headers.go",
+        "sha256": "4fbc79671443a91042829168b75fc3fba6529a4f116699eb5e4194ca8859e751"
+      },
+      {
+        "name": "packages/ai/api/google_generative_ai.go",
+        "sha256": "ac815efeca5aaf7af8d899607029accce4434ca6abfc32686d4afbb83a75271d"
+      },
+      {
+        "name": "packages/ai/api/google_generative_ai_lazy.go",
+        "sha256": "ad97f2aed685596c0339ca760828e5e2125b9d57ca02e55ea1af08a3fc9aefcd"
+      },
+      {
+        "name": "packages/ai/api/google_shared.go",
+        "sha256": "5b4f15e9cdc250b63adbd8f463cd4718397dbddf3dbd255c91e9b1ea97ef9246"
+      },
+      {
+        "name": "packages/ai/api/google_vertex.go",
+        "sha256": "c68ef8e99db18fb7e29f16c833cbef8bfdcba688ffa2cf80b9c5a15494aa4480"
+      },
+      {
+        "name": "packages/ai/api/google_vertex_lazy.go",
+        "sha256": "9171a68d4c2fcaf004d0642929eb1cbcdb03a6cd8dee6106515761f487976fdb"
+      },
+      {
+        "name": "packages/ai/api/lazy.go",
+        "sha256": "46c561c183471890f62c9615f52018476a1b88b30b518f425189b8c79681dba7"
+      },
+      {
+        "name": "packages/ai/api/mistral_conversations.go",
+        "sha256": "67b2c9506524c85a7397e667397ee4fdc57b94c95f6c0d0c8c07ac783ebe9c33"
+      },
+      {
+        "name": "packages/ai/api/mistral_conversations_lazy.go",
+        "sha256": "8cf502900ce73543e0b0f78a66eda09104e65d2c1f679ca9f514edd39ee08416"
+      },
+      {
+        "name": "packages/ai/api/openai_codex_responses.go",
+        "sha256": "d85d300ce0363a008e00fc7b5b49545cbbd105b4218237e47540c2be19cb060a"
+      },
+      {
+        "name": "packages/ai/api/openai_codex_responses_lazy.go",
+        "sha256": "89deda47475bcd5fb1c75e52f3f79b831ef5ed4007e55decbf3fc21f22ac644c"
+      },
+      {
+        "name": "packages/ai/api/openai_completions.go",
+        "sha256": "8de6b2525a6c55c27a799e41eb72ae9845b80b1b1e049c34f67e9f0a4d60893f"
+      },
+      {
+        "name": "packages/ai/api/openai_completions_lazy.go",
+        "sha256": "6044f0d3be66f95bc3c27eb2013f9cc8361276708658311977c427b0ac178310"
+      },
+      {
+        "name": "packages/ai/api/openai_prompt_cache.go",
+        "sha256": "e6e39f2d48eed57bd51304634518b30d62dec0e28d9ef3ff0b18ac04341379c0"
+      },
+      {
+        "name": "packages/ai/api/openai_responses.go",
+        "sha256": "3c6c603dc6f6440a1a0880f2704ca481aee3f09c52a8c6858eea883553e9014e"
+      },
+      {
+        "name": "packages/ai/api/openai_responses_lazy.go",
+        "sha256": "dfc871dc14081659d504c6aa819c829c02bbe7740a903804bfc74e804110014f"
+      },
+      {
+        "name": "packages/ai/api/openai_responses_shared.go",
+        "sha256": "11354b6e13b3e1b34549923b2dd5d6d878638ff574e451ea01b3978ca7259774"
+      },
+      {
+        "name": "packages/ai/api/openrouter_images.go",
+        "sha256": "1258550dde0c71c0ef6a5d8231109e9f2091e36031b83a5dff83b8cd299de673"
+      },
+      {
+        "name": "packages/ai/api/openrouter_images_lazy.go",
+        "sha256": "ad3bf0ea01efaecde0b66f4d1cab26e3f1b15da8321856e2a8cba6ff65a5fc64"
+      },
+      {
+        "name": "packages/ai/api/pi_messages.go",
+        "sha256": "3185c7e7fedeeb70c447def8688a33f795dbf79e7e38e38f397abcc0a20f33cb"
+      },
+      {
+        "name": "packages/ai/api/pi_messages_lazy.go",
+        "sha256": "2f9b0ae77e14143f8cfb921cdc0a825af32874743d27cee88679ae0b70084166"
+      },
+      {
+        "name": "packages/ai/api/simple_options.go",
+        "sha256": "7ceec749194ee168c75264614440fbec868fd87b4b7f0a432090e630debd6fdb"
+      },
+      {
+        "name": "packages/ai/api/transform_messages.go",
+        "sha256": "e895127970ef990084f560c037a9467c4f16a9f5956c9d4753f87ee52c656c99"
+      },
+      {
+        "name": "packages/ai/auth/ai_auth_test.go",
+        "sha256": "eeae2dfa21877b634407a784f5012550e60fddf817256258620b365d00e76905"
+      },
+      {
+        "name": "packages/ai/auth/context.go",
+        "sha256": "fc2ad6e463afae4dd2ebd4220d1240ce314b702f2a0ada01f12875893cf2d27a"
+      },
+      {
+        "name": "packages/ai/auth/credential_store.go",
+        "sha256": "d5e3a37abf15c3bb9b6316bac5529fda27c967b114fd4a03320819737f7a8f7b"
+      },
+      {
+        "name": "packages/ai/auth/helpers.go",
+        "sha256": "619fe104596546c9b10c723b9ab3ef267d12aaffd0b660ad4fb33cc9ddae71dd"
+      },
+      {
+        "name": "packages/ai/auth/oauth/ai_auth_test.go",
+        "sha256": "ab7e208704ac8faf70ce9ce6042280d65bd98b545d8310d2bce6d1015e7cef05"
+      },
+      {
+        "name": "packages/ai/auth/oauth/anthropic.go",
+        "sha256": "a4e2acb8e70e576fe1b7eac50c7b2126ef9a047ee21520a591ad1928e3bf697c"
+      },
+      {
+        "name": "packages/ai/auth/oauth/device_code.go",
+        "sha256": "946dfb775ef1f3a79afd006876e1cfdef3dfe70866e5958dbd2b3a8fbc552b81"
+      },
+      {
+        "name": "packages/ai/auth/oauth/github_copilot.go",
+        "sha256": "00d97dc1aab5ca512234e4778fd26fed3fd33f2e6517de81735cb026633f3bf2"
+      },
+      {
+        "name": "packages/ai/auth/oauth/kimi_coding.go",
+        "sha256": "85f53d01c45a8070f1f22721081e6d61fcea08ea88f79c5c42201b83704930d2"
+      },
+      {
+        "name": "packages/ai/auth/oauth/load.go",
+        "sha256": "7448107a1d10aa8870ec91bf1d5329b83dd4bf4267e22a581c59a1cf5e0cd38d"
+      },
+      {
+        "name": "packages/ai/auth/oauth/meta.go",
+        "sha256": "81d985d98d464c43f2ab80b17bcdbad0f6a4d9ba62c61c3cb8260b94b0f32563"
+      },
+      {
+        "name": "packages/ai/auth/oauth/oauth_page.go",
+        "sha256": "b6102e9da906b3744fa0a9428768cbd4f6b9f984506ae956c745d4b34cec1522"
+      },
+      {
+        "name": "packages/ai/auth/oauth/openai_codex.go",
+        "sha256": "8ab5c30b0b193a38b80ae370c074ba98c76eb5c3f9f51c19b47fc68531cf6ce0"
+      },
+      {
+        "name": "packages/ai/auth/oauth/openrouter.go",
+        "sha256": "932be3ac7260dc58fc574a41fdd6261f813d0376ca207b4da8c5731cd15aa9e1"
+      },
+      {
+        "name": "packages/ai/auth/oauth/pkce.go",
+        "sha256": "036df3c93bc303388a70c743418f54f703d256ebe03d7c43ba2a6a36d3e06259"
+      },
+      {
+        "name": "packages/ai/auth/oauth/radius.go",
+        "sha256": "2edcdbcccd44c494d88bb4abc0f90e9a7218cb11d9f75ed59a6d115e67ea9aae"
+      },
+      {
+        "name": "packages/ai/auth/oauth/xai.go",
+        "sha256": "1a72a2e49a0a3f4d3f0bd6eefddf401b5ede16748bb0d70a2d42a93aa558f89b"
+      },
+      {
+        "name": "packages/ai/auth/resolve.go",
+        "sha256": "a10aec3f965e00f2671dfb9131f335e1dc48cb2a21d2e20b3f1f3bded5f58cbb"
+      },
+      {
+        "name": "packages/ai/auth/types/ai_auth_test.go",
+        "sha256": "a4dc6e3d32999ab228b16c52fe59a14e683874e7679e3a5d816fa859cf00bf59"
+      },
+      {
+        "name": "packages/ai/auth/types/ai_surface_test.go",
+        "sha256": "70201b30e7e956d84e5e6261e2a9ba0a992f15de664f8fde91305f717d6dd892"
+      },
+      {
+        "name": "packages/ai/auth/types/extension_oauth.go",
+        "sha256": "4867491900ce124e77e429937fd05b8eaad246c38acab2e29878155858da774c"
+      },
+      {
+        "name": "packages/ai/auth/types/types.go",
+        "sha256": "5a44da11c5b385810cd80165d24d42fe42426677d0669961121321b7143c891e"
+      },
+      {
+        "name": "packages/ai/catalog/ai_foundation_catalog_test.go",
+        "sha256": "2c9c1e0d7996628ab9b17f37cc8864a5b64c9e9766803dec63a6d8b906b7d96a"
+      },
+      {
+        "name": "packages/ai/catalog/amazon_bedrock_models.go",
+        "sha256": "516fbaa69b3c13da4b0856a18e09a9b184f8a316bc8976ac5c8f659f5d7aad46"
+      },
+      {
+        "name": "packages/ai/catalog/ant_ling_models.go",
+        "sha256": "9cfa1366a621135c7db0fe118b853ff3a6356f6dacbcdd4e028b56cbbcaa5333"
+      },
+      {
+        "name": "packages/ai/catalog/anthropic_models.go",
+        "sha256": "aae044fa214c5b1ff2bdee8a71dbc69b27f78ce662e663fa37ddacab336b9b5d"
+      },
+      {
+        "name": "packages/ai/catalog/azure_openai_responses_models.go",
+        "sha256": "ff32eb05327921562a368941f4354dfee680b977e101c89a57cc2760726824b6"
+      },
+      {
+        "name": "packages/ai/catalog/baseten_models.go",
+        "sha256": "79532ad010cacbc76dc7f6a45d71e5c82fabef28864860483825a079a4fe2f3f"
+      },
+      {
+        "name": "packages/ai/catalog/cerebras_models.go",
+        "sha256": "6002ea22449adcf014b3fb83e81fe49ba27afa5f6c8f0027e2b93e056254931c"
+      },
+      {
+        "name": "packages/ai/catalog/cloudflare_ai_gateway_models.go",
+        "sha256": "16cc4f808d7b8bc0d72a90ab6788add8b599dc3fc24d4b395c2e13cfc17a3ddd"
+      },
+      {
+        "name": "packages/ai/catalog/cloudflare_workers_ai_models.go",
+        "sha256": "acfa0e4eb17473b899f7803fb72a355c0bfec99563c98a79564cafe3a3b11d5a"
+      },
+      {
+        "name": "packages/ai/catalog/data/LICENSE.txt",
+        "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48"
+      },
+      {
+        "name": "packages/ai/catalog/data/amazon-bedrock.json",
+        "sha256": "348babe9936d0d8efa54e3afa60aecacdc7ad39a9ca11687eeff92121367980d"
+      },
+      {
+        "name": "packages/ai/catalog/data/ant-ling.json",
+        "sha256": "335137fb6dc428544ca56ab8fd52b300e7d0dcf97869fa10c1022669da8bfdeb"
+      },
+      {
+        "name": "packages/ai/catalog/data/anthropic.json",
+        "sha256": "474a010cd96c759d60419a6ba745747d9a87f172276dc85b7568da9d072b4e75"
+      },
+      {
+        "name": "packages/ai/catalog/data/azure-openai-responses.json",
+        "sha256": "c351c6af1882660ffa8a8598594b86671b45817106e45ac920535aaeac59fc96"
+      },
+      {
+        "name": "packages/ai/catalog/data/baseten.json",
+        "sha256": "60001c0aa6c7c9112b00c2ed6f646b58baed196782fe4db6028074e9ccedc5e5"
+      },
+      {
+        "name": "packages/ai/catalog/data/cerebras.json",
+        "sha256": "f180b9ca76bc103dede2c10827e859895742bcfda67f6205758c0bec6be391b4"
+      },
+      {
+        "name": "packages/ai/catalog/data/cloudflare-ai-gateway.json",
+        "sha256": "21ca8d9b740a752d6e70a8ca9f3cb75417ba3ff69ffc5b84440b2c1ff40d88cb"
+      },
+      {
+        "name": "packages/ai/catalog/data/cloudflare-workers-ai.json",
+        "sha256": "7b07349dedfc2f47fda77d3d525b0c0e5d236f8d5cd97a17399275091721afa3"
+      },
+      {
+        "name": "packages/ai/catalog/data/deepseek.json",
+        "sha256": "549a7ddbdcfd4c59272f1ea9c7d6d9a70bbbfccad3df3a75fb16d6918ac54d0d"
+      },
+      {
+        "name": "packages/ai/catalog/data/fireworks.json",
+        "sha256": "b6a6490129c66a845bcc76957138db9b25b0b2afa3e12c5d2c502ba2026c7509"
+      },
+      {
+        "name": "packages/ai/catalog/data/github-copilot.json",
+        "sha256": "bb59f8e4ffca00a8e6031baee78f4bc39d0e95b7647452a3605decb7c4cff30a"
+      },
+      {
+        "name": "packages/ai/catalog/data/google-vertex.json",
+        "sha256": "51867a5cdb223c5b9d21f8b54c17790aff024d9a4855edf4a9856d6e1a39d7c1"
+      },
+      {
+        "name": "packages/ai/catalog/data/google.json",
+        "sha256": "328822707e554d5977974d4b24695c2878aad48e5ca527c1efb0284141ff708c"
+      },
+      {
+        "name": "packages/ai/catalog/data/groq.json",
+        "sha256": "f1d03e0d6cdaef643f8d3a854d7caba784b2a820619a928c4711d08b6688de41"
+      },
+      {
+        "name": "packages/ai/catalog/data/huggingface.json",
+        "sha256": "2afa4769c606655cf6c36df332ad41a41ec43a19cf9bae4e337243b54f5c9349"
+      },
+      {
+        "name": "packages/ai/catalog/data/kimi-coding.json",
+        "sha256": "9884f065fe5a0e68e3538590c28019476077712f0542198eef6fdb53b8edd2ee"
+      },
+      {
+        "name": "packages/ai/catalog/data/manifest.json",
+        "sha256": "bc6d998b30c71798e9be22f7098406ed380a146b17d0aa78b9ad8203d47f6250"
+      },
+      {
+        "name": "packages/ai/catalog/data/meta.json",
+        "sha256": "1b650998c0f9b404246cde1d353105e6d825d8a7292d8f8c43e85dd3402dc130"
+      },
+      {
+        "name": "packages/ai/catalog/data/minimax-cn.json",
+        "sha256": "17c6d6a27514af90d6c519b7971d8c7e7624ceb12bc94a1384ceb3393c297e97"
+      },
+      {
+        "name": "packages/ai/catalog/data/minimax.json",
+        "sha256": "29c0078460251b3e0224b4c5c994c108a83c028a7ffcb1ff85bdc0cdb3bad988"
+      },
+      {
+        "name": "packages/ai/catalog/data/mistral.json",
+        "sha256": "df70e9066f39ffd93734895530653d642e9491bf66dd4b6ab1138f0cb400ae65"
+      },
+      {
+        "name": "packages/ai/catalog/data/moonshotai-cn.json",
+        "sha256": "6397ff35e9c3fc0928cbc3a4877c12a3bff615c7fa917a0fba4359c2767557e5"
+      },
+      {
+        "name": "packages/ai/catalog/data/moonshotai.json",
+        "sha256": "7259c6884e0f858de650ee39974a670d0381cf9f6f9f6d2e46b921413fcf1544"
+      },
+      {
+        "name": "packages/ai/catalog/data/nvidia.json",
+        "sha256": "79452d78d25b41c9b1f16d645c9a6839c4721c4a29dd287513db796ad9763c84"
+      },
+      {
+        "name": "packages/ai/catalog/data/openai-codex.json",
+        "sha256": "4bb30a26d1b40e1f67c9f24891fca0ce25b030bc4cbbb529be78608cd4466fdf"
+      },
+      {
+        "name": "packages/ai/catalog/data/openai.json",
+        "sha256": "3c52c8587e7e4a1829ed98ec6e0e3d7bbb2baf47e8618556ed1e95a9c0362835"
+      },
+      {
+        "name": "packages/ai/catalog/data/opencode-go.json",
+        "sha256": "d471bdb6a9f940fc732687d6749f92d2f3c7c9302ff39d2ce0af062f2472a4ad"
+      },
+      {
+        "name": "packages/ai/catalog/data/opencode.json",
+        "sha256": "7dff0aba3c0cde09af480fb2e64a01360723b10b3dd1a4b14727435565251a8a"
+      },
+      {
+        "name": "packages/ai/catalog/data/openrouter.json",
+        "sha256": "b591a790d1c1664c92e3eb80c8d174098ea6fff9dd6d88fcf4ee1b55dd53270d"
+      },
+      {
+        "name": "packages/ai/catalog/data/qwen-token-plan-cn.json",
+        "sha256": "1bb24ea68feaec83612940e7413bf953d1664a86a521c90750f4c93dd572d8ae"
+      },
+      {
+        "name": "packages/ai/catalog/data/qwen-token-plan-individual.json",
+        "sha256": "895804dbf586401e61c372e3edef8ee2530878e36a942e12fccf2469167921de"
+      },
+      {
+        "name": "packages/ai/catalog/data/qwen-token-plan.json",
+        "sha256": "b626dba49c60a28ac9e6a128fa3e5bde97b43c865c4314e64b9b2191eb8afefa"
+      },
+      {
+        "name": "packages/ai/catalog/data/radius.json",
+        "sha256": "016d54b9b6f2f839c700fe5b05523712d6cde7699c65bf9a3f29517f505dc6ee"
+      },
+      {
+        "name": "packages/ai/catalog/data/together.json",
+        "sha256": "f7871c75e427b196abf3a1b5d839d50903a0532ebe2b04903eb26b41c93305fb"
+      },
+      {
+        "name": "packages/ai/catalog/data/vercel-ai-gateway.json",
+        "sha256": "ca6038aabe7311632ac26e113cf4faede7e847db1163fd3aec534a91589fc926"
+      },
+      {
+        "name": "packages/ai/catalog/data/xai.json",
+        "sha256": "4798b621df20e84db3a48a629ef8054723ebcc8b24314064f6437eb05036405f"
+      },
+      {
+        "name": "packages/ai/catalog/data/xiaomi-token-plan-ams.json",
+        "sha256": "754a2b6fb127091f569eabbbc84c50862b319bf4ffad434fd0b2f86fd36007f5"
+      },
+      {
+        "name": "packages/ai/catalog/data/xiaomi-token-plan-cn.json",
+        "sha256": "bebafd818b8cc9452405b16599bb3b4e74dc7bd629ad5847ea5c6ce7000706f3"
+      },
+      {
+        "name": "packages/ai/catalog/data/xiaomi-token-plan-sgp.json",
+        "sha256": "edec21ee8d3d8839c96013b94bfa6a55616fb7fd62290fa99db2f3eec61713af"
+      },
+      {
+        "name": "packages/ai/catalog/data/xiaomi.json",
+        "sha256": "640f758f527639c6233d89e548797ffe8d97acc85d5d7dfd647dbb0d42efe146"
+      },
+      {
+        "name": "packages/ai/catalog/data/zai-coding-cn.json",
+        "sha256": "761cd1c3480519c3be2eaed82cff821993f652620d0787d0e38d7bf18ce2ba41"
+      },
+      {
+        "name": "packages/ai/catalog/data/zai.json",
+        "sha256": "8f5776b5eaba607d898fb26015d46d040a68217e85860173af3bfbab5f8a9eb1"
+      },
+      {
+        "name": "packages/ai/catalog/data_json_d.go",
+        "sha256": "c979fae401be88eac556334fc1e8aa12ddccc04dbe8b7acab406706037d6f667"
+      },
+      {
+        "name": "packages/ai/catalog/deepseek_models.go",
+        "sha256": "f499043b1a4c2bde496b0ba3650edd21c99b30ecf56235432a972ab0e175dcab"
+      },
+      {
+        "name": "packages/ai/catalog/fireworks_models.go",
+        "sha256": "a2ec51b923c5fc2a92a9006e069a2f34540b0b44bbd430b0b83425fcfeb7612f"
+      },
+      {
+        "name": "packages/ai/catalog/github_copilot_models.go",
+        "sha256": "9ed82de7c267d6354a4cc11d845bfecd13fee105b4cfd098a8c4dd703a0e5b09"
+      },
+      {
+        "name": "packages/ai/catalog/google_models.go",
+        "sha256": "80b2c6af7fb4ac27c162e864669c14616545e7b1a4f85e3e56ce3279fb001d5a"
+      },
+      {
+        "name": "packages/ai/catalog/google_vertex_models.go",
+        "sha256": "eaf08741b35cc05383048344116fd2e3c2cbe6ca8f9808cfdf93a3ade8e86425"
+      },
+      {
+        "name": "packages/ai/catalog/groq_models.go",
+        "sha256": "54cd1fae0b29c439bf25127326fb37623bc96ac36adbe2f8245c5256e729c0ba"
+      },
+      {
+        "name": "packages/ai/catalog/huggingface_models.go",
+        "sha256": "0bf13f6cebe3188e9eb2ed64cf15e7fb796c244db0597b4c760421c69b31b51d"
+      },
+      {
+        "name": "packages/ai/catalog/image_models_generated.go",
+        "sha256": "61846770eff09e60f018f7ee9dfabb5243094ebbbc50dd7a05d23173a3ff71f7"
+      },
+      {
+        "name": "packages/ai/catalog/kimi_coding_models.go",
+        "sha256": "a5b95118dc1ba34b94a69918e8e502b21cb84bcae27f621a93708e15851bf032"
+      },
+      {
+        "name": "packages/ai/catalog/meta_models.go",
+        "sha256": "0afd703de86139978d0f6b58e04e220b4a1f4c3e6e5380e1d586bbbd5c34dbc7"
+      },
+      {
+        "name": "packages/ai/catalog/minimax_cn_models.go",
+        "sha256": "2e66bcddb6377f33c07298f838ae5af42102beb151052693aad112e8739de8dc"
+      },
+      {
+        "name": "packages/ai/catalog/minimax_models.go",
+        "sha256": "8a62f1b70f972403a02370ffccba875ed47943e28e9ebf7fffdf17066a8ec917"
+      },
+      {
+        "name": "packages/ai/catalog/mistral_models.go",
+        "sha256": "5694dceb0141e8af796ab247e33282a61ecf33294a723af6ff42739c715f9bd6"
+      },
+      {
+        "name": "packages/ai/catalog/model_catalog.go",
+        "sha256": "7fcef5aea4e1aed15d014282881ee0f9b3a5576bdaa770274d0cbfe61b773d44"
+      },
+      {
+        "name": "packages/ai/catalog/models_generated.go",
+        "sha256": "30ed42a49140187d8e6ccdcb48c1b6d9ed0a0a14ba9f1cb5618ecd28b8fa2245"
+      },
+      {
+        "name": "packages/ai/catalog/moonshotai_cn_models.go",
+        "sha256": "78d621099b9f8cc66245fef549b093fd14a543a9868aa5dbc4fa0430cc760c0d"
+      },
+      {
+        "name": "packages/ai/catalog/moonshotai_models.go",
+        "sha256": "e2aac2cc13602cec3f981ef6dcab9028c272d094e277ef1b1a6e9103d618b501"
+      },
+      {
+        "name": "packages/ai/catalog/nvidia_models.go",
+        "sha256": "8d12bed6d1d34256478f7dde9682d1e9373cbf52ee0fb3498204de30e171923d"
+      },
+      {
+        "name": "packages/ai/catalog/openai_codex_models.go",
+        "sha256": "d402bd9f4f311d03ea7c4265b4287ede4369cad5ce49da58b50ba76125ced7b5"
+      },
+      {
+        "name": "packages/ai/catalog/openai_models.go",
+        "sha256": "fad5ad99d6224377208589c1fa4452e0bcd3133a661789a06f4ce01a1d1561d9"
+      },
+      {
+        "name": "packages/ai/catalog/opencode_go_models.go",
+        "sha256": "68c8c81b0a4302138e3f980b20f15ad195477785ead0b244da3255de5d176467"
+      },
+      {
+        "name": "packages/ai/catalog/opencode_models.go",
+        "sha256": "24c1f2b8d4b5284b1391c07b69c6bacea38f3c0c6f4cbc2acb8f5a47498fa8ef"
+      },
+      {
+        "name": "packages/ai/catalog/openrouter_models.go",
+        "sha256": "f17d0eea3d9d5c49842ea2036300518772166c62b769a58c059ef93034aa4249"
+      },
+      {
+        "name": "packages/ai/catalog/qwen_token_plan_cn_models.go",
+        "sha256": "6a019bec84e5bdb759101ca61e0f3a7a6dacf92c900212c373ba07f53f89c6df"
+      },
+      {
+        "name": "packages/ai/catalog/qwen_token_plan_individual_models.go",
+        "sha256": "040139a332630cbe1517bdf29119f8d403baf136d46bfbf8966d0d421328f631"
+      },
+      {
+        "name": "packages/ai/catalog/qwen_token_plan_models.go",
+        "sha256": "64d2edb1c277de13782b1506270e1508c0b0ba1bb60a5225aa8adfd44e1cc5bd"
+      },
+      {
+        "name": "packages/ai/catalog/radius_config.go",
+        "sha256": "327d31a059ba5cf3105cef198c11ed8f7e416452b09fb27f98266e513076433f"
+      },
+      {
+        "name": "packages/ai/catalog/radius_models.go",
+        "sha256": "6d3ef9fd29ae034cbb407b1c6dec9ca9f17644ff71d7e88e7bb73c1eeb187d5c"
+      },
+      {
+        "name": "packages/ai/catalog/together_models.go",
+        "sha256": "e41b7dfa6444ca31feb2575b94a770eba0f75b820bd51724cdf7405ce03a0f00"
+      },
+      {
+        "name": "packages/ai/catalog/vercel_ai_gateway_models.go",
+        "sha256": "aecc8f12f6f558f5d06e5913e392b5f9a7a6ae80b94116f231c03bfb1bdae7a9"
+      },
+      {
+        "name": "packages/ai/catalog/xai_models.go",
+        "sha256": "7407fb00f829b343f2f6d7810c51929911b3b776af8b27e3d28e41aea586e30b"
+      },
+      {
+        "name": "packages/ai/catalog/xiaomi_models.go",
+        "sha256": "9a0b017ffcb1f0d5eb3ebb0e61841dfd3bc501bccfa26a002655283b50c3c1ca"
+      },
+      {
+        "name": "packages/ai/catalog/xiaomi_token_plan_ams_models.go",
+        "sha256": "2e65334b0ba017784718cd9d8e2d74d9c0b49f97fe32081103c5883a6d645805"
+      },
+      {
+        "name": "packages/ai/catalog/xiaomi_token_plan_cn_models.go",
+        "sha256": "8641e5ca4f13736f32cc1471d22c7e6a4374f9d3e88559592a3c1fa3b51e7970"
+      },
+      {
+        "name": "packages/ai/catalog/xiaomi_token_plan_sgp_models.go",
+        "sha256": "684464e2fce25dc9be8b0ff2c6949aa4e6a31b8319b77fbad32b0fe51fe0f263"
+      },
+      {
+        "name": "packages/ai/catalog/zai_coding_cn_models.go",
+        "sha256": "24c95e646c1f3144a831271f2b4aedf56d13ab85865fe0cf198d6c940f2390e9"
+      },
+      {
+        "name": "packages/ai/catalog/zai_models.go",
+        "sha256": "75489a20f2776dd1e53072163e16a752275342afe6c18a554344973edfa93138"
+      },
+      {
+        "name": "packages/ai/compat/ai_surface_test.go",
+        "sha256": "1886c4d6ae2756f1da1878cb64facd48b38a7be37337c27092fcc293254c43b8"
+      },
+      {
+        "name": "packages/ai/compat/legacy.go",
+        "sha256": "e9eb41f6dc09c0014ca9d3206623b27614297597dd15fd0b6b41186c9cc17aac"
+      },
+      {
+        "name": "packages/ai/env_api_keys.go",
+        "sha256": "3daf945eb2f1895ae59b6e397a0eaf8353e9df9f436470bd6f99db6ecf9ad220"
+      },
+      {
+        "name": "packages/ai/images/ai_other_protocols_test.go",
+        "sha256": "217e4b45a290b3c9d2f30312b5bd4ed8148a7f759d1a1a29e4253093d13e04b5"
+      },
+      {
+        "name": "packages/ai/images/api_registry.go",
+        "sha256": "94ccacda952e49f42b8a927965811bbd215c0b643f3933690e09bc43c46c3903"
+      },
+      {
+        "name": "packages/ai/images/builtin/ai_providers_test.go",
+        "sha256": "29ba6ea5de2bb63d8a09a8342e3541691572a964dd4189f2d21b645de17e9c45"
+      },
+      {
+        "name": "packages/ai/images/builtin/register.go",
+        "sha256": "d0b0e0e1e4f79c9a55e3c868b0610859ba58b4f395d338244926e14a361ecc57"
+      },
+      {
+        "name": "packages/ai/images/compat.go",
+        "sha256": "3ce5691f1aea26698046b313602ccf4bb66cdc9d740a4ff033263fbdd2299bdf"
+      },
+      {
+        "name": "packages/ai/images/models.go",
+        "sha256": "60271627c3766a81ce93c0bd66e88683edfa94564ffb65deaf14a50c1e59011f"
+      },
+      {
+        "name": "packages/ai/images_models.go",
+        "sha256": "ba239e997bdc6a86f9ba4f43037eb5b8ae8c9423a0196de8a4f01b5b6b30495a"
+      },
+      {
+        "name": "packages/ai/legacy_api_aliases.go",
+        "sha256": "18b0fa075aa24ec229be7e2df1a79128aaeb5da19e433a4d23e88b7a9f8c99e2"
+      },
+      {
+        "name": "packages/ai/models.go",
+        "sha256": "0d57b841ce5a27b3b4f2c6d2e503e7868353bdc79fbd51e796a6830fe51c8ff8"
+      },
+      {
+        "name": "packages/ai/models_store.go",
+        "sha256": "35e4033fd4d22ab2a82cbf16451886ef93b756f2c8f77ab6bafc1cf83498d7ba"
+      },
+      {
+        "name": "packages/ai/providers/ai_providers_test.go",
+        "sha256": "5209d0f9f3380d6564e7401631bd63a8a123bca3093c8ec4297d9760f4c5ff3d"
+      },
+      {
+        "name": "packages/ai/providers/all.go",
+        "sha256": "a2062cf71e852f3d7870c24df118ed6199d9881c2f49cbab83fea3117f86bd10"
+      },
+      {
+        "name": "packages/ai/providers/amazon_bedrock.go",
+        "sha256": "f235be1470f3880a5bb1b14ca4e49a716c409bd46b1163bb507db7c565b16558"
+      },
+      {
+        "name": "packages/ai/providers/ant_ling.go",
+        "sha256": "84d8d15a71fa955161ec3c28f2359dc7e2ef3cbb9e837f8ca229b0c3fa092148"
+      },
+      {
+        "name": "packages/ai/providers/anthropic.go",
+        "sha256": "cb94152a6a100a58fd39a1599bf59cd0133123e2ad2ab197ec8ac34f3b7d0134"
+      },
+      {
+        "name": "packages/ai/providers/azure_openai_responses.go",
+        "sha256": "130ad0da54976c0c2f9951d1af8d0b526466e9bbd4a638639d13791caf6d0edd"
+      },
+      {
+        "name": "packages/ai/providers/baseten.go",
+        "sha256": "9637edb7927339a93875c5ab7e7697f07012eac565bdd316c2d89847ca41ad90"
+      },
+      {
+        "name": "packages/ai/providers/cerebras.go",
+        "sha256": "81a9b4c8f5cb91046437b49fcb063da8d95ebbaac9f90892eb66fc2ce4593eb4"
+      },
+      {
+        "name": "packages/ai/providers/cloudflare_ai_gateway.go",
+        "sha256": "2867c13396571a424897cdefcb97293d8099bd4fd36a734fb95e594e578f2f85"
+      },
+      {
+        "name": "packages/ai/providers/cloudflare_auth.go",
+        "sha256": "0c10185c93340057bbf5804d4f23fc1628ca0d7a256364c13da0cdc18cd52dd1"
+      },
+      {
+        "name": "packages/ai/providers/cloudflare_stream.go",
+        "sha256": "e4c5b951e18bf1b663847913b38ec1a3faf3f3d616d4d9e1268c5da3516ed1d1"
+      },
+      {
+        "name": "packages/ai/providers/cloudflare_workers_ai.go",
+        "sha256": "ae39a26876e0b94478408af7895f6ed162990cae7a530e618699774b11017d7d"
+      },
+      {
+        "name": "packages/ai/providers/deepseek.go",
+        "sha256": "61920c75ccb049828198375a8796678ab24c0e79415e67a63e550ab3f0d3aaa6"
+      },
+      {
+        "name": "packages/ai/providers/faux.go",
+        "sha256": "95b7c77fb5e223c30830b2b57312951ec29691d927f33da46d1ae321acf0dbce"
+      },
+      {
+        "name": "packages/ai/providers/fireworks.go",
+        "sha256": "75fb6bee7f50fbc812b96ba08247219bb718e81e47f434cdb179c15cafa1dd09"
+      },
+      {
+        "name": "packages/ai/providers/github_copilot.go",
+        "sha256": "73930efec19ba99dd9dd9a096ebe9bcbac04be3d240796457b6f97164d82660e"
+      },
+      {
+        "name": "packages/ai/providers/google.go",
+        "sha256": "f285e199d416fba983a728c6d291a16d8ffcdc02ae003a1afda53bcdfcc72e2b"
+      },
+      {
+        "name": "packages/ai/providers/google_vertex.go",
+        "sha256": "4d038964257db4dda30944ca3509cc12955d8cfc976e8f2983c5ce84fd522ba7"
+      },
+      {
+        "name": "packages/ai/providers/groq.go",
+        "sha256": "5887ca867e2ea11f57a8796bc6c393c7819c4f771a643569aca6d131a68ce2bc"
+      },
+      {
+        "name": "packages/ai/providers/huggingface.go",
+        "sha256": "4ee925f3efba850affa13256f7cb34e6d728e8cdb31e1e0869ff4efbad34434f"
+      },
+      {
+        "name": "packages/ai/providers/kimi_coding.go",
+        "sha256": "2b7ec58a52281fc7577089e37be4ac7cd4275d66be4e6deb7515d255ecfb5e64"
+      },
+      {
+        "name": "packages/ai/providers/meta.go",
+        "sha256": "343474ef91de7cdec1cb7e85e994cd015429d5982199f8c7df6f42f0b0dd48ea"
+      },
+      {
+        "name": "packages/ai/providers/minimax.go",
+        "sha256": "c225f6c8bf9c6e8847aa042c15d214b1b18b60b2449a4d6b5a4bdfc08bf8618b"
+      },
+      {
+        "name": "packages/ai/providers/minimax_cn.go",
+        "sha256": "4dfd629e0ceed73e9b4e0c1bacfbef914aeeb0d765b421c9bd31af93b272ba9b"
+      },
+      {
+        "name": "packages/ai/providers/mistral.go",
+        "sha256": "ef23a8e1303a13fc694b2dd203e5dd990254c58c527ca0d20f5f6afe8a311673"
+      },
+      {
+        "name": "packages/ai/providers/moonshotai.go",
+        "sha256": "ae599cf5cbf5b41719253bb16d6bb6c5a9ed8c77641727ea1287098a6db2b448"
+      },
+      {
+        "name": "packages/ai/providers/moonshotai_cn.go",
+        "sha256": "96ed5cb41d6db5d5a8f6452b9d928cba95d0cec383668ac3d002ae6bba3c7321"
+      },
+      {
+        "name": "packages/ai/providers/nvidia.go",
+        "sha256": "dd51955cc4db4e6ade03d42f493199024507c5c32f003c36aac9853465d78d48"
+      },
+      {
+        "name": "packages/ai/providers/openai.go",
+        "sha256": "cce2af0367f1b1dff13fc43ee2734ad03a5c4c0eb4555bd09ddf15cbce71854a"
+      },
+      {
+        "name": "packages/ai/providers/openai_codex.go",
+        "sha256": "00563e7040eb1f740a8fb3e6f9eca00b8a2e2e59393ce8fa5d90a63d798c6309"
+      },
+      {
+        "name": "packages/ai/providers/opencode.go",
+        "sha256": "37112cf7e49d0648ca6a6065bab8a25acfd3c07ba0df7063bf750e5ff36d33ad"
+      },
+      {
+        "name": "packages/ai/providers/opencode_go.go",
+        "sha256": "6a31a0c4b1f44d28bf1115ea988d7460e505eb50110758d1ebf2c28051b91fbd"
+      },
+      {
+        "name": "packages/ai/providers/opencode_headers.go",
+        "sha256": "3d0c76a486b9093578010c05d0662f7d6e92c59cc3720802f8b6a6e3543b8c14"
+      },
+      {
+        "name": "packages/ai/providers/openrouter.go",
+        "sha256": "3dedb8bf5016ca855a0d5a335b1579eb91115fa7c9f7bc1dce593f91a7aedeef"
+      },
+      {
+        "name": "packages/ai/providers/openrouter_images.go",
+        "sha256": "b4a78e1c4157ac62fdfc3bfe11e7184f2d6ab584895e9df0661b76b75b6a3e15"
+      },
+      {
+        "name": "packages/ai/providers/qwen_token_plan.go",
+        "sha256": "92bd8802772334a1146f5954119894bbde545e8c1254709f622bfcbab113a5d6"
+      },
+      {
+        "name": "packages/ai/providers/qwen_token_plan_cn.go",
+        "sha256": "3470032688b43c9a72159bff5919aca9bb3ea5f1a2f87cd97b6337d38def468d"
+      },
+      {
+        "name": "packages/ai/providers/qwen_token_plan_individual.go",
+        "sha256": "291c1739f32ea77e2ed991ae304ca69fafdac4b90860427efe9ec52ea80581ab"
+      },
+      {
+        "name": "packages/ai/providers/radius.go",
+        "sha256": "705a05cd6983c8e9809b0254842abc845d841035d95aef48b0ca56f91c75bffa"
+      },
+      {
+        "name": "packages/ai/providers/together.go",
+        "sha256": "bbf5681f16013cb47d6464d61205f2f5bd1528553d5b0ab801ba7bedb6866293"
+      },
+      {
+        "name": "packages/ai/providers/vercel_ai_gateway.go",
+        "sha256": "3925a95bfa1d5975bc0338f022a63eb07a961dcbb9b5fcb0eb9fbb507a3ba557"
+      },
+      {
+        "name": "packages/ai/providers/xai.go",
+        "sha256": "f8e86af1eca606e30bb8c20436a7d5de61f6fd0d56aa854e8055ef03765a7552"
+      },
+      {
+        "name": "packages/ai/providers/xiaomi.go",
+        "sha256": "0b9b66bf9d736c5fe7613099e88da8c8d7c92530972573a9ffc5928bcce69e1b"
+      },
+      {
+        "name": "packages/ai/providers/xiaomi_token_plan_ams.go",
+        "sha256": "eaa871bdc69bf5f294de30d99f4c14678598cfd6dd87edae5927c612cdd53579"
+      },
+      {
+        "name": "packages/ai/providers/xiaomi_token_plan_cn.go",
+        "sha256": "80f9a79ea8f8c5b5a1ef90afee438ec7ab1bd5d0f7d1d05a57b365611b89c317"
+      },
+      {
+        "name": "packages/ai/providers/xiaomi_token_plan_sgp.go",
+        "sha256": "c05f4c4a36fd37a18f969927c605a02e05709bc832d655d6d6e1f5b60fe36e7c"
+      },
+      {
+        "name": "packages/ai/providers/zai.go",
+        "sha256": "20969b5fb20cc8af66d7b34bd067755e67cc77b75d605279fc99cb497d3a4357"
+      },
+      {
+        "name": "packages/ai/providers/zai_coding_cn.go",
+        "sha256": "65b81753675ff9584a59b96391df4ad9987e63c8435611cec0fdfd15699aeda7"
+      },
+      {
+        "name": "packages/ai/sdk/ai_surface_test.go",
+        "sha256": "822f842ce1ad849415b18945fd48d4e57d845f5bf24c5607ccab107c5434d557"
+      },
+      {
+        "name": "packages/ai/sdk/bedrock_provider.go",
+        "sha256": "0807145f5bff9e7b1c8b43e7e348ad2d980cd7dbc407b7fe3549155ae0ce3c2a"
+      },
+      {
+        "name": "packages/ai/sdk/bun_oauth_adapter.go",
+        "sha256": "3b85fdb8d41d586b3359c60c9a276e0d6f7c5d0d3110ff72d0af38e13a646f6c"
+      },
+      {
+        "name": "packages/ai/sdk/exports.go",
+        "sha256": "e891e8f98939b0cfe5b0c5af3d0759c1152ef98486ad8547005f5e8c7caacb45"
+      },
+      {
+        "name": "packages/ai/sdk/oauth.go",
+        "sha256": "8c45520899eec5320e26f1f5e77f71c764f832606a8e9aa73e06669736618da7"
+      },
+      {
+        "name": "packages/ai/session_resources.go",
+        "sha256": "9193a1c881fef6def3519c3551835b577bb7dea1602d4925c717cdf03b495ced"
+      },
+      {
+        "name": "packages/ai/types/ai_foundation_types_test.go",
+        "sha256": "4564a4f0deb204fb2c54b6e52397b94ee681476a8a54a4b9ee4acc5deb20a890"
+      },
+      {
+        "name": "packages/ai/types/types.go",
+        "sha256": "94bfbbbe6be1796d19bbe5131b6dbd1ce3651ebe523f2729665710966b09db7e"
+      },
+      {
+        "name": "packages/ai/utils/abort.go",
+        "sha256": "f53a4fd1b6ca59925d8a75c6ef73576a1c139cace5ed636adb193bc9d6db9f80"
+      },
+      {
+        "name": "packages/ai/utils/abort_signals.go",
+        "sha256": "45f5f44b8d9b985635e6313615f43d1d867a65f6275f64adfe24fb81777dd55c"
+      },
+      {
+        "name": "packages/ai/utils/ai_foundation_types_test.go",
+        "sha256": "059bb5c6fb8b03a8518d450cf0a518e7a7f981a9aac5ccbe87c853f4e17153d0"
+      },
+      {
+        "name": "packages/ai/utils/ai_utils_test.go",
+        "sha256": "5764072a9bb8179e50d30e8cd3a5338553d6545787c6cd3af9b5951ea59dde70"
+      },
+      {
+        "name": "packages/ai/utils/assistant_event_stream.go",
+        "sha256": "22288987f2c6960de4aeb43d69a01fbc63d5b97a7234510642b3e0997a855bf8"
+      },
+      {
+        "name": "packages/ai/utils/assistant_message_frame.go",
+        "sha256": "4e727ee065f026f1a6c000355a161c4a3ac1a50432214eb5cdbad9a7696d0dcd"
+      },
+      {
+        "name": "packages/ai/utils/diagnostics.go",
+        "sha256": "ddfd749629b707dc76a37966d9cadd31ebb2d2c972e644433a1dafbb382e836d"
+      },
+      {
+        "name": "packages/ai/utils/error_body.go",
+        "sha256": "84c433901105257b4360e7ecd65a072408ecd6c9749c1b3e9e0a8ff73051ad75"
+      },
+      {
+        "name": "packages/ai/utils/estimate.go",
+        "sha256": "a240caba7281cf3b993ae7eafab162f8ace24c91201ba71f4d84ddc1765690fb"
+      },
+      {
+        "name": "packages/ai/utils/eventstream/event_stream.go",
+        "sha256": "d324a1898109c74f2d66a1fd95d42fd15af10a108416f3b892da176da3d834e5"
+      },
+      {
+        "name": "packages/ai/utils/eventstream/event_stream_test.go",
+        "sha256": "ea758123fb7d98c314e2f8550095ecb62c541b221220d82294b06e30a58aa56d"
+      },
+      {
+        "name": "packages/ai/utils/eventstream/testdata/eventstream-ts.json",
+        "sha256": "89453b879b48f692a22d7c93267a4d606d42507bb2a9e54936152c9ff1122dfd"
+      },
+      {
+        "name": "packages/ai/utils/hash.go",
+        "sha256": "efc53ece6d6a172615987c6ab9979618bd5a3993509048fca6c0ad43d90ba6fa"
+      },
+      {
+        "name": "packages/ai/utils/headers.go",
+        "sha256": "6d64af4ba335088acf04bbca9a2bf1e1d89e7b7ce40d6482d208942d16031a42"
+      },
+      {
+        "name": "packages/ai/utils/json_parse.go",
+        "sha256": "471dac7ba962f95a2ce22d4c98815749e50fab5b6c9a31b63fb8e746ee1137ae"
+      },
+      {
+        "name": "packages/ai/utils/node_http_proxy.go",
+        "sha256": "0609fe01cc17407de808ff97e289dd943189e021e5d30f18280609984dfc469b"
+      },
+      {
+        "name": "packages/ai/utils/overflow.go",
+        "sha256": "5cb3c22ee03df10829cf4fcf97e7c9cae00d3cdfad32db3b409dde1754b1e0da"
+      },
+      {
+        "name": "packages/ai/utils/pi_user_agent.go",
+        "sha256": "c84b3b9d21d769ffafd19c64c9f6536e8322768f127d9ee2352ff9fe92f22344"
+      },
+      {
+        "name": "packages/ai/utils/provider_env.go",
+        "sha256": "ae8ab64a877047614ff5744cf7dc7869f456373f9ffa85b89f909cba2bb394e4"
+      },
+      {
+        "name": "packages/ai/utils/provider_retry.go",
+        "sha256": "ca22f08bee2c8d5593afebc318333b509111f9c2f47b43dd6294aa23c72626db"
+      },
+      {
+        "name": "packages/ai/utils/retry.go",
+        "sha256": "d68e232ecf93c4842ff4bf5b3f7a7165967f5b096de42ca667c414476dfaaf4e"
+      },
+      {
+        "name": "packages/ai/utils/sanitize_unicode.go",
+        "sha256": "a07bb7f447b189dbd5bb95e7f7104763ffab1a3aeaadb187f4b222e9cf5e7308"
+      },
+      {
+        "name": "packages/ai/utils/sleep.go",
+        "sha256": "c768aea9a8000b7b88451c6bee140e797f15ab69e96ca68b08c7426135315d55"
+      },
+      {
+        "name": "packages/ai/utils/text.go",
+        "sha256": "80d6a49f3826ccfa7c12af3d7e2b0dfcc25537c54d3a0639a6d02db0db6c8520"
+      },
+      {
+        "name": "packages/ai/utils/transcript.go",
+        "sha256": "54e5d3f465f943c766e03e80a8646601c7e80986e7c6c78f9028d2b33d0f11c7"
+      },
+      {
+        "name": "packages/ai/utils/typebox_helpers.go",
+        "sha256": "17e7f8e824a144baddf5e2400c8d0984b59acdf889defeca6a6c8676dfdf7cb5"
+      },
+      {
+        "name": "packages/ai/utils/uuid.go",
+        "sha256": "c84fdb36cb139cea9dda5c37a424f6be143962a76a7f982d543d880d20c76f93"
+      },
+      {
+        "name": "packages/ai/utils/validation.go",
+        "sha256": "c22b0b6db90cf0cde196fabe758f4ac399c535ec6a3426a71b81062d3bec118d"
+      },
+      {
+        "name": "packages/chord/context/context.go",
+        "sha256": "583de2561559c35930805b76fd3510784d9c48479fe4bc016d352aefca8aeaaf"
+      },
+      {
+        "name": "packages/chord/context/core_contracts_test.go",
+        "sha256": "a30b14a7cb671956c5238b3d2aaa46c454e198b41d982b6a548a9f82a183a0cc"
+      },
+      {
+        "name": "packages/chord/context/value.go",
+        "sha256": "0140d237f12b2ff4a95e2ed4db7f30450bfa0155191956dcfc3a5c6e356d5752"
+      },
+      {
+        "name": "packages/telemetry/ai_foundation_types_test.go",
+        "sha256": "34560f8f028dffeaaf1231069131b1d989b02af69108e54b08e1d0121f847427"
+      },
+      {
+        "name": "packages/telemetry/index.go",
+        "sha256": "67be2fb4da027b78c58373ad9a8932480b3f177d8dac23df91131c91810b18c6"
+      },
+      {
+        "name": "packages/telemetry/memory.go",
+        "sha256": "57c365ef47a37f811c7bf47157ae30283c2e1dbc137de0d648b6ecb617ce5dc9"
+      },
+      {
+        "name": "packages/telemetry/noop.go",
+        "sha256": "a4f14ad12f0fd4acecbda727272d44fc21c3a657c11e08d9d807417de0fb1156"
+      },
+      {
+        "name": "packages/telemetry/testing/ai_foundation_types_test.go",
+        "sha256": "193a041027a507c29b649774c6872e09b8b54d29feb4e488724d00a53214d457"
+      },
+      {
+        "name": "packages/telemetry/testing/conformance.go",
+        "sha256": "3ad085e45c7ea4bf940b16d37403727cd78997f23f46fb01cab633d5926ec2d7"
+      },
+      {
+        "name": "packages/telemetry/testing/index.go",
+        "sha256": "225f5252c9dd1a9d5fe39bc720dab348afef281f9f9db5484fc4a3d28f316d9a"
+      },
+      {
+        "name": "packages/telemetry/testing/types.go",
+        "sha256": "8fe2e726090403dc37aaf677ad6822158c5d15c68044193e318f298d50fa2e3f"
+      }
+    ]
+  },
+  "bootstrap": [
+    "migration/sdk"
+  ],
+  "startPolicy": "all-prepared",
+  "batches": {
+    "configuration": {
+      "status": "ready",
+      "steps": [
+        {
+          "id": "port",
+          "sources": [
+            "packages/coding-agent/examples/sdk/01-minimal.ts",
+            "packages/coding-agent/examples/sdk/02-custom-model.ts",
+            "packages/coding-agent/examples/sdk/03-custom-prompt.ts",
+            "packages/coding-agent/examples/sdk/04-skills.ts",
+            "packages/coding-agent/examples/sdk/05-tools.ts",
+            "packages/coding-agent/examples/sdk/06-extensions.ts",
+            "packages/coding-agent/examples/sdk/07-context-files.ts",
+            "packages/coding-agent/examples/sdk/08-prompt-templates.ts",
+            "packages/coding-agent/examples/sdk/09-api-keys-and-oauth.ts",
+            "packages/coding-agent/examples/sdk/10-settings.ts",
+            "packages/coding-agent/examples/sdk/11-sessions.ts",
+            "packages/coding-agent/examples/sdk/12-full-control.ts",
+            "packages/coding-agent/examples/sdk/13-session-runtime.ts",
+            "packages/coding-agent/src/config.ts",
+            "packages/coding-agent/src/core/agent-session-runtime.ts",
+            "packages/coding-agent/src/core/agent-session-services.ts",
+            "packages/coding-agent/src/core/agent-session.ts",
+            "packages/coding-agent/src/core/auth-guidance.ts",
+            "packages/coding-agent/src/core/auth-storage.ts",
+            "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+            "packages/coding-agent/src/core/compaction/compaction.ts",
+            "packages/coding-agent/src/core/compaction/index.ts",
+            "packages/coding-agent/src/core/compaction/utils.ts",
+            "packages/coding-agent/src/core/defaults.ts",
+            "packages/coding-agent/src/core/event-bus.ts",
+            "packages/coding-agent/src/core/http-dispatcher.ts",
+            "packages/coding-agent/src/core/index.ts",
+            "packages/coding-agent/src/core/messages.ts",
+            "packages/coding-agent/src/core/model-config.ts",
+            "packages/coding-agent/src/core/model-registry.ts",
+            "packages/coding-agent/src/core/model-resolver.ts",
+            "packages/coding-agent/src/core/model-runtime.ts",
+            "packages/coding-agent/src/core/models-store.ts",
+            "packages/coding-agent/src/core/output-guard.ts",
+            "packages/coding-agent/src/core/project-trust.ts",
+            "packages/coding-agent/src/core/prompt-templates.ts",
+            "packages/coding-agent/src/core/provider-attribution.ts",
+            "packages/coding-agent/src/core/provider-composer.ts",
+            "packages/coding-agent/src/core/resolve-config-value.ts",
+            "packages/coding-agent/src/core/resource-loader.ts",
+            "packages/coding-agent/src/core/runtime-credentials.ts",
+            "packages/coding-agent/src/core/sdk.ts",
+            "packages/coding-agent/src/core/session-cwd.ts",
+            "packages/coding-agent/src/core/session-manager.ts",
+            "packages/coding-agent/src/core/settings-diagnostics.ts",
+            "packages/coding-agent/src/core/settings-manager.ts",
+            "packages/coding-agent/src/core/skills.ts",
+            "packages/coding-agent/src/core/source-info.ts",
+            "packages/coding-agent/src/core/system-prompt.ts",
+            "packages/coding-agent/src/core/telemetry.ts",
+            "packages/coding-agent/src/core/tools/bash.ts",
+            "packages/coding-agent/src/core/tools/edit-diff.ts",
+            "packages/coding-agent/src/core/tools/edit.ts",
+            "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+            "packages/coding-agent/src/core/tools/find.ts",
+            "packages/coding-agent/src/core/tools/grep.ts",
+            "packages/coding-agent/src/core/tools/index.ts",
+            "packages/coding-agent/src/core/tools/ls.ts",
+            "packages/coding-agent/src/core/tools/output-accumulator.ts",
+            "packages/coding-agent/src/core/tools/path-utils.ts",
+            "packages/coding-agent/src/core/tools/powershell.ts",
+            "packages/coding-agent/src/core/tools/read.ts",
+            "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+            "packages/coding-agent/src/core/tools/truncate.ts",
+            "packages/coding-agent/src/core/tools/write.ts",
+            "packages/coding-agent/src/core/trust-manager.ts",
+            "packages/coding-agent/src/core/usage-totals.ts",
+            "packages/coding-agent/src/index.ts",
+            "packages/coding-agent/src/utils/abort.ts",
+            "packages/coding-agent/src/utils/child-process.ts",
+            "packages/coding-agent/src/utils/exif-orientation.ts",
+            "packages/coding-agent/src/utils/frontmatter.ts",
+            "packages/coding-agent/src/utils/fs-watch.ts",
+            "packages/coding-agent/src/utils/git.ts",
+            "packages/coding-agent/src/utils/image-convert.ts",
+            "packages/coding-agent/src/utils/image-process.ts",
+            "packages/coding-agent/src/utils/image-resize-core.ts",
+            "packages/coding-agent/src/utils/image-resize-worker.ts",
+            "packages/coding-agent/src/utils/image-resize.ts",
+            "packages/coding-agent/src/utils/json.ts",
+            "packages/coding-agent/src/utils/mime.ts",
+            "packages/coding-agent/src/utils/paths.ts",
+            "packages/coding-agent/src/utils/photon.ts",
+            "packages/coding-agent/src/utils/pi-user-agent.ts",
+            "packages/coding-agent/src/utils/shell.ts",
+            "packages/coding-agent/src/utils/sleep.ts",
+            "packages/coding-agent/src/utils/text.ts",
+            "packages/coding-agent/src/utils/tool-result-images.ts",
+            "packages/coding-agent/src/utils/tools-manager.ts",
+            "packages/coding-agent/test/agent-session-auto-compaction-queue.test.ts",
+            "packages/coding-agent/test/agent-session-branching.test.ts",
+            "packages/coding-agent/test/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/agent-session-concurrent.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-provider.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-tools.test.ts",
+            "packages/coding-agent/test/agent-session-retry.test.ts",
+            "packages/coding-agent/test/agent-session-runtime-events.test.ts",
+            "packages/coding-agent/test/agent-session-stats.test.ts",
+            "packages/coding-agent/test/agent-session-tree-navigation.test.ts",
+            "packages/coding-agent/test/auth-storage.test.ts",
+            "packages/coding-agent/test/compaction-extensions-example.test.ts",
+            "packages/coding-agent/test/compaction-extensions.test.ts",
+            "packages/coding-agent/test/compaction-serialization.test.ts",
+            "packages/coding-agent/test/compaction-summary-reasoning.test.ts",
+            "packages/coding-agent/test/compaction.test.ts",
+            "packages/coding-agent/test/default-tools-setting.test.ts",
+            "packages/coding-agent/test/extensions-runner.test.ts",
+            "packages/coding-agent/test/interactive-mode-compaction.test.ts",
+            "packages/coding-agent/test/model-resolver.test.ts",
+            "packages/coding-agent/test/model-runtime-auth-options.test.ts",
+            "packages/coding-agent/test/model-runtime-cloudflare-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-credential-sync.test.ts",
+            "packages/coding-agent/test/model-runtime-modify-models-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-test-utils.ts",
+            "packages/coding-agent/test/models-store.test.ts",
+            "packages/coding-agent/test/prompt-templates.test.ts",
+            "packages/coding-agent/test/resource-loader.test.ts",
+            "packages/coding-agent/test/runtime-credentials.test.ts",
+            "packages/coding-agent/test/sdk-codex-cache-probe-tool-loop.ts",
+            "packages/coding-agent/test/sdk-openrouter-attribution.test.ts",
+            "packages/coding-agent/test/sdk-session-manager.test.ts",
+            "packages/coding-agent/test/sdk-skills.test.ts",
+            "packages/coding-agent/test/sdk-stream-options.test.ts",
+            "packages/coding-agent/test/session-manager/build-context.test.ts",
+            "packages/coding-agent/test/session-manager/custom-session-id.test.ts",
+            "packages/coding-agent/test/session-manager/file-operations.test.ts",
+            "packages/coding-agent/test/session-manager/labels.test.ts",
+            "packages/coding-agent/test/session-manager/load-entries.test.ts",
+            "packages/coding-agent/test/session-manager/migration.test.ts",
+            "packages/coding-agent/test/session-manager/save-entry.test.ts",
+            "packages/coding-agent/test/session-manager/tree-traversal.test.ts",
+            "packages/coding-agent/test/settings-manager-bug.test.ts",
+            "packages/coding-agent/test/settings-manager-compaction.test.ts",
+            "packages/coding-agent/test/settings-manager.test.ts",
+            "packages/coding-agent/test/skills.test.ts",
+            "packages/coding-agent/test/suite/agent-session-bash-persistence.test.ts",
+            "packages/coding-agent/test/suite/agent-session-boundaries.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction-model-overrides.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/suite/agent-session-model-extension.test.ts",
+            "packages/coding-agent/test/suite/agent-session-prompt.test.ts",
+            "packages/coding-agent/test/suite/agent-session-queue.test.ts",
+            "packages/coding-agent/test/suite/agent-session-retry-events.test.ts",
+            "packages/coding-agent/test/suite/agent-session-runtime.test.ts",
+            "packages/coding-agent/test/suite/agent-session-tool-result-images.test.ts",
+            "packages/coding-agent/test/suite/regressions/1717-2113-agent-session-event-settlement.test.ts",
+            "packages/coding-agent/test/suite/regressions/2835-tools-allowlist-filters-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/3592-no-builtin-tools-keeps-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5109-exclude-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5217-compaction-reason.test.ts",
+            "packages/coding-agent/test/suite/regressions/6647-compaction-retries-transient-stream-drop.test.ts",
+            "packages/coding-agent/test/suite/regressions/6768-copilot-compaction-base-url.test.ts",
+            "packages/coding-agent/test/suite/regressions/7048-compaction-truncated-summary.test.ts",
+            "packages/coding-agent/test/suite/regressions/7150-rpc-prompt-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/7193-event-bus-lifecycle.test.ts",
+            "packages/coding-agent/test/suite/regressions/8328-zero-usage-auto-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/8989-fork-compaction-label-boundary.test.ts",
+            "packages/coding-agent/test/suite/regressions/9178-tree-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/9340-9777-auto-compaction-cancellation.test.ts",
+            "packages/coding-agent/test/suite/regressions/pre-prompt-compaction-no-continue.test.ts",
+            "packages/coding-agent/test/tools.test.ts"
+          ],
+          "goal": "Complete the embedded SDK configuration capability from the source-owned export list and frozen contract. Other supplied files are read-only behavioral references; do not implement excluded TUI/JS-host features.",
+          "contract": "contracts/configuration.md",
+          "judge": "judges/configuration",
+          "outputs": [
+            "packages/coding-agent/settings.go",
+            "packages/coding-agent/model_runtime.go",
+            "packages/coding-agent/configuration_test.go",
+            "packages/coding-agent/source_map_configuration.json"
+          ],
+          "tests": [
+            "TestPortsmithJudgeSDKConfiguration"
+          ],
+          "race": true
+        }
+      ]
+    },
+    "storage": {
+      "status": "ready",
+      "steps": [
+        {
+          "id": "port",
+          "sources": [
+            "packages/coding-agent/examples/sdk/01-minimal.ts",
+            "packages/coding-agent/examples/sdk/02-custom-model.ts",
+            "packages/coding-agent/examples/sdk/03-custom-prompt.ts",
+            "packages/coding-agent/examples/sdk/04-skills.ts",
+            "packages/coding-agent/examples/sdk/05-tools.ts",
+            "packages/coding-agent/examples/sdk/06-extensions.ts",
+            "packages/coding-agent/examples/sdk/07-context-files.ts",
+            "packages/coding-agent/examples/sdk/08-prompt-templates.ts",
+            "packages/coding-agent/examples/sdk/09-api-keys-and-oauth.ts",
+            "packages/coding-agent/examples/sdk/10-settings.ts",
+            "packages/coding-agent/examples/sdk/11-sessions.ts",
+            "packages/coding-agent/examples/sdk/12-full-control.ts",
+            "packages/coding-agent/examples/sdk/13-session-runtime.ts",
+            "packages/coding-agent/src/config.ts",
+            "packages/coding-agent/src/core/agent-session-runtime.ts",
+            "packages/coding-agent/src/core/agent-session-services.ts",
+            "packages/coding-agent/src/core/agent-session.ts",
+            "packages/coding-agent/src/core/auth-guidance.ts",
+            "packages/coding-agent/src/core/auth-storage.ts",
+            "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+            "packages/coding-agent/src/core/compaction/compaction.ts",
+            "packages/coding-agent/src/core/compaction/index.ts",
+            "packages/coding-agent/src/core/compaction/utils.ts",
+            "packages/coding-agent/src/core/defaults.ts",
+            "packages/coding-agent/src/core/event-bus.ts",
+            "packages/coding-agent/src/core/http-dispatcher.ts",
+            "packages/coding-agent/src/core/index.ts",
+            "packages/coding-agent/src/core/messages.ts",
+            "packages/coding-agent/src/core/model-config.ts",
+            "packages/coding-agent/src/core/model-registry.ts",
+            "packages/coding-agent/src/core/model-resolver.ts",
+            "packages/coding-agent/src/core/model-runtime.ts",
+            "packages/coding-agent/src/core/models-store.ts",
+            "packages/coding-agent/src/core/output-guard.ts",
+            "packages/coding-agent/src/core/project-trust.ts",
+            "packages/coding-agent/src/core/prompt-templates.ts",
+            "packages/coding-agent/src/core/provider-attribution.ts",
+            "packages/coding-agent/src/core/provider-composer.ts",
+            "packages/coding-agent/src/core/resolve-config-value.ts",
+            "packages/coding-agent/src/core/resource-loader.ts",
+            "packages/coding-agent/src/core/runtime-credentials.ts",
+            "packages/coding-agent/src/core/sdk.ts",
+            "packages/coding-agent/src/core/session-cwd.ts",
+            "packages/coding-agent/src/core/session-manager.ts",
+            "packages/coding-agent/src/core/settings-diagnostics.ts",
+            "packages/coding-agent/src/core/settings-manager.ts",
+            "packages/coding-agent/src/core/skills.ts",
+            "packages/coding-agent/src/core/source-info.ts",
+            "packages/coding-agent/src/core/system-prompt.ts",
+            "packages/coding-agent/src/core/telemetry.ts",
+            "packages/coding-agent/src/core/tools/bash.ts",
+            "packages/coding-agent/src/core/tools/edit-diff.ts",
+            "packages/coding-agent/src/core/tools/edit.ts",
+            "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+            "packages/coding-agent/src/core/tools/find.ts",
+            "packages/coding-agent/src/core/tools/grep.ts",
+            "packages/coding-agent/src/core/tools/index.ts",
+            "packages/coding-agent/src/core/tools/ls.ts",
+            "packages/coding-agent/src/core/tools/output-accumulator.ts",
+            "packages/coding-agent/src/core/tools/path-utils.ts",
+            "packages/coding-agent/src/core/tools/powershell.ts",
+            "packages/coding-agent/src/core/tools/read.ts",
+            "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+            "packages/coding-agent/src/core/tools/truncate.ts",
+            "packages/coding-agent/src/core/tools/write.ts",
+            "packages/coding-agent/src/core/trust-manager.ts",
+            "packages/coding-agent/src/core/usage-totals.ts",
+            "packages/coding-agent/src/index.ts",
+            "packages/coding-agent/src/utils/abort.ts",
+            "packages/coding-agent/src/utils/child-process.ts",
+            "packages/coding-agent/src/utils/exif-orientation.ts",
+            "packages/coding-agent/src/utils/frontmatter.ts",
+            "packages/coding-agent/src/utils/fs-watch.ts",
+            "packages/coding-agent/src/utils/git.ts",
+            "packages/coding-agent/src/utils/image-convert.ts",
+            "packages/coding-agent/src/utils/image-process.ts",
+            "packages/coding-agent/src/utils/image-resize-core.ts",
+            "packages/coding-agent/src/utils/image-resize-worker.ts",
+            "packages/coding-agent/src/utils/image-resize.ts",
+            "packages/coding-agent/src/utils/json.ts",
+            "packages/coding-agent/src/utils/mime.ts",
+            "packages/coding-agent/src/utils/paths.ts",
+            "packages/coding-agent/src/utils/photon.ts",
+            "packages/coding-agent/src/utils/pi-user-agent.ts",
+            "packages/coding-agent/src/utils/shell.ts",
+            "packages/coding-agent/src/utils/sleep.ts",
+            "packages/coding-agent/src/utils/text.ts",
+            "packages/coding-agent/src/utils/tool-result-images.ts",
+            "packages/coding-agent/src/utils/tools-manager.ts",
+            "packages/coding-agent/test/agent-session-auto-compaction-queue.test.ts",
+            "packages/coding-agent/test/agent-session-branching.test.ts",
+            "packages/coding-agent/test/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/agent-session-concurrent.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-provider.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-tools.test.ts",
+            "packages/coding-agent/test/agent-session-retry.test.ts",
+            "packages/coding-agent/test/agent-session-runtime-events.test.ts",
+            "packages/coding-agent/test/agent-session-stats.test.ts",
+            "packages/coding-agent/test/agent-session-tree-navigation.test.ts",
+            "packages/coding-agent/test/auth-storage.test.ts",
+            "packages/coding-agent/test/compaction-extensions-example.test.ts",
+            "packages/coding-agent/test/compaction-extensions.test.ts",
+            "packages/coding-agent/test/compaction-serialization.test.ts",
+            "packages/coding-agent/test/compaction-summary-reasoning.test.ts",
+            "packages/coding-agent/test/compaction.test.ts",
+            "packages/coding-agent/test/default-tools-setting.test.ts",
+            "packages/coding-agent/test/extensions-runner.test.ts",
+            "packages/coding-agent/test/interactive-mode-compaction.test.ts",
+            "packages/coding-agent/test/model-resolver.test.ts",
+            "packages/coding-agent/test/model-runtime-auth-options.test.ts",
+            "packages/coding-agent/test/model-runtime-cloudflare-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-credential-sync.test.ts",
+            "packages/coding-agent/test/model-runtime-modify-models-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-test-utils.ts",
+            "packages/coding-agent/test/models-store.test.ts",
+            "packages/coding-agent/test/prompt-templates.test.ts",
+            "packages/coding-agent/test/resource-loader.test.ts",
+            "packages/coding-agent/test/runtime-credentials.test.ts",
+            "packages/coding-agent/test/sdk-codex-cache-probe-tool-loop.ts",
+            "packages/coding-agent/test/sdk-openrouter-attribution.test.ts",
+            "packages/coding-agent/test/sdk-session-manager.test.ts",
+            "packages/coding-agent/test/sdk-skills.test.ts",
+            "packages/coding-agent/test/sdk-stream-options.test.ts",
+            "packages/coding-agent/test/session-manager/build-context.test.ts",
+            "packages/coding-agent/test/session-manager/custom-session-id.test.ts",
+            "packages/coding-agent/test/session-manager/file-operations.test.ts",
+            "packages/coding-agent/test/session-manager/labels.test.ts",
+            "packages/coding-agent/test/session-manager/load-entries.test.ts",
+            "packages/coding-agent/test/session-manager/migration.test.ts",
+            "packages/coding-agent/test/session-manager/save-entry.test.ts",
+            "packages/coding-agent/test/session-manager/tree-traversal.test.ts",
+            "packages/coding-agent/test/settings-manager-bug.test.ts",
+            "packages/coding-agent/test/settings-manager-compaction.test.ts",
+            "packages/coding-agent/test/settings-manager.test.ts",
+            "packages/coding-agent/test/skills.test.ts",
+            "packages/coding-agent/test/suite/agent-session-bash-persistence.test.ts",
+            "packages/coding-agent/test/suite/agent-session-boundaries.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction-model-overrides.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/suite/agent-session-model-extension.test.ts",
+            "packages/coding-agent/test/suite/agent-session-prompt.test.ts",
+            "packages/coding-agent/test/suite/agent-session-queue.test.ts",
+            "packages/coding-agent/test/suite/agent-session-retry-events.test.ts",
+            "packages/coding-agent/test/suite/agent-session-runtime.test.ts",
+            "packages/coding-agent/test/suite/agent-session-tool-result-images.test.ts",
+            "packages/coding-agent/test/suite/regressions/1717-2113-agent-session-event-settlement.test.ts",
+            "packages/coding-agent/test/suite/regressions/2835-tools-allowlist-filters-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/3592-no-builtin-tools-keeps-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5109-exclude-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5217-compaction-reason.test.ts",
+            "packages/coding-agent/test/suite/regressions/6647-compaction-retries-transient-stream-drop.test.ts",
+            "packages/coding-agent/test/suite/regressions/6768-copilot-compaction-base-url.test.ts",
+            "packages/coding-agent/test/suite/regressions/7048-compaction-truncated-summary.test.ts",
+            "packages/coding-agent/test/suite/regressions/7150-rpc-prompt-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/7193-event-bus-lifecycle.test.ts",
+            "packages/coding-agent/test/suite/regressions/8328-zero-usage-auto-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/8989-fork-compaction-label-boundary.test.ts",
+            "packages/coding-agent/test/suite/regressions/9178-tree-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/9340-9777-auto-compaction-cancellation.test.ts",
+            "packages/coding-agent/test/suite/regressions/pre-prompt-compaction-no-continue.test.ts",
+            "packages/coding-agent/test/tools.test.ts"
+          ],
+          "goal": "Complete the embedded SDK storage capability from the source-owned export list and frozen contract. Other supplied files are read-only behavioral references; do not implement excluded TUI/JS-host features.",
+          "contract": "contracts/storage.md",
+          "judge": "judges/storage",
+          "outputs": [
+            "packages/coding-agent/session_manager.go",
+            "packages/coding-agent/messages.go",
+            "packages/coding-agent/storage_test.go",
+            "packages/coding-agent/source_map_storage.json"
+          ],
+          "tests": [
+            "TestPortsmithJudgeSDKStorage"
+          ],
+          "race": true
+        }
+      ]
+    },
+    "resources": {
+      "status": "ready",
+      "steps": [
+        {
+          "id": "port",
+          "sources": [
+            "packages/coding-agent/examples/sdk/01-minimal.ts",
+            "packages/coding-agent/examples/sdk/02-custom-model.ts",
+            "packages/coding-agent/examples/sdk/03-custom-prompt.ts",
+            "packages/coding-agent/examples/sdk/04-skills.ts",
+            "packages/coding-agent/examples/sdk/05-tools.ts",
+            "packages/coding-agent/examples/sdk/06-extensions.ts",
+            "packages/coding-agent/examples/sdk/07-context-files.ts",
+            "packages/coding-agent/examples/sdk/08-prompt-templates.ts",
+            "packages/coding-agent/examples/sdk/09-api-keys-and-oauth.ts",
+            "packages/coding-agent/examples/sdk/10-settings.ts",
+            "packages/coding-agent/examples/sdk/11-sessions.ts",
+            "packages/coding-agent/examples/sdk/12-full-control.ts",
+            "packages/coding-agent/examples/sdk/13-session-runtime.ts",
+            "packages/coding-agent/src/config.ts",
+            "packages/coding-agent/src/core/agent-session-runtime.ts",
+            "packages/coding-agent/src/core/agent-session-services.ts",
+            "packages/coding-agent/src/core/agent-session.ts",
+            "packages/coding-agent/src/core/auth-guidance.ts",
+            "packages/coding-agent/src/core/auth-storage.ts",
+            "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+            "packages/coding-agent/src/core/compaction/compaction.ts",
+            "packages/coding-agent/src/core/compaction/index.ts",
+            "packages/coding-agent/src/core/compaction/utils.ts",
+            "packages/coding-agent/src/core/defaults.ts",
+            "packages/coding-agent/src/core/event-bus.ts",
+            "packages/coding-agent/src/core/http-dispatcher.ts",
+            "packages/coding-agent/src/core/index.ts",
+            "packages/coding-agent/src/core/messages.ts",
+            "packages/coding-agent/src/core/model-config.ts",
+            "packages/coding-agent/src/core/model-registry.ts",
+            "packages/coding-agent/src/core/model-resolver.ts",
+            "packages/coding-agent/src/core/model-runtime.ts",
+            "packages/coding-agent/src/core/models-store.ts",
+            "packages/coding-agent/src/core/output-guard.ts",
+            "packages/coding-agent/src/core/project-trust.ts",
+            "packages/coding-agent/src/core/prompt-templates.ts",
+            "packages/coding-agent/src/core/provider-attribution.ts",
+            "packages/coding-agent/src/core/provider-composer.ts",
+            "packages/coding-agent/src/core/resolve-config-value.ts",
+            "packages/coding-agent/src/core/resource-loader.ts",
+            "packages/coding-agent/src/core/runtime-credentials.ts",
+            "packages/coding-agent/src/core/sdk.ts",
+            "packages/coding-agent/src/core/session-cwd.ts",
+            "packages/coding-agent/src/core/session-manager.ts",
+            "packages/coding-agent/src/core/settings-diagnostics.ts",
+            "packages/coding-agent/src/core/settings-manager.ts",
+            "packages/coding-agent/src/core/skills.ts",
+            "packages/coding-agent/src/core/source-info.ts",
+            "packages/coding-agent/src/core/system-prompt.ts",
+            "packages/coding-agent/src/core/telemetry.ts",
+            "packages/coding-agent/src/core/tools/bash.ts",
+            "packages/coding-agent/src/core/tools/edit-diff.ts",
+            "packages/coding-agent/src/core/tools/edit.ts",
+            "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+            "packages/coding-agent/src/core/tools/find.ts",
+            "packages/coding-agent/src/core/tools/grep.ts",
+            "packages/coding-agent/src/core/tools/index.ts",
+            "packages/coding-agent/src/core/tools/ls.ts",
+            "packages/coding-agent/src/core/tools/output-accumulator.ts",
+            "packages/coding-agent/src/core/tools/path-utils.ts",
+            "packages/coding-agent/src/core/tools/powershell.ts",
+            "packages/coding-agent/src/core/tools/read.ts",
+            "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+            "packages/coding-agent/src/core/tools/truncate.ts",
+            "packages/coding-agent/src/core/tools/write.ts",
+            "packages/coding-agent/src/core/trust-manager.ts",
+            "packages/coding-agent/src/core/usage-totals.ts",
+            "packages/coding-agent/src/index.ts",
+            "packages/coding-agent/src/utils/abort.ts",
+            "packages/coding-agent/src/utils/child-process.ts",
+            "packages/coding-agent/src/utils/exif-orientation.ts",
+            "packages/coding-agent/src/utils/frontmatter.ts",
+            "packages/coding-agent/src/utils/fs-watch.ts",
+            "packages/coding-agent/src/utils/git.ts",
+            "packages/coding-agent/src/utils/image-convert.ts",
+            "packages/coding-agent/src/utils/image-process.ts",
+            "packages/coding-agent/src/utils/image-resize-core.ts",
+            "packages/coding-agent/src/utils/image-resize-worker.ts",
+            "packages/coding-agent/src/utils/image-resize.ts",
+            "packages/coding-agent/src/utils/json.ts",
+            "packages/coding-agent/src/utils/mime.ts",
+            "packages/coding-agent/src/utils/paths.ts",
+            "packages/coding-agent/src/utils/photon.ts",
+            "packages/coding-agent/src/utils/pi-user-agent.ts",
+            "packages/coding-agent/src/utils/shell.ts",
+            "packages/coding-agent/src/utils/sleep.ts",
+            "packages/coding-agent/src/utils/text.ts",
+            "packages/coding-agent/src/utils/tool-result-images.ts",
+            "packages/coding-agent/src/utils/tools-manager.ts",
+            "packages/coding-agent/test/agent-session-auto-compaction-queue.test.ts",
+            "packages/coding-agent/test/agent-session-branching.test.ts",
+            "packages/coding-agent/test/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/agent-session-concurrent.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-provider.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-tools.test.ts",
+            "packages/coding-agent/test/agent-session-retry.test.ts",
+            "packages/coding-agent/test/agent-session-runtime-events.test.ts",
+            "packages/coding-agent/test/agent-session-stats.test.ts",
+            "packages/coding-agent/test/agent-session-tree-navigation.test.ts",
+            "packages/coding-agent/test/auth-storage.test.ts",
+            "packages/coding-agent/test/compaction-extensions-example.test.ts",
+            "packages/coding-agent/test/compaction-extensions.test.ts",
+            "packages/coding-agent/test/compaction-serialization.test.ts",
+            "packages/coding-agent/test/compaction-summary-reasoning.test.ts",
+            "packages/coding-agent/test/compaction.test.ts",
+            "packages/coding-agent/test/default-tools-setting.test.ts",
+            "packages/coding-agent/test/extensions-runner.test.ts",
+            "packages/coding-agent/test/interactive-mode-compaction.test.ts",
+            "packages/coding-agent/test/model-resolver.test.ts",
+            "packages/coding-agent/test/model-runtime-auth-options.test.ts",
+            "packages/coding-agent/test/model-runtime-cloudflare-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-credential-sync.test.ts",
+            "packages/coding-agent/test/model-runtime-modify-models-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-test-utils.ts",
+            "packages/coding-agent/test/models-store.test.ts",
+            "packages/coding-agent/test/prompt-templates.test.ts",
+            "packages/coding-agent/test/resource-loader.test.ts",
+            "packages/coding-agent/test/runtime-credentials.test.ts",
+            "packages/coding-agent/test/sdk-codex-cache-probe-tool-loop.ts",
+            "packages/coding-agent/test/sdk-openrouter-attribution.test.ts",
+            "packages/coding-agent/test/sdk-session-manager.test.ts",
+            "packages/coding-agent/test/sdk-skills.test.ts",
+            "packages/coding-agent/test/sdk-stream-options.test.ts",
+            "packages/coding-agent/test/session-manager/build-context.test.ts",
+            "packages/coding-agent/test/session-manager/custom-session-id.test.ts",
+            "packages/coding-agent/test/session-manager/file-operations.test.ts",
+            "packages/coding-agent/test/session-manager/labels.test.ts",
+            "packages/coding-agent/test/session-manager/load-entries.test.ts",
+            "packages/coding-agent/test/session-manager/migration.test.ts",
+            "packages/coding-agent/test/session-manager/save-entry.test.ts",
+            "packages/coding-agent/test/session-manager/tree-traversal.test.ts",
+            "packages/coding-agent/test/settings-manager-bug.test.ts",
+            "packages/coding-agent/test/settings-manager-compaction.test.ts",
+            "packages/coding-agent/test/settings-manager.test.ts",
+            "packages/coding-agent/test/skills.test.ts",
+            "packages/coding-agent/test/suite/agent-session-bash-persistence.test.ts",
+            "packages/coding-agent/test/suite/agent-session-boundaries.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction-model-overrides.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/suite/agent-session-model-extension.test.ts",
+            "packages/coding-agent/test/suite/agent-session-prompt.test.ts",
+            "packages/coding-agent/test/suite/agent-session-queue.test.ts",
+            "packages/coding-agent/test/suite/agent-session-retry-events.test.ts",
+            "packages/coding-agent/test/suite/agent-session-runtime.test.ts",
+            "packages/coding-agent/test/suite/agent-session-tool-result-images.test.ts",
+            "packages/coding-agent/test/suite/regressions/1717-2113-agent-session-event-settlement.test.ts",
+            "packages/coding-agent/test/suite/regressions/2835-tools-allowlist-filters-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/3592-no-builtin-tools-keeps-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5109-exclude-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5217-compaction-reason.test.ts",
+            "packages/coding-agent/test/suite/regressions/6647-compaction-retries-transient-stream-drop.test.ts",
+            "packages/coding-agent/test/suite/regressions/6768-copilot-compaction-base-url.test.ts",
+            "packages/coding-agent/test/suite/regressions/7048-compaction-truncated-summary.test.ts",
+            "packages/coding-agent/test/suite/regressions/7150-rpc-prompt-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/7193-event-bus-lifecycle.test.ts",
+            "packages/coding-agent/test/suite/regressions/8328-zero-usage-auto-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/8989-fork-compaction-label-boundary.test.ts",
+            "packages/coding-agent/test/suite/regressions/9178-tree-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/9340-9777-auto-compaction-cancellation.test.ts",
+            "packages/coding-agent/test/suite/regressions/pre-prompt-compaction-no-continue.test.ts",
+            "packages/coding-agent/test/tools.test.ts"
+          ],
+          "goal": "Complete the embedded SDK resources capability from the source-owned export list and frozen contract. Other supplied files are read-only behavioral references; do not implement excluded TUI/JS-host features.",
+          "contract": "contracts/resources.md",
+          "judge": "judges/resources",
+          "outputs": [
+            "packages/coding-agent/resource_loader.go",
+            "packages/coding-agent/skills.go",
+            "packages/coding-agent/prompt_templates.go",
+            "packages/coding-agent/system_prompt.go",
+            "packages/coding-agent/resources_test.go",
+            "packages/coding-agent/source_map_resources.json"
+          ],
+          "tests": [
+            "TestPortsmithJudgeSDKResources"
+          ],
+          "race": true
+        }
+      ]
+    },
+    "tools": {
+      "status": "ready",
+      "steps": [
+        {
+          "id": "port",
+          "sources": [
+            "packages/coding-agent/examples/sdk/01-minimal.ts",
+            "packages/coding-agent/examples/sdk/02-custom-model.ts",
+            "packages/coding-agent/examples/sdk/03-custom-prompt.ts",
+            "packages/coding-agent/examples/sdk/04-skills.ts",
+            "packages/coding-agent/examples/sdk/05-tools.ts",
+            "packages/coding-agent/examples/sdk/06-extensions.ts",
+            "packages/coding-agent/examples/sdk/07-context-files.ts",
+            "packages/coding-agent/examples/sdk/08-prompt-templates.ts",
+            "packages/coding-agent/examples/sdk/09-api-keys-and-oauth.ts",
+            "packages/coding-agent/examples/sdk/10-settings.ts",
+            "packages/coding-agent/examples/sdk/11-sessions.ts",
+            "packages/coding-agent/examples/sdk/12-full-control.ts",
+            "packages/coding-agent/examples/sdk/13-session-runtime.ts",
+            "packages/coding-agent/src/config.ts",
+            "packages/coding-agent/src/core/agent-session-runtime.ts",
+            "packages/coding-agent/src/core/agent-session-services.ts",
+            "packages/coding-agent/src/core/agent-session.ts",
+            "packages/coding-agent/src/core/auth-guidance.ts",
+            "packages/coding-agent/src/core/auth-storage.ts",
+            "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+            "packages/coding-agent/src/core/compaction/compaction.ts",
+            "packages/coding-agent/src/core/compaction/index.ts",
+            "packages/coding-agent/src/core/compaction/utils.ts",
+            "packages/coding-agent/src/core/defaults.ts",
+            "packages/coding-agent/src/core/event-bus.ts",
+            "packages/coding-agent/src/core/http-dispatcher.ts",
+            "packages/coding-agent/src/core/index.ts",
+            "packages/coding-agent/src/core/messages.ts",
+            "packages/coding-agent/src/core/model-config.ts",
+            "packages/coding-agent/src/core/model-registry.ts",
+            "packages/coding-agent/src/core/model-resolver.ts",
+            "packages/coding-agent/src/core/model-runtime.ts",
+            "packages/coding-agent/src/core/models-store.ts",
+            "packages/coding-agent/src/core/output-guard.ts",
+            "packages/coding-agent/src/core/project-trust.ts",
+            "packages/coding-agent/src/core/prompt-templates.ts",
+            "packages/coding-agent/src/core/provider-attribution.ts",
+            "packages/coding-agent/src/core/provider-composer.ts",
+            "packages/coding-agent/src/core/resolve-config-value.ts",
+            "packages/coding-agent/src/core/resource-loader.ts",
+            "packages/coding-agent/src/core/runtime-credentials.ts",
+            "packages/coding-agent/src/core/sdk.ts",
+            "packages/coding-agent/src/core/session-cwd.ts",
+            "packages/coding-agent/src/core/session-manager.ts",
+            "packages/coding-agent/src/core/settings-diagnostics.ts",
+            "packages/coding-agent/src/core/settings-manager.ts",
+            "packages/coding-agent/src/core/skills.ts",
+            "packages/coding-agent/src/core/source-info.ts",
+            "packages/coding-agent/src/core/system-prompt.ts",
+            "packages/coding-agent/src/core/telemetry.ts",
+            "packages/coding-agent/src/core/tools/bash.ts",
+            "packages/coding-agent/src/core/tools/edit-diff.ts",
+            "packages/coding-agent/src/core/tools/edit.ts",
+            "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+            "packages/coding-agent/src/core/tools/find.ts",
+            "packages/coding-agent/src/core/tools/grep.ts",
+            "packages/coding-agent/src/core/tools/index.ts",
+            "packages/coding-agent/src/core/tools/ls.ts",
+            "packages/coding-agent/src/core/tools/output-accumulator.ts",
+            "packages/coding-agent/src/core/tools/path-utils.ts",
+            "packages/coding-agent/src/core/tools/powershell.ts",
+            "packages/coding-agent/src/core/tools/read.ts",
+            "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+            "packages/coding-agent/src/core/tools/truncate.ts",
+            "packages/coding-agent/src/core/tools/write.ts",
+            "packages/coding-agent/src/core/trust-manager.ts",
+            "packages/coding-agent/src/core/usage-totals.ts",
+            "packages/coding-agent/src/index.ts",
+            "packages/coding-agent/src/utils/abort.ts",
+            "packages/coding-agent/src/utils/child-process.ts",
+            "packages/coding-agent/src/utils/exif-orientation.ts",
+            "packages/coding-agent/src/utils/frontmatter.ts",
+            "packages/coding-agent/src/utils/fs-watch.ts",
+            "packages/coding-agent/src/utils/git.ts",
+            "packages/coding-agent/src/utils/image-convert.ts",
+            "packages/coding-agent/src/utils/image-process.ts",
+            "packages/coding-agent/src/utils/image-resize-core.ts",
+            "packages/coding-agent/src/utils/image-resize-worker.ts",
+            "packages/coding-agent/src/utils/image-resize.ts",
+            "packages/coding-agent/src/utils/json.ts",
+            "packages/coding-agent/src/utils/mime.ts",
+            "packages/coding-agent/src/utils/paths.ts",
+            "packages/coding-agent/src/utils/photon.ts",
+            "packages/coding-agent/src/utils/pi-user-agent.ts",
+            "packages/coding-agent/src/utils/shell.ts",
+            "packages/coding-agent/src/utils/sleep.ts",
+            "packages/coding-agent/src/utils/text.ts",
+            "packages/coding-agent/src/utils/tool-result-images.ts",
+            "packages/coding-agent/src/utils/tools-manager.ts",
+            "packages/coding-agent/test/agent-session-auto-compaction-queue.test.ts",
+            "packages/coding-agent/test/agent-session-branching.test.ts",
+            "packages/coding-agent/test/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/agent-session-concurrent.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-provider.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-tools.test.ts",
+            "packages/coding-agent/test/agent-session-retry.test.ts",
+            "packages/coding-agent/test/agent-session-runtime-events.test.ts",
+            "packages/coding-agent/test/agent-session-stats.test.ts",
+            "packages/coding-agent/test/agent-session-tree-navigation.test.ts",
+            "packages/coding-agent/test/auth-storage.test.ts",
+            "packages/coding-agent/test/compaction-extensions-example.test.ts",
+            "packages/coding-agent/test/compaction-extensions.test.ts",
+            "packages/coding-agent/test/compaction-serialization.test.ts",
+            "packages/coding-agent/test/compaction-summary-reasoning.test.ts",
+            "packages/coding-agent/test/compaction.test.ts",
+            "packages/coding-agent/test/default-tools-setting.test.ts",
+            "packages/coding-agent/test/extensions-runner.test.ts",
+            "packages/coding-agent/test/interactive-mode-compaction.test.ts",
+            "packages/coding-agent/test/model-resolver.test.ts",
+            "packages/coding-agent/test/model-runtime-auth-options.test.ts",
+            "packages/coding-agent/test/model-runtime-cloudflare-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-credential-sync.test.ts",
+            "packages/coding-agent/test/model-runtime-modify-models-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-test-utils.ts",
+            "packages/coding-agent/test/models-store.test.ts",
+            "packages/coding-agent/test/prompt-templates.test.ts",
+            "packages/coding-agent/test/resource-loader.test.ts",
+            "packages/coding-agent/test/runtime-credentials.test.ts",
+            "packages/coding-agent/test/sdk-codex-cache-probe-tool-loop.ts",
+            "packages/coding-agent/test/sdk-openrouter-attribution.test.ts",
+            "packages/coding-agent/test/sdk-session-manager.test.ts",
+            "packages/coding-agent/test/sdk-skills.test.ts",
+            "packages/coding-agent/test/sdk-stream-options.test.ts",
+            "packages/coding-agent/test/session-manager/build-context.test.ts",
+            "packages/coding-agent/test/session-manager/custom-session-id.test.ts",
+            "packages/coding-agent/test/session-manager/file-operations.test.ts",
+            "packages/coding-agent/test/session-manager/labels.test.ts",
+            "packages/coding-agent/test/session-manager/load-entries.test.ts",
+            "packages/coding-agent/test/session-manager/migration.test.ts",
+            "packages/coding-agent/test/session-manager/save-entry.test.ts",
+            "packages/coding-agent/test/session-manager/tree-traversal.test.ts",
+            "packages/coding-agent/test/settings-manager-bug.test.ts",
+            "packages/coding-agent/test/settings-manager-compaction.test.ts",
+            "packages/coding-agent/test/settings-manager.test.ts",
+            "packages/coding-agent/test/skills.test.ts",
+            "packages/coding-agent/test/suite/agent-session-bash-persistence.test.ts",
+            "packages/coding-agent/test/suite/agent-session-boundaries.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction-model-overrides.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/suite/agent-session-model-extension.test.ts",
+            "packages/coding-agent/test/suite/agent-session-prompt.test.ts",
+            "packages/coding-agent/test/suite/agent-session-queue.test.ts",
+            "packages/coding-agent/test/suite/agent-session-retry-events.test.ts",
+            "packages/coding-agent/test/suite/agent-session-runtime.test.ts",
+            "packages/coding-agent/test/suite/agent-session-tool-result-images.test.ts",
+            "packages/coding-agent/test/suite/regressions/1717-2113-agent-session-event-settlement.test.ts",
+            "packages/coding-agent/test/suite/regressions/2835-tools-allowlist-filters-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/3592-no-builtin-tools-keeps-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5109-exclude-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5217-compaction-reason.test.ts",
+            "packages/coding-agent/test/suite/regressions/6647-compaction-retries-transient-stream-drop.test.ts",
+            "packages/coding-agent/test/suite/regressions/6768-copilot-compaction-base-url.test.ts",
+            "packages/coding-agent/test/suite/regressions/7048-compaction-truncated-summary.test.ts",
+            "packages/coding-agent/test/suite/regressions/7150-rpc-prompt-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/7193-event-bus-lifecycle.test.ts",
+            "packages/coding-agent/test/suite/regressions/8328-zero-usage-auto-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/8989-fork-compaction-label-boundary.test.ts",
+            "packages/coding-agent/test/suite/regressions/9178-tree-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/9340-9777-auto-compaction-cancellation.test.ts",
+            "packages/coding-agent/test/suite/regressions/pre-prompt-compaction-no-continue.test.ts",
+            "packages/coding-agent/test/tools.test.ts"
+          ],
+          "goal": "Complete the embedded SDK tools capability from the source-owned export list and frozen contract. Other supplied files are read-only behavioral references; do not implement excluded TUI/JS-host features.",
+          "contract": "contracts/tools.md",
+          "judge": "judges/tools",
+          "outputs": [
+            "packages/coding-agent/tools.go",
+            "packages/coding-agent/tool_registry.go",
+            "packages/coding-agent/tool_hooks.go",
+            "packages/coding-agent/search_tools.go",
+            "packages/coding-agent/tools_test.go",
+            "packages/coding-agent/source_map_tools.json"
+          ],
+          "tests": [
+            "TestPortsmithJudgeSDKTools"
+          ],
+          "race": true
+        }
+      ]
+    },
+    "session": {
+      "status": "ready",
+      "steps": [
+        {
+          "id": "port",
+          "sources": [
+            "packages/coding-agent/examples/sdk/01-minimal.ts",
+            "packages/coding-agent/examples/sdk/02-custom-model.ts",
+            "packages/coding-agent/examples/sdk/03-custom-prompt.ts",
+            "packages/coding-agent/examples/sdk/04-skills.ts",
+            "packages/coding-agent/examples/sdk/05-tools.ts",
+            "packages/coding-agent/examples/sdk/06-extensions.ts",
+            "packages/coding-agent/examples/sdk/07-context-files.ts",
+            "packages/coding-agent/examples/sdk/08-prompt-templates.ts",
+            "packages/coding-agent/examples/sdk/09-api-keys-and-oauth.ts",
+            "packages/coding-agent/examples/sdk/10-settings.ts",
+            "packages/coding-agent/examples/sdk/11-sessions.ts",
+            "packages/coding-agent/examples/sdk/12-full-control.ts",
+            "packages/coding-agent/examples/sdk/13-session-runtime.ts",
+            "packages/coding-agent/src/config.ts",
+            "packages/coding-agent/src/core/agent-session-runtime.ts",
+            "packages/coding-agent/src/core/agent-session-services.ts",
+            "packages/coding-agent/src/core/agent-session.ts",
+            "packages/coding-agent/src/core/auth-guidance.ts",
+            "packages/coding-agent/src/core/auth-storage.ts",
+            "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+            "packages/coding-agent/src/core/compaction/compaction.ts",
+            "packages/coding-agent/src/core/compaction/index.ts",
+            "packages/coding-agent/src/core/compaction/utils.ts",
+            "packages/coding-agent/src/core/defaults.ts",
+            "packages/coding-agent/src/core/event-bus.ts",
+            "packages/coding-agent/src/core/http-dispatcher.ts",
+            "packages/coding-agent/src/core/index.ts",
+            "packages/coding-agent/src/core/messages.ts",
+            "packages/coding-agent/src/core/model-config.ts",
+            "packages/coding-agent/src/core/model-registry.ts",
+            "packages/coding-agent/src/core/model-resolver.ts",
+            "packages/coding-agent/src/core/model-runtime.ts",
+            "packages/coding-agent/src/core/models-store.ts",
+            "packages/coding-agent/src/core/output-guard.ts",
+            "packages/coding-agent/src/core/project-trust.ts",
+            "packages/coding-agent/src/core/prompt-templates.ts",
+            "packages/coding-agent/src/core/provider-attribution.ts",
+            "packages/coding-agent/src/core/provider-composer.ts",
+            "packages/coding-agent/src/core/resolve-config-value.ts",
+            "packages/coding-agent/src/core/resource-loader.ts",
+            "packages/coding-agent/src/core/runtime-credentials.ts",
+            "packages/coding-agent/src/core/sdk.ts",
+            "packages/coding-agent/src/core/session-cwd.ts",
+            "packages/coding-agent/src/core/session-manager.ts",
+            "packages/coding-agent/src/core/settings-diagnostics.ts",
+            "packages/coding-agent/src/core/settings-manager.ts",
+            "packages/coding-agent/src/core/skills.ts",
+            "packages/coding-agent/src/core/source-info.ts",
+            "packages/coding-agent/src/core/system-prompt.ts",
+            "packages/coding-agent/src/core/telemetry.ts",
+            "packages/coding-agent/src/core/tools/bash.ts",
+            "packages/coding-agent/src/core/tools/edit-diff.ts",
+            "packages/coding-agent/src/core/tools/edit.ts",
+            "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+            "packages/coding-agent/src/core/tools/find.ts",
+            "packages/coding-agent/src/core/tools/grep.ts",
+            "packages/coding-agent/src/core/tools/index.ts",
+            "packages/coding-agent/src/core/tools/ls.ts",
+            "packages/coding-agent/src/core/tools/output-accumulator.ts",
+            "packages/coding-agent/src/core/tools/path-utils.ts",
+            "packages/coding-agent/src/core/tools/powershell.ts",
+            "packages/coding-agent/src/core/tools/read.ts",
+            "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+            "packages/coding-agent/src/core/tools/truncate.ts",
+            "packages/coding-agent/src/core/tools/write.ts",
+            "packages/coding-agent/src/core/trust-manager.ts",
+            "packages/coding-agent/src/core/usage-totals.ts",
+            "packages/coding-agent/src/index.ts",
+            "packages/coding-agent/src/utils/abort.ts",
+            "packages/coding-agent/src/utils/child-process.ts",
+            "packages/coding-agent/src/utils/exif-orientation.ts",
+            "packages/coding-agent/src/utils/frontmatter.ts",
+            "packages/coding-agent/src/utils/fs-watch.ts",
+            "packages/coding-agent/src/utils/git.ts",
+            "packages/coding-agent/src/utils/image-convert.ts",
+            "packages/coding-agent/src/utils/image-process.ts",
+            "packages/coding-agent/src/utils/image-resize-core.ts",
+            "packages/coding-agent/src/utils/image-resize-worker.ts",
+            "packages/coding-agent/src/utils/image-resize.ts",
+            "packages/coding-agent/src/utils/json.ts",
+            "packages/coding-agent/src/utils/mime.ts",
+            "packages/coding-agent/src/utils/paths.ts",
+            "packages/coding-agent/src/utils/photon.ts",
+            "packages/coding-agent/src/utils/pi-user-agent.ts",
+            "packages/coding-agent/src/utils/shell.ts",
+            "packages/coding-agent/src/utils/sleep.ts",
+            "packages/coding-agent/src/utils/text.ts",
+            "packages/coding-agent/src/utils/tool-result-images.ts",
+            "packages/coding-agent/src/utils/tools-manager.ts",
+            "packages/coding-agent/test/agent-session-auto-compaction-queue.test.ts",
+            "packages/coding-agent/test/agent-session-branching.test.ts",
+            "packages/coding-agent/test/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/agent-session-concurrent.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-provider.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-tools.test.ts",
+            "packages/coding-agent/test/agent-session-retry.test.ts",
+            "packages/coding-agent/test/agent-session-runtime-events.test.ts",
+            "packages/coding-agent/test/agent-session-stats.test.ts",
+            "packages/coding-agent/test/agent-session-tree-navigation.test.ts",
+            "packages/coding-agent/test/auth-storage.test.ts",
+            "packages/coding-agent/test/compaction-extensions-example.test.ts",
+            "packages/coding-agent/test/compaction-extensions.test.ts",
+            "packages/coding-agent/test/compaction-serialization.test.ts",
+            "packages/coding-agent/test/compaction-summary-reasoning.test.ts",
+            "packages/coding-agent/test/compaction.test.ts",
+            "packages/coding-agent/test/default-tools-setting.test.ts",
+            "packages/coding-agent/test/extensions-runner.test.ts",
+            "packages/coding-agent/test/interactive-mode-compaction.test.ts",
+            "packages/coding-agent/test/model-resolver.test.ts",
+            "packages/coding-agent/test/model-runtime-auth-options.test.ts",
+            "packages/coding-agent/test/model-runtime-cloudflare-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-credential-sync.test.ts",
+            "packages/coding-agent/test/model-runtime-modify-models-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-test-utils.ts",
+            "packages/coding-agent/test/models-store.test.ts",
+            "packages/coding-agent/test/prompt-templates.test.ts",
+            "packages/coding-agent/test/resource-loader.test.ts",
+            "packages/coding-agent/test/runtime-credentials.test.ts",
+            "packages/coding-agent/test/sdk-codex-cache-probe-tool-loop.ts",
+            "packages/coding-agent/test/sdk-openrouter-attribution.test.ts",
+            "packages/coding-agent/test/sdk-session-manager.test.ts",
+            "packages/coding-agent/test/sdk-skills.test.ts",
+            "packages/coding-agent/test/sdk-stream-options.test.ts",
+            "packages/coding-agent/test/session-manager/build-context.test.ts",
+            "packages/coding-agent/test/session-manager/custom-session-id.test.ts",
+            "packages/coding-agent/test/session-manager/file-operations.test.ts",
+            "packages/coding-agent/test/session-manager/labels.test.ts",
+            "packages/coding-agent/test/session-manager/load-entries.test.ts",
+            "packages/coding-agent/test/session-manager/migration.test.ts",
+            "packages/coding-agent/test/session-manager/save-entry.test.ts",
+            "packages/coding-agent/test/session-manager/tree-traversal.test.ts",
+            "packages/coding-agent/test/settings-manager-bug.test.ts",
+            "packages/coding-agent/test/settings-manager-compaction.test.ts",
+            "packages/coding-agent/test/settings-manager.test.ts",
+            "packages/coding-agent/test/skills.test.ts",
+            "packages/coding-agent/test/suite/agent-session-bash-persistence.test.ts",
+            "packages/coding-agent/test/suite/agent-session-boundaries.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction-model-overrides.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/suite/agent-session-model-extension.test.ts",
+            "packages/coding-agent/test/suite/agent-session-prompt.test.ts",
+            "packages/coding-agent/test/suite/agent-session-queue.test.ts",
+            "packages/coding-agent/test/suite/agent-session-retry-events.test.ts",
+            "packages/coding-agent/test/suite/agent-session-runtime.test.ts",
+            "packages/coding-agent/test/suite/agent-session-tool-result-images.test.ts",
+            "packages/coding-agent/test/suite/regressions/1717-2113-agent-session-event-settlement.test.ts",
+            "packages/coding-agent/test/suite/regressions/2835-tools-allowlist-filters-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/3592-no-builtin-tools-keeps-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5109-exclude-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5217-compaction-reason.test.ts",
+            "packages/coding-agent/test/suite/regressions/6647-compaction-retries-transient-stream-drop.test.ts",
+            "packages/coding-agent/test/suite/regressions/6768-copilot-compaction-base-url.test.ts",
+            "packages/coding-agent/test/suite/regressions/7048-compaction-truncated-summary.test.ts",
+            "packages/coding-agent/test/suite/regressions/7150-rpc-prompt-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/7193-event-bus-lifecycle.test.ts",
+            "packages/coding-agent/test/suite/regressions/8328-zero-usage-auto-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/8989-fork-compaction-label-boundary.test.ts",
+            "packages/coding-agent/test/suite/regressions/9178-tree-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/9340-9777-auto-compaction-cancellation.test.ts",
+            "packages/coding-agent/test/suite/regressions/pre-prompt-compaction-no-continue.test.ts",
+            "packages/coding-agent/test/tools.test.ts"
+          ],
+          "goal": "Complete the embedded SDK session capability from the source-owned export list and frozen contract. Other supplied files are read-only behavioral references; do not implement excluded TUI/JS-host features.",
+          "contract": "contracts/session.md",
+          "judge": "judges/session",
+          "outputs": [
+            "packages/coding-agent/sdk.go",
+            "packages/coding-agent/agent_session.go",
+            "packages/coding-agent/events.go",
+            "packages/coding-agent/session_test.go",
+            "packages/coding-agent/source_map_session.json"
+          ],
+          "tests": [
+            "TestPortsmithJudgeSDKSession"
+          ],
+          "race": true
+        }
+      ]
+    },
+    "resilience": {
+      "status": "ready",
+      "steps": [
+        {
+          "id": "port",
+          "sources": [
+            "packages/coding-agent/examples/sdk/01-minimal.ts",
+            "packages/coding-agent/examples/sdk/02-custom-model.ts",
+            "packages/coding-agent/examples/sdk/03-custom-prompt.ts",
+            "packages/coding-agent/examples/sdk/04-skills.ts",
+            "packages/coding-agent/examples/sdk/05-tools.ts",
+            "packages/coding-agent/examples/sdk/06-extensions.ts",
+            "packages/coding-agent/examples/sdk/07-context-files.ts",
+            "packages/coding-agent/examples/sdk/08-prompt-templates.ts",
+            "packages/coding-agent/examples/sdk/09-api-keys-and-oauth.ts",
+            "packages/coding-agent/examples/sdk/10-settings.ts",
+            "packages/coding-agent/examples/sdk/11-sessions.ts",
+            "packages/coding-agent/examples/sdk/12-full-control.ts",
+            "packages/coding-agent/examples/sdk/13-session-runtime.ts",
+            "packages/coding-agent/src/config.ts",
+            "packages/coding-agent/src/core/agent-session-runtime.ts",
+            "packages/coding-agent/src/core/agent-session-services.ts",
+            "packages/coding-agent/src/core/agent-session.ts",
+            "packages/coding-agent/src/core/auth-guidance.ts",
+            "packages/coding-agent/src/core/auth-storage.ts",
+            "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+            "packages/coding-agent/src/core/compaction/compaction.ts",
+            "packages/coding-agent/src/core/compaction/index.ts",
+            "packages/coding-agent/src/core/compaction/utils.ts",
+            "packages/coding-agent/src/core/defaults.ts",
+            "packages/coding-agent/src/core/event-bus.ts",
+            "packages/coding-agent/src/core/http-dispatcher.ts",
+            "packages/coding-agent/src/core/index.ts",
+            "packages/coding-agent/src/core/messages.ts",
+            "packages/coding-agent/src/core/model-config.ts",
+            "packages/coding-agent/src/core/model-registry.ts",
+            "packages/coding-agent/src/core/model-resolver.ts",
+            "packages/coding-agent/src/core/model-runtime.ts",
+            "packages/coding-agent/src/core/models-store.ts",
+            "packages/coding-agent/src/core/output-guard.ts",
+            "packages/coding-agent/src/core/project-trust.ts",
+            "packages/coding-agent/src/core/prompt-templates.ts",
+            "packages/coding-agent/src/core/provider-attribution.ts",
+            "packages/coding-agent/src/core/provider-composer.ts",
+            "packages/coding-agent/src/core/resolve-config-value.ts",
+            "packages/coding-agent/src/core/resource-loader.ts",
+            "packages/coding-agent/src/core/runtime-credentials.ts",
+            "packages/coding-agent/src/core/sdk.ts",
+            "packages/coding-agent/src/core/session-cwd.ts",
+            "packages/coding-agent/src/core/session-manager.ts",
+            "packages/coding-agent/src/core/settings-diagnostics.ts",
+            "packages/coding-agent/src/core/settings-manager.ts",
+            "packages/coding-agent/src/core/skills.ts",
+            "packages/coding-agent/src/core/source-info.ts",
+            "packages/coding-agent/src/core/system-prompt.ts",
+            "packages/coding-agent/src/core/telemetry.ts",
+            "packages/coding-agent/src/core/tools/bash.ts",
+            "packages/coding-agent/src/core/tools/edit-diff.ts",
+            "packages/coding-agent/src/core/tools/edit.ts",
+            "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+            "packages/coding-agent/src/core/tools/find.ts",
+            "packages/coding-agent/src/core/tools/grep.ts",
+            "packages/coding-agent/src/core/tools/index.ts",
+            "packages/coding-agent/src/core/tools/ls.ts",
+            "packages/coding-agent/src/core/tools/output-accumulator.ts",
+            "packages/coding-agent/src/core/tools/path-utils.ts",
+            "packages/coding-agent/src/core/tools/powershell.ts",
+            "packages/coding-agent/src/core/tools/read.ts",
+            "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+            "packages/coding-agent/src/core/tools/truncate.ts",
+            "packages/coding-agent/src/core/tools/write.ts",
+            "packages/coding-agent/src/core/trust-manager.ts",
+            "packages/coding-agent/src/core/usage-totals.ts",
+            "packages/coding-agent/src/index.ts",
+            "packages/coding-agent/src/utils/abort.ts",
+            "packages/coding-agent/src/utils/child-process.ts",
+            "packages/coding-agent/src/utils/exif-orientation.ts",
+            "packages/coding-agent/src/utils/frontmatter.ts",
+            "packages/coding-agent/src/utils/fs-watch.ts",
+            "packages/coding-agent/src/utils/git.ts",
+            "packages/coding-agent/src/utils/image-convert.ts",
+            "packages/coding-agent/src/utils/image-process.ts",
+            "packages/coding-agent/src/utils/image-resize-core.ts",
+            "packages/coding-agent/src/utils/image-resize-worker.ts",
+            "packages/coding-agent/src/utils/image-resize.ts",
+            "packages/coding-agent/src/utils/json.ts",
+            "packages/coding-agent/src/utils/mime.ts",
+            "packages/coding-agent/src/utils/paths.ts",
+            "packages/coding-agent/src/utils/photon.ts",
+            "packages/coding-agent/src/utils/pi-user-agent.ts",
+            "packages/coding-agent/src/utils/shell.ts",
+            "packages/coding-agent/src/utils/sleep.ts",
+            "packages/coding-agent/src/utils/text.ts",
+            "packages/coding-agent/src/utils/tool-result-images.ts",
+            "packages/coding-agent/src/utils/tools-manager.ts",
+            "packages/coding-agent/test/agent-session-auto-compaction-queue.test.ts",
+            "packages/coding-agent/test/agent-session-branching.test.ts",
+            "packages/coding-agent/test/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/agent-session-concurrent.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-provider.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-tools.test.ts",
+            "packages/coding-agent/test/agent-session-retry.test.ts",
+            "packages/coding-agent/test/agent-session-runtime-events.test.ts",
+            "packages/coding-agent/test/agent-session-stats.test.ts",
+            "packages/coding-agent/test/agent-session-tree-navigation.test.ts",
+            "packages/coding-agent/test/auth-storage.test.ts",
+            "packages/coding-agent/test/compaction-extensions-example.test.ts",
+            "packages/coding-agent/test/compaction-extensions.test.ts",
+            "packages/coding-agent/test/compaction-serialization.test.ts",
+            "packages/coding-agent/test/compaction-summary-reasoning.test.ts",
+            "packages/coding-agent/test/compaction.test.ts",
+            "packages/coding-agent/test/default-tools-setting.test.ts",
+            "packages/coding-agent/test/extensions-runner.test.ts",
+            "packages/coding-agent/test/interactive-mode-compaction.test.ts",
+            "packages/coding-agent/test/model-resolver.test.ts",
+            "packages/coding-agent/test/model-runtime-auth-options.test.ts",
+            "packages/coding-agent/test/model-runtime-cloudflare-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-credential-sync.test.ts",
+            "packages/coding-agent/test/model-runtime-modify-models-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-test-utils.ts",
+            "packages/coding-agent/test/models-store.test.ts",
+            "packages/coding-agent/test/prompt-templates.test.ts",
+            "packages/coding-agent/test/resource-loader.test.ts",
+            "packages/coding-agent/test/runtime-credentials.test.ts",
+            "packages/coding-agent/test/sdk-codex-cache-probe-tool-loop.ts",
+            "packages/coding-agent/test/sdk-openrouter-attribution.test.ts",
+            "packages/coding-agent/test/sdk-session-manager.test.ts",
+            "packages/coding-agent/test/sdk-skills.test.ts",
+            "packages/coding-agent/test/sdk-stream-options.test.ts",
+            "packages/coding-agent/test/session-manager/build-context.test.ts",
+            "packages/coding-agent/test/session-manager/custom-session-id.test.ts",
+            "packages/coding-agent/test/session-manager/file-operations.test.ts",
+            "packages/coding-agent/test/session-manager/labels.test.ts",
+            "packages/coding-agent/test/session-manager/load-entries.test.ts",
+            "packages/coding-agent/test/session-manager/migration.test.ts",
+            "packages/coding-agent/test/session-manager/save-entry.test.ts",
+            "packages/coding-agent/test/session-manager/tree-traversal.test.ts",
+            "packages/coding-agent/test/settings-manager-bug.test.ts",
+            "packages/coding-agent/test/settings-manager-compaction.test.ts",
+            "packages/coding-agent/test/settings-manager.test.ts",
+            "packages/coding-agent/test/skills.test.ts",
+            "packages/coding-agent/test/suite/agent-session-bash-persistence.test.ts",
+            "packages/coding-agent/test/suite/agent-session-boundaries.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction-model-overrides.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/suite/agent-session-model-extension.test.ts",
+            "packages/coding-agent/test/suite/agent-session-prompt.test.ts",
+            "packages/coding-agent/test/suite/agent-session-queue.test.ts",
+            "packages/coding-agent/test/suite/agent-session-retry-events.test.ts",
+            "packages/coding-agent/test/suite/agent-session-runtime.test.ts",
+            "packages/coding-agent/test/suite/agent-session-tool-result-images.test.ts",
+            "packages/coding-agent/test/suite/regressions/1717-2113-agent-session-event-settlement.test.ts",
+            "packages/coding-agent/test/suite/regressions/2835-tools-allowlist-filters-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/3592-no-builtin-tools-keeps-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5109-exclude-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5217-compaction-reason.test.ts",
+            "packages/coding-agent/test/suite/regressions/6647-compaction-retries-transient-stream-drop.test.ts",
+            "packages/coding-agent/test/suite/regressions/6768-copilot-compaction-base-url.test.ts",
+            "packages/coding-agent/test/suite/regressions/7048-compaction-truncated-summary.test.ts",
+            "packages/coding-agent/test/suite/regressions/7150-rpc-prompt-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/7193-event-bus-lifecycle.test.ts",
+            "packages/coding-agent/test/suite/regressions/8328-zero-usage-auto-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/8989-fork-compaction-label-boundary.test.ts",
+            "packages/coding-agent/test/suite/regressions/9178-tree-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/9340-9777-auto-compaction-cancellation.test.ts",
+            "packages/coding-agent/test/suite/regressions/pre-prompt-compaction-no-continue.test.ts",
+            "packages/coding-agent/test/tools.test.ts"
+          ],
+          "goal": "Complete the embedded SDK resilience capability from the source-owned export list and frozen contract. Other supplied files are read-only behavioral references; do not implement excluded TUI/JS-host features.",
+          "contract": "contracts/resilience.md",
+          "judge": "judges/resilience",
+          "outputs": [
+            "packages/coding-agent/retry.go",
+            "packages/coding-agent/compaction.go",
+            "packages/coding-agent/continuation.go",
+            "packages/coding-agent/resilience_test.go",
+            "packages/coding-agent/source_map_resilience.json"
+          ],
+          "tests": [
+            "TestPortsmithJudgeSDKResilience",
+            "TestPortsmithJudgeSDKCancellation",
+            "TestPortsmithJudgeSDKCompaction",
+            "TestPortsmithJudgeSDKQueues",
+            "TestPortsmithJudgeSDKRetryExhaustion",
+            "TestPortsmithJudgeSDKCompactionRollback"
+          ],
+          "race": true
+        }
+      ]
+    },
+    "delivery": {
+      "status": "ready",
+      "steps": [
+        {
+          "id": "port",
+          "sources": [
+            "packages/coding-agent/examples/sdk/01-minimal.ts",
+            "packages/coding-agent/examples/sdk/02-custom-model.ts",
+            "packages/coding-agent/examples/sdk/03-custom-prompt.ts",
+            "packages/coding-agent/examples/sdk/04-skills.ts",
+            "packages/coding-agent/examples/sdk/05-tools.ts",
+            "packages/coding-agent/examples/sdk/06-extensions.ts",
+            "packages/coding-agent/examples/sdk/07-context-files.ts",
+            "packages/coding-agent/examples/sdk/08-prompt-templates.ts",
+            "packages/coding-agent/examples/sdk/09-api-keys-and-oauth.ts",
+            "packages/coding-agent/examples/sdk/10-settings.ts",
+            "packages/coding-agent/examples/sdk/11-sessions.ts",
+            "packages/coding-agent/examples/sdk/12-full-control.ts",
+            "packages/coding-agent/examples/sdk/13-session-runtime.ts",
+            "packages/coding-agent/src/config.ts",
+            "packages/coding-agent/src/core/agent-session-runtime.ts",
+            "packages/coding-agent/src/core/agent-session-services.ts",
+            "packages/coding-agent/src/core/agent-session.ts",
+            "packages/coding-agent/src/core/auth-guidance.ts",
+            "packages/coding-agent/src/core/auth-storage.ts",
+            "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+            "packages/coding-agent/src/core/compaction/compaction.ts",
+            "packages/coding-agent/src/core/compaction/index.ts",
+            "packages/coding-agent/src/core/compaction/utils.ts",
+            "packages/coding-agent/src/core/defaults.ts",
+            "packages/coding-agent/src/core/event-bus.ts",
+            "packages/coding-agent/src/core/http-dispatcher.ts",
+            "packages/coding-agent/src/core/index.ts",
+            "packages/coding-agent/src/core/messages.ts",
+            "packages/coding-agent/src/core/model-config.ts",
+            "packages/coding-agent/src/core/model-registry.ts",
+            "packages/coding-agent/src/core/model-resolver.ts",
+            "packages/coding-agent/src/core/model-runtime.ts",
+            "packages/coding-agent/src/core/models-store.ts",
+            "packages/coding-agent/src/core/output-guard.ts",
+            "packages/coding-agent/src/core/project-trust.ts",
+            "packages/coding-agent/src/core/prompt-templates.ts",
+            "packages/coding-agent/src/core/provider-attribution.ts",
+            "packages/coding-agent/src/core/provider-composer.ts",
+            "packages/coding-agent/src/core/resolve-config-value.ts",
+            "packages/coding-agent/src/core/resource-loader.ts",
+            "packages/coding-agent/src/core/runtime-credentials.ts",
+            "packages/coding-agent/src/core/sdk.ts",
+            "packages/coding-agent/src/core/session-cwd.ts",
+            "packages/coding-agent/src/core/session-manager.ts",
+            "packages/coding-agent/src/core/settings-diagnostics.ts",
+            "packages/coding-agent/src/core/settings-manager.ts",
+            "packages/coding-agent/src/core/skills.ts",
+            "packages/coding-agent/src/core/source-info.ts",
+            "packages/coding-agent/src/core/system-prompt.ts",
+            "packages/coding-agent/src/core/telemetry.ts",
+            "packages/coding-agent/src/core/tools/bash.ts",
+            "packages/coding-agent/src/core/tools/edit-diff.ts",
+            "packages/coding-agent/src/core/tools/edit.ts",
+            "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+            "packages/coding-agent/src/core/tools/find.ts",
+            "packages/coding-agent/src/core/tools/grep.ts",
+            "packages/coding-agent/src/core/tools/index.ts",
+            "packages/coding-agent/src/core/tools/ls.ts",
+            "packages/coding-agent/src/core/tools/output-accumulator.ts",
+            "packages/coding-agent/src/core/tools/path-utils.ts",
+            "packages/coding-agent/src/core/tools/powershell.ts",
+            "packages/coding-agent/src/core/tools/read.ts",
+            "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+            "packages/coding-agent/src/core/tools/truncate.ts",
+            "packages/coding-agent/src/core/tools/write.ts",
+            "packages/coding-agent/src/core/trust-manager.ts",
+            "packages/coding-agent/src/core/usage-totals.ts",
+            "packages/coding-agent/src/index.ts",
+            "packages/coding-agent/src/utils/abort.ts",
+            "packages/coding-agent/src/utils/child-process.ts",
+            "packages/coding-agent/src/utils/exif-orientation.ts",
+            "packages/coding-agent/src/utils/frontmatter.ts",
+            "packages/coding-agent/src/utils/fs-watch.ts",
+            "packages/coding-agent/src/utils/git.ts",
+            "packages/coding-agent/src/utils/image-convert.ts",
+            "packages/coding-agent/src/utils/image-process.ts",
+            "packages/coding-agent/src/utils/image-resize-core.ts",
+            "packages/coding-agent/src/utils/image-resize-worker.ts",
+            "packages/coding-agent/src/utils/image-resize.ts",
+            "packages/coding-agent/src/utils/json.ts",
+            "packages/coding-agent/src/utils/mime.ts",
+            "packages/coding-agent/src/utils/paths.ts",
+            "packages/coding-agent/src/utils/photon.ts",
+            "packages/coding-agent/src/utils/pi-user-agent.ts",
+            "packages/coding-agent/src/utils/shell.ts",
+            "packages/coding-agent/src/utils/sleep.ts",
+            "packages/coding-agent/src/utils/text.ts",
+            "packages/coding-agent/src/utils/tool-result-images.ts",
+            "packages/coding-agent/src/utils/tools-manager.ts",
+            "packages/coding-agent/test/agent-session-auto-compaction-queue.test.ts",
+            "packages/coding-agent/test/agent-session-branching.test.ts",
+            "packages/coding-agent/test/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/agent-session-concurrent.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-provider.test.ts",
+            "packages/coding-agent/test/agent-session-dynamic-tools.test.ts",
+            "packages/coding-agent/test/agent-session-retry.test.ts",
+            "packages/coding-agent/test/agent-session-runtime-events.test.ts",
+            "packages/coding-agent/test/agent-session-stats.test.ts",
+            "packages/coding-agent/test/agent-session-tree-navigation.test.ts",
+            "packages/coding-agent/test/auth-storage.test.ts",
+            "packages/coding-agent/test/compaction-extensions-example.test.ts",
+            "packages/coding-agent/test/compaction-extensions.test.ts",
+            "packages/coding-agent/test/compaction-serialization.test.ts",
+            "packages/coding-agent/test/compaction-summary-reasoning.test.ts",
+            "packages/coding-agent/test/compaction.test.ts",
+            "packages/coding-agent/test/default-tools-setting.test.ts",
+            "packages/coding-agent/test/extensions-runner.test.ts",
+            "packages/coding-agent/test/interactive-mode-compaction.test.ts",
+            "packages/coding-agent/test/model-resolver.test.ts",
+            "packages/coding-agent/test/model-runtime-auth-options.test.ts",
+            "packages/coding-agent/test/model-runtime-cloudflare-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-credential-sync.test.ts",
+            "packages/coding-agent/test/model-runtime-modify-models-compat.test.ts",
+            "packages/coding-agent/test/model-runtime-test-utils.ts",
+            "packages/coding-agent/test/models-store.test.ts",
+            "packages/coding-agent/test/prompt-templates.test.ts",
+            "packages/coding-agent/test/resource-loader.test.ts",
+            "packages/coding-agent/test/runtime-credentials.test.ts",
+            "packages/coding-agent/test/sdk-codex-cache-probe-tool-loop.ts",
+            "packages/coding-agent/test/sdk-openrouter-attribution.test.ts",
+            "packages/coding-agent/test/sdk-session-manager.test.ts",
+            "packages/coding-agent/test/sdk-skills.test.ts",
+            "packages/coding-agent/test/sdk-stream-options.test.ts",
+            "packages/coding-agent/test/session-manager/build-context.test.ts",
+            "packages/coding-agent/test/session-manager/custom-session-id.test.ts",
+            "packages/coding-agent/test/session-manager/file-operations.test.ts",
+            "packages/coding-agent/test/session-manager/labels.test.ts",
+            "packages/coding-agent/test/session-manager/load-entries.test.ts",
+            "packages/coding-agent/test/session-manager/migration.test.ts",
+            "packages/coding-agent/test/session-manager/save-entry.test.ts",
+            "packages/coding-agent/test/session-manager/tree-traversal.test.ts",
+            "packages/coding-agent/test/settings-manager-bug.test.ts",
+            "packages/coding-agent/test/settings-manager-compaction.test.ts",
+            "packages/coding-agent/test/settings-manager.test.ts",
+            "packages/coding-agent/test/skills.test.ts",
+            "packages/coding-agent/test/suite/agent-session-bash-persistence.test.ts",
+            "packages/coding-agent/test/suite/agent-session-boundaries.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction-model-overrides.test.ts",
+            "packages/coding-agent/test/suite/agent-session-compaction.test.ts",
+            "packages/coding-agent/test/suite/agent-session-model-extension.test.ts",
+            "packages/coding-agent/test/suite/agent-session-prompt.test.ts",
+            "packages/coding-agent/test/suite/agent-session-queue.test.ts",
+            "packages/coding-agent/test/suite/agent-session-retry-events.test.ts",
+            "packages/coding-agent/test/suite/agent-session-runtime.test.ts",
+            "packages/coding-agent/test/suite/agent-session-tool-result-images.test.ts",
+            "packages/coding-agent/test/suite/regressions/1717-2113-agent-session-event-settlement.test.ts",
+            "packages/coding-agent/test/suite/regressions/2835-tools-allowlist-filters-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/3592-no-builtin-tools-keeps-extension-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5109-exclude-tools.test.ts",
+            "packages/coding-agent/test/suite/regressions/5217-compaction-reason.test.ts",
+            "packages/coding-agent/test/suite/regressions/6647-compaction-retries-transient-stream-drop.test.ts",
+            "packages/coding-agent/test/suite/regressions/6768-copilot-compaction-base-url.test.ts",
+            "packages/coding-agent/test/suite/regressions/7048-compaction-truncated-summary.test.ts",
+            "packages/coding-agent/test/suite/regressions/7150-rpc-prompt-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/7193-event-bus-lifecycle.test.ts",
+            "packages/coding-agent/test/suite/regressions/8328-zero-usage-auto-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/8989-fork-compaction-label-boundary.test.ts",
+            "packages/coding-agent/test/suite/regressions/9178-tree-during-compaction.test.ts",
+            "packages/coding-agent/test/suite/regressions/9340-9777-auto-compaction-cancellation.test.ts",
+            "packages/coding-agent/test/suite/regressions/pre-prompt-compaction-no-continue.test.ts",
+            "packages/coding-agent/test/tools.test.ts"
+          ],
+          "goal": "Complete the embedded SDK delivery capability from the source-owned export list and frozen contract. Other supplied files are read-only behavioral references; do not implement excluded TUI/JS-host features.",
+          "contract": "contracts/delivery.md",
+          "judge": "judges/delivery",
+          "outputs": [
+            "packages/coding-agent/doc.go",
+            "packages/coding-agent/delivery_test.go",
+            "packages/coding-agent/source_map_delivery.json",
+            "docs/sdk/README.md",
+            "docs/sdk/compatibility.md",
+            "examples/embedded-sdk/minimal/main.go",
+            "examples/embedded-sdk/custom-tool/main.go",
+            "examples/embedded-sdk/events/main.go",
+            "examples/embedded-sdk/resume/main.go",
+            "examples/embedded-sdk/resources/main.go",
+            "examples/embedded-sdk/web/main.go"
+          ],
+          "tests": [
+            "TestPortsmithJudgeSDKHTTP",
+            "TestPortsmithJudgeSDKSourceMaps",
+            "TestPortsmithJudgeSDKCrossBuild"
+          ],
+          "race": true
+        }
+      ]
+    }
+  }
+}

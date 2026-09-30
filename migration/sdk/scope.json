@@ -1,0 +1,22 @@
+{
+  "goal": "Embeddable Go coding-agent SDK, additive to accepted Pith AI/Core/Tools",
+  "upstream": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "baseline": "f11b605c89ce3b9eefcd347786cd1a4e0abbb3dd",
+  "status": "prepared-not-migrated",
+  "modules": 1,
+  "steps": 7,
+  "ownedSources": 54,
+  "ownedSourceLines": 21109,
+  "referencedFiles": 161,
+  "baselineFiles": 391,
+  "mappedExportsRequired": 998,
+  "excluded": "TUI/CLI, JS extension execution and npm/Git installer, experimental remote services, hosted subscription control plane, HTML/share UI, cache prewarming",
+  "adaptations": [
+    "Explicit resource roots and Go tool/hooks; no transparent JS extension compatibility",
+    "New Go SDK session format: supported version documented; no claim of historical Pi JSONL compatibility",
+    "Existing sdk.Run/CLI remains unchanged; use packages/coding-agent for full embedded sessions",
+    "Pure Go dependencies; Node used by migration executor only",
+    "Offline judges are contract tests, not exhaustive TS differential parity"
+  ],
+  "fullParityProven": false
+}

@@ -1,0 +1,27 @@
+{
+  "started": "2026-09-30T13:50:03.020Z",
+  "finished": "2026-09-30T13:50:17.143Z",
+  "preparedSnapshots": 7,
+  "baselineFiles": 391,
+  "judgeCompile": "passed",
+  "negativeControl": "empty typed SDK",
+  "realVerifier": "behavior_failed",
+  "rejectedBy": [
+    "TestPortsmithJudgeSDKConfiguration",
+    "TestPortsmithJudgeSDKHTTP",
+    "TestPortsmithJudgeSDKSourceMaps",
+    "TestPortsmithJudgeSDKCrossBuild",
+    "TestPortsmithJudgeSDKResilience",
+    "TestPortsmithJudgeSDKCancellation",
+    "TestPortsmithJudgeSDKCompaction",
+    "TestPortsmithJudgeSDKQueues",
+    "TestPortsmithJudgeSDKRetryExhaustion",
+    "TestPortsmithJudgeSDKCompactionRollback",
+    "TestPortsmithJudgeSDKResources",
+    "TestPortsmithJudgeSDKSession",
+    "TestPortsmithJudgeSDKStorage",
+    "TestPortsmithJudgeSDKTools"
+  ],
+  "paidModelCalls": 0,
+  "caveat": "Checks preparation and judge compilation/rejection. Does not prove a correct SDK, complete TS differential parity, or that a generated implementation will pass."
+}

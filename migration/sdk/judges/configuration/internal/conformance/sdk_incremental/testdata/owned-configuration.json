@@ -1,0 +1,398 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/defaults.ts",
+    "upstream": "DEFAULT_THINKING_LEVEL"
+  },
+  {
+    "source": "packages/coding-agent/src/core/defaults.ts",
+    "upstream": "THINKING_LEVEL_OPTIONS"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CompactionModelOverride"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CompactionSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "BranchSummarySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ProviderRetrySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "RetrySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TuiMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "FullscreenExitOutput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TerminalSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ImageSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ThinkingBudgetsSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "MermaidRenderingMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CACHE_WARMING_MODES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CacheWarmingMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "MarkdownSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "WarningSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "DefaultProjectTrust"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TransportSetting"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "PackageSource"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "Settings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsScope"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsManagerCreateOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "FileSettingsStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "InMemorySettingsStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsManager"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
+    "upstream": "collectSettingsDiagnostics"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
+    "upstream": "deduplicateDiagnostics"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "AuthStorageBackend"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "FileAuthStorageBackend"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "ReadOnlyAuthStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "InMemoryAuthStorageBackend"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "AuthStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "readStoredCredential"
+  },
+  {
+    "source": "packages/coding-agent/src/core/runtime-credentials.ts",
+    "upstream": "RuntimeCredentials"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CreateModelRuntimeOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "ModelRuntimeAuthOverrides"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CredentialSynchronizationOperation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CredentialSynchronizationError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "ModelRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ProviderConfigInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ResolvedRequestAuth"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "clearApiKeyCache"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ModelRegistry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonModelOverride"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/models-store.ts",
+    "upstream": "InMemoryCodingAgentModelsStore"
+  },
+  {
+    "source": "packages/coding-agent/src/core/models-store.ts",
+    "upstream": "FileModelsStore"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "defaultModelPerProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ScopedModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "findExactModelReferenceMatch"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ParsedModelResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "parseModelPattern"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ModelScopeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ResolveModelScopeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScopeFromModels"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScopeWithDiagnostics"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScope"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ResolveCliModelResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveCliModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "InitialModelResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "findInitialModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "restoreModelFromSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getConfigValueEnvVarName"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getConfigValueEnvVarNames"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getMissingConfigValueEnvVarNames"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "isCommandConfigValue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "isConfigValueConfigured"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValueUncached"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValueOrThrow"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveHeaders"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveHeadersOrThrow"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "clearConfigValueCache"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "ExtensionOAuthConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "ProviderConfigInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "AuthStatus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "clearApiKeyCache"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "validateExtensionProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "composeModelProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "resolveConfiguredModelHeaders"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "CompatibilityRequestConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "resolveCompatibilityRequestConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "configuredRequestAuthStatus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-attribution.ts",
+    "upstream": "mergeProviderAttributionHeaders"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "getProviderLoginHelp"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoModelsAvailableMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoModelSelectedMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoApiKeyFoundMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "DEFAULT_HTTP_IDLE_TIMEOUT_MS"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "HTTP_IDLE_TIMEOUT_CHOICES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "parseHttpIdleTimeoutMs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "formatHttpIdleTimeoutMs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "applyHttpProxySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "configureHttpDispatcher"
+  }
+]

@@ -1,0 +1,714 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "bashToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createLocalShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createLocalBashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashRenderState"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "ShellToolConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createShellToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createBashToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createBashTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "detectLineEnding"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "normalizeToLF"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "restoreLineEndings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "normalizeForFuzzyMatch"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "applyReplacementsPreservingUnchangedLines"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "FuzzyMatchResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "Edit"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "AppliedEditsResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "fuzzyFindText"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "applyEditsToNormalizedContent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "generateUnifiedPatch"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "generateDiffString"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "EditDiffResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "EditDiffError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "computeEditsDiff"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "computeEditDiff"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "editToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "createEditToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "createEditTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+    "upstream": "withFileMutationQueue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "relativizeFindResultPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "findToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "createFindToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "createFindTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "grepToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "createGrepToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "createGrepTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createBashTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createBashToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLocalBashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createEditTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createEditToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "withFileMutationQueue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createFindTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createFindToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createGrepTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createGrepToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLsTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLsToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLocalPowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createPowerShellTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createPowerShellToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "DEFAULT_MAX_BYTES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "DEFAULT_MAX_LINES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "formatSize"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "TruncationOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "TruncationResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateHead"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateLine"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateTail"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createWriteTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createWriteToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "Tool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolDef"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolName"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "allToolNames"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolsOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createCodingToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadOnlyToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createAllToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createCodingTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadOnlyTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createAllTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "lsToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "createLsToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "createLsTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputAccumulatorOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputSnapshot"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputAccumulator"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "pathExists"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "expandPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveToCwd"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveReadPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveReadPathAsync"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "powershellToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createLocalPowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createPowerShellToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createPowerShellTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "readToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "createReadToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "createReadTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "wrapToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "wrapToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "createToolDefinitionFromAgentTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "DEFAULT_MAX_LINES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "DEFAULT_MAX_BYTES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "GREP_MAX_LINE_LENGTH"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "TruncationResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "TruncationOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "formatSize"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateHead"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateTail"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateLine"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "writeToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "createWriteToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "createWriteTool"
+  }
+]

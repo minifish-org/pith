@@ -1,0 +1,3994 @@
+[
+  {
+    "source": "packages/coding-agent/src/core/defaults.ts",
+    "upstream": "DEFAULT_THINKING_LEVEL"
+  },
+  {
+    "source": "packages/coding-agent/src/core/defaults.ts",
+    "upstream": "THINKING_LEVEL_OPTIONS"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CompactionModelOverride"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CompactionSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "BranchSummarySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ProviderRetrySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "RetrySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TuiMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "FullscreenExitOutput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TerminalSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ImageSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "ThinkingBudgetsSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "MermaidRenderingMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CACHE_WARMING_MODES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "CacheWarmingMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "MarkdownSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "WarningSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "DefaultProjectTrust"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "TransportSetting"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "PackageSource"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "Settings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsScope"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsManagerCreateOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "FileSettingsStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "InMemorySettingsStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "upstream": "SettingsManager"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
+    "upstream": "collectSettingsDiagnostics"
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
+    "upstream": "deduplicateDiagnostics"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "AuthStorageBackend"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "FileAuthStorageBackend"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "ReadOnlyAuthStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "InMemoryAuthStorageBackend"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "AuthStorage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "upstream": "readStoredCredential"
+  },
+  {
+    "source": "packages/coding-agent/src/core/runtime-credentials.ts",
+    "upstream": "RuntimeCredentials"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CreateModelRuntimeOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "ModelRuntimeAuthOverrides"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CredentialSynchronizationOperation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "CredentialSynchronizationError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "upstream": "ModelRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ProviderConfigInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ResolvedRequestAuth"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "clearApiKeyCache"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "upstream": "ModelRegistry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonModelOverride"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelsJsonProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "upstream": "ModelConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/models-store.ts",
+    "upstream": "InMemoryCodingAgentModelsStore"
+  },
+  {
+    "source": "packages/coding-agent/src/core/models-store.ts",
+    "upstream": "FileModelsStore"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "defaultModelPerProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ScopedModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "findExactModelReferenceMatch"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ParsedModelResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "parseModelPattern"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ModelScopeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ResolveModelScopeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScopeFromModels"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScopeWithDiagnostics"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveModelScope"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "ResolveCliModelResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "resolveCliModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "InitialModelResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "findInitialModel"
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "upstream": "restoreModelFromSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getConfigValueEnvVarName"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getConfigValueEnvVarNames"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "getMissingConfigValueEnvVarNames"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "isCommandConfigValue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "isConfigValueConfigured"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValueUncached"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveConfigValueOrThrow"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveHeaders"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "resolveHeadersOrThrow"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "upstream": "clearConfigValueCache"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "ExtensionOAuthConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "ProviderConfigInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "AuthStatus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "clearApiKeyCache"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "validateExtensionProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "composeModelProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "resolveConfiguredModelHeaders"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "CompatibilityRequestConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "resolveCompatibilityRequestConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "upstream": "configuredRequestAuthStatus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-attribution.ts",
+    "upstream": "mergeProviderAttributionHeaders"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "getProviderLoginHelp"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoModelsAvailableMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoModelSelectedMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "upstream": "formatNoApiKeyFoundMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "DEFAULT_HTTP_IDLE_TIMEOUT_MS"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "HTTP_IDLE_TIMEOUT_CHOICES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "parseHttpIdleTimeoutMs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "formatHttpIdleTimeoutMs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "applyHttpProxySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "upstream": "configureHttpDispatcher"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CURRENT_SESSION_VERSION"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionHeader"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "NewSessionOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionEntryBase"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionMessageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ThinkingLevelChangeEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ModelChangeEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "UsageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CompactionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "BranchSummaryEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CustomEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "LabelEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionInfoEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "CustomMessageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ContextEditableContent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ContextEditEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "FileEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionTreeNode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ProjectedSessionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionProjection"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "ReadonlySessionManager"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "assertValidSessionId"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "migrateSessionEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "parseSessionEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "getLatestCompactionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "sessionEntryToContextMessages"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildContextEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildSessionProjection"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "buildSessionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "getDefaultSessionDir"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "loadEntriesFromFile"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "findMostRecentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionListProgress"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "upstream": "SessionManager"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "SessionCwdIssue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "getMissingSessionCwdIssue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "formatMissingSessionCwdError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "formatMissingSessionCwdPrompt"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "MissingSessionCwdError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "upstream": "assertSessionCwdExists"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_PREFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "COMPACTION_SUMMARY_SUFFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BRANCH_SUMMARY_PREFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BRANCH_SUMMARY_SUFFIX"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BashExecutionMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "CustomMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "BranchSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "CompactionSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "bashExecutionToText"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createBranchSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createCompactionSummaryMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "createCustomMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "upstream": "convertToLlm"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceCollision"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceExtensionPaths"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceLoaderReloadOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "ResourceLoader"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "loadProjectContextFiles"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "DefaultResourceLoaderOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "upstream": "DefaultResourceLoader"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "SkillFrontmatter"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "Skill"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsFromDirOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "loadSkillsFromDir"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "formatSkillsForPrompt"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "LoadSkillsOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "upstream": "loadSkills"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "PromptTemplate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "parseCommandArgs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "substituteArgs"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "LoadPromptTemplatesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "LoadPromptTemplatesResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "loadPromptTemplates"
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "upstream": "expandPromptTemplate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "BuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "NormalizedBuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "SystemPromptSections"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "normalizeBuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPromptSections"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPromptState"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "buildSystemPrompt"
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "upstream": "diffSystemPromptSections"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceScope"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceOrigin"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "SourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "createSourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "upstream": "createSyntheticSourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "AppMode"
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "ResolveProjectTrustedOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "upstream": "resolveProjectTrusted"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustDecision"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustStoreEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustUpdate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustOption"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "getProjectTrustParentPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "getProjectTrustOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "hasTrustRequiringProjectResources"
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "upstream": "ProjectTrustStore"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "bashToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createLocalShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createLocalBashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "BashRenderState"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "ShellToolConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createShellToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createBashToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "upstream": "createBashTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "detectLineEnding"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "normalizeToLF"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "restoreLineEndings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "normalizeForFuzzyMatch"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "applyReplacementsPreservingUnchangedLines"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "FuzzyMatchResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "Edit"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "AppliedEditsResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "fuzzyFindText"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "applyEditsToNormalizedContent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "generateUnifiedPatch"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "generateDiffString"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "EditDiffResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "EditDiffError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "computeEditsDiff"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "upstream": "computeEditDiff"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "editToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "EditToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "createEditToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "upstream": "createEditTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+    "upstream": "withFileMutationQueue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "relativizeFindResultPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "findToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "FindToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "createFindToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "upstream": "createFindTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "grepToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "GrepToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "createGrepToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "upstream": "createGrepTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "BashToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createBashTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createBashToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLocalBashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createEditTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createEditToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "EditToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "withFileMutationQueue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createFindTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createFindToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "FindToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createGrepTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createGrepToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "GrepToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLsTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLsToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "LsToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createLocalPowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createPowerShellTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createPowerShellToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "PowerShellToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ReadToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "DEFAULT_MAX_BYTES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "DEFAULT_MAX_LINES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "formatSize"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "TruncationOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "TruncationResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateHead"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateLine"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "truncateTail"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createWriteTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createWriteToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "WriteToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "Tool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolDef"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolName"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "allToolNames"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "ToolsOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createCodingToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadOnlyToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createAllToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createCodingTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createReadOnlyTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "upstream": "createAllTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "lsToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "LsToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "createLsToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "upstream": "createLsTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputAccumulatorOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputSnapshot"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "upstream": "OutputAccumulator"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "pathExists"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "expandPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveToCwd"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveReadPath"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "upstream": "resolveReadPathAsync"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "powershellToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "PowerShellToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createLocalPowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createPowerShellToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "upstream": "createPowerShellTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "readToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "ReadToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "createReadToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "upstream": "createReadTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "wrapToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "wrapToolDefinitions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "upstream": "createToolDefinitionFromAgentTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "DEFAULT_MAX_LINES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "DEFAULT_MAX_BYTES"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "GREP_MAX_LINE_LENGTH"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "TruncationResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "TruncationOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "formatSize"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateHead"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateTail"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "upstream": "truncateLine"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "writeToolSystemPromptContribution"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "WriteToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "createWriteToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "upstream": "createWriteTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ParsedSkillBlock"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "parseSkillBlock"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionEventListener"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSessionConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ExtensionBindings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "PromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ModelMutationOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "ModelCycleResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "SessionStats"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "upstream": "AgentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionRuntimeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionRuntimeFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "SessionImportFileNotFoundError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "AgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "CreateAgentSessionServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionFromServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "upstream": "createAgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "CreateAgentSessionServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "AgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "createAgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "upstream": "createAgentSessionFromServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "EventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "EventBusController"
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "upstream": "createEventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/telemetry.ts",
+    "upstream": "isInstallTelemetryEnabled"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "UsageTotals"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "createUsageTotals"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "addUsageToTotals"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "UsageCostBreakdownEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "upstream": "getUsageCostBreakdown"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "takeOverStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "restoreStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "isStdoutTakenOver"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "writeRawStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "waitForRawStdoutBackpressure"
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "upstream": "flushRawStdout"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchSummaryDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "FileOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "BranchPreparation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "CollectEntriesResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "GenerateBranchSummaryOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "collectEntriesForBranchSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "prepareBranchEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "upstream": "generateBranchSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "DEFAULT_COMPACTION_SETTINGS"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "calculateContextTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "getLastAssistantUsage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "ContextUsageEstimate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateContextTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateProjectedContextTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "shouldCompact"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "estimateTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "findTurnStartIndex"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CutPointResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "findCutPoint"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "getSummarizationFailure"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "completeSummarization"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "generateSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "generateSummaryWithUsage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "CompactionPreparation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "prepareCompaction"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "upstream": "compact"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "FileOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "createFileOps"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "extractFileOpsFromMessage"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "computeFileLists"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "formatFileOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "serializeConversation"
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "upstream": "SUMMARIZATION_SYSTEM_PROMPT"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "CreateAgentSessionOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "CreateAgentSessionResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionAPI"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionCommandContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ExtensionFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "InlineExtension"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "SlashCommandInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "SlashCommandSource"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "ToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "PromptTemplate"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "Skill"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "Tool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "withFileMutationQueue"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createCodingTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createReadOnlyTools"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createReadTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createBashTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createEditTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createWriteTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createGrepTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createFindTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createLsTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createPowerShellTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "upstream": "createAgentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionEventListener"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ModelCycleResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "PromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionStats"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionRuntimeFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionRuntimeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createAgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CreateAgentSessionServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createAgentSessionFromServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createAgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BashExecutorOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BashResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "executeBashWithOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingDecision"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingStatus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CompactionResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createEventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "EventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "EventBusController"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "areExperimentalFeaturesEnabled"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentActivityOutcome"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentBeforeSettleEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentBeforeSettleEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentEndEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentSettledEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "AgentToolUpdateCallback"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BeforeAgentStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BeforeAgentStartEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BoundaryContextPreview"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BoundaryResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BoundaryState"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "BuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingDecisionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CacheWarmingDecisionEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CompactionEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ContextEditEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ContextEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ContextWithSystemEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CustomEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "CustomMessageEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "defineTool"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "discoverAndLoadExtensions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExecOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExecResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "Extension"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionAPI"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionCommandContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionError"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionFlag"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionHandler"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionRunner"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionShortcut"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ExtensionUIContext"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "InlineExtension"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "LoadExtensionsResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "MessageRenderer"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "NormalizedBuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "RegisteredCommand"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeCompactEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeForkEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeSwitchEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBeforeTreeEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionBoundaryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionCompactEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionShutdownEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "SessionTreeEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolCallEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolRenderResultOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "ToolResultEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "TurnEndEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "TurnEndEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "TurnStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "WorkingIndicatorOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "upstream": "createSyntheticSourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Args"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseArgs"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CONFIG_DIR_NAME"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getAgentDir"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getDocsPath"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getExamplesPath"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getPackageDir"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getReadmePath"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "VERSION"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionEventListener"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelCycleResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ParsedSkillBlock"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseSkillBlock"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionStats"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "readStoredCredential"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingDecision"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingStatus"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchPreparation"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchSummaryResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CollectEntriesResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CutPointResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "calculateContextTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "collectEntriesForBranchSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "compact"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DEFAULT_COMPACTION_SETTINGS"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "estimateTokens"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FileOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "findCutPoint"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "findTurnStartIndex"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GenerateBranchSummaryOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateBranchSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateSummary"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateSummaryWithUsage"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getLastAssistantUsage"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "prepareBranchEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "serializeConversation"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "shouldCompact"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createEventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EventBus"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EventBusController"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AfterProviderResponseEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentActivityOutcome"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentBeforeSettleEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentBeforeSettleEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentEndEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSettledEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentToolUpdateCallback"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AppKeybinding"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AutocompleteProviderFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeAgentStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeAgentStartEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeProviderHeadersEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeProviderRequestEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BeforeProviderRequestEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BoundaryContextPreview"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BoundaryResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BoundaryState"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingDecisionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingDecisionEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEditEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextUsage"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextWithSystemEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomMessageEntryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EntryRenderer"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EntryRenderOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExecOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExecResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Extension"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionActions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionAPI"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionCommandContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionCommandContextActions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionContextActions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionError"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionFlag"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionHandler"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionShortcut"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionUIContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionUIDialogOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionWidgetOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InlineExtension"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InputEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InputEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InputSource"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "KeybindingsManager"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoadExtensionsResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MarkdownTransformContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MarkdownTransformer"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageEndEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageEndEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageRenderer"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageRenderOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MessageUpdateEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelSelectEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelSelectSource"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "NormalizedBuildSystemPromptOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustEventDecision"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustHandler"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProviderConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProviderModelConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RegisteredCommand"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RegisteredTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolvedCommand"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourcesDiscoverEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourcesDiscoverResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeCompactEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeCompactResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeForkEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeForkResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeSwitchEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeSwitchResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeTreeEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBeforeTreeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionBoundaryDraft"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionCompactEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionCompactFailedEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionInfoChangedEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionShutdownEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionTreeEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SlashCommandInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SlashCommandSource"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TerminalInputHandler"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThinkingLevelSelectEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolCallEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionEndEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionMode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionUpdateEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolRenderResultOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolResultEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolResultEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TurnEndEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TurnEndEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TurnStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UIPromptEndEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UIPromptKind"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UIPromptStartEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserBashEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserBashEventResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WidgetPlacement"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WorkingIndicatorOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteToolCallEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createExtensionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "defineTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "discoverAndLoadExtensions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionRunner"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isBashToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isEditToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isFindToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isGrepToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isLsToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isPowerShellToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isReadToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isToolCallEventType"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "isWriteToolResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "wrapRegisteredTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "wrapRegisteredTools"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadonlyFooterDataProvider"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "convertToLlm"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelRegistry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelScopeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolveCliModelResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolveModelScopeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "resolveCliModel"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "resolveModelScopeWithDiagnostics"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ScopedModel"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateModelRuntimeOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CredentialSynchronizationError"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CredentialSynchronizationOperation"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelRuntimeAuthOverrides"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PackageManager"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PathMetadata"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProgressCallback"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProgressEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolvedPaths"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResolvedResource"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DefaultPackageManager"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourceCollision"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourceDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResourceLoader"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DefaultResourceLoader"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "loadProjectContextFiles"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionRuntimeDiagnostic"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionFromServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionRuntimeFactory"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionRuntimeResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CreateAgentSessionServicesOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSession"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSessionFromServices"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSessionRuntime"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createAgentSessionServices"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createBashTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createCodingTools"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createEditTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createFindTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createGrepTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLsTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createPowerShellTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createReadOnlyTools"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createReadTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createWriteTool"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PromptTemplate"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchSummaryEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "buildContextEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "buildSessionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "buildSessionProjection"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEditableContent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ContextEditEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CURRENT_SESSION_VERSION"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomMessageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FileEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getLatestCompactionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelChangeEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "migrateSessionEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "NewSessionOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectedSessionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseSessionEntries"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionEntryBase"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionHeader"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionInfoEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionManager"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionMessageEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionProjection"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionTreeNode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "sessionEntryToContextMessages"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThinkingLevelChangeEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CacheWarmingMode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionModelOverride"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DefaultProjectTrust"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FullscreenExitOutput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ImageSettings"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PackageSource"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RetrySettings"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsManager"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsManagerCreateOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TuiMode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "formatSkillsForPrompt"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoadSkillsFromDirOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoadSkillsResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "loadSkills"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "loadSkillsFromDir"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Skill"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SkillFrontmatter"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createSyntheticSourceInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditDiffResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateDiffString"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "generateUnifiedPatch"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createBashToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createEditToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createFindToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createGrepToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLocalBashOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLocalPowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createLsToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createPowerShellToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createReadToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "createWriteToolDefinition"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DEFAULT_MAX_BYTES"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DEFAULT_MAX_LINES"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "EditToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FindToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "formatSize"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "GrepToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LsToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellSpawnContext"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellSpawnHook"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PowerShellToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolDetails"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ReadToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolsOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TruncationOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TruncationResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateHead"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateLine"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateTail"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteOperations"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteToolInput"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "WriteToolOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "withFileMutationQueue"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "hasTrustRequiringProjectResources"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustDecision"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustStore"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustStoreEntry"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ProjectTrustUpdate"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "MainOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "main"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InteractiveMode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "InteractiveModeOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "JsonAgentSessionEvent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelInfo"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "PrintModeOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcClient"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcClientOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcCommand"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcEventListener"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcExtensionUIRequest"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcExtensionUIResponse"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcResponse"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RpcSessionState"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "runPrintMode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "runRpcMode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ArminComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "AssistantMessageComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BashExecutionComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BorderedLoader"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "BranchSummaryMessageComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CompactionSummaryMessageComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEditor"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomEditorOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "CustomMessageComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "DynamicBorder"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionEditorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionInputComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ExtensionSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "FooterComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "keyHint"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "keyText"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "LoginDialogComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ModelSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "OAuthSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "RenderDiffOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "rawKeyHint"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "renderDiff"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SessionSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsCallbacks"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SettingsSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ShowImagesSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "SkillInvocationMessageComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThemeSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThinkingSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ToolExecutionOptions"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "TreeSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "truncateToVisualLines"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserMessageComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "UserMessageSelectorComponent"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "VisualTruncateResult"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getLanguageFromPath"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getMarkdownTheme"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getSelectListTheme"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getSettingsListTheme"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "highlightCode"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "initTheme"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "Theme"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ThemeColor"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "copyToClipboard"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "parseFrontmatter"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "stripFrontmatter"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "convertToPng"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "formatDimensionNote"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "ResizedImage"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "resizeImage"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "detectSupportedImageMimeTypeFromFile"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getPowerShellConfig"
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "upstream": "getShellConfig"
+  }
+]
