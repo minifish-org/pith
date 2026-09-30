@@ -1,0 +1,1068 @@
+{
+  "date": "2026-09-30",
+  "defaultLanguage": "English",
+  "productMessages": "No CJK ideographs found in maintained runtime source",
+  "preservedFiles": [
+    {
+      "path": "internal/conformance/ai_anthropic/testdata/case-000.json",
+      "sha256": "0a0db3e134ba5aa64677909b3a2083e1399cd4559feb618a89c82b3edbca2f22",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_anthropic/testdata/case-001.json",
+      "sha256": "c3d71b4772f8e16c7ba3685023627cc3d474c1f6dd9a98fa8c3b342dfa8dbcbd",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_anthropic/testdata/case-003.json",
+      "sha256": "7f146108d69c23cf36ad7dd6bda71f922faf71031346ecdff081e0bad317df3f",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_anthropic/testdata/reference-ledger.json",
+      "sha256": "7b7c328f3ba8d8955b80e2f55f3ab7a16cc496e9a4c26edf2ac747897c2e09c3",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_auth/testdata/reference-ledger.json",
+      "sha256": "94a69a8053f089c2a87d3540bd81d9b56da901ff4c7aea53570c42735c05aea4",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_bedrock/testdata/case-000.json",
+      "sha256": "ce058e6b643b6f89331a352991f1131e7f5d8fa94a606ec8763e3c0192c7d863",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_bedrock/testdata/case-001.json",
+      "sha256": "6f487d09ce410192e17ef2ccb1dbf7ccbdfe3dfd9dcbebf88c6327940ca6d93d",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_bedrock/testdata/case-002.json",
+      "sha256": "a438162a11330827f24aeff28e92a160ec5eeb0734d7a3bb81c9cb97ed452b55",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_bedrock/testdata/case-003.json",
+      "sha256": "0bca7dd2f9ca1c2711b5c138fe0f864d5ae6704f7a09c1ba8b1cad7d10e549b9",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_bedrock/testdata/reference-ledger.json",
+      "sha256": "5ffc719a970e2d8263b5f969f43d0def7b989a841c348deff8cd9df158bf2e78",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_foundation_types/testdata/case-002.json",
+      "sha256": "381bc7b5a314f219a5209525648f7ba2521167a6ded8e3907aaa62d2de48e356",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_foundation_types/testdata/case-003.json",
+      "sha256": "8b8e3a3c8ff37c155279968710f1f9f0e1820afe14964973b77c5cee54dccc3e",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_foundation_types/testdata/reference-ledger.json",
+      "sha256": "46899fb28102f4fa0d42ee7836cfa7c99f47f82b828635c77c07412d3b259e47",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_foundation_types/testdata/upstream/packages/ai/test/unicode-surrogate.test.ts.txt",
+      "sha256": "89cf5a6e71e2c059ae3a22aa81d311433832c7b00f93da683504336605c6d518",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_google/testdata/case-000.json",
+      "sha256": "06c5976642c61233d8e13d12329817e9427e41e43e5873cc6ad8279756b27163",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_google/testdata/case-001.json",
+      "sha256": "46520007793f4f5b5502a23f8d6968e4fe5c2b7ead29b3ffb2558515a28401df",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_google/testdata/case-003.json",
+      "sha256": "4875c5c4823e636968476afabad35b7abfd182e14375d9d425d36c85e17afbb7",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_google/testdata/case-004.json",
+      "sha256": "7f023161910834ba216f32b62be14b728c54efb246e451fb4964f16069840bdc",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_google/testdata/case-005.json",
+      "sha256": "61bdadc3fb05ecda0761079dba544c135a48949f48c753332456ccc5477a46f1",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_google/testdata/case-007.json",
+      "sha256": "c94e623c4fdc1b2268b38d4e22f2ad8feebc2e9f08ae83be2a2c5653d9f66769",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_google/testdata/reference-ledger.json",
+      "sha256": "f4851d2572772813b7464ab950f9bd854db9721285653a71ebc6547800c57ab3",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_models/testdata/reference-ledger.json",
+      "sha256": "608d388c35717cfce56469b2769dc31ab1728fbd5cdb771a4cab710a50fd79bd",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-000.json",
+      "sha256": "903e578c3f1958571656b8cbc7dc0b04e28c281f31c28f4a74f24bcab45e2d38",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-001.json",
+      "sha256": "002cced42ded12034781c48157ad5edc362f2241909bf605d94ffb9dea092030",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-003.json",
+      "sha256": "fd8fdb676faef8eafc8a0ba3a0b23f44c349332af5ee933b8d33ed0ec7431652",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-004.json",
+      "sha256": "538de14537d49fbaec546151a3b218031089a97dd05f7c07bac8e403c1096f9e",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-005.json",
+      "sha256": "d4c1ff649965c11d2429e4a27c8177a34d3e552a5d2c570a7659911df197bfd1",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-007.json",
+      "sha256": "c508995cee9d85aee3cf80aa0f6083ff323668ea7917da4dc1be4430842e1287",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-008.json",
+      "sha256": "5fbd1d5fe71d3af5a4a2b8d645de8b354ee9e7688eef5982ffb84ff695fc241f",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-009.json",
+      "sha256": "48be835a61f8c7a2ec4121e25edd54dd1ce60e323a40cb56d1cf33cc544ceed1",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-011.json",
+      "sha256": "4a850d722f813392dcaf60a55570b4eafa1d1334538ef24b3c7e9810b101bdc7",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-012.json",
+      "sha256": "01e6ac6768b059a5fe768259ef86c1c12035bec808c217b526e789895240c006",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-013.json",
+      "sha256": "d5d58620ef742322b33af851bb2da9efc6e3ca969664ebc12f23a35d128a98df",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-015.json",
+      "sha256": "dbfcdbcce72b4ea28746537a46676d8d2cea36d36b0b25ed569d1371fb7add7f",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/case-016.json",
+      "sha256": "5516986aba82a3eba33d036c39cf78e6cbd9e330fa7282bf4a3390a515114d8d",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_openai/testdata/reference-ledger.json",
+      "sha256": "6c80e0dcf8dd39996bad7e58859fc4739dba12d3bba6469d7161ac5422dc7d45",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/case-000.json",
+      "sha256": "69bf785c5220aaf867c0025d0ae6a2a5c0cb12eb17d8c3316e7b3295be88e905",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/case-001.json",
+      "sha256": "58d01dd15b31c4a98a7a58d5eab9c9c91422c9a1729a6744bb2146c992cdf3f4",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/case-003.json",
+      "sha256": "d8216172fab5811edec0676a6a009bfb55c719f8cf1ed43ae869a36723e14718",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/case-004.json",
+      "sha256": "1cbd96780008ac41d8246159e106ca1a3edb48440be40e253fe8aefae224cd0d",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/case-005.json",
+      "sha256": "5c9c6390a8c35adf8b0461e134192956bd576d341e7530bc0d9445a941d08258",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/case-007.json",
+      "sha256": "f8ca6b6a1c7006a36cac46c9c741921635370ff40b48eaaf6d2e63ba77d2121d",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/case-008.json",
+      "sha256": "f51ae20f4a28d978d777bcca60725df8f73ffc5b5bf130c7ff62f11b3c118037",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_other_protocols/testdata/reference-ledger.json",
+      "sha256": "5415ab4346d32b8ce491c74d16073ae9656ad77e414344836cfe6251dcdd818c",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_providers/testdata/reference-ledger.json",
+      "sha256": "6381f4826abf3c80a0a4f452d83c1d10c2cc1ed6fbb7ad20355d15c073abfb64",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_surface/testdata/reference-ledger.json",
+      "sha256": "a3faa4792f7c84b34b9620d5137721b9d45a1185d77cba60367b4403ee008ffb",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_utils/testdata/case-002.json",
+      "sha256": "948e86979bb13f4d88f3feab22bd01d393345cda7d27d5b685815bf449338d0d",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_utils/testdata/case-010.json",
+      "sha256": "1da0675f484a3d224835c5d2b9b0b743b3a81a269c69f1b41696f24407816743",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_utils/testdata/case-013.json",
+      "sha256": "606e73970f41eec4b17ad9f41ae3a171542009beb5e2684a8c001136f1f1bb32",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/ai_utils/testdata/reference-ledger.json",
+      "sha256": "366f0cd7f7671899bdd4cbc40545811faceaa8c28f4b6d1d68589b2c4fafcee8",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_compaction/testdata/case-004.json",
+      "sha256": "51ae2c40d6fb4f272597d303b917e2e9c30a36b19d3d565b3d4df9346c78c5c5",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_compaction/testdata/case-005.json",
+      "sha256": "feff0957268586039a4ad12980ec5e5d9b5467824132eb819e21e6bbd0f1e7ed",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_contracts/testdata/case-001.json",
+      "sha256": "8fd00adc91188b091b550b432725a849b8a9ec0fe221d2202a772c62b383cbb8",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_contracts/testdata/case-005.json",
+      "sha256": "ef4fccc621cad16a8fdf36b610acdb57fdb61ccc1263ed76fc2d076c3d4fe64b",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_contracts/testdata/reference-ledger.json",
+      "sha256": "0eef4f0c00db838cfd9373e76fde78221cae8d7312369ce58345813156e5b462",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_contracts/testdata/upstream/packages/agent/test/harness/text-line-reader.test.ts.txt",
+      "sha256": "1bf5e00f4fd4ce6c2c7b4fa64ce1a427cf0aafe66714e8638254a60fbac5c514",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_contracts/testdata/upstream/packages/agent/test/harness/truncate.test.ts.txt",
+      "sha256": "4fe8d6155d468a7843c6831a83af1b79a50edd54f69160b14e893b2bb49f8aaa",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_harness/testdata/reference-ledger.json",
+      "sha256": "e46bf1bac7d51111e909bf20dac9870a29a87146c782c49c48dae6588eaa7ea7",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_resources/testdata/case-002.json",
+      "sha256": "4df642654f5c0a5fad7b32702f97efb7ba5dc1b08893e5d183ec35407c232b21",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_resources/testdata/reference-ledger.json",
+      "sha256": "d63c68742cf211447b9bdaeafb16b8bf9247d192d872ca11144fb986b53d61bf",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_runtime/testdata/reference-ledger.json",
+      "sha256": "39291b685146974b71b5ee1439d452d368aabef3024d747750255ee63c54cace",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_session/testdata/reference-ledger.json",
+      "sha256": "9dbe98b834f6136a70c07553c460ac323bb130fa154898330e1f9d8ca398d824",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/core_session/testdata/upstream/packages/agent/test/harness/jsonl-v3-stream.test.ts.txt",
+      "sha256": "8e1cd7a00197f18e0f8ec334bc073f25ee9e0305ed1a89f7c22d8ca2c2498587",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/tools_bash/testdata/case-002.json",
+      "sha256": "e6f1333a544929a183550b02a7122f4f38e3a24afa77dff067fb2684e7b60181",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/tools_delivery/testdata/reference-ledger.json",
+      "sha256": "cc8eacf50c1db6b40efdbda224edcab1be6296c42f32923fa86970a6a97ca2f1",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/tools_edit/testdata/case-005.json",
+      "sha256": "3ca9b3d6fa95efbd349f4d350265860ebe31cce9ea277897aee992d1f7ab639a",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/tools_env/testdata/case-005.json",
+      "sha256": "2193382e2d657aeea44f772a43cf840917405399f2b6ba2ac522d955105886df",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/tools_env/testdata/reference-ledger.json",
+      "sha256": "994edf765afab01c216d237cb1389fe09a6a09abb8ca1895f250b9e6cada6be5",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/tools_read/testdata/case-004.json",
+      "sha256": "ef0ab2362b6c011361afb167358d4b1cb28e2ad4233135469f268d1977c81acb",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "internal/conformance/tools_write/testdata/case-001.json",
+      "sha256": "892575c77bee88b9ce9b3ea4199e9153117cb4bf250e9388ae9cce3ee82b5551",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "migration/API.md",
+      "sha256": "86dac722563443a285385f48ea4c659a9138a2981f2c0af61a08a7518235cd81",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/check-plan.mts",
+      "sha256": "8a31c44170307aa85162e69ee4b8b59fd8de0f5869a39a2ee477abe489e98399",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/conformance/dependencies.go.txt",
+      "sha256": "acd5e9553fd3517e6d2b502fa5c7aeb70c127bc0156dff70eace7bf32f118d53",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/conformance/golden.json",
+      "sha256": "d5a14b880845bba39bff75a0fcc6000d5173ec645c747749db13a6d0e815cf2f",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/conformance/inputs.mts",
+      "sha256": "0bb4871f047cfd89a39aeaf9ea8fbadeeeadb70e167b811bba863d7203a59f0c",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/conformance/protocols.mts",
+      "sha256": "17c3e84303de37f630077423beca358b9a01ece517db8f28a8cab8b402065be9",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-anthropic.md",
+      "sha256": "345e0eb99af437c97f1980de301a863d53fe88a86698382300c2a84aa4c1fb3c",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-auth.md",
+      "sha256": "14a388770211dfa6720cf39cc689f2560742e5a547e049a66e29405fae7a43bc",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-bedrock.md",
+      "sha256": "cd535afa72c6d969bc793b6b5dad0295acbdde7c8d25c205482e285ed2db0f43",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-eventstream.md",
+      "sha256": "eaa797782dd709b1d8ec7655a938ed58166ee63d89ca87062912feee5ee74cc8",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-foundation-catalog.md",
+      "sha256": "090af1eb4a5a834b57e5858c64720a94621739ea8f497b30ac6c53f0be1cca23",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-foundation-types.md",
+      "sha256": "33cc7986e9b0900c4cf9cccaa301f3455084ab9d43e11efdbe41626989c3d8e6",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-google.md",
+      "sha256": "864acc9d46835d37b6196c49b03f41f68618bf2fa067fa7852eddc49c0ae429e",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-models.md",
+      "sha256": "e8ad4406f51df054165c151365f3f6ac1acf06c03a20eaa75a0bd75f7bb86abf",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-openai.md",
+      "sha256": "2ffc098e0a1e1e3096ce39ff9ba8cee15e7c52b192c4eb9ce076cca7a5842025",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-other-protocols.md",
+      "sha256": "7a0d8eb8bf991f3a73e67e4ad4b1be1f416cc6a54dd8d57874f2e3f7208f908c",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-providers.md",
+      "sha256": "f0a35b6af400d7cb13392d5f688bfb136b5b6fd8a46778cc21d7db7d02845546",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-surface.md",
+      "sha256": "07e95f9dd7369ca4771e54c09a1af4d3f75b20dc2ed4ca718211333503213111",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/ai-utils.md",
+      "sha256": "dd46488758f86f7d01e2b8889f3b6b54dcbb2324f4ac203521b3825d8e7a9d76",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/core-compaction.md",
+      "sha256": "7315d9376d3bb924b268df51c0d1712fa50afc776023509f2704c02038b6cafe",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/core-contracts.md",
+      "sha256": "2309e340248c4edf4d697bde8c9d83da99b1db9fc7b18aae61fd7d0b37101a9e",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/core-harness.md",
+      "sha256": "180ab8b4b5b1d9ce2a7efc06d5f72d236636651509431cc46ad867cc2683c422",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/core-loop.md",
+      "sha256": "25100192e1d155b5a06b82a5c548d3b4cec57a653bf942351824abc648701820",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/core-resources.md",
+      "sha256": "0f63a7ed0120d15357ca6d2fba467f6d5f0d570debb869ab3625d7398f282926",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/core-runtime.md",
+      "sha256": "e4f97d592183ea9f9b730aa1cefcd96f6b523b93191bb7dce481179d09bf5e23",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/core-session.md",
+      "sha256": "a66d9720814acdf11bdedffc22bbbd1cc499f3d022dd18c1dbbcac043fce1591",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/tools-bash.md",
+      "sha256": "e05f761e81cba404b8f1a22a573e32c9a4e94ec189b6914f0602bb882e5af317",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/tools-delivery.md",
+      "sha256": "ac857ffb970fd63e96d3b8bce3786ba2a7ebb93927621fc11fd8fac431dc70a2",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/tools-edit.md",
+      "sha256": "bc31e6f3f6bbfa27add2e83bcbd82a38210e4db3377f43941253c0f6ca1315a3",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/tools-env.md",
+      "sha256": "cea283cf17f23f705382a261cbb657f539dad1841e30fa39f9551faef3598aef",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/tools-read.md",
+      "sha256": "badf253865d8db72f5f8b15081ccd4e6f7d275d114f7309516431e6b64c4184a",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/contracts/tools-write.md",
+      "sha256": "c231792143da8cc4fb83a59f60a85a5a6bd23d87a60761d4f427258892e9117b",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/dependency-map.md",
+      "sha256": "6d5cacbdd1becc58aaaf43e504809f21e67b2c8b486da35154649e7d881b29cc",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/exports.json",
+      "sha256": "950b45d2a1fcf7e6b9c771c6339adb4892b328f34838da0b85169f27f80d84c3",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/inventory.json",
+      "sha256": "c49a4d259e3c5f2a1dcfb24b0beddabcc4374e1eb892db0eababebed30304d1d",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-anthropic/internal/conformance/ai_anthropic/testdata/case-000.json",
+      "sha256": "0a0db3e134ba5aa64677909b3a2083e1399cd4559feb618a89c82b3edbca2f22",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-anthropic/internal/conformance/ai_anthropic/testdata/case-001.json",
+      "sha256": "c3d71b4772f8e16c7ba3685023627cc3d474c1f6dd9a98fa8c3b342dfa8dbcbd",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-anthropic/internal/conformance/ai_anthropic/testdata/case-003.json",
+      "sha256": "7f146108d69c23cf36ad7dd6bda71f922faf71031346ecdff081e0bad317df3f",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-anthropic/internal/conformance/ai_anthropic/testdata/reference-ledger.json",
+      "sha256": "7b7c328f3ba8d8955b80e2f55f3ab7a16cc496e9a4c26edf2ac747897c2e09c3",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-auth/internal/conformance/ai_auth/testdata/reference-ledger.json",
+      "sha256": "94a69a8053f089c2a87d3540bd81d9b56da901ff4c7aea53570c42735c05aea4",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-bedrock/internal/conformance/ai_bedrock/testdata/case-000.json",
+      "sha256": "ce058e6b643b6f89331a352991f1131e7f5d8fa94a606ec8763e3c0192c7d863",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-bedrock/internal/conformance/ai_bedrock/testdata/case-001.json",
+      "sha256": "6f487d09ce410192e17ef2ccb1dbf7ccbdfe3dfd9dcbebf88c6327940ca6d93d",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-bedrock/internal/conformance/ai_bedrock/testdata/case-002.json",
+      "sha256": "a438162a11330827f24aeff28e92a160ec5eeb0734d7a3bb81c9cb97ed452b55",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-bedrock/internal/conformance/ai_bedrock/testdata/case-003.json",
+      "sha256": "0bca7dd2f9ca1c2711b5c138fe0f864d5ae6704f7a09c1ba8b1cad7d10e549b9",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-bedrock/internal/conformance/ai_bedrock/testdata/reference-ledger.json",
+      "sha256": "5ffc719a970e2d8263b5f969f43d0def7b989a841c348deff8cd9df158bf2e78",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-eventstream/packages/ai/utils/eventstream/portsmith_judge_eventstream_test.go",
+      "sha256": "46a16b4ac6ec010c16068f220a4ee4669004814da4c776100e638963779d6c58",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-foundation-types/internal/conformance/ai_foundation_types/testdata/case-002.json",
+      "sha256": "381bc7b5a314f219a5209525648f7ba2521167a6ded8e3907aaa62d2de48e356",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-foundation-types/internal/conformance/ai_foundation_types/testdata/case-003.json",
+      "sha256": "8b8e3a3c8ff37c155279968710f1f9f0e1820afe14964973b77c5cee54dccc3e",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-foundation-types/internal/conformance/ai_foundation_types/testdata/reference-ledger.json",
+      "sha256": "46899fb28102f4fa0d42ee7836cfa7c99f47f82b828635c77c07412d3b259e47",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-foundation-types/internal/conformance/ai_foundation_types/testdata/upstream/packages/ai/test/unicode-surrogate.test.ts.txt",
+      "sha256": "89cf5a6e71e2c059ae3a22aa81d311433832c7b00f93da683504336605c6d518",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-google/internal/conformance/ai_google/testdata/case-000.json",
+      "sha256": "06c5976642c61233d8e13d12329817e9427e41e43e5873cc6ad8279756b27163",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-google/internal/conformance/ai_google/testdata/case-001.json",
+      "sha256": "46520007793f4f5b5502a23f8d6968e4fe5c2b7ead29b3ffb2558515a28401df",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-google/internal/conformance/ai_google/testdata/case-003.json",
+      "sha256": "4875c5c4823e636968476afabad35b7abfd182e14375d9d425d36c85e17afbb7",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-google/internal/conformance/ai_google/testdata/case-004.json",
+      "sha256": "7f023161910834ba216f32b62be14b728c54efb246e451fb4964f16069840bdc",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-google/internal/conformance/ai_google/testdata/case-005.json",
+      "sha256": "61bdadc3fb05ecda0761079dba544c135a48949f48c753332456ccc5477a46f1",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-google/internal/conformance/ai_google/testdata/case-007.json",
+      "sha256": "c94e623c4fdc1b2268b38d4e22f2ad8feebc2e9f08ae83be2a2c5653d9f66769",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-google/internal/conformance/ai_google/testdata/reference-ledger.json",
+      "sha256": "f4851d2572772813b7464ab950f9bd854db9721285653a71ebc6547800c57ab3",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-models/internal/conformance/ai_models/testdata/reference-ledger.json",
+      "sha256": "608d388c35717cfce56469b2769dc31ab1728fbd5cdb771a4cab710a50fd79bd",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-000.json",
+      "sha256": "903e578c3f1958571656b8cbc7dc0b04e28c281f31c28f4a74f24bcab45e2d38",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-001.json",
+      "sha256": "002cced42ded12034781c48157ad5edc362f2241909bf605d94ffb9dea092030",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-003.json",
+      "sha256": "fd8fdb676faef8eafc8a0ba3a0b23f44c349332af5ee933b8d33ed0ec7431652",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-004.json",
+      "sha256": "538de14537d49fbaec546151a3b218031089a97dd05f7c07bac8e403c1096f9e",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-005.json",
+      "sha256": "d4c1ff649965c11d2429e4a27c8177a34d3e552a5d2c570a7659911df197bfd1",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-007.json",
+      "sha256": "c508995cee9d85aee3cf80aa0f6083ff323668ea7917da4dc1be4430842e1287",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-008.json",
+      "sha256": "5fbd1d5fe71d3af5a4a2b8d645de8b354ee9e7688eef5982ffb84ff695fc241f",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-009.json",
+      "sha256": "48be835a61f8c7a2ec4121e25edd54dd1ce60e323a40cb56d1cf33cc544ceed1",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-011.json",
+      "sha256": "4a850d722f813392dcaf60a55570b4eafa1d1334538ef24b3c7e9810b101bdc7",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-012.json",
+      "sha256": "01e6ac6768b059a5fe768259ef86c1c12035bec808c217b526e789895240c006",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-013.json",
+      "sha256": "d5d58620ef742322b33af851bb2da9efc6e3ca969664ebc12f23a35d128a98df",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-015.json",
+      "sha256": "dbfcdbcce72b4ea28746537a46676d8d2cea36d36b0b25ed569d1371fb7add7f",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/case-016.json",
+      "sha256": "5516986aba82a3eba33d036c39cf78e6cbd9e330fa7282bf4a3390a515114d8d",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-openai/internal/conformance/ai_openai/testdata/reference-ledger.json",
+      "sha256": "6c80e0dcf8dd39996bad7e58859fc4739dba12d3bba6469d7161ac5422dc7d45",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/case-000.json",
+      "sha256": "69bf785c5220aaf867c0025d0ae6a2a5c0cb12eb17d8c3316e7b3295be88e905",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/case-001.json",
+      "sha256": "58d01dd15b31c4a98a7a58d5eab9c9c91422c9a1729a6744bb2146c992cdf3f4",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/case-003.json",
+      "sha256": "d8216172fab5811edec0676a6a009bfb55c719f8cf1ed43ae869a36723e14718",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/case-004.json",
+      "sha256": "1cbd96780008ac41d8246159e106ca1a3edb48440be40e253fe8aefae224cd0d",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/case-005.json",
+      "sha256": "5c9c6390a8c35adf8b0461e134192956bd576d341e7530bc0d9445a941d08258",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/case-007.json",
+      "sha256": "f8ca6b6a1c7006a36cac46c9c741921635370ff40b48eaaf6d2e63ba77d2121d",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/case-008.json",
+      "sha256": "f51ae20f4a28d978d777bcca60725df8f73ffc5b5bf130c7ff62f11b3c118037",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-other-protocols/internal/conformance/ai_other_protocols/testdata/reference-ledger.json",
+      "sha256": "5415ab4346d32b8ce491c74d16073ae9656ad77e414344836cfe6251dcdd818c",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-providers/internal/conformance/ai_providers/testdata/reference-ledger.json",
+      "sha256": "6381f4826abf3c80a0a4f452d83c1d10c2cc1ed6fbb7ad20355d15c073abfb64",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-surface/internal/conformance/ai_surface/testdata/reference-ledger.json",
+      "sha256": "a3faa4792f7c84b34b9620d5137721b9d45a1185d77cba60367b4403ee008ffb",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-utils/internal/conformance/ai_utils/testdata/case-002.json",
+      "sha256": "948e86979bb13f4d88f3feab22bd01d393345cda7d27d5b685815bf449338d0d",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-utils/internal/conformance/ai_utils/testdata/case-010.json",
+      "sha256": "1da0675f484a3d224835c5d2b9b0b743b3a81a269c69f1b41696f24407816743",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-utils/internal/conformance/ai_utils/testdata/case-013.json",
+      "sha256": "606e73970f41eec4b17ad9f41ae3a171542009beb5e2684a8c001136f1f1bb32",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/ai-utils/internal/conformance/ai_utils/testdata/reference-ledger.json",
+      "sha256": "366f0cd7f7671899bdd4cbc40545811faceaa8c28f4b6d1d68589b2c4fafcee8",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-compaction/internal/conformance/core_compaction/testdata/case-004.json",
+      "sha256": "51ae2c40d6fb4f272597d303b917e2e9c30a36b19d3d565b3d4df9346c78c5c5",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-compaction/internal/conformance/core_compaction/testdata/case-005.json",
+      "sha256": "feff0957268586039a4ad12980ec5e5d9b5467824132eb819e21e6bbd0f1e7ed",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-contracts/internal/conformance/core_contracts/testdata/case-001.json",
+      "sha256": "8fd00adc91188b091b550b432725a849b8a9ec0fe221d2202a772c62b383cbb8",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-contracts/internal/conformance/core_contracts/testdata/case-005.json",
+      "sha256": "ef4fccc621cad16a8fdf36b610acdb57fdb61ccc1263ed76fc2d076c3d4fe64b",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-contracts/internal/conformance/core_contracts/testdata/reference-ledger.json",
+      "sha256": "0eef4f0c00db838cfd9373e76fde78221cae8d7312369ce58345813156e5b462",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-contracts/internal/conformance/core_contracts/testdata/upstream/packages/agent/test/harness/text-line-reader.test.ts.txt",
+      "sha256": "1bf5e00f4fd4ce6c2c7b4fa64ce1a427cf0aafe66714e8638254a60fbac5c514",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-contracts/internal/conformance/core_contracts/testdata/upstream/packages/agent/test/harness/truncate.test.ts.txt",
+      "sha256": "4fe8d6155d468a7843c6831a83af1b79a50edd54f69160b14e893b2bb49f8aaa",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-harness/internal/conformance/core_harness/testdata/reference-ledger.json",
+      "sha256": "e46bf1bac7d51111e909bf20dac9870a29a87146c782c49c48dae6588eaa7ea7",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-resources/internal/conformance/core_resources/testdata/case-002.json",
+      "sha256": "4df642654f5c0a5fad7b32702f97efb7ba5dc1b08893e5d183ec35407c232b21",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-resources/internal/conformance/core_resources/testdata/reference-ledger.json",
+      "sha256": "d63c68742cf211447b9bdaeafb16b8bf9247d192d872ca11144fb986b53d61bf",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-runtime/internal/conformance/core_runtime/testdata/reference-ledger.json",
+      "sha256": "39291b685146974b71b5ee1439d452d368aabef3024d747750255ee63c54cace",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-session/internal/conformance/core_session/testdata/reference-ledger.json",
+      "sha256": "9dbe98b834f6136a70c07553c460ac323bb130fa154898330e1f9d8ca398d824",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/core-session/internal/conformance/core_session/testdata/upstream/packages/agent/test/harness/jsonl-v3-stream.test.ts.txt",
+      "sha256": "8e1cd7a00197f18e0f8ec334bc073f25ee9e0305ed1a89f7c22d8ca2c2498587",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/tools-bash/internal/conformance/tools_bash/testdata/case-002.json",
+      "sha256": "e6f1333a544929a183550b02a7122f4f38e3a24afa77dff067fb2684e7b60181",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/tools-delivery/internal/conformance/tools_delivery/testdata/reference-ledger.json",
+      "sha256": "cc8eacf50c1db6b40efdbda224edcab1be6296c42f32923fa86970a6a97ca2f1",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/tools-edit/internal/conformance/tools_edit/testdata/case-005.json",
+      "sha256": "3ca9b3d6fa95efbd349f4d350265860ebe31cce9ea277897aee992d1f7ab639a",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/tools-env/internal/conformance/tools_env/testdata/case-005.json",
+      "sha256": "2193382e2d657aeea44f772a43cf840917405399f2b6ba2ac522d955105886df",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/tools-env/internal/conformance/tools_env/testdata/reference-ledger.json",
+      "sha256": "994edf765afab01c216d237cb1389fe09a6a09abb8ca1895f250b9e6cada6be5",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/tools-read/internal/conformance/tools_read/testdata/case-004.json",
+      "sha256": "ef0ab2362b6c011361afb167358d4b1cb28e2ad4233135469f268d1977c81acb",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/judges/tools-write/internal/conformance/tools_write/testdata/case-001.json",
+      "sha256": "892575c77bee88b9ce9b3ea4199e9153117cb4bf250e9388ae9cce3ee82b5551",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/API.md",
+      "sha256": "d649b266f90d675d83d25fb23de38ca599b7d612d61ddb2e1dd6616a62b61e86",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/ARCHIVED.md",
+      "sha256": "cba87d28c93249d8e10bd99161b1592bdc723977ac1fb68233c1bffa55708aad",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/README.md",
+      "sha256": "0313bb246f1c26e34f028aeb4206533201ab4a35d577d02b56cab2f9b8c6124f",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/check-plan.mts",
+      "sha256": "1d08f5355f0ba655bd03d294c3189ea84b9b45ea04129164ec433d4dea07d845",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/dependency-map.md",
+      "sha256": "fbef6790cd278b1ea21ecf9858bba2dea8b130c46b8268b33f8785a31a8eac47",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/judges/P02-contracts/ai/portsmith_judge_p02_test.go",
+      "sha256": "c464f9d4c3b5d396feb65b653f46e1b2062ac39698f51ae398cca57c6401cae2",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/judges/P07-deepseek/providers/deepseek/portsmith_judge_p07_test.go",
+      "sha256": "884f638492e4480ba5b218dd3f54804bfa8e6baef01bde21930f87bc7a670dae",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/judges/P08-read-text/tools/readfile/portsmith_judge_p08_test.go",
+      "sha256": "f6c6faf3a175d0619f310331d8e34dba3f714c3d9fc34d055ce35b4a2e26014b",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/judges/P08-read-text/tools/readfile/testdata/p08-ts.json",
+      "sha256": "f4860ad4fddd543835a53d2df0a898ed331c3b27d70a206c6662a6a361fb59cd",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/oracles.mts",
+      "sha256": "2cff23148aec132bd98600570365b7f460fcbcc7c51ab9701a5325a7ad642897",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/plan.json",
+      "sha256": "f685e29e160601492efb852d64928d1b497fc20bd4be1a290d5a5474a0e12427",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/legacy/mvp-1/validation.md",
+      "sha256": "83bcf1c0df0f874978a1938faa5132d27d967e14bb2bf87573f6c3be04607ba4",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/modules/ai.md",
+      "sha256": "ca287bea7f72a9909211cdaf33702d173c85a18763f9dae23e8988fe10fb4990",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/modules/core.md",
+      "sha256": "ab0ea5f68f55557c7510d5124ca98d0eb10b12e2300bd9c245a39e0ae60e371e",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/modules/tools.md",
+      "sha256": "5961f28b656b375fed91b8125bb2a6d1a30055aed80d72d0571b4200b4b84664",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/plan-lib.mts",
+      "sha256": "cef19a37983ea7efdcdd0766b78b74a0c793e300b6e279065de01163a8d3ebb2",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/plan.json",
+      "sha256": "3ac5a2e835a93358b5bd33b95ea5ca7ac549b0d1ae3aa67d687e4f5798c15ef0",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/prepare-full.mts",
+      "sha256": "29864251d0309745f7684986cca0711cce31521c07901e4a41332408e3f598a3",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/reference-ledger.json",
+      "sha256": "46c1ff73133a4a7ae8dccfb1be273cba6ee49b4c636474bd6eb3625a946dd5e3",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/scope-summary.json",
+      "sha256": "eede83e417484536cad922392f84cda171171beb47f3c330722a5880935b025a",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/upstream-diff.mts",
+      "sha256": "1931cd7c8fdfacf69eec95fa60c275033edd16aad991747878e0e95fea71a3ad",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/validation.md",
+      "sha256": "790cd8122c7caa6b5346e128be79ff510436c487ac2620b9f46f0ccc18cbc679",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "migration/workflow.json",
+      "sha256": "91a8c828d6dc516107ca1b564690abe8f60d9421b55267b9a3c5f88e58991162",
+      "reason": "Historical migration evidence or its reproduction materials"
+    },
+    {
+      "path": "packages/agent/harness/compaction/core_compaction_test.go",
+      "sha256": "6f5e022c3e7abfac69359877b8bc40799d4561ff3d2098594345bd3b80727a17",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/agent/harness/resources/core_resources_test.go",
+      "sha256": "f1b49b8d69f00471d8717ddca77d961a0d81feb4f20864394a5f2feb2256c26e",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/agent/harness/tools/tools_bash_test.go",
+      "sha256": "44eeadd92d516a9d0044fda79e6acfa6dbc2168dfd68ddce9ff450b25f6f2f02",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/agent/harness/tools/tools_edit_test.go",
+      "sha256": "071db5a0b9038772822b780eda35e81690408edd26c54089a1c5beefb77900cd",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/agent/harness/tools/tools_read_test.go",
+      "sha256": "a8ea91526e3906c71024c3377b06cbf7a4f77dadc7b70468837477089f9070e2",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/agent/harness/tools/tools_write_test.go",
+      "sha256": "9347dbeaee817fa959ecf023efe8f5d0316ace30f6f84b0abe61936b437483da",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/agent/harness/utils/truncate/core_contracts_test.go",
+      "sha256": "e9b891f9d389531370d342699d3a1e904be0676674078bb7498fffb31cc5aabf",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/ai/api/ai_anthropic_test.go",
+      "sha256": "462206166d2fdcddeb399f1e478f3d484d5f8e9ae5bb17d9744dc173119af94f",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/ai/api/ai_bedrock_test.go",
+      "sha256": "03661299bcf2c78ae4831a1d8a566cedee01927a9793140790ae5c2299a3e12a",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/ai/api/ai_google_test.go",
+      "sha256": "1e6bcb5d1c127f6743f69eb9fd64cc3b370bc6174b31fd58d826713393199eb5",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/ai/utils/ai_foundation_types_test.go",
+      "sha256": "059bb5c6fb8b03a8518d450cf0a518e7a7f981a9aac5ccbe87c853f4e17153d0",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/ai/utils/ai_utils_test.go",
+      "sha256": "5764072a9bb8179e50d30e8cd3a5338553d6545787c6cd3af9b5951ea59dde70",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    },
+    {
+      "path": "packages/ai/utils/eventstream/portsmith_judge_eventstream_test.go",
+      "sha256": "46a16b4ac6ec010c16068f220a4ee4669004814da4c776100e638963779d6c58",
+      "reason": "Multilingual behavioral test data or upstream reference fixtures"
+    }
+  ],
+  "policy": "Keep original hash-bound migration evidence and Unicode behavioral fixtures byte-for-byte; English is used for maintained product messages and public guides."
+}

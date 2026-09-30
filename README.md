@@ -2,7 +2,7 @@
 
 A Go port of selected Pi AI, agent-core, and built-in tool capabilities, with an embeddable SDK and native command-line programs.
 
-**Status: experimental; first planned migration completed.** [Portsmith](https://github.com/minifish-org/portsmith), using Pi Coding Agent and DeepSeek, completed 26 accepted steps in three modules. All three module receipts report passing recorded verification. This is not a claim of complete Pi parity, production readiness, or live validation of every provider.
+**Status: experimental; the original migration and embedded SDK increment are complete.** [Portsmith](https://github.com/minifish-org/portsmith), using Pi Coding Agent and DeepSeek, completed 26 accepted steps in three modules, followed by seven additive embedded-SDK steps. All four module receipts report passing recorded verification. This is not a claim of complete Pi parity, production readiness, or live validation of every provider.
 
 ## Build without CGO
 
@@ -15,7 +15,7 @@ CGO_ENABLED=0 go build -mod=readonly -trimpath -o ./bin/ ./cmd/...
 ./bin/pith --help
 ```
 
-`pith` runs a non-interactive agent loop with read/write/edit/bash tools. `pith-ai` provides lower-level AI commands; inspect its command help for its supported interface. The default SDK/CLI path currently uses an OpenAI-compatible Chat Completions endpoint; the existence of other provider packages does not make every provider available through this CLI.
+`pith` runs a non-interactive agent loop with read/write/edit/bash tools. `pith-ai` provides lower-level AI commands; inspect its command help for its supported interface. The original convenience SDK/CLI path uses an OpenAI-compatible Chat Completions endpoint; the existence of other provider packages does not make every provider available through this CLI.
 
 ## Try an agent turn
 
@@ -38,13 +38,14 @@ This makes a paid model call and authorizes local file and shell operations. `--
 | Area | Purpose |
 | --- | --- |
 | `packages/ai/` | Models, provider adapters, streaming, authentication, and utilities |
+| `packages/coding-agent/` | Embedded coding-agent sessions, configuration, tools, events and lifecycle |
 | `packages/agent/` | Agent execution, harness/session/resource support, SDK, and tools |
 | `packages/chord/`, `packages/telemetry/` | Supporting contracts and instrumentation |
 | `cmd/pith/`, `cmd/pith-ai/` | Native command-line entry points |
 | `internal/conformance/` | Independent migration acceptance tests |
 | `migration/` | Pinned inputs, contracts, judges, source maps, and original receipts |
 
-Start embedding at `packages/agent/sdk`. Interfaces and behavior may change before a stable release. Review the implementation and tests for the exact supported surface.
+Start embedding at [`packages/coding-agent`](docs/sdk/README.md); see the [examples](examples/embedded-sdk) and [compatibility guide](docs/sdk/compatibility.md). The earlier `packages/agent/sdk` convenience loop remains available. Interfaces and behavior may change before a stable release. Review the implementation and tests for the exact supported surface.
 
 ## Verification and evidence
 
@@ -62,10 +63,11 @@ The original modules were committed as:
 | AI | 13 | `a5aeab8214f672d5d83e35fec78bf4d0daf67473` |
 | Core | 7 | `adbc36268f0c0cad3f5aad7c591b5f0a18f79ac0` |
 | Tools | 6 | `0d4d1479739fcbe849fec21fc02cf8ac31aee237` |
+| Embedded SDK | 7 | `887fbc1a5b402a3fdfbb9636a17855cfeeea12f7` |
 
 See [the evidence summary](docs/evidence/2026-09-29.md) and the original `migration/results/*.json` receipts. Passing a fixed judge suite does not prove behavior outside its contracts. `fullParityProven` is explicitly false in those receipts.
 
-The migration directory is retained as historical evidence, including Chinese planning documents. Preparation-time status labels describe the original inputs; final receipts and commits describe the completed run. Do not rerun the original plan in this populated checkout expecting it to overwrite accepted code.
+The migration directory is retained as historical evidence, including original planning documents; see the [language audit](docs/language-audit.md). Preparation-time status labels describe the original inputs; final receipts and commits describe the completed run. Do not rerun the original plan in this populated checkout expecting it to overwrite accepted code.
 
 ## Direction
 
