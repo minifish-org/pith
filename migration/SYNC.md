@@ -6,11 +6,13 @@ existing DeepSeek configuration. TypeScript Portsmith is the historical
 migration reference.
 
 `sync.json` records the last accepted upstream revision and reviewed source
-ownership. The initial config imports 694 TypeScript inputs from the original
-and embedded-SDK migration plans, including their TS reference files, and maps
-them to 403 existing Go files. Fine source maps take precedence over conservative
-batch ownership. These counts describe the initial import, not a claim of
-one-to-one file parity or exhaustive semantic equivalence.
+ownership. The reviewed initial config tracks 334 implementation sources and
+360 reference-only inputs from the original and embedded-SDK plans, with 403
+existing Go targets. Fine source maps take precedence over conservative batch
+ownership. A reference is context, not implementation ownership: changing an
+upstream test does not grant permission to rewrite every output of its old
+batch. These counts do not imply one-to-one file parity or exhaustive semantic
+equivalence.
 
 `upstream.json`, the original plans and their receipts remain historical
 provenance. After future acceptance, `sync.json.revision` becomes the current

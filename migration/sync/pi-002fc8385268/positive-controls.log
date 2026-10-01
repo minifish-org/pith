@@ -1,0 +1,36 @@
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/completions
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/openrouter
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/anthropic
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/responses
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/azure
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/codex
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/google
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/vertex
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/mistral
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/pi
+=== RUN   TestPortsmithJudgeProviderFixturesPositiveControl/bedrock
+--- PASS: TestPortsmithJudgeProviderFixturesPositiveControl (0.01s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/completions (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/openrouter (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/anthropic (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/responses (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/azure (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/codex (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/google (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/vertex (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/mistral (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/pi (0.00s)
+    --- PASS: TestPortsmithJudgeProviderFixturesPositiveControl/bedrock (0.00s)
+=== RUN   TestPortsmithJudgeCopilotEffortMetadata
+--- PASS: TestPortsmithJudgeCopilotEffortMetadata (0.00s)
+=== RUN   TestPortsmithJudgeCodexWebsocketFixturePositiveControl
+--- PASS: TestPortsmithJudgeCodexWebsocketFixturePositiveControl (0.00s)
+PASS
+ok  	github.com/minifish-org/pith/packages/ai/api	0.425s
+testing: warning: no tests to run
+PASS
+ok  	github.com/minifish-org/pith/packages/agent	0.394s [no tests to run]
+testing: warning: no tests to run
+PASS
+ok  	github.com/minifish-org/pith/packages/coding-agent	0.444s [no tests to run]

@@ -1,0 +1,793 @@
+{
+  "before": "f07218c4d4bbc12bef056a7058c3dd49dfe41abe",
+  "after": "002fc8385268300ca91a5fc95f935c2afbbdac02",
+  "method": "Cumulative Git diff, including paths outside the initial watch roots; rename detection disabled to account for both old and new paths.",
+  "changes": [
+    {
+      "status": "M",
+      "source": "packages/agent/CHANGELOG.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/agent/src/agent.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "A",
+      "source": "packages/agent/src/harness/pico3/legacy-tracker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/agent/src/harness/pico3/session.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/agent/src/harness/pico3/view.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/agent/test/agent.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/agent/test/harness/pico3/spec-view-events.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/CHANGELOG.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/README.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/scripts/generate-models.ts",
+      "disposition": "already-satisfied",
+      "reason": "Generated model file did not change. Frozen Pith github-copilot catalog already has Opus 5.5 off/minimal=null and low/medium/high/xhigh/max effort values. Preserve and independently test these values; do not port the TS generator."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/anthropic-messages.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/azure-openai-responses.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/bedrock-converse-stream.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/google-generative-ai.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/google-vertex.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/mistral-conversations.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/openai-codex-responses.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/openai-completions.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/openai-responses-shared.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/openai-responses.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/pi-messages.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/api/simple-options.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/src/types.ts",
+      "disposition": "implement",
+      "reason": "Provider event observer option and adapter/core forwarding."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/anthropic-sse-parsing.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/azure-openai-base-url.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/bedrock-raw-stop-reason.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/google-raw-stop-reason.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/mistral-http-transport.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/openai-codex-stream.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "A",
+      "source": "packages/ai/test/openai-completions-provider-stream-event.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/openai-responses-terminal-event.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/ai/test/pi-messages.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/src/api.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/astra/README.md",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/astra/index.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/cow/README.md",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/cow/apply-immutable.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/cow/diff.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/cow/draft.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/cow/index.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/cow/tracker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/diff.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/draft.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/src/delta/index.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/tracker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/src/delta/value.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/src/index.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/src/services/provider.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/src/services/state-internals.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/src/services/state.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "D",
+      "source": "packages/chord/src/state/diff.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "D",
+      "source": "packages/chord/src/state/draft.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "D",
+      "source": "packages/chord/src/state/value.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/src/types.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-astra/astra.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-astra/benchmark-head.worker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-astra/benchmark.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-astra/benchmark.worker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-astra/retention.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-astra/retention.worker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/delta-clone.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/benchmark.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/benchmark.worker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/core.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/cow.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/diff.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/draft.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/fuzz.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/retention.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/retention.worker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "A",
+      "source": "packages/chord/test/delta-cow/value.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/delta-retention.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/delta-retention.worker.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/delta-traversal.bench.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/delta.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/services.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/state-diff.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/state-draft.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/state-fuzz.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/state-value.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/chord/test/state.test.ts",
+      "disposition": "excluded",
+      "reason": "Original migration accepts Context/JsonValue/JsonRepresentation only, not Pico3 or Chord delta/state/replication/benchmarks. These accepted APIs remain unchanged."
+    },
+    {
+      "status": "M",
+      "source": "packages/client/CHANGELOG.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/CHANGELOG.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/docs/custom-provider.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/docs/extensions.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/docs/packages.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/examples/extensions/README.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "A",
+      "source": "packages/coding-agent/examples/extensions/debug-provider.ts",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/core/extensions/index.ts",
+      "disposition": "adapt",
+      "reason": "Expose provider observer and provider_stream_event through the native Go embedded SDK. npm extension runtime remains excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/core/extensions/loader.ts",
+      "disposition": "excluded",
+      "reason": "npm extension host dependency warnings/peer suppression do not apply to native Go SDK hooks/resources; TS extension loader and package installer were explicitly excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/core/extensions/types.ts",
+      "disposition": "adapt",
+      "reason": "Expose provider observer and provider_stream_event through the native Go embedded SDK. npm extension runtime remains excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/core/package-manager.ts",
+      "disposition": "excluded",
+      "reason": "npm extension host dependency warnings/peer suppression do not apply to native Go SDK hooks/resources; TS extension loader and package installer were explicitly excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/core/resource-loader.ts",
+      "disposition": "excluded",
+      "reason": "npm extension host dependency warnings/peer suppression do not apply to native Go SDK hooks/resources; TS extension loader and package installer were explicitly excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/core/sdk.ts",
+      "disposition": "adapt",
+      "reason": "Expose provider observer and provider_stream_event through the native Go embedded SDK. npm extension runtime remains excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/index.ts",
+      "disposition": "adapt",
+      "reason": "Expose provider observer and provider_stream_event through the native Go embedded SDK. npm extension runtime remains excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/main.ts",
+      "disposition": "excluded",
+      "reason": "Interactive CLI/TUI is outside the embedded SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/src/modes/interactive/interactive-mode.ts",
+      "disposition": "excluded",
+      "reason": "Interactive CLI/TUI is outside the embedded SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/test/extensions-discovery.test.ts",
+      "disposition": "excluded",
+      "reason": "npm extension host dependency warnings/peer suppression do not apply to native Go SDK hooks/resources; TS extension loader and package installer were explicitly excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/test/package-manager.test.ts",
+      "disposition": "excluded",
+      "reason": "npm extension host dependency warnings/peer suppression do not apply to native Go SDK hooks/resources; TS extension loader and package installer were explicitly excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/test/resource-loader.test.ts",
+      "disposition": "excluded",
+      "reason": "npm extension host dependency warnings/peer suppression do not apply to native Go SDK hooks/resources; TS extension loader and package installer were explicitly excluded."
+    },
+    {
+      "status": "M",
+      "source": "packages/coding-agent/test/sdk-stream-options.test.ts",
+      "disposition": "acceptance-reference",
+      "reason": "Translate changed behavior into frozen Go protocol/integration judges and candidate self-tests; preserve old acceptance evidence."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/CHANGELOG.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/README.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/docs/pico-v5-handoff.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/docs/pico-v5-live-registries.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/docs/pico-v5.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/package.json",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/env/index.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/env/node.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/env/utils/adaptive-publisher.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/env/utils/output-capture.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/env/utils/truncate.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/storage/jsonl/index.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/storage/jsonl/node.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/src/storage/jsonl/storage.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/src/storage/memory.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "A",
+      "source": "packages/durable/test/jsonl-storage.test.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/test/memory-storage.test.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/test/storage-benchmark.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/test/storage-memory.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/test/storage-runtime-boundary.test.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/durable/test/storage.bench.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/protocol/CHANGELOG.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/server/CHANGELOG.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/session-backends/sqlite-node/CHANGELOG.md",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/telemetry/CHANGELOG.md",
+      "disposition": "documentation-reference",
+      "reason": "Upstream documentation/release note/example context, with native usage documented in a new Go SDK guide. Do not copy a TS extension/TUI example into the native runtime."
+    },
+    {
+      "status": "M",
+      "source": "packages/tui/CHANGELOG.md",
+      "disposition": "excluded",
+      "reason": "Interactive CLI/TUI is outside the embedded SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/tui/src/autocomplete.ts",
+      "disposition": "excluded",
+      "reason": "Interactive CLI/TUI is outside the embedded SDK target."
+    },
+    {
+      "status": "M",
+      "source": "packages/tui/test/autocomplete-skill-slash.test.ts",
+      "disposition": "excluded",
+      "reason": "Interactive CLI/TUI is outside the embedded SDK target."
+    },
+    {
+      "status": "M",
+      "source": "scripts/check-browser-smoke.mjs",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    },
+    {
+      "status": "M",
+      "source": "scripts/durable-browser-smoke-entry.ts",
+      "disposition": "excluded",
+      "reason": "Separate upstream services/storage/browser harnesses are outside the original AI/core/tools plus headless SDK target."
+    }
+  ]
+}

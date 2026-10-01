@@ -1,0 +1,31 @@
+{
+  "command": "portsmith sync --upstream 002fc8385268300ca91a5fc95f935c2afbbdac02 --check",
+  "exitCode": 0,
+  "discoveryStatus": "prepared",
+  "blocked": [],
+  "canStart": true,
+  "modules": [
+    {
+      "id": "pi-002fc8385268",
+      "status": "pending"
+    }
+  ],
+  "next": "pi-002fc8385268/changes/ai",
+  "note": "Preparation status does not mean the Go module is implemented. Use --commit to call the model and save progress.",
+  "preparation": {
+    "modules": [
+      {
+        "id": "pi-002fc8385268",
+        "readyBatches": 1,
+        "totalBatches": 1
+      }
+    ],
+    "policy": "all-prepared",
+    "ready": true,
+    "readyBatches": 1,
+    "totalBatches": 1
+  },
+  "preparedSteps": 3,
+  "status": "ready",
+  "verifiedSteps": 0
+}

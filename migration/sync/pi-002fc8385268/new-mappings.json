@@ -1,0 +1,126 @@
+[
+  {
+    "source": "packages/agent/src/agent-loop.ts",
+    "goFiles": [
+      "packages/agent/agent_loop.go"
+    ]
+  },
+  {
+    "source": "packages/agent/src/agent.ts",
+    "goFiles": [
+      "packages/agent/agent.go"
+    ]
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "goFiles": [
+      "packages/agent/types/types.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.ts",
+    "goFiles": [
+      "packages/ai/api/anthropic_messages.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/azure-openai-responses.ts",
+    "goFiles": [
+      "packages/ai/api/azure_openai_responses.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "goFiles": [
+      "packages/ai/api/bedrock_converse_stream.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/google-generative-ai.ts",
+    "goFiles": [
+      "packages/ai/api/google_generative_ai.go",
+      "packages/ai/api/google_shared.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/google-vertex.ts",
+    "goFiles": [
+      "packages/ai/api/google_vertex.go",
+      "packages/ai/api/google_shared.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/mistral-conversations.ts",
+    "goFiles": [
+      "packages/ai/api/mistral_conversations.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "goFiles": [
+      "packages/ai/api/openai_codex_responses.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.ts",
+    "goFiles": [
+      "packages/ai/api/openai_completions.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "goFiles": [
+      "packages/ai/api/openai_responses_shared.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses.ts",
+    "goFiles": [
+      "packages/ai/api/openai_responses.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "goFiles": [
+      "packages/ai/api/pi_messages.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/simple-options.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/types.ts",
+    "goFiles": [
+      "packages/ai/types/types.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/extensions/index.ts",
+    "goFiles": [
+      "packages/coding-agent/events.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/extensions/types.ts",
+    "goFiles": [
+      "packages/coding-agent/events.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "goFiles": [
+      "packages/coding-agent/sdk.go",
+      "packages/coding-agent/agent_session.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "goFiles": [
+      "packages/coding-agent/sdk.go",
+      "packages/coding-agent/events.go"
+    ]
+  }
+]
