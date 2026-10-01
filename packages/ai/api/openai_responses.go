@@ -275,6 +275,7 @@ func OpenAIResponsesStream(model *types.Model, context *types.TranscriptContext,
 		}
 
 		if err := ProcessResponsesStream(next, &output, stream, model, &OpenAIResponsesStreamOptions{
+			OnProviderStreamEvent:      providerOptionObserver(options),
 			ServiceTier:                providerOptionServiceTier(options),
 			GrammarToolInputProperties: grammarProperties,
 			ApplyServiceTierPricing: func(usage *types.Usage, serviceTier *string) {
@@ -594,6 +595,14 @@ func providerOptionServiceTier(options *OpenAIResponsesOptions) *string {
 		return nil
 	}
 	return options.ServiceTier
+}
+
+// providerOptionObserver returns the optional provider-stream-event observer.
+func providerOptionObserver(options *OpenAIResponsesOptions) func(data any, model *types.Model) error {
+	if options == nil {
+		return nil
+	}
+	return options.OnProviderStreamEvent
 }
 
 func providerSimpleHeaders(options *types.SimpleStreamOptions) types.ProviderHeaders {

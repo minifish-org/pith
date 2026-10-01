@@ -18,6 +18,7 @@ import (
 	"context"
 	"encoding/base64"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 	"strings"
@@ -296,8 +297,9 @@ func OpenAICodexResponsesStream(model *types.Model, context *types.TranscriptCon
 				stream.End(&output)
 				return
 			}
-			// Before the message stream starts, fall back to SSE.
-			if startEmitted {
+			// Before the message stream starts, fall back to SSE, except for a
+			// non-transport observer failure.
+			if startEmitted || isProviderStreamEventCallbackError(wsErr) {
 				terminateCodexStream(stream, &output, model, wsErr, aborted(codexOptionSignal(options)))
 				return
 			}
@@ -345,7 +347,7 @@ func OpenAICodexResponsesStream(model *types.Model, context *types.TranscriptCon
 				return nil, false, nil
 			}
 			return event, true, nil
-		}, &output)
+		}, &output, model, codexOptionObserver(options))
 
 		if err := ProcessResponsesStream(next, &output, stream, model, &OpenAIResponsesStreamOptions{
 			ServiceTier:                codexOptionServiceTier(options),
@@ -562,7 +564,31 @@ func resolveCodexWebSocketURL(baseURL string) string {
 
 // codexNextFunc normalizes Codex protocol events before they reach the shared
 // Responses processor.
-func codexNextFunc(read func() (map[string]any, bool, error), output *types.AssistantMessage) func() (map[string]any, bool, error) {
+// providerStreamEventCallbackError wraps an OnProviderStreamEvent failure so
+// Codex never treats it as a transient transport error that could trigger a
+// WebSocket retry or SSE fallback. The original error text is preserved through
+// Error/Unwrap.
+type providerStreamEventCallbackError struct {
+	cause error
+}
+
+func (e *providerStreamEventCallbackError) Error() string {
+	if e.cause == nil {
+		return "provider stream event callback failed"
+	}
+	return e.cause.Error()
+}
+
+func (e *providerStreamEventCallbackError) Unwrap() error { return e.cause }
+
+// isProviderStreamEventCallbackError reports whether err (or a wrapped error)
+// is an observer callback failure.
+func isProviderStreamEventCallbackError(err error) bool {
+	var target *providerStreamEventCallbackError
+	return errors.As(err, &target)
+}
+
+func codexNextFunc(read func() (map[string]any, bool, error), output *types.AssistantMessage, model *types.Model, observer func(data any, model *types.Model) error) func() (map[string]any, bool, error) {
 	stopped := false
 	return func() (map[string]any, bool, error) {
 		if stopped {
@@ -575,6 +601,13 @@ func codexNextFunc(read func() (map[string]any, bool, error), output *types.Assi
 			}
 			if !ok {
 				return nil, false, nil
+			}
+			if observer != nil {
+				// Observe the raw Codex event before mapping. Wrap the error so it
+				// stays out of Codex's WebSocket retry and SSE fallback path.
+				if observeErr := observer(event, model); observeErr != nil {
+					return nil, false, &providerStreamEventCallbackError{cause: observeErr}
+				}
 			}
 			eventType, _ := stringValue(event["type"])
 			switch eventType {
@@ -1001,7 +1034,7 @@ func processCodexWebSocket(url string, body map[string]any, model *types.Model, 
 		}
 		return event, true, nil
 	}
-	next := codexNextFunc(rawNext, output)
+	next := codexNextFunc(rawNext, output, model, codexOptionObserver(options))
 
 	if err := ProcessResponsesStream(next, output, stream, model, &OpenAIResponsesStreamOptions{
 		ServiceTier:                codexOptionServiceTier(options),
@@ -1123,6 +1156,13 @@ func codexOptionSignal(options *OpenAICodexResponsesOptions) <-chan struct{} {
 		return nil
 	}
 	return options.Signal
+}
+
+func codexOptionObserver(options *OpenAICodexResponsesOptions) func(data any, model *types.Model) error {
+	if options == nil {
+		return nil
+	}
+	return options.OnProviderStreamEvent
 }
 
 func codexOptionServiceTier(options *OpenAICodexResponsesOptions) *string {

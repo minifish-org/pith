@@ -324,7 +324,7 @@ func OpenAICompletionsStream(model *types.Model, context *types.TranscriptContex
 				return nil, false, nil
 			}
 			return event, true, nil
-		}, &output, stream, model, compat, grammarProperties)
+		}, &output, stream, model, compat, grammarProperties, completionsOptionObserver(options))
 		if processErr != nil {
 			terminateCompletionsStream(stream, &output, processErr, aborted(completionsOptionSignal(options)))
 			return
@@ -1340,7 +1340,7 @@ func finalizeCompletionsToolCall(block *completionsToolCallBlock, output *types.
 // processOpenAICompletionsEvents consumes chat completion chunks and drives the
 // assistant message stream. It returns only fatal protocol errors; provider
 // finish reasons are encoded in the assistant message.
-func processOpenAICompletionsEvents(next func() (map[string]any, bool, error), output *types.AssistantMessage, stream *types.AssistantMessageEventStream, model *types.Model, compat resolvedOpenAICompletionsCompat, grammarProperties map[string]string) error {
+func processOpenAICompletionsEvents(next func() (map[string]any, bool, error), output *types.AssistantMessage, stream *types.AssistantMessageEventStream, model *types.Model, compat resolvedOpenAICompletionsCompat, grammarProperties map[string]string, observer func(data any, model *types.Model) error) error {
 	textBlock := (*types.TextContent)(nil)
 	textIndex := -1
 	thinkingBlock := (*types.ThinkingContent)(nil)
@@ -1447,6 +1447,13 @@ func processOpenAICompletionsEvents(next func() (map[string]any, bool, error), o
 		}
 		if !ok {
 			break
+		}
+		if observer != nil {
+			// Observe the raw parsed chunk before normalization. A returned error
+			// stops the stream and is never treated as a transport failure.
+			if observeErr := observer(chunk, model); observeErr != nil {
+				return observeErr
+			}
 		}
 		if id, ok := stringValue(chunk["id"]); ok && output.ResponseId == nil {
 			output.ResponseId = &id
@@ -1746,6 +1753,13 @@ func completionsOptionSessionID(options *OpenAICompletionsOptions) *string {
 		return nil
 	}
 	return options.SessionId
+}
+
+func completionsOptionObserver(options *OpenAICompletionsOptions) func(data any, model *types.Model) error {
+	if options == nil {
+		return nil
+	}
+	return options.OnProviderStreamEvent
 }
 
 func completionsOptionSignal(options *OpenAICompletionsOptions) <-chan struct{} {

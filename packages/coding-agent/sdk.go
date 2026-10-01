@@ -45,6 +45,15 @@ type SessionOptions struct {
 	// Policy bounds retries, turns and compaction.
 	Policy RunPolicy
 
+	// OnProviderStreamEvent observes each parsed provider stream event before Pi
+	// normalization. It is invoked synchronously, in stream order, with the
+	// model of the current request and read-only adapter-owned event data. It is
+	// preserved across agent rebuilds and model changes. A returned error fails
+	// the logical request with its original text and is never retried, replayed
+	// or recovered from. Session subscribers receive a transient
+	// provider_stream_event before the callback runs, even when this is nil.
+	OnProviderStreamEvent func(data any, model *aitypes.Model) error
+
 	// ownsManager is set when CreateAgentSession creates the manager itself.
 	ownsManager bool
 }

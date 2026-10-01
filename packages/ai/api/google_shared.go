@@ -987,7 +987,7 @@ func iterateGoogleSSE(ctx context.Context, body io.Reader, signal <-chan struct{
 
 // consumeGoogleStream processes the SSE response, emitting the assistant stream
 // events and mutating output. It closes the trailing open block at EOF.
-func consumeGoogleStream(ctx context.Context, model *types.Model, stream *types.AssistantMessageEventStream, output *types.AssistantMessage, body io.Reader, signal <-chan struct{}) error {
+func consumeGoogleStream(ctx context.Context, model *types.Model, stream *types.AssistantMessageEventStream, output *types.AssistantMessage, body io.Reader, signal <-chan struct{}, observer func(data any, model *types.Model) error) error {
 	currentKind := ""
 	var textBlock *types.TextContent
 	var thinkingBlock *types.ThinkingContent
@@ -1016,6 +1016,13 @@ func consumeGoogleStream(ctx context.Context, model *types.Model, stream *types.
 		var chunk googleGenerateContentResponse
 		if err := json.Unmarshal(payload, &chunk); err != nil {
 			return fmt.Errorf("Invalid Google SSE JSON: %w", err)
+		}
+		if observer != nil {
+			// Observe the parsed SDK response before normalization. Google's decoder
+			// may already discard unknown fields; the observer sees what it produced.
+			if observeErr := observer(chunk, model); observeErr != nil {
+				return observeErr
+			}
 		}
 
 		// responseId is output-only; keep the first non-empty value.

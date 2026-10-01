@@ -125,7 +125,7 @@ func GoogleGenerativeAIStream(model *types.Model, context *types.TranscriptConte
 		}
 
 		stream.Push(types.NewStartEvent(output))
-		if err := consumeGoogleStream(requestContext, model, stream, &output, response.Body, signal); err != nil {
+		if err := consumeGoogleStream(requestContext, model, stream, &output, response.Body, signal, googleOptionObserver(options)); err != nil {
 			fail(err)
 			return
 		}
@@ -248,4 +248,12 @@ func googleGenerativeAIBudget(model *types.Model, level ResolvedGoogleThinkingLe
 	default:
 		return -1
 	}
+}
+
+// googleOptionObserver returns the optional provider-stream-event observer.
+func googleOptionObserver(options *GoogleOptions) func(data any, model *types.Model) error {
+	if options == nil {
+		return nil
+	}
+	return options.OnProviderStreamEvent
 }

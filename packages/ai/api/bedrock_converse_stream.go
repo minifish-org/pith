@@ -302,6 +302,14 @@ func BedrockConverseStream(model *types.Model, transcript *types.TranscriptConte
 			return
 		}
 		for event := range converseStream.Events() {
+			if options.OnProviderStreamEvent != nil {
+				// Observe the parsed SDK event before normalization. Bedrock's decoder may
+				// already discard unknown fields; the observer sees what it produced.
+				if observeErr := options.OnProviderStreamEvent(event, model); observeErr != nil {
+					fail(observeErr)
+					return
+				}
+			}
 			switch item := event.(type) {
 			case *bedrocktypes.ConverseStreamOutputMemberMessageStart:
 				if item.Value.Role != bedrocktypes.ConversationRoleAssistant {

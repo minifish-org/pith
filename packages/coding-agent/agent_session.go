@@ -124,6 +124,11 @@ type AgentSession struct {
 	thinking    agenttypes.ThinkingLevel
 	ownsManager bool
 
+	// onProviderStreamEvent is the caller-supplied observer copied from
+	// SessionOptions. It is read at call time so agent rebuilds and model
+	// changes keep using the latest callback without re-plumbing.
+	onProviderStreamEvent func(data any, model *aitypes.Model) error
+
 	agent            *agentcore.Agent
 	unsubscribeAgent func()
 
@@ -193,16 +198,17 @@ func CreateAgentSession(options SessionOptions) (*AgentSession, error) {
 	}
 
 	session := &AgentSession{
-		cwd:         cwd,
-		manager:     options.Manager,
-		registry:    options.Tools,
-		resources:   resourceSet,
-		settings:    options.Settings,
-		policy:      options.Policy,
-		model:       model,
-		modelConfig: options.Model,
-		thinking:    thinking,
-		ownsManager: options.ownsManager,
+		cwd:                   cwd,
+		manager:               options.Manager,
+		registry:              options.Tools,
+		resources:             resourceSet,
+		settings:              options.Settings,
+		policy:                options.Policy,
+		model:                 model,
+		modelConfig:           options.Model,
+		thinking:              thinking,
+		ownsManager:           options.ownsManager,
+		onProviderStreamEvent: options.OnProviderStreamEvent,
 	}
 
 	session.mu.Lock()
@@ -274,6 +280,11 @@ func (s *AgentSession) buildAgentLocked() (*agentcore.Agent, func(), error) {
 		GetApiKey:    getAPIKey,
 		SessionId:    s.manager.SessionID(),
 		FinishTurn:   s.finishTurn,
+		// The observer is always installed so native subscribers receive
+		// transient provider events even without an explicit callback. It
+		// reads s.onProviderStreamEvent at call time, preserving the callback
+		// across rebuilds and model changes.
+		OnProviderStreamEvent: s.observeProviderStreamEvent,
 	}
 	built, err := agentcore.NewAgent(options)
 	if err != nil {
@@ -374,6 +385,33 @@ func (s *AgentSession) publish(event SessionEvent) {
 			entry.listener(event)
 		}()
 	}
+}
+
+// observeProviderStreamEvent is the session's provider stream observer. It is
+// installed on every per-session agent (and reinstalled on each rebuild) and is
+// invoked synchronously by the provider adapter as it parses each stream event.
+//
+// Ordering is deterministic: subscribers are notified first, then the explicit
+// OnProviderStreamEvent callback runs. The callback is optional, so a session
+// with subscribers but no callback still receives events. The callback error is
+// returned unchanged so the provider adapter can fail the logical request with
+// its original text; this function performs no recovery. All user code runs
+// outside the session lock (publish only holds it to copy the subscriber list).
+func (s *AgentSession) observeProviderStreamEvent(data any, model *aitypes.Model) error {
+	event := SessionEvent{
+		Type: SessionEventProviderStreamEvent,
+		Data: data,
+	}
+	if model != nil {
+		event.Provider = string(model.Provider)
+		event.API = string(model.Api)
+		event.Model = model.Id
+	}
+	s.publish(event)
+	if s.onProviderStreamEvent == nil {
+		return nil
+	}
+	return s.onProviderStreamEvent(data, model)
 }
 
 // sessionEventFromAgentEvent maps the agent lifecycle event onto the stable

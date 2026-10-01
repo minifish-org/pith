@@ -422,6 +422,11 @@ func boolValue(value any) (bool, bool) {
 // OpenAIResponsesStreamOptions are the stream options shared by the OpenAI,
 // Azure and Codex Responses processors.
 type OpenAIResponsesStreamOptions struct {
+	// OnProviderStreamEvent observes each parsed provider event before
+	// normalization. A returned error stops the stream immediately and is not a
+	// transport error. Codex wires this through its raw event mapper instead so
+	// callback failures cannot trigger WebSocket retry or SSE fallback.
+	OnProviderStreamEvent func(data any, model *types.Model) error
 	// ServiceTier is the requested service tier, used for pricing.
 	ServiceTier *string
 	// GrammarToolInputProperties maps grammar-constrained tool names to their
@@ -1522,6 +1527,11 @@ func ProcessResponsesStream(next func() (map[string]any, bool, error), output *t
 		}
 		if !ok {
 			break
+		}
+		if options != nil && options.OnProviderStreamEvent != nil {
+			if observeErr := options.OnProviderStreamEvent(event, model); observeErr != nil {
+				return observeErr
+			}
 		}
 		if err := state.applyEvent(event); err != nil {
 			return err

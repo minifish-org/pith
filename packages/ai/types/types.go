@@ -514,6 +514,15 @@ type ProviderRequestOptions struct {
 	OnPayload func(payload any, model *Model) (any, error)
 	// OnResponse is invoked after an HTTP response is received.
 	OnResponse func(response ProviderResponse, model *Model)
+	// OnProviderStreamEvent observes each parsed provider stream event before Pi
+	// normalization. It is invoked synchronously, in stream order, with the
+	// selected model identity and read-only adapter-owned event data. A returned
+	// error terminates the stream with that error text and stops observing or
+	// normalizing subsequent events; it is never treated as a transient
+	// transport error (no request retry, WebSocket retry or SSE fallback). A nil
+	// callback preserves the previous behavior. Adapter support is explicit:
+	// unsupported adapters never invoke it.
+	OnProviderStreamEvent func(data any, model *Model) error
 	// Headers holds custom HTTP headers merged over provider defaults.
 	Headers ProviderHeaders
 	// TimeoutMs is the HTTP request timeout in milliseconds.

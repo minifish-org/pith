@@ -154,7 +154,7 @@ func GoogleVertexStream(model *types.Model, context *types.TranscriptContext, op
 		}
 
 		stream.Push(types.NewStartEvent(output))
-		if err := consumeGoogleStream(requestContext, model, stream, &output, response.Body, signal); err != nil {
+		if err := consumeGoogleStream(requestContext, model, stream, &output, response.Body, signal, googleVertexOptionObserver(options)); err != nil {
 			fail(err)
 			return
 		}
@@ -486,4 +486,12 @@ func googleMetadataAccessToken(ctx context.Context) (string, error) {
 		return "", fmt.Errorf("Google metadata token response contained no access token")
 	}
 	return payload.AccessToken, nil
+}
+
+// googleVertexOptionObserver returns the optional provider-stream-event observer.
+func googleVertexOptionObserver(options *GoogleVertexOptions) func(data any, model *types.Model) error {
+	if options == nil {
+		return nil
+	}
+	return options.OnProviderStreamEvent
 }

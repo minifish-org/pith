@@ -50,6 +50,11 @@ const (
 	// sanitized diagnostic in Text; no provider secret is ever included.
 	SessionEventAutoRetryStart SessionEventType = "auto_retry_start"
 	SessionEventAutoRetryEnd   SessionEventType = "auto_retry_end"
+
+	// SessionEventProviderStreamEvent is a transient notification carrying a
+	// parsed provider stream event. It is published to subscribers and never
+	// persisted as assistant content or session transcript.
+	SessionEventProviderStreamEvent SessionEventType = "provider_stream_event"
 )
 
 // SessionEvent is the public, structured event published by AgentSession.
@@ -60,6 +65,18 @@ type SessionEvent struct {
 	Text       string                   `json:"text,omitempty"`
 	IsError    bool                     `json:"isError,omitempty"`
 	Message    *agenttypes.AgentMessage `json:"message,omitempty"`
+
+	// Provider, API and Model identify the request that produced a
+	// provider_stream_event. They are read from the model of the current
+	// request, never from a construction-time snapshot. They are empty for
+	// every other event type.
+	Provider string `json:"provider,omitempty"`
+	API      string `json:"api,omitempty"`
+	Model    string `json:"model,omitempty"`
+	// Data is the parsed adapter event exactly as handed to the observer. It is
+	// owned by the provider adapter and must be treated as read-only. It is
+	// transient: it is never serialized into the durable transcript.
+	Data any `json:"data,omitempty"`
 }
 
 // AgentSessionEvent is the upstream name of SessionEvent.

@@ -231,6 +231,7 @@ func AzureOpenAIResponsesStream(model *types.Model, context *types.TranscriptCon
 		}
 
 		if err := ProcessResponsesStream(next, &output, stream, model, &OpenAIResponsesStreamOptions{
+			OnProviderStreamEvent:      azureOptionObserver(options),
 			GrammarToolInputProperties: grammarProperties,
 		}); err != nil {
 			terminateAzureStream(stream, &output, model, err, aborted(azureOptionSignal(options)))
@@ -408,6 +409,13 @@ func terminateAzureStream(stream *types.AssistantMessageEventStream, output *typ
 	output.ErrorMessage = &message
 	stream.Push(types.NewErrorEvent(output.StopReason, *output))
 	stream.End(output)
+}
+
+func azureOptionObserver(options *AzureOpenAIResponsesOptions) func(data any, model *types.Model) error {
+	if options == nil {
+		return nil
+	}
+	return options.OnProviderStreamEvent
 }
 
 func azureOptionEnv(options *AzureOpenAIResponsesOptions) types.ProviderEnv {

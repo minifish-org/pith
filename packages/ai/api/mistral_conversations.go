@@ -110,7 +110,7 @@ func MistralConversationsStream(model *types.Model, context *types.TranscriptCon
 		defer response.Body.Close()
 
 		stream.Push(types.NewStartEvent(*output))
-		consumeErr := consumeMistralChatStream(requestContext, model, output, stream, response.Body)
+		consumeErr := consumeMistralChatStream(requestContext, model, output, stream, response.Body, mistralOptionObserver(options))
 		if consumeErr != nil {
 			mistralTerminate(stream, output, consumeErr, aborted(mistralSignal(options)))
 			return
@@ -196,6 +196,14 @@ func mistralSignal(options *MistralOptions) <-chan struct{} {
 		return nil
 	}
 	return options.Signal
+}
+
+// mistralOptionObserver returns the optional provider-stream-event observer.
+func mistralOptionObserver(options *MistralOptions) func(data any, model *types.Model) error {
+	if options == nil {
+		return nil
+	}
+	return options.OnProviderStreamEvent
 }
 
 // mistralTerminate strips the streaming scratch buffer from the partial output
@@ -631,7 +639,7 @@ func readMistralEvents(ctx context.Context, body io.Reader, yield func(map[strin
 	return nil
 }
 
-func consumeMistralChatStream(ctx context.Context, model *types.Model, output *types.AssistantMessage, stream *types.AssistantMessageEventStream, body io.Reader) error {
+func consumeMistralChatStream(ctx context.Context, model *types.Model, output *types.AssistantMessage, stream *types.AssistantMessageEventStream, body io.Reader, observer func(data any, model *types.Model) error) error {
 	currentKind := ""
 	currentIndex := -1
 	toolBlocksByKey := map[string]int{}
@@ -660,6 +668,12 @@ func consumeMistralChatStream(ctx context.Context, model *types.Model, output *t
 	}
 
 	err := readMistralEvents(ctx, body, func(completion map[string]any) error {
+		if observer != nil {
+			// Observe the raw parsed chunk before normalization.
+			if observeErr := observer(completion, model); observeErr != nil {
+				return observeErr
+			}
+		}
 		if id, ok := stringValue(completion["id"]); ok && id != "" {
 			if output.ResponseId == nil || *output.ResponseId == "" {
 				output.ResponseId = &id

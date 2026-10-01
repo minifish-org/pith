@@ -1777,6 +1777,11 @@ func AnthropicMessagesStream(model *types.Model, transcript *types.TranscriptCon
 			if !ok {
 				return fmt.Errorf("Could not parse Anthropic SSE event %s: not an object; data=%s", anthropicEventName(sse.event), sse.data)
 			}
+			if options != nil && options.OnProviderStreamEvent != nil {
+				if observeErr := options.OnProviderStreamEvent(event, model); observeErr != nil {
+					return observeErr
+				}
+			}
 			if eventType, _ := event["type"].(string); eventType == "message_start" {
 				sawMessageStart = true
 			} else if eventType, _ := event["type"].(string); eventType == "message_stop" {

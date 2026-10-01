@@ -36,13 +36,18 @@ type AgentInitialState struct {
 // AgentOptions configures an Agent. StreamFn is required unless a process-wide
 // default has been installed with SetDefaultStreamFn.
 type AgentOptions struct {
-	InitialState               *AgentInitialState
-	ConvertToLlm               func(messages []agenttypes.AgentMessage) ([]aitypes.Message, error)
-	TransformContext           func(messages []agenttypes.AgentMessage, signal <-chan struct{}) ([]agenttypes.AgentMessage, error)
-	StreamFn                   agenttypes.StreamFn
-	GetApiKey                  func(provider string) (string, bool, error)
-	OnPayload                  func(payload any, model *aitypes.Model) (any, error)
-	OnResponse                 func(response aitypes.ProviderResponse, model *aitypes.Model)
+	InitialState     *AgentInitialState
+	ConvertToLlm     func(messages []agenttypes.AgentMessage) ([]aitypes.Message, error)
+	TransformContext func(messages []agenttypes.AgentMessage, signal <-chan struct{}) ([]agenttypes.AgentMessage, error)
+	StreamFn         agenttypes.StreamFn
+	GetApiKey        func(provider string) (string, bool, error)
+	OnPayload        func(payload any, model *aitypes.Model) (any, error)
+	OnResponse       func(response aitypes.ProviderResponse, model *aitypes.Model)
+	// OnProviderStreamEvent observes each parsed provider stream event before
+	// Pi normalization. It is forwarded verbatim through every request's loop
+	// configuration into the provider SimpleStreamOptions; a returned error
+	// reaches the same provider/agent failure path as any other stream error.
+	OnProviderStreamEvent      func(data any, model *aitypes.Model) error
 	BeforeToolCall             func(context agenttypes.BeforeToolCallContext, signal <-chan struct{}) (*agenttypes.BeforeToolCallResult, error)
 	AfterToolCall              func(context agenttypes.AfterToolCallContext, signal <-chan struct{}) (*agenttypes.AfterToolCallResult, error)
 	FinishTurn                 agenttypes.FinishTurn
@@ -105,6 +110,7 @@ type Agent struct {
 	getApiKey                  func(provider string) (string, bool, error)
 	onPayload                  func(payload any, model *aitypes.Model) (any, error)
 	onResponse                 func(response aitypes.ProviderResponse, model *aitypes.Model)
+	onProviderStreamEvent      func(data any, model *aitypes.Model) error
 	beforeToolCall             func(context agenttypes.BeforeToolCallContext, signal <-chan struct{}) (*agenttypes.BeforeToolCallResult, error)
 	afterToolCall              func(context agenttypes.AfterToolCallContext, signal <-chan struct{}) (*agenttypes.AfterToolCallResult, error)
 	finishTurn                 agenttypes.FinishTurn
@@ -162,6 +168,7 @@ func NewAgent(options AgentOptions) (*Agent, error) {
 		getApiKey:                  options.GetApiKey,
 		onPayload:                  options.OnPayload,
 		onResponse:                 options.OnResponse,
+		onProviderStreamEvent:      options.OnProviderStreamEvent,
 		beforeToolCall:             options.BeforeToolCall,
 		afterToolCall:              options.AfterToolCall,
 		finishTurn:                 options.FinishTurn,
@@ -438,14 +445,16 @@ func (a *Agent) createLoopConfig(skipInitialSteeringPoll bool) agenttypes.AgentL
 	prepareNextTurnWithContext := a.prepareNextTurnWithContext
 	onPayload := a.onPayload
 	onResponse := a.onResponse
+	onProviderStreamEvent := a.onProviderStreamEvent
 	a.mu.Unlock()
 
 	options := aitypes.SimpleStreamOptions{
 		StreamOptions: aitypes.StreamOptions{
 			ProviderRequestOptions: aitypes.ProviderRequestOptions{
-				OnPayload:       onPayload,
-				OnResponse:      onResponse,
-				MaxRetryDelayMs: maxRetryDelayMs,
+				OnPayload:             onPayload,
+				OnResponse:            onResponse,
+				OnProviderStreamEvent: onProviderStreamEvent,
+				MaxRetryDelayMs:       maxRetryDelayMs,
 			},
 			Transport: transportPtr(transport),
 		},

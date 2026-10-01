@@ -63,6 +63,10 @@ func BuildBaseOptions(model *types.Model, context any, options *types.SimpleStre
 	}
 
 	result := base
+	// Every provider-request callback, including OnProviderStreamEvent, lives on
+	// the embedded ProviderRequestOptions and therefore flows through `base`
+	// unchanged. Options that simple requests cannot own (ToolChoice, Reasoning)
+	// stay out of the shared StreamOptions.
 	result.SamplingParams = samplingParams
 	result.MaxTokens = &clamped
 	result.APIKey = resolvedKey

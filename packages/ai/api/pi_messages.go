@@ -402,7 +402,10 @@ func piMessagesContent(event PiMessagesEvent) string {
 
 // readPiMessagesEvents reads pi-messages SSE frames. Frame boundaries are blank
 // lines after normalizing CRLF; only the first data line of a frame is used.
-func readPiMessagesEvents(ctx context.Context, body io.Reader, yield func(PiMessagesEvent) error) error {
+// Each event is yielded both as its narrow typed form and as the raw parsed
+// JSON object so an observer can retain provider fields the typed decoder
+// discards.
+func readPiMessagesEvents(ctx context.Context, body io.Reader, yield func(PiMessagesEvent, map[string]any) error) error {
 	buffer := ""
 	chunk := make([]byte, 8192)
 	for {
@@ -421,12 +424,12 @@ func readPiMessagesEvents(ctx context.Context, body io.Reader, yield func(PiMess
 			}
 			raw := buffer[:split]
 			buffer = buffer[split+2:]
-			event, ok, err := parsePiMessagesEvent(raw)
+			event, rawEvent, ok, err := parsePiMessagesEvent(raw)
 			if err != nil {
 				return err
 			}
 			if ok {
-				if yieldErr := yield(event); yieldErr != nil {
+				if yieldErr := yield(event, rawEvent); yieldErr != nil {
 					return yieldErr
 				}
 			}
@@ -439,18 +442,18 @@ func readPiMessagesEvents(ctx context.Context, body io.Reader, yield func(PiMess
 		}
 	}
 	if strings.TrimSpace(buffer) != "" {
-		event, ok, err := parsePiMessagesEvent(buffer)
+		event, rawEvent, ok, err := parsePiMessagesEvent(buffer)
 		if err != nil {
 			return err
 		}
 		if ok {
-			return yield(event)
+			return yield(event, rawEvent)
 		}
 	}
 	return nil
 }
 
-func parsePiMessagesEvent(raw string) (PiMessagesEvent, bool, error) {
+func parsePiMessagesEvent(raw string) (PiMessagesEvent, map[string]any, bool, error) {
 	data := ""
 	for _, line := range strings.Split(raw, "\n") {
 		if strings.HasPrefix(line, "data:") {
@@ -459,13 +462,19 @@ func parsePiMessagesEvent(raw string) (PiMessagesEvent, bool, error) {
 		}
 	}
 	if data == "" || data == "[DONE]" {
-		return PiMessagesEvent{}, false, nil
+		return PiMessagesEvent{}, nil, false, nil
+	}
+	// Retain the raw parsed object before the typed conversion so unknown
+	// provider fields are observable even though PiMessagesEvent is narrow.
+	var rawEvent map[string]any
+	if err := json.Unmarshal([]byte(data), &rawEvent); err != nil {
+		return PiMessagesEvent{}, nil, false, err
 	}
 	var event PiMessagesEvent
 	if err := json.Unmarshal([]byte(data), &event); err != nil {
-		return PiMessagesEvent{}, false, err
+		return PiMessagesEvent{}, nil, false, err
 	}
-	return event, true, nil
+	return event, rawEvent, true, nil
 }
 
 func createPiMessagesErrorEvent(model *types.Model, err error, wasAborted bool) types.AssistantMessageEvent {
@@ -656,7 +665,12 @@ func PiMessagesStream(model *types.Model, context *types.TranscriptContext, opti
 		}
 
 		var terminal bool
-		readErr := readPiMessagesEvents(requestContext, response.Body, func(piEvent PiMessagesEvent) error {
+		readErr := readPiMessagesEvents(requestContext, response.Body, func(piEvent PiMessagesEvent, rawEvent map[string]any) error {
+			if options != nil && options.OnProviderStreamEvent != nil {
+				if observeErr := options.OnProviderStreamEvent(rawEvent, model); observeErr != nil {
+					return observeErr
+				}
+			}
 			event := convertEvent(piEvent)
 			eventStream.Push(event)
 			if event.Type == types.AssistantEventDone || event.Type == types.AssistantEventError {
