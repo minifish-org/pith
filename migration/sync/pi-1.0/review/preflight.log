@@ -1,0 +1,28 @@
+{
+  "blocked": [],
+  "canStart": true,
+  "modules": [
+    {
+      "id": "pi-a13d35a742c6",
+      "status": "pending"
+    }
+  ],
+  "next": "pi-a13d35a742c6/changes/ai-foundation",
+  "note": "Preparation status does not mean the Go module is implemented. Use --commit to call the model and save progress.",
+  "preparation": {
+    "modules": [
+      {
+        "id": "pi-a13d35a742c6",
+        "readyBatches": 1,
+        "totalBatches": 1
+      }
+    ],
+    "policy": "all-prepared",
+    "ready": true,
+    "readyBatches": 1,
+    "totalBatches": 1
+  },
+  "preparedSteps": 9,
+  "status": "ready",
+  "verifiedSteps": 0
+}

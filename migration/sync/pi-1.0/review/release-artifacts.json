@@ -1,0 +1,237 @@
+{
+  "targetRevision": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "packages": [
+    {
+      "name": "@earendil-works/pi-ai",
+      "version": "1.0.0",
+      "gitHead": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+      "url": "https://registry.npmjs.org/@earendil-works/pi-ai/-/pi-ai-1.0.0.tgz",
+      "sha512": "3/W1vdDaVtpeMd23ElvJC12HLA5yS/BGqqcXF+0SK082dN7cbgNcCwguTBRBC258Ke8SzSvUW1B75iAf8w8IxA=="
+    },
+    {
+      "name": "quickjs-wasi",
+      "version": "3.6.2",
+      "url": "https://registry.npmjs.org/quickjs-wasi/-/quickjs-wasi-3.6.2.tgz",
+      "sha512": "FCqGtGOrMgzUiIrMNMA2YnsOxCNwo31dzqXvclXUC6xeT35NJLKXQJsvbeCTjvoFAwZgEAPg8U6+KAPDGXn8Mg=="
+    }
+  ],
+  "files": [
+    {
+      "name": "assets/catalog/.manifest.json",
+      "sha256": "480c62be35fc8b713133bfed66f775a90f8bfa7a90116e204e09c15ec3655680"
+    },
+    {
+      "name": "assets/catalog/amazon-bedrock.json",
+      "sha256": "b962444f8daad1e3022d3e4bd59af8e8802d6012615397015c825996219e4af5"
+    },
+    {
+      "name": "assets/catalog/ant-ling.json",
+      "sha256": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6"
+    },
+    {
+      "name": "assets/catalog/anthropic.json",
+      "sha256": "3ff00b68990382e42626ebd1b65dcc28ae3cad9e6faa8920331ba92f067f1b3a"
+    },
+    {
+      "name": "assets/catalog/azure-openai-responses.json",
+      "sha256": "adeb2cf9d944d84f81b0d633c2e4e6bfa548a806c431902bd037c5f36500be21"
+    },
+    {
+      "name": "assets/catalog/baseten.json",
+      "sha256": "b04d1423d6958bec857ffccc36726f091ec1a8f3a09cf0836b64cc94b0ee697d"
+    },
+    {
+      "name": "assets/catalog/cerebras.json",
+      "sha256": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e"
+    },
+    {
+      "name": "assets/catalog/cloudflare-ai-gateway.json",
+      "sha256": "52decade622d1d25f1af90385b1aec7331dad00d56e010a5e4d15118efae67ce"
+    },
+    {
+      "name": "assets/catalog/cloudflare-workers-ai.json",
+      "sha256": "b9f76cc83756a05920a8a7046c515919a1de918331b860a211f309bb716c4bb0"
+    },
+    {
+      "name": "assets/catalog/deepseek.json",
+      "sha256": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc"
+    },
+    {
+      "name": "assets/catalog/fireworks.json",
+      "sha256": "d6144ba451bd7a0617669527bec1898f97a633f7d7ea5035d8e03234550340c0"
+    },
+    {
+      "name": "assets/catalog/github-copilot.json",
+      "sha256": "573f05c2dfc0c8158e252dd286d6b174cd323f965284d7ae157439d8e3dea92c"
+    },
+    {
+      "name": "assets/catalog/google-vertex.json",
+      "sha256": "40090c680538bc867f2624d986a449f361be4dfa6ba96d7a27402050f036e009"
+    },
+    {
+      "name": "assets/catalog/google.json",
+      "sha256": "c0f5a633e5e5a5044432db3e537f4bc674d4de18df09325c6349547fcc13cabe"
+    },
+    {
+      "name": "assets/catalog/groq.json",
+      "sha256": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405"
+    },
+    {
+      "name": "assets/catalog/huggingface.json",
+      "sha256": "1b8604bd31a5e05fe43a40ec1ec6dfc1a51a28b0b020151ef057fab43f57c923"
+    },
+    {
+      "name": "assets/catalog/kimi-coding.json",
+      "sha256": "582250b920454d98940da3e7e99d30b807edbea28f2eb8ac15f658d2ef41e8fc"
+    },
+    {
+      "name": "assets/catalog/meta.json",
+      "sha256": "0c7e9a370a7005c5a89dc94f0f93bc67b8935c3f802de324f11af6ff56fff429"
+    },
+    {
+      "name": "assets/catalog/minimax-cn.json",
+      "sha256": "f962c20ee6a6a342820f778e9dc363a18a524bf11998f6e2c57f2989915d62e5"
+    },
+    {
+      "name": "assets/catalog/minimax.json",
+      "sha256": "17a432f80d0ea6dd26eade80a4314250d3a855678601728a5f70dd8fa0d21dd2"
+    },
+    {
+      "name": "assets/catalog/mistral.json",
+      "sha256": "10f33bff9adf1248f7e6848e5890c265399f1f94e5b42cfdc28c109d547af98d"
+    },
+    {
+      "name": "assets/catalog/moonshotai-cn.json",
+      "sha256": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5"
+    },
+    {
+      "name": "assets/catalog/moonshotai.json",
+      "sha256": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca"
+    },
+    {
+      "name": "assets/catalog/nvidia.json",
+      "sha256": "3b4e7b799bf3eaacd1af0491eef77fe33147ea7f72a3a9fa54d77af0e7eacf4c"
+    },
+    {
+      "name": "assets/catalog/openai-codex.json",
+      "sha256": "3cc35a7e122e5c77ee8ec30a9a3bd8bd59629997e85ba2cb3f9e0ed62e9a09c0"
+    },
+    {
+      "name": "assets/catalog/openai.json",
+      "sha256": "87faafcdd168c9b6fdaef521137834a207437daf0d71641fd0a2f3dddf4d1ecb"
+    },
+    {
+      "name": "assets/catalog/opencode-go.json",
+      "sha256": "d05b3eb87b81c6e5a94801484e668e660fe60c68f06a972b716d581c3bbd7c25"
+    },
+    {
+      "name": "assets/catalog/opencode.json",
+      "sha256": "1c504731d37468cc992a88b231cde29d46f0273e2710d8af227247c58afaa1b7"
+    },
+    {
+      "name": "assets/catalog/openrouter.json",
+      "sha256": "767e2ea83edbbdfcc9e9d66a2d4e9eae9b14589fb97e137daebef7958b1b0283"
+    },
+    {
+      "name": "assets/catalog/qwen-token-plan-cn.json",
+      "sha256": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5"
+    },
+    {
+      "name": "assets/catalog/qwen-token-plan-individual.json",
+      "sha256": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd"
+    },
+    {
+      "name": "assets/catalog/qwen-token-plan.json",
+      "sha256": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176"
+    },
+    {
+      "name": "assets/catalog/radius.json",
+      "sha256": "c8e24a65119360946749c6d5e45782d84ab2794df661b369bb27c2bff3b72e67"
+    },
+    {
+      "name": "assets/catalog/together.json",
+      "sha256": "94ec3839972061405885d64f5fdbde48eb1f29a159be5e607e9770befd54e28e"
+    },
+    {
+      "name": "assets/catalog/typesafe.json",
+      "sha256": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716"
+    },
+    {
+      "name": "assets/catalog/vercel-ai-gateway.json",
+      "sha256": "b3574cebd04f1db537c2d06517caf3e184360f181b9cbc5ce1c287886dbfce77"
+    },
+    {
+      "name": "assets/catalog/xai.json",
+      "sha256": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928"
+    },
+    {
+      "name": "assets/catalog/xiaomi-token-plan-ams.json",
+      "sha256": "ca65178f4525d9705bc8d085ed136cecbe149c4080e857ea6a64ae643d2ac00a"
+    },
+    {
+      "name": "assets/catalog/xiaomi-token-plan-cn.json",
+      "sha256": "b065326926681c2262084e59c1c19ebdaf146c07107b5242c76b456becf74db0"
+    },
+    {
+      "name": "assets/catalog/xiaomi-token-plan-sgp.json",
+      "sha256": "92c3d6d707f81fd9cd2b6d1fb57dc431d90ba51e10fe49d97bc8806035c23492"
+    },
+    {
+      "name": "assets/catalog/xiaomi.json",
+      "sha256": "b81d01a374f7b558728c78d81f4168efa9c8996e6e2b5618409a8094b083c759"
+    },
+    {
+      "name": "assets/catalog/zai-coding-cn.json",
+      "sha256": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610"
+    },
+    {
+      "name": "assets/catalog/zai.json",
+      "sha256": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f"
+    },
+    {
+      "name": "assets/licenses/modelcontextprotocol-typescript-sdk.txt",
+      "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d"
+    },
+    {
+      "name": "assets/licenses/quickjs-ng.txt",
+      "sha256": "d87922bc69421b002ec2dc1aaffe02eabd12ca6b6212273691fb8231f238b5a1",
+      "normalization": "Trailing whitespace removed only; wording unchanged.",
+      "originalSha256": "96f73f9d2a16c21a36b418f06073be26e7d6d5e7c1bc99756b21a4f2c74ef171"
+    },
+    {
+      "name": "assets/quickjs/LICENSE.txt",
+      "sha256": "f7735da3b2531ddf451937117343cfadb853fd8054b499e7a70695dc57ffd184"
+    },
+    {
+      "name": "assets/quickjs/index.d.ts.txt",
+      "sha256": "b2f6b9a04be9c0b529b88d9014da6e777fa24f6c72b2a3863d3d47852100f5bf"
+    },
+    {
+      "name": "assets/quickjs/index.js.txt",
+      "sha256": "91fcfc11e7f7372f3aee8d4373c0d4f969baac5cd12648663971550054217ae8"
+    },
+    {
+      "name": "assets/quickjs/quickjs.wasm.base64.txt",
+      "sha256": "c7dc553938c46a78b2a73116157d1933aee1137d182e83953b79a27be65d7855"
+    },
+    {
+      "name": "assets/quickjs/wasi-shim.js.txt",
+      "sha256": "79af15cf5158d181d11021158abb22541fd6d35beca569652317859819960eac"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "github.com/tetratelabs/wazero",
+      "version": "v1.9.0",
+      "revision": "96f2052f6d12cccc29193f5452c635b76d8a036d",
+      "cgo": false,
+      "goVersion": "1.22.0"
+    }
+  ],
+  "licenseReferences": [
+    {
+      "url": "https://raw.githubusercontent.com/quickjs-ng/quickjs/v0.14.0/LICENSE",
+      "purpose": "Underlying QuickJS-NG MIT notice; not a claim that the npm WASM was built from this exact tag."
+    }
+  ]
+}

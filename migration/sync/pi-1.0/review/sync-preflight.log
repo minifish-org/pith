@@ -1,0 +1,37 @@
+{
+  "sync": {
+    "status": "prepared",
+    "before": "002fc8385268300ca91a5fc95f935c2afbbdac02",
+    "after": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+    "plan": "/Users/yusp/work/pith/migration/sync/pi-1.0",
+    "configSha256": "911688fd92eeba4e7eee05046fdb9bb7b64146ff3cda3f3d082c091a6e8a9706"
+  },
+  "preflight": {
+    "blocked": [],
+    "canStart": true,
+    "modules": [
+      {
+        "id": "pi-a13d35a742c6",
+        "status": "pending"
+      }
+    ],
+    "next": "pi-a13d35a742c6/changes/ai-foundation",
+    "note": "Preparation status does not mean the Go module is implemented. Use --commit to call the model and save progress.",
+    "preparation": {
+      "modules": [
+        {
+          "id": "pi-a13d35a742c6",
+          "readyBatches": 1,
+          "totalBatches": 1
+        }
+      ],
+      "policy": "all-prepared",
+      "ready": true,
+      "readyBatches": 1,
+      "totalBatches": 1
+    },
+    "preparedSteps": 9,
+    "status": "ready",
+    "verifiedSteps": 0
+  }
+}

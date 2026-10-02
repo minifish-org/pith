@@ -1,0 +1,33 @@
+package main
+
+import (
+ "context"
+ "fmt"
+ "math"
+ "os"
+ "time"
+ "github.com/tetratelabs/wazero"
+ "github.com/tetratelabs/wazero/api"
+ "github.com/tetratelabs/wazero/imports/wasi_snapshot_preview1"
+)
+
+func main() {
+ ctx,cancel:=context.WithTimeout(context.Background(),10*time.Second);defer cancel()
+ r:=wazero.NewRuntimeWithConfig(ctx,wazero.NewRuntimeConfig().WithCloseOnContextDone(true).WithMemoryLimitPages(1024));defer r.Close(ctx)
+ wasm,err:=os.ReadFile("/tmp/pith-v1-release-artifacts/quickjs/package/quickjs.wasm");must(err)
+ cm,err:=r.CompileModule(ctx,wasm);must(err)
+ builder:=r.NewHostModuleBuilder("env")
+ for _,d:=range cm.ImportedFunctions(){mod,name,_:=d.Import();fmt.Printf("import %s.%s %v -> %v\n",mod,name,d.ParamTypes(),d.ResultTypes());if mod!="env"{continue};builder.NewFunctionBuilder().WithGoModuleFunction(api.GoModuleFunc(func(_ context.Context,_ api.Module,stack []uint64){for i:=range d.ResultTypes(){stack[i]=0}}),d.ParamTypes(),d.ResultTypes()).Export(name)}
+ _,err=builder.Instantiate(ctx);must(err);_,err=wasi_snapshot_preview1.Instantiate(ctx,r);must(err)
+ m,err:=r.InstantiateModule(ctx,cm,wazero.NewModuleConfig().WithName("probe").WithStartFunctions("_initialize"));must(err)
+ call:=func(name string,args ...uint64)uint64{f:=m.ExportedFunction(name);if f==nil{panic("missing export "+name)};ret,e:=f.Call(ctx,args...);must(e);if len(ret)>0{return ret[0]};return 0}
+ call("qjs_init");call("qjs_set_memory_limit",16<<20)
+ write:=func(text string)uint64{ptr:=call("wasm_malloc",uint64(len(text)+1));if !m.Memory().Write(uint32(ptr),append([]byte(text),0)){panic("memory write failed")};return ptr}
+ code:="6 * 7";cp:=write(code);fp:=write("<probe>")
+ result:=call("qjs_eval",cp,uint64(len(code)),fp,0)
+ if call("qjs_is_exception",result)!=0{panic("QuickJS exception")}
+ if n:=math.Float64frombits(call("qjs_get_float64",result));n!=42{panic(fmt.Sprint(n))}
+ call("qjs_free_value",result);call("wasm_free",cp);call("wasm_free",fp)
+ fmt.Println("PASS: pinned QuickJS WASM evaluates JavaScript under pure-Go wazero with bounded memory/context; no host FS/network")
+}
+func must(e error){if e!=nil{panic(e)}}

@@ -1,0 +1,15 @@
+--- FAIL: TestPortsmithJudgePiV1HeaderMerge (0.00s)
+    portsmith_judge_pi_v1_utils_test.go:13: Pi 1.0 requires variadic case-insensitive provider header merging
+--- FAIL: TestPortsmithJudgePiV1ProviderErrors (0.00s)
+    portsmith_judge_pi_v1_utils_test.go:37: retry classification "subscription_sharing_usage_unavailable": false
+    portsmith_judge_pi_v1_utils_test.go:37: retry classification "subscription_sharing_user_unavailable": false
+    portsmith_judge_pi_v1_utils_test.go:45: Z.AI CN context overflow must trigger compaction rather than an unrelated retry
+FAIL
+FAIL	github.com/minifish-org/pith/packages/ai/utils	0.360s
+--- FAIL: TestPortsmithJudgePiV1MistralEmptyDeltas (0.00s)
+    portsmith_judge_pi_v1_mistral_test.go:40: empty deltas opened/split blocks: [{"type":"text","text":""},{"type":"thinking","thinking":"one"},{"type":"text","text":""},{"type":"thinking","thinking":" two"},{"type":"text","text":"answer"}]
+--- FAIL: TestPortsmithJudgePiV1MistralMappedEffort (0.00s)
+    portsmith_judge_pi_v1_mistral_test.go:69: model's mapped effort ignored: map[max_tokens:16 messages:[] model:non-whitelisted prompt_mode:reasoning stream:true]
+FAIL
+FAIL	github.com/minifish-org/pith/packages/ai/api	0.353s
+FAIL

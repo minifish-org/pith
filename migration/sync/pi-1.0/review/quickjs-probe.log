@@ -1,0 +1,13 @@
+import env.host_get_timezone_offset [127 127] -> [127]
+import env.host_interrupt [] -> [127]
+import env.host_promise_rejection [127 127 127] -> []
+import env.host_module_normalize [127 127] -> [127]
+import env.host_module_load [127 127] -> [127]
+import env.host_call [127 127 127 127 127] -> [127]
+import wasi_snapshot_preview1.clock_time_get [127 126 127] -> [127]
+import wasi_snapshot_preview1.fd_close [127] -> [127]
+import wasi_snapshot_preview1.fd_fdstat_get [127 127] -> [127]
+import wasi_snapshot_preview1.fd_seek [127 126 127 127] -> [127]
+import wasi_snapshot_preview1.fd_write [127 127 127 127] -> [127]
+import wasi_snapshot_preview1.random_get [127 127] -> [127]
+PASS: pinned QuickJS WASM evaluates JavaScript under pure-Go wazero with bounded memory/context; no host FS/network

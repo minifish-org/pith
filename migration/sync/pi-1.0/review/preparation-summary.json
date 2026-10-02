@@ -1,0 +1,15 @@
+{
+  "revision": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "before": "002fc8385268300ca91a5fc95f935c2afbbdac02",
+  "modules": 1,
+  "steps": 9,
+  "independentTests": 26,
+  "existingWritableFiles": 234,
+  "readOnlyBaselineFiles": 815,
+  "mappedSources": 317,
+  "cumulativeChangedPaths": 1131,
+  "durable": "deferred",
+  "modelCalls": 0,
+  "preparedSteps": 9,
+  "verifiedSteps": 0
+}

@@ -1,0 +1,2072 @@
+[
+  {
+    "source": "packages/agent/src/agent-loop.ts",
+    "goFiles": [
+      "packages/agent/agent_loop.go"
+    ]
+  },
+  {
+    "source": "packages/agent/src/agent.ts",
+    "goFiles": [
+      "packages/agent/agent.go"
+    ]
+  },
+  {
+    "source": "packages/agent/src/index.ts",
+    "goFiles": [
+      "packages/agent/search/index.go",
+      "packages/telemetry/index.go",
+      "packages/telemetry/testing/index.go"
+    ]
+  },
+  {
+    "source": "packages/agent/src/types.ts",
+    "goFiles": [
+      "packages/agent/types/types.go",
+      "packages/ai/types/types.go",
+      "packages/telemetry/testing/types.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/anthropic-messages.ts",
+    "goFiles": [
+      "packages/ai/api/anthropic_messages.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/azure-openai-responses.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/azure-openai-responses.ts",
+    "goFiles": [
+      "packages/ai/api/azure_openai_responses.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/bedrock-converse-stream.ts",
+    "goFiles": [
+      "packages/ai/api/bedrock_converse_stream.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare-ai-binding.ts",
+    "goFiles": [
+      "packages/ai/api/cloudflare_ai_binding.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare-workers-ai-system-one.lazy.ts",
+    "goFiles": [
+      "packages/ai/any_models.go",
+      "packages/ai/classifier.go",
+      "packages/ai/models.go",
+      "packages/ai/models_store.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare-workers-ai-system-one.ts",
+    "goFiles": [
+      "packages/ai/api/cloudflare_workers_ai_system_one.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/cloudflare.ts",
+    "goFiles": [
+      "packages/ai/api/cloudflare.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/constrained-sampling.ts",
+    "goFiles": [
+      "packages/ai/api/constrained_sampling.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/github-copilot-headers.ts",
+    "goFiles": [
+      "packages/ai/api/github_copilot_headers.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/google-generative-ai.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/google-generative-ai.ts",
+    "goFiles": [
+      "packages/ai/api/google_generative_ai.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/google-shared.ts",
+    "goFiles": [
+      "packages/ai/api/google_shared.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/google-vertex.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/google-vertex.ts",
+    "goFiles": [
+      "packages/ai/api/google_vertex.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/lazy.ts",
+    "goFiles": [
+      "packages/ai/api/lazy.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/llama-cpp-classify.lazy.ts",
+    "goFiles": [
+      "packages/ai/any_models.go",
+      "packages/ai/classifier.go",
+      "packages/ai/models.go",
+      "packages/ai/models_store.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/llama-cpp-classify.ts",
+    "goFiles": [
+      "packages/ai/api/llama_cpp_classify.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/mistral-conversations.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/mistral-conversations.ts",
+    "goFiles": [
+      "packages/ai/api/mistral_conversations.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-codex-responses.ts",
+    "goFiles": [
+      "packages/ai/api/openai_codex_responses.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-completions.ts",
+    "goFiles": [
+      "packages/ai/api/openai_completions.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-prompt-cache.ts",
+    "goFiles": [
+      "packages/ai/api/openai_prompt_cache.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses-shared.ts",
+    "goFiles": [
+      "packages/ai/api/openai_responses_shared.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openai-responses.ts",
+    "goFiles": [
+      "packages/ai/api/openai_responses.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openrouter-images.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/openrouter-images.ts",
+    "goFiles": [
+      "packages/ai/api/openrouter_images.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.lazy.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/pi-messages.ts",
+    "goFiles": [
+      "packages/ai/api/pi_messages.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/simple-options.ts",
+    "goFiles": [
+      "packages/ai/api/simple_options.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/system-one-shared.ts",
+    "goFiles": [
+      "packages/ai/api/system_one_shared.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/transform-messages.ts",
+    "goFiles": [
+      "packages/ai/api/transform_messages.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/typesafe-system-one.lazy.ts",
+    "goFiles": [
+      "packages/ai/any_models.go",
+      "packages/ai/classifier.go",
+      "packages/ai/models.go",
+      "packages/ai/models_store.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/api/typesafe-system-one.ts",
+    "goFiles": [
+      "packages/ai/api/typesafe_system_one.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/context.ts",
+    "goFiles": [
+      "packages/ai/auth/context.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/credential-store.ts",
+    "goFiles": [
+      "packages/ai/auth/credential_store.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/helpers.ts",
+    "goFiles": [
+      "packages/ai/auth/helpers.go",
+      "packages/ai/auth/oauth/helpers.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/anthropic.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/anthropic.go",
+      "packages/ai/providers/anthropic.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/callback-server.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/callback_server.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/device-code.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/device_code.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/github-copilot.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/github_copilot.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/kimi-coding.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/kimi_coding.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/load.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/load.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/meta.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/meta.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/openai-chatgpt.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/openai_chatgpt.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/openai-codex.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/openai_codex.go",
+      "packages/ai/providers/openai_codex.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/openrouter.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/openrouter.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/pkce.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/pkce.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/radius.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/radius.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/oauth/xai.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/xai.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/resolve.ts",
+    "goFiles": [
+      "packages/ai/auth/resolve.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/auth/types.ts",
+    "goFiles": [
+      "packages/ai/auth/types/types.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/compat.ts",
+    "goFiles": [
+      "packages/ai/images/compat.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/models-store.ts",
+    "goFiles": [
+      "packages/ai/models_store.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/models.generated.ts",
+    "goFiles": [
+      "packages/ai/any_models.go",
+      "packages/ai/classifier.go",
+      "packages/ai/models.go",
+      "packages/ai/models_store.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/models.ts",
+    "goFiles": [
+      "packages/ai/images/models.go",
+      "packages/ai/models.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/all.ts",
+    "goFiles": [
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/amazon-bedrock.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/amazon-bedrock.ts",
+    "goFiles": [
+      "packages/ai/providers/amazon_bedrock.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/ant-ling.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/ant-ling.ts",
+    "goFiles": [
+      "packages/ai/providers/ant_ling.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/anthropic.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/anthropic.ts",
+    "goFiles": [
+      "packages/ai/providers/anthropic.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/azure-openai-responses.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/azure-openai-responses.ts",
+    "goFiles": [
+      "packages/ai/providers/azure_openai_responses.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/baseten.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/baseten.ts",
+    "goFiles": [
+      "packages/ai/providers/baseten.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cerebras.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cerebras.ts",
+    "goFiles": [
+      "packages/ai/providers/cerebras.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-ai-gateway.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-ai-gateway.ts",
+    "goFiles": [
+      "packages/ai/providers/cloudflare_ai_gateway.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-auth.ts",
+    "goFiles": [
+      "packages/ai/providers/cloudflare_auth.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-stream.ts",
+    "goFiles": [
+      "packages/ai/providers/cloudflare_stream.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-workers-ai.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/cloudflare-workers-ai.ts",
+    "goFiles": [
+      "packages/ai/providers/cloudflare_workers_ai.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/data-json.d.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/deepseek.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/deepseek.ts",
+    "goFiles": [
+      "packages/ai/providers/deepseek.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/faux.ts",
+    "goFiles": [
+      "packages/ai/providers/faux.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/fireworks.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/fireworks.ts",
+    "goFiles": [
+      "packages/ai/providers/fireworks.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/github-copilot.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/github-copilot.ts",
+    "goFiles": [
+      "packages/ai/providers/github_copilot.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/google-vertex.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/google-vertex.ts",
+    "goFiles": [
+      "packages/ai/providers/google_vertex.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/google.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/google.ts",
+    "goFiles": [
+      "packages/ai/providers/google.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/groq.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/groq.ts",
+    "goFiles": [
+      "packages/ai/providers/groq.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/huggingface.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/huggingface.ts",
+    "goFiles": [
+      "packages/ai/providers/huggingface.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/images/register-builtins.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/kimi-coding.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/kimi-coding.ts",
+    "goFiles": [
+      "packages/ai/providers/kimi_coding.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/meta.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/meta.ts",
+    "goFiles": [
+      "packages/ai/providers/meta.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/minimax-cn.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/minimax-cn.ts",
+    "goFiles": [
+      "packages/ai/providers/minimax_cn.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/minimax.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/minimax.ts",
+    "goFiles": [
+      "packages/ai/providers/minimax.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/mistral.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/mistral.ts",
+    "goFiles": [
+      "packages/ai/providers/mistral.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/moonshotai-cn.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/moonshotai-cn.ts",
+    "goFiles": [
+      "packages/ai/providers/moonshotai_cn.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/moonshotai.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/moonshotai.ts",
+    "goFiles": [
+      "packages/ai/providers/moonshotai.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/nvidia.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/nvidia.ts",
+    "goFiles": [
+      "packages/ai/providers/nvidia.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/openai-codex.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/openai-codex.ts",
+    "goFiles": [
+      "packages/ai/providers/openai_codex.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/openai.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/openai.ts",
+    "goFiles": [
+      "packages/ai/providers/openai.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/opencode-go.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/opencode-go.ts",
+    "goFiles": [
+      "packages/ai/providers/opencode_go.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/opencode-headers.ts",
+    "goFiles": [
+      "packages/ai/providers/opencode_headers.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/opencode.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/opencode.ts",
+    "goFiles": [
+      "packages/ai/providers/opencode.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/openrouter.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/openrouter.ts",
+    "goFiles": [
+      "packages/ai/providers/openrouter.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan-cn.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan-cn.ts",
+    "goFiles": [
+      "packages/ai/providers/qwen_token_plan_cn.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan-individual.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan-individual.ts",
+    "goFiles": [
+      "packages/ai/providers/qwen_token_plan_individual.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/qwen-token-plan.ts",
+    "goFiles": [
+      "packages/ai/providers/qwen_token_plan.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/radius-config.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/radius.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/radius.ts",
+    "goFiles": [
+      "packages/ai/providers/radius.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/together.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/together.ts",
+    "goFiles": [
+      "packages/ai/providers/together.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/typesafe.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/typesafe.ts",
+    "goFiles": [
+      "packages/ai/providers/typesafe.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/vercel-ai-gateway.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/vercel-ai-gateway.ts",
+    "goFiles": [
+      "packages/ai/providers/vercel_ai_gateway.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xai.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xai.ts",
+    "goFiles": [
+      "packages/ai/providers/xai.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-ams.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-ams.ts",
+    "goFiles": [
+      "packages/ai/providers/xiaomi_token_plan_ams.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-cn.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-cn.ts",
+    "goFiles": [
+      "packages/ai/providers/xiaomi_token_plan_cn.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-sgp.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi-token-plan-sgp.ts",
+    "goFiles": [
+      "packages/ai/providers/xiaomi_token_plan_sgp.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/xiaomi.ts",
+    "goFiles": [
+      "packages/ai/providers/xiaomi.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/zai-coding-cn.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/zai-coding-cn.ts",
+    "goFiles": [
+      "packages/ai/providers/zai_coding_cn.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/zai.models.ts",
+    "goFiles": [
+      "packages/ai/catalog/v1.go",
+      "packages/ai/providers/all.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/providers/zai.ts",
+    "goFiles": [
+      "packages/ai/providers/zai.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/types.ts",
+    "goFiles": [
+      "packages/ai/types/types.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/abort-signals.ts",
+    "goFiles": [
+      "packages/ai/utils/abort_signals.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/abort.ts",
+    "goFiles": [
+      "packages/ai/utils/abort.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/assistant-message-frame.ts",
+    "goFiles": [
+      "packages/ai/utils/assistant_message_frame.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/diagnostics.ts",
+    "goFiles": [
+      "packages/ai/utils/diagnostics.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/error-body.ts",
+    "goFiles": [
+      "packages/ai/utils/error_body.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/estimate.ts",
+    "goFiles": [
+      "packages/ai/utils/estimate.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/event-stream.ts",
+    "goFiles": [
+      "packages/ai/utils/eventstream/event_stream.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/hash.ts",
+    "goFiles": [
+      "packages/ai/utils/hash.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/headers.ts",
+    "goFiles": [
+      "packages/ai/utils/headers.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/json-parse.ts",
+    "goFiles": [
+      "packages/ai/utils/json_parse.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/model-operations.ts",
+    "goFiles": [
+      "packages/ai/utils/model_operations.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/models-error.ts",
+    "goFiles": [
+      "packages/ai/utils/models_error.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/node-http-proxy.ts",
+    "goFiles": [
+      "packages/ai/utils/node_http_proxy.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/oauth-page.ts",
+    "goFiles": [
+      "packages/ai/auth/oauth/oauth_page.go",
+      "packages/ai/utils/oauth_page.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/overflow.ts",
+    "goFiles": [
+      "packages/ai/utils/overflow.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/pi-user-agent.ts",
+    "goFiles": [
+      "packages/ai/utils/pi_user_agent.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/provider-env.ts",
+    "goFiles": [
+      "packages/ai/utils/provider_env.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/provider-retry.ts",
+    "goFiles": [
+      "packages/ai/utils/provider_retry.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/retry.ts",
+    "goFiles": [
+      "packages/ai/utils/retry.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/sanitize-unicode.ts",
+    "goFiles": [
+      "packages/ai/utils/sanitize_unicode.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/sleep.ts",
+    "goFiles": [
+      "packages/ai/utils/sleep.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/text.ts",
+    "goFiles": [
+      "packages/ai/utils/text.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/transcript.ts",
+    "goFiles": [
+      "packages/ai/utils/transcript.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/typebox-helpers.ts",
+    "goFiles": [
+      "packages/ai/utils/typebox_helpers.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/uuid.ts",
+    "goFiles": [
+      "packages/ai/utils/uuid.go"
+    ]
+  },
+  {
+    "source": "packages/ai/src/utils/validation.ts",
+    "goFiles": [
+      "packages/ai/utils/validation.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/declarations.ts",
+    "goFiles": [
+      "packages/codemode/declarations.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/identifier.ts",
+    "goFiles": [
+      "packages/codemode/identifier.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/index.ts",
+    "goFiles": [
+      "packages/codemode/sandbox.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/runtime/host.ts",
+    "goFiles": [
+      "packages/codemode/runtime/bridge.go",
+      "packages/codemode/runtime/prelude.go",
+      "packages/codemode/runtime/quickjs.go",
+      "packages/codemode/runtime/wasm.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/runtime/prelude-source.ts",
+    "goFiles": [
+      "packages/codemode/runtime/bridge.go",
+      "packages/codemode/runtime/prelude.go",
+      "packages/codemode/runtime/quickjs.go",
+      "packages/codemode/runtime/wasm.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/runtime/protocol.ts",
+    "goFiles": [
+      "packages/codemode/runtime/bridge.go",
+      "packages/codemode/runtime/prelude.go",
+      "packages/codemode/runtime/quickjs.go",
+      "packages/codemode/runtime/wasm.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/runtime/worker.ts",
+    "goFiles": [
+      "packages/codemode/runtime/bridge.go",
+      "packages/codemode/runtime/prelude.go",
+      "packages/codemode/runtime/quickjs.go",
+      "packages/codemode/runtime/wasm.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/source.ts",
+    "goFiles": [
+      "packages/codemode/source.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/types.ts",
+    "goFiles": [
+      "packages/codemode/types.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/src/wasm.ts",
+    "goFiles": [
+      "packages/codemode/runtime/wasm.go"
+    ]
+  },
+  {
+    "source": "packages/codemode/vitest.config.ts",
+    "goFiles": [
+      "packages/codemode/sandbox.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session-services.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/agent-session.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-guidance.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/auth-storage.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/bash-executor.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/bug-report-upload.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/bug-report.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/cache-stats.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/cache-warmer.ts",
+    "goFiles": [
+      "packages/coding-agent/cache_warmer.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/branch-summarization.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/compaction.ts",
+    "goFiles": [
+      "packages/coding-agent/compaction.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/index.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/index.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/compaction/utils.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/crash-log.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/defaults.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/diagnostics.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/event-bus.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/exec.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/experimental.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/extensions/index.ts",
+    "goFiles": [
+      "packages/coding-agent/sdk.go",
+      "packages/coding-agent/events.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/extensions/types.ts",
+    "goFiles": [
+      "packages/coding-agent/events.go",
+      "packages/coding-agent/tools.go",
+      "packages/coding-agent/tool_hooks.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/footer-data-provider.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/http-dispatcher.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/index.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/index.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/keybindings.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/mcp-servers.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/messages.ts",
+    "goFiles": [
+      "packages/coding-agent/messages.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-config.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-registry.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-resolver.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/model-runtime.ts",
+    "goFiles": [
+      "packages/coding-agent/model_runtime.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/models-store.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/nested-tool-calls.ts",
+    "goFiles": [
+      "packages/coding-agent/nested_tool_calls.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/output-guard.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/package-manager.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/pi-manifest.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/project-trust.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/prompt-templates.ts",
+    "goFiles": [
+      "packages/coding-agent/prompt_templates.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-attribution.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/provider-composer.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/radius.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/remote-catalog-provider.ts",
+    "goFiles": [
+      "packages/coding-agent/remote_catalog_provider.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/resolve-config-value.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/resource-loader.ts",
+    "goFiles": [
+      "packages/coding-agent/resource_loader.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/runtime-credentials.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/sdk.ts",
+    "goFiles": [
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-cwd.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-export.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/session-manager.ts",
+    "goFiles": [
+      "packages/coding-agent/session_manager.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/settings-manager.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/skills.ts",
+    "goFiles": [
+      "packages/coding-agent/skills.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/slash-commands.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/source-info.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/system-prompt.ts",
+    "goFiles": [
+      "packages/coding-agent/system_prompt.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/telemetry.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/timings.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/bash.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/bash.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit-diff.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/edit_diff.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/edit.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/edit.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/file_mutation_queue.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/find.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/grep.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/index.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/index.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/ls.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/output-accumulator.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/path-utils.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/path_utils.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/powershell.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/read.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/read.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/render-utils.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/tool-definition-wrapper.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/truncate.ts",
+    "goFiles": [
+      "packages/agent/harness/utils/truncate/truncate.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/tools/write.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/write.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/trust-manager.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/usage-totals.ts",
+    "goFiles": [
+      "packages/coding-agent/agent_session.go",
+      "packages/coding-agent/sdk.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/core/virtual-models.ts",
+    "goFiles": [
+      "packages/coding-agent/virtual_models.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/codemode/execute.lazy.ts",
+    "goFiles": [
+      "packages/coding-agent/codemode.go",
+      "packages/coding-agent/codemode_store.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/codemode/execute.ts",
+    "goFiles": [
+      "packages/coding-agent/codemode.go",
+      "packages/coding-agent/codemode_store.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/codemode/index.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/index.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/codemode/renderer.ts",
+    "goFiles": [
+      "packages/coding-agent/codemode.go",
+      "packages/coding-agent/codemode_store.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/codemode/tool.ts",
+    "goFiles": [
+      "packages/coding-agent/codemode.go",
+      "packages/coding-agent/codemode_store.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/codemode/worker.ts",
+    "goFiles": [
+      "packages/coding-agent/codemode.go",
+      "packages/coding-agent/codemode_store.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/cli.lazy.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/cli.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/config.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/index.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/index.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/log.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/oauth.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/resources.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/runtime.lazy.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/runtime.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/tools.ts",
+    "goFiles": [
+      "packages/coding-agent/tools.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/mcp/ui.ts",
+    "goFiles": [
+      "packages/coding-agent/mcp_oauth.go",
+      "packages/coding-agent/mcp_resources.go",
+      "packages/coding-agent/mcp_runtime.go",
+      "packages/coding-agent/mcp_servers.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/tool-search/index.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/index.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/extensions/tool-search/tool.ts",
+    "goFiles": [
+      "packages/coding-agent/tool_search.go"
+    ]
+  },
+  {
+    "source": "packages/coding-agent/src/index.ts",
+    "goFiles": [
+      "packages/agent/harness/tools/index.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/auth-provider.ts",
+    "goFiles": [
+      "packages/mcp/auth_provider.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/client.ts",
+    "goFiles": [
+      "packages/mcp/client.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/index.ts",
+    "goFiles": [
+      "packages/mcp/client.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/oauth/callback.ts",
+    "goFiles": [
+      "packages/mcp/oauth_callback.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/oauth/discovery.ts",
+    "goFiles": [
+      "packages/mcp/oauth_discovery.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/oauth/errors.ts",
+    "goFiles": [
+      "packages/mcp/oauth.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/oauth/flow.ts",
+    "goFiles": [
+      "packages/mcp/oauth.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/oauth/index.ts",
+    "goFiles": [
+      "packages/mcp/client.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/oauth/provider.ts",
+    "goFiles": [
+      "packages/mcp/oauth.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/oauth/types.ts",
+    "goFiles": [
+      "packages/mcp/types.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/protocol/content.ts",
+    "goFiles": [
+      "packages/mcp/content.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/protocol/jsonrpc.ts",
+    "goFiles": [
+      "packages/mcp/jsonrpc.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/protocol/types.ts",
+    "goFiles": [
+      "packages/mcp/types.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/testing/index.ts",
+    "goFiles": [
+      "packages/mcp/client.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/transports/in-memory.ts",
+    "goFiles": [
+      "packages/mcp/in_memory.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/transports/stdio.ts",
+    "goFiles": [
+      "packages/mcp/stdio.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/transports/streamable-http.ts",
+    "goFiles": [
+      "packages/mcp/streamable_http.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/src/transports/transport.ts",
+    "goFiles": [
+      "packages/mcp/transport.go"
+    ]
+  },
+  {
+    "source": "packages/mcp/vitest.config.ts",
+    "goFiles": [
+      "packages/mcp/client.go"
+    ]
+  },
+  {
+    "source": "packages/telemetry/src/index.ts",
+    "goFiles": [
+      "packages/agent/search/index.go",
+      "packages/telemetry/index.go",
+      "packages/telemetry/testing/index.go"
+    ]
+  },
+  {
+    "source": "packages/telemetry/src/memory.ts",
+    "goFiles": [
+      "packages/telemetry/memory.go"
+    ]
+  },
+  {
+    "source": "packages/telemetry/src/noop.ts",
+    "goFiles": [
+      "packages/telemetry/noop.go"
+    ]
+  },
+  {
+    "source": "packages/telemetry/src/testing/conformance.ts",
+    "goFiles": [
+      "packages/telemetry/testing/conformance.go"
+    ]
+  },
+  {
+    "source": "packages/telemetry/src/testing/index.ts",
+    "goFiles": [
+      "packages/agent/search/index.go",
+      "packages/telemetry/index.go",
+      "packages/telemetry/testing/index.go"
+    ]
+  },
+  {
+    "source": "packages/telemetry/src/testing/types.ts",
+    "goFiles": [
+      "packages/agent/types/types.go",
+      "packages/ai/types/types.go",
+      "packages/telemetry/testing/types.go"
+    ]
+  }
+]
