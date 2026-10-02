@@ -12,10 +12,11 @@ import (
 func TestPortsmithJudgePiV1PKCE(t *testing.T) {
 	seen := map[string]bool{}
 	for i := 0; i < 32; i++ {
-		v, c, err := oauth.GeneratePKCE()
+		pkce, err := oauth.GeneratePKCE()
 		if err != nil {
 			t.Fatal(err)
 		}
+		v, c := pkce.Verifier, pkce.Challenge
 		if len(v) < 43 || len(v) > 128 || strings.ContainsAny(v, "+/=") {
 			t.Fatal("invalid PKCE verifier")
 		}
