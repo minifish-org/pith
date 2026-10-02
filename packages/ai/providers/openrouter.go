@@ -24,14 +24,18 @@ func OpenrouterProvider() ai.Provider {
 		Load:       oauth.LoadOpenRouterOAuth,
 	})
 	return ai.CreateProvider(ai.CreateProviderOptions{
-		ID:      types.ProviderOpenRouter,
-		Name:    "OpenRouter",
-		BaseURL: "https://openrouter.ai/api/v1",
-		Auth:    authtypes.ProviderAuth{APIKey: &apiKey, OAuth: &openrouterOAuth},
-		Models:  catalogModelList(catalog.OPENROUTER_MODELS),
+		ID:        types.ProviderOpenRouter,
+		Name:      "OpenRouter",
+		BaseURL:   "https://openrouter.ai/api/v1",
+		Auth:      authtypes.ProviderAuth{APIKey: &apiKey, OAuth: &openrouterOAuth},
+		Models:    catalogModelList(catalog.OPENROUTER_MODELS),
+		AllModels: builtinMixedModels(types.ProviderOpenRouter, catalog.OPENROUTER_MODELS),
 		APIs: map[types.Api]types.ProviderStreams{
 			types.ApiAnthropicMessages: api.AnthropicMessagesApi(),
 			types.ApiOpenAICompletions: api.OpenAICompletionsApi(),
+		},
+		Classifiers: map[types.ClassifierApi]ai.ClassifierImplementation{
+			types.ClassifierApiTypesafeSystemOne: typesafeSystemOneClassifier(),
 		},
 	})
 }

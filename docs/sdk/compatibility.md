@@ -56,6 +56,30 @@ Status legend:
 | Project context files | Ported | `LoadResources`, `ContextFile` | Explicit paths only; no implicit home discovery. |
 | System prompt assembly | Ported | `BuildSystemPrompt` | Headless prompt text. |
 
+## Additional native surfaces
+
+These rows cover the AI catalog and the MCP, Codemode and virtual-model
+surfaces. Their Go packages are delivered alongside the SDK and compose through
+`CreateAgentSession`.
+
+| Pi area | Status | Go surface | Notes |
+| --- | --- | --- | --- |
+| Legacy static catalog | Ported | `packages/ai/catalog` (`MODELS`, `IMAGE_MODELS`) | Frozen pre-1.0 assets kept separate. |
+| V1 release catalog | Ported | `catalog.V1Models`, `V1Manifest`, `V1ProviderNames` | Defensive copies; pinned digests; chat/image/classifier kinds. |
+| Mixed provider registry | Ported | `providers.BuiltinModels`, `Models.GetAllModels` | `GetModels` stays chat-only; classifiers never leak into it. |
+| Structured classification | Ported | `packages/ai/api` (`TypesafeSystemOneClassify`, ...), `ai.Models.Classify` | Failures are encoded in the result, never returned as an error. |
+| Native MCP client | Ported | `packages/mcp` (stdio, Streamable HTTP, in-memory) | Client half only; no Node helper. |
+| MCP session runtime | Ported | `codingagent.MCPRuntime`, `MCPServerConfig` | Partial connection failures become diagnostics. |
+| Codemode sandbox | Ported | `packages/codemode` | Embedded quickjs-wasi 3.6.2 driven by wazero; CGO-free. |
+| Codemode SDK tool | Ported | `codingagent.NewCodemodeTool`, `CodemodeToolName` | Nested calls re-enter registry validation and hooks. |
+| Codemode store | Ported | `codingagent.NewCodemodeStore` | Persisted on the session branch. |
+| Virtual model routing | Ported | `codingagent.CreateVirtualModel`, `ModelRouteRequest`, `ModelRoute` | Per-session router; state persisted as `pi.virtual-model-state`. |
+| Tool search / deferred tools | Ported | `codingagent.CreateToolSearchTool`, exposure modes | BM25 ranker over deferred tool declarations. |
+
+See [catalog-versions.md](./catalog-versions.md), [mcp.md](./mcp.md),
+[codemode.md](./codemode.md) and [virtual-models.md](./virtual-models.md) for the
+per-surface contracts.
+
 ## Configuration and settings
 
 | Pi area | Status | Go surface | Notes |
@@ -78,6 +102,8 @@ Status legend:
 | Browser login / OAuth UI | Excluded | Headless credential callbacks are provided instead. |
 | Clipboard, image resize/PNG, syntax highlighting | Excluded | TUI-only utilities. |
 | CLI orchestration (`main`, `parseArgs`, print/interactive modes) | Excluded | Stays in `cmd/pith`; the SDK is a library. |
+| Pi Durable runtime | Excluded | Durable sessions, scheduling and the durable host are not part of this increment and are not claimed. |
+| Pi interactive CLI parity | Excluded | `cmd/pith` is a non-interactive turn loop; the interactive CLI modes are not ported. |
 
 ## Known adaptation caveats
 

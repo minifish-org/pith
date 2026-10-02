@@ -19,15 +19,15 @@ func base64Decode(value string) (string, error) {
 	return string(decoded), nil
 }
 
-// PKCE is a generated code verifier and its S256 challenge.
+// PKCE is a code verifier and the S256 challenge derived from it.
 type PKCE struct {
 	Verifier  string
 	Challenge string
 }
 
-// GeneratePKCE generates a PKCE code verifier and challenge. The 32 random
-// bytes encode as a 43-character base64url verifier; the challenge is the
-// base64url SHA-256 digest of the verifier.
+// GeneratePKCE generates a PKCE code verifier and its S256 challenge. The 32
+// random bytes encode as a 43-character base64url verifier; the challenge is
+// the base64url SHA-256 digest of the verifier.
 //
 // Ports `generatePKCE` from packages/ai/src/auth/oauth/pkce.ts.
 func GeneratePKCE() (PKCE, error) {
@@ -37,6 +37,8 @@ func GeneratePKCE() (PKCE, error) {
 	}
 	verifier := base64.RawURLEncoding.EncodeToString(verifierBytes)
 	sum := sha256.Sum256([]byte(verifier))
-	challenge := base64.RawURLEncoding.EncodeToString(sum[:])
-	return PKCE{Verifier: verifier, Challenge: challenge}, nil
+	return PKCE{
+		Verifier:  verifier,
+		Challenge: base64.RawURLEncoding.EncodeToString(sum[:]),
+	}, nil
 }

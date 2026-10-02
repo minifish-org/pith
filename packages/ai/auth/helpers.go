@@ -109,6 +109,19 @@ func LazyOAuth(input LazyOAuthInput) authtypes.OAuthAuth {
 			}
 			return flow.Login(ctx, interaction)
 		},
+		LoginWithOptions: func(ctx context.Context, interaction authtypes.ProviderAuthInteraction, options *authtypes.LoginOptions) (*authtypes.OAuthCredential, error) {
+			flow, err := load()
+			if err != nil {
+				return nil, err
+			}
+			if flow.LoginWithOptions != nil {
+				return flow.LoginWithOptions(ctx, interaction, options)
+			}
+			if flow.Login == nil {
+				return nil, fmt.Errorf("auth: oauth flow %q has no login", input.Name)
+			}
+			return flow.Login(ctx, interaction)
+		},
 		Refresh: func(ctx context.Context, credential *authtypes.OAuthCredential) (*authtypes.OAuthCredential, error) {
 			flow, err := load()
 			if err != nil {

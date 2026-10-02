@@ -37,6 +37,20 @@ import (
 // cancelled context before or after an effect.
 var errOperationAborted = errors.New("Operation aborted")
 
+// Tool exposure values. The empty exposure means ExposureDirect.
+const (
+	// ExposureDirect tools are declared to the provider and callable nested.
+	ExposureDirect = "direct"
+	// ExposureCodemode tools are callable from Codemode scripts but are not
+	// declared to the provider.
+	ExposureCodemode = "codemode"
+	// ExposureDeferred tools are callable nested and discoverable through tool
+	// search, but stay out of the provider declarations until loaded.
+	ExposureDeferred = "deferred"
+	// ExposureHidden tools are registered but unreachable.
+	ExposureHidden = "hidden"
+)
+
 // ToolDefinition is a tool the embedded SDK exposes to a model. Parameters is
 // the JSON Schema document; Execute receives the raw JSON arguments after the
 // registry has validated them.
@@ -44,17 +58,35 @@ type ToolDefinition struct {
 	Name        string
 	Description string
 	Parameters  json.RawMessage
-	Execute     func(ctx context.Context, arguments json.RawMessage) (ToolResult, error)
+	// OutputSchema is the optional JSON Schema of the tool's structured result.
+	OutputSchema json.RawMessage
+	// Exposure selects where the tool is visible. The empty string is direct.
+	Exposure string
+	Execute  func(ctx context.Context, arguments json.RawMessage) (ToolResult, error)
+
+	// close releases per-tool resources (for example a Codemode sandbox). It is
+	// unexported so the public struct literal stays unchanged.
+	close func() error
+}
+
+// exposure returns the normalized exposure, defaulting to direct.
+func (t ToolDefinition) exposure() string {
+	if t.Exposure == "" {
+		return ExposureDirect
+	}
+	return t.Exposure
 }
 
 // ToolResult is the outcome of one tool execution. Content carries text and
 // images, Details preserves the typed tool payload as raw JSON, and IsError is
 // the tool-level error marker (distinct from a Go error, which aborts the
-// call).
+// call). StructuredContent is the machine-readable value a nested Codemode call
+// returns as its result.
 type ToolResult struct {
-	Content []aitypes.ContentBlock
-	Details json.RawMessage
-	IsError bool
+	Content           []aitypes.ContentBlock
+	Details           json.RawMessage
+	StructuredContent json.RawMessage
+	IsError           bool
 }
 
 // ToolCall is one model-requested tool invocation.

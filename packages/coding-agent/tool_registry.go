@@ -117,6 +117,8 @@ type ToolRegistry struct {
 	deny          map[string]bool
 	allow         map[string]bool
 	explicitAllow bool
+	closables     []func() error
+	codemodeStore *CodemodeStore
 }
 
 // NewToolRegistry builds a registry rooted at cwd with the supplied custom
@@ -177,7 +179,26 @@ func (r *ToolRegistry) registerLocked(definition ToolDefinition) error {
 	}
 	r.tools[name] = definition
 	r.order = append(r.order, name)
+	if definition.close != nil {
+		r.closables = append(r.closables, definition.close)
+	}
 	return nil
+}
+
+// defaultActiveLocked reports whether a registered tool is active under the
+// default policy. Built-in tools follow the built-in default set; custom tools
+// are active unless their exposure keeps them out of the model loadout
+// (codemode and deferred tools are callable but never auto-activated).
+func (r *ToolRegistry) defaultActiveLocked(name string) bool {
+	if r.builtin[name] {
+		return defaultActiveToolNames()[name]
+	}
+	switch r.tools[name].exposure() {
+	case ExposureCodemode, ExposureDeferred, ExposureHidden:
+		return false
+	default:
+		return true
+	}
 }
 
 // applyPolicyLocked recomputes the active set from the supplied allow list (nil
@@ -185,9 +206,8 @@ func (r *ToolRegistry) registerLocked(definition ToolDefinition) error {
 func (r *ToolRegistry) applyPolicyLocked(allow []string) {
 	active := map[string]bool{}
 	if allow == nil {
-		defaults := defaultActiveToolNames()
 		for _, name := range r.order {
-			if defaults[name] || !r.builtin[name] {
+			if r.defaultActiveLocked(name) {
 				active[name] = true
 			}
 		}
@@ -203,8 +223,9 @@ func (r *ToolRegistry) applyPolicyLocked(allow []string) {
 }
 
 // Register adds a tool. Duplicate names are rejected. When the registry has no
-// explicit allow list the new tool becomes active immediately unless denied;
-// with an explicit allow list it is active only when it was allowed.
+// explicit allow list the new tool becomes active immediately unless denied or
+// its exposure keeps it out of the default loadout; with an explicit allow list
+// it is active only when it was allowed.
 func (r *ToolRegistry) Register(tool ToolDefinition) error {
 	r.mu.Lock()
 	defer r.mu.Unlock()
@@ -221,7 +242,9 @@ func (r *ToolRegistry) Register(tool ToolDefinition) error {
 		}
 		return nil
 	}
-	r.active[name] = true
+	if r.defaultActiveLocked(name) {
+		r.active[name] = true
+	}
 	return nil
 }
 
@@ -238,9 +261,8 @@ func (r *ToolRegistry) SetActive(names []string) error {
 	}
 	active := map[string]bool{}
 	if names == nil {
-		defaults := defaultActiveToolNames()
 		for _, name := range r.order {
-			if defaults[name] || !r.builtin[name] {
+			if r.defaultActiveLocked(name) {
 				active[name] = true
 			}
 		}
@@ -275,55 +297,102 @@ func (r *ToolRegistry) Definitions() []ToolDefinition {
 	defer r.mu.RUnlock()
 	definitions := make([]ToolDefinition, 0, len(r.active))
 	for _, name := range r.order {
-		if r.active[name] {
-			definitions = append(definitions, r.tools[name])
-		}
-	}
-	return definitions
-}
-
-// Declarations returns the model-visible declarations of the active tools.
-func (r *ToolRegistry) Declarations() []aitypes.Tool {
-	r.mu.RLock()
-	defer r.mu.RUnlock()
-	declarations := make([]aitypes.Tool, 0, len(r.active))
-	for _, name := range r.order {
 		if !r.active[name] {
 			continue
 		}
 		definition := r.tools[name]
-		declarations = append(declarations, aitypes.Tool{
-			Name:        definition.Name,
-			Description: definition.Description,
-			Input:       aitypes.JSONSchemaToolInput(definition.Parameters),
-		})
+		if definition.exposure() == ExposureHidden {
+			continue
+		}
+		definitions = append(definitions, definition)
 	}
-	return declarations
+	return definitions
 }
 
-func (r *ToolRegistry) lookupActive(name string) (ToolDefinition, bool) {
+// allDefinitions returns every registered definition in registration order,
+// regardless of activation or exposure.
+func (r *ToolRegistry) allDefinitions() []ToolDefinition {
 	r.mu.RLock()
 	defer r.mu.RUnlock()
-	if !r.active[name] {
-		return ToolDefinition{}, false
+	definitions := make([]ToolDefinition, 0, len(r.order))
+	for _, name := range r.order {
+		definitions = append(definitions, r.tools[name])
 	}
-	definition, ok := r.tools[name]
-	return definition, ok
+	return definitions
 }
 
-// Execute validates the arguments against the active tool's schema, runs the
-// Before hook, executes the tool and runs the After hook. All hooks run outside
-// the registry lock.
-func (r *ToolRegistry) Execute(ctx context.Context, call ToolCall) (ToolResult, error) {
+// CloseTools closes per-tool resources such as Codemode sandboxes. It is
+// idempotent and safe to call on a registry with no closables.
+func (r *ToolRegistry) CloseTools() error {
+	r.mu.Lock()
+	closables := r.closables
+	r.closables = nil
+	r.mu.Unlock()
+	var firstErr error
+	for _, closeFn := range closables {
+		if err := closeFn(); err != nil && firstErr == nil {
+			firstErr = err
+		}
+	}
+	return firstErr
+}
+
+// SetCodemodeStore binds the persisted Codemode store this registry's codemode
+// tool reads and writes. A nil store disables persistence.
+func (r *ToolRegistry) SetCodemodeStore(store *CodemodeStore) {
+	r.mu.Lock()
+	r.codemodeStore = store
+	r.mu.Unlock()
+}
+
+func (r *ToolRegistry) getCodemodeStore() *CodemodeStore {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+	return r.codemodeStore
+}
+
+// Hooks returns the configured execution hooks. It lets the nested tool-call
+// runner apply the same permission and transformation callbacks as a top-level
+// call without duplicating the registry state.
+func (r *ToolRegistry) Hooks() ToolHooks {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+	return r.hooks
+}
+
+// ExecuteNested runs a tool that was requested from a nested context (for
+// example a Codemode script). Unlike Execute it does not require the tool to be
+// model-active, but it still enforces the deny list, schema validation and the
+// Before/After hooks.
+func (r *ToolRegistry) ExecuteNested(ctx context.Context, call ToolCall) (ToolResult, error) {
+	return r.executeTool(ctx, call, false)
+}
+
+// executeTool is the shared execution path. When requireActive is true the tool
+// must be in the model-active set; a nested call relaxes only that check, never
+// the deny list, validation or hooks.
+func (r *ToolRegistry) executeTool(ctx context.Context, call ToolCall, requireActive bool) (ToolResult, error) {
 	if ctx == nil {
 		ctx = context.Background()
 	}
 	if err := ctx.Err(); err != nil {
 		return ToolResult{}, err
 	}
-	definition, ok := r.lookupActive(call.Name)
+	r.mu.RLock()
+	if r.deny[call.Name] {
+		r.mu.RUnlock()
+		return ToolResult{}, fmt.Errorf("tool %q is denied", call.Name)
+	}
+	definition, ok := r.tools[call.Name]
+	if requireActive && ok && !r.active[call.Name] {
+		ok = false
+	}
+	r.mu.RUnlock()
 	if !ok {
 		return ToolResult{}, fmt.Errorf("tool %q is not active", call.Name)
+	}
+	if definition.exposure() == ExposureHidden {
+		return ToolResult{}, fmt.Errorf("tool %q is not reachable", call.Name)
 	}
 	declaration := aitypes.Tool{
 		Name:        definition.Name,
@@ -355,6 +424,93 @@ func (r *ToolRegistry) Execute(ctx context.Context, call ToolCall) (ToolResult, 
 		return ToolResult{}, err
 	}
 	return transformed, nil
+}
+
+// Declarations returns the model-visible declarations of the active tools.
+// A codemode or deferred tool enters this set only after it is explicitly
+// activated (for example by tool search), matching the upstream active set.
+func (r *ToolRegistry) Declarations() []aitypes.Tool {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+	declarations := make([]aitypes.Tool, 0, len(r.active))
+	for _, name := range r.order {
+		if !r.active[name] {
+			continue
+		}
+		definition := r.tools[name]
+		if definition.exposure() == ExposureHidden {
+			continue
+		}
+		declarations = append(declarations, aitypes.Tool{
+			Name:        definition.Name,
+			Description: definition.Description,
+			Input:       aitypes.JSONSchemaToolInput(definition.Parameters),
+		})
+	}
+	return declarations
+}
+
+func (r *ToolRegistry) lookupActive(name string) (ToolDefinition, bool) {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+	if !r.active[name] {
+		return ToolDefinition{}, false
+	}
+	definition, ok := r.tools[name]
+	return definition, ok
+}
+
+// hasTool reports whether a tool name is registered, regardless of activation
+// or exposure.
+func (r *ToolRegistry) hasTool(name string) bool {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+	_, ok := r.tools[name]
+	return ok
+}
+
+// nestedAgentTool builds the agent-runtime view of one registered tool for a
+// nested call, preserving structured content. Activation is deliberately not
+// required; the caller still enforces the deny list and hooks.
+func (r *ToolRegistry) nestedAgentTool(name string) (agenttypes.AgentTool[any, any], bool) {
+	r.mu.RLock()
+	definition, ok := r.tools[name]
+	r.mu.RUnlock()
+	if !ok {
+		return agenttypes.AgentTool[any, any]{}, false
+	}
+	return agenttypes.AgentTool[any, any]{
+		Tool: aitypes.Tool{
+			Name:        definition.Name,
+			Description: definition.Description,
+			Input:       aitypes.JSONSchemaToolInput(definition.Parameters),
+		},
+		Label:            definition.Name,
+		PrepareArguments: func(args any) (any, error) { return prepareRawArguments(args) },
+		Execute: func(toolCallID string, params any, signal <-chan struct{}, _ agenttypes.AgentToolUpdateCallback[any]) (agenttypes.AgentToolResult[any], error) {
+			raw, err := prepareRawArguments(params)
+			if err != nil {
+				return agenttypes.AgentToolResult[any]{}, err
+			}
+			result, err := definition.Execute(contextFromSignal(signal), raw)
+			if err != nil {
+				return agenttypes.AgentToolResult[any]{}, err
+			}
+			return agenttypes.AgentToolResult[any]{
+				Content:           result.Content,
+				Details:           decodeDetails(result.Details),
+				StructuredContent: result.StructuredContent,
+				IsError:           result.IsError,
+			}, nil
+		},
+	}, true
+}
+
+// Execute validates the arguments against the active tool's schema, runs the
+// Before hook, executes the tool and runs the After hook. All hooks run outside
+// the registry lock.
+func (r *ToolRegistry) Execute(ctx context.Context, call ToolCall) (ToolResult, error) {
+	return r.executeTool(ctx, call, true)
 }
 
 // AgentTools returns the active tools adapted to the accepted agent runtime.

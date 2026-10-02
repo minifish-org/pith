@@ -7,6 +7,7 @@ package utils
 
 import (
 	"net/http"
+	"strings"
 
 	"github.com/minifish-org/pith/packages/ai/types"
 )
@@ -24,21 +25,33 @@ func HeadersToRecord(headers http.Header) map[string]string {
 	return result
 }
 
-// ProviderHeadersToRecord converts provider headers to a plain string map,
-// dropping nil (suppressed) values. It returns nil when the result would be
-// empty, matching the upstream `undefined`.
-func ProviderHeadersToRecord(headers types.ProviderHeaders) map[string]string {
-	if headers == nil {
-		return nil
+// ProviderHeadersToRecord merges provider headers case-insensitively into a
+// plain string map. Sources are applied left to right: a later spelling wins
+// over an earlier one, a nil value removes any earlier value for the same
+// normalized name, and an empty result returns nil (matching upstream
+// `undefined`). The returned key keeps the spelling from the source that last
+// set the value.
+func ProviderHeadersToRecord(headerSources ...types.ProviderHeaders) map[string]string {
+	type entry struct {
+		name  string
+		value string
 	}
-	result := map[string]string{}
-	for key, value := range headers {
-		if value != nil {
-			result[key] = *value
+	merged := map[string]entry{}
+	for _, source := range headerSources {
+		for name, value := range source {
+			normalized := strings.ToLower(name)
+			delete(merged, normalized)
+			if value != nil {
+				merged[normalized] = entry{name: name, value: *value}
+			}
 		}
 	}
-	if len(result) == 0 {
+	if len(merged) == 0 {
 		return nil
+	}
+	result := make(map[string]string, len(merged))
+	for _, item := range merged {
+		result[item.name] = item.value
 	}
 	return result
 }

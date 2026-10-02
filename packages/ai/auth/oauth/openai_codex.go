@@ -356,6 +356,7 @@ func createCodexAuthorizationFlow(originator string) (*codexAuthorizationFlow, e
 	if err != nil {
 		return nil, err
 	}
+	verifier, challenge := pkce.Verifier, pkce.Challenge
 	state, err := createCodexState()
 	if err != nil {
 		return nil, err
@@ -369,14 +370,14 @@ func createCodexAuthorizationFlow(originator string) (*codexAuthorizationFlow, e
 	query.Set("client_id", codexClientID)
 	query.Set("redirect_uri", codexRedirectURI)
 	query.Set("scope", codexScope)
-	query.Set("code_challenge", pkce.Challenge)
+	query.Set("code_challenge", challenge)
 	query.Set("code_challenge_method", "S256")
 	query.Set("state", state)
 	query.Set("id_token_add_organizations", "true")
 	query.Set("codex_cli_simplified_flow", "true")
 	query.Set("originator", originator)
 	authorize.RawQuery = query.Encode()
-	return &codexAuthorizationFlow{Verifier: pkce.Verifier, State: state, URL: authorize.String()}, nil
+	return &codexAuthorizationFlow{Verifier: verifier, State: state, URL: authorize.String()}, nil
 }
 
 type codexLocalServer struct {

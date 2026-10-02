@@ -17,10 +17,14 @@ import (
 func CloudflareWorkersAIProvider() ai.Provider {
 	authValue := CloudflareWorkersAIAuth()
 	return ai.CreateProvider(ai.CreateProviderOptions{
-		ID:     types.ProviderCloudflareWorkersAI,
-		Name:   "Cloudflare Workers AI",
-		Auth:   authtypes.ProviderAuth{APIKey: &authValue},
-		Models: catalogModelList(catalog.CLOUDFLARE_WORKERS_AI_MODELS),
-		API:    CloudflareStreams(api.OpenAICompletionsApi()),
+		ID:        types.ProviderCloudflareWorkersAI,
+		Name:      "Cloudflare Workers AI",
+		Auth:      authtypes.ProviderAuth{APIKey: &authValue},
+		Models:    catalogModelList(catalog.CLOUDFLARE_WORKERS_AI_MODELS),
+		AllModels: builtinMixedModels(types.ProviderCloudflareWorkersAI, catalog.CLOUDFLARE_WORKERS_AI_MODELS),
+		API:       CloudflareStreams(api.OpenAICompletionsApi()),
+		Classifiers: map[types.ClassifierApi]ai.ClassifierImplementation{
+			types.ClassifierApiCloudflareWorkersAISystemOne: cloudflareSystemOneClassifier(),
+		},
 	})
 }

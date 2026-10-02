@@ -282,8 +282,9 @@ func loginOpenRouter(ctx context.Context, interaction authtypes.ProviderAuthInte
 	if err != nil {
 		return nil, err
 	}
+	verifier, challenge := pkce.Verifier, pkce.Challenge
 	callbackPath := "/oauth/callback/" + randomUUID()
-	callback, err := startOpenRouterCallbackServer(callbackPath, pkce.Verifier, interaction.Signal())
+	callback, err := startOpenRouterCallbackServer(callbackPath, verifier, interaction.Signal())
 	if err != nil {
 		return nil, err
 	}
@@ -297,7 +298,7 @@ func loginOpenRouter(ctx context.Context, interaction authtypes.ProviderAuthInte
 	}
 	params := url.Values{}
 	params.Set("callback_url", callback.callbackURL)
-	params.Set("code_challenge", pkce.Challenge)
+	params.Set("code_challenge", challenge)
 	params.Set("code_challenge_method", "S256")
 	authorize.RawQuery = params.Encode()
 
@@ -346,7 +347,7 @@ func loginOpenRouter(ctx context.Context, interaction authtypes.ProviderAuthInte
 		return nil, errors.New("Missing authorization code")
 	}
 	interaction.Notify(authtypes.AuthEvent{Type: authtypes.AuthEventProgress, Message: stringPtr("Exchanging authorization code for an API key...")})
-	return exchangeOpenRouterCode(ctx, code, pkce.Verifier, interaction.Signal())
+	return exchangeOpenRouterCode(ctx, code, verifier, interaction.Signal())
 }
 
 // OpenRouterOAuth is the OpenRouter OAuth PKCE flow.

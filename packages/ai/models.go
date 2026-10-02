@@ -14,6 +14,7 @@ package ai
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"strings"
@@ -181,9 +182,21 @@ type Models interface {
 	GetModels(provider ...string) []types.Model
 	GetModel(provider string, id string) *types.Model
 
+	// GetModelsOfType returns the last-known models of one kind from one
+	// provider or all providers.
+	GetModelsOfType(kind string, provider ...string) []types.AnyModel
+	// GetModelOfType looks up one model kind against the last-known lists.
+	GetModelOfType(kind string, provider string, id string) *types.AnyModel
+	// GetAllModels returns the last-known models of every kind.
+	GetAllModels(provider ...string) []types.AnyModel
+
 	Refresh(ctx context.Context, options *ModelsRefreshOptions) (*ModelsRefreshResult, error)
 	CheckAuth(ctx context.Context, providerID string, options *authtypes.AuthOperationOptions) (*authtypes.AuthCheck, error)
 	GetAvailable(ctx context.Context, providerID string, options *authtypes.AuthOperationOptions) ([]types.Model, error)
+	// GetAvailableOfType returns the configured models of one kind.
+	GetAvailableOfType(ctx context.Context, kind string, providerID string, options *authtypes.AuthOperationOptions) ([]types.AnyModel, error)
+	// GetAllAvailable returns the configured models of every kind.
+	GetAllAvailable(ctx context.Context, providerID string, options *authtypes.AuthOperationOptions) ([]types.AnyModel, error)
 
 	// GetAuth resolves provider-scoped auth by provider id.
 	GetAuth(ctx context.Context, providerID string, overrides *auth.AuthResolutionOverrides) (*authtypes.AuthResult, error)
@@ -200,6 +213,10 @@ type Models interface {
 	StreamDeferred(ctx context.Context, model types.Model, handle types.DeferredHandle, options *ModelsDeferredFetchOptions) *types.AssistantMessageEventStream
 	FetchDeferred(ctx context.Context, model types.Model, handle types.DeferredHandle, options *ModelsDeferredFetchOptions) (*types.AssistantMessage, error)
 	CancelDeferred(ctx context.Context, model types.Model, handle types.DeferredHandle, options *ModelsDeferredCancelOptions) error
+
+	// Classify dispatches a structured classification to the owning provider. It
+	// never returns an error: failures are represented in the result.
+	Classify(ctx context.Context, model types.ClassifierModel, request types.ClassifierContext, options *types.ClassifierOptions) types.ClassifierResult
 }
 
 // MutableModels is a Models collection that can be reconfigured at runtime.
@@ -235,17 +252,25 @@ type CreateProviderOptions struct {
 	Headers types.ProviderHeaders
 	// Auth is required.
 	Auth authtypes.ProviderAuth
-	// Models is the static baseline model list (empty for purely dynamic
+	// Models is the static chat baseline model list (empty for purely dynamic
 	// providers).
 	Models []types.Model
-	// FetchModels fetches a dynamic model overlay. CreateProvider restores and
-	// publishes it transactionally.
+	// AllModels is the static baseline of every model kind. When set it governs
+	// the mixed catalog; Models is then only used as the chat fallback.
+	AllModels []types.AnyModel
+	// FetchModels fetches a dynamic chat model overlay. CreateProvider restores
+	// and publishes it transactionally.
 	FetchModels  func(ctx context.Context, refresh *RefreshModelsContext) ([]types.Model, error)
 	FilterModels func(models []types.Model, credential authtypes.Credential) []types.Model
+	// FilterAllModels is the optional credential-specific availability policy
+	// across every model kind.
+	FilterAllModels func(models []types.AnyModel, credential authtypes.Credential) []types.AnyModel
 	// API is a single implementation for all models.
 	API types.ProviderStreams
 	// APIs maps the model API to its implementation for mixed-API providers.
 	APIs map[types.Api]types.ProviderStreams
+	// Classifiers maps a classifier API to its implementation.
+	Classifiers map[types.ClassifierApi]ClassifierImplementation
 }
 
 // providerImpl is the Provider produced by CreateProvider.
@@ -256,12 +281,15 @@ type providerImpl struct {
 	headers types.ProviderHeaders
 	auth    authtypes.ProviderAuth
 
-	mu       sync.Mutex
-	baseline []types.Model
-	dynamic  []types.Model
+	mu         sync.Mutex
+	allBase    []types.AnyModel
+	dynamicAny []types.AnyModel
 
-	fetchModels  func(ctx context.Context, refresh *RefreshModelsContext) ([]types.Model, error)
-	filterModels func(models []types.Model, credential authtypes.Credential) []types.Model
+	fetchModels     func(ctx context.Context, refresh *RefreshModelsContext) ([]types.Model, error)
+	filterModels    func(models []types.Model, credential authtypes.Credential) []types.Model
+	filterAllModels func(models []types.AnyModel, credential authtypes.Credential) []types.AnyModel
+
+	classifiers map[types.ClassifierApi]ClassifierImplementation
 
 	single types.ProviderStreams
 	byAPI  map[types.Api]types.ProviderStreams
@@ -277,36 +305,33 @@ func (p *providerImpl) Headers() types.ProviderHeaders { return p.headers }
 func (p *providerImpl) Auth() authtypes.ProviderAuth   { return p.auth }
 func (p *providerImpl) SupportsRefreshModels() bool    { return p.fetchModels != nil }
 func (p *providerImpl) SupportsFilterModels() bool     { return p.filterModels != nil }
+func (p *providerImpl) SupportsFilterAllModels() bool  { return p.filterAllModels != nil }
 func (p *providerImpl) SupportsFetchDeferred() bool    { return p.supportsFetchDeferred }
 func (p *providerImpl) SupportsCancelDeferred() bool   { return p.supportsCancelDeferred }
 
-// GetModels merges the static baseline with the dynamic overlay by model id.
+// GetModels returns the chat models of the merged mixed catalog.
 func (p *providerImpl) GetModels() []types.Model {
+	return anyModelsToChat(p.GetAllModels())
+}
+
+// GetAllModels merges the static baseline with the dynamic overlay by
+// (model type, id).
+func (p *providerImpl) GetAllModels() []types.AnyModel {
 	p.mu.Lock()
-	merged := append([]types.Model(nil), p.baseline...)
-	dynamic := append([]types.Model(nil), p.dynamic...)
+	base := append([]types.AnyModel(nil), p.allBase...)
+	dynamic := append([]types.AnyModel(nil), p.dynamicAny...)
 	p.mu.Unlock()
 
-	for _, model := range dynamic {
-		index := -1
-		for i := range merged {
-			if merged[i].Id == model.Id {
-				index = i
-				break
-			}
-		}
-		if index >= 0 {
-			merged[index] = model
-		} else {
-			merged = append(merged, model)
-		}
-	}
-	return merged
+	return mergeAnyModels(base, dynamic)
 }
 
 func (p *providerImpl) setDynamic(models []types.Model) {
+	p.setDynamicAny(anyChatModels(models))
+}
+
+func (p *providerImpl) setDynamicAny(models []types.AnyModel) {
 	p.mu.Lock()
-	p.dynamic = models
+	p.dynamicAny = models
 	p.mu.Unlock()
 }
 
@@ -316,6 +341,14 @@ func (p *providerImpl) FilterModels(models []types.Model, credential authtypes.C
 		return models
 	}
 	return p.filterModels(models, credential)
+}
+
+// FilterAllModels applies the optional any-kind credential filter.
+func (p *providerImpl) FilterAllModels(models []types.AnyModel, credential authtypes.Credential) []types.AnyModel {
+	if p.filterAllModels == nil {
+		return models
+	}
+	return p.filterAllModels(models, credential)
 }
 
 // RefreshModels restores the stored catalog and optionally fetches a newer one.
@@ -332,8 +365,8 @@ func (p *providerImpl) RefreshModels(ctx context.Context, refresh *RefreshModels
 	}
 
 	if refresh.Stored != nil {
-		restored := modelsForProvider(refresh.Stored.Models, p.id)
-		published, err := refresh.Publish(ModelsPublication{Update: func() { p.setDynamic(restored) }})
+		restored := anyModelsForProvider(storedAnyModels(refresh.Stored), p.id)
+		published, err := refresh.Publish(ModelsPublication{Update: func() { p.setDynamicAny(restored) }})
 		if err != nil {
 			return err
 		}
@@ -434,17 +467,23 @@ func context2Background() context.Context { return context.Background() }
 // an API map dispatches on model.Api, and a model whose api has no entry
 // produces a stream error.
 func CreateProvider(input CreateProviderOptions) Provider {
+	allBase := input.AllModels
+	if allBase == nil {
+		allBase = anyChatModels(input.Models)
+	}
 	provider := &providerImpl{
-		id:           input.ID,
-		name:         input.Name,
-		baseURL:      input.BaseURL,
-		headers:      input.Headers,
-		auth:         input.Auth,
-		baseline:     append([]types.Model(nil), input.Models...),
-		fetchModels:  input.FetchModels,
-		filterModels: input.FilterModels,
-		single:       input.API,
-		byAPI:        input.APIs,
+		id:              input.ID,
+		name:            input.Name,
+		baseURL:         input.BaseURL,
+		headers:         input.Headers,
+		auth:            input.Auth,
+		allBase:         allBase,
+		fetchModels:     input.FetchModels,
+		filterModels:    input.FilterModels,
+		filterAllModels: input.FilterAllModels,
+		classifiers:     input.Classifiers,
+		single:          input.API,
+		byAPI:           input.APIs,
 	}
 	if provider.name == "" {
 		provider.name = input.ID
@@ -617,6 +656,54 @@ func safeModels(provider Provider) (models []types.Model) {
 func (m *modelsImpl) GetModel(provider string, id string) *types.Model {
 	for _, model := range m.GetModels(provider) {
 		if model.Id == id {
+			copy := model
+			return &copy
+		}
+	}
+	return nil
+}
+
+// GetAllModels returns the last-known models of every kind from one provider or
+// all providers.
+func (m *modelsImpl) GetAllModels(provider ...string) []types.AnyModel {
+	if len(provider) > 0 {
+		entry := m.GetProvider(provider[0])
+		if entry == nil {
+			return []types.AnyModel{}
+		}
+		return safeAllModels(entry)
+	}
+	models := []types.AnyModel{}
+	for _, entry := range m.GetProviders() {
+		models = append(models, safeAllModels(entry)...)
+	}
+	return models
+}
+
+// safeAllModels reads a provider's mixed catalog, treating a panicking provider
+// as having no models.
+func safeAllModels(provider Provider) (models []types.AnyModel) {
+	defer func() {
+		if recover() != nil {
+			models = nil
+		}
+	}()
+	if all, ok := provider.(AllModelsProvider); ok {
+		return all.GetAllModels()
+	}
+	return anyChatModels(provider.GetModels())
+}
+
+// GetModelsOfType returns the last-known models of one kind.
+func (m *modelsImpl) GetModelsOfType(kind string, provider ...string) []types.AnyModel {
+	return filterAnyModelsByType(m.GetAllModels(provider...), kind)
+}
+
+// GetModelOfType looks up one model kind by id.
+func (m *modelsImpl) GetModelOfType(kind string, provider string, id string) *types.AnyModel {
+	for _, model := range m.GetModelsOfType(kind, provider) {
+		identity, ok := identityOf(model)
+		if ok && identity.id == id {
 			copy := model
 			return &copy
 		}
@@ -993,6 +1080,72 @@ func (m *modelsImpl) GetAvailable(ctx context.Context, providerID string, option
 		return available, nil
 	}
 	return utils.RaceWithAbortSignal(operation, signal)
+}
+
+// GetAllAvailable returns the configured models of every kind.
+func (m *modelsImpl) GetAllAvailable(ctx context.Context, providerID string, options *authtypes.AuthOperationOptions) ([]types.AnyModel, error) {
+	signal := operationSignal(ctx, options)
+	operation := func() ([]types.AnyModel, error) {
+		if err := signal.Err(); err != nil {
+			return nil, err
+		}
+		var providers []Provider
+		if providerID != "" {
+			if provider := m.GetProvider(providerID); provider != nil {
+				providers = []Provider{provider}
+			}
+		} else {
+			providers = m.GetProviders()
+		}
+		available := []types.AnyModel{}
+		for _, provider := range providers {
+			credential, err := m.readCredential(signal, provider.ID())
+			if err != nil {
+				return nil, err
+			}
+			check, err := m.checkProviderAuth(provider, credential, signal)
+			if err != nil {
+				return nil, err
+			}
+			if check == nil {
+				continue
+			}
+			models := safeAllModels(provider)
+			if filterAll, ok := provider.(FilterAllModelsProvider); ok {
+				models = filterAll.FilterAllModels(models, credential)
+			} else if provider.SupportsFilterModels() {
+				// Default policy: apply the chat filter to chat models and keep
+				// every other kind.
+				availableChatIds := map[string]bool{}
+				for _, model := range provider.FilterModels(provider.GetModels(), credential) {
+					availableChatIds[model.Id] = true
+				}
+				filtered := make([]types.AnyModel, 0, len(models))
+				for _, model := range models {
+					identity, _ := identityOf(model)
+					if identity.kind != types.ModelTypeChat || availableChatIds[identity.id] {
+						filtered = append(filtered, model)
+					}
+				}
+				models = filtered
+			}
+			if models == nil {
+				models = []types.AnyModel{}
+			}
+			available = append(available, models...)
+		}
+		return available, nil
+	}
+	return utils.RaceWithAbortSignal(operation, signal)
+}
+
+// GetAvailableOfType returns the configured models of one kind.
+func (m *modelsImpl) GetAvailableOfType(ctx context.Context, kind string, providerID string, options *authtypes.AuthOperationOptions) ([]types.AnyModel, error) {
+	available, err := m.GetAllAvailable(ctx, providerID, options)
+	if err != nil {
+		return nil, err
+	}
+	return filterAnyModelsByType(available, kind), nil
 }
 
 func (m *modelsImpl) GetAuth(ctx context.Context, providerID string, overrides *auth.AuthResolutionOverrides) (*authtypes.AuthResult, error) {
@@ -1388,20 +1541,35 @@ func providerHeadersFromStrings(headers map[string]string) types.ProviderHeaders
 	return out
 }
 
-func modelsForProvider(models []types.Model, providerID string) []types.Model {
-	out := []types.Model{}
+func anyModelsForProvider(models []types.AnyModel, providerID string) []types.AnyModel {
+	out := []types.AnyModel{}
 	for _, model := range models {
-		if string(model.Provider) == providerID {
-			out = append(out, model)
+		identity, ok := identityOf(model)
+		if !ok || identity.provider != providerID {
+			continue
 		}
+		out = append(out, model)
 	}
 	return out
 }
 
-// HasApi is a runtime-checked narrowing helper for dynamically looked-up
-// models.
-func HasApi(model types.Model, api types.Api) bool {
-	return model.Api == api
+// storedAnyModels decodes the every-kind view of a stored catalog, preserving
+// the verbatim JSON elements so classifier/image entries survive a restart.
+func storedAnyModels(entry *ModelsStoreEntry) []types.AnyModel {
+	if entry == nil {
+		return nil
+	}
+	if entry.rawModels != nil {
+		out := make([]types.AnyModel, 0, len(entry.rawModels))
+		for _, raw := range entry.rawModels {
+			var model types.AnyModel
+			if err := json.Unmarshal(raw, &model); err == nil {
+				out = append(out, model)
+			}
+		}
+		return out
+	}
+	return anyChatModels(entry.Models)
 }
 
 // CalculateCost fills usage.Cost from the model's rates, applying the highest
@@ -1509,11 +1677,27 @@ func indexOfThinkingLevel(levels []types.ModelThinkingLevel, level types.ModelTh
 	return -1
 }
 
-// ModelsAreEqual reports whether two models share an id and provider. A nil
-// model is never equal to anything.
-func ModelsAreEqual(a *types.Model, b *types.Model) bool {
-	if a == nil || b == nil {
+// ModelsAreEqual reports whether two models share a type, id and provider. It
+// accepts the same representations as identityOf. A nil or unrecognized model
+// is never equal to anything.
+func ModelsAreEqual(a any, b any) bool {
+	left, ok := identityOf(a)
+	if !ok {
 		return false
 	}
-	return a.Id == b.Id && a.Provider == b.Provider
+	right, ok := identityOf(b)
+	if !ok {
+		return false
+	}
+	return left.kind == right.kind && left.id == right.id && left.provider == right.provider
+}
+
+// HasApi reports whether a chat model uses the given api. Non-chat models never
+// match, even when their api id is equal.
+func HasApi(model any, api types.Api) bool {
+	identity, ok := identityOf(model)
+	if !ok {
+		return false
+	}
+	return identity.kind == types.ModelTypeChat && identity.api == string(api)
 }

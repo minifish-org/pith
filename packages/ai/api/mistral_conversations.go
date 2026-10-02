@@ -169,14 +169,22 @@ func MistralConversationsStreamSimple(model *types.Model, context *types.Transcr
 			reasoning = &clamped
 		}
 	}
-	shouldUseReasoning := model.Reasoning && reasoning != nil
-	if shouldUseReasoning && usesMistralPromptModeReasoning(model) {
+	// Models with a thinking level map use `reasoning_effort`; other reasoning
+	// models use `prompt_mode`. The presence of the map, not the model name,
+	// selects the mechanism.
+	hasEffortMap := model.Reasoning && model.ThinkingLevelMap != nil
+	if hasEffortMap {
+		if reasoning != nil {
+			effort := mistralMappedReasoningEffort(model, *reasoning)
+			typed.ReasoningEffort = &effort
+		} else if off, ok := model.ThinkingLevelMap[types.ThinkingOff]; ok && off != nil {
+			effort := MistralReasoningEffort(*off)
+			typed.ReasoningEffort = &effort
+		}
+	}
+	if model.Reasoning && !hasEffortMap && reasoning != nil {
 		promptMode := "reasoning"
 		typed.PromptMode = &promptMode
-	}
-	if shouldUseReasoning && usesMistralReasoningEffort(model) {
-		effort := mapMistralReasoningEffort(model, *reasoning)
-		typed.ReasoningEffort = &effort
 	}
 
 	return MistralConversationsStream(model, context, typed)
@@ -726,6 +734,12 @@ func consumeMistralChatStream(ctx context.Context, model *types.Model, output *t
 				for _, item := range items {
 					if text, ok := item.(string); ok {
 						textDelta := utils.SanitizeSurrogates(text)
+						// Empty content deltas are sent around thinking and tool calls
+						// by some Mistral-hosted models. Opening a block for them splits
+						// a following thinking block, which the provider rejects on replay.
+						if textDelta == "" {
+							continue
+						}
 						if currentKind != string(types.ContentTypeText) {
 							finishCurrent()
 							block := types.TextBlock("")
@@ -766,6 +780,9 @@ func consumeMistralChatStream(ctx context.Context, model *types.Model, output *t
 					case "text":
 						text, _ := chunk["text"].(string)
 						textDelta := utils.SanitizeSurrogates(text)
+						if textDelta == "" {
+							continue
+						}
 						if currentKind != string(types.ContentTypeText) {
 							finishCurrent()
 							block := types.TextBlock("")
@@ -1218,21 +1235,12 @@ func buildMistralToolResultText(text string, hasImages, supportsImages, isError 
 	return "(no tool output)"
 }
 
-func usesMistralReasoningEffort(model *types.Model) bool {
-	return model.Id == "mistral-small-2603" ||
-		model.Id == "mistral-small-latest" ||
-		strings.HasPrefix(model.Id, "mistral-medium-") ||
-		model.Id == "zai-glm-5-2"
-}
-
-func usesMistralPromptModeReasoning(model *types.Model) bool {
-	return model.Reasoning && !usesMistralReasoningEffort(model)
-}
-
-func mapMistralReasoningEffort(model *types.Model, level types.ModelThinkingLevel) MistralReasoningEffort {
+// mistralMappedReasoningEffort mirrors `effortMap[reasoning] ?? "high"`: a
+// missing or explicitly unsupported (nil) entry falls back to "high".
+func mistralMappedReasoningEffort(model *types.Model, level types.ModelThinkingLevel) MistralReasoningEffort {
 	if model.ThinkingLevelMap != nil {
-		if value, mapped, supported := model.ThinkingLevelMap.Lookup(level); mapped && supported {
-			return MistralReasoningEffort(value)
+		if value, ok := model.ThinkingLevelMap[level]; ok && value != nil {
+			return MistralReasoningEffort(*value)
 		}
 	}
 	return MistralReasoningEffortHigh

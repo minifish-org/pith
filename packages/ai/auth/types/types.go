@@ -447,6 +447,15 @@ type ApiKeyResolveInput struct {
 	Signal     context.Context
 }
 
+// LoginOptions is app-supplied context for an OAuth login. It is optional;
+// flows that do not need installation state ignore it.
+type LoginOptions struct {
+	// GetDeviceID returns the stable ID of this app installation. It is called
+	// only by login flows that need it, so apps can create the ID on first use
+	// and must return the same ID on every later call.
+	GetDeviceID func() string
+}
+
 // OAuthAuth is OAuth auth. The Refresh/ToAuth split lets callers own the
 // locked refresh pattern.
 type OAuthAuth struct {
@@ -459,6 +468,10 @@ type OAuthAuth struct {
 	LoginLabel string
 	// Login runs the interactive login.
 	Login func(ctx context.Context, interaction ProviderAuthInteraction) (*OAuthCredential, error)
+	// LoginWithOptions is an optional login variant that also receives
+	// app-supplied installation state. When set, callers may prefer it over
+	// Login.
+	LoginWithOptions func(ctx context.Context, interaction ProviderAuthInteraction, options *LoginOptions) (*OAuthCredential, error)
 	// Refresh exchanges the refresh token. Network call; returns an error on
 	// failure. Callers run it under the store lock.
 	Refresh func(ctx context.Context, credential *OAuthCredential) (*OAuthCredential, error)

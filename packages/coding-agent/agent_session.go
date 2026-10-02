@@ -123,6 +123,9 @@ type AgentSession struct {
 	modelConfig ModelOptions
 	thinking    agenttypes.ThinkingLevel
 	ownsManager bool
+	// ownsRegistry is set when the session created the tool registry itself, so
+	// Close may release per-tool resources (for example Codemode sandboxes).
+	ownsRegistry bool
 
 	// onProviderStreamEvent is the caller-supplied observer copied from
 	// SessionOptions. It is read at call time so agent rebuilds and model
@@ -131,6 +134,12 @@ type AgentSession struct {
 
 	agent            *agentcore.Agent
 	unsubscribeAgent func()
+
+	// virtualRoutes is the per-session virtual model registry. It is nil when
+	// no virtual models were configured. routeFailed carries the failed request
+	// of a retry so the router sees it as Failed exactly once.
+	virtualRoutes *virtualModelRegistry
+	routeFailed   *ModelRoutePrevious
 
 	listeners      []sessionListenerEntry
 	nextListenerID uint64
@@ -182,6 +191,10 @@ func CreateAgentSession(options SessionOptions) (*AgentSession, error) {
 			return nil, err
 		}
 		options.Tools = registry
+		options.ownsRegistry = true
+	}
+	if options.Tools.hasTool(CodemodeToolName) {
+		options.Tools.SetCodemodeStore(NewCodemodeStore(options.Manager))
 	}
 
 	model, err := ResolveModel(options.Model)
@@ -190,6 +203,22 @@ func CreateAgentSession(options SessionOptions) (*AgentSession, error) {
 			_ = options.Manager.Close()
 		}
 		return nil, err
+	}
+
+	virtualRoutes, err := newVirtualModelRegistry(options.VirtualModels)
+	if err != nil {
+		if options.ownsManager {
+			_ = options.Manager.Close()
+		}
+		return nil, err
+	}
+	if IsVirtualModel(model) {
+		if _, ok := virtualRoutes.lookup(string(model.Provider), model.Id); !ok {
+			if options.ownsManager {
+				_ = options.Manager.Close()
+			}
+			return nil, fmt.Errorf("virtual model %s/%s is not registered", model.Provider, model.Id)
+		}
 	}
 
 	thinking := options.Model.ThinkingLevel
@@ -208,7 +237,9 @@ func CreateAgentSession(options SessionOptions) (*AgentSession, error) {
 		modelConfig:           options.Model,
 		thinking:              thinking,
 		ownsManager:           options.ownsManager,
+		ownsRegistry:          options.ownsRegistry,
 		onProviderStreamEvent: options.OnProviderStreamEvent,
+		virtualRoutes:         virtualRoutes,
 	}
 
 	session.mu.Lock()
@@ -252,7 +283,13 @@ func (s *AgentSession) buildAgentLocked() (*agentcore.Agent, func(), error) {
 		// Callers may omit StreamFn and rely on the native provider for the
 		// resolved model's API, as upstream createAgentSession does. The
 		// fallback is bound to this session's model and is not process-global.
-		streamFn = builtinStreamFnForModel(s.model)
+		// A virtual selection routes to a physical model before streaming, so
+		// its dispatcher resolves the provider from the routed model instead.
+		if IsVirtualModel(s.model) {
+			streamFn = dynamicProviderStreamFn
+		} else {
+			streamFn = builtinStreamFnForModel(s.model)
+		}
 	}
 	apiKey := modelConfig.APIKey
 
@@ -275,11 +312,12 @@ func (s *AgentSession) buildAgentLocked() (*agentcore.Agent, func(), error) {
 			Tools:         s.registry.AgentTools(),
 			Messages:      messages,
 		},
-		ConvertToLlm: ConvertToLlm,
-		StreamFn:     streamFn,
-		GetApiKey:    getAPIKey,
-		SessionId:    s.manager.SessionID(),
-		FinishTurn:   s.finishTurn,
+		ConvertToLlm:   ConvertToLlm,
+		StreamFn:       streamFn,
+		GetApiKey:      getAPIKey,
+		SessionId:      s.manager.SessionID(),
+		FinishTurn:     s.finishTurn,
+		PrepareRequest: s.prepareRequest,
 		// The observer is always installed so native subscribers receive
 		// transient provider events even without an explicit callback. It
 		// reads s.onProviderStreamEvent at call time, preserving the callback
@@ -579,6 +617,9 @@ func (s *AgentSession) Prompt(ctx context.Context, text string) (RunResult, erro
 		if err := s.omitFailedAssistant(); err != nil {
 			return result, terminalErrorFor(assistant)
 		}
+		if s.virtualRoutes != nil {
+			s.setRouteFailure(previousFromAssistant(assistant))
+		}
 		if err := s.rebuild(); err != nil {
 			return result, err
 		}
@@ -803,6 +844,8 @@ func (s *AgentSession) Close() error {
 	s.listeners = nil
 	manager := s.manager
 	owns := s.ownsManager
+	registry := s.registry
+	ownsRegistry := s.ownsRegistry
 	s.mu.Unlock()
 
 	if activeAgent != nil {
@@ -810,6 +853,9 @@ func (s *AgentSession) Close() error {
 	}
 	if unsubscribe != nil {
 		unsubscribe()
+	}
+	if ownsRegistry && registry != nil {
+		_ = registry.CloseTools()
 	}
 	if owns && manager != nil {
 		return manager.Close()

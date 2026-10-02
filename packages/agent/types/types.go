@@ -51,12 +51,20 @@ type BeforeToolCallResult struct {
 }
 
 // AfterToolCallResult partially overrides an executed tool result.
+//
+// Merge semantics are field by field. Content replaces the full content array,
+// Details the full details payload, IsError the error flag, Usage the usage and
+// Terminate the early-termination hint. StructuredContent replaces the machine
+// readable payload; when Content is provided without StructuredContent the
+// structured payload is dropped because it may no longer match the content.
+// Other omitted fields keep the original executed tool result values.
 type AfterToolCallResult struct {
-	Content   []aitypes.ContentBlock `json:"content,omitempty"`
-	Details   any                    `json:"details,omitempty"`
-	IsError   *bool                  `json:"isError,omitempty"`
-	Usage     *aitypes.Usage         `json:"usage,omitempty"`
-	Terminate *bool                  `json:"terminate,omitempty"`
+	Content           []aitypes.ContentBlock `json:"content,omitempty"`
+	Details           any                    `json:"details,omitempty"`
+	StructuredContent json.RawMessage        `json:"structuredContent,omitempty"`
+	IsError           *bool                  `json:"isError,omitempty"`
+	Usage             *aitypes.Usage         `json:"usage,omitempty"`
+	Terminate         *bool                  `json:"terminate,omitempty"`
 }
 
 // BeforeToolCallContext is passed to the beforeToolCall hook.
@@ -239,10 +247,17 @@ type AgentState struct {
 
 // AgentToolResult is the final or partial result produced by a tool.
 type AgentToolResult[T any] struct {
-	Content   []aitypes.ContentBlock `json:"content"`
-	Details   T                      `json:"details"`
-	Usage     *aitypes.Usage         `json:"usage,omitempty"`
-	Terminate *bool                  `json:"terminate,omitempty"`
+	Content []aitypes.ContentBlock `json:"content"`
+	Details T                      `json:"details"`
+	// StructuredContent is the machine-readable result matching the tool's
+	// OutputSchema. It is not sent to the model; Content remains the
+	// model-facing result.
+	StructuredContent json.RawMessage `json:"structuredContent,omitempty"`
+	Usage             *aitypes.Usage  `json:"usage,omitempty"`
+	// IsError reports a failure without throwing. The model sees Content as an
+	// error result, while Details and StructuredContent are kept.
+	IsError   bool  `json:"isError,omitempty"`
+	Terminate *bool `json:"terminate,omitempty"`
 }
 
 // AgentToolUpdateCallback streams partial execution updates.
@@ -253,9 +268,38 @@ type AgentTool[TParameters any, TDetails any] struct {
 	aitypes.Tool
 	Label            string
 	PrepareArguments func(args any) (TParameters, error)
-	Execute          func(toolCallId string, params TParameters, signal <-chan struct{}, onUpdate AgentToolUpdateCallback[TDetails]) (AgentToolResult[TDetails], error)
-	Replay           string
-	ExecutionMode    ToolExecutionMode
+	// OutputSchema is the JSON Schema of StructuredContent in successful
+	// results. It is declared for programmatic callers; output is never
+	// silently rewritten to satisfy it.
+	OutputSchema  json.RawMessage
+	Execute       func(toolCallId string, params TParameters, signal <-chan struct{}, onUpdate AgentToolUpdateCallback[TDetails]) (AgentToolResult[TDetails], error)
+	Replay        string
+	ExecutionMode ToolExecutionMode
+}
+
+// RunToolCallOptions configures RunToolCall.
+type RunToolCallOptions struct {
+	// Tools the call resolves against.
+	Tools []AgentTool[any, any]
+	// AssistantMessage is passed to the hooks as the message that issued the call.
+	AssistantMessage aitypes.AssistantMessage
+	// Context is passed to the hooks as the current agent context.
+	Context AgentContext
+	// Signal cancels preparation, execution and hooks.
+	Signal <-chan struct{}
+	// OnUpdate streams partial execution updates, if non-nil.
+	OnUpdate AgentToolUpdateCallback[any]
+	// BeforeToolCall runs after preparation and schema validation.
+	BeforeToolCall func(context BeforeToolCallContext, signal <-chan struct{}) (*BeforeToolCallResult, error)
+	// AfterToolCall runs after execution, before the outcome is finalized.
+	AfterToolCall func(context AfterToolCallContext, signal <-chan struct{}) (*AfterToolCallResult, error)
+}
+
+// ToolCallOutcome is the final outcome of one tool call after hooks ran.
+type ToolCallOutcome struct {
+	ToolCall AgentToolCall
+	Result   AgentToolResult[any]
+	IsError  bool
 }
 
 // AgentContext is the context snapshot passed into the low-level agent loop.

@@ -44,6 +44,9 @@ type SessionOptions struct {
 	Settings Settings
 	// Policy bounds retries, turns and compaction.
 	Policy RunPolicy
+	// VirtualModels registers per-session virtual model routers. A model whose
+	// api is pi-virtual must appear here to be routed before a request.
+	VirtualModels []VirtualModelDefinition
 
 	// OnProviderStreamEvent observes each parsed provider stream event before Pi
 	// normalization. It is invoked synchronously, in stream order, with the
@@ -56,6 +59,9 @@ type SessionOptions struct {
 
 	// ownsManager is set when CreateAgentSession creates the manager itself.
 	ownsManager bool
+	// ownsRegistry is set when CreateAgentSession creates the tool registry
+	// itself, so Close may release per-tool resources.
+	ownsRegistry bool
 }
 
 // RunPolicy bounds a session's runtime behavior. Every field is opt-in: the

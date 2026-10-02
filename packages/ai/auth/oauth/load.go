@@ -20,6 +20,7 @@ import (
 type OAuthFlowLoaders struct {
 	Anthropic     func() (*authtypes.OAuthAuth, error)
 	OpenAICodex   func() (*authtypes.OAuthAuth, error)
+	OpenAIChatGPT func() (*authtypes.OAuthAuth, error)
 	GitHubCopilot func() (*authtypes.OAuthAuth, error)
 	OpenRouter    func() (*authtypes.OAuthAuth, error)
 	KimiCoding    func() (*authtypes.OAuthAuth, error)
@@ -65,6 +66,14 @@ func LoadOpenAICodexOAuth() (*authtypes.OAuthAuth, error) {
 		return loaders.OpenAICodex()
 	}
 	return OpenAICodexOAuth, nil
+}
+
+// LoadOpenAIChatGPTOAuth returns the OpenAI (ChatGPT subscription) OAuth flow.
+func LoadOpenAIChatGPTOAuth() (*authtypes.OAuthAuth, error) {
+	if loaders := bundled(); loaders != nil && loaders.OpenAIChatGPT != nil {
+		return loaders.OpenAIChatGPT()
+	}
+	return OpenAIChatGPTOAuth, nil
 }
 
 // LoadGitHubCopilotOAuth returns the GitHub Copilot OAuth flow.

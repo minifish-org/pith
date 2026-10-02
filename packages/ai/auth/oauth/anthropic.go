@@ -12,7 +12,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"net"
 	"net/http"
 	"net/url"
 	"strings"
@@ -28,7 +27,12 @@ const (
 	anthropicCallbackPort = 53692
 	anthropicCallbackPath = "/callback"
 	anthropicRedirectURI  = "http://localhost:53692/callback"
-	anthropicScopes       = "org:create_api_key user:profile user:inference user:sessions:claude_code user:mcp_servers user:file_upload"
+	// anthropicCopyCodeRedirectURI is the headless copy-code redirect used when
+	// the browser is on another machine.
+	anthropicCopyCodeRedirectURI = "https://platform.claude.com/oauth/code/callback"
+	anthropicCopyCodeLoginMethod = "copy_code"
+	anthropicBrowserLoginMethod  = "browser"
+	anthropicScopes              = "org:create_api_key user:profile user:inference user:sessions:claude_code user:mcp_servers user:file_upload"
 )
 
 var anthropicClientID = func() string {
@@ -62,67 +66,40 @@ type anthropicCallbackServer struct {
 	redirectURI string
 	cancelWait  func()
 	waitForCode func() *anthropicAuthCode
+	// closeFn releases a shared callback server, when one backs this view.
+	closeFn func()
 }
 
+// startAnthropicCallbackServer adapts the shared loopback callback server to
+// the Anthropic login flow. The injectable `startAnthropicServer` variable
+// keeps the historical test seam.
 func startAnthropicCallbackServer(ctx context.Context, expectedState string) (*anthropicCallbackServer, error) {
-	host := anthropicCallbackHost()
-	listener, err := net.Listen("tcp", fmt.Sprintf("%s:%d", host, anthropicCallbackPort))
+	shared, err := StartOAuthCallbackServer[string](OAuthCallbackServerOptions[string]{
+		ProviderName: "Anthropic",
+		Host:         anthropicCallbackHost(),
+		Port:         anthropicCallbackPort,
+		Path:         anthropicCallbackPath,
+		State:        &expectedState,
+		Complete: func(_ context.Context, code string) (string, error) {
+			return code, nil
+		},
+		Signal: ctx,
+	})
 	if err != nil {
 		return nil, err
 	}
-
-	var settle func(*anthropicAuthCode)
-	resultCh := make(chan *anthropicAuthCode, 1)
-	settled := false
-	settle = func(value *anthropicAuthCode) {
-		if settled {
-			return
-		}
-		settled = true
-		resultCh <- value
-	}
-
-	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		requestURL, parseErr := url.Parse(r.URL.String())
-		if parseErr != nil {
-			writeHTML(w, http.StatusInternalServerError, OAuthErrorHTML("Internal error", nil))
-			return
-		}
-		if requestURL.Path != anthropicCallbackPath {
-			writeHTML(w, http.StatusNotFound, OAuthErrorHTML("Callback route not found.", nil))
-			return
-		}
-		code := requestURL.Query().Get("code")
-		state := requestURL.Query().Get("state")
-		oauthErr := requestURL.Query().Get("error")
-
-		if oauthErr != "" {
-			detail := "Error: " + oauthErr
-			writeHTML(w, http.StatusBadRequest, OAuthErrorHTML("Anthropic authentication did not complete.", &detail))
-			return
-		}
-		if code == "" || state == "" {
-			writeHTML(w, http.StatusBadRequest, OAuthErrorHTML("Missing code or state parameter.", nil))
-			return
-		}
-		if state != expectedState {
-			writeHTML(w, http.StatusBadRequest, OAuthErrorHTML("State mismatch.", nil))
-			return
-		}
-		writeHTML(w, http.StatusOK, OAuthSuccessHTML("Anthropic authentication completed. You can close this window."))
-		settle(&anthropicAuthCode{Code: code, State: state})
-	})
-
-	server := &http.Server{Handler: handler}
-	go func() {
-		_ = server.Serve(listener)
-	}()
-
 	return &anthropicCallbackServer{
-		server:      server,
-		redirectURI: anthropicRedirectURI,
-		cancelWait:  func() { settle(nil) },
-		waitForCode: func() *anthropicAuthCode { return <-resultCh },
+		server:      &http.Server{},
+		redirectURI: shared.RedirectURI,
+		cancelWait:  shared.Cancel,
+		waitForCode: func() *anthropicAuthCode {
+			value, waitErr := shared.Wait()
+			if waitErr != nil || value == nil {
+				return nil
+			}
+			return &anthropicAuthCode{Code: *value, State: expectedState}
+		},
+		closeFn: shared.Close,
 	}, nil
 }
 
@@ -245,12 +222,19 @@ func loginAnthropic(ctx context.Context, interaction authtypes.ProviderAuthInter
 	if err != nil {
 		return nil, err
 	}
-	verifier := pkce.Verifier
+	verifier, challenge := pkce.Verifier, pkce.Challenge
 	server, err := startAnthropicServer(ctx, verifier)
 	if err != nil {
 		return nil, err
 	}
-	defer server.server.Close()
+	defer func() {
+		if server.closeFn != nil {
+			server.closeFn()
+		}
+		if server.server != nil {
+			_ = server.server.Close()
+		}
+	}()
 
 	manualCtx, cancelManual := context.WithCancel(interaction.Signal())
 	defer cancelManual()
@@ -263,7 +247,7 @@ func loginAnthropic(ctx context.Context, interaction authtypes.ProviderAuthInter
 	authParams.Set("response_type", "code")
 	authParams.Set("redirect_uri", anthropicRedirectURI)
 	authParams.Set("scope", anthropicScopes)
-	authParams.Set("code_challenge", pkce.Challenge)
+	authParams.Set("code_challenge", challenge)
 	authParams.Set("code_challenge_method", "S256")
 	authParams.Set("state", verifier)
 	passwordPlaceholder := anthropicRedirectURI
@@ -370,13 +354,86 @@ func refreshAnthropicToken(ctx context.Context, refreshToken string, signal cont
 	}, nil
 }
 
+// loginAnthropicCopyCode runs the headless copy-code login: the user signs in
+// in any browser and pastes the `code#state` value Anthropic shows. It is the
+// options-aware `copy_code` method of the Anthropic flow.
+func loginAnthropicCopyCode(ctx context.Context, interaction authtypes.ProviderAuthInteraction) (*authtypes.OAuthCredential, error) {
+	pkce, err := GeneratePKCE()
+	if err != nil {
+		return nil, err
+	}
+	verifier, challenge := pkce.Verifier, pkce.Challenge
+	authParams := url.Values{}
+	authParams.Set("code", "true")
+	authParams.Set("client_id", anthropicClientID)
+	authParams.Set("response_type", "code")
+	authParams.Set("redirect_uri", anthropicCopyCodeRedirectURI)
+	authParams.Set("scope", anthropicScopes)
+	authParams.Set("code_challenge", challenge)
+	authParams.Set("code_challenge_method", "S256")
+	authParams.Set("state", verifier)
+	interaction.Notify(authtypes.AuthEvent{
+		Type:         authtypes.AuthEventAuthURL,
+		URL:          stringPtr(anthropicAuthorizeURL + "?" + authParams.Encode()),
+		Instructions: stringPtr("Complete login in your browser, then copy the code Anthropic shows and paste it here."),
+	})
+
+	placeholder := "code#state"
+	input, err := interaction.Prompt(interaction.Signal(), authtypes.AuthPrompt{
+		Type:        authtypes.AuthPromptManualCode,
+		Message:     "Paste the code Anthropic shows after you sign in:",
+		Placeholder: &placeholder,
+	})
+	if err != nil {
+		return nil, err
+	}
+	parsedCode, parsedState := parseAnthropicAuthorizationInput(input)
+	if parsedState != nil && *parsedState != verifier {
+		return nil, errors.New("OAuth state mismatch")
+	}
+	if parsedCode == nil || *parsedCode == "" {
+		return nil, errors.New("Missing authorization code")
+	}
+	state := verifier
+	if parsedState != nil {
+		state = *parsedState
+	}
+	interaction.Notify(authtypes.AuthEvent{Type: authtypes.AuthEventProgress, Message: stringPtr("Exchanging authorization code for tokens...")})
+	return exchangeAnthropicAuthorizationCode(ctx, *parsedCode, state, verifier, anthropicCopyCodeRedirectURI, interaction.Signal())
+}
+
+// loginAnthropicWithMethod offers the browser and copy-code methods. It backs
+// OAuthAuth.LoginWithOptions so the plain Login keeps its historical behavior.
+func loginAnthropicWithMethod(ctx context.Context, interaction authtypes.ProviderAuthInteraction, _ *authtypes.LoginOptions) (*authtypes.OAuthCredential, error) {
+	method, err := interaction.Prompt(interaction.Signal(), authtypes.AuthPrompt{
+		Type:    authtypes.AuthPromptSelect,
+		Message: "Select Anthropic login method:",
+		Options: []authtypes.AuthPromptOption{
+			{ID: anthropicBrowserLoginMethod, Label: "Browser login (default)"},
+			{ID: anthropicCopyCodeLoginMethod, Label: "Copy code login (headless)"},
+		},
+	})
+	if err != nil {
+		return nil, err
+	}
+	switch method {
+	case anthropicCopyCodeLoginMethod:
+		return loginAnthropicCopyCode(ctx, interaction)
+	case anthropicBrowserLoginMethod:
+		return loginAnthropic(ctx, interaction)
+	default:
+		return nil, fmt.Errorf("Unknown Anthropic login method: %s", method)
+	}
+}
+
 // AnthropicOAuth is the Anthropic (Claude Pro/Max) OAuth flow.
 //
 // Ports `anthropicOAuth` from packages/ai/src/auth/oauth/anthropic.ts.
 var AnthropicOAuth = &authtypes.OAuthAuth{
-	Name:           "Anthropic (Claude Pro/Max)",
-	IsSubscription: true,
-	Login:          loginAnthropic,
+	Name:             "Anthropic (Claude Pro/Max)",
+	IsSubscription:   true,
+	Login:            loginAnthropic,
+	LoginWithOptions: loginAnthropicWithMethod,
 	Refresh: func(ctx context.Context, credential *authtypes.OAuthCredential) (*authtypes.OAuthCredential, error) {
 		return refreshAnthropicToken(ctx, credential.Refresh, ctx)
 	},

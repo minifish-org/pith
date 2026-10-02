@@ -564,6 +564,19 @@ func streamAssistantResponse(
 	var partialMessage *aitypes.AssistantMessage
 	addedPartial := false
 
+	// Record the requested level, whichever stream function answered. The
+	// requested level (including "off") is independent of any adapter-specific
+	// mapped effort.
+	requestedThinkingLevel := string(thinkingLevelOrOff(config.Reasoning))
+	finalResult := func() aitypes.AssistantMessage {
+		finalMessage, err := response.Result(backgroundFromSignal(signal))
+		if err != nil {
+			finalMessage = recoverFinalMessage(partialMessage, signal, err)
+		}
+		finalMessage.ThinkingLevel = requestedThinkingLevel
+		return finalMessage
+	}
+
 	for {
 		event, ok := nextStreamEvent(response, signal)
 		if !ok {
@@ -601,10 +614,7 @@ func streamAssistantResponse(
 			}
 
 		case aitypes.AssistantEventDone, aitypes.AssistantEventError:
-			finalMessage, err := response.Result(backgroundFromSignal(signal))
-			if err != nil {
-				finalMessage = recoverFinalMessage(partialMessage, signal, err)
-			}
+			finalMessage := finalResult()
 			if addedPartial {
 				context.Messages[len(context.Messages)-1] = agentMessageFrom(aitypes.NewAssistantMessageVariant(finalMessage))
 			} else {
@@ -624,10 +634,7 @@ func streamAssistantResponse(
 
 	// The stream ended without a terminal event. Recover the best available
 	// final message and finish the message lifecycle.
-	finalMessage, err := response.Result(backgroundFromSignal(signal))
-	if err != nil {
-		finalMessage = recoverFinalMessage(partialMessage, signal, err)
-	}
+	finalMessage := finalResult()
 	if addedPartial {
 		context.Messages[len(context.Messages)-1] = agentMessageFrom(aitypes.NewAssistantMessageVariant(finalMessage))
 	} else {
@@ -780,18 +787,35 @@ func prepareToolCallArguments(tool agenttypes.AgentTool[any, any], toolCall aity
 	return updated, nil
 }
 
+// toolCallHooks is the tool-call hook slice of AgentLoopConfig. The main agent
+// loop and the nested RunToolCall primitive share this shape so nested calls
+// apply the same preparation, validation and finalization steps.
+type toolCallHooks struct {
+	before func(context agenttypes.BeforeToolCallContext, signal <-chan struct{}) (*agenttypes.BeforeToolCallResult, error)
+	after  func(context agenttypes.AfterToolCallContext, signal <-chan struct{}) (*agenttypes.AfterToolCallResult, error)
+}
+
+func hooksOf(config agenttypes.AgentLoopConfig) toolCallHooks {
+	return toolCallHooks{before: config.BeforeToolCall, after: config.AfterToolCall}
+}
+
 // prepareToolCall validates arguments and runs beforeToolCall. On success it
 // returns a prepared call; otherwise it returns an immediate error outcome. The
 // prepared struct keeps the original tool call (and thus its raw arguments),
-// matching the upstream events.
+// matching the upstream events. When tools is nil the current context tools are
+// used.
 func prepareToolCall(
 	currentContext agenttypes.AgentContext,
 	assistantMessage aitypes.AssistantMessage,
 	toolCall aitypes.ToolCall,
-	config agenttypes.AgentLoopConfig,
+	hooks toolCallHooks,
 	signal <-chan struct{},
+	tools []agenttypes.AgentTool[any, any],
 ) (*preparedToolCall, *immediateToolCallOutcome) {
-	tool := findTool(currentContext.Tools, toolCall.Name)
+	if tools == nil {
+		tools = currentContext.Tools
+	}
+	tool := findTool(tools, toolCall.Name)
 	if tool == nil {
 		return nil, &immediateToolCallOutcome{
 			result:  createErrorToolResult(fmt.Sprintf("Tool %s not found", toolCall.Name)),
@@ -808,8 +832,8 @@ func prepareToolCall(
 		return nil, &immediateToolCallOutcome{result: createErrorToolResult(err.Error()), isError: true}
 	}
 
-	if config.BeforeToolCall != nil {
-		beforeResult, err := config.BeforeToolCall(agenttypes.BeforeToolCallContext{
+	if hooks.before != nil {
+		beforeResult, err := hooks.before(agenttypes.BeforeToolCallContext{
 			AssistantMessage: assistantMessage,
 			ToolCall:         toolCall,
 			Args:             validatedArgs,
@@ -840,11 +864,11 @@ func prepareToolCall(
 	return &preparedToolCall{toolCall: toolCall, tool: tool, args: validatedArgs}, nil
 }
 
-func executePreparedToolCall(prepared preparedToolCall, signal <-chan struct{}, emit AgentEventSink) (executedToolCallOutcome, error) {
+func executePreparedToolCall(prepared preparedToolCall, signal <-chan struct{}, onUpdate func(agenttypes.AgentToolResult[any]) error) (executedToolCallOutcome, error) {
 	var mu sync.Mutex
 	acceptingUpdates := true
 	var updateEvents []agenttypes.AgentToolResult[any]
-	onUpdate := func(partialResult agenttypes.AgentToolResult[any]) {
+	sink := func(partialResult agenttypes.AgentToolResult[any]) {
 		mu.Lock()
 		defer mu.Unlock()
 		if !acceptingUpdates {
@@ -853,7 +877,7 @@ func executePreparedToolCall(prepared preparedToolCall, signal <-chan struct{}, 
 		updateEvents = append(updateEvents, partialResult)
 	}
 
-	result, err := prepared.tool.Execute(prepared.toolCall.Id, prepared.args, signal, onUpdate)
+	result, err := prepared.tool.Execute(prepared.toolCall.Id, prepared.args, signal, sink)
 
 	mu.Lock()
 	acceptingUpdates = false
@@ -861,26 +885,33 @@ func executePreparedToolCall(prepared preparedToolCall, signal <-chan struct{}, 
 	updateEvents = nil
 	mu.Unlock()
 
-	id := prepared.toolCall.Id
-	name := prepared.toolCall.Name
-	args := rawToAny(prepared.toolCall.Arguments)
 	for _, partialResult := range pending {
-		ev := agenttypes.AgentEvent{
-			Type:          agenttypes.AgentEventToolExecutionUpdate,
-			ToolCallId:    &id,
-			ToolName:      &name,
-			Args:          args,
-			PartialResult: partialResult,
-		}
-		if emitErr := emit(ev); emitErr != nil {
-			return executedToolCallOutcome{}, emitErr
+		if updateErr := onUpdate(partialResult); updateErr != nil {
+			return executedToolCallOutcome{}, updateErr
 		}
 	}
 
 	if err != nil {
 		return executedToolCallOutcome{result: createErrorToolResult(err.Error()), isError: true}, nil
 	}
-	return executedToolCallOutcome{result: result, isError: false}, nil
+	return executedToolCallOutcome{result: result, isError: result.IsError}, nil
+}
+
+// emitToolExecutionUpdate adapts the agent event sink into the per-call update
+// callback used by executePreparedToolCall.
+func emitToolExecutionUpdate(toolCall aitypes.ToolCall, emit AgentEventSink) func(agenttypes.AgentToolResult[any]) error {
+	id := toolCall.Id
+	name := toolCall.Name
+	args := rawToAny(toolCall.Arguments)
+	return func(partialResult agenttypes.AgentToolResult[any]) error {
+		return emit(agenttypes.AgentEvent{
+			Type:          agenttypes.AgentEventToolExecutionUpdate,
+			ToolCallId:    &id,
+			ToolName:      &name,
+			Args:          args,
+			PartialResult: partialResult,
+		})
+	}
 }
 
 func finalizeExecutedToolCall(
@@ -888,14 +919,14 @@ func finalizeExecutedToolCall(
 	assistantMessage aitypes.AssistantMessage,
 	prepared preparedToolCall,
 	executed executedToolCallOutcome,
-	config agenttypes.AgentLoopConfig,
+	hooks toolCallHooks,
 	signal <-chan struct{},
 ) (finalizedToolCallOutcome, error) {
 	result := executed.result
 	isError := executed.isError
 
-	if config.AfterToolCall != nil {
-		afterResult, err := config.AfterToolCall(agenttypes.AfterToolCallContext{
+	if hooks.after != nil {
+		afterResult, err := hooks.after(agenttypes.AfterToolCallContext{
 			AssistantMessage: assistantMessage,
 			ToolCall:         prepared.toolCall,
 			Args:             prepared.args,
@@ -907,6 +938,18 @@ func finalizeExecutedToolCall(
 			result = createErrorToolResult(err.Error())
 			isError = true
 		} else if afterResult != nil {
+			// Structured content not replaced along with the content may no
+			// longer match it, so replacing content without an explicit
+			// structured payload discards the stale structured data.
+			var structuredContent json.RawMessage
+			switch {
+			case afterResult.StructuredContent != nil:
+				structuredContent = afterResult.StructuredContent
+			case afterResult.Content != nil:
+				structuredContent = nil
+			default:
+				structuredContent = result.StructuredContent
+			}
 			if afterResult.Content != nil {
 				result.Content = afterResult.Content
 			}
@@ -919,6 +962,7 @@ func finalizeExecutedToolCall(
 			if afterResult.Terminate != nil {
 				result.Terminate = afterResult.Terminate
 			}
+			result.StructuredContent = structuredContent
 			if afterResult.IsError != nil {
 				isError = *afterResult.IsError
 			}
@@ -1032,16 +1076,16 @@ func executeToolCallsSequential(
 			return executedToolCallBatch{}, err
 		}
 
-		preparation, immediate := prepareToolCall(currentContext, assistantMessage, toolCall, config, signal)
+		preparation, immediate := prepareToolCall(currentContext, assistantMessage, toolCall, hooksOf(config), signal, nil)
 		var finalized finalizedToolCallOutcome
 		if immediate != nil {
 			finalized = finalizedToolCallOutcome{toolCall: toolCall, result: immediate.result, isError: immediate.isError}
 		} else {
-			executed, err := executePreparedToolCall(*preparation, signal, emit)
+			executed, err := executePreparedToolCall(*preparation, signal, emitToolExecutionUpdate(toolCall, emit))
 			if err != nil {
 				return executedToolCallBatch{}, err
 			}
-			finalized, err = finalizeExecutedToolCall(currentContext, assistantMessage, *preparation, executed, config, signal)
+			finalized, err = finalizeExecutedToolCall(currentContext, assistantMessage, *preparation, executed, hooksOf(config), signal)
 			if err != nil {
 				return executedToolCallBatch{}, err
 			}
@@ -1098,7 +1142,7 @@ func executeToolCallsParallel(
 			return executedToolCallBatch{}, err
 		}
 
-		preparation, immediate := prepareToolCall(currentContext, assistantMessage, toolCall, config, signal)
+		preparation, immediate := prepareToolCall(currentContext, assistantMessage, toolCall, hooksOf(config), signal, nil)
 		if immediate != nil {
 			finalized := finalizedToolCallOutcome{toolCall: toolCall, result: immediate.result, isError: immediate.isError}
 			if err := emitToolExecutionEnd(finalized, safeEmit); err != nil {
@@ -1126,11 +1170,11 @@ func executeToolCallsParallel(
 				}
 				return finalized, nil
 			}
-			executed, err := executePreparedToolCall(prepared, signal, safeEmit)
+			executed, err := executePreparedToolCall(prepared, signal, emitToolExecutionUpdate(capturedCall, safeEmit))
 			if err != nil {
 				return finalizedToolCallOutcome{}, err
 			}
-			finalized, err := finalizeExecutedToolCall(currentContext, assistantMessage, prepared, executed, config, signal)
+			finalized, err := finalizeExecutedToolCall(currentContext, assistantMessage, prepared, executed, hooksOf(config), signal)
 			if err != nil {
 				return finalizedToolCallOutcome{}, err
 			}

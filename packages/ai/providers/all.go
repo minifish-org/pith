@@ -10,12 +10,14 @@
 package providers
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"sort"
 	"time"
 
 	"github.com/minifish-org/pith/packages/ai"
+	"github.com/minifish-org/pith/packages/ai/api"
 	"github.com/minifish-org/pith/packages/ai/auth"
 	authtypes "github.com/minifish-org/pith/packages/ai/auth/types"
 	"github.com/minifish-org/pith/packages/ai/catalog"
@@ -53,6 +55,37 @@ func catalogModelList(entries catalog.ModelCatalog) []types.Model {
 		models = append(models, entries[id].Model)
 	}
 	return models
+}
+
+// builtinMixedModels builds a provider's mixed catalog: the historical chat
+// catalog (which the conformance oracle pins) plus the V1 release records of
+// the non-chat kinds (classifier, image) that the legacy snapshot predates.
+// Chat models keep the legacy snapshot so the historical catalog oracles stay
+// stable; the V1 release is authoritative for the new kinds.
+func builtinMixedModels(provider types.ProviderId, chat catalog.ModelCatalog) []types.AnyModel {
+	models := []types.AnyModel{}
+	for _, model := range catalogModelList(chat) {
+		models = append(models, types.NewAnyChatModel(model))
+	}
+	models = append(models, catalog.V1AnyModelsOfKind(string(provider), "image")...)
+	models = append(models, catalog.V1AnyModelsOfKind(string(provider), "classifier")...)
+	return models
+}
+
+// typesafeSystemOneClassifier binds the TypeSafe System One API to a provider
+// classifier implementation.
+func typesafeSystemOneClassifier() ai.ClassifierImplementation {
+	return func(ctx context.Context, model types.ClassifierModel, request types.ClassifierContext, options *types.ClassifierOptions) types.ClassifierResult {
+		return api.TypesafeSystemOneClassify(ctx, &model, &request, options)
+	}
+}
+
+// cloudflareSystemOneClassifier binds the Cloudflare Workers AI System One API
+// to a provider classifier implementation.
+func cloudflareSystemOneClassifier() ai.ClassifierImplementation {
+	return func(ctx context.Context, model types.ClassifierModel, request types.ClassifierContext, options *types.ClassifierOptions) types.ClassifierResult {
+		return api.CloudflareWorkersAISystemOneClassify(ctx, &model, &request, options)
+	}
 }
 
 // getBuiltinCatalog returns the catalog of a builtin provider, or nil.
@@ -151,6 +184,7 @@ func BuiltinProviders() []ai.Provider {
 		QwenTokenPlanIndividualProvider(),
 		RadiusProvider(RadiusProviderOptions{}),
 		TogetherProvider(),
+		TypesafeProvider(),
 		VercelAIGatewayProvider(),
 		XaiProvider(),
 		XiaomiProvider(),

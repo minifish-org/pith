@@ -219,3 +219,23 @@ plus provider selection are in scope. See
 [compatibility.md](./compatibility.md) for the frozen table and the caveat that
 passing tests is evidence for the covered contract, not proof of full Pi
 parity.
+
+## Related packages and documents
+
+The embedded SDK composes with the rest of the delivered native surface:
+
+- **Model catalog** — the mixed V1 release catalog and the legacy catalog. See
+  [catalog-versions.md](./catalog-versions.md).
+- **MCP** — `packages/mcp`, the native Go Model Context Protocol client, and its
+  session runtime in `packages/coding-agent`. See [mcp.md](./mcp.md).
+- **Codemode** — `packages/codemode`, the embedded CGO-free JavaScript sandbox,
+  and the `codemode` SDK tool. See [codemode.md](./codemode.md).
+- **Virtual models** — per-session routing from a virtual catalog entry to a
+  physical model. See [virtual-models.md](./virtual-models.md).
+- **Delivery map** — package-to-source mapping, the precise feature/adaptation
+  table and the build/cross-build checks. See [pi-1.0.md](./pi-1.0.md).
+- **Licenses** — embedded assets and Go module licenses. See
+  [../third-party-notices.md](../third-party-notices.md).
+
+Runnable offline examples live in `examples/pi-v1`, `examples/mcp-client`,
+`examples/codemode` and `examples/virtual-model`.

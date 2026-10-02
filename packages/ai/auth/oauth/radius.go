@@ -225,6 +225,7 @@ func loginRadiusWithBrowser(ctx context.Context, gateway, authorizationEndpoint 
 	if err != nil {
 		return nil, err
 	}
+	verifier, challenge := pkce.Verifier, pkce.Challenge
 	state := randomUUID()
 	authorize, err := url.Parse(authorizationEndpoint)
 	if err != nil {
@@ -235,7 +236,7 @@ func loginRadiusWithBrowser(ctx context.Context, gateway, authorizationEndpoint 
 	params.Set("client_id", radiusOAuthClientID)
 	params.Set("redirect_uri", radiusRedirectURI)
 	params.Set("scope", radiusOAuthScope)
-	params.Set("code_challenge", pkce.Challenge)
+	params.Set("code_challenge", challenge)
 	params.Set("code_challenge_method", "S256")
 	params.Set("handoff", "url")
 	params.Set("state", state)
@@ -262,7 +263,7 @@ func loginRadiusWithBrowser(ctx context.Context, gateway, authorizationEndpoint 
 	form.Set("client_id", radiusOAuthClientID)
 	form.Set("redirect_uri", radiusRedirectURI)
 	form.Set("code", *code)
-	form.Set("code_verifier", pkce.Verifier)
+	form.Set("code_verifier", verifier)
 	return requestRadiusOAuthToken(ctx, gateway, form, interaction.Signal())
 }
 
