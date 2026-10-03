@@ -19,7 +19,8 @@
     {
       "source": "packages/agent/src/agent-loop.ts",
       "goFiles": [
-        "packages/agent/agent_loop.go"
+        "packages/agent/agent_loop.go",
+        "packages/agent/run_tool_call.go"
       ]
     },
     {
@@ -3439,6 +3440,7 @@
     {
       "source": "packages/ai/src/api/anthropic-messages.lazy.ts",
       "goFiles": [
+        "packages/ai/api/anthropic_messages_lazy.go",
         "packages/ai/api/simple_options.go"
       ]
     },
@@ -3463,6 +3465,7 @@
     {
       "source": "packages/ai/src/api/bedrock-converse-stream.lazy.ts",
       "goFiles": [
+        "packages/ai/api/bedrock_converse_stream_lazy.go",
         "packages/ai/api/simple_options.go"
       ]
     },
@@ -3514,6 +3517,7 @@
     {
       "source": "packages/ai/src/api/google-generative-ai.lazy.ts",
       "goFiles": [
+        "packages/ai/api/google_generative_ai_lazy.go",
         "packages/ai/api/simple_options.go"
       ]
     },
@@ -3532,6 +3536,7 @@
     {
       "source": "packages/ai/src/api/google-vertex.lazy.ts",
       "goFiles": [
+        "packages/ai/api/google_vertex_lazy.go",
         "packages/ai/api/simple_options.go"
       ]
     },
@@ -4593,6 +4598,7 @@
     {
       "source": "packages/ai/src/models.ts",
       "goFiles": [
+        "packages/ai/any_models.go",
         "packages/ai/images/models.go",
         "packages/ai/models.go"
       ]
@@ -5310,6 +5316,8 @@
     {
       "source": "packages/ai/src/types.ts",
       "goFiles": [
+        "packages/ai/types/any_model.go",
+        "packages/ai/types/classifier.go",
         "packages/ai/types/types.go"
       ]
     },
@@ -5376,6 +5384,7 @@
     {
       "source": "packages/ai/src/utils/model-operations.ts",
       "goFiles": [
+        "packages/ai/types/any_model.go",
         "packages/ai/utils/model_operations.go"
       ]
     },
@@ -5425,7 +5434,8 @@
     {
       "source": "packages/ai/src/utils/retry.ts",
       "goFiles": [
-        "packages/ai/utils/retry.go"
+        "packages/ai/utils/retry.go",
+        "packages/coding-agent/retry.go"
       ]
     },
     {
@@ -5611,21 +5621,24 @@
     {
       "source": "packages/coding-agent/src/core/agent-session.ts",
       "goFiles": [
-        "packages/coding-agent/agent_session.go"
+        "packages/coding-agent/agent_session.go",
+        "packages/coding-agent/retry.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/auth-guidance.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/auth-storage.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
@@ -5756,13 +5769,15 @@
       "source": "packages/coding-agent/src/core/http-dispatcher.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/index.ts",
       "goFiles": [
-        "packages/agent/harness/tools/index.go"
+        "packages/agent/harness/tools/index.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
@@ -5828,6 +5843,7 @@
       "source": "packages/coding-agent/src/core/output-guard.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
+        "packages/coding-agent/continuation.go",
         "packages/coding-agent/sdk.go"
       ]
     },
@@ -5862,7 +5878,8 @@
       "source": "packages/coding-agent/src/core/provider-attribution.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
@@ -5889,7 +5906,8 @@
       "source": "packages/coding-agent/src/core/resolve-config-value.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
@@ -5902,13 +5920,16 @@
       "source": "packages/coding-agent/src/core/runtime-credentials.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/sdk.ts",
       "goFiles": [
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/search_tools.go",
+        "packages/coding-agent/tool_registry.go"
       ]
     },
     {
@@ -5935,14 +5956,16 @@
       "source": "packages/coding-agent/src/core/settings-diagnostics.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/settings-manager.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/settings.go"
       ]
     },
     {
@@ -6013,27 +6036,32 @@
       "source": "packages/coding-agent/src/core/tools/find.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/search_tools.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/tools/grep.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/search_tools.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/tools/index.ts",
       "goFiles": [
-        "packages/agent/harness/tools/index.go"
+        "packages/agent/harness/tools/index.go",
+        "packages/coding-agent/search_tools.go",
+        "packages/coding-agent/tool_registry.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/tools/ls.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/search_tools.go"
       ]
     },
     {
@@ -6046,7 +6074,8 @@
     {
       "source": "packages/coding-agent/src/core/tools/path-utils.ts",
       "goFiles": [
-        "packages/agent/harness/tools/path_utils.go"
+        "packages/agent/harness/tools/path_utils.go",
+        "packages/coding-agent/search_tools.go"
       ]
     },
     {
@@ -6257,7 +6286,10 @@
     {
       "source": "packages/coding-agent/src/index.ts",
       "goFiles": [
-        "packages/agent/harness/tools/index.go"
+        "packages/agent/harness/tools/index.go",
+        "packages/coding-agent/search_tools.go",
+        "packages/coding-agent/settings.go",
+        "packages/coding-agent/tool_registry.go"
       ]
     },
     {
