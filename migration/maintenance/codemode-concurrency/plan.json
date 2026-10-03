@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "source": ".cache/portsmith-upstream/a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "revision": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "analysisSha256": "2a11706e1847ac3388aa97621ab54da3281db1ebdf4a9691b7a0e3557855b14c",
+  "modules": [
+    {
+      "id": "codemode-concurrency",
+      "dependsOn": [],
+      "batches": [
+        "repair"
+      ]
+    }
+  ],
+  "batches": [
+    {
+      "id": "repair",
+      "module": "codemode-concurrency",
+      "dependsOn": [],
+      "sources": [
+        "packages/codemode/src/runtime/host.ts",
+        "packages/codemode/src/runtime/protocol.ts",
+        "packages/codemode/src/runtime/prelude-source.ts",
+        "packages/codemode/src/types.ts",
+        "packages/codemode/test/sandbox.test.ts"
+      ],
+      "references": [],
+      "outputs": [
+        "packages/codemode/pi_v1_codemode_test.go",
+        "packages/codemode/types.go",
+        "docs/sdk/codemode.md"
+      ],
+      "behaviors": [
+        "Race-safe Go host callbacks preserve explicit await order, concurrency, JSON payloads and cancellation."
+      ],
+      "acceptance": [
+        "Independent ordering, overlapping globals and unawaited cancellation judges; unchanged Pi 1.0 cumulative conformance; full project tests and race detector."
+      ]
+    }
+  ]
+}

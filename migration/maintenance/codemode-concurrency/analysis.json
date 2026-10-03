@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "source": ".cache/portsmith-upstream/a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "files": [
+    {
+      "path": "packages/codemode/src/runtime/host.ts",
+      "sha256": "b81e1bb07f3cd7e612c5ed03b6d23929acf3738be764c0741b85306d8221c522",
+      "lines": 361,
+      "test": false,
+      "exports": [
+        "CodemodeSandbox"
+      ],
+      "imports": [
+        {
+          "specifier": "node:worker_threads",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../identifier.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/identifier.ts",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/types.ts",
+          "typeOnly": true,
+          "line": 13
+        },
+        {
+          "specifier": "../wasm.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/wasm.ts",
+          "typeOnly": false,
+          "line": 14
+        },
+        {
+          "specifier": "./protocol.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/runtime/protocol.ts",
+          "typeOnly": false,
+          "line": 20
+        }
+      ]
+    },
+    {
+      "path": "packages/codemode/src/runtime/prelude-source.ts",
+      "sha256": "31c6470f0ca5c794060d371cc1faec4fc8b1a6456efea5ec2d24032abf785e2e",
+      "lines": 383,
+      "test": false,
+      "exports": [
+        "MAX_STORE_VALUE_CHARS",
+        "MAX_STORE_TOTAL_CHARS",
+        "PRELUDE_SOURCE"
+      ],
+      "imports": []
+    },
+    {
+      "path": "packages/codemode/src/runtime/protocol.ts",
+      "sha256": "b5150df8e6c743f99a94f13cf6f4ae7515768bb9e6305e1a7e4dacd20e4dc6ff",
+      "lines": 51,
+      "test": false,
+      "exports": [
+        "WorkerData",
+        "ScriptErrorJson",
+        "WorkerToHostMessage",
+        "HostToWorkerMessage",
+        "isWorkerToHostMessage",
+        "isHostToWorkerMessage"
+      ],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/types.ts",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "../wasm.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/wasm.ts",
+          "typeOnly": true,
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "packages/codemode/src/types.ts",
+      "sha256": "a54fd8d97468bedd16cc1aae6d89648581da90bd55f65bb0b116c947893b5920",
+      "lines": 136,
+      "test": false,
+      "exports": [
+        "CodemodeToolContext",
+        "CodemodeJsonSchema",
+        "CodemodeTool",
+        "CodemodeOutputItem",
+        "CodemodeCallStatus",
+        "CodemodeCall",
+        "CodemodeErrorKind",
+        "CodemodeError",
+        "CodemodeStoreWrites",
+        "CodemodeResult",
+        "CodemodeSandboxOptions",
+        "CodemodeExecuteOptions"
+      ],
+      "imports": [
+        {
+          "specifier": "./wasm.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/wasm.ts",
+          "typeOnly": true,
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "packages/codemode/test/sandbox.test.ts",
+      "sha256": "0734501603e962ad6561255040391c5ef6c3a8d31c6ec622b0d9aa09cd053b0b",
+      "lines": 689,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "node:url",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "node:vm",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "../src/index.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/index.ts",
+          "typeOnly": false,
+          "line": 4
+        },
+        {
+          "specifier": "../src/runtime/prelude-source.ts",
+          "kind": "internal",
+          "target": "packages/codemode/src/runtime/prelude-source.ts",
+          "typeOnly": false,
+          "line": 5
+        }
+      ]
+    }
+  ],
+  "cycles": [],
+  "warnings": [],
+  "configs": [
+    {
+      "path": "package.json",
+      "sha256": "6153a079e7993e4cc97aee3fe9e77d0f3cae1aff597d323037a05829b1365a6c"
+    },
+    {
+      "path": "packages/codemode/package.json",
+      "sha256": "5d05f51b73b7a78f387617da52781c506b9f98550d051c9b9c9ec78d0ea638ad"
+    },
+    {
+      "path": "packages/codemode/tsconfig.build.json",
+      "sha256": "5d1d8e87055b879ea8525af3d2061952705dac28f2a79450cc86b138828eff3f"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "3f819713b0fd74d4ecc8bdf1cf0160da63213863949983704ca91934508e987d"
+    }
+  ]
+}
