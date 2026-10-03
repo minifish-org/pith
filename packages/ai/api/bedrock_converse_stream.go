@@ -198,7 +198,16 @@ func BedrockConverseStream(model *types.Model, transcript *types.TranscriptConte
 				fail(err)
 				return
 			}
-			client = bedrockruntime.NewFromConfig(awsCfg)
+			// Install the reader-only request-body boundary after NewFromConfig
+			// has resolved its HTTP client defaults. Wrapping cfg.HTTPClient
+			// before this point would hide the SDK's BuildableClient type and
+			// skip its dialer, TLS, and read-timeout initialization. The
+			// callback below runs after resolveHTTPClient, so the resolved
+			// client (including a proxy-configured *http.Client) is preserved
+			// and only wrapped.
+			client = bedrockruntime.NewFromConfig(awsCfg, func(o *bedrockruntime.Options) {
+				o.HTTPClient = newBedrockHTTPClient(o.HTTPClient)
+			})
 		}
 
 		supportsStrictMode := false
