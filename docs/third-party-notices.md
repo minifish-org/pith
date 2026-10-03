@@ -1,16 +1,22 @@
 # Third-party notices
 
-Pith is distributed under the MIT license (see the repository `LICENSE`,
-Copyright (c) 2025 Mario Zechner). This file records the third-party components
+Pith is distributed under the GNU Affero General Public License v3.0 (see the
+repository `LICENSE`). Pi-derived material retains its upstream MIT attribution;
+the full upstream notice is preserved in `migration/UPSTREAM-LICENSE`.
+This file records the third-party components
 that are vendored, embedded or linked into the delivered scope, together with
 their licenses and provenance.
 
 ## Upstream Pi source
 
-The Go packages under `packages/` are ports of Pi source at revision
-`f07218c4d4bbc12bef056a7058c3dd49dfe41abe`, Copyright (c) 2025 Mario Zechner,
-MIT License. Portable portions of the Go port retain that notice in file headers
-and the repository `LICENSE`.
+The initial Go foundations were migrated from Pi revision
+`f07218c4d4bbc12bef056a7058c3dd49dfe41abe` (v0.87.1). The recorded Pi 1.0
+headless SDK update targets `a13d35a742c6ef8462812a28fbe1d8c8b7431c32`.
+See `migration/sync.json` for the maintained sync baseline and migration
+receipts for the accepted scope; this is not a claim that all Pi UI components
+were ported. Pi source is MIT-licensed, Copyright (c) 2025 Mario Zechner.
+Upstream notices remain in source headers, asset licenses,
+`migration/UPSTREAM-LICENSE` and the repository `NOTICE`.
 
 ## Embedded assets
 
