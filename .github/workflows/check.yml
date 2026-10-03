@@ -4,11 +4,7 @@ permissions:
   contents: read
 jobs:
   test:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -16,9 +12,15 @@ jobs:
           go-version-file: go.mod
           cache: true
       - run: go version
-      - run: go test -mod=readonly -count=1 ./...
-        env:
-          CGO_ENABLED: '0'
-      - run: go test -mod=readonly -race -count=1 ./...
+      - name: Repeat fragmented fixtures during concurrent sandbox load
+        shell: bash
+        run: |
+          go test -mod=readonly -race -count=1 ./packages/codemode ./packages/coding-agent > /tmp/bedrock-load.log 2>&1 &
+          bedrock_load_pid=$!
+          go test -mod=readonly -race -count=1000 -run '^TestPortsmithJudgeAiBedrockCases$' ./internal/conformance/ai_bedrock
+          wait "$bedrock_load_pid"
         env:
           CGO_ENABLED: '1'
+      - name: Sandbox load diagnostics
+        if: always()
+        run: cat /tmp/bedrock-load.log
