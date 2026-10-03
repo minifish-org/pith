@@ -137,7 +137,7 @@ func GetCurrentSystemMessage(messages TranscriptMessages) *types.SystemMessage {
 		if text := ContentText(system.Content); len(text) > 0 {
 			content = append(content, text)
 		}
-		for _, name := range sortedSectionNames(system.Sections) {
+		for _, name := range sectionNames(system.Sections, system.SectionOrder) {
 			value := system.Sections[name]
 			if value == nil {
 				delete(sections, name)
@@ -161,6 +161,7 @@ func GetCurrentSystemMessage(messages TranscriptMessages) *types.SystemMessage {
 		for _, name := range sectionOrder {
 			message.Sections[name] = sections[name]
 		}
+		message.SectionOrder = append([]string(nil), sectionOrder...)
 	}
 	if len(tools) > 0 {
 		message.ToolsAdded = tools

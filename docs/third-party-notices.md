@@ -52,8 +52,40 @@ also ship a `NOTICE` that must be preserved.
 | `github.com/sergi/go-diff` | v1.4.0 | MIT |
 | `golang.org/x/oauth2` | v0.28.0 | BSD-3-Clause |
 | `golang.org/x/text` | v0.14.0 | BSD-3-Clause |
+| `modernc.org/sqlite` | v1.44.3 | BSD-3-Clause |
+| `modernc.org/libc` | v1.67.6 | BSD-3-Clause |
+| `modernc.org/mathutil` | v1.7.1 | BSD-3-Clause |
+| `modernc.org/memory` | v1.11.0 | BSD-3-Clause |
+| `github.com/ncruces/go-strftime` | v1.0.0 | MIT |
+| `github.com/dustin/go-humanize` | v1.0.1 | MIT |
+| `github.com/google/uuid` | v1.6.0 | BSD-3-Clause |
+| `github.com/mattn/go-isatty` | v0.0.20 | MIT |
+| `github.com/remyoudompheng/bigfft` | v0.0.0-20230129092748-24d4a6f8daec | BSD-3-Clause |
+| `golang.org/x/exp` | v0.0.0-20251023183803-a4bb9ffd2546 | BSD-3-Clause |
+| `golang.org/x/sys` | v0.37.0 | BSD-3-Clause |
 
 The Go standard library is distributed under the Go BSD-style license.
+
+## Pi Durable and Chord ports
+
+`packages/durable` and `packages/chord` are native Go ports of Pi revision
+`a13d35a742c6ef8462812a28fbe1d8c8b7431c32`, specifically the Durable runtime
+(`packages/durable/src/**`) and the Chord dependency closure
+(`packages/chord/src/**`). Pi source is MIT-licensed, Copyright (c) 2025 Mario
+Zechner; the full upstream notice is preserved in `migration/UPSTREAM-LICENSE`
+and upstream headers remain in source. The port is idiomatic Go, not a
+line-for-line or binary-compatible reimplementation; `docs/sdk/durable-source-map.json`
+records reviewed source ownership, and `docs/sdk/durable.md` documents the
+explicit host/runtime format differences. No upstream licence is changed.
+
+### Pure Go SQLite
+
+The Durable SQLite adapter uses `database/sql` with the CGO-free
+`modernc.org/sqlite` driver (v1.44.3) and its matching `modernc.org/libc`
+(v1.67.6). Both are BSD-3-Clause. The bundled SQLite amalgamation is public
+domain. The driver and its transitive modules are pinned in the dependency
+manifests; no CGO SQLite driver or system SQLite library is used, so ordinary
+builds and cross-builds run with `CGO_ENABLED=0`.
 
 ## Distribution
 

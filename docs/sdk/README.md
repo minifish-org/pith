@@ -234,8 +234,12 @@ The embedded SDK composes with the rest of the delivered native surface:
   physical model. See [virtual-models.md](./virtual-models.md).
 - **Delivery map** — package-to-source mapping, the precise feature/adaptation
   table and the build/cross-build checks. See [pi-1.0.md](./pi-1.0.md).
+- **Durable SDK** — `packages/durable` and its subpackages, the optional
+  headless durable runtime (records, storage adapters, Session, harness, env and
+  native coding tools). See [durable.md](./durable.md).
 - **Licenses** — embedded assets and Go module licenses. See
   [../third-party-notices.md](../third-party-notices.md).
 
 Runnable offline examples live in `examples/pi-v1`, `examples/mcp-client`,
-`examples/codemode` and `examples/virtual-model`.
+`examples/codemode`, `examples/virtual-model`, `examples/durable` and
+`examples/durable-recovery`.

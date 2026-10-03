@@ -16,6 +16,8 @@ package types
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
+	"sort"
 
 	"github.com/minifish-org/pith/packages/ai/utils/eventstream"
 )
@@ -1059,11 +1061,231 @@ type SystemMessage struct {
 	ToolsRemoved []ToolReference `json:"toolsRemoved,omitempty"`
 	// Timestamp is a Unix timestamp in milliseconds.
 	Timestamp float64 `json:"timestamp"`
+
+	// SectionOrder records the section insertion order observed on the wire.
+	//
+	// The Go model is a map, so it cannot represent the object property order
+	// that upstream treats as semantic: Durable requests can remove and re-add
+	// equal-valued sections in a different order. SectionOrder carries that
+	// order through JSON decoding, rendering and transcript replay; it is never
+	// written to the wire as its own field (the encoder instead emits the
+	// `sections` object properties in this order). A nil/empty order falls back
+	// to sorted map iteration for legacy map-only callers.
+	SectionOrder []string `json:"-"`
 }
 
 // NewSystemMessage builds a system message with a plain string prompt.
 func NewSystemMessage(content string, timestamp float64) SystemMessage {
 	return SystemMessage{Role: SystemMessageRole, Content: SystemContent{Text: content}, Timestamp: timestamp}
+}
+
+// systemMessageWire is the wire projection of SystemMessage. Sections is kept
+// raw so this struct never reorders it; the encoder and decoder below own the
+// section property order explicitly.
+
+type systemMessageWire struct {
+	Role         string          `json:"role"`
+	Content      SystemContent   `json:"content"`
+	Sections     json.RawMessage `json:"sections,omitempty"`
+	ToolsAdded   []Tool          `json:"toolsAdded,omitempty"`
+	ToolsRemoved []ToolReference `json:"toolsRemoved,omitempty"`
+	Timestamp    float64         `json:"timestamp"`
+}
+
+// MarshalJSON writes the system message with its section properties emitted in
+// SectionOrder. Duplicate or stale order entries are ignored, and map keys that
+// are not listed in SectionOrder are appended in sorted order so legacy
+// map-only callers stay deterministic. SectionOrder itself is never emitted.
+func (m SystemMessage) MarshalJSON() ([]byte, error) {
+	wire := systemMessageWire{
+		Role:         m.Role,
+		Content:      m.Content,
+		ToolsAdded:   m.ToolsAdded,
+		ToolsRemoved: m.ToolsRemoved,
+		Timestamp:    m.Timestamp,
+	}
+	if len(m.Sections) > 0 {
+		sections, err := marshalSystemSections(m.Sections, m.SectionOrder)
+		if err != nil {
+			return nil, err
+		}
+		wire.Sections = sections
+	}
+	return json.Marshal(wire)
+}
+
+// UnmarshalJSON reads a system message and records the `sections` object
+// property order in SectionOrder, including explicit null removals. Decoding
+// replaces any previous section map and order, so decoding twice clears stale
+// native metadata.
+func (m *SystemMessage) UnmarshalJSON(data []byte) error {
+	var wire systemMessageWire
+	if err := json.Unmarshal(data, &wire); err != nil {
+		return err
+	}
+	m.Role = wire.Role
+	m.Content = wire.Content
+	m.ToolsAdded = wire.ToolsAdded
+	m.ToolsRemoved = wire.ToolsRemoved
+	m.Timestamp = wire.Timestamp
+	m.Sections = nil
+	m.SectionOrder = nil
+	if len(wire.Sections) == 0 || string(wire.Sections) == "null" {
+		return nil
+	}
+	sections, order, err := unmarshalSystemSections(wire.Sections)
+	if err != nil {
+		return err
+	}
+	m.Sections = sections
+	if len(order) > 0 {
+		m.SectionOrder = order
+	}
+	return nil
+}
+
+// SystemSectionNames returns the section names of a system message in the order
+// they should be rendered and replayed: the recorded SectionOrder first (ignoring
+// duplicates and names no longer present), then any remaining map keys in sorted
+// order. It never mutates the message.
+func SystemSectionNames(message SystemMessage) []string {
+	return OrderSectionNames(message.Sections, message.SectionOrder)
+}
+
+// OrderSectionNames resolves a deterministic section order for a section map
+// plus its optional recorded order. It is the shared implementation behind
+// SystemSectionNames and the rendering helpers.
+func OrderSectionNames(sections SystemSections, order []string) []string {
+	return orderSectionNames(sections, order)
+}
+
+// orderSectionNames resolves a deterministic section order for a map plus its
+// optional recorded order.
+func orderSectionNames(sections SystemSections, order []string) []string {
+	names := make([]string, 0, len(sections))
+	seen := make(map[string]bool, len(sections))
+	for _, name := range order {
+		if seen[name] {
+			continue
+		}
+		if _, ok := sections[name]; !ok {
+			continue
+		}
+		seen[name] = true
+		names = append(names, name)
+	}
+	remaining := make([]string, 0, len(sections))
+	for name := range sections {
+		if !seen[name] {
+			remaining = append(remaining, name)
+		}
+	}
+	sort.Strings(remaining)
+	return append(names, remaining...)
+}
+
+// marshalSystemSections writes a sections object with properties in SectionOrder
+// (deduplicated, stale names skipped) followed by unlisted keys in sorted order.
+func marshalSystemSections(sections SystemSections, order []string) (json.RawMessage, error) {
+	var buf bytes.Buffer
+	buf.WriteByte('{')
+	written := make(map[string]bool, len(sections))
+	first := true
+	writeEntry := func(name string) error {
+		value, ok := sections[name]
+		if !ok || written[name] {
+			return nil
+		}
+		written[name] = true
+		if !first {
+			buf.WriteByte(',')
+		}
+		first = false
+		key, err := json.Marshal(name)
+		if err != nil {
+			return err
+		}
+		buf.Write(key)
+		buf.WriteByte(':')
+		if value == nil {
+			buf.WriteString("null")
+			return nil
+		}
+		encoded, err := json.Marshal(*value)
+		if err != nil {
+			return err
+		}
+		buf.Write(encoded)
+		return nil
+	}
+	for _, name := range order {
+		if err := writeEntry(name); err != nil {
+			return nil, err
+		}
+	}
+	remaining := make([]string, 0, len(sections))
+	for name := range sections {
+		if !written[name] {
+			remaining = append(remaining, name)
+		}
+	}
+	sort.Strings(remaining)
+	for _, name := range remaining {
+		if err := writeEntry(name); err != nil {
+			return nil, err
+		}
+	}
+	buf.WriteByte('}')
+	return buf.Bytes(), nil
+}
+
+// unmarshalSystemSections decodes a `Record<string, string | null>` sections
+// object while capturing its property order. Non-string, non-null values are
+// rejected to keep the strict JSON contract.
+func unmarshalSystemSections(data []byte) (SystemSections, []string, error) {
+	dec := json.NewDecoder(newBytesReader(data))
+	token, err := dec.Token()
+	if err != nil {
+		return nil, nil, err
+	}
+	if delim, ok := token.(json.Delim); !ok || delim != '{' {
+		return nil, nil, fmt.Errorf("sections must be a JSON object")
+	}
+	sections := SystemSections{}
+	order := []string{}
+	seen := map[string]bool{}
+	for dec.More() {
+		keyToken, err := dec.Token()
+		if err != nil {
+			return nil, nil, err
+		}
+		name, ok := keyToken.(string)
+		if !ok {
+			return nil, nil, fmt.Errorf("section name must be a string")
+		}
+		var raw json.RawMessage
+		if err := dec.Decode(&raw); err != nil {
+			return nil, nil, err
+		}
+		if string(raw) == "null" {
+			sections[name] = nil
+		} else {
+			var value string
+			if err := json.Unmarshal(raw, &value); err != nil {
+				return nil, nil, fmt.Errorf("section %q must be a string or null", name)
+			}
+			text := value
+			sections[name] = &text
+		}
+		if !seen[name] {
+			seen[name] = true
+			order = append(order, name)
+		}
+	}
+	if _, err := dec.Token(); err != nil {
+		return nil, nil, err
+	}
+	return sections, order, nil
 }
 
 // SystemContent is `string | TextContent[]`.
@@ -1288,9 +1510,13 @@ type Message struct {
 	ToolResult *ToolResultMessage `json:"-"`
 }
 
-// NewSystemMessageVariant builds a system message variant.
+// NewSystemMessageVariant builds a system message variant. The section-order
+// metadata is detached so a caller's slice cannot be mutated through the message.
 func NewSystemMessageVariant(message SystemMessage) Message {
 	message.Role = SystemMessageRole
+	if message.SectionOrder != nil {
+		message.SectionOrder = append([]string(nil), message.SectionOrder...)
+	}
 	return Message{Role: SystemMessageRole, System: &message}
 }
 

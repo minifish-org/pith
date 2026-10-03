@@ -102,10 +102,28 @@ per-surface contracts.
 | Browser login / OAuth UI | Excluded | Headless credential callbacks are provided instead. |
 | Clipboard, image resize/PNG, syntax highlighting | Excluded | TUI-only utilities. |
 | CLI orchestration (`main`, `parseArgs`, print/interactive modes) | Excluded | Stays in `cmd/pith`; the SDK is a library. |
-| Pi Durable runtime | Excluded | Durable sessions, scheduling and the durable host are not part of this increment and are not claimed. |
+| Pi Durable runtime | Ported (additive) | `github.com/minifish-org/pith/packages/durable` plus `.../harness`, `.../env`, `.../tools`, `.../storage/{memory,jsonl,sqlite}` and `.../testing` | Optional headless port; enabling Durable does not replace the coding-agent session engine or change its file format. See [durable.md](./durable.md). |
 | Pi interactive CLI parity | Excluded | `cmd/pith` is a non-interactive turn loop; the interactive CLI modes are not ported. |
 
 ## Known adaptation caveats
+
+- The Durable SDK is a native Go API, not a line-for-line or binary-compatible
+  TypeScript API. `packages/durable` (records, Session, storage adapters),
+  `packages/durable/harness` (scheduling and models), `packages/durable/env`
+  (capabilities), `packages/durable/tools` (coding tools) and
+  `packages/durable/testing` (conformance) are idiomatic ports of their source
+  modules; `docs/sdk/durable-source-map.json` records ownership and merges.
+- External effects cannot be guaranteed exactly once. Durable's pinned
+  guarantees are: a committed request ID deduplicates submissions; checkpointed
+  tasks resume; already-terminal work is not re-executed; tools replay only when
+  BOTH stored and current policy say `safe`; an unsafe interrupted intent
+  becomes an interrupted error. `Close`/suspend never fabricates completion.
+- Go cannot revoke an escaped map reference as a JavaScript Proxy can, so the
+  Go adaptation invalidates change handles, detaches candidate data during
+  preparation and returns independent copies from value getters.
+- `t` truncation and `Overlap` count UTF-16 code units; a truncation that would
+  bisect a supplementary character is rejected because isolated surrogates are
+  not representable as valid UTF-8 strings.
 
 - The TS event union is collapsed into `SessionEvent`; event kinds that are not
   in the headless subset (session tree/compact/shutdown notifications) are not

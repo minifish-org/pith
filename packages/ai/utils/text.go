@@ -6,27 +6,22 @@
 package utils
 
 import (
-	"sort"
 	"strings"
 
 	"github.com/minifish-org/pith/packages/ai/types"
 )
 
-// sortedSectionNames returns the section names in a deterministic order.
+// sectionNames returns the section names in render order.
 //
-// Deliberate difference: upstream iterates `Object.values(message.sections)` in
-// insertion order. The Go model is a map, which does not preserve insertion
-// order, so the rendering here is sorted by name instead. The regression
-// scenario is that section rendering must be stable across runs; section order
-// is only observable when a prompt has several sections, and upstream already
-// treats that framing as request-time presentation.
-func sortedSectionNames(sections types.SystemSections) []string {
-	names := make([]string, 0, len(sections))
-	for name := range sections {
-		names = append(names, name)
-	}
-	sort.Strings(names)
-	return names
+// Upstream iterates `Object.entries(message.sections ?? {})` in insertion
+// order, which is semantic for Durable prompt replay: a section can be removed
+// and re-added in a different position. The Go model is a map, so a decoded
+// system message records the wire order in SectionOrder; that recorded order is
+// honored first. Duplicate or stale order entries are ignored and any remaining
+// map keys are appended in sorted order, so legacy map-only callers keep the
+// deterministic sorted fallback.
+func sectionNames(sections types.SystemSections, order []string) []string {
+	return types.OrderSectionNames(sections, order)
 }
 
 // ContentText extracts and joins text blocks from message content.
@@ -91,7 +86,7 @@ func joinTextContents(blocks []types.TextContent, sep string) string {
 // content followed by its sections.
 func GetSystemMessageText(message types.SystemMessage) string {
 	parts := []string{ContentText(message.Content)}
-	for _, name := range sortedSectionNames(message.Sections) {
+	for _, name := range sectionNames(message.Sections, message.SectionOrder) {
 		text := message.Sections[name]
 		if text != nil {
 			parts = append(parts, *text)
@@ -115,7 +110,7 @@ func RenderSystemMessageUpdate(message types.SystemMessage) string {
 	if text := ContentText(message.Content); len(text) > 0 {
 		parts = append(parts, text)
 	}
-	for _, name := range sortedSectionNames(message.Sections) {
+	for _, name := range sectionNames(message.Sections, message.SectionOrder) {
 		value := message.Sections[name]
 		if value == nil {
 			parts = append(parts, `Removed system prompt section "`+name+`".`)
