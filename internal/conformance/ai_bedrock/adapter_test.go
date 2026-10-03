@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"sync"
 
 	"github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream"
@@ -104,7 +105,10 @@ func runBedrockProtocol(ctx context.Context, apiName, mode, body string, status 
 				if end > len(responseBytes) {
 					end = len(responseBytes)
 				}
-				_, _ = w.Write(responseBytes[i:end])
+				written, writeErr := w.Write(responseBytes[i:end])
+				if writeErr != nil {
+					fmt.Fprintf(os.Stderr, "Bedrock fragmented fixture write error: bytes=%d/%d offset=%d error=%v\n", written, end-i, i, writeErr)
+				}
 				if flusher != nil {
 					flusher.Flush()
 				}
@@ -180,6 +184,9 @@ func runBedrockProtocol(ctx context.Context, apiName, mode, body string, status 
 	result, err := stream.Result(ctx)
 	if err != nil {
 		return nil, err
+	}
+	if status == http.StatusOK && mode == "fragmented" && result.ErrorMessage != nil {
+		fmt.Fprintf(os.Stderr, "Bedrock fragmented SDK diagnostic: stopReason=%s error=%s\n", result.StopReason, *result.ErrorMessage)
 	}
 	if result.Content == nil {
 		result.Content = []types.ContentBlock{}

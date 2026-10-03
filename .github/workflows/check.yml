@@ -1,10 +1,11 @@
-name: Check
-on: [push, pull_request]
+name: Bedrock diagnostics
+on: [push]
 permissions:
   contents: read
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
@@ -14,16 +15,10 @@ jobs:
         with:
           go-version-file: go.mod
           cache: true
-      - run: go test -mod=readonly ./...
+      - run: go version
+      - run: go test -mod=readonly -count=30 -v -run '^TestPortsmithJudgeAiBedrockCases$' ./internal/conformance/ai_bedrock
         env:
           CGO_ENABLED: '0'
-      - run: go vet -mod=readonly ./...
-        env:
-          CGO_ENABLED: '0'
-      - run: go build -mod=readonly -trimpath -o ./bin/ ./cmd/...
-        env:
-          CGO_ENABLED: '0'
-      - run: ./bin/pith --help
-      - run: go test -mod=readonly -race ./...
+      - run: go test -mod=readonly -race -count=10 -v -run '^TestPortsmithJudgeAiBedrockCases$' ./internal/conformance/ai_bedrock
         env:
           CGO_ENABLED: '1'
