@@ -24,6 +24,20 @@ type Tool struct {
 	Signature string
 	// Execute receives the script's argument after a JSON round trip and returns
 	// a JSON-serializable result. A returned nil result crosses as undefined.
+	//
+	// Callbacks can run concurrently. The complete blocking callback runs in its
+	// own goroutine, not behind a JavaScript-style ordered host handler, so
+	// independent callbacks — overlapping globals or tool calls, and calls from
+	// concurrent Sandbox.Execute invocations — may start and finish in either
+	// order. Hosts must synchronize any shared state a callback touches.
+	// Sequential await expresses dependency order and Promise.all permits overlap;
+	// the sandbox schedules callbacks accordingly but never serializes them.
+	//
+	// The context is cancelled when the script finishes (including unawaited
+	// calls), the execution times out, the caller aborts or the sandbox closes.
+	// Returning from Execute cancels outstanding callback contexts, but it cannot
+	// force a callback that ignores its context to stop. Do not rely on the
+	// completion or side effects of an unawaited callback before Execute returns.
 	Execute func(context.Context, json.RawMessage) (json.RawMessage, error)
 }
 

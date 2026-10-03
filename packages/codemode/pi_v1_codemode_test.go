@@ -513,28 +513,49 @@ func TestPiV1CodemodeStoreLimits(t *testing.T) {
 // ---- globals ----
 
 func TestPiV1CodemodeGlobals(t *testing.T) {
+	// Go callbacks run concurrently. A callback's complete blocking body runs in
+	// its own goroutine, so independent callbacks may start and finish in either
+	// order; only a first explicitly awaited call is ordered before later calls.
+	// Collect observations under a mutex and assert membership, not the relative
+	// order of overlapping calls.
+	var mu sync.Mutex
 	seen := []string{}
+	record := func(_ context.Context, args json.RawMessage) (json.RawMessage, error) {
+		mu.Lock()
+		seen = append(seen, string(args))
+		mu.Unlock()
+		return nil, nil
+	}
+	observed := func() []string {
+		mu.Lock()
+		defer mu.Unlock()
+		return append([]string(nil), seen...)
+	}
 	s := newTestSandbox(t, codemode.SandboxOptions{Tools: []codemode.Tool{echoTool()}, Globals: []codemode.Tool{
-		{Name: "attach", Execute: func(_ context.Context, args json.RawMessage) (json.RawMessage, error) {
-			seen = append(seen, string(args))
-			return nil, nil
-		}},
-		{Name: "models.list", Spread: true, Execute: func(_ context.Context, args json.RawMessage) (json.RawMessage, error) {
-			seen = append(seen, string(args))
-			return nil, nil
-		}},
+		{Name: "attach", Execute: record},
+		{Name: "models.list", Spread: true, Execute: record},
 	}, Timeout: 5 * time.Second})
 	r := s.Execute(context.Background(), `
 		await attach({ ref: 1 });
-		attach("not awaited");
-		await models.list("classifier", undefined, 3);
+		const saved = attach("not awaited");
+		const spread = models.list("classifier", undefined, 3);
+		await saved;
+		await spread;
 		return [typeof attach, Object.keys(models), await tools.echo(2)];
 	`, codemode.ExecuteOptions{})
 	if got := decodeValue(t, r); !reflect.DeepEqual(got, []any{"function", []any{"list"}, float64(2)}) {
 		t.Fatalf("globals wrong: %#v", got)
 	}
-	if !reflect.DeepEqual(seen, []string{`{"ref":1}`, `"not awaited"`, `["classifier",null,3]`}) {
-		t.Fatalf("global calls not in order: %v", seen)
+	got := observed()
+	if len(got) != 3 || got[0] != `{"ref":1}` {
+		t.Fatalf("explicit await must complete before overlapping calls: %q", got)
+	}
+	counts := map[string]int{}
+	for _, payload := range got[1:] {
+		counts[payload]++
+	}
+	if counts[`"not awaited"`] != 1 || counts[`["classifier",null,3]`] != 1 || len(counts) != 2 {
+		t.Fatalf("overlapping global payloads wrong: %q", got)
 	}
 	if len(r.Calls) != 1 || r.Calls[0].Name != "echo" {
 		t.Fatalf("globals must not be recorded as calls: %+v", r.Calls)

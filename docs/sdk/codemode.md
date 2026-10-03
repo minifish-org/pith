@@ -58,6 +58,27 @@ A script may start with a `// @options:` first line. `timeout_ms` and
 `max_output_tokens` are the recognized fields; an unknown or malformed options
 line is a `CodemodeSourceError` (kind `script`).
 
+## Callback concurrency and cancellation
+
+Tool and global callbacks are Go functions, not JavaScript host handlers. The
+whole blocking callback runs in its own goroutine, so independent callbacks run
+concurrently — overlapping globals or tool calls, and calls issued by concurrent
+`sandbox.Execute` invocations — and may start and finish in either order. This
+is a deliberate adaptation, not a claim of identical JavaScript scheduling: the
+JavaScript host runs a callback's synchronous prefix before its first `await`,
+while Go has no analogous first-await boundary and the complete callback runs
+concurrently.
+
+Because callbacks may overlap, hosts must synchronize any shared state they
+touch (for example with a `sync.Mutex`). Script sequencing, not callback
+ordering, expresses dependency: `await` one call before starting the next to
+depend on it, or start several and await `Promise.all` to allow them to overlap.
+
+A sandbox return cancels the context passed to every outstanding callback,
+including callbacks the script never awaited, but it cannot force a callback
+that ignores its context to stop. Do not rely on the completion or side effects
+of an unawaited callback before `Execute` returns.
+
 ## Results
 
 `Result` has `OK`, the JSON `Value` (undefined leaves it nil), ordered `Output`
