@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "source": ".cache/portsmith-upstream/a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "revision": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "analysisSha256": "16352bd744078e76e52e8ec1fc6b56cd429526b843e1ff49d9985a7c57a1da12",
+  "modules": [
+    {
+      "id": "bedrock-request-body",
+      "dependsOn": [],
+      "batches": [
+        "repair"
+      ]
+    }
+  ],
+  "batches": [
+    {
+      "id": "repair",
+      "module": "bedrock-request-body",
+      "dependsOn": [],
+      "sources": [
+        "packages/ai/src/api/bedrock-converse-stream.ts",
+        "packages/ai/src/utils/node-http-proxy.ts",
+        "packages/ai/test/bedrock-custom-headers.test.ts",
+        "packages/ai/test/bedrock-credentials.test.ts",
+        "packages/ai/test/bedrock-endpoint-resolution.test.ts",
+        "packages/ai/test/bedrock-error-metadata.test.ts",
+        "packages/ai/test/bedrock-raw-stop-reason.test.ts",
+        "packages/ai/test/bedrock-response-headers.test.ts"
+      ],
+      "references": [],
+      "outputs": [
+        "packages/ai/api/bedrock_converse_stream.go",
+        "packages/ai/api/bedrock_http.go",
+        "packages/ai/api/bedrock_http_test.go"
+      ],
+      "behaviors": [
+        "Bedrock HTTP request-body cleanup must not close a still-active response stream; preserve AWS SDK configuration and streaming behavior."
+      ],
+      "acceptance": [
+        "Independent deterministic request-body cleanup judges; unchanged Bedrock/Pi 1.0 cumulative conformance; full project tests and race detector."
+      ]
+    }
+  ]
+}

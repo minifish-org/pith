@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "targetBaseline": "a58643e64ef3c2613b7a5b5d00b815718e2c0950",
+  "piRevision": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "mainCi": {
+    "url": "https://github.com/minifish-org/pith/actions/runs/37093115103",
+    "observedFailures": [
+      "Ubuntu race check: TestPortsmithJudgeAiBedrockCases/case-001.json",
+      "Ubuntu ordinary check after rerun: TestPortsmithJudgeAiBedrockCases/case-001.json"
+    ]
+  },
+  "loadDiagnostic": {
+    "url": "https://github.com/minifish-org/pith/actions/runs/37094412360",
+    "branch": "codex/bedrock-stream-diagnostics",
+    "commitPrefix": "8b7c7fa",
+    "sdkError": "decode event: read tcp ...: use of closed network connection",
+    "serverError": "three-byte write failed with broken pipe at response offset 435",
+    "scope": "Temporary diagnostic branch; no diagnostic instrumentation is merged into the product."
+  },
+  "isolatedCounterexample": {
+    "body": "Real Smithy request body built from bytes.NewReader",
+    "schedule": "Copy declared Content-Length, close request body, probe excess bytes with io.Copy",
+    "exposedWriterTo": "0 bytes with io.EOF",
+    "readerCloserOnly": "0 bytes with nil error",
+    "limitation": "Demonstrates the dependency interaction; production fix must independently prove the Pith boundary and pass full integration."
+  },
+  "independentJudgeCountercheck": {
+    "file": "judges/request-body/packages/ai/api/portsmith_judge_bedrock_request_body_test.go",
+    "goVersion": "1.24.0",
+    "unwrappedBoundary": "Deterministic failure: closed request excess-byte probe copied 0 bytes with io.EOF; replay request was not cloned.",
+    "scratchReaderOnlyBoundary": "Both independent tests passed with CGO disabled and with the race detector.",
+    "scope": "Scratch-only positive and negative controls; no product or third-party implementation was changed. The model must implement the product repair."
+  },
+  "dependencies": {
+    "smithyGo": "v1.28.1",
+    "bedrockRuntime": "v1.63.1",
+    "goCi": "1.24.0"
+  }
+}

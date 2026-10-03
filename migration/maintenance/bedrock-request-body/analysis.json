@@ -1,0 +1,454 @@
+{
+  "version": 1,
+  "source": ".cache/portsmith-upstream/a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "files": [
+    {
+      "path": "packages/ai/src/api/bedrock-converse-stream.ts",
+      "sha256": "7f1c143c459386f4b2234175d3625b6e46e97abb63925cc5aeeb97efb9ad068a",
+      "lines": 1345,
+      "test": false,
+      "exports": [
+        "BedrockThinkingDisplay",
+        "BedrockOptions",
+        "stream",
+        "streamSimple"
+      ],
+      "imports": [
+        {
+          "specifier": "node:https",
+          "kind": "external",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "@aws-sdk/client-bedrock-runtime",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 24
+        },
+        {
+          "specifier": "@smithy/node-http-handler",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 25
+        },
+        {
+          "specifier": "@smithy/types",
+          "kind": "external",
+          "typeOnly": true,
+          "line": 26
+        },
+        {
+          "specifier": "http-proxy-agent",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 27
+        },
+        {
+          "specifier": "https-proxy-agent",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 28
+        },
+        {
+          "specifier": "../models.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/models.ts",
+          "typeOnly": false,
+          "line": 29
+        },
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 51
+        },
+        {
+          "specifier": "../utils/diagnostics.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/diagnostics.ts",
+          "typeOnly": false,
+          "line": 52
+        },
+        {
+          "specifier": "../utils/error-body.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/error-body.ts",
+          "typeOnly": false,
+          "line": 53
+        },
+        {
+          "specifier": "../utils/event-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/event-stream.ts",
+          "typeOnly": false,
+          "line": 54
+        },
+        {
+          "specifier": "../utils/headers.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/headers.ts",
+          "typeOnly": false,
+          "line": 55
+        },
+        {
+          "specifier": "../utils/json-parse.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/json-parse.ts",
+          "typeOnly": false,
+          "line": 56
+        },
+        {
+          "specifier": "../utils/node-http-proxy.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/node-http-proxy.ts",
+          "typeOnly": false,
+          "line": 57
+        },
+        {
+          "specifier": "../utils/provider-env.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/provider-env.ts",
+          "typeOnly": false,
+          "line": 58
+        },
+        {
+          "specifier": "../utils/sanitize-unicode.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/sanitize-unicode.ts",
+          "typeOnly": false,
+          "line": 59
+        },
+        {
+          "specifier": "../utils/text.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/text.ts",
+          "typeOnly": false,
+          "line": 60
+        },
+        {
+          "specifier": "../utils/transcript.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/transcript.ts",
+          "typeOnly": false,
+          "line": 67
+        },
+        {
+          "specifier": "./constrained-sampling.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/constrained-sampling.ts",
+          "typeOnly": false,
+          "line": 68
+        },
+        {
+          "specifier": "./simple-options.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/simple-options.ts",
+          "typeOnly": false,
+          "line": 74
+        },
+        {
+          "specifier": "./transform-messages.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/transform-messages.ts",
+          "typeOnly": false,
+          "line": 75
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/src/utils/node-http-proxy.ts",
+      "sha256": "a13ab6556d127e6fb097147b209c68e47aed8e724e2774e7dd7df21ff91d9d5b",
+      "lines": 161,
+      "test": false,
+      "exports": [
+        "UNSUPPORTED_PROXY_PROTOCOL_MESSAGE",
+        "resolveHttpProxyUrlForTarget"
+      ],
+      "imports": [
+        {
+          "specifier": "../types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 1
+        },
+        {
+          "specifier": "./provider-env.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/provider-env.ts",
+          "typeOnly": false,
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/bedrock-credentials.test.ts",
+      "sha256": "fc662838b0e0562546aa7a41fe16a80ee3be45104a120624e0ddbc9ffe4b042f",
+      "lines": 115,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": true,
+          "line": 47
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 48
+        },
+        {
+          "specifier": "../src/providers/all.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/providers/all.ts",
+          "typeOnly": false,
+          "line": 49
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 50
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/bedrock-custom-headers.test.ts",
+      "sha256": "9ced72235859b78206d40a918223fb40f0d999241bc03ed4480a6c6cd3dad388",
+      "lines": 202,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": true,
+          "line": 54
+        },
+        {
+          "specifier": "../src/api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": false,
+          "line": 55
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 56
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 57
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/bedrock-endpoint-resolution.test.ts",
+      "sha256": "256644a52f42da4000520be9bb97f72bb996c2805650118e020d2d065d9c99aa",
+      "lines": 208,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": true,
+          "line": 47
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 48
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 49
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/bedrock-error-metadata.test.ts",
+      "sha256": "419813d91e53ec4365b88f47b16b1e11b284fe35e949bcd2bcf9e7f185413fcc",
+      "lines": 212,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": false,
+          "line": 51
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 52
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 53
+        },
+        {
+          "specifier": "../src/utils/diagnostics.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/utils/diagnostics.ts",
+          "typeOnly": true,
+          "line": 54
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/bedrock-raw-stop-reason.test.ts",
+      "sha256": "28e7ff81d411329ea5c2fb9f2f7382c0ff5cbc409eff13ef57a90fa112bc08d5",
+      "lines": 134,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "../src/api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": false,
+          "line": 58
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 59
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 60
+        }
+      ]
+    },
+    {
+      "path": "packages/ai/test/bedrock-response-headers.test.ts",
+      "sha256": "8436eacf232697682ecf4efcddf86e5dec216f9ea83fe5be728409adfdd82fa4",
+      "lines": 63,
+      "test": true,
+      "exports": [],
+      "imports": [
+        {
+          "specifier": "node:http",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 1
+        },
+        {
+          "specifier": "vitest",
+          "kind": "external",
+          "typeOnly": false,
+          "line": 2
+        },
+        {
+          "specifier": "../src/api/bedrock-converse-stream.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/api/bedrock-converse-stream.ts",
+          "typeOnly": false,
+          "line": 3
+        },
+        {
+          "specifier": "../src/compat.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/compat.ts",
+          "typeOnly": false,
+          "line": 4
+        },
+        {
+          "specifier": "../src/types.ts",
+          "kind": "internal",
+          "target": "packages/ai/src/types.ts",
+          "typeOnly": true,
+          "line": 5
+        }
+      ]
+    }
+  ],
+  "cycles": [],
+  "warnings": [],
+  "configs": [
+    {
+      "path": "package.json",
+      "sha256": "6153a079e7993e4cc97aee3fe9e77d0f3cae1aff597d323037a05829b1365a6c"
+    },
+    {
+      "path": "packages/ai/package.json",
+      "sha256": "62c8159c939f1f9fae53a9b003e7bd9136979bcceeca61bd1f2cf41082763736"
+    },
+    {
+      "path": "packages/ai/tsconfig.build.json",
+      "sha256": "7443d96e2396eba743a7de9136485a31865d9362699627b450d61037c6dea23b"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "sha256": "eea9b73c99e36e35d2afca6fb313899ebb214840beedad7a67ec07d880857f1b"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "3f819713b0fd74d4ecc8bdf1cf0160da63213863949983704ca91934508e987d"
+    }
+  ]
+}
