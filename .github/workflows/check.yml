@@ -16,9 +16,9 @@ jobs:
           go-version-file: go.mod
           cache: true
       - run: go version
-      - run: go test -mod=readonly -count=30 -v -run '^TestPortsmithJudgeAiBedrockCases$' ./internal/conformance/ai_bedrock
+      - run: go test -mod=readonly -count=1 ./...
         env:
           CGO_ENABLED: '0'
-      - run: go test -mod=readonly -race -count=10 -v -run '^TestPortsmithJudgeAiBedrockCases$' ./internal/conformance/ai_bedrock
+      - run: go test -mod=readonly -race -count=1 ./...
         env:
           CGO_ENABLED: '1'
