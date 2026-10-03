@@ -1,0 +1,24 @@
+Harness judge preparation validation
+Date: 2026-10-03 (Asia/Singapore)
+Scope: compile-only against temporary frozen public API facades; no migrated harness implementation is present.
+Scratch directory: /tmp/pith-durable-env-tools-judge-xfvn4eyu
+
+Storage DTO/session facade was copied from the independently prepared storage API and corrected against the frozen storage contract.
+Harness declarations were generated from all Go blocks of contracts/harness.md. Function bodies panic('compile-only'); unexercised concrete view types are declaration placeholders.
+Actual existing Pith packages/ai/types, packages/ai/utils and eventstream were copied unchanged, not replaced with loose DTO mocks.
+All final harness groups were copied fresh after the last retry/deferred and registry/prompt judges were authored.
+
+Corrections found by real Go compilation: pointer RequestID comparison; AppendEntry returns *EntryRecord; AssistantMessage.ErrorMessage is *string. Original independent judges were corrected by their author, not by changing existing AI/storage contracts.
+Cross-contract alignment: DocumentState returns *chord.AttachedState; DocumentReader and DocumentObserver preserve the pinned source interfaces.
+
+Command: CGO_ENABLED=0 go test -run '^$' -count=1 ./packages/durable/harness ./internal/conformance/durable_env ./internal/conformance/durable_tools ./internal/conformance/durable_delivery ./internal/conformance/durable_prompt_order
+Exit code: 0
+ok  	github.com/minifish-org/pith/packages/durable/harness	0.055s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_env	0.053s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_tools	0.052s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_delivery	0.066s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_prompt_order	0.323s [no tests to run]
+
+
+This result verifies syntax and API compatibility of the preparation. It does not verify scheduling, recovery, streaming, tools, storage or source parity. User-run Portsmith cumulative and full-project acceptance must verify actual generated implementation.
+No paid models or external provider requests were made.

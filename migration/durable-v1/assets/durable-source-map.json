@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "upstreamRepository": "https://github.com/earendil-works/pi",
+  "upstreamCommit": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "mappings": [
+    {
+      "source": "packages/ai/src/types.ts",
+      "goFiles": [
+        "packages/ai/types/types.go"
+      ]
+    },
+    {
+      "source": "packages/ai/src/utils/text.ts",
+      "goFiles": [
+        "packages/ai/utils/text.go"
+      ]
+    },
+    {
+      "source": "packages/ai/src/utils/transcript.ts",
+      "goFiles": [
+        "packages/ai/utils/transcript.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/api.ts",
+      "goFiles": [
+        "packages/chord/json.go",
+        "packages/chord/types.go",
+        "packages/chord/state.go",
+        "packages/chord/delta/operations.go",
+        "packages/chord/delta/tracker.go",
+        "packages/chord/delta/diff.go",
+        "packages/chord/delta/codec.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/delta/apply-immutable-trusted.ts",
+      "goFiles": [
+        "packages/chord/json.go",
+        "packages/chord/types.go",
+        "packages/chord/state.go",
+        "packages/chord/delta/operations.go",
+        "packages/chord/delta/tracker.go",
+        "packages/chord/delta/diff.go",
+        "packages/chord/delta/codec.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/delta/diff.ts",
+      "goFiles": [
+        "packages/chord/delta/diff.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/delta/draft.ts",
+      "goFiles": [
+        "packages/chord/json.go",
+        "packages/chord/types.go",
+        "packages/chord/state.go",
+        "packages/chord/delta/operations.go",
+        "packages/chord/delta/tracker.go",
+        "packages/chord/delta/diff.go",
+        "packages/chord/delta/codec.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/delta/index.ts",
+      "goFiles": [
+        "packages/chord/json.go",
+        "packages/chord/types.go",
+        "packages/chord/state.go",
+        "packages/chord/delta/operations.go",
+        "packages/chord/delta/tracker.go",
+        "packages/chord/delta/diff.go",
+        "packages/chord/delta/codec.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/delta/revision-validator.ts",
+      "goFiles": [
+        "packages/chord/json.go",
+        "packages/chord/types.go",
+        "packages/chord/state.go",
+        "packages/chord/delta/operations.go",
+        "packages/chord/delta/tracker.go",
+        "packages/chord/delta/diff.go",
+        "packages/chord/delta/codec.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/delta/tracker.ts",
+      "goFiles": [
+        "packages/chord/delta/tracker.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/index.ts",
+      "goFiles": [
+        "packages/chord/json.go",
+        "packages/chord/types.go",
+        "packages/chord/state.go",
+        "packages/chord/delta/operations.go",
+        "packages/chord/delta/tracker.go",
+        "packages/chord/delta/diff.go",
+        "packages/chord/delta/codec.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/json.ts",
+      "goFiles": [
+        "packages/chord/json.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/services/state-internals.ts",
+      "goFiles": [
+        "packages/chord/json.go",
+        "packages/chord/types.go",
+        "packages/chord/state.go",
+        "packages/chord/delta/operations.go",
+        "packages/chord/delta/tracker.go",
+        "packages/chord/delta/diff.go",
+        "packages/chord/delta/codec.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/services/state.ts",
+      "goFiles": [
+        "packages/chord/state.go"
+      ]
+    },
+    {
+      "source": "packages/chord/src/types.ts",
+      "goFiles": [
+        "packages/chord/types.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/documents.ts",
+      "goFiles": [
+        "packages/durable/documents.go",
+        "packages/durable/storage/memory/documents.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/entries.ts",
+      "goFiles": [
+        "packages/durable/entries.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/env/index.ts",
+      "goFiles": [
+        "packages/durable/env/types.go",
+        "packages/durable/env/local.go",
+        "packages/durable/env/files.go",
+        "packages/durable/env/shell.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/env/node.ts",
+      "goFiles": [
+        "packages/durable/env/types.go",
+        "packages/durable/env/local.go",
+        "packages/durable/env/files.go",
+        "packages/durable/env/shell.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/errors.ts",
+      "goFiles": [
+        "packages/durable/errors.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/agent.ts",
+      "goFiles": [
+        "packages/durable/harness/agent.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/compaction.ts",
+      "goFiles": [
+        "packages/durable/harness/compaction.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/context.ts",
+      "goFiles": [
+        "packages/durable/harness/context.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/define.ts",
+      "goFiles": [
+        "packages/durable/harness/define.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/events.ts",
+      "goFiles": [
+        "packages/durable/harness/events.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/generation.ts",
+      "goFiles": [
+        "packages/durable/harness/generation.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/harness.ts",
+      "goFiles": [
+        "packages/durable/harness/harness.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/inbox.ts",
+      "goFiles": [
+        "packages/durable/harness/inbox.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/json.ts",
+      "goFiles": [
+        "packages/durable/harness/json.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/live.ts",
+      "goFiles": [
+        "packages/durable/harness/live.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/output.ts",
+      "goFiles": [
+        "packages/durable/harness/output.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/prompt.ts",
+      "goFiles": [
+        "packages/durable/harness/prompt.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/registry.ts",
+      "goFiles": [
+        "packages/durable/harness/registry.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/scheduler.ts",
+      "goFiles": [
+        "packages/durable/harness/scheduler.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/submissions.ts",
+      "goFiles": [
+        "packages/durable/harness/submissions.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/task-graph.ts",
+      "goFiles": [
+        "packages/durable/harness/task_graph.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/tool.ts",
+      "goFiles": [
+        "packages/durable/harness/tool.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/types.ts",
+      "goFiles": [
+        "packages/durable/harness/types.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/usage.ts",
+      "goFiles": [
+        "packages/durable/harness/usage.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/util.ts",
+      "goFiles": [
+        "packages/durable/harness/util.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/harness/view.ts",
+      "goFiles": [
+        "packages/durable/harness/view.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/ids.ts",
+      "goFiles": [
+        "packages/durable/ids.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/index.ts",
+      "goFiles": [
+        "packages/durable/doc.go",
+        "packages/durable/harness/harness.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/session/forks.ts",
+      "goFiles": [
+        "packages/durable/forks.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/session/observation.ts",
+      "goFiles": [
+        "packages/durable/observation.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/session/session.ts",
+      "goFiles": [
+        "packages/durable/session.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/session/transaction.ts",
+      "goFiles": [
+        "packages/durable/transaction.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/jsonl/index.ts",
+      "goFiles": [
+        "packages/durable/storage/jsonl/storage.go",
+        "packages/durable/storage/jsonl/codec.go",
+        "packages/durable/storage/jsonl/recovery.go",
+        "packages/durable/storage/jsonl/reclaim.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/jsonl/node.ts",
+      "goFiles": [
+        "packages/durable/storage/jsonl/storage.go",
+        "packages/durable/storage/jsonl/codec.go",
+        "packages/durable/storage/jsonl/recovery.go",
+        "packages/durable/storage/jsonl/reclaim.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/jsonl/storage.ts",
+      "goFiles": [
+        "packages/durable/storage/jsonl/storage.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/memory.ts",
+      "goFiles": [
+        "packages/durable/storage/memory/storage.go",
+        "packages/durable/storage/memory/documents.go",
+        "packages/durable/storage/memory/indexes.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/sqlite/database.ts",
+      "goFiles": [
+        "packages/durable/storage/sqlite/database.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/sqlite/index.ts",
+      "goFiles": [
+        "packages/durable/storage/sqlite/storage.go",
+        "packages/durable/storage/sqlite/database.go",
+        "packages/durable/storage/sqlite/migrations.go",
+        "packages/durable/storage/sqlite/documents.go",
+        "packages/durable/storage/sqlite/queries.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/sqlite/migrations.ts",
+      "goFiles": [
+        "packages/durable/storage/sqlite/migrations.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/sqlite/node.ts",
+      "goFiles": [
+        "packages/durable/storage/sqlite/storage.go",
+        "packages/durable/storage/sqlite/database.go",
+        "packages/durable/storage/sqlite/migrations.go",
+        "packages/durable/storage/sqlite/documents.go",
+        "packages/durable/storage/sqlite/queries.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/storage/sqlite/storage.ts",
+      "goFiles": [
+        "packages/durable/storage/sqlite/storage.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tasks.ts",
+      "goFiles": [
+        "packages/durable/tasks.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/testing/assertions.ts",
+      "goFiles": [
+        "packages/durable/testing/assertions.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/testing/index.ts",
+      "goFiles": [
+        "packages/durable/testing/types.go",
+        "packages/durable/testing/assertions.go",
+        "packages/durable/testing/runner.go",
+        "packages/durable/testing/storage_conformance.go",
+        "packages/durable/testing/storage_benchmark.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/testing/runner.ts",
+      "goFiles": [
+        "packages/durable/testing/runner.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/testing/storage-benchmark.ts",
+      "goFiles": [
+        "packages/durable/testing/storage_benchmark.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/testing/storage-conformance.ts",
+      "goFiles": [
+        "packages/durable/testing/storage_conformance.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/testing/types.ts",
+      "goFiles": [
+        "packages/durable/testing/types.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/bash.ts",
+      "goFiles": [
+        "packages/durable/tools/bash.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/edit-diff.ts",
+      "goFiles": [
+        "packages/durable/tools/edit_diff.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/edit.ts",
+      "goFiles": [
+        "packages/durable/tools/edit.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/env.ts",
+      "goFiles": [
+        "packages/durable/tools/env.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/file-mutation-queue.ts",
+      "goFiles": [
+        "packages/durable/tools/file_mutation_queue.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/image.ts",
+      "goFiles": [
+        "packages/durable/tools/image.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/index.ts",
+      "goFiles": [
+        "packages/durable/tools/read.go",
+        "packages/durable/tools/write.go",
+        "packages/durable/tools/edit.go",
+        "packages/durable/tools/bash.go",
+        "packages/durable/tools/edit_diff.go",
+        "packages/durable/tools/file_mutation_queue.go",
+        "packages/durable/tools/env.go",
+        "packages/durable/tools/image.go",
+        "packages/durable/tools/path_utils.go",
+        "packages/durable/tools/tools.go",
+        "packages/durable/tools/truncate.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/path-utils.ts",
+      "goFiles": [
+        "packages/durable/tools/path_utils.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/read.ts",
+      "goFiles": [
+        "packages/durable/tools/read.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/tools/write.ts",
+      "goFiles": [
+        "packages/durable/tools/write.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/truncate.ts",
+      "goFiles": [
+        "packages/durable/tools/truncate.go"
+      ]
+    },
+    {
+      "source": "packages/durable/src/types.ts",
+      "goFiles": [
+        "packages/durable/types.go"
+      ]
+    }
+  ],
+  "scopeNotes": [
+    "Durable SDK implementation; native Go API/package design.",
+    "Chord facets and remote-service composition outside Durable runtime are not ported.",
+    "Existing accepted Pith AI/context APIs are reused; explicit prompt-order bridge listed."
+  ]
+}

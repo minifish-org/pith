@@ -1,0 +1,17 @@
+Storage judge API validation: compile-only facade, not a migrated implementation.
+Command: CGO_ENABLED=0 GOMAXPROCS=2 go test -mod=readonly -p=2 -run ^$ ./internal/...
+Exit: 0
+ok  	github.com/minifish-org/pith/internal/conformance/durable_session	0.282s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_storage_jsonl	(cached) [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_storage_records	(cached) [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_storage_sqlite	(cached) [no tests to run]
+
+Negative control: deliberately wrong allocator returns reserved ID 1.
+Expected nonzero exit; actual exit: 1
+--- FAIL: TestPortsmithJudgeDurableStorageAtomicOwnership (0.00s)
+    portsmith_judge_test.go:79: reserved root: first minted ID=1
+FAIL
+FAIL	github.com/minifish-org/pith/internal/conformance/durable_storage_records	0.297s
+FAIL
+
+Only syntax/API compilation and one assertion negative control were executed. Product behavior/parity and process recovery await migration.

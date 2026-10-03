@@ -1,0 +1,33 @@
+Env and coding-tools preparation validation
+Date: 2026-10-03 (Asia/Singapore)
+Scope: CGO-disabled compile against temporary no-op facades; no implementation acceptance.
+Scratch directory: /tmp/pith-durable-env-tools-judge-xfvn4eyu
+
+Env facade uses every frozen FileSystem/Shell/ExecutionEnv method. Harness tool facade uses the full ToolAPI contract including DocumentReader/DocumentObserver and actual existing Pith AI Tool/ContentBlock/Usage types.
+Command: CGO_ENABLED=0 go test -run '^$' -count=1 ./internal/conformance/durable_env ./internal/conformance/durable_tools ./internal/conformance/durable_delivery
+Exit code: 0
+ok  	github.com/minifish-org/pith/internal/conformance/durable_env	0.050s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_tools	0.051s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_delivery	0.332s [no tests to run]
+
+
+Negative controls are deliberately wrong and expected to fail. They do not run a migrated implementation.
+Negative control 0 exit code: 1
+--- FAIL: TestPortsmithJudgeDurableEnvironmentFiles (0.00s)
+    portsmith_judge_env_test.go:37: local namespace identity must be shared across CWDs
+FAIL
+FAIL	github.com/minifish-org/pith/internal/conformance/durable_env	0.054s
+FAIL
+
+Negative control 1 exit code: 1
+--- FAIL: TestPortsmithJudgeDurableCodingTools (0.00s)
+    portsmith_judge_tools_test.go:69: explicit extension: harness.Extension{Name:"", Tools:[]harness.ToolRegistration(nil)}
+FAIL
+FAIL	github.com/minifish-org/pith/internal/conformance/durable_tools	0.056s
+FAIL
+
+
+Source review: read selected-line text has no appended diagnostic in content; 50 KiB first-line truncation uses a valid UTF-8 boundary; edit repairs arguments on a copy and preserves BOM/CRLF; edit details expose diff/patch/firstChangedLine; bash prefix inserts newline and initializes Env; default replay is unsafe; max timeout is 2147483647/1000 seconds.
+Correction: cancellation callback accumulates READY across chunks and requires typed aborted failure; existing spill is checked when present. The source callback executes before spill admission, so a first-callback abort does not require a newly created spill. Candidate-required preservation tests use an actual persistence barrier/fault injection.
+No paid models or external providers were called.
+Remaining validation: user-run Portsmith migration must implement these APIs and pass behavior, cumulative and full-project gates.

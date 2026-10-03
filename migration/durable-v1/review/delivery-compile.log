@@ -1,0 +1,26 @@
+Durable delivery judge preparation validation
+Date: 2026-10-03 (Asia/Singapore)
+Scope: compile-only against temporary declarations, not candidate/provider acceptance.
+Uses existing Pith AI types and the frozen full harness API, with empty testing helper facade.
+Command: CGO_ENABLED=0 go test -run '^$' -count=1 ./internal/conformance/durable_delivery
+Exit code: 0
+ok  	github.com/minifish-org/pith/internal/conformance/durable_env	0.050s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_tools	0.051s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_delivery	0.332s [no tests to run]
+
+
+Negative control: empty conformance facade must be rejected by pinned source case-name list.
+Exit code: 1
+--- FAIL: TestPortsmithJudgeDurableStorageConformanceDelivery (0.00s)
+    --- FAIL: TestPortsmithJudgeDurableStorageConformanceDelivery/memory (0.00s)
+        portsmith_judge_delivery_test.go:133: missing source conformance case: "reserves ID 1 for the immutable root conversation"
+    --- FAIL: TestPortsmithJudgeDurableStorageConformanceDelivery/jsonl (0.00s)
+        portsmith_judge_delivery_test.go:133: missing source conformance case: "reserves ID 1 for the immutable root conversation"
+    --- FAIL: TestPortsmithJudgeDurableStorageConformanceDelivery/sqlite (0.00s)
+        portsmith_judge_delivery_test.go:133: missing source conformance case: "reserves ID 1 for the immutable root conversation"
+FAIL
+FAIL	github.com/minifish-org/pith/internal/conformance/durable_delivery	0.092s
+FAIL
+
+No paid provider, external network call, or model execution was performed.
+Behavior verification remains part of the user-run migration.

@@ -1,0 +1,27 @@
+Final combined judge compile
+Scope: temporary no-op API facade using frozen project dependency manifests; syntax/type check only, not SDK acceptance.
+Storage judge names and subprocess selectors are globally unique per backend.
+Command: CGO_ENABLED=0 GOMAXPROCS=4 go test -p=4 -run ^$ -count=1 ./...
+Exit code: 0
+ok  	github.com/minifish-org/pith/internal/conformance/durable_delivery	0.378s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_env	0.349s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_prompt_order	0.132s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_session	0.348s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_storage_jsonl	0.280s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_storage_records	0.295s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_storage_sqlite	0.322s [no tests to run]
+ok  	github.com/minifish-org/pith/internal/conformance/durable_tools	0.317s [no tests to run]
+?   	github.com/minifish-org/pith/packages/ai/types	[no test files]
+?   	github.com/minifish-org/pith/packages/ai/utils	[no test files]
+?   	github.com/minifish-org/pith/packages/ai/utils/eventstream	[no test files]
+ok  	github.com/minifish-org/pith/packages/chord	0.052s [no tests to run]
+ok  	github.com/minifish-org/pith/packages/chord/context	0.052s [no tests to run]
+ok  	github.com/minifish-org/pith/packages/chord/delta	0.046s [no tests to run]
+?   	github.com/minifish-org/pith/packages/durable	[no test files]
+?   	github.com/minifish-org/pith/packages/durable/env	[no test files]
+ok  	github.com/minifish-org/pith/packages/durable/harness	0.305s [no tests to run]
+?   	github.com/minifish-org/pith/packages/durable/storage/jsonl	[no test files]
+?   	github.com/minifish-org/pith/packages/durable/storage/memory	[no test files]
+?   	github.com/minifish-org/pith/packages/durable/storage/sqlite	[no test files]
+?   	github.com/minifish-org/pith/packages/durable/testing	[no test files]
+?   	github.com/minifish-org/pith/packages/durable/tools	[no test files]

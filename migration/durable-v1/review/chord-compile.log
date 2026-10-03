@@ -1,0 +1,82 @@
+Chord judge preparation validation
+Date: 2026-10-03 (Asia/Singapore)
+Scope: independent judge syntax/API compile against deliberately incorrect scratch facades only.
+No new Chord or Durable implementation has been accepted or ported.
+Scratch directory: /tmp/pith-durable-chord-judge-tz6w1hiq
+All commands used CGO_ENABLED=0.
+
+Compile-only command: go test -run '^$' -count=1 ./packages/chord/...
+Exit code: 0
+ok  	github.com/minifish-org/pith/packages/chord	0.673s [no tests to run]
+ok  	github.com/minifish-org/pith/packages/chord/context	0.672s [no tests to run]
+ok  	github.com/minifish-org/pith/packages/chord/delta	0.670s [no tests to run]
+
+Positive control: existing Pith packages/chord/context implementation copied unchanged to scratch.
+Command: go test -count=1 -run '^TestPortsmithJudgeDurableContext' ./packages/chord/context
+Exit code: 0
+ok  	github.com/minifish-org/pith/packages/chord/context	0.082s
+
+Negative controls: incorrect facade copies JSON by alias, accepts unsafe delta operations and foreign candidates, and ignores source cursors.
+All negative controls are expected to fail. Failure is evidence that the independent judges reject these defects, not candidate acceptance.
+Negative control 1 exit code: 1
+--- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations (0.00s)
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/unknown (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [newer [text] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/bad_arity (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [text]]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/root_set (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/negative (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [rows -1] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/fractional (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [rows 0.5] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/sparse (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [rows 9] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/array_string_key (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [rows 0] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/reserved_proto (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [__proto__ polluted] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/reserved_constructor (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [constructor] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/reserved_prototype (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [prototype] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/unresolved (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [s [missing child] true]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/append_nonstring (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [a [rows] x]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/truncate_negative (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [t [text] -1]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/splice_nonarray (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [p [text] 0 1 []]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/permutation_duplicate (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [m [rows] [0 0]]
+    --- FAIL: TestPortsmithJudgeDurableDeltaRejectsUnsafeOperations/permutation_length (0.00s)
+        portsmith_judge_durable_delta_test.go:81: invalid operation accepted: [m [rows] [0]]
+FAIL
+FAIL	github.com/minifish-org/pith/packages/chord/delta	0.082s
+FAIL
+
+Negative control 2 exit code: 1
+--- FAIL: TestPortsmithJudgeDurableTrackerRejectsForeignStaleAndAborted (0.00s)
+    portsmith_judge_durable_delta_test.go:209: foreign owner accepted
+FAIL
+FAIL	github.com/minifish-org/pith/packages/chord/delta	0.083s
+FAIL
+
+Negative control 3 exit code: 1
+--- FAIL: TestPortsmithJudgeDurableChordStrictJSONOwnership (0.00s)
+    portsmith_judge_durable_chord_test.go:41: JSON mismatch: got {"text":"你好😀","value":9}, want {"text":"你好😀","value":1}
+FAIL
+FAIL	github.com/minifish-org/pith/packages/chord	0.083s
+FAIL
+
+Source cursor gap negative control exit code: 1
+--- FAIL: TestPortsmithJudgeDurableChordSourceFailures (5.00s)
+    --- FAIL: TestPortsmithJudgeDurableChordSourceFailures/gap (5.00s)
+        portsmith_judge_durable_chord_test.go:192: publication did not complete
+FAIL
+FAIL	github.com/minifish-org/pith/packages/chord	5.080s
+FAIL
+
+Result: all three judge packages compiled; both existing-context behavior tests passed; incorrect JSON/delta/tracker/source facades were rejected.
+Remaining validation: the user-run Portsmith migration must supply actual code and pass cumulative plus full-project acceptance.

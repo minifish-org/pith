@@ -1,0 +1,3 @@
+package main
+import("database/sql";"fmt"; _ "modernc.org/sqlite")
+func main(){db,e:=sql.Open("sqlite",":memory:");if e!=nil{panic(e)};defer db.Close();if _,e=db.Exec("CREATE TABLE checks (value TEXT)");e!=nil{panic(e)};if _,e=db.Exec("INSERT INTO checks VALUES ('no-cgo-ok')");e!=nil{panic(e)};var value string;if e=db.QueryRow("SELECT value FROM checks").Scan(&value);e!=nil{panic(e)};fmt.Println(value)}

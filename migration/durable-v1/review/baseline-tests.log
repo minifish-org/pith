@@ -1,0 +1,88 @@
+ok  	github.com/minifish-org/pith/cmd/pith	0.358s
+ok  	github.com/minifish-org/pith/cmd/pith-ai	0.420s
+?   	github.com/minifish-org/pith/examples/codemode	[no test files]
+?   	github.com/minifish-org/pith/examples/embedded-sdk/custom-tool	[no test files]
+?   	github.com/minifish-org/pith/examples/embedded-sdk/events	[no test files]
+?   	github.com/minifish-org/pith/examples/embedded-sdk/minimal	[no test files]
+?   	github.com/minifish-org/pith/examples/embedded-sdk/resources	[no test files]
+?   	github.com/minifish-org/pith/examples/embedded-sdk/resume	[no test files]
+?   	github.com/minifish-org/pith/examples/embedded-sdk/web	[no test files]
+?   	github.com/minifish-org/pith/examples/mcp-client	[no test files]
+?   	github.com/minifish-org/pith/examples/pi-v1	[no test files]
+?   	github.com/minifish-org/pith/examples/virtual-model	[no test files]
+ok  	github.com/minifish-org/pith/internal/conformance/ai_anthropic	0.338s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_auth	0.349s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_bedrock	0.382s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_foundation_catalog	0.369s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_foundation_types	0.296s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_google	0.328s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_models	0.326s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_openai	0.335s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_other_protocols	0.367s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_providers	0.429s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_surface	0.398s
+ok  	github.com/minifish-org/pith/internal/conformance/ai_utils	0.303s
+ok  	github.com/minifish-org/pith/internal/conformance/core_compaction	0.345s
+ok  	github.com/minifish-org/pith/internal/conformance/core_contracts	0.297s
+ok  	github.com/minifish-org/pith/internal/conformance/core_harness	0.319s
+ok  	github.com/minifish-org/pith/internal/conformance/core_loop	0.310s
+ok  	github.com/minifish-org/pith/internal/conformance/core_resources	0.310s
+ok  	github.com/minifish-org/pith/internal/conformance/core_runtime	0.329s
+ok  	github.com/minifish-org/pith/internal/conformance/core_session	0.336s
+ok  	github.com/minifish-org/pith/internal/conformance/pi_v1_sdk	0.950s
+ok  	github.com/minifish-org/pith/internal/conformance/sdk_incremental	5.138s
+ok  	github.com/minifish-org/pith/internal/conformance/tools_bash	0.385s
+ok  	github.com/minifish-org/pith/internal/conformance/tools_delivery	1.212s
+ok  	github.com/minifish-org/pith/internal/conformance/tools_edit	0.346s
+ok  	github.com/minifish-org/pith/internal/conformance/tools_env	0.395s
+ok  	github.com/minifish-org/pith/internal/conformance/tools_read	0.368s
+ok  	github.com/minifish-org/pith/internal/conformance/tools_write	0.345s
+ok  	github.com/minifish-org/pith/packages/agent	0.326s
+ok  	github.com/minifish-org/pith/packages/agent/harness	0.297s
+ok  	github.com/minifish-org/pith/packages/agent/harness/compaction	0.316s
+ok  	github.com/minifish-org/pith/packages/agent/harness/config	0.280s
+ok  	github.com/minifish-org/pith/packages/agent/harness/context	(cached)
+ok  	github.com/minifish-org/pith/packages/agent/harness/env	0.458s
+ok  	github.com/minifish-org/pith/packages/agent/harness/events	(cached)
+ok  	github.com/minifish-org/pith/packages/agent/harness/execution	0.295s
+ok  	github.com/minifish-org/pith/packages/agent/harness/hooks	0.284s
+ok  	github.com/minifish-org/pith/packages/agent/harness/messages	0.363s
+ok  	github.com/minifish-org/pith/packages/agent/harness/resources	0.289s
+ok  	github.com/minifish-org/pith/packages/agent/harness/result	(cached)
+ok  	github.com/minifish-org/pith/packages/agent/harness/runtime	0.308s
+ok  	github.com/minifish-org/pith/packages/agent/harness/session	0.293s
+ok  	github.com/minifish-org/pith/packages/agent/harness/session/jsonl	0.281s
+ok  	github.com/minifish-org/pith/packages/agent/harness/session/testing	0.349s
+ok  	github.com/minifish-org/pith/packages/agent/harness/session/testing/conformance	0.361s
+ok  	github.com/minifish-org/pith/packages/agent/harness/telemetry	(cached)
+ok  	github.com/minifish-org/pith/packages/agent/harness/tools	0.853s
+ok  	github.com/minifish-org/pith/packages/agent/harness/types	0.283s
+ok  	github.com/minifish-org/pith/packages/agent/harness/utils/adaptive_publisher	(cached)
+ok  	github.com/minifish-org/pith/packages/agent/harness/utils/output_capture	0.298s
+ok  	github.com/minifish-org/pith/packages/agent/harness/utils/shell_output	0.320s
+ok  	github.com/minifish-org/pith/packages/agent/harness/utils/truncate	(cached)
+ok  	github.com/minifish-org/pith/packages/agent/harness/utils/usage	0.266s
+ok  	github.com/minifish-org/pith/packages/agent/sdk	0.332s
+ok  	github.com/minifish-org/pith/packages/agent/search	(cached)
+ok  	github.com/minifish-org/pith/packages/agent/types	0.271s
+ok  	github.com/minifish-org/pith/packages/ai	0.420s
+ok  	github.com/minifish-org/pith/packages/ai/api	0.883s
+ok  	github.com/minifish-org/pith/packages/ai/auth	0.388s
+ok  	github.com/minifish-org/pith/packages/ai/auth/oauth	0.382s
+ok  	github.com/minifish-org/pith/packages/ai/auth/types	0.270s
+ok  	github.com/minifish-org/pith/packages/ai/catalog	0.429s
+ok  	github.com/minifish-org/pith/packages/ai/compat	0.390s
+ok  	github.com/minifish-org/pith/packages/ai/images	0.342s
+ok  	github.com/minifish-org/pith/packages/ai/images/builtin	0.350s
+ok  	github.com/minifish-org/pith/packages/ai/providers	0.394s
+ok  	github.com/minifish-org/pith/packages/ai/sdk	0.370s
+ok  	github.com/minifish-org/pith/packages/ai/types	0.321s
+ok  	github.com/minifish-org/pith/packages/ai/utils	0.781s
+ok  	github.com/minifish-org/pith/packages/ai/utils/eventstream	(cached)
+ok  	github.com/minifish-org/pith/packages/chord/context	(cached)
+ok  	github.com/minifish-org/pith/packages/codemode	5.511s
+?   	github.com/minifish-org/pith/packages/codemode/runtime	[no test files]
+ok  	github.com/minifish-org/pith/packages/coding-agent	1.556s
+ok  	github.com/minifish-org/pith/packages/mcp	3.987s
+ok  	github.com/minifish-org/pith/packages/telemetry	(cached)
+ok  	github.com/minifish-org/pith/packages/telemetry/testing	(cached)

@@ -1,0 +1,28 @@
+{
+  "blocked": [],
+  "canStart": true,
+  "modules": [
+    {
+      "id": "durable-v1",
+      "status": "pending"
+    }
+  ],
+  "next": "durable-v1/durable-sdk/chord",
+  "note": "Preparation status does not mean the Go module is implemented. Use --commit to call the model and save progress.",
+  "preparation": {
+    "modules": [
+      {
+        "id": "durable-v1",
+        "readyBatches": 1,
+        "totalBatches": 1
+      }
+    ],
+    "policy": "all-prepared",
+    "ready": true,
+    "readyBatches": 1,
+    "totalBatches": 1
+  },
+  "preparedSteps": 11,
+  "status": "ready",
+  "verifiedSteps": 0
+}

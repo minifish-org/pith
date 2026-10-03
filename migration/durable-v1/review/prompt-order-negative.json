@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-negative-control",
+  "target": "existing Pith AI types/utils (current local product; no runtime modifications)",
+  "command": "CGO_ENABLED=0 go test -mod=mod -count=1 -run ^TestPortsmithJudgeDurablePrompt ./...",
+  "exitCode": 1,
+  "result": "expected failure",
+  "observations": [
+    {
+      "test": "TestPortsmithJudgeDurablePromptSourceOrder",
+      "got": "base\\n\\nA-source\\n\\nZ-source",
+      "expected": "Z-source precedes A-source"
+    },
+    {
+      "test": "TestPortsmithJudgeDurablePromptNativeOrderAndFallback",
+      "got": "SystemMessage lacks writable []string SectionOrder metadata",
+      "expected": "hidden native ordered-section metadata"
+    }
+  ],
+  "limitations": "Confirms old baseline is rejected. Does not validate a generated implementation or the Durable migration."
+}

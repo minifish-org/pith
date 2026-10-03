@@ -1,0 +1,148 @@
+{
+  "sourceCommit": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "contract": "contracts/storage.md",
+  "steps": [
+    {
+      "id": "records",
+      "sourceFiles": [
+        "packages/durable/src/types.ts",
+        "packages/durable/src/ids.ts",
+        "packages/durable/src/errors.ts",
+        "packages/durable/src/entries.ts",
+        "packages/durable/src/documents.ts",
+        "packages/durable/src/tasks.ts",
+        "packages/durable/src/index.ts",
+        "packages/durable/test/types.test.ts"
+      ],
+      "outputFiles": [
+        "packages/durable/types.go",
+        "packages/durable/ids.go",
+        "packages/durable/errors.go",
+        "packages/durable/entries.go",
+        "packages/durable/documents.go",
+        "packages/durable/tasks.go",
+        "packages/durable/doc.go",
+        "packages/durable/records_test.go"
+      ],
+      "judge": "storage-records",
+      "judgeRunsAfter": "memory",
+      "tests": [
+        "candidate-owned types/export/record validation tests"
+      ]
+    },
+    {
+      "id": "memory",
+      "sourceFiles": [
+        "packages/durable/src/storage/memory.ts",
+        "packages/durable/src/testing/storage-conformance.ts",
+        "packages/durable/src/testing/types.ts",
+        "packages/durable/test/memory-storage.test.ts",
+        "packages/durable/test/storage-memory.ts",
+        "packages/durable/test/storage-runtime-boundary.test.ts"
+      ],
+      "outputFiles": [
+        "packages/durable/storage/memory/storage.go",
+        "packages/durable/storage/memory/documents.go",
+        "packages/durable/storage/memory/indexes.go",
+        "packages/durable/storage/memory/storage_test.go",
+        "packages/durable/storage/memory/conformance_test.go"
+      ],
+      "judge": "storage-records",
+      "testPackages": [
+        "./internal/conformance/durable_storage_records"
+      ],
+      "tests": [
+        "6 independent behavior tests: atomic rollback/shared IDs, detached ownership, replacements/filter/dedup, fork caps/paging/head/commit-seq, document history/version/lifetimes/copies, closed APIs"
+      ]
+    },
+    {
+      "id": "session",
+      "sourceFiles": [
+        "packages/durable/src/session/session.ts",
+        "packages/durable/src/session/transaction.ts",
+        "packages/durable/src/session/forks.ts",
+        "packages/durable/src/session/observation.ts",
+        "packages/durable/test/session-support.ts",
+        "packages/durable/test/session-documents.test.ts",
+        "packages/durable/test/session-forks.test.ts",
+        "packages/durable/test/session-states.test.ts",
+        "packages/durable/test/session-tables.test.ts",
+        "packages/durable/test/session-definitions.test.ts",
+        "packages/durable/test/session-checkpoints-migrations.test.ts",
+        "packages/durable/test/session-watches.test.ts"
+      ],
+      "outputFiles": [
+        "packages/durable/session.go",
+        "packages/durable/transaction.go",
+        "packages/durable/forks.go",
+        "packages/durable/observation.go",
+        "packages/durable/session_test.go",
+        "packages/durable/session_documents_test.go",
+        "packages/durable/session_forks_test.go",
+        "packages/durable/session_observation_test.go"
+      ],
+      "judge": "storage-session",
+      "testPackages": [
+        "./internal/conformance/durable_session"
+      ],
+      "tests": [
+        "7 independent behavior tests: rollback/escaped draft/snapshot isolation, 32 concurrent updates, caller cancellation after storage admission, known rejection vs poison, read-after-write and predicate rollback, definition-free fork policies/lazy migration/as-of, nonblocking committed watch publication"
+      ]
+    },
+    {
+      "id": "jsonl",
+      "sourceFiles": [
+        "packages/durable/src/storage/jsonl/storage.ts",
+        "packages/durable/src/storage/jsonl/node.ts",
+        "packages/durable/src/storage/jsonl/index.ts",
+        "packages/durable/test/jsonl-storage.test.ts"
+      ],
+      "outputFiles": [
+        "packages/durable/storage/jsonl/storage.go",
+        "packages/durable/storage/jsonl/codec.go",
+        "packages/durable/storage/jsonl/recovery.go",
+        "packages/durable/storage/jsonl/reclaim.go",
+        "packages/durable/storage/jsonl/storage_test.go",
+        "packages/durable/storage/jsonl/faults_test.go"
+      ],
+      "judge": "storage-jsonl",
+      "testPackages": [
+        "./internal/conformance/durable_storage_jsonl"
+      ],
+      "tests": [
+        "Complete independent storage suite plus actual subprocess kill/reopen, torn UTF8 tail truncation, complete unconfirmed tail removal, missing-confirmed/malformed-complete/invalid-complete-UTF8 corruption rejection; candidate ports all short-write/sync/reclaim/rename source cases"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "sourceFiles": [
+        "packages/durable/src/storage/sqlite/storage.ts",
+        "packages/durable/src/storage/sqlite/database.ts",
+        "packages/durable/src/storage/sqlite/migrations.ts",
+        "packages/durable/src/storage/sqlite/node.ts",
+        "packages/durable/src/storage/sqlite/index.ts",
+        "packages/durable/test/sqlite-storage.test.ts",
+        "packages/durable/test/sqlite-migrations.test.ts",
+        "packages/durable/test/sqlite-facade.test.ts"
+      ],
+      "outputFiles": [
+        "packages/durable/storage/sqlite/storage.go",
+        "packages/durable/storage/sqlite/database.go",
+        "packages/durable/storage/sqlite/migrations.go",
+        "packages/durable/storage/sqlite/documents.go",
+        "packages/durable/storage/sqlite/queries.go",
+        "packages/durable/storage/sqlite/storage_test.go",
+        "packages/durable/storage/sqlite/migrations_test.go",
+        "packages/durable/storage/sqlite/database_test.go"
+      ],
+      "judge": "storage-sqlite",
+      "testPackages": [
+        "./internal/conformance/durable_storage_sqlite"
+      ],
+      "tests": [
+        "Complete independent storage suite plus actual subprocess kill/reopen, SQLite header/ordinary indexed rows, schema version and newer-schema rejection with no downgrade; candidate ports SQL rollback/queryplan/reclamation/WAL/deletedpage tests"
+      ]
+    }
+  ],
+  "note": "Reviewed source ownership/output proposal; records acceptance begins only once memory exists. Every judge file is frozen before model execution."
+}

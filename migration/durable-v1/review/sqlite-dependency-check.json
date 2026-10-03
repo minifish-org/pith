@@ -1,0 +1,54 @@
+{
+  "nativeSmoke": {
+    "cgoEnabled": false,
+    "output": "no-cgo-ok",
+    "exitCode": 0
+  },
+  "module": "modernc.org/sqlite",
+  "version": "v1.44.3",
+  "libcVersion": "v1.67.6",
+  "requiredGo": "1.24.0",
+  "crossBuilds": [
+    {
+      "goos": "darwin",
+      "goarch": "arm64",
+      "exitCode": 0,
+      "seconds": 0.777,
+      "bytes": 9328930,
+      "output": ""
+    },
+    {
+      "goos": "darwin",
+      "goarch": "amd64",
+      "exitCode": 0,
+      "seconds": 7.657,
+      "bytes": 9528256,
+      "output": ""
+    },
+    {
+      "goos": "linux",
+      "goarch": "amd64",
+      "exitCode": 0,
+      "seconds": 8.908,
+      "bytes": 9458614,
+      "output": ""
+    },
+    {
+      "goos": "linux",
+      "goarch": "arm64",
+      "exitCode": 0,
+      "seconds": 11.062,
+      "bytes": 9233993,
+      "output": ""
+    },
+    {
+      "goos": "windows",
+      "goarch": "amd64",
+      "exitCode": 0,
+      "seconds": 5.238,
+      "bytes": 9802240,
+      "output": ""
+    }
+  ],
+  "scope": "Dependency availability/no-CGO smoke only; not the future Durable adapter."
+}

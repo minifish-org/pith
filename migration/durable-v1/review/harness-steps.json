@@ -1,0 +1,342 @@
+{
+  "sourceCommit": "a13d35a742c6ef8462812a28fbe1d8c8b7431c32",
+  "steps": [
+    {
+      "id": "prompt-order",
+      "sources": [
+        "packages/ai/src/types.ts",
+        "packages/ai/src/utils/text.ts",
+        "packages/ai/src/utils/transcript.ts",
+        "packages/durable/src/harness/prompt.ts",
+        "packages/durable/test/harness-prompt.test.ts"
+      ],
+      "outputs": [
+        "packages/ai/types/types.go",
+        "packages/ai/utils/text.go",
+        "packages/ai/utils/transcript.go",
+        "packages/ai/types/durable_prompt_order_test.go",
+        "packages/ai/utils/durable_prompt_order_test.go"
+      ],
+      "judge": "judges/prompt-order",
+      "judgePaths": [
+        "internal/conformance/durable_prompt_order/portsmith_judge_prompt_order_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeDurablePromptSourceOrder",
+        "TestPortsmithJudgeDurablePromptRemoveReaddReplay",
+        "TestPortsmithJudgeDurablePromptNativeOrderAndFallback"
+      ],
+      "contract": "contracts/prompt-order.md",
+      "testPattern": "^(TestPortsmithJudgeDurablePromptSourceOrder|TestPortsmithJudgeDurablePromptRemoveReaddReplay|TestPortsmithJudgeDurablePromptNativeOrderAndFallback)$",
+      "checks": [
+        "CGO_ENABLED=0 compile",
+        "CGO_ENABLED=0 vet",
+        "CGO_ENABLED=0 targeted tests",
+        "race on supported host"
+      ],
+      "notes": "All pinned source behavior must be translated into candidate-owned tests in addition to finite independent judges. Later stages may update prior-stage files only as declared by workflow; preserve accepted APIs and cumulative judges."
+    },
+    {
+      "id": "harness-scheduler",
+      "sources": [
+        "packages/durable/src/harness/scheduler.ts",
+        "packages/durable/src/harness/registry.ts",
+        "packages/durable/src/harness/types.ts",
+        "packages/durable/src/harness/harness.ts",
+        "packages/durable/src/harness/util.ts",
+        "packages/durable/src/harness/json.ts",
+        "packages/durable/src/tasks.ts",
+        "packages/durable/test/harness-tasks.test.ts",
+        "packages/durable/test/harness-tasks-recovery.test.ts",
+        "packages/durable/test/harness-ownership.test.ts",
+        "packages/durable/test/harness-inspect.test.ts",
+        "packages/durable/test/harness-lifecycle.test.ts",
+        "packages/durable/test/harness-registry.test.ts"
+      ],
+      "outputs": [
+        "packages/durable/harness/types.go",
+        "packages/durable/harness/harness.go",
+        "packages/durable/harness/scheduler.go",
+        "packages/durable/harness/registry.go",
+        "packages/durable/harness/util.go",
+        "packages/durable/harness/json.go",
+        "packages/durable/harness/scheduler_test.go"
+      ],
+      "judge": "judges/harness-runtime",
+      "judgePaths": [
+        "packages/durable/harness/portsmith_judge_durable_joins_test.go",
+        "packages/durable/harness/portsmith_judge_durable_scheduler_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeDurablePersistedJoinPolicies",
+        "TestPortsmithJudgeDurableTaskProgressAndFault",
+        "TestPortsmithJudgeDurableWaitCancellationAndLifetime",
+        "TestPortsmithJudgeDurableBlockedRegistryAndMigration",
+        "TestPortsmithJudgeDurableOwnershipHeldCompletion",
+        "TestPortsmithJudgeDurableBackgroundAbortBoundary"
+      ],
+      "contract": "contracts/harness.md",
+      "testPattern": "^(TestPortsmithJudgeDurablePersistedJoinPolicies|TestPortsmithJudgeDurableTaskProgressAndFault|TestPortsmithJudgeDurableWaitCancellationAndLifetime|TestPortsmithJudgeDurableBlockedRegistryAndMigration|TestPortsmithJudgeDurableOwnershipHeldCompletion|TestPortsmithJudgeDurableBackgroundAbortBoundary)$",
+      "checks": [
+        "CGO_ENABLED=0 compile",
+        "CGO_ENABLED=0 vet",
+        "CGO_ENABLED=0 targeted tests",
+        "race on supported host"
+      ],
+      "notes": "All pinned source behavior must be translated into candidate-owned tests in addition to finite independent judges. Later stages may update prior-stage files only as declared by workflow; preserve accepted APIs and cumulative judges."
+    },
+    {
+      "id": "harness-conversations",
+      "sources": [
+        "packages/durable/src/harness/agent.ts",
+        "packages/durable/src/harness/context.ts",
+        "packages/durable/src/harness/submissions.ts",
+        "packages/durable/src/harness/inbox.ts",
+        "packages/durable/src/harness/define.ts",
+        "packages/durable/test/harness-conversations.test.ts",
+        "packages/durable/test/harness-context.test.ts",
+        "packages/durable/test/harness-submissions.test.ts",
+        "packages/durable/test/harness-inbox.test.ts"
+      ],
+      "outputs": [
+        "packages/durable/harness/agent.go",
+        "packages/durable/harness/context.go",
+        "packages/durable/harness/submissions.go",
+        "packages/durable/harness/inbox.go",
+        "packages/durable/harness/define.go",
+        "packages/durable/harness/conversations_test.go"
+      ],
+      "judge": "judges/harness-runtime",
+      "judgePaths": [
+        "packages/durable/harness/portsmith_judge_durable_conversations_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeDurableSubmissionDedupAndNoModel",
+        "TestPortsmithJudgeDurableQueuePassiveWritesAndWait",
+        "TestPortsmithJudgeDurableQueuedAbortPreservesWrites",
+        "TestPortsmithJudgeDurableContextForkAndAgentCutoff"
+      ],
+      "contract": "contracts/harness.md",
+      "testPattern": "^(TestPortsmithJudgeDurableSubmissionDedupAndNoModel|TestPortsmithJudgeDurableQueuePassiveWritesAndWait|TestPortsmithJudgeDurableQueuedAbortPreservesWrites|TestPortsmithJudgeDurableContextForkAndAgentCutoff)$",
+      "checks": [
+        "CGO_ENABLED=0 compile",
+        "CGO_ENABLED=0 vet",
+        "CGO_ENABLED=0 targeted tests",
+        "race on supported host"
+      ],
+      "notes": "All pinned source behavior must be translated into candidate-owned tests in addition to finite independent judges. Later stages may update prior-stage files only as declared by workflow; preserve accepted APIs and cumulative judges."
+    },
+    {
+      "id": "harness-effects",
+      "sources": [
+        "packages/durable/src/harness/generation.ts",
+        "packages/durable/src/harness/tool.ts",
+        "packages/durable/src/harness/compaction.ts",
+        "packages/durable/src/harness/output.ts",
+        "packages/durable/src/harness/prompt.ts",
+        "packages/durable/src/truncate.ts",
+        "packages/durable/test/harness-generation.test.ts",
+        "packages/durable/test/harness-generation-recovery.test.ts",
+        "packages/durable/test/harness-tools.test.ts",
+        "packages/durable/test/harness-tools-recovery.test.ts",
+        "packages/durable/test/harness-output.test.ts",
+        "packages/durable/test/harness-compaction.test.ts",
+        "packages/durable/test/harness-structured.test.ts"
+      ],
+      "outputs": [
+        "packages/durable/harness/generation.go",
+        "packages/durable/harness/tool.go",
+        "packages/durable/harness/compaction.go",
+        "packages/durable/harness/output.go",
+        "packages/durable/harness/prompt.go",
+        "packages/durable/harness/pith_model_runner.go",
+        "packages/durable/harness/effects_test.go",
+        "packages/durable/harness/generation_recovery_test.go",
+        "packages/durable/harness/compaction_test.go"
+      ],
+      "judge": "judges/harness-runtime",
+      "judgePaths": [
+        "packages/durable/harness/portsmith_judge_durable_effects_test.go",
+        "packages/durable/harness/portsmith_judge_durable_generation_recovery_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeDurableToolReplayPoliciesAndIntent",
+        "TestPortsmithJudgeDurableToolRoundParallelAndSequential",
+        "TestPortsmithJudgeDurableBoundedOutputDetailsAndUsage",
+        "TestPortsmithJudgeDurableDeferredReopenWithoutResend",
+        "TestPortsmithJudgeDurableDeferredAbortCancelsProvider",
+        "TestPortsmithJudgeDurableCommittedGenerationPartialRecovery",
+        "TestPortsmithJudgeDurableRetryDeadlineReopen"
+      ],
+      "contract": "contracts/harness.md",
+      "testPattern": "^(TestPortsmithJudgeDurableToolReplayPoliciesAndIntent|TestPortsmithJudgeDurableToolRoundParallelAndSequential|TestPortsmithJudgeDurableBoundedOutputDetailsAndUsage|TestPortsmithJudgeDurableDeferredReopenWithoutResend|TestPortsmithJudgeDurableDeferredAbortCancelsProvider|TestPortsmithJudgeDurableCommittedGenerationPartialRecovery|TestPortsmithJudgeDurableRetryDeadlineReopen)$",
+      "checks": [
+        "CGO_ENABLED=0 compile",
+        "CGO_ENABLED=0 vet",
+        "CGO_ENABLED=0 targeted tests",
+        "race on supported host"
+      ],
+      "notes": "All pinned source behavior must be translated into candidate-owned tests in addition to finite independent judges. Later stages may update prior-stage files only as declared by workflow; preserve accepted APIs and cumulative judges."
+    },
+    {
+      "id": "harness-projection",
+      "sources": [
+        "packages/durable/src/harness/live.ts",
+        "packages/durable/src/harness/view.ts",
+        "packages/durable/src/harness/events.ts",
+        "packages/durable/src/harness/task-graph.ts",
+        "packages/durable/src/harness/usage.ts",
+        "packages/durable/test/harness-view.test.ts",
+        "packages/durable/test/harness-events.test.ts",
+        "packages/durable/test/harness-live-deltas.test.ts",
+        "packages/durable/test/harness-task-graph.test.ts",
+        "packages/durable/test/harness-prompt.test.ts"
+      ],
+      "outputs": [
+        "packages/durable/harness/live.go",
+        "packages/durable/harness/view.go",
+        "packages/durable/harness/events.go",
+        "packages/durable/harness/task_graph.go",
+        "packages/durable/harness/usage.go",
+        "packages/durable/harness/projection_test.go",
+        "packages/durable/harness/prompt_test.go"
+      ],
+      "judge": "judges/harness-runtime",
+      "judgePaths": [
+        "packages/durable/harness/portsmith_judge_durable_projection_test.go",
+        "packages/durable/harness/portsmith_judge_durable_registry_prompt_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeDurableCommittedFramesAndReadOnly",
+        "TestPortsmithJudgeDurableAgentEventsAndUsage",
+        "TestPortsmithJudgeDurableManualCompactionKeepsHistory",
+        "TestPortsmithJudgeDurableRegistryReplacementAndPromptOrder"
+      ],
+      "contract": "contracts/harness.md",
+      "testPattern": "^(TestPortsmithJudgeDurableCommittedFramesAndReadOnly|TestPortsmithJudgeDurableAgentEventsAndUsage|TestPortsmithJudgeDurableManualCompactionKeepsHistory|TestPortsmithJudgeDurableRegistryReplacementAndPromptOrder)$",
+      "checks": [
+        "CGO_ENABLED=0 compile",
+        "CGO_ENABLED=0 vet",
+        "CGO_ENABLED=0 targeted tests",
+        "race on supported host"
+      ],
+      "notes": "All pinned source behavior must be translated into candidate-owned tests in addition to finite independent judges. Later stages may update prior-stage files only as declared by workflow; preserve accepted APIs and cumulative judges."
+    },
+    {
+      "id": "harness-recovery",
+      "sources": [
+        "packages/durable/src/harness/agent.ts",
+        "packages/durable/src/harness/compaction.ts",
+        "packages/durable/src/harness/context.ts",
+        "packages/durable/src/harness/define.ts",
+        "packages/durable/src/harness/events.ts",
+        "packages/durable/src/harness/generation.ts",
+        "packages/durable/src/harness/harness.ts",
+        "packages/durable/src/harness/inbox.ts",
+        "packages/durable/src/harness/json.ts",
+        "packages/durable/src/harness/live.ts",
+        "packages/durable/src/harness/output.ts",
+        "packages/durable/src/harness/prompt.ts",
+        "packages/durable/src/harness/registry.ts",
+        "packages/durable/src/harness/scheduler.ts",
+        "packages/durable/src/harness/submissions.ts",
+        "packages/durable/src/harness/task-graph.ts",
+        "packages/durable/src/harness/tool.ts",
+        "packages/durable/src/harness/types.ts",
+        "packages/durable/src/harness/usage.ts",
+        "packages/durable/src/harness/util.ts",
+        "packages/durable/src/harness/view.ts",
+        "packages/durable/src/session/session.ts",
+        "packages/durable/src/storage/jsonl/storage.ts",
+        "packages/durable/src/storage/sqlite/storage.ts",
+        "packages/durable/test/harness-tasks-recovery.test.ts",
+        "packages/durable/test/harness-generation-recovery.test.ts",
+        "packages/durable/test/harness-tools-recovery.test.ts"
+      ],
+      "outputs": [
+        "packages/durable/harness/recovery_test.go"
+      ],
+      "judge": "judges/harness/recovery",
+      "judgePaths": [
+        "packages/durable/harness/portsmith_judge_durable_recovery_test.go"
+      ],
+      "tests": [
+        "TestPortsmithJudgeDurableRecoveryChild",
+        "TestPortsmithJudgeDurableKilledProcessToolRecovery",
+        "TestPortsmithJudgeDurableCloseReopenKeepsIntentMemos"
+      ],
+      "contract": "contracts/harness.md",
+      "testPattern": "^(TestPortsmithJudgeDurableRecoveryChild|TestPortsmithJudgeDurableKilledProcessToolRecovery|TestPortsmithJudgeDurableCloseReopenKeepsIntentMemos)$",
+      "checks": [
+        "CGO_ENABLED=0 compile",
+        "CGO_ENABLED=0 vet",
+        "CGO_ENABLED=0 targeted tests",
+        "race on supported host"
+      ],
+      "notes": "All pinned source behavior must be translated into candidate-owned tests in addition to finite independent judges. Later stages may update prior-stage files only as declared by workflow; preserve accepted APIs and cumulative judges."
+    }
+  ],
+  "sourceClosure": [
+    "packages/durable/src/harness/agent.ts",
+    "packages/durable/src/harness/compaction.ts",
+    "packages/durable/src/harness/context.ts",
+    "packages/durable/src/harness/define.ts",
+    "packages/durable/src/harness/events.ts",
+    "packages/durable/src/harness/generation.ts",
+    "packages/durable/src/harness/harness.ts",
+    "packages/durable/src/harness/inbox.ts",
+    "packages/durable/src/harness/json.ts",
+    "packages/durable/src/harness/live.ts",
+    "packages/durable/src/harness/output.ts",
+    "packages/durable/src/harness/prompt.ts",
+    "packages/durable/src/harness/registry.ts",
+    "packages/durable/src/harness/scheduler.ts",
+    "packages/durable/src/harness/submissions.ts",
+    "packages/durable/src/harness/task-graph.ts",
+    "packages/durable/src/harness/tool.ts",
+    "packages/durable/src/harness/types.ts",
+    "packages/durable/src/harness/usage.ts",
+    "packages/durable/src/harness/util.ts",
+    "packages/durable/src/harness/view.ts"
+  ],
+  "independentParityClaim": false,
+  "globalOutputs": [
+    "packages/ai/types/durable_prompt_order_test.go",
+    "packages/ai/types/types.go",
+    "packages/ai/utils/durable_prompt_order_test.go",
+    "packages/ai/utils/text.go",
+    "packages/ai/utils/transcript.go",
+    "packages/durable/harness/agent.go",
+    "packages/durable/harness/compaction.go",
+    "packages/durable/harness/compaction_test.go",
+    "packages/durable/harness/context.go",
+    "packages/durable/harness/conversations_test.go",
+    "packages/durable/harness/define.go",
+    "packages/durable/harness/effects_test.go",
+    "packages/durable/harness/events.go",
+    "packages/durable/harness/generation.go",
+    "packages/durable/harness/generation_recovery_test.go",
+    "packages/durable/harness/harness.go",
+    "packages/durable/harness/inbox.go",
+    "packages/durable/harness/json.go",
+    "packages/durable/harness/live.go",
+    "packages/durable/harness/output.go",
+    "packages/durable/harness/pith_model_runner.go",
+    "packages/durable/harness/projection_test.go",
+    "packages/durable/harness/prompt.go",
+    "packages/durable/harness/prompt_test.go",
+    "packages/durable/harness/recovery_test.go",
+    "packages/durable/harness/registry.go",
+    "packages/durable/harness/scheduler.go",
+    "packages/durable/harness/scheduler_test.go",
+    "packages/durable/harness/submissions.go",
+    "packages/durable/harness/task_graph.go",
+    "packages/durable/harness/tool.go",
+    "packages/durable/harness/types.go",
+    "packages/durable/harness/usage.go",
+    "packages/durable/harness/util.go",
+    "packages/durable/harness/view.go"
+  ],
+  "runtimeMergeRecommended": true,
+  "executionNote": "Review groups are merged into the single cohesive harness step in workflow.json; judges/harness-runtime is its canonical executable suite."
+}
