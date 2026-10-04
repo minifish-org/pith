@@ -116,7 +116,12 @@ type CreateAgentSessionFromServicesOptions struct {
 	Services AgentSessionServices
 	Model    ModelOptions
 	Policy   RunPolicy
+	// Settings overrides the prepared services settings; nil preserves them.
 	Settings Settings
+	// VirtualModels and OnProviderStreamEvent are forwarded just as with
+	// SessionOptions in the direct construction path.
+	VirtualModels         []VirtualModelDefinition
+	OnProviderStreamEvent func(data any, model *aitypes.Model) error
 }
 
 // CreateAgentSessionRuntimeResult is returned by a runtime factory.
@@ -197,19 +202,28 @@ func CreateAgentSessionServices(options CreateAgentSessionServicesOptions) (Agen
 // services.
 func CreateAgentSessionFromServices(options CreateAgentSessionFromServicesOptions) (*AgentSession, error) {
 	services := options.Services
-	resourceOptions := ResourceOptions{
-		Cwd:      services.Cwd,
-		AgentDir: services.AgentDir,
+	settings := options.Settings
+	if settings == nil {
+		settings = services.Settings
 	}
-	return CreateAgentSession(SessionOptions{
-		Cwd:       services.Cwd,
-		Model:     options.Model,
-		Manager:   services.Manager,
-		Resources: resourceOptions,
-		Tools:     services.Tools,
-		Settings:  options.Settings,
-		Policy:    options.Policy,
-	})
+	return createAgentSession(SessionOptions{
+		Cwd:                   services.Cwd,
+		Model:                 options.Model,
+		Manager:               services.Manager,
+		Tools:                 services.Tools,
+		Settings:              CloneSettings(settings),
+		Policy:                options.Policy,
+		VirtualModels:         options.VirtualModels,
+		OnProviderStreamEvent: options.OnProviderStreamEvent,
+	}, &services.Resources)
+}
+
+func cloneResourceSet(resources ResourceSet) ResourceSet {
+	resources.Skills = append([]Skill(nil), resources.Skills...)
+	resources.Templates = append([]PromptTemplate(nil), resources.Templates...)
+	resources.ContextFiles = append([]string(nil), resources.ContextFiles...)
+	resources.Diagnostics = append([]string(nil), resources.Diagnostics...)
+	return resources
 }
 
 // CreateAgentSessionRuntime invokes the factory and wraps the result.

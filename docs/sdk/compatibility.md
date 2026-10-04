@@ -1,7 +1,9 @@
 # Embedded SDK compatibility
 
-This table freezes the compatibility scope of the Go embedded SDK
-(`packages/coding-agent`) relative to Pi `f07218c4d4bbc12bef056a7058c3dd49dfe41abe`.
+This table records the compatibility scope of the Go embedded SDK
+(`packages/coding-agent`). The original increment used Pi
+`f07218c4d4bbc12bef056a7058c3dd49dfe41abe`; the accepted Pi 1.0 sync baseline is
+`a13d35a742c6ef8462812a28fbe1d8c8b7431c32`, with additive Durable delivery.
 It is deliberately conservative: a checked-in test proves the covered contract
 only. Passing the cumulative and independent tests is **not** proof of full Pi
 behavior or production readiness.
@@ -20,6 +22,8 @@ Status legend:
 | `createAgentSession` | Ported | `CreateAgentSession`, `SessionOptions` | Returns `*AgentSession` plus error; services are built internally. |
 | Session events | Adapted | `SessionEvent` + `SessionEventType` | One discriminated union replaces the TS event hierarchy; callers switch on `Type`. |
 | Streaming / partial updates | Adapted | `Subscribe` callbacks, `RunResult` | Headless callers observe events and the final result; no TUI rendering. |
+| Images and prompt options | Adapted | `Prompt`, `Steer`, `FollowUp` | Images, loaded skill/template expansion and streaming input are wired through the session. All inputs share the same option-aware methods; automatic resizing is not implemented. See [prompt-inputs.md](./prompt-inputs.md). |
+| Prepared services | Adapted | `CreateAgentSessionFromServices` | Preserves resolved resources and settings; accepts virtual routes and stream observers. |
 | Message/transcript conversion | Ported | `ConvertToLlm` | Reuses the accepted harness message conversion. |
 | Model resolution | Ported | `ResolveModel`, `ResolveSessionModel` | Explicit overrides only; capacity is never reduced. |
 | Model/provider runtime | Ported | `ModelRuntime`, `ModelRegistry` | Reuses the Pith AI catalog, auth and provider composition. |
@@ -38,7 +42,7 @@ Status legend:
 | Auto-compaction | Ported | `RunPolicy.CompactReserveTokens`, `Compact` | Caller supplies `Summarize`. |
 | Branch summarization | Ported | `PrepareBranchEntries`, `GenerateBranchSummary` | Reuses the accepted harness compaction package. |
 | Retry of transient provider errors | Ported | `RunPolicy.RetryAttempts`, `IsRetryableAssistantError` | Non-retryable auth failures fail fast. |
-| Queued messages (steer/follow-up) | Ported | `Steer`, `FollowUp` | Delivered at turn boundaries. |
+| Queued messages (steer/follow-up) | Adapted | `Steer`, `FollowUp`, `PromptOptions` | Delivered at turn boundaries; in-memory pending queues survive rebuilds. Undelivered queues are not saved across process restarts. |
 | Cancellation | Ported | context cancellation, `Abort` | Reaches provider I/O, tools and child processes. |
 
 ## Tools and resources
@@ -100,12 +104,17 @@ per-surface contracts.
 | `RpcClient` / RPC host mode | Excluded | Remote service management is out of scope. |
 | npm/Git extension package manager | Excluded | Package installation is explicitly out of scope. |
 | Browser login / OAuth UI | Excluded | Headless credential callbacks are provided instead. |
-| Clipboard, image resize/PNG, syntax highlighting | Excluded | TUI-only utilities. |
+| Clipboard and syntax highlighting | Excluded | Host UI utilities. |
+| Automatic image normalization/resize | Not implemented | Pi also uses this in the session SDK. Pith passes attachment bytes through; this is a remaining SDK gap, not merely a TUI utility. |
 | CLI orchestration (`main`, `parseArgs`, print/interactive modes) | Excluded | Stays in `cmd/pith`; the SDK is a library. |
 | Pi Durable runtime | Ported (additive) | `github.com/minifish-org/pith/packages/durable` plus `.../harness`, `.../env`, `.../tools`, `.../storage/{memory,jsonl,sqlite}` and `.../testing` | Optional headless port; enabling Durable does not replace the coding-agent session engine or change its file format. See [durable.md](./durable.md). |
 | Pi interactive CLI parity | Excluded | `cmd/pith` is a non-interactive turn loop; the interactive CLI modes are not ported. |
 
 ## Known adaptation caveats
+
+The targeted post-port audit and remaining priorities are recorded in
+[port-gaps.md](./port-gaps.md). Export/source-map coverage alone is not proof
+that optional fields are consumed by the runtime.
 
 - The Durable SDK is a native Go API, not a line-for-line or binary-compatible
   TypeScript API. `packages/durable` (records, Session, storage adapters),

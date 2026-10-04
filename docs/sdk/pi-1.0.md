@@ -96,7 +96,7 @@ intentionally outside the delivered scope.
 | npm/Git extension package manager | Excluded | package installation is out of scope |
 | RPC host mode / `RpcClient` | Excluded | remote service management is out of scope |
 | Remote service management and project-trust prompts | Excluded | not part of the headless SDK |
-| Pi Durable runtime | Excluded | not claimed; `docs/` and `sync` are not advanced manually |
+| Pi Durable runtime | Ported (subsequent additive delivery) | optional `packages/durable` runtime; see [durable.md](./durable.md) for its separate scope and recovery contract |
 | TS CLI orchestration (`parseArgs`, print/interactive modes) | Adapted | `cmd/pith` flags; the SDK is a library |
 
 ## Runnable examples

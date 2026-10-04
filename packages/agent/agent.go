@@ -268,6 +268,13 @@ func (a *Agent) PeekQueuedMessages() []agenttypes.AgentMessage {
 	return a.followUpQueue.peek()
 }
 
+// PendingMessages snapshots both complete queues, without applying their
+// per-turn delivery modes. This is intended for a host rebuilding an idle
+// agent. The returned slices are independent; message content is read-only.
+func (a *Agent) PendingMessages() (steering, followUp []agenttypes.AgentMessage) {
+	return a.steeringQueue.snapshot(), a.followUpQueue.snapshot()
+}
+
 // Signal returns the abort signal for the current run, or nil when idle.
 func (a *Agent) Signal() <-chan struct{} {
 	a.mu.Lock()
@@ -667,6 +674,12 @@ func (q *pendingMessageQueue) peek() []agenttypes.AgentMessage {
 		return append([]agenttypes.AgentMessage(nil), q.messages...)
 	}
 	return []agenttypes.AgentMessage{q.messages[0]}
+}
+
+func (q *pendingMessageQueue) snapshot() []agenttypes.AgentMessage {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+	return append([]agenttypes.AgentMessage(nil), q.messages...)
 }
 
 func (q *pendingMessageQueue) drain() []agenttypes.AgentMessage {

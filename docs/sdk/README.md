@@ -94,6 +94,28 @@ application can resolve a model, load resources and build a tool registry
 before creating a session. They are optional; `CreateAgentSession` builds the
 same pieces itself.
 
+`CreateAgentSessionFromServices` keeps the prepared resource snapshot, including
+host-supplied system instructions and templates. It uses `services.Settings`
+unless an explicit settings map is supplied. Virtual model routes and provider
+stream observers can be supplied through either construction path.
+
+## Images and prompt options
+
+Use `Prompt(ctx, text, PromptOptions{Images: images})` to send
+base64 image attachments. All three methods accept zero or one `PromptOptions` value and expand loaded
+prompt templates and `/skill:name` commands by default. Set
+`ExpandPromptTemplates` to false when command text should stay literal. There
+are no separate legacy or `WithOptions` methods.
+
+During a run, `StreamingBehavior: "steer"` or `"followUp"` queues a new input
+without starting another run. Images survive provider retry and JSONL reopen;
+pending messages survive model changes, compaction and retry rebuilds in memory.
+Pending queues are not durable until their messages are delivered.
+
+See [prompt-inputs.md](./prompt-inputs.md) for examples and limits, and
+[port-gaps.md](./port-gaps.md) for the remaining SDK gaps reviewed separately
+from intentional headless exclusions.
+
 ## Lifecycle and ownership
 
 `CreateAgentSession` owns everything it creates:

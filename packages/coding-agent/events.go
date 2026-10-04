@@ -8,8 +8,9 @@
 //
 // The upstream session emits a large discriminated union (compaction, retry,
 // queue and extension events). The embedded SDK publishes the subset that is
-// meaningful headless: agent/message/turn/tool lifecycle plus queue and
-// lifecycle markers. Every emitted SessionEvent carries the frozen fields
+// meaningful headless: agent/message/turn/tool lifecycle and retry markers.
+// Queue/settled names are vocabulary, not currently emitted session events.
+// Every emitted SessionEvent carries the frozen fields
 // Type/ToolName/ToolCallID/Text/IsError/Message so callers can switch on Type
 // without importing an event hierarchy.
 //
@@ -100,13 +101,15 @@ type ModelCycleResult struct {
 	IsScoped      bool                     `json:"isScoped"`
 }
 
-// PromptOptions carries the optional inputs of a prompt. The embedded API keeps
-// the plain text entry point synchronous; this type preserves the upstream
-// knobs that are meaningful headless (images and streaming behavior).
+// PromptOptions configures Prompt, Steer and
+// FollowUp. All three methods expand loaded skills/templates by default; set
+// ExpandPromptTemplates to false to send literal command text.
 type PromptOptions struct {
-	Images                []aitypes.ImageContent `json:"images,omitempty"`
-	StreamingBehavior     string                 `json:"streamingBehavior,omitempty"`
-	ExpandPromptTemplates *bool                  `json:"expandPromptTemplates,omitempty"`
+	Images []aitypes.ImageContent `json:"images,omitempty"`
+	// StreamingBehavior applies only to Prompt during an active
+	// run. Values are "steer" and "followUp"; empty rejects concurrent input.
+	StreamingBehavior     string `json:"streamingBehavior,omitempty"`
+	ExpandPromptTemplates *bool  `json:"expandPromptTemplates,omitempty"`
 }
 
 // ModelMutationOptions controls how a model/thinking mutation is persisted.

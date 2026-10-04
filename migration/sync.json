@@ -5718,20 +5718,24 @@
       "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/sdk_services_test.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/agent-session-services.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
-        "packages/coding-agent/sdk.go"
+        "packages/coding-agent/sdk.go",
+        "packages/coding-agent/sdk_services_test.go"
       ]
     },
     {
       "source": "packages/coding-agent/src/core/agent-session.ts",
       "goFiles": [
         "packages/coding-agent/agent_session.go",
+        "packages/coding-agent/prompt_options.go",
+        "packages/coding-agent/prompt_options_test.go",
         "packages/coding-agent/retry.go"
       ]
     },
@@ -6038,6 +6042,7 @@
       "source": "packages/coding-agent/src/core/sdk.ts",
       "goFiles": [
         "packages/coding-agent/sdk.go",
+        "packages/coding-agent/sdk_services_test.go",
         "packages/coding-agent/search_tools.go",
         "packages/coding-agent/tool_registry.go"
       ]

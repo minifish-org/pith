@@ -11,8 +11,9 @@
 // registry, settings and durable session manager, then runs the accepted agent
 // loop synchronously. Every lifecycle event is published as a SessionEvent and
 // every completed message is appended to the session tree before the next
-// request. The upstream TUI, JS extension runner, slash commands, cache warmer
+// request. The upstream TUI, JS extension runner, cache warmer
 // and interactive login flows are excluded from this headless increment.
+// Loaded skill/template commands expand by default on all input methods.
 //
 // Upstream: Copyright (c) 2025 Mario Zechner, MIT License.
 // See the repository LICENSE for the full text.
@@ -156,6 +157,12 @@ type AgentSessionConfig = SessionOptions
 
 // CreateAgentSession assembles and returns a headless AgentSession.
 func CreateAgentSession(options SessionOptions) (*AgentSession, error) {
+	return createAgentSession(options, nil)
+}
+
+// createAgentSession also accepts the resource snapshot already resolved by a
+// services factory. Re-loading it would discard explicit host overrides.
+func createAgentSession(options SessionOptions, prepared *ResourceSet) (*AgentSession, error) {
 	if options.Manager == nil {
 		manager, err := OpenSession("")
 		if err != nil {
@@ -174,12 +181,18 @@ func CreateAgentSession(options SessionOptions) (*AgentSession, error) {
 	if strings.TrimSpace(resources.Cwd) == "" {
 		resources.Cwd = cwd
 	}
-	resourceSet, err := LoadResources(resources)
-	if err != nil {
-		if options.ownsManager {
-			_ = options.Manager.Close()
+	var resourceSet ResourceSet
+	if prepared != nil {
+		resourceSet = cloneResourceSet(*prepared)
+	} else {
+		var err error
+		resourceSet, err = LoadResources(resources)
+		if err != nil {
+			if options.ownsManager {
+				_ = options.Manager.Close()
+			}
+			return nil, fmt.Errorf("load resources: %w", err)
 		}
-		return nil, fmt.Errorf("load resources: %w", err)
 	}
 
 	if options.Tools == nil {
@@ -260,6 +273,19 @@ func (s *AgentSession) rebuildAgentLocked() error {
 	built, unsubscribe, err := s.buildAgentLocked()
 	if err != nil {
 		return err
+	}
+	// A retry, compaction or model/tool mutation rebuilds the context, not the
+	// user's pending input. The old agent is idle and SDK enqueues share s.mu.
+	if s.agent != nil {
+		steering, followUp := s.agent.PendingMessages()
+		built.SetSteeringMode(s.agent.SteeringMode())
+		built.SetFollowUpMode(s.agent.FollowUpMode())
+		for _, message := range cloneAgentMessages(steering) {
+			built.Steer(message)
+		}
+		for _, message := range cloneAgentMessages(followUp) {
+			built.FollowUp(message)
+		}
 	}
 	if s.unsubscribeAgent != nil {
 		s.unsubscribeAgent()
@@ -533,9 +559,28 @@ func (s *AgentSession) Subscribe(listener func(SessionEvent)) func() {
 //     backoff. RetryAttempts counts extra requests; zero selects the default
 //     three and a negative value disables retries. Auth/invalid-request
 //     failures are never retried. A completed tool effect is never replayed.
-func (s *AgentSession) Prompt(ctx context.Context, text string) (RunResult, error) {
+//
+// Prompt accepts text and an optional PromptOptions value, including images,
+// skill/template expansion and a streaming queue selection. Expansion defaults
+// to enabled, as in Pi. Queued input returns an empty RunResult immediately;
+// observe Subscribe for delivery. Image bytes are not automatically resized.
+func (s *AgentSession) Prompt(ctx context.Context, text string, input ...PromptOptions) (RunResult, error) {
+	options, err := promptOptions(input)
+	if err != nil {
+		return RunResult{}, err
+	}
 	if ctx == nil {
 		ctx = context.Background()
+	}
+	if err := ctx.Err(); err != nil {
+		return RunResult{}, err
+	}
+	if options.StreamingBehavior != "" && options.StreamingBehavior != "steer" && options.StreamingBehavior != "followUp" {
+		return RunResult{}, errors.New("streaming behavior must be steer or followUp")
+	}
+	text, images, err := s.preparePromptInput(text, options)
+	if err != nil {
+		return RunResult{}, err
 	}
 	if err := ctx.Err(); err != nil {
 		return RunResult{}, err
@@ -546,9 +591,23 @@ func (s *AgentSession) Prompt(ctx context.Context, text string) (RunResult, erro
 		s.mu.Unlock()
 		return RunResult{}, ErrAgentSessionClosed
 	}
-	if s.running || s.compacting {
+	if s.compacting {
 		s.mu.Unlock()
 		return RunResult{}, ErrAgentSessionBusy
+	}
+	if s.running {
+		if options.StreamingBehavior == "" {
+			s.mu.Unlock()
+			return RunResult{}, ErrAgentSessionBusy
+		}
+		message := userAgentMessageWithImages(text, images)
+		if options.StreamingBehavior == "steer" {
+			s.agent.Steer(message)
+		} else {
+			s.agent.FollowUp(message)
+		}
+		s.mu.Unlock()
+		return RunResult{}, nil
 	}
 	s.running = true
 	s.abortRequested = false
@@ -575,7 +634,7 @@ func (s *AgentSession) Prompt(ctx context.Context, text string) (RunResult, erro
 	promptText := text
 	usePrompt := true
 	for attempt := 0; ; {
-		result, err := s.runOnce(runCtx, promptText, usePrompt)
+		result, err := s.runOnce(runCtx, promptText, images, usePrompt)
 		if err != nil {
 			return result, err
 		}
@@ -643,7 +702,7 @@ var ErrMaxTurnsExceeded = errors.New("maximum turns reached")
 // runOnce performs one synchronous agent run and returns the detached result.
 // The caller (Prompt) owns the running slot so retries and auto-compaction stay
 // serialized against other mutations.
-func (s *AgentSession) runOnce(ctx context.Context, text string, usePrompt bool) (RunResult, error) {
+func (s *AgentSession) runOnce(ctx context.Context, text string, images []aitypes.ImageContent, usePrompt bool) (RunResult, error) {
 	s.mu.Lock()
 	if s.closed {
 		s.mu.Unlock()
@@ -671,7 +730,7 @@ func (s *AgentSession) runOnce(ctx context.Context, text string, usePrompt bool)
 	if activeAgent == nil {
 		err = ErrAgentSessionClosed
 	} else if usePrompt {
-		err = activeAgent.PromptString(text, nil)
+		err = activeAgent.PromptString(text, images)
 	} else {
 		err = activeAgent.Continue()
 	}
@@ -734,7 +793,7 @@ func (s *AgentSession) SetModel(options ModelOptions) error {
 	if s.closed {
 		return ErrAgentSessionClosed
 	}
-	if s.running {
+	if s.running || s.compacting {
 		return ErrAgentSessionBusy
 	}
 	if options.Model == nil {
@@ -777,39 +836,13 @@ func (s *AgentSession) SetActiveTools(names []string) error {
 	if s.closed {
 		return ErrAgentSessionClosed
 	}
-	if s.running {
+	if s.running || s.compacting {
 		return ErrAgentSessionBusy
 	}
 	if err := s.registry.SetActive(names); err != nil {
 		return err
 	}
 	return s.rebuildAgentLocked()
-}
-
-// Steer queues a steering message delivered after the current assistant turn.
-func (s *AgentSession) Steer(text string) error {
-	s.mu.Lock()
-	closed := s.closed
-	activeAgent := s.agent
-	s.mu.Unlock()
-	if closed || activeAgent == nil {
-		return ErrAgentSessionClosed
-	}
-	activeAgent.Steer(userAgentMessage(text))
-	return nil
-}
-
-// FollowUp queues a follow-up message delivered when the agent would stop.
-func (s *AgentSession) FollowUp(text string) error {
-	s.mu.Lock()
-	closed := s.closed
-	activeAgent := s.agent
-	s.mu.Unlock()
-	if closed || activeAgent == nil {
-		return ErrAgentSessionClosed
-	}
-	activeAgent.FollowUp(userAgentMessage(text))
-	return nil
 }
 
 // Abort requests that the active run stop, including an in-flight retry
@@ -1071,9 +1104,16 @@ func assistantMessageOf(message *agenttypes.AgentMessage) (aitypes.AssistantMess
 	return *message.Message.Assistant, true
 }
 
-// userAgentMessage builds a standard user message for steering/follow-up.
-func userAgentMessage(text string) agenttypes.AgentMessage {
+// userAgentMessageWithImages builds detached steering/follow-up content.
+func userAgentMessageWithImages(text string, images []aitypes.ImageContent) agenttypes.AgentMessage {
 	user := aitypes.NewUserMessage(text, float64(time.Now().UnixMilli()))
+	if len(images) > 0 {
+		blocks := []aitypes.ContentBlock{aitypes.TextBlock(text)}
+		for _, image := range images {
+			blocks = append(blocks, aitypes.ImageBlock(image.Data, image.MimeType))
+		}
+		user = aitypes.NewUserMessageBlocks(blocks, user.Timestamp)
+	}
 	return agenttypes.NewAgentMessageFromMessage(aitypes.NewUserMessageVariant(user))
 }
 

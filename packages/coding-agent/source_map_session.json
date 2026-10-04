@@ -53,7 +53,7 @@
     "goPackage": "packages/coding-agent",
     "goSymbol": "PromptOptions",
     "goFile": "packages/coding-agent/events.go",
-    "reason": "Images and streaming behavior retained; extension-command dispatch and interactive source are out of scope."
+    "reason": "Consumed by Prompt, Steer and FollowUp: images, streaming queue selection and skill/template expansion are implemented. Loaded skills/templates expand by default; callers can explicitly disable expansion. Image resizing and TS extension dispatch remain outside this adaptation."
   },
   {
     "source": "packages/coding-agent/src/core/agent-session.ts",
@@ -85,7 +85,7 @@
     "goPackage": "packages/coding-agent",
     "goSymbol": "AgentSession",
     "goFile": "packages/coding-agent/agent_session.go",
-    "reason": "Go implementation over the accepted Pith Agent and agent loop; TUI, JS extensions, cache warmer and slash commands are excluded."
+    "reason": "Go implementation over the accepted Pith Agent and agent loop. Prompt ports images, skill/template commands and streaming input; pending queues survive agent rebuilds. All inputs share the same option-aware entry points. TUI, JS extensions and cache warmer are excluded. See docs/sdk/prompt-inputs.md."
   },
   {
     "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
@@ -149,7 +149,7 @@
     "goPackage": "packages/coding-agent",
     "goSymbol": "CreateAgentSessionFromServicesOptions",
     "goFile": "packages/coding-agent/sdk.go",
-    "reason": "Go options port for building a session from services."
+    "reason": "Go options for prepared services, explicit settings overrides, virtual model routes and per-request stream observers."
   },
   {
     "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
@@ -165,7 +165,7 @@
     "goPackage": "packages/coding-agent",
     "goSymbol": "CreateAgentSessionFromServices",
     "goFile": "packages/coding-agent/sdk.go",
-    "reason": "Go port that forwards services into CreateAgentSession."
+    "reason": "Go adaptation preserving a detached prepared resource/settings snapshot, plus virtual routers and provider stream observers; see sdk_services_test.go."
   },
   {
     "source": "packages/coding-agent/src/core/agent-session-runtime.ts",
@@ -197,7 +197,7 @@
     "goPackage": "packages/coding-agent",
     "goSymbol": "CreateAgentSessionFromServicesOptions",
     "goFile": "packages/coding-agent/sdk.go",
-    "reason": "Go options port for building a session from services."
+    "reason": "Go options for prepared services, explicit settings overrides, virtual model routes and per-request stream observers."
   },
   {
     "source": "packages/coding-agent/src/core/agent-session-services.ts",
@@ -221,7 +221,7 @@
     "goPackage": "packages/coding-agent",
     "goSymbol": "CreateAgentSessionFromServices",
     "goFile": "packages/coding-agent/sdk.go",
-    "reason": "Go port that forwards services into CreateAgentSession."
+    "reason": "Go adaptation preserving a detached prepared resource/settings snapshot, plus virtual routers and provider stream observers; see sdk_services_test.go."
   },
   {
     "source": "packages/coding-agent/src/core/event-bus.ts",
