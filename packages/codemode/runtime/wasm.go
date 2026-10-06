@@ -26,6 +26,10 @@ var (
 	wasmBytesOnce sync.Once
 	wasmBytesVal  []byte
 	wasmBytesErr  error
+	// Reuse immutable compiled code across sandbox lifetimes. Each Engine still
+	// owns its runtime, host imports, memory limits and fresh VM instances. The
+	// in-memory cache lives for the process and is not closed with an Engine.
+	wasmCompilationCache = wazero.NewCompilationCache()
 )
 
 // QuickJSWasmBytes returns the decoded quickjs-wasi WASM module bytes.
@@ -58,7 +62,7 @@ func NewEngine(ctx context.Context, pageLimit uint32) (*Engine, error) {
 	if pageLimit == 0 {
 		pageLimit = 65536
 	}
-	cfg := wazero.NewRuntimeConfig().WithMemoryLimitPages(pageLimit)
+	cfg := wazero.NewRuntimeConfig().WithMemoryLimitPages(pageLimit).WithCompilationCache(wasmCompilationCache)
 	r := wazero.NewRuntimeWithConfig(ctx, cfg)
 	e := &Engine{runtime: r}
 
