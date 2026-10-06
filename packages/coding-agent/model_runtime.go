@@ -1312,7 +1312,8 @@ func composeModels(providerID string, base ai.Provider, config *ModelsJsonProvid
 // layers into one provider without reading credentials.
 func ComposeModelProvider(providerID string, base ai.Provider, modelConfig *ModelConfig, extension *ProviderConfigInput) (ai.Provider, error) {
 	config := modelConfig.providerPointer(providerID)
-	if _, err := composeModels(providerID, base, config, extension); err != nil {
+	models, err := composeModels(providerID, base, config, extension)
+	if err != nil {
 		return nil, err
 	}
 
@@ -1378,7 +1379,7 @@ func ComposeModelProvider(providerID string, base ai.Provider, modelConfig *Mode
 		BaseURL: baseURL,
 		Headers: headers,
 		Auth:    providerAuth,
-		Models:  nil,
+		Models:  models,
 		API:     streams,
 	}), nil
 }

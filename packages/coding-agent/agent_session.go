@@ -344,6 +344,14 @@ func (s *AgentSession) buildAgentLocked() (*agentcore.Agent, func(), error) {
 		SessionId:      s.manager.SessionID(),
 		FinishTurn:     s.finishTurn,
 		PrepareRequest: s.prepareRequest,
+		// Tool search changes the registry during a run. Refresh the executable
+		// loadout before the next turn so the loop announces and can call the
+		// newly discovered tools without rebuilding an active agent.
+		PrepareNextTurnWithContext: func(turn agenttypes.PrepareNextTurnContext, _ <-chan struct{}) (*agenttypes.AgentLoopTurnUpdate, error) {
+			current := turn.Context
+			current.Tools = s.registry.AgentTools()
+			return &agenttypes.AgentLoopTurnUpdate{Context: &current}, nil
+		},
 		// The observer is always installed so native subscribers receive
 		// transient provider events even without an explicit callback. It
 		// reads s.onProviderStreamEvent at call time, preserving the callback
