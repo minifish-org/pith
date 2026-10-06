@@ -61,6 +61,7 @@ func (s *AgentSession) queuePromptInput(text string, options PromptOptions, stee
 		return ErrAgentSessionBusy
 	}
 	message := userAgentMessageWithImages(text, images)
+	message.QueueID = options.QueueID
 	if steer {
 		s.agent.Steer(message)
 	} else {

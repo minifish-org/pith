@@ -8,8 +8,8 @@
 // transcript, emits lifecycle events, executes tools and exposes steering and
 // follow-up queues. Go concurrency replaces the single-threaded JS event loop,
 // so mutable state, queues and run lifecycle are guarded by mutexes; external
-// callbacks (listeners and hooks) are never invoked while an internal lock is
-// held.
+// lifecycle callbacks run outside internal locks. The explicit pending-input
+// persistence callback runs under queue locks to commit before delivery.
 package agent
 
 import (
@@ -381,13 +381,9 @@ func (a *Agent) Continue() error {
 		return errors.New("No messages to continue from")
 	}
 	if lastRole == aitypes.AssistantMessageRole {
-		queuedSteering := a.steeringQueue.drain()
-		if len(queuedSteering) > 0 {
-			return a.runPromptMessages(queuedSteering, true)
-		}
-		queuedFollowUps := a.followUpQueue.drain()
-		if len(queuedFollowUps) > 0 {
-			return a.runPromptMessages(queuedFollowUps, false)
+		queued, steer := a.drainNextQueue()
+		if len(queued) > 0 {
+			return a.runPromptMessages(queued, steer)
 		}
 		return errors.New("Cannot continue from message role: assistant")
 	}
@@ -505,7 +501,10 @@ func (a *Agent) createLoopConfig(skipInitialSteeringPoll bool) agenttypes.AgentL
 		return a.steeringQueue.drain(), nil
 	}
 	config.GetFollowUpMessages = func() ([]agenttypes.AgentMessage, error) {
-		return a.followUpQueue.drain(), nil
+		// A promotion can land between the last steering poll and this final
+		// poll. Select both queues atomically, giving the late instruction priority.
+		messages, _ := a.drainNextQueue()
+		return messages, nil
 	}
 	return config
 }
@@ -685,6 +684,10 @@ func (q *pendingMessageQueue) snapshot() []agenttypes.AgentMessage {
 func (q *pendingMessageQueue) drain() []agenttypes.AgentMessage {
 	q.mu.Lock()
 	defer q.mu.Unlock()
+	return q.drainLocked()
+}
+
+func (q *pendingMessageQueue) drainLocked() []agenttypes.AgentMessage {
 	if len(q.messages) == 0 {
 		return nil
 	}

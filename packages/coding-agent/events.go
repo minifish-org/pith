@@ -106,6 +106,9 @@ type ModelCycleResult struct {
 // ExpandPromptTemplates to false to send literal command text.
 type PromptOptions struct {
 	Images []aitypes.ImageContent `json:"images,omitempty"`
+	// QueueID optionally identifies queued input for UpdatePendingMessage.
+	// Hosts must use a unique ID for each pending message.
+	QueueID string `json:"queueId,omitempty"`
 	// StreamingBehavior applies only to Prompt during an active
 	// run. Values are "steer" and "followUp"; empty rejects concurrent input.
 	StreamingBehavior     string `json:"streamingBehavior,omitempty"`

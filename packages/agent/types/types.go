@@ -174,6 +174,9 @@ type CustomMessage struct {
 type AgentMessage struct {
 	Message *aitypes.Message
 	Custom  *CustomMessage
+	// QueueID identifies host-managed pending input in native events. It is
+	// ephemeral: neither provider payloads nor persisted transcripts contain it.
+	QueueID string `json:"-"`
 }
 
 // NewAgentMessageFromMessage wraps a standard provider message.
@@ -209,6 +212,7 @@ func (m AgentMessage) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON reads a standard provider message or preserves a custom one.
 func (m *AgentMessage) UnmarshalJSON(data []byte) error {
+	m.QueueID = ""
 	var probe struct {
 		Role string `json:"role"`
 	}

@@ -609,6 +609,7 @@ func (s *AgentSession) Prompt(ctx context.Context, text string, input ...PromptO
 			return RunResult{}, ErrAgentSessionBusy
 		}
 		message := userAgentMessageWithImages(text, images)
+		message.QueueID = options.QueueID
 		if options.StreamingBehavior == "steer" {
 			s.agent.Steer(message)
 		} else {
@@ -1136,6 +1137,7 @@ func cloneAgentMessage(message agenttypes.AgentMessage) agenttypes.AgentMessage 
 	if err := json.Unmarshal(raw, &clone); err != nil {
 		return message
 	}
+	clone.QueueID = message.QueueID
 	return clone
 }
 
