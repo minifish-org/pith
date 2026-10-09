@@ -31,12 +31,15 @@ import (
 )
 
 const (
-	defaultCodexBaseURL                 = "https://chatgpt.com/backend-api"
-	jwtClaimPath                        = "https://api.openai.com/auth"
-	defaultCodexMaxRetries              = 0
-	codexBaseDelayMs                    = 1000
-	defaultCodexMaxRetryDelayMs         = 60000
-	defaultWebSocketConnectTimeoutMs    = 15000
+	defaultCodexBaseURL              = "https://chatgpt.com/backend-api"
+	jwtClaimPath                     = "https://api.openai.com/auth"
+	defaultCodexMaxRetries           = 0
+	codexBaseDelayMs                 = 1000
+	defaultCodexMaxRetryDelayMs      = 60000
+	defaultWebSocketConnectTimeoutMs = 15000
+	// A completed response can carry large encrypted reasoning or tool arguments.
+	// Use the agent proxy's 16 MiB event-line budget while keeping message reads finite.
+	codexWebSocketReadLimit             = 16 << 20
 	sessionWebSocketCacheTTLMs          = 5 * 60 * 1000
 	sessionWebSocketMaxAgeMs            = 55 * 60 * 1000
 	openAIBetaResponsesWebSockets       = "responses_websockets=2026-02-06"
@@ -828,6 +831,7 @@ func acquireCodexWebSocket(ctx context.Context, url string, headers http.Header,
 		if err != nil {
 			return nil, nil, false, func(bool) {}
 		}
+		conn.SetReadLimit(codexWebSocketReadLimit)
 		return conn, nil, false, func(bool) {}
 	}
 
@@ -872,6 +876,7 @@ func acquireCodexWebSocket(ctx context.Context, url string, headers http.Header,
 	if err != nil {
 		return nil, nil, false, func(bool) {}
 	}
+	conn.SetReadLimit(codexWebSocketReadLimit)
 	entry := &cachedCodexWebSocket{conn: conn, busy: true, createdAt: time.Now()}
 
 	codexWebSocketMu.Lock()
