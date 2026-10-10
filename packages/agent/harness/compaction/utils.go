@@ -21,6 +21,7 @@ import (
 	"strconv"
 	"strings"
 	"unicode/utf16"
+	"unicode/utf8"
 
 	harnesstypes "github.com/minifish-org/pith/packages/agent/harness/types"
 	agenttypes "github.com/minifish-org/pith/packages/agent/types"
@@ -135,9 +136,12 @@ func FormatFileOperations(readFiles []string, modifiedFiles []string) string {
 	return "\n\n" + strings.Join(sections, "\n\n")
 }
 
-// ToolResultMaxChars is the per-tool-result cap used when serializing a
-// conversation for summarization.
-const ToolResultMaxChars = 2000
+// ToolResultMaxBytes bounds each model-facing summary excerpt in UTF-8 bytes.
+const ToolResultMaxBytes = 32 << 10
+
+// ToolResultMaxChars is retained for SDK source compatibility. Its unit has
+// always been bytes in the Go port; use ToolResultMaxBytes in new code.
+const ToolResultMaxChars = ToolResultMaxBytes
 
 // SerializeConversation serializes LLM messages to plain text for
 // summarization prompts.
@@ -203,12 +207,112 @@ func hasTextBlock(blocks []aitypes.ContentBlock) bool {
 	return false
 }
 
-func truncateForSummary(text string, maxChars int) string {
-	if len(text) <= maxChars {
+func truncateForSummary(text string, maxBytes int) string {
+	if len(text) <= maxBytes {
 		return text
 	}
-	truncatedChars := len(text) - maxChars
-	return text[:maxChars] + "\n\n[... " + strconv.Itoa(truncatedChars) + " more characters truncated]"
+	if maxBytes <= 0 {
+		return ""
+	}
+	marker := "\n\n[... " + strconv.Itoa(len(text)) + " bytes in original; middle omitted]\n\n"
+	if len(marker) >= maxBytes {
+		return utf8Prefix(text, maxBytes)
+	}
+	available := maxBytes - len(marker)
+	head := utf8Prefix(text, available/2)
+	tail := utf8Suffix(text, available-len(head))
+	const diagnosticsStart = "[Selected diagnostics]\n"
+	const diagnosticsEnd = "\n[End of excerpt]\n"
+	diagnostics := summaryDiagnostics(text[len(head):len(text)-len(tail)], available/4-len(diagnosticsStart)-len(diagnosticsEnd))
+	if diagnostics != "" {
+		diagnostics = diagnosticsStart + diagnostics + diagnosticsEnd
+		available -= len(diagnostics)
+		head = utf8Prefix(text, available/2)
+		tail = utf8Suffix(text, available-len(head))
+	}
+	return head + marker + diagnostics + tail
+}
+
+func summaryDiagnostics(text string, maxBytes int) string {
+	var result strings.Builder
+	for text != "" && result.Len() < maxBytes {
+		line, rest, _ := strings.Cut(text, "\n")
+		text = rest
+		lower := strings.ToLower(line)
+		if strings.Contains(lower, "error") || strings.Contains(lower, "failed") || strings.Contains(lower, "fatal") || strings.Contains(lower, "panic") || strings.Contains(lower, "exception") || strings.Contains(lower, "错误") || strings.Contains(lower, "失败") {
+			if result.Len() > 0 {
+				result.WriteByte('\n')
+			}
+			result.WriteString(utf8Prefix(line, maxBytes-result.Len()))
+		}
+	}
+	return result.String()
+}
+
+func utf8Prefix(text string, size int) string {
+	if size >= len(text) {
+		return text
+	}
+	if size <= 0 {
+		return ""
+	}
+	for size > 0 && !utf8.RuneStart(text[size]) {
+		size--
+	}
+	return text[:size]
+}
+
+func utf8Suffix(text string, size int) string {
+	if size >= len(text) {
+		return text
+	}
+	if size <= 0 {
+		return ""
+	}
+	start := len(text) - size
+	for start < len(text) && !utf8.RuneStart(text[start]) {
+		start++
+	}
+	return text[start:]
+}
+
+// BuildSummaryPrompt applies an overall input budget after per-result excerpts.
+// The estimate is four UTF-8 bytes/token, with a 256-token framing margin;
+// provider tokenization can differ. Instructions and previous summaries remain
+// intact. A shortened conversation is marked; the stored transcript is untouched.
+func BuildSummaryPrompt(conversationText, suffix string, contextWindow float64, outputTokens int) (string, error) {
+	if contextWindow <= 0 {
+		contextWindow = 128000
+	}
+	const framing = "<conversation>\n\n</conversation>\n\n"
+	if outputTokens < 0 {
+		outputTokens = 0
+	}
+	available := int(contextWindow) - outputTokens - (len(SummarizationSystemPrompt)+len(framing)+len(suffix)+3)/4 - 256
+	if available <= 0 {
+		return "", errors.New("Summary instructions and output budget exceed the model context window")
+	}
+	// Avoid integer overflow for invalid/extreme custom catalog metadata.
+	maxBytes := available
+	if available <= int(^uint(0)>>1)/4 {
+		maxBytes *= 4
+	}
+	return "<conversation>\n" + truncateForSummary(conversationText, maxBytes) + "\n</conversation>\n\n" + suffix, nil
+}
+
+// SummaryOutputTokenLimit leaves input room on small-context models instead
+// of allowing the default reserve to consume their entire context window.
+func SummaryOutputTokenLimit(model aitypes.Model, requested int) int {
+	if model.MaxTokens > 0 && float64(requested) > model.MaxTokens {
+		requested = int(model.MaxTokens)
+	}
+	if model.ContextWindow > 0 && float64(requested) > model.ContextWindow/2 {
+		requested = int(model.ContextWindow / 2)
+	}
+	if requested < 1 {
+		return 1
+	}
+	return requested
 }
 
 // safeJSONStringify mirrors JSON.stringify with the upstream failure fallback.

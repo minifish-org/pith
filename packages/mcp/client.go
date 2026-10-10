@@ -13,6 +13,10 @@ import (
 // DefaultRequestTimeout is used when ClientOptions.RequestTimeout is zero.
 const DefaultRequestTimeout = 30 * time.Second
 
+// DefaultToolCallTimeout bounds inactivity during tools/call. Progress renews
+// this window; an explicit client/request timeout or parent cancellation wins.
+const DefaultToolCallTimeout = 10 * time.Minute
+
 const maxListPages = 1000
 
 // ClientStates.
@@ -33,7 +37,8 @@ type ClientOptions struct {
 	Capabilities *ClientCapabilities
 	// ProtocolVersion pins the initialize version. Defaults to the latest.
 	ProtocolVersion string
-	// RequestTimeout bounds each request. Defaults to DefaultRequestTimeout.
+	// RequestTimeout overrides all request windows. When unset, tools/call uses
+	// DefaultToolCallTimeout; initialization/discovery use DefaultRequestTimeout.
 	RequestTimeout time.Duration
 	// Roots are advertised to the server and served from `roots/list`.
 	Roots []Root
@@ -480,11 +485,18 @@ func (c *Client) CallTool(ctx context.Context, name string, args map[string]any)
 
 // CallToolWithOptions invokes a tool with per-request options.
 func (c *Client) CallToolWithOptions(ctx context.Context, name string, args map[string]any, options *RequestOptions) (CallToolResult, error) {
+	resolved := RequestOptions{}
+	if options != nil {
+		resolved = *options
+	}
+	if resolved.OnProgress == nil {
+		resolved.OnProgress = func(ProgressNotification) {}
+	}
 	params := map[string]any{"name": name}
 	if args != nil {
 		params["arguments"] = args
 	}
-	raw, err := c.requestInternal(ctx, "tools/call", params, options, false)
+	raw, err := c.requestInternal(ctx, "tools/call", params, &resolved, false)
 	if err != nil {
 		return CallToolResult{}, err
 	}
@@ -553,6 +565,9 @@ func (c *Client) requestInternal(ctx context.Context, method string, params map[
 	}
 
 	timeout := DefaultRequestTimeout
+	if method == "tools/call" {
+		timeout = DefaultToolCallTimeout
+	}
 	if c.options.RequestTimeout > 0 {
 		timeout = c.options.RequestTimeout
 	}

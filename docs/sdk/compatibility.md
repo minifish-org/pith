@@ -91,7 +91,7 @@ per-surface contracts.
 | Layered settings | Ported | `LoadSettings`, `SaveSettings`, `SettingsManager` | Unknown JSON keys survive round trips. |
 | Credential storage | Ported | `AuthStorage`, `FileAuthStorageBackend` | Headless file-backed credentials. |
 | Provider/auth helpers | Ported | `ResolveConfigValue`, `AuthStatus` | Env and command config values. |
-| HTTP dispatcher/proxy | Ported | `ConfigureHTTPDispatcher`, `ApplyHTTPProxySettings` | Applies to provider requests. |
+| HTTP dispatcher/proxy | Adapted | `ConfigureHTTPDispatcher`, `ApplyHTTPProxySettings` | Idle-timeout validation only; the host applies transport idle monitoring. Proxy settings fill unset process proxy variables. |
 
 ## Excluded from this increment
 

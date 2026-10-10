@@ -556,12 +556,12 @@ func executeEditWithOperations(cwd string, ops EditOperations, params harnesstoo
 		if err := ctx.Err(); err != nil {
 			return ToolResult{}, err
 		}
-		diff, firstChangedLine := harnesstools.GenerateDiffString(applied.BaseContent, applied.NewContent)
+		diff, firstChangedLine := harnesstools.GenerateDiffStringBounded(applied.BaseContent, applied.NewContent, DefaultEditDiffSteps)
 		return toolResultFromAgent(agenttypes.AgentToolResult[*harnesstools.EditToolDetails]{
 			Content: []aitypes.ContentBlock{aitypes.TextBlock(fmt.Sprintf("Successfully replaced %d block(s) in %s.", len(edits), path))},
 			Details: &harnesstools.EditToolDetails{
 				Diff:             diff,
-				Patch:            harnesstools.GenerateUnifiedPatch(path, applied.BaseContent, applied.NewContent),
+				Patch:            harnesstools.GenerateUnifiedPatchBounded(path, applied.BaseContent, applied.NewContent, DefaultEditDiffSteps),
 				FirstChangedLine: firstChangedLine,
 			},
 		})
@@ -608,9 +608,18 @@ func ApplyEditsToNormalizedContent(normalizedContent string, edits []Edit, path 
 	return harnesstools.ApplyEditsToNormalizedContent(normalizedContent, edits, path)
 }
 
+// DefaultEditDiffSteps bounds diff exploration, not file size or edit execution.
+const DefaultEditDiffSteps = 100_000
+
 // GenerateUnifiedPatch builds a unified patch for the content change.
 func GenerateUnifiedPatch(path string, oldContent string, newContent string, contextLines ...int) string {
 	return harnesstools.GenerateUnifiedPatch(path, oldContent, newContent, contextLines...)
+}
+
+// GenerateUnifiedPatchBounded keeps large approval previews responsive using
+// an accurate coarse patch when the Myers exploration budget is exhausted.
+func GenerateUnifiedPatchBounded(path, oldContent, newContent string, maxSteps int) string {
+	return harnesstools.GenerateUnifiedPatchBounded(path, oldContent, newContent, maxSteps)
 }
 
 // GenerateDiffString builds the display diff and first changed line.

@@ -41,7 +41,8 @@ func newSourceError(format string, args ...any) error {
 
 // CodemodeSourceOptions holds parsed `// @options` fields.
 type CodemodeSourceOptions struct {
-	// MaxOutputTokens is the token budget for the script's output.
+	// MaxOutputTokens budgets emitted text with a four-UTF-8-bytes-per-token
+	// estimate. Images and machine-readable return values are not cut.
 	MaxOutputTokens *int64
 	// TimeoutMs is the hard deadline for the whole script in milliseconds.
 	TimeoutMs *int64
@@ -94,7 +95,7 @@ func parseSourceOptions(directive string) (CodemodeSourceOptions, error) {
 	}
 	if raw, ok := fields["timeout_ms"]; ok {
 		v, ok := raw.(float64)
-		if !ok || !isSafeIntegerValue(v) || v == 0 || v > maxTimeoutMs {
+		if !ok || !isSafeIntegerValue(v) || v <= 0 || v > maxTimeoutMs {
 			return options, newSourceError("@options field `timeout_ms` must be a positive integer up to %d", maxTimeoutMs)
 		}
 		n := int64(v)

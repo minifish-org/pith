@@ -206,7 +206,7 @@ func TestCompactionFileOperations(t *testing.T) {
 }
 
 func TestCompactionSerializeConversation(t *testing.T) {
-	longContent := strings.Repeat("x", 5000)
+	longContent := strings.Repeat("x", ToolResultMaxBytes+3000)
 	messages := []aitypes.Message{
 		aitypes.NewToolResultMessageVariant(aitypes.NewToolResultMessage(
 			"tc1", "read", []aitypes.ContentBlock{aitypes.TextBlock(longContent)}, false, 1,
@@ -216,7 +216,7 @@ func TestCompactionSerializeConversation(t *testing.T) {
 	if !strings.Contains(result, "[Tool result]:") {
 		t.Fatalf("serializeConversation missing tool result: %q", result)
 	}
-	if !strings.Contains(result, "[... 3000 more characters truncated]") {
+	if !strings.Contains(result, "middle omitted]") {
 		t.Fatalf("serializeConversation missing truncation marker: %q", result)
 	}
 }

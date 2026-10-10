@@ -16,7 +16,6 @@ import (
 	"net/url"
 	"regexp"
 	"strings"
-	"time"
 
 	"github.com/minifish-org/pith/packages/ai/types"
 	"github.com/minifish-org/pith/packages/ai/utils"
@@ -313,20 +312,13 @@ func (e *mistralHTTPError) ProviderErrorFields() map[string]any {
 	return map[string]any{"statusCode": e.statusCode, "body": e.body}
 }
 
-// mistralRequestContext couples the explicit abort signal with the request
-// timeout used for both the request and the streaming body read. The caller owns
-// the returned cancel func.
+// mistralRequestContext keeps caller cancellation and explicit total deadlines,
+// while the default stream is bounded only by connection/body inactivity.
 func mistralRequestContext(options *MistralOptions) (context.Context, context.CancelFunc) {
-	timeoutMs := 60000
-	if options != nil && options.TimeoutMs != nil {
-		timeoutMs = *options.TimeoutMs
+	if options == nil {
+		return providerStreamContext(nil, nil, nil)
 	}
-	ctxSignal, cancelSignal := contextForSignal(contextBackground(), mistralSignal(options))
-	requestContext, cancelTimeout := context.WithTimeout(ctxSignal, time.Duration(timeoutMs)*time.Millisecond)
-	return requestContext, func() {
-		cancelTimeout()
-		cancelSignal()
-	}
+	return providerStreamContext(options.Signal, options.TimeoutMs, options.StreamIdleTimeoutMs)
 }
 
 func requestMistralStream(requestContext context.Context, model *types.Model, payload map[string]any, apiKey string, options *MistralOptions) (*http.Response, error) {
@@ -349,6 +341,7 @@ func requestMistralStream(requestContext context.Context, model *types.Model, pa
 	if err != nil {
 		return nil, err
 	}
+	response.Body = watchProviderStreamBody(requestContext, response.Body)
 
 	if options != nil && options.OnResponse != nil {
 		options.OnResponse(types.ProviderResponse{Status: response.StatusCode, Headers: utils.HeadersToRecord(response.Header)}, model)

@@ -47,11 +47,14 @@ type SandboxOptions struct {
 	// Globals are functions exposed as top-level identifiers instead of on
 	// tools. They are not recorded in Result.Calls.
 	Globals []Tool
-	// Timeout is the default per-execution deadline. Zero uses the 300s default;
-	// a negative value disables the deadline.
+	// Timeout is the fallback per-execution deadline. Zero or a negative value
+	// leaves execution bounded only by the caller's context. ExecuteOptions.Timeout
+	// and source timeout_ms take precedence, in that order.
 	Timeout time.Duration
-	// MemoryLimitBytes caps QuickJS heap allocations. Zero leaves it unbounded
-	// beyond the WASM address space.
+	// MemoryLimitBytes caps QuickJS heap allocations. Zero sets no separate heap
+	// cap, but WASM linear memory is still capped at 512 MiB per VM. A nonzero heap
+	// limit also sizes the linear-memory cap as clamp(4*floor(limit/64KiB)+256,
+	// 256, 65536) pages of 64 KiB. This is a cap, not an upfront allocation.
 	MemoryLimitBytes uint64
 	// MaxStackBytes caps the QuickJS native stack. Zero uses 512 KiB.
 	MaxStackBytes uint64
@@ -62,8 +65,9 @@ type ExecuteOptions struct {
 	// Store is the snapshot scripts read with load(). It is JSON-copied; the
 	// caller's map is never mutated.
 	Store map[string]json.RawMessage
-	// Timeout overrides the sandbox default. Zero uses the sandbox default; a
-	// negative value disables the deadline.
+	// Timeout overrides source timeout_ms and the sandbox default. Zero uses the
+	// source deadline when present, otherwise the sandbox default. A negative
+	// value disables the sandbox deadline, but never the caller's context.
 	Timeout time.Duration
 }
 
@@ -116,10 +120,13 @@ type ExecutionError struct {
 
 // Result is the outcome of Sandbox.Execute. Undefined script values leave Value nil.
 type Result struct {
-	OK          bool            `json:"ok"`
-	Value       json.RawMessage `json:"value,omitempty"`
-	Output      []OutputItem    `json:"output"`
-	Calls       []Call          `json:"calls"`
-	StoreWrites *StoreWrites    `json:"storeWrites,omitempty"`
-	Error       *ExecutionError `json:"error,omitempty"`
+	OK     bool            `json:"ok"`
+	Value  json.RawMessage `json:"value,omitempty"`
+	Output []OutputItem    `json:"output"`
+	// OutputTruncated reports text omitted by a source max_output_tokens budget.
+	// Value, images, calls, errors and store writes remain intact.
+	OutputTruncated bool            `json:"outputTruncated,omitempty"`
+	Calls           []Call          `json:"calls"`
+	StoreWrites     *StoreWrites    `json:"storeWrites,omitempty"`
+	Error           *ExecutionError `json:"error,omitempty"`
 }

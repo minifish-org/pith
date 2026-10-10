@@ -22,7 +22,6 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
-	"time"
 
 	"github.com/minifish-org/pith/packages/ai/types"
 	"github.com/minifish-org/pith/packages/ai/utils"
@@ -517,20 +516,10 @@ func resolvePiCacheRetention(cacheRetention *types.CacheRetention, env types.Pro
 }
 
 func piMessagesRequestContext(options *PiMessagesOptions) (context.Context, context.CancelFunc) {
-	timeoutMs := 60000
-	if options != nil && options.TimeoutMs != nil {
-		timeoutMs = *options.TimeoutMs
+	if options == nil {
+		return providerStreamContext(nil, nil, nil)
 	}
-	var signal <-chan struct{}
-	if options != nil {
-		signal = options.Signal
-	}
-	ctxSignal, cancelSignal := contextForSignal(contextBackground(), signal)
-	requestContext, cancelTimeout := context.WithTimeout(ctxSignal, time.Duration(timeoutMs)*time.Millisecond)
-	return requestContext, func() {
-		cancelTimeout()
-		cancelSignal()
-	}
+	return providerStreamContext(options.Signal, options.TimeoutMs, options.StreamIdleTimeoutMs)
 }
 
 func buildPiMessagesOptions(options *PiMessagesOptions) map[string]any {
@@ -643,6 +632,7 @@ func PiMessagesStream(model *types.Model, context *types.TranscriptContext, opti
 			eventStream.Push(createPiMessagesErrorEvent(model, err, options != nil && options.Signal != nil && aborted(options.Signal)))
 			return
 		}
+		response.Body = watchProviderStreamBody(requestContext, response.Body)
 		defer response.Body.Close()
 
 		if options != nil && options.OnResponse != nil {

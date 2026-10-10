@@ -26,6 +26,7 @@ import (
 	"time"
 
 	"github.com/coder/websocket"
+	"github.com/minifish-org/pith/internal/limits"
 	"github.com/minifish-org/pith/packages/ai/types"
 	"github.com/minifish-org/pith/packages/ai/utils"
 )
@@ -38,8 +39,8 @@ const (
 	defaultCodexMaxRetryDelayMs      = 60000
 	defaultWebSocketConnectTimeoutMs = 15000
 	// A completed response can carry large encrypted reasoning or tool arguments.
-	// Use the agent proxy's 16 MiB event-line budget while keeping message reads finite.
-	codexWebSocketReadLimit             = 16 << 20
+	// Use the shared transport budget while keeping message reads finite.
+	codexWebSocketReadLimit             = limits.MessageBytes
 	sessionWebSocketCacheTTLMs          = 5 * 60 * 1000
 	sessionWebSocketMaxAgeMs            = 55 * 60 * 1000
 	openAIBetaResponsesWebSockets       = "responses_websockets=2026-02-06"
@@ -825,13 +826,17 @@ func scheduleCodexWebSocketExpiry(sessionID, accountID string, entry *cachedCode
 	})
 }
 
-func acquireCodexWebSocket(ctx context.Context, url string, headers http.Header, sessionID *string, accountID string, connectTimeoutMs *int) (*websocket.Conn, *cachedCodexWebSocket, bool, func(keep bool)) {
+func acquireCodexWebSocket(ctx context.Context, url string, headers http.Header, sessionID *string, accountID string, connectTimeoutMs *int, readLimits ...int64) (*websocket.Conn, *cachedCodexWebSocket, bool, func(keep bool)) {
+	readLimit := int64(codexWebSocketReadLimit)
+	if len(readLimits) > 0 && readLimits[0] > 0 {
+		readLimit = readLimits[0]
+	}
 	if sessionID == nil {
 		conn, _, err := websocket.Dial(ctx, url, &websocket.DialOptions{HTTPHeader: headers})
 		if err != nil {
 			return nil, nil, false, func(bool) {}
 		}
-		conn.SetReadLimit(codexWebSocketReadLimit)
+		conn.SetReadLimit(readLimit)
 		return conn, nil, false, func(bool) {}
 	}
 
@@ -850,6 +855,7 @@ func acquireCodexWebSocket(ctx context.Context, url string, headers http.Header,
 		} else if !cached.busy && codexWebSocketReusable(cached.conn) {
 			cached.busy = true
 			codexWebSocketMu.Unlock()
+			cached.conn.SetReadLimit(readLimit)
 			release := func(keep bool) {
 				codexWebSocketMu.Lock()
 				defer codexWebSocketMu.Unlock()
@@ -876,7 +882,7 @@ func acquireCodexWebSocket(ctx context.Context, url string, headers http.Header,
 	if err != nil {
 		return nil, nil, false, func(bool) {}
 	}
-	conn.SetReadLimit(codexWebSocketReadLimit)
+	conn.SetReadLimit(readLimit)
 	entry := &cachedCodexWebSocket{conn: conn, busy: true, createdAt: time.Now()}
 
 	codexWebSocketMu.Lock()
@@ -930,7 +936,11 @@ func processCodexWebSocket(url string, body map[string]any, model *types.Model, 
 	ctx, cancel := contextForSignal(contextBackground(), codexOptionSignal(options))
 	defer cancel()
 
-	conn, entry, reused, release := acquireCodexWebSocket(ctx, url, headers, codexSessionID, accountID, codexOptionWebSocketTimeout(options))
+	readLimit := int64(codexWebSocketReadLimit)
+	if options != nil && options.WebsocketMaxMessageBytes != nil && *options.WebsocketMaxMessageBytes > 0 {
+		readLimit = *options.WebsocketMaxMessageBytes
+	}
+	conn, entry, reused, release := acquireCodexWebSocket(ctx, url, headers, codexSessionID, accountID, codexOptionWebSocketTimeout(options), readLimit)
 	if conn == nil {
 		return fmt.Errorf("WebSocket transport is not available")
 	}

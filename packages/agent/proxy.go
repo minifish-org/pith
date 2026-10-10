@@ -22,6 +22,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/minifish-org/pith/internal/limits"
+
 	aitypes "github.com/minifish-org/pith/packages/ai/types"
 	aiutils "github.com/minifish-org/pith/packages/ai/utils"
 )
@@ -63,6 +65,9 @@ type ProxyStreamOptions struct {
 	AuthToken string
 	// ProxyUrl is the proxy server URL (for example, "https://genai.example.com").
 	ProxyUrl string
+	// MaxMessageBytes bounds one incoming event line. Zero uses 128 MiB.
+	// This local option is never forwarded to the proxy server.
+	MaxMessageBytes int
 }
 
 var errProxyAborted = errors.New("Request aborted by user")
@@ -137,7 +142,11 @@ func runProxyStream(
 	}
 
 	scanner := bufio.NewScanner(response.Body)
-	scanner.Buffer(make([]byte, 0, 64*1024), 16*1024*1024)
+	maxMessageBytes := options.MaxMessageBytes
+	if maxMessageBytes <= 0 {
+		maxMessageBytes = limits.MessageBytes
+	}
+	scanner.Buffer(make([]byte, 0, 64*1024), maxMessageBytes)
 	for scanner.Scan() {
 		if signalAborted(options.Signal) {
 			state.fail(stream, aitypes.StopReasonAborted, errProxyAborted.Error())
@@ -150,7 +159,7 @@ func runProxyStream(
 		if signalAborted(options.Signal) {
 			reason = aitypes.StopReasonAborted
 		}
-		state.fail(stream, reason, err.Error())
+		state.fail(stream, reason, fmt.Sprintf("Agent proxy event read failed (limit %d bytes): %v", maxMessageBytes, err))
 		return
 	}
 	if signalAborted(options.Signal) {

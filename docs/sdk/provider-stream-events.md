@@ -188,6 +188,22 @@ normal assistant content. Only the normalized assistant message is persisted.
 Because of this, `SessionEvent.Data` must not be used to reconstruct history;
 use the session manager and `RunResult` for the durable transcript.
 
+## Receive limits and stream inactivity
+
+Codex WebSocket reception defaults to 128 MiB per message. Set
+`aitypes.StreamOptions.WebsocketMaxMessageBytes` to override that receive limit;
+nil or a nonpositive value selects the default. Both new connections and cached
+connections apply the current request's limit. This does not change the
+provider's own request, image or context limits.
+
+Mistral Conversations and Pi Messages no longer apply a default whole-request
+deadline. They wait up to 30 seconds for response headers, then allow five
+minutes of body inactivity; incoming bytes renew that window. An explicit
+`ProviderRequestOptions.TimeoutMs` still bounds the whole request, and the
+caller's abort signal remains effective. `StreamIdleTimeoutMs` overrides the
+body inactivity window; a nonpositive value disables that window. These are
+adapter-specific defaults, not a global HTTP-client policy.
+
 ## Native adaptation versus the excluded TS extension/TUI runtime
 
 | Pi feature | Pith native adaptation |

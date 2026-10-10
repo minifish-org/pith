@@ -294,6 +294,7 @@ func GenerateBranchSummary(
 	return GenerateBranchSummaryWithRequest(
 		preparation,
 		PreparedBranchSummaryOptions{
+			Model:               &model,
 			CustomInstructions:  options.CustomInstructions,
 			ReplaceInstructions: options.ReplaceInstructions,
 		},
@@ -306,6 +307,9 @@ func GenerateBranchSummary(
 
 // PreparedBranchSummaryOptions are the prepared branch summary options.
 type PreparedBranchSummaryOptions struct {
+	// Model supplies the actual context/output budgets. Nil keeps the legacy
+	// 128000-context fallback for callers owning the request boundary.
+	Model               *aitypes.Model
 	CustomInstructions  *string
 	ReplaceInstructions *bool
 }
@@ -337,7 +341,16 @@ func GenerateBranchSummaryWithRequest(
 	} else if options.CustomInstructions != nil && *options.CustomInstructions != "" {
 		instructions = branchSummaryPrompt + "\n\nAdditional focus: " + *options.CustomInstructions
 	}
-	promptText := "<conversation>\n" + conversationText + "\n</conversation>\n\n" + instructions
+	contextWindow := float64(128000)
+	maxTokens := 2048
+	if options.Model != nil {
+		contextWindow = options.Model.ContextWindow
+		maxTokens = SummaryOutputTokenLimit(*options.Model, maxTokens)
+	}
+	promptText, err := BuildSummaryPrompt(conversationText, instructions, contextWindow, maxTokens)
+	if err != nil {
+		return harnesstypes.Result[BranchSummaryResult, *harnesstypes.BranchSummaryError]{}, err
+	}
 
 	summarizationMessages := []aitypes.Message{
 		aitypes.NewUserMessageVariant(aitypes.NewUserMessageBlocks(
@@ -345,7 +358,6 @@ func GenerateBranchSummaryWithRequest(
 			currentTimeMillis(),
 		)),
 	}
-	maxTokens := 2048
 	systemPrompt := SummarizationSystemPrompt
 	response, err := request(
 		aitypes.Context{SystemPrompt: &systemPrompt, Messages: summarizationMessages},

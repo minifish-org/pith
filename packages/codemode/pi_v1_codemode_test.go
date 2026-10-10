@@ -490,23 +490,32 @@ func TestPiV1CodemodeStore(t *testing.T) {
 }
 
 func TestPiV1CodemodeStoreLimits(t *testing.T) {
-	s := newTestSandbox(t, codemode.SandboxOptions{Timeout: 5 * time.Second})
+	s := newTestSandbox(t, codemode.SandboxOptions{Timeout: 15 * time.Second})
 	r := s.Execute(context.Background(), `
 		const attempt = (fn) => { try { fn(); return "ok"; } catch (error) { return error.name; } };
 		return [
 			attempt(() => store(1, "x")),
 			attempt(() => load({})),
 			attempt(() => store("fn", () => 1)),
-			attempt(() => store("big", "x".repeat(300 * 1024))),
-			attempt(() => { for (let i = 0; i < 8; i++) store("k" + i, "x".repeat(200 * 1024)); }),
+			attempt(() => store("big", "x".repeat(5 * 1024 * 1024))),
+			attempt(() => { for (let i = 0; i < 8; i++) store("k" + i, "x".repeat(2 * 1024 * 1024)); }),
 		];
 	`, codemode.ExecuteOptions{})
 	if got := decodeValue(t, r); !reflect.DeepEqual(got, []any{"TypeError", "TypeError", "TypeError", "RangeError", "RangeError"}) {
 		t.Fatalf("store limit errors wrong: %#v", got)
 	}
-	r = s.Execute(context.Background(), `store("img", "x".repeat(300 * 1024));`, codemode.ExecuteOptions{})
+	r = s.Execute(context.Background(), `store("img", "x".repeat(5 * 1024 * 1024));`, codemode.ExecuteOptions{})
 	if r.OK || r.Error == nil || !strings.Contains(r.Error.Message, "Show images with image()") {
 		t.Fatalf("oversized store message wrong: %+v", r.Error)
+	}
+	r = s.Execute(context.Background(), `
+		store("exact", "中".repeat(4194304 - 2));
+		let over = "accepted";
+		try { store("over", "x".repeat(4194304 - 1)); } catch (e) { over = e.name; }
+		return [load("exact").length, over];
+	`, codemode.ExecuteOptions{})
+	if got := decodeValue(t, r); !reflect.DeepEqual(got, []any{float64(4194304 - 2), "RangeError"}) {
+		t.Fatalf("new store boundary/UTF-16 unit contract: %#v", got)
 	}
 }
 

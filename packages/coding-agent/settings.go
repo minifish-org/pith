@@ -43,8 +43,9 @@ const ConfigDirName = ".pi"
 // AgentDirEnvVar overrides the default agent directory.
 const AgentDirEnvVar = "PI_CODING_AGENT_DIR"
 
-// DefaultHTTPIdleTimeoutMs is the default HTTP header/body idle timeout.
-// Upstream also exposes the disabled value as a labeled choice.
+// DefaultHTTPIdleTimeoutMs is the suggested HTTP header/body idle-timeout setting.
+// It does not configure net/http automatically. The host must apply idle
+// monitoring to its transport; http.Client.Timeout is a whole-request deadline.
 const DefaultHTTPIdleTimeoutMs = 300_000
 
 // Compaction/retry defaults are surfaced so callers do not have to rediscover
@@ -1773,10 +1774,11 @@ func ApplyHTTPProxySettings(httpProxy string) {
 	}
 }
 
-// ConfigureHTTPDispatcher validates and records the process HTTP idle timeout.
+// ConfigureHTTPDispatcher validates and returns an HTTP idle-timeout setting.
 // The Go SDK uses net/http, so this is a configuration boundary rather than an
 // undici global dispatcher install. Callers that own an http.Client apply the
-// returned timeout to their transport.
+// returned setting to their transport. This function changes no process state
+// and installs neither a transport nor a whole-request deadline.
 func ConfigureHTTPDispatcher(timeoutMs int) (int, error) {
 	normalized := ParseHTTPIdleTimeoutMs(timeoutMs)
 	if normalized == nil {

@@ -29,8 +29,14 @@ result := sandbox.Execute(ctx, `text("hi"); return 42;`, codemode.ExecuteOptions
 `Sandbox` is safe for concurrent use; every execution gets a fresh QuickJS VM, so
 global state never leaks between runs. `Close` aborts in-flight executions and
 releases the wazero runtime. `SandboxOptions.Timeout` is the default per-run
-deadline (zero uses 300s, negative disables it). `MemoryLimitBytes` and
-`MaxStackBytes` bound the QuickJS heap and native stack.
+deadline. Zero or a negative value sets no sandbox deadline; caller cancellation
+still applies. A nonzero `ExecuteOptions.Timeout` overrides a source `timeout_ms`,
+which in turn overrides `SandboxOptions.Timeout`.
+`MemoryLimitBytes` caps the QuickJS heap. Zero sets no separate heap cap, but
+the WASM linear-memory cap remains **512 MiB per VM**. With a nonzero heap limit,
+the linear-memory cap is `clamp(4*floor(limit/64KiB)+256, 256, 65536)` pages of
+64 KiB (16 MiB to 4 GiB). These are ceilings, not upfront allocations.
+`MaxStackBytes` caps the QuickJS native stack; zero uses **512 KiB**.
 `ExecuteOptions.Store` is a JSON map copied into the VM; the caller's map is never
 mutated.
 
@@ -51,12 +57,26 @@ A script is the body of an async function:
   output item and rejects remote URLs and non-image data.
 - `console.log/info/warn/error/debug` append text output items.
 - `store(key, value)` / `load(key)` read and write a size-bounded JSON store.
-  `store(key, undefined)` deletes a key.
+  `store(key, undefined)` deletes a key. A serialized value may occupy at most
+  4,194,304 JavaScript UTF-16 code units; all keys and values together may
+  occupy at most 16,777,216 code units. These are not UTF-8 byte counts.
 - `exit()` reports success early.
 
 A script may start with a `// @options:` first line. `timeout_ms` and
 `max_output_tokens` are the recognized fields; an unknown or malformed options
 line is a `CodemodeSourceError` (kind `script`).
+
+`timeout_ms` must be a positive integer at most 2,147,483,647. Negative source
+deadlines are rejected; Go host options can explicitly disable the deadline.
+`max_output_tokens` must be a non-negative safe integer. It limits the combined
+emitted text (`text` and `console`) using **four UTF-8 bytes per estimated token**.
+Truncation keeps complete Unicode code points and is reported by
+`Result.OutputTruncated`. Zero suppresses text; omission adds no output cap.
+This is an estimate, not provider tokenization. Images, raw JSON `Value`, errors,
+tool execution and store writes remain intact. The SDK tool also shares the
+budget with the rendered return value and adds a truncation notice. That notice
+and script-failure diagnostics are outside the text budget so failures remain
+visible even with a zero budget.
 
 ## Callback concurrency and cancellation
 
@@ -82,7 +102,7 @@ of an unawaited callback before `Execute` returns.
 ## Results
 
 `Result` has `OK`, the JSON `Value` (undefined leaves it nil), ordered `Output`
-items, recorded `Calls` (globals are not recorded), optional `StoreWrites`, and
+items, an optional `OutputTruncated` flag, recorded `Calls` (globals are not recorded), optional `StoreWrites`, and
 an `Error`. On failure `StoreWrites` is nil: a failed script commits nothing.
 `ExecutionError.Kind` is one of `script`, `timeout`, `aborted` or `sandbox`.
 

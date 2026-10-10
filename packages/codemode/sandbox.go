@@ -11,8 +11,6 @@ import (
 	cruntime "github.com/minifish-org/pith/packages/codemode/runtime"
 )
 
-const defaultTimeout = 300 * time.Second
-
 // reservedGlobals may not be shadowed by configured globals.
 var reservedGlobals = map[string]bool{
 	"tools":      true,
@@ -108,13 +106,11 @@ func pageLimitFor(memoryLimit uint64) uint32 {
 		return 8192
 	}
 	pages := memoryLimit / page
+	// Clamp before multiplying so even uint64-sized heap limits cannot wrap.
+	if pages >= (65536-256)/4 {
+		return 65536
+	}
 	pages = pages*4 + 256
-	if pages > 65536 {
-		pages = 65536
-	}
-	if pages < 256 {
-		pages = 256
-	}
 	return uint32(pages)
 }
 
@@ -187,7 +183,7 @@ func (s *Sandbox) Execute(ctx context.Context, source string, options ExecuteOpt
 	copy(tools, s.tools)
 	globals := make([]Tool, len(s.globals))
 	copy(globals, s.globals)
-	defaultTimeout := s.timeout
+	sandboxTimeout := s.timeout
 	memory := s.memory
 	stack := s.stack
 	s.mu.Unlock()
@@ -206,14 +202,11 @@ func (s *Sandbox) Execute(ctx context.Context, source string, options ExecuteOpt
 	code := parsed.Code
 
 	timeout := options.Timeout
-	if timeout == 0 {
-		timeout = defaultTimeout
-	}
 	if timeout == 0 && parsed.Options.TimeoutMs != nil {
 		timeout = time.Duration(*parsed.Options.TimeoutMs) * time.Millisecond
 	}
 	if timeout == 0 {
-		timeout = defaultTimeout
+		timeout = sandboxTimeout
 	}
 
 	execCtx, cancel, err := s.beginExecution(ctx, timeout)
@@ -231,7 +224,11 @@ func (s *Sandbox) Execute(ctx context.Context, source string, options ExecuteOpt
 		TimeoutMs:        timeout.Milliseconds(),
 	}
 	out := s.engine.Execute(execCtx, spec)
-	return fromOutcome(out)
+	result := fromOutcome(out)
+	if parsed.Options.MaxOutputTokens != nil {
+		result.Output, result.OutputTruncated = BudgetTextOutput(result.Output, *parsed.Options.MaxOutputTokens)
+	}
+	return result
 }
 
 func (s *Sandbox) beginExecution(ctx context.Context, timeout time.Duration) (context.Context, func(error), error) {

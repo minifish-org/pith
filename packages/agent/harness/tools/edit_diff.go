@@ -565,6 +565,10 @@ func buildDiffValues(lastComponent *diffComponent, newTokens []string, oldTokens
 }
 
 func computeDiffComponents(oldTokens []string, newTokens []string) []*diffComponent {
+	return computeDiffComponentsBounded(oldTokens, newTokens, 0)
+}
+
+func computeDiffComponentsBounded(oldTokens []string, newTokens []string, maxSteps int) []*diffComponent {
 	oldLen := len(oldTokens)
 	newLen := len(newTokens)
 	bestPath := map[int]*pathState{0: {oldPos: -1}}
@@ -577,6 +581,7 @@ func computeDiffComponents(oldTokens []string, newTokens []string) []*diffCompon
 	maxEditLength := newLen + oldLen
 	minDiagonal := math.MinInt
 	maxDiagonal := math.MaxInt
+	steps := 0
 	for editLength <= maxEditLength {
 		lo := minDiagonal
 		if -editLength > lo {
@@ -587,6 +592,10 @@ func computeDiffComponents(oldTokens []string, newTokens []string) []*diffCompon
 			hi = editLength
 		}
 		for diagonalPath := lo; diagonalPath <= hi; diagonalPath += 2 {
+			steps++
+			if maxSteps > 0 && steps > maxSteps {
+				return nil
+			}
 			removePath := bestPath[diagonalPath-1]
 			addPath := bestPath[diagonalPath+1]
 			if removePath != nil {
@@ -673,7 +682,10 @@ func contextLines(lines []string) []string {
 }
 
 func buildHunks(oldContent string, newContent string, context int) []diffHunk {
-	changes := diffLines(oldContent, newContent)
+	return buildHunksFromChanges(diffLines(oldContent, newContent), context)
+}
+
+func buildHunksFromChanges(changes []diffChange, context int) []diffHunk {
 	changes = append(changes, diffChange{value: "", lines: []string{}})
 
 	hunks := make([]diffHunk, 0, 4)
@@ -791,6 +803,44 @@ func GenerateUnifiedPatch(path string, oldContent string, newContent string, con
 	return formatUnifiedPatch(path, buildHunks(oldContent, newContent, context))
 }
 
+// GenerateUnifiedPatchBounded limits Myers path exploration. If the budget is
+// exhausted, a linear replacement of the changed region produces an accurate
+// (possibly nonminimal) patch, preserving the common prefix/suffix. A nonpositive
+// budget uses the usual unbounded implementation.
+func GenerateUnifiedPatchBounded(path, oldContent, newContent string, maxSteps int) string {
+	return formatUnifiedPatch(path, buildHunksFromChanges(diffLinesBounded(oldContent, newContent, maxSteps), 4))
+}
+
+func diffLinesBounded(oldContent, newContent string, maxSteps int) []diffChange {
+	oldTokens, newTokens := lineTokens(oldContent), lineTokens(newContent)
+	components := computeDiffComponentsBounded(oldTokens, newTokens, maxSteps)
+	var changes []diffChange
+	if components != nil {
+		for _, component := range components {
+			changes = append(changes, diffChange{value: component.value, count: component.count, added: component.added, removed: component.removed})
+		}
+	} else {
+		prefix := 0
+		for prefix < len(oldTokens) && prefix < len(newTokens) && oldTokens[prefix] == newTokens[prefix] {
+			prefix++
+		}
+		suffix := 0
+		for suffix < len(oldTokens)-prefix && suffix < len(newTokens)-prefix && oldTokens[len(oldTokens)-suffix-1] == newTokens[len(newTokens)-suffix-1] {
+			suffix++
+		}
+		appendChange := func(tokens []string, added, removed bool) {
+			if len(tokens) > 0 {
+				changes = append(changes, diffChange{value: strings.Join(tokens, ""), count: len(tokens), added: added, removed: removed})
+			}
+		}
+		appendChange(oldTokens[:prefix], false, false)
+		appendChange(oldTokens[prefix:len(oldTokens)-suffix], false, true)
+		appendChange(newTokens[prefix:len(newTokens)-suffix], true, false)
+		appendChange(oldTokens[len(oldTokens)-suffix:], false, false)
+	}
+	return changes
+}
+
 // GenerateDiffString generates the display-oriented diff with line numbers and
 // context used by the edit tool. It also returns the first changed line in the
 // new file (nil when there is no change).
@@ -800,6 +850,16 @@ func GenerateDiffString(oldContent string, newContent string, contextLines ...in
 		context = contextLines[0]
 	}
 	parts := diffLines(oldContent, newContent)
+	return generateDiffStringFromChanges(oldContent, newContent, context, parts)
+}
+
+// GenerateDiffStringBounded applies the same work budget/fallback as the
+// bounded unified patch to the model-facing numbered diff.
+func GenerateDiffStringBounded(oldContent, newContent string, maxSteps int) (string, *int) {
+	return generateDiffStringFromChanges(oldContent, newContent, 4, diffLinesBounded(oldContent, newContent, maxSteps))
+}
+
+func generateDiffStringFromChanges(oldContent, newContent string, context int, parts []diffChange) (string, *int) {
 	output := make([]string, 0, 16)
 
 	oldLines := strings.Split(oldContent, "\n")

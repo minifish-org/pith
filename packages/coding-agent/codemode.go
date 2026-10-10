@@ -130,6 +130,7 @@ func executeCodemode(ctx context.Context, registry *ToolRegistry, sandbox *codem
 	if strings.TrimSpace(input.Code) == "" {
 		return ToolResult{}, errors.New("codemode requires code")
 	}
+	parsed, sourceErr := codemode.ParseCodemodeSource(input.Code)
 
 	executeOptions := codemode.ExecuteOptions{}
 	if store := registry.getCodemodeStore(); store != nil {
@@ -146,18 +147,28 @@ func executeCodemode(ctx context.Context, registry *ToolRegistry, sandbox *codem
 		}
 	}
 
-	blocks := make([]aitypes.ContentBlock, 0, len(result.Output)+1)
-	for _, item := range result.Output {
+	output := result.Output
+	if result.OK && !result.OutputTruncated && len(result.Value) > 0 && string(result.Value) != "null" {
+		output = append(output, codemode.OutputItem{Type: "text", Text: string(result.Value)})
+	}
+	truncated := result.OutputTruncated
+	if sourceErr == nil && parsed.Options.MaxOutputTokens != nil {
+		var omitted bool
+		output, omitted = codemode.BudgetTextOutput(output, *parsed.Options.MaxOutputTokens)
+		truncated = truncated || omitted
+	}
+	blocks := make([]aitypes.ContentBlock, 0, len(output)+2)
+	for _, item := range output {
 		if item.Type == "image" {
 			blocks = append(blocks, aitypes.ImageBlock(item.Data, item.MimeType))
 			continue
 		}
 		blocks = append(blocks, aitypes.TextBlock(item.Text))
 	}
+	if truncated {
+		blocks = append(blocks, aitypes.TextBlock("[Text output truncated by max_output_tokens; tool execution and structured results were not truncated.]"))
+	}
 	if result.OK {
-		if len(result.Value) > 0 && string(result.Value) != "null" {
-			blocks = append(blocks, aitypes.TextBlock(string(result.Value)))
-		}
 		return ToolResult{
 			Content:           blocks,
 			StructuredContent: result.Value,
@@ -196,7 +207,7 @@ func codemodeErrorMessage(err *codemode.ExecutionError) string {
 // description is budgeted; the Go port uses a compact, deterministic listing.
 func codemodeDescription(registry *ToolRegistry) string {
 	var builder strings.Builder
-	builder.WriteString("Run JavaScript in a sandboxed runtime. Call tools.<name>(args) to invoke a tool.\n\nCallable tools:")
+	builder.WriteString("Run JavaScript in a sandboxed runtime. Call tools.<name>(args) to invoke a tool. An optional first line // @options: {\"max_output_tokens\": 1000, \"timeout_ms\": 60000} limits returned text (estimated at four UTF-8 bytes per token) and sets a script deadline. No script deadline is set by default. Text truncation leaves images and tool execution intact.\n\nCallable tools:")
 	for _, definition := range registry.allDefinitions() {
 		builder.WriteString("\n- ")
 		builder.WriteString(codemode.ToIdentifier(definition.Name))

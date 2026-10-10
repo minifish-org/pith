@@ -123,7 +123,7 @@ func ConsumeSSEStream(reader io.Reader, options SSEStreamOptions) error {
 	}
 
 	for {
-		line, err := buffered.ReadString('\n')
+		line, err := readSSELineLimited(buffered, maxBytes)
 		if len(line) > 0 {
 			text := strings.TrimSuffix(line, "\n")
 			if processErr := processLine(text); processErr != nil {
@@ -139,6 +139,28 @@ func ConsumeSSEStream(reader io.Reader, options SSEStreamOptions) error {
 	}
 	dispatch()
 	return nil
+}
+
+// ReadString would allocate an entire unterminated line before the event cap
+// could be checked. Bound accumulation while reading, with protocol framing
+// room for "data: " and CRLF.
+func readSSELineLimited(reader *bufio.Reader, maxBytes int) (string, error) {
+	lineLimit := maxBytes
+	if maxBytes <= int(^uint(0)>>1)-8 {
+		lineLimit += 8
+	}
+	var line []byte
+	for {
+		part, err := reader.ReadSlice('\n')
+		if len(part) > lineLimit-len(line) {
+			return "", fmt.Errorf("MCP SSE event exceeds %d bytes (at least %d bytes received)", maxBytes, len(line)+len(part))
+		}
+		line = append(line, part...)
+		if err == bufio.ErrBufferFull {
+			continue
+		}
+		return string(line), err
+	}
 }
 
 func isDigits(value string) bool {
@@ -357,10 +379,17 @@ func (t *StreamableHTTPTransport) Send(message *Message) error {
 	kind := responseContentType(response)
 	switch kind {
 	case "application/json":
-		body, readErr := io.ReadAll(response.Body)
+		limit := int64(t.maxMessageBytes)
+		if limit < int64(^uint64(0)>>1) {
+			limit++
+		}
+		body, readErr := io.ReadAll(io.LimitReader(response.Body, limit))
 		response.Body.Close()
 		if readErr != nil {
 			return readErr
+		}
+		if len(body) > t.maxMessageBytes {
+			return fmt.Errorf("MCP HTTP JSON response exceeds %d bytes (at least %d bytes received)", t.maxMessageBytes, len(body))
 		}
 		return t.emitJSONBody(body)
 	case "text/event-stream":

@@ -511,17 +511,21 @@ func summarizeConversation(
 	if maxTokens <= 0 {
 		maxTokens = 1
 	}
+	maxTokens = harnesscompaction.SummaryOutputTokenLimit(*model, maxTokens)
 
 	llmMessages, err := ConvertToLlm(currentMessages)
 	if err != nil {
 		return "", aitypes.Usage{}, err
 	}
 	conversationText := SerializeConversation(llmMessages)
-	promptText := "<conversation>\n" + conversationText + "\n</conversation>\n\n"
+	suffix := basePrompt
 	if previousSummary != nil {
-		promptText += "<previous-summary>\n" + *previousSummary + "\n</previous-summary>\n\n"
+		suffix = "<previous-summary>\n" + *previousSummary + "\n</previous-summary>\n\n" + suffix
 	}
-	promptText += basePrompt
+	promptText, err := harnesscompaction.BuildSummaryPrompt(conversationText, suffix, model.ContextWindow, maxTokens)
+	if err != nil {
+		return "", aitypes.Usage{}, err
+	}
 
 	systemPrompt := SummarizationSystemPrompt
 	userMessage := aitypes.NewUserMessageBlocks(

@@ -604,7 +604,7 @@ func GenerateSummaryWithRequest(
 	if model.MaxTokens > 0 && model.MaxTokens < limit {
 		limit = model.MaxTokens
 	}
-	maxTokens := int(limit)
+	maxTokens := SummaryOutputTokenLimit(model, int(limit))
 	basePrompt := summarizationPrompt
 	if options.PreviousSummary != nil {
 		basePrompt = updateSummarizationPrompt
@@ -617,11 +617,14 @@ func GenerateSummaryWithRequest(
 		return harnesstypes.Result[SummaryUsage, *harnesstypes.CompactionError]{}, err
 	}
 	conversationText := SerializeConversation(llmMessages)
-	promptText := "<conversation>\n" + conversationText + "\n</conversation>\n\n"
+	suffix := basePrompt
 	if options.PreviousSummary != nil {
-		promptText += "<previous-summary>\n" + *options.PreviousSummary + "\n</previous-summary>\n\n"
+		suffix = "<previous-summary>\n" + *options.PreviousSummary + "\n</previous-summary>\n\n" + suffix
 	}
-	promptText += basePrompt
+	promptText, err := BuildSummaryPrompt(conversationText, suffix, model.ContextWindow, maxTokens)
+	if err != nil {
+		return harnesstypes.Result[SummaryUsage, *harnesstypes.CompactionError]{}, err
+	}
 
 	summarizationMessages := []aitypes.Message{
 		aitypes.NewUserMessageVariant(aitypes.NewUserMessageBlocks(
@@ -989,13 +992,16 @@ func generateTurnPrefixSummary(
 	if model.MaxTokens > 0 && model.MaxTokens < limit {
 		limit = model.MaxTokens
 	}
-	maxTokens := int(limit)
+	maxTokens := SummaryOutputTokenLimit(model, int(limit))
 	llmMessages, err := harnessmessages.ConvertToLlm(messages)
 	if err != nil {
 		return harnesstypes.Result[SummaryUsage, *harnesstypes.CompactionError]{}, err
 	}
 	conversationText := SerializeConversation(llmMessages)
-	promptText := "<conversation>\n" + conversationText + "\n</conversation>\n\n" + turnPrefixSummarizationPrompt
+	promptText, err := BuildSummaryPrompt(conversationText, turnPrefixSummarizationPrompt, model.ContextWindow, maxTokens)
+	if err != nil {
+		return harnesstypes.Result[SummaryUsage, *harnesstypes.CompactionError]{}, err
+	}
 	summarizationMessages := []aitypes.Message{
 		aitypes.NewUserMessageVariant(aitypes.NewUserMessageBlocks(
 			[]aitypes.ContentBlock{aitypes.TextBlock(promptText)},

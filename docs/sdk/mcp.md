@@ -29,6 +29,12 @@ bearer-token `AuthProvider`s with 401 refresh, bounded SSE events and resumable
 GET streams. `ConsumeSSEStream` parses an SSE stream directly when a caller wants
 to own the loop.
 
+The default stdout JSON message / SSE event / HTTP JSON response ceiling is
+**128 MiB** (`DefaultMaxMessageBytes`), shared with Codex WebSocket and agent
+proxy defaults. `StdioOptions.MaxMessageBytes`, `HTTPOptions.MaxMessageBytes`
+and `SSEStreamOptions.MaxEventBytes` let a host override it. SSE accumulation is
+bounded before decoding, including a line that never supplies a newline.
+
 ## Client
 
 ```go
@@ -48,6 +54,11 @@ blocks := mcp.ToAIContent(result) // []aitypes.ContentBlock for the model
 - `CallTool`, `ReadResource`, `Request`, `Notify`, `Ping` are the remaining
   protocol calls. `RequestOptions.Timeout` and `RequestOptions.OnProgress`
   override per request; a progress notification renews the timeout.
+  Initialization and discovery default to **30 seconds**. Tool calls default
+  to a **10-minute inactivity window** and request progress even when the host
+  supplies no callback. Valid progress renews the window; parent cancellation
+  and explicit client/request timeouts still win. Continuous progress has no
+  separate total deadline.
 - `SetRequestHandler`, `OnNotification`, `OnError`, `OnClose` subscribe to
   server-initiated messages and transport lifecycle. `Close` is idempotent and
   reaps a stdio child tree.

@@ -95,15 +95,20 @@ func newCodexWebSocketFixture(t *testing.T, encrypted string, turns int) *codexW
 	return fixture
 }
 
-func codexWebSocketFixtureResult(t *testing.T, model *types.Model, transcript *types.TranscriptContext, sessionID *string) types.AssistantMessage {
+func codexWebSocketFixtureResult(t *testing.T, model *types.Model, transcript *types.TranscriptContext, sessionID *string, limits ...int64) types.AssistantMessage {
 	t.Helper()
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	key := "e30." + base64.RawURLEncoding.EncodeToString([]byte(`{"https://api.openai.com/auth":{"chatgpt_account_id":"fixture-account"}}`)) + ".fixture"
+	var readLimit *int64
+	if len(limits) > 0 {
+		readLimit = &limits[0]
+	}
 	result, err := OpenAICodexResponsesStream(model, transcript, &OpenAICodexResponsesOptions{
 		StreamOptions: types.StreamOptions{
-			ProviderRequestOptions: types.ProviderRequestOptions{APIKey: &key, Signal: ctx.Done()},
-			SessionId:              sessionID,
+			ProviderRequestOptions:   types.ProviderRequestOptions{APIKey: &key, Signal: ctx.Done()},
+			SessionId:                sessionID,
+			WebsocketMaxMessageBytes: readLimit,
 		},
 	}).Result(ctx)
 	if err != nil {
@@ -142,7 +147,7 @@ func assertCodexLargeResponse(t *testing.T, result types.AssistantMessage, respo
 func TestOpenAICodexWebSocketLargeMessages(t *testing.T) {
 	for _, withSession := range []bool{false, true} {
 		t.Run(fmt.Sprintf("session=%t", withSession), func(t *testing.T) {
-			encrypted := strings.Repeat("e", 64<<10)
+			encrypted := strings.Repeat("e", 16<<20)
 			turns := 1
 			var sessionID *string
 			if withSession {
@@ -199,11 +204,12 @@ func TestOpenAICodexWebSocketLargeMessages(t *testing.T) {
 }
 
 func TestOpenAICodexWebSocketRejectsOversizedMessage(t *testing.T) {
-	// JSON framing makes this message larger than the finite 16 MiB budget.
-	fixture := newCodexWebSocketFixture(t, strings.Repeat("e", 16<<20), 1)
+	// Use a small host override to verify finite rejection without allocating a
+	// 128 MiB frame. Large default messages and reused connections are above.
+	fixture := newCodexWebSocketFixture(t, strings.Repeat("e", 64<<10), 1)
 	model := testModel(types.ApiOpenAICodexResponses, fixture.server.URL)
 	model.Provider = types.ProviderOpenAICodex
-	result := codexWebSocketFixtureResult(t, &model, testTranscript(), nil)
+	result := codexWebSocketFixtureResult(t, &model, testTranscript(), nil, 64<<10)
 	if result.StopReason != types.StopReasonError || result.ErrorMessage == nil || !strings.Contains(*result.ErrorMessage, "message too big") {
 		t.Fatalf("oversized message must fail, stop=%q error=%v", result.StopReason, result.ErrorMessage)
 	}

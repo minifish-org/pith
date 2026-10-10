@@ -529,6 +529,10 @@ type ProviderRequestOptions struct {
 	Headers ProviderHeaders
 	// TimeoutMs is the HTTP request timeout in milliseconds.
 	TimeoutMs *int
+	// StreamIdleTimeoutMs bounds inactivity for Mistral/Pi streaming requests.
+	// Nil uses five minutes; nonpositive disables the body inactivity timeout.
+	// An explicit TimeoutMs remains a separate whole-request deadline.
+	StreamIdleTimeoutMs *int
 	// MaxRetries is the maximum number of client-side retry attempts.
 	MaxRetries *int
 	// MaxRetryDelayMs caps how long a retry may wait. Zero disables the cap.
@@ -551,7 +555,10 @@ type StreamOptions struct {
 	SessionId      *string
 	// WebsocketConnectTimeoutMs covers the WebSocket connect handshake only.
 	WebsocketConnectTimeoutMs *int
-	Metadata                  map[string]any
+	// WebsocketMaxMessageBytes bounds Codex incoming messages, including reused
+	// connections. Nil or nonpositive uses the shared 128 MiB transport default.
+	WebsocketMaxMessageBytes *int64
+	Metadata                 map[string]any
 }
 
 // ProviderStreamOptions are StreamOptions plus arbitrary extra request fields.

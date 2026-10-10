@@ -2,11 +2,13 @@ package mcp
 
 import (
 	"sync"
+
+	"github.com/minifish-org/pith/internal/limits"
 )
 
 // DefaultMaxMessageBytes bounds a single transport message when no limit is
 // configured.
-const DefaultMaxMessageBytes = 16 * 1024 * 1024
+const DefaultMaxMessageBytes = limits.MessageBytes
 
 // Transport carries JSON-RPC messages for a client.
 type Transport interface {
